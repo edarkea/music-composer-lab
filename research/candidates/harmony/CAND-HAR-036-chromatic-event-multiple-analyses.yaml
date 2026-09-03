@@ -1,0 +1,42 @@
+id: CAND-HAR-036
+status: candidate
+compositional_problem: "Asignar función a un evento cromático ambiguo sin forzar una etiqueta oficial única."
+claim: "Un evento cromático admite múltiples análisis plausibles según marco y contexto (mezcla, función aplicada, sonoridad de conducción, relación de tono común, parte de nueva colección); la función se asigna desde centro, contexto precedente/siguiente, fundamental/bajo, conducción, posición formal, repetición y convención de repertorio, no desde la etiqueta cromática aislada. El caso paradigmático verificado es la disociación ortografía-función: mismas alturas (CTo7 vs. viio7/aplicado; CT+6 vs. Ger+6) reciben análisis distinto según vecinos y resolución. Aporte específicamente cromático frente a CAND-HAR-007/018: la disociación enarmónica y las relaciones de tono común/mediante cromáticas. Forzar una etiqueta única cuando la evidencia admite varias es error de método, no de audición: AMBIGÜEDAD ANALÍTICA != CONFUSIÓN DEL OYENTE. Esto no implica que los oyentes contemplen conscientemente todas las lecturas."
+structural_variable: "chromatic-event function assignment (center, surrounding context, root/bass, voice leading, formal position, repetition, repertoire convention assessed jointly)"
+possible_action: ""
+expected_effect: "Diagnóstico honesto con alternativas registradas; fuera de convergencia contextual, función `uncertain`."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-013
+  - SRC-PEDAGOGICAL-012
+  - SRC-THEORETICAL-017
+  - SRC-ACADEMIC-028
+context_dependencies:
+  - Matriz de interpretaciones con centro implicado y conducción implicada por lectura (ver síntesis § Operation Matrix).
+  - Preguntas diagnósticas no-normativas (§ Diagnostic Questions), no clasificador determinista.
+  - Convención HAR-004 (FRAMEWORK/OBJECT/CRITERION/SCOPE/EVIDENCE TYPE) para lecturas prolongacionales.
+counterproductive_conditions:
+  - Asignar función desde el numeral romano aislado.
+  - Invocar transformaciones neo-riemannianas/geometría como prueba perceptiva.
+  - Resolver la ambigüedad por autoridad de etiqueta en vez de evidencia convergente.
+alternatives:
+  - Declarar el evento como no-funcional/sonoridad (CT, planing, color) cuando el marco lo sostiene.
+  - Registrar doble lectura explícita (p. ej., bVII como shuttle y como mezcla) sin forzar decisión.
+uncertainty_confidence: "Media-baja como heurística negativa: disociación CTo7/aplicado VERIFIED + tipos Aug6 VERIFIED + taxonomía mediantes VERIFIED (sin función) + casos Spicer VERIFIED de conexión sin dirección + matriz HAR-002 heredada; sin medida de discriminación por oyentes (GAP). possible_action vacío."
+genre_sensitivity: "Alta: lecturas disponibles por tradición; ninguna etiqueta viaja sola entre marcos."
+evaluation_falsification: "Medida donde una etiqueta aislada prediga juicios de función mejor que el modelo contextual exigiría reformular (peso de etiqueta); corpus donde una lectura domine cuantitativamente un repertorio exigiría acotación por género."
+structure_perception_composition:
+  structure: "Evento cromático con varias lecturas estructurales disponibles según marco."
+  perception: "Discriminación entre lecturas por oyentes sin medida; no forzar audición oficial."
+  composition: "Sin técnica positiva: diagnosticar con matriz, registrar alternativas, decidir por escucha e intención."
+cross_references:
+  - CAND-HAR-007
+  - CAND-HAR-009
+  - CAND-HAR-018
+  - CAND-HAR-024
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (2026-09-04, RQ-HAR-006): núcleo cromático-específico verificado (CTo7/aplicado, CT+6/Ger+6, mediantes como taxonomía sin función); no duplica 007/018 genéricos; puramente negativo con possible_action vacío."

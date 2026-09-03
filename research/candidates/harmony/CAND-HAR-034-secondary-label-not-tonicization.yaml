@@ -1,0 +1,40 @@
+id: CAND-HAR-034
+status: candidate
+compositional_problem: "Decidir si un acorde etiquetable como dominante secundaria (V/x) realmente establece percepción de centro local sobre su objetivo."
+claim: "La etiqueta de dominante secundaria no basta por sí sola para afirmar establecimiento perceptivo ni local del centro sobre el objetivo: es una interpretación teórica dentro de tradiciones acotadas. V/x describe estructura (alteración de leading tone + relación de quinta + resolución) y propone una lectura (énfasis local), pero la atribución de centro exige contexto convergente (duración, bajo, repetición, melodía, cadencia, retorno) y tarea de oyente para afirmarse. Que un aplicado resuelva correctamente no basta para afirmar que el objetivo se escucha como tónica temporal; y puede haber énfasis local sin V/x (leading-tone aplicado, aproximación cromática, repetición/duración). Esto no implica que V/x nunca tonicalice."
+structural_variable: "applied-dominant label (V(7)/x spelling with fifth-relation resolution) distinguished from local-center attribution evidence"
+possible_action: ""
+expected_effect: "Evitar sobreatribución: la etiqueta organiza el análisis, no certifica audición; fuera de convergencia contextual, efecto incierto."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-010
+  - SRC-ACADEMIC-028
+context_dependencies:
+  - Tradición donde la lectura aplicada es idiomática (práctica común clásica).
+  - Convergencia de indicios de centro (CAND-HAR-001/002/004/005) para cualquier afirmación perceptiva.
+  - Resolución verificada al objetivo (sin ella, ni siquiera la lectura teórica procede).
+counterproductive_conditions:
+  - Etiquetar V/x desde una alteración aislada sin comprobar calidad ni resolución (tono de embellecimiento cromático).
+  - Presentar la etiqueta como prueba de tonicalización en reportes o reglas.
+  - Exigir V/x como requisito de todo énfasis local (falso necesario; hay vías sin V/x).
+alternatives:
+  - Leading-tone aplicado (viio/x) como vía de énfasis.
+  - Énfasis por duración/repetición/bajo sin cromatismo.
+  - Lectura de conducción o tono común (CAND-HAR-037) cuando el contexto la sostiene mejor.
+uncertainty_confidence: "Media-baja como heurística negativa: diagnóstico OMT VERIFIED (preguntas calidad/resolución/embellecimiento) + casos Spicer VERIFIED de dominantes sin función clásica (soul-dominant sin leading tone, retransición bVII–I) + restricciones HAR-002 heredadas; sin medida de atribución local tras V/x (GAP). possible_action vacío."
+genre_sensitivity: "Alta: la lectura aplicada es clásica; en pop/rock un acorde mayor fuera de colección admite lecturas shuttle/mezcla/colección sin V/x (ver CAND-HAR-035/039)."
+evaluation_falsification: "Medida donde V/x prediga sistemáticamente atribución de centro local frente a controles con misma duración/bajo exigiría debilitar la cautela (la etiqueta ganaría peso predictivo); repertorio donde V/x resuelva sin rastro de énfasis exigiría reforzarla."
+structure_perception_composition:
+  structure: "Acorde mayor/séptima de dominante con alteración de leading tone y resolución por quinta al objetivo."
+  perception: "Centro local sobre el objetivo sin medida dedicada; no inferir desde etiqueta."
+  composition: "Sin acción positiva justificada: usar V/x como hipótesis de énfasis local dentro de tradición, verificar por escucha, declarar alternativas."
+cross_references:
+  - CAND-HAR-007
+  - CAND-HAR-009
+  - CAND-HAR-033
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (2026-09-04, RQ-HAR-006): etiqueta vs. percepción separadas (SRC-PEDAGOGICAL-010 + Spicer VERIFIED + HAR-002); formulado como insuficiencia evidencial, no como imposibilidad; puramente negativo con possible_action vacío."

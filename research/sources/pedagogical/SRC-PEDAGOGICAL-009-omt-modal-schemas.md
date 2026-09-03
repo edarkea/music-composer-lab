@@ -6,8 +6,8 @@ venue: Open Music Theory (Viva Pressbooks)
 source_type: textbook_chapter
 doi:
 url: https://viva.pressbooks.pub/openmusictheory/chapter/modal-schemas/
-verification_status: PARTIAL
-access_note: Extractos sustantivos inspeccionados vía búsqueda (schemas, ejemplos, distinción goal-oriented vs. loop) + fetch de estructura de página (existencia y vecindad de capítulos clásicos: intro-to-harmony, cadential-64, plagal-motion). Contenido completo del capítulo NO inspeccionado línea por línea.
+verification_status: VERIFIED
+access_note: Full text directly inspected via fetch (2026-09-04 session; function of modal harmonies, all schema families, identification flowchart, Biamonte/Tagg grounding).
 research_question_relevance:
   - RQ-HAR-005
 exact_construct: "Modal schemas pop: double plagal bVII-IV-I (mixolidio), subtonic shuttle I-bVII, Aeolian shuttle i-bVII-bVI-bVII, Aeolian cadence bVI-bVII-i(I) goal-oriented con picardy third, Dorian shuttle i-IV, Lydian shuttle I-II#, Lydian cadence II#-IV-I; color notes; shuttle (circular) vs. cadence (con meta)."

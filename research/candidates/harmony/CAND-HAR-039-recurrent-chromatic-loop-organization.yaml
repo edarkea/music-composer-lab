@@ -1,0 +1,44 @@
+id: CAND-HAR-039
+status: candidate
+compositional_problem: "Sostener una sección sobre un loop que incluye acordes cromáticos sin imponerles sintaxis funcional clásica."
+claim: "En pop/rock, acordes cromáticos recurrentes (bVII, bVI, bIII, II/III mayor, iv menor en mayor) pueden pertenecer a la organización recurrente del loop —`estable` solo en esta dimensión cíclica explícita— sin interpretación funcional clásica ni tonicalización de su objetivo: la recurrencia + colección + metro/textura/arreglo sostienen el ciclo como marco (ESTABLISH/MAINTAIN cíclico, vocabulario neutral de HAR-004), con tolerancia analítica a centro múltiple o débil. La repetición normaliza analíticamente la sonoridad; normalización perceptiva (`los oyentes dejan de oírla como cromática`), sorpresa reducida, tensión reducida o estabilidad aumentada NO medidas. Un evento cromático puede ser estructuralmente esperado (pre-tónica recurrente) sin tonicalizar su objetivo: expectativa de retorno cíclico != función dominante clásica."
+structural_variable: "recurrent chromatic chord inside a recurrent cyclic progression (2-4 sonority loop with meter/texture/arrangement configuration)"
+possible_action: ""
+expected_effect: "Organización cíclica interpretable analíticamente con vocabulario cromático integrado; centro múltiple/débil tolerado; fuera de pop/rock cíclico, efecto incierto."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - CORPUS_ANALYSIS
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-CORPUS-011
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+context_dependencies:
+  - Sintaxis cíclica pop/rock sin cadencia dirigida; loop seccional con arreglo como articulación.
+  - Disponibilidad de vocabulario cromático en corpus (bVII/bVI/bIII/II/III ordinarios; bII/#IV raros).
+  - Configuración por metro, textura y paralelismo (desambiguadores documentados).
+counterproductive_conditions:
+  - Leer cada acorde cromático del loop como dominante secundaria que tonicaliza al siguiente (modulaciones ficticias en cadena).
+  - Juzgar el loop como armonía defectuosa por carecer de sintaxis dirigida.
+  - Inferir que la repetición demuestra audición diatónica del acorde (normalización medida).
+alternatives:
+  - Progresión dirigida con llegada (CAND-HAR-008) donde la tradición la sostiene.
+  - Lectura modal de schema (CAND-HAR-035) cuando el ciclo coincide con shuttle/cadencia documentada.
+  - Parada de loop / cierre por arreglo sin sintaxis (CAND-HAR-031).
+uncertainty_confidence: "Media-baja como observación de género: distribuciones PARTIAL + análisis convergentes VERIFIED (tónicas ausentes, vamps, shuttles, mismo loop distinta claridad) + Doll cap.6 vía reseña; sin medida de atribución o 'dirección sentida' en loops por oyentes (GAP). possible_action vacío: sin técnica positiva establecida."
+genre_sensitivity: "Muy alta: claim pop/rock con sintaxis cíclica; no transferir a práctica común."
+evaluation_falsification: "Medida donde oyentes describan sistemáticamente los cromáticos del loop como dominantes que tonicalizan al acorde siguiente exigiría reformular (función interna) en vez de organización cíclica."
+structure_perception_composition:
+  structure: "Ciclo recurrente con miembro(s) cromático(s) fijo(s) y configuración métrica/textural dada."
+  perception: "Atribución analítica múltiple/débil documentada; normalización y expectativa medidas pendientes (GAP)."
+  composition: "Puente compositivo pendiente: el loop cromático estable es estado documentado analíticamente, no técnica establecida ni coherencia medida."
+cross_references:
+  - CAND-HAR-011
+  - CAND-HAR-026
+  - CAND-HAR-031
+  - CAND-HAR-035
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (2026-09-04, RQ-HAR-006): GENRE OBSERVATION pop/rock (corpus PARTIAL + Spicer VERIFIED + Doll vía reseña); `estable` solo en dimensión cíclica explícita; sin inferencia de normalización/sorpresa/tensión percibidas; aporte cromático distinto de 011/026."

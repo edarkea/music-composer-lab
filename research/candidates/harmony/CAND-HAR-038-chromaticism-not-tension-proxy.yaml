@@ -1,0 +1,38 @@
+id: CAND-HAR-038
+status: candidate
+compositional_problem: "Evitar que `cromático` se use como medida de tensión, inestabilidad, complejidad o intensidad emocional."
+claim: "La evidencia inspeccionada en esta RQ no justifica usar cantidad/presencia de cromatismo como proxy general de tensión percibida (ni de inestabilidad, complejidad o intensidad emocional): un acorde cromático puede ser inesperado pero consonante, disonante pero esperado, o fuera de colección pero recurrente en su contexto. La tensión es multivariada (contexto tonal jerárquico, altura/contorno, textura/onsets, expectativa) y ningún estudio inspeccionado aísla mezcla, tonicalización o mediante cromático como causa única de tensión. Las etiquetas pedagógicas ('intensificación', 'dramático', 'color') describen marcos, no miden percepción. Complejidad (si se usa) requiere medida y tarea declaradas; el conteo de notas/acordes cromáticos no es medida válida. Esto no afirma que el cromatismo nunca aumente tensión, ni independencia general, ni ausencia universal de relación."
+structural_variable: "chromatic-tension mapping (forbidden proxy: chromatic count/label used as tension/instability/complexity/emotion value)"
+possible_action: ""
+expected_effect: "Higiene metodológica: cada afirmación de tensión declara constructo, tarea y condiciones; fuera de ello, efecto incierto."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-EMPIRICAL-018
+  - SRC-THEORETICAL-010
+context_dependencies:
+  - Constructo separado (rugosidad, inesperabilidad, expectativa, disonancia, incertidumbre, ratings) con tarea concreta.
+  - Oyentes enculturados declarados; repertorio de estímulos declarado (clásica/post-tonal en literatura revisada).
+  - Convergencia con CAND-HAR-012 (dominante != tensión) y CAND-HAR-003 (consonancia != estabilidad).
+counterproductive_conditions:
+  - Afirmar 'acorde cromático = momento tenso' en análisis, reglas o evaluaciones.
+  - Contar cromatismo como complejidad, calidad o sofisticación.
+  - Transferir medidas de tensión clásica al pop/loop sin verificar.
+alternatives:
+  - Medir/estimar tensión por sus componentes declarados (contexto, contorno, textura, expectativa) en vez de por etiqueta cromática.
+  - Describir el evento estructuralmente ('predominante alterada pre-cadencial') sin reclamar tensión.
+uncertainty_confidence: "Media-baja como cautela metodológica: revisión de tensión PARTIAL (multivariedad + infra-definición) + TPS como solo-marco + ausencia delimitada de manipulación cromática→tensión (GAP); ningún primario inspeccionado — insuficiente para claim positivo, suficiente para prohibir el proxy. possible_action vacío."
+genre_sensitivity: "Media: la cautela aplica en todo alcance; los componentes de tensión pueden ponderar distinto por género (no medido aquí)."
+evaluation_falsification: "Estudio donde manipulación cromática aislada (mismo contexto, bajo, duración, textura) eleve sistemáticamente ratings de tensión exigiría acotar la cautela a magnitud/condiciones en vez de prohibición del proxy."
+structure_perception_composition:
+  structure: "Evento cromático etiquetado (mezcla, aplicado, mediante, alteración)."
+  perception: "Tensión atribuible solo con constructo + tarea + condiciones; sin mapeo general cromático→tensión."
+  composition: "Sin regla de dosis: no añadir cromatismo para 'añadir tensión' como procedimiento validado."
+cross_references:
+  - CAND-HAR-012
+  - CAND-HAR-003
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (2026-09-04, RQ-HAR-006): ANTI-PROXY CAUTION con evidencia PARTIAL (SRC-EMPIRICAL-018 + TPS solo-marco + GAP delimitado); cautela metodológica acotada a lo inspeccionado, sin claim universal de ausencia; techo POSSIBLE_WITH_SCOPE por decisión del Director."

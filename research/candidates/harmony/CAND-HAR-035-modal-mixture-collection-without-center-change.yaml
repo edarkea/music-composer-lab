@@ -1,0 +1,46 @@
+id: CAND-HAR-035
+status: candidate
+compositional_problem: "Introducir material de otra colección o modo (préstamo/mezcla) sin cambiar de centro, y diagnosticar correctamente su fuente."
+claim: "CENTER y COLLECTION son variables no equivalentes: en contextos acotados documentados, la colección puede alterarse manteniendo el centro de referencia del marco. En marco clásico, préstamos del paralelo menor (iv, iio6, iiø7, bVI, bIII, bVII, I→i) se analizan con centro de referencia persistente y con preservación de función como reclamación del marco (no como hecho medido); en pop/rock, schemas modales (double plagal, shuttles, aeolian cadence, dorian/lydian shuttles) organizan material con centro propio sin apelar a tonalidad mayor/menor más préstamos. Ningún acorde cromático declara por sí solo su fuente: bVII admite lecturas mixolidia, eolia, de shuttle o de colección global; bVI admite mezcla, cadencia eolia o predominante sustituta; II# admite V/V clásico o shuttle lidio. La fuente se decide por marco + colección + centro declarados, no por sonoridad aislada. COMMON-PRACTICE MIXTURE, POPULAR MODAL INTERCHANGE, MODAL-SCHEMA MEMBERSHIP y COLLECTION SHIFT no se equiparan silenciosamente."
+structural_variable: "modal collection alteration (borrowed scale degrees/chords from a declared parallel/alternative collection with persistent center)"
+possible_action: "En marco clásico declarado, considerar préstamos documentados (predominantes con le, bVI/bIII/bVII, I→i) como vocabulario disponible con centro persistente, sin prometer afecto; en pop/rock-modal, considerar el schema idiomático correspondiente (mixolidio/eolio/dórico/lidio) con su alcance, sin importar la negación clásica ni sobrediagnosticar modos raros (lidio); en ambos casos declarar fuente y verificar por escucha."
+expected_effect: "Ampliación de colección con centro MAINTAIN dentro del marco declarado; fuera de él, efecto incierto."
+evidence_class: THEORY
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - CORPUS_ANALYSIS
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-011
+  - SRC-PEDAGOGICAL-009
+  - SRC-ACADEMIC-030
+  - SRC-CORPUS-011
+  - SRC-ACADEMIC-028
+context_dependencies:
+  - Colección de referencia y centro declarados (sin ellos, 'mezcla' es arbitrario).
+  - Marco de tradición (clásica vs. pop-modal) con su vocabulario propio.
+  - En modal preexistente, grados característicos como material propio (CAND-HAR-006), no préstamo.
+counterproductive_conditions:
+  - Etiquetar todo bVII como 'préstamo mixolidio' o todo bVI como 'préstamo menor'.
+  - Tratar repertorio modal como tonalidad más préstamos.
+  - Exigir V–I en contexto modal (retonaliza).
+  - Inferir tristeza/oscuridad/brillo desde el préstamo (sin medida).
+alternatives:
+  - Tonicalización del objetivo (CAND-HAR-033) cuando hay aplicado con resolución.
+  - Lectura de conducción/tono común (CAND-HAR-037).
+  - Cambio de colección seccional / scalar shift documentado.
+uncertainty_confidence: "Media-baja: mecánica clásica VERIFIED + schemas pop VERIFIED con ejemplos + scalar shift/supermodo VERIFIED + distribuciones PARTIAL + tónicas frágiles/ausentes VERIFIED; función-preservada como reclamación de marco (no medida); transferencia entre marcos `uncertain`. Acción débil con escucha obligatoria."
+genre_sensitivity: "Máxima: el claim ES variación por tradición; ninguna fórmula sale de su alcance."
+evaluation_falsification: "Texto primario que contradiga frecuencias RS o subtipos exigiría recalibrar la mitad pop; corpus modal con juicios que rechace bVI–bVII–i como llegada exigiría acotar la mitad modal; medida de atribución de fuente por oyentes (inexistente) redefiniría el diagnóstico."
+structure_perception_composition:
+  structure: "Alteración de colección con centro persistente y fuente declarada por marco."
+  perception: "Fuente modal atribuida analíticamente; audición de fuente por oyentes sin medida."
+  composition: "Heurística de repertorio débil: usar vocabulario idiomático con alcance; verificar por escucha."
+cross_references:
+  - CAND-HAR-006
+  - CAND-HAR-030
+  - CAND-HAR-004
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (2026-09-04, RQ-HAR-006): BUNDLING AUDIT — un solo claim retenido con núcleo unificado CENTER/COLLECTION y evidencia separada por tradición (clásica VERIFIED + pop VERIFIED + corpus PARTIAL); sin SPLIT, sin CAND-HAR-040; preservación de función como reclamación de marco; audición de fuente por oyentes sin medida."

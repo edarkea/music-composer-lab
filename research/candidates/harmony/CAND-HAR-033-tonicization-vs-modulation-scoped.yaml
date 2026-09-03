@@ -1,0 +1,41 @@
+id: CAND-HAR-033
+status: candidate
+compositional_problem: "Enfatizar temporalmente otro grado sin declarar un cambio de centro (tonicalizar) y saber cuándo el evento deja de ser énfasis local."
+claim: "En marcos acotados de práctica común, tonicalización y modulación se distinguen como diagnósticos contextuales, no por umbral universal: la tonicalización enfatiza un acorde no-tónico mediante V(7)/x o viio(7)/x con resolución al objetivo y sin que el marco declare confirmación cadencial posterior en un nuevo centro; la modulación se diagnostica en ese marco mediante confirmación cadencial y permanencia (frases que empiezan/terminan en el nuevo centro). La duración y la confirmación —no la presencia de alteraciones— orientan el diagnóstico dentro de ese marco. Ningún umbral numérico (acordes/compases) distingue universalmente; fuera de práctica común el corte es `uncertain` y pertenece a la frontera RQ-HAR-007. LOCAL TARGETING, LOCAL TONIC-LIKE EMPHASIS, TONICIZATION, TEMPORARY KEY AREA y MODULATION no reciben aquí cortes exactos entre sí."
+structural_variable: "local tonic emphasis (applied V(7)/viio(7) with resolution to target, cadential confirmation and persistence assessed in context) within a declared framework"
+possible_action: ""
+expected_effect: "Énfasis local (posible ESTABLISH/CONFIRM temporal del objetivo) con centro global MAINTAIN; fuera del marco declarado, efecto incierto."
+evidence_class: THEORY
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+sources:
+  - SRC-PEDAGOGICAL-010
+  - SRC-PEDAGOGICAL-011
+context_dependencies:
+  - Marco declarado (práctica común clásica; TRADITION_SPECIFIC).
+  - Resolución del aplicado al objetivo con leading tone secundario verificado (no solo alteración).
+  - Contexto posterior: ausencia/presencia de confirmación cadencial y permanencia.
+  - Convergencia con bajo, duración y posición (CAND-HAR-002/005).
+counterproductive_conditions:
+  - Declarar modulación desde alteraciones sin cadencia ni permanencia.
+  - Importar el corte cadencial al pop/loop sin verificar (allí la confirmación puede ser seccional o inexistente).
+  - Inventar umbrales (N acordes = tonicalización, N compases = modulación).
+alternatives:
+  - Cambio de centro real (RQ-HAR-007).
+  - Cambio de colección sin cambio de centro (scalar shift; ver CAND-HAR-035).
+  - Lectura de conducción/embellecimiento (ver CAND-HAR-037).
+uncertainty_confidence: "Media-baja: mecánica aplicada VERIFIED en pedagogía clásica (calidades, objetivos, resolución, V→v como límite); mitad negativa (alteraciones no bastan) con apoyo convergente; sin medida perceptiva de centro local; transferencia fuera de clásica `uncertain`. possible_action vacío: el puente compositivo positivo requiere percepción no medida."
+genre_sensitivity: "Alta: corte declarado para clásica; en pop/rock la frontera puede operar a escala seccional o no existir (ver CAND-HAR-039)."
+evaluation_falsification: "Medida donde oyentes atribuyan nuevo centro estable sin cadencia ni permanencia exigiría reformular el corte; repertorio pop donde énfasis aplicados repetidos sostengan centro sin cadencia exigiría acotar el claim a clásica."
+structure_perception_composition:
+  structure: "Aplicado V(7)/x o viio(7)/x con resolución al objetivo; confirmación cadencial posterior evaluada."
+  perception: "Audición de tónica local sin medida (GAP); no inferir centro percibido desde etiqueta."
+  composition: "Puente compositivo positivo pendiente: sin acción justificada todavía; solo cautela negativa (no declarar modulación sin confirmación)."
+cross_references:
+  - CAND-HAR-001
+  - CAND-HAR-004
+  - CAND-HAR-005
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (2026-09-04, RQ-HAR-006): mitad positiva en pedagogía clásica VERIFIED (SRC-PEDAGOGICAL-010/011); criterio cadencial formulado como diagnóstico de marco, no como ley perceptiva; umbrales numéricos excluidos; cinco grados nominales sin cortes exactos; frontera legada a RQ-HAR-007."

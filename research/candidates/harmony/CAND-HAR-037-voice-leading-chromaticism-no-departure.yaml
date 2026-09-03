@@ -1,0 +1,44 @@
+id: CAND-HAR-037
+status: candidate
+compositional_problem: "Conectar dos armonías mediante cromatismo de voces o embellecimiento de tono común sin declarar partida estructural."
+claim: "En marcos analíticos acotados declarados (FRAMEWORK/OBJECT/CRITERION/SCOPE/EVIDENCE TYPE), el cromatismo de conducción (paso/bordadura/vecina/línea cromática) y las sonoridades de tono común (CTo7/CT+6) pueden interpretarse dentro de una región persistente sin implicar establecimiento de un nuevo centro: la superficie es cromática, la región permanece bajo el análisis declarado. Indicios a favor de la lectura: conexión por semitono entre dos puntos de la región, reducción a fundamental+bajo que elimina el cromatismo, resolución a la misma región, vecinos simultáneos documentados. Sin marco declarado, cada acorde se trata como evento sucesivo. Esto no implica que los oyentes no escuchen partida, ni suavidad percibida, ni centro perceptivamente inalterado. Lo subordinado puede ser lo más saliente: EMBELLESHMENT != evento poco importante."
+structural_variable: "voice-leading/common-tone chromatic connection (semitone passing/neighbor/line or simultaneous-neighbor sonority resolving within the same declared region)"
+possible_action: "Cuando el objetivo sea continuidad con color cromático dentro de una región declarada, considerar paso/bordadura cromática o CTo7/CT+6 sobre I o V como mecanismos disponibles de la tradición correspondiente, con resolución verificada a la misma región; no presentarlos como partida ni como intensificación medida; verificar por escucha."
+expected_effect: "Continuidad con superficie móvil y región MAINTAIN bajo marco declarado; fuera de él, efecto incierto."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-013
+  - SRC-PEDAGOGICAL-012
+  - SRC-ACADEMIC-028
+context_dependencies:
+  - Región de referencia declarada (qué permanece operativo).
+  - Resolución verificada a la misma región (no a nuevo centro).
+  - Convergencia con tonos comunes y movimiento pequeño (CAND-HAR-013) sin optimizar distancia global (CAND-HAR-014).
+counterproductive_conditions:
+  - Asignar nueva función a cada altura cromática automáticamente.
+  - Leer ortografía enarmónica como modulación percibida.
+  - Usar 'prolongación' como palabra mágica para ignorar acordes (ver CAND-HAR-025).
+alternatives:
+  - Función aplicada real con resolución a otro objetivo (CAND-HAR-033/034).
+  - Cambio de colección (CAND-HAR-035) cuando la alteración persiste como vocabulario.
+  - Yuxtaposición sin jerarquía (cada evento cuenta).
+uncertainty_confidence: "Baja-media como heurística débil: mecanismo CTo7/CT+6 VERIFIED como THEORY clásica + Aug6/lament VERIFIED + casos analíticos HEREDADOS en ambas direcciones; sin medida de que el oyente oiga 'una sola armonía' (GAP); transferencia fuera de clásica `uncertain`. Acción débil con escucha obligatoria."
+genre_sensitivity: "Alta: criterios de subordinación por tradición; vocabulario clásico como descripción de superficie pop, no como jerarquía."
+evaluation_falsification: "Medida donde oyentes segmenten sistemáticamente como eventos independientes las superficies analizadas como una región (o agrupen lo analizado como partida) exigiría reformular el mecanismo correspondiente."
+structure_perception_composition:
+  structure: "Conexión cromática o sonoridad de tono común con resolución a la misma región declarada."
+  perception: "Continuidad documentada analíticamente; unidad audible sin medida (GAP)."
+  composition: "Heurística débil: mecanismo disponible con resolución verificada; no prometer suavidad ni sutileza percibidas."
+cross_references:
+  - CAND-HAR-013
+  - CAND-HAR-014
+  - CAND-HAR-018
+  - CAND-HAR-024
+  - CAND-HAR-025
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (2026-09-04, RQ-HAR-006): lectura analítica acotada (CTo7/CT+6 + Aug6 VERIFIED como THEORY clásica); `structural departure` siempre relativo a marco declarado; sin inferencia de suavidad/continuidad percibida; acción débil retained con resolución verificada y escucha obligatoria."
