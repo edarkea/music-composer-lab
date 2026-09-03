@@ -1,0 +1,29 @@
+id: CAND-MEL-030
+status: candidate
+compositional_problem: "Usar actividad rítmica (densidad) para sostener continuación o intensificación sin asumir que más notas = más energía."
+claim: "Aumentar la densidad local de onsets puede apoyar continuación/intensificación solo cuando se coordina con marco formal, fragmentación y armonía (scope clásico Caplin) o con saliencia del beat en groove global (Madison, sin traslación a melodía). Aislada de esos marcos, la densidad no tiene efecto establecido sobre continuación ni energía melódica; controlar siempre tempo."
+structural_variable: "local onset density (densidad local de onsets)"
+possible_action: ""
+expected_effect: "Se evita la regla more-notes=more-energy; la densidad queda como variable a coordinar, no como palanca aislada."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-EMPIRICAL-013
+context_dependencies:
+  - Scope clásico (fragmentación+aceleración+armonía) o groove global (Madison, sin traslación).
+  - Tempo controlado/declarado; metro y armonía coordinados.
+counterproductive_conditions:
+  - Densificar esperando intensificación sin marco formal ni soporte.
+  - Confundir densidad con tempo.
+alternatives:
+  - Intensificar por registro, dinámica o armonía sin densificar (cross-domain).
+uncertainty_confidence: "Baja-media: marcos convergentes sin medida directa en melodía; transferencia bloqueada fuera de scopes. Por eso possible_action queda vacío."
+genre_sensitivity: "Clásica (Caplin) vs. groove multi-género (Madison); sin principio general."
+evaluation_falsification: "Densidad aislada que produzca continuación/intensificación melódica sistemática con tempo/metro/armonía controlados obligaría a reformular."
+structure_perception_composition:
+  structure: "Onsets por beat/ventana con tempo declarado."
+  perception: "Densidad↔groove global; nada sobre continuación melódica."
+  composition: "Heurística negativa: coordinar densidad con marco; no densificar por defecto."

@@ -1,0 +1,28 @@
+id: CAND-MEL-025
+status: candidate
+compositional_problem: "Decidir en qué posiciones métricas colocar eventos estructuralmente importantes (o desplazarlos deliberadamente)."
+claim: "Los oyentes internalizan una jerarquía métrica que guía la expectativa de acentos (distribuciones en composiciones, goodness-of-fit, confusiones de memoria; más fina en músicos); los acentos melódicos pop resultan de reglas gestálticas multidimensionales modelables. Coordinar eventos importantes con posiciones fuertes, o desplazarlos deliberadamente, opera sobre esa expectativa; ninguna colocación garantiza función por sí sola."
+structural_variable: "metric placement + accent configuration (posición métrica y configuración de acento)"
+possible_action: "Colocar eventos estructuralmente importantes en posiciones métricamente fuertes, o desplazarlos a débiles de forma deliberada (síncopa); especificar siempre qué tipo de acento se manipula (métrico, agógico, dinámico, pitch)."
+expected_effect: "Congruencia o tensión controlada con la expectativa métrica; evaluable por escucha."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-EMPIRICAL-012
+  - SRC-ACADEMIC-022
+context_dependencies:
+  - Metro simple occidental; oyentes enculturados (más fino en músicos).
+  - Acompañamiento que fije el metro (cross-domain cuando aplique).
+counterproductive_conditions:
+  - Desplazar sin intención (cambia función y puede romper parentesco).
+  - Esperar que la posición fuerte “haga el trabajo” sin soporte de duración/armonía/forma.
+alternatives:
+  - Marcar importancia por duración, dinámica o registro sin mover posición (cross-domain).
+uncertainty_confidence: "Media-baja: jerarquía internalizada y acentos pop medidos; transferencia a colocación compositiva, inferencia."
+genre_sensitivity: "Métricas simples occidentales; pop medido; prudencia fuera."
+evaluation_falsification: "Eventos en posiciones fuertes juzgados sistemáticamente como no prominentes con soporte completo, o desplazamientos sin efecto alguno replicable, obligarían a reformular."
+structure_perception_composition:
+  structure: "Onsets en posiciones de la grilla jerárquica + configuración de acento."
+  perception: "Expectativa de acentos por posición; acento pop multidimensional y modelable."
+  composition: "Heurística: coordinar importancia con posición o desplazar deliberadamente; especificar el tipo de acento."

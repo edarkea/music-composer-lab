@@ -1,0 +1,27 @@
+id: CAND-MEL-029
+status: candidate
+compositional_problem: "Usar silencios dentro o entre ideas sin tratarlos como vacío neutro."
+claim: "El mismo silencio acústico se percibe distinto según contexto (sobre todo tonal): puede funcionar como límite, interrupción, revelador, meta-escucha o comunicación (Margulis JMT, ensayo common-practice), y su detección/tensión/atribución varían con lo que precede y sigue (Margulis MP). Diseñar el silencio por su contexto, no por su duración sola; sin regla silence=tensión ni silence=respiro."
+structural_variable: "silence in context (silencio situado: previo, interno, posterior)"
+possible_action: ""
+expected_effect: "Se evita tratar el silencio como nada; cada uso queda sujeto a escucha y contexto."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-EMPIRICAL-010
+  - SRC-ACADEMIC-020
+context_dependencies:
+  - Contexto tonal/métrico previo y posterior; oyentes occidentales.
+  - Tipo de silencio (interno/final/omisión) con efectos distintos hipotéticos.
+counterproductive_conditions:
+  - Insertar silencios esperando un efecto fijo (tensión, respiro, prominencia).
+alternatives: []
+uncertainty_confidence: "Media-baja: efectos de contexto medidos + taxonomía teórica parcial; funciones una a una sin test; transferencia, inferencia. Por eso possible_action queda vacío."
+genre_sensitivity: "Common-practice y extractos variados; prudencia fuera."
+evaluation_falsification: "Silencios idénticos en contextos distintos juzgados sistemáticamente igual en detección/tensión/atribución refutarían la dependencia de contexto."
+structure_perception_composition:
+  structure: "Hueco temporal situado entre materiales."
+  perception: "Detección/tensión/atribución moduladas por contexto."
+  composition: "Heurística negativa: diseñar por contexto, no prescribir efecto por duración."

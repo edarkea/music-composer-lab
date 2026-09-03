@@ -1,0 +1,26 @@
+id: CAND-MEL-027
+status: candidate
+compositional_problem: "Evitar usar la síncopa como palanca automática de energía, placer o groove melódico."
+claim: "Grados medios de síncopa elicitan máximo querer-moverse y placer en drum-breaks funk (U invertida; Witek et al. 2014); la densidad entre beats y la saliencia del beat también predicen groove (Madison et al. 2011). Estos son ratings de groove sobre percusión/textura global, NO medidas de continuación de frase, energía seccional ni función melódica: prohibido trasladarlos a dosis de síncopa melódica o a clímax formal."
+structural_variable: "syncopation degree (grado de síncopa, solo como variable medida en groove)"
+possible_action: ""
+expected_effect: "Se evita una falsa traslación groove→frase; la U invertida no es dosis compositiva."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-EMPIRICAL-009
+  - SRC-EMPIRICAL-013
+context_dependencies:
+  - Estímulos funk/batería y multi-género global; ratings de querer-moverse/placer.
+  - Bailarines habituales modulan (Witek).
+counterproductive_conditions:
+  - Usar este claim para negar todo papel de la síncopa en melodía (también sin base).
+alternatives: []
+uncertainty_confidence: "Media en su dominio (groove/percusión); transferencia a melodía, bloqueada explícitamente. Por eso possible_action queda vacío."
+genre_sensitivity: "Groove funk/multi-género; sin transferencia a frase melódica."
+evaluation_falsification: "Réplicas que anulen la U invertida en groove obligarían a revisar el núcleo; cualquier refutación compositiva requeriría primero un puente explícito inexistente."
+structure_perception_composition:
+  structure: "Grado de síncopa / densidad entre beats en audio."
+  perception: "U invertida en groove; densidad↔groove global."
+  composition: "Heurística negativa: no trasladar a frase, energía ni dosis melódica."

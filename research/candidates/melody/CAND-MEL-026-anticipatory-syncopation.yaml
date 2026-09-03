@@ -1,0 +1,31 @@
+id: CAND-MEL-026
+status: candidate
+compositional_problem: "Escribir melodías pop/rock con síncopa idiomática sin romper la inteligibilidad métrica."
+claim: "En rock y estilos populares recientes, la síncopa anticipatoria (nota acentuada justo antes del tiempo fuerte, con sustain sobre él, implicando representación subyacente alineada) es un recurso documentado con fuerte presencia en corpus frente a ~cero en canción inglesa s.XIX; el stress silábico es crucial para identificarla. Usable como recurso de género con soporte de corpus, no como universal."
+structural_variable: "anticipatory onset (ataque anticipado con sustain)"
+possible_action: "Colocar la sílaba/nota acentuada justo antes del tiempo fuerte sosteniéndola sobre él, coordinando stress silábico, armonía del tiempo fuerte y letra; no generalizar fuera de pop/rock reciente."
+expected_effect: "Síncopa idiomática rock con metro preservado inferencialmente; evaluable por escucha."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - CORPUS_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-CORPUS-005
+  - SRC-ACADEMIC-019
+  - SRC-EMPIRICAL-008
+context_dependencies:
+  - Pop/rock reciente angloamericano; letra con stress identificable.
+  - Armonía del tiempo fuerte compatible (cross-domain).
+counterproductive_conditions:
+  - Anticipar sin sustain ni alineación inferible (el oyente pierde el metro).
+  - Aplicar a tradiciones sin anticipación documentada como si fuera neutra.
+alternatives:
+  - Síncopa retardataria (menos apoyo; hipótesis).
+  - Onsets a tiempo con contraste por otros parámetros.
+uncertainty_confidence: "Media-baja: corpus sólido + definición formal; representación subyacente inferida, no medida; funciones (ajuste prosódico) discutidas, no testadas."
+genre_sensitivity: "Alta: rock/pop reciente; cae postmillennial; ~cero en s.XIX inglés."
+evaluation_falsification: "Corpus rock sin anticipación sistemática, u oyentes que no recuperen el metro tras anticipaciones, debilitarían el claim."
+structure_perception_composition:
+  structure: "Onset acentuado pre-fuerte + sustain + stress silábico."
+  perception: "Conflicto superficie-metro con alineación subyacente inferida (teórica)."
+  composition: "Heurística de género documentada: anticipar con stress y armonía compatibles."

@@ -11,6 +11,9 @@ support_basis:
   - PROJECT_EXPERIMENT
 sources:
   - SRC-ACADEMIC-006
+  - SRC-ACADEMIC-022
+  - SRC-EMPIRICAL-012
+revision_note: "RQ-MEL-006 (matiz, sin promoción): se añaden SRC-ACADEMIC-022 (acentos percibidos nota a nota en pop) y SRC-EMPIRICAL-012 (jerarquía métrica internalizada) como marco de que pitch y ritmo co-determinan acentos; no miden parentesco, por lo que el claim sigue candidate HYPOTHESIS. Matiz nuevo: cambiar pitches puede reponderar acentos percibidos aunque el IOI se conserve (inferencia desde Müllensiefen, no medida directa)."
 project_evidence: "EXP-001, condición E (experiments/EXP-001.md): secuencia de pitches conservada con patrón temporal modificado; juicio de parentesco 4/4 en una realización, un evaluador, una melodía. Dato exploratorio, no generalizable."
 context_dependencies:
   - Grado de redistribución temporal; si cambia el metro percibido o solo duraciones internas.
