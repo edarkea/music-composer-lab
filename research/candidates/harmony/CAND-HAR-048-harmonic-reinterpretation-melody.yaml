@@ -1,0 +1,37 @@
+id: CAND-HAR-048
+status: candidate
+compositional_problem: "Reinterpretar un mismo pitch o fragmento melódico cambiando su soporte armónico."
+claim: "El contexto armónico puede reinterpretar el mismo pitch melódico (distinto grado, distinto miembro, distinta función local) sin alterar la melodía: lo que cambia es el marco de referencia (root, bajo, colección, objetivo local). La reinterpretación analítica (otra lectura admisible) está soportada estructuralmente (matriz de lecturas cromáticas, disociación enarmónica con mismas alturas y distinta función según contexto); la reinterpretación perceptiva (el oyente escucha otra función) no tiene medida dedicada inspeccionada y no se infiere de la anterior. Ninguna reinterpretación promete efecto emocional."
+structural_variable: "scale-degree / chord-member / functional reading of a fixed melodic pitch under varying harmonic support (bass + collection + inversion + local target), with analytical vs perceptual reinterpretation declared separately"
+possible_action: "Para reinterpretar sin mover la melodía, cambiar el nivel armónico declarado (bajo, inversión, identidad, colección, objetivo local) manteniendo la melodía invariante; registrar si la reinterpretación es analítica o perceptiva; no prometer efecto oyente sin tarea."
+expected_effect: "Disponer de rearmonización como mecanismo de variación sin alterar el motivo; evitar confundir etiqueta nueva con escucha nueva."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-013
+  - SRC-ACADEMIC-030
+  - SRC-ACADEMIC-031
+cross_references:
+  - CAND-HAR-033
+  - CAND-HAR-035
+  - CAND-HAR-036
+  - CAND-HAR-040
+  - CAND-HAR-041
+context_dependencies:
+  - Nivel armónico que cambia (bajo, inversión, identidad, función, colección, centro).
+  - Resolución y contexto precedente/siguiente verificados.
+  - Si funda nuevo centro: CROSS-RQ DEPENDENCY RQ-HAR-007.
+counterproductive_conditions:
+  - Inferir emoción, tensión o desarrollo percibido desde el cambio de etiqueta.
+  - Cambiar simultáneamente melodía y armonía y atribuir el efecto al soporte.
+alternatives:
+  - Variar la melodía manteniendo la armonía (operación inversa).
+uncertainty_confidence: "Baja-media: mitad analítica con apoyo estructural (disociación enarmónica OMT VERIFIED como analogía; matriz 036; scalar shift); mitad perceptiva sin medida dedicada (GAP explícito). Formulado como hipótesis por esta asimetría."
+genre_sensitivity: "Media: las lecturas disponibles dependen de tradición y marco."
+evaluation_falsification: "Diseño melodía-fija × armonía-variada con tarea declarada (atribución de centro/función): si ninguna manipulación de soporte altera juicios, la mitad perceptiva se rechaza y el claim queda como herramienta analítica; si altera, se delimita por marco."
+structure_perception_composition:
+  structure: "Mismo pitch melódico con distinto soporte armónico y distinta lectura admisible."
+  perception: "Sin medida dedicada; reinterpretación perceptiva pendiente de diseño con tarea declarada."
+  composition: "Hipótesis de alto valor como mecanismo (cambiar soporte sin mover melodía); efecto oyente uncertain."

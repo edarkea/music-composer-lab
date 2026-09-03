@@ -1,0 +1,39 @@
+id: CAND-HAR-047
+status: candidate
+compositional_problem: "Elegir una armonía que acompañe una melodía fija sin asumir que la melodía determina un único acorde."
+claim: "Una melodía fija (nota o fragmento) infradetermina la selección armónica: el mismo evento melódico admite varias armonías admisibles (distinto miembro, tono común entre acordes, pedal, préstamo con centro persistente, gesto local dentro de loop, divorce documentado donde melodía y armonía apuntan a centros distintos). La melodía propone candidatos y elimina algunos; no selecciona un único acorde ni una única función. Esto no establece que toda armonía valga (la convergencia con colección, bajo, métrica y forma filtra), ni que las opciones sean equivalentes."
+structural_variable: "harmonic selection (target identity / relation / collection / timing) under fixed melodic event, filtered by collection + bass + metric/formal position + framework, never deduced from melody alone"
+possible_action: "Ante melodía fija, enumerar armonías admisibles (qué miembro sería la nota en cada una, con qué bajo y colección) en vez de buscar el acorde correcto; eliminar solo con convergencia declarada; confirmar por escucha."
+expected_effect: "Evitar lookup mel→acorde; mantener espacio de opciones diagnosticable para rearmonización."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-030
+  - SRC-ACADEMIC-031
+cross_references:
+  - CAND-HAR-007
+  - CAND-HAR-009
+  - CAND-HAR-011
+  - CAND-HAR-036
+  - CAND-HAR-040
+context_dependencies:
+  - Marco de tradición (funcional, modal, loop): el espacio de admisibles cambia por marco.
+  - Colección vigente, bajo disponible, posición métrica/formal.
+  - Si el caso funda un nuevo centro: CROSS-RQ DEPENDENCY RQ-HAR-007.
+counterproductive_conditions:
+  - Tratar admisibilidad como equivalencia (toda opción igual de buena).
+  - Usar este claim para justificar cualquier armonía sin convergencia ni escucha.
+alternatives:
+  - Fijar primero objetivo armónico (dirección, llegada, color) y filtrar admisibles por objetivo.
+uncertainty_confidence: "Media-baja como claim estructural/interactional: función por rol en contexto (007), root motion insuficiente (009), loops sin sintaxis clásica (011), múltiples lecturas (036), cifrado infradetermina (040) y divorce (Spicer/Everett/Doll-vía-reseña VERIFIED en su alcance) convergen; sin medida de ranking entre armonías admisibles bajo melodía fija."
+genre_sensitivity: "Media-alta: el espacio de admisibles es fuertemente dependiente de tradición."
+evaluation_falsification: "Catálogo por tradición donde cada evento melódico admita una única armonía idiomática, o medida donde oyentes converjan sistemáticamente en un único acorde para melodías fijas variadas, exigiría reformular como selección determinable con alcance."
+structure_perception_composition:
+  structure: "Evento melódico fijo con varias armonías estructuralmente admisibles bajo marcos declarados."
+  perception: "Sin medida de preferencia/atribución entre admisibles; divorce documentado analíticamente."
+  composition: "Heurística de admisibilidad justificada en versión débil: enumerar y filtrar, no deducir el acorde único."

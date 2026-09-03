@@ -1,0 +1,37 @@
+id: CAND-HAR-046
+status: candidate
+compositional_problem: "Decidir si una nota melódica es estable o utilizable sin deducirlo de su pertenencia al acorde."
+claim: "La pertenencia de un pitch melódico a la sonoridad realizada (chord tone / non-chord tone bajo marco declarado) no equivale a estabilidad melódica, ni a consonancia sensorial, ni a calidad de la nota: un miembro del acorde puede ser contextualmente activo (séptima con tendencia en marco clásico, tónica frágil por inversión en pop) y un no-miembro puede ser localmente estable (pedal melódico, tono común entre armonías, miembro estable de loop cromático, anticipación de género). El binario chord/non-chord clasifica contra una sonoridad; no diagnostica estabilidad ni prescribe uso."
+structural_variable: "melodic pitch evaluated jointly against realized sonority (declared framework) + collection + duration + metric position + repetition + phrase position, never membership alone"
+possible_action: "Clasificar cada nota melódica declarando sonoridad realizada y marco antes de juzgarla; no tratar chord tone como nota buena ni non-chord tone como tensión/error; comprobar convergencia (colección, duración, métrica, repetición) antes de decidir estabilidad."
+expected_effect: "Evitar falsas deducciones (es del acorde luego es estable; no es del acorde luego crea tensión y debe resolver)."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-PEDAGOGICAL-010
+cross_references:
+  - CAND-HAR-003
+  - CAND-HAR-007
+  - CAND-HAR-015
+  - CAND-HAR-016
+  - CAND-HAR-039
+  - CAND-HAR-040
+context_dependencies:
+  - Sonoridad realizada y marco declarados (sin marco la clasificación está vacía).
+  - Colección, duración, posición métrica y formal, repetición.
+  - Tradición (clásica, modal, pop/loop): qué miembros son activos varía por marco.
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar marco de grado (tónica/root/bajo/colección) antes de calificar la nota.
+uncertainty_confidence: "Media como cautela negativa: consonancia != estabilidad (CAND-HAR-003 STRONG heredado); miembros activos y no-miembros estables documentados analíticamente (Spicer VERIFIED en su alcance; OMT VERIFIED); sin medida dedicada que pondere pertenencia frente a colección/métrica/duración en juicios de estabilidad melódica."
+genre_sensitivity: "Media: la cautela es transversal; qué configuraciones son idiomáticas depende de la tradición."
+evaluation_falsification: "Medida donde la pertenencia al acorde, aislando colección, duración, métrica y repetición, prediga sistemáticamente juicios de estabilidad melódica en oyentes enculturados, exigiría reformular como ponderación con primado de la pertenencia."
+structure_perception_composition:
+  structure: "Pitch melódico dentro o fuera de la sonoridad realizada bajo marco declarado."
+  perception: "Sin medida dedicada que aísle pertenencia de contexto; estabilidad juzgada multidimensionalmente."
+  composition: "Heurística negativa justificada en versión débil: no deducir estabilidad, tensión ni calidad desde la pertenencia."

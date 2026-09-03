@@ -1,0 +1,36 @@
+id: CAND-HAR-052
+status: candidate
+compositional_problem: "Clasificar y usar notas melódicas fuera del acorde sin inferir tensión, belleza, error ni obligación de resolver desde la etiqueta."
+claim: "Las categorías de non-chord tone (paso, bordadura, suspensión, retardación, apoyatura, anticipación, fuga, pedal melódico, paso/bordadura acentuados, irresueltos) dependen de marco declarado, colocación temporal y comportamiento de conducción: la misma configuración interválica cambia de categoría y de disponibilidad según tradición (práctica común, modal, pop/rock vocal con anticipación documentada en corpus). Ninguna etiqueta infiere por sí sola tensión percibida, expresividad, error ni resolución obligatoria; fuera del marco clásico no existe deber general de resolver."
+structural_variable: "non-chord-tone category declared with framework + temporal placement (strong/weak, pre-onset, extended) + voice-leading behavior (step/skip, preparation, resolution, sustain), never interval alone"
+possible_action: "Antes de usar o juzgar un no-miembro, declarar categoría con marco, temporalidad y conducción; en pop/rock usar anticipación solo con sustain, stress silábico y armonía del tiempo fuerte compatibles; no exigir resolución fuera de marco clásico."
+expected_effect: "Clasificación sin falsas inferencias; uso idiomático por tradición con escucha."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-PEDAGOGICAL-010
+cross_references:
+  - CAND-HAR-015
+  - CAND-HAR-024
+  - CAND-HAR-025
+  - CAND-HAR-037
+context_dependencies:
+  - Marco de tradición y repertorio (qué categorías existen y qué exigen).
+  - Colocación métrica y duración/sustain.
+  - Resolución verificada (no presumida).
+counterproductive_conditions:
+  - Inferir expresividad del acento (acentuado = expresivo) sin medida.
+  - Aplicar obligaciones clásicas de resolución al pop/loop.
+alternatives:
+  - Releer el pitch como miembro (extensión, tono común, miembro de loop cromático) con marco alternativo.
+uncertainty_confidence: "Media-baja como heurística negativa: tendency/resolución acotadas a clásica (015), superficie-en-región con marco (024/025/037), anticipación pop con soporte de corpus (Tan et al. vía Melody) y sin medida perceptiva que distinga categorías; pedagogía clásica a texto completo pendiente (solo marcos)."
+genre_sensitivity: "Alta: disponibilidad y obligación de cada categoría dependen de tradición."
+evaluation_falsification: "Medida que aísle categoría (p. ej. suspensión vs paso, acentuado vs no) con tarea declarada y muestre diferencias sistemáticas de tensión/expectativa entre tradiciones, exigiría reformular por categoría con alcance; ausencia de diferencias confirmaría la dependencia de marco."
+structure_perception_composition:
+  structure: "Pitch fuera de la sonoridad con categoría declarada (marco + temporalidad + conducción)."
+  perception: "Sin medida que distinga categorías en tensión/expectativa; disonancia degrada ratings solo en tarea acotada (Sears PARTIAL)."
+  composition: "Heurística negativa justificada: clasificar con marco, usar idiomáticamente, no inferir efecto desde la etiqueta."

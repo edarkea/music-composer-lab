@@ -1,0 +1,39 @@
+id: CAND-HAR-049
+status: candidate
+compositional_problem: "Realizar una armonía ya elegida bajo una melodía fija (bajo, inversión, voicing) sin asumir una única realización correcta."
+claim: "La misma identidad armónica admite varias realizaciones bajo una melodía fija: la melodía (nota techo, tesitura habitable, duplicaciones a evitar, cruces registrales) restringe el espacio (qué bajos, inversiones, spacings y asignaciones quedan estructuralmente posibles) sin determinar una única realización. Toda elección declara marco e inventario (bajo, inversión con 6/4 descompuesto, registro, spacing, duplicación/omisión, asignación); ninguna promete por sí sola estabilidad, función, cierre o calidad."
+structural_variable: "realized sonority (bass + inversion + exact pitches + register + spacing + doubling + omission + voice allocation) under fixed top-line melody + singability constraint, evaluated against framework, never deduced from label"
+possible_action: "Fijada melodía e identidad armónica, generar realizaciones admisibles con el inventario 040–045 respetando tesitura y sin duplicaciones/cruces problemáticos; comparar por escucha con marco declarado; no rankear por regla general."
+expected_effect: "Manipulación diagnosticable de la realización bajo melodía; evitar tablas de inversión/voicing preferidos."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-EMPIRICAL-016
+cross_references:
+  - CAND-HAR-016
+  - CAND-HAR-040
+  - CAND-HAR-041
+  - CAND-HAR-042
+  - CAND-HAR-043
+  - CAND-HAR-044
+  - CAND-HAR-045
+context_dependencies:
+  - Textura (SATB clásica vs capas pop): las normas cambian por sistema declarado.
+  - Tesitura del intérprete/estilo (límite físico).
+  - Posición formal (llegada u otro punto).
+counterproductive_conditions:
+  - Inferir estabilidad, suavidad, fuerza de cierre o calidad desde inversión/registro/spacing.
+  - Duplicar la melodía en bajo/interiores sin comprobar fusión/prominencia por escucha.
+alternatives:
+  - Cambiar la selección armónica en vez de forzar una realización incómoda.
+uncertainty_confidence: "Media-baja como heurística negativa/manipulatoria: infradeterminación 040, bajo como capa 041, anti-jerarquía de inversión 042 y conducción desde realización 043 heredados; tesitura habitable como restricción física genérica; Sears PARTIAL acotado a tarea sin pesos; sin medida que rankee realizaciones bajo melodía fija."
+genre_sensitivity: "Alta: voicings idiomáticos (guitarra/teclado pop, SATB, pedal modal) dependen de tradición."
+evaluation_falsification: "Medida con melodía fija donde una realización (bajo/inversión/voicing) sea sistemáticamente preferida o juzgada más estable entre tradiciones, exigiría reformular con alcance o ponderación declarada."
+structure_perception_composition:
+  structure: "Identidad armónica fija + melodía fija con varias realizaciones estructuralmente posibles."
+  perception: "Sin medida de preferencia/estabilidad entre realizaciones; fusión/prominencia sin medir."
+  composition: "Heurística justificada en versión débil: restringir por melodía + marco, generar admisibles, elegir por escucha."

@@ -1,0 +1,39 @@
+id: CAND-HAR-051
+status: candidate
+compositional_problem: "Acompañar material melódico repetido con armonía igual o cambiada sin romper identidad ni prometer desarrollo automático."
+claim: "La variación armónica puede acompañar material melódico repetido (mismo motivo + bajo cambiado, revoicing, inversión distinta, identidad o colección cambiadas dentro del centro) sin alterar la identidad melódica, cuya preservación sigue las palancas de RQ-MEL-001 (tolerancia grande en una dimensión con el resto intacto; degradación con cambio multidimensional). El cambio armónico no crea automáticamente variación percibida ni desarrollo: es variación de superficie disponible con funciones candidatas (contexto cambiado, contraste seccional, final cambiado, retorno con reinterpretación) pendientes de medida."
+structural_variable: "repeated melodic motif (pitches / rhythm / accents / register preserved per RQ-MEL-001 levers) × harmonic change level (bass / inversion / identity / function / collection / timing / voicing), with operation vs function declared separately"
+possible_action: "Para variar sin mover el motivo, cambiar un nivel armónico declarado manteniendo invariantes melódicos explícitos; no cambiar todo a la vez; comprobar parentesco por escucha; no etiquetar el resultado como desarrollo sin evidencia."
+expected_effect: "Desarrollo sin alterar el motivo cuando proceda; evitar monotonía o ruptura no intencional."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-ACADEMIC-031
+  - SRC-ACADEMIC-028
+cross_references:
+  - CAND-HAR-011
+  - CAND-HAR-026
+  - CAND-HAR-040
+  - CAND-HAR-043
+context_dependencies:
+  - Qué invariantes melódicos se preservan (pitches, ritmo, acentos, registro, final).
+  - Nivel armónico que cambia y marco de tradición.
+  - Posición formal (repetición inmediata, retorno seccional, loop).
+  - Si funda nuevo centro: CROSS-RQ DEPENDENCY RQ-HAR-007.
+counterproductive_conditions:
+  - Cambiar armonía y melodía a la vez esperando parentesco preservado.
+  - Desplazar métricamente el motivo sin intención (altera función).
+  - Tratar repetición con contexto cambiado como desarrollo medido.
+alternatives:
+  - Variar la melodía manteniendo la armonía (final cambiado, redistribución rítmica).
+  - Variar textura/arreglo con melodía y armonía fijas (loop-based).
+uncertainty_confidence: "Baja-media como hipótesis de alto valor: operaciones de repetición/variación melódica heredadas (marcos Margulis/Schoenberg/Caplin/Butler sin medida de identidad en sentido estricto); superficie-en-región y revoicing como variación estructural (024/040/043); normalización perceptiva de loop y desarrollo como efecto sin medir (GAP)."
+genre_sensitivity: "Alta: repetición temprana vs sostenida, y variación aceptable, dependen de tradición (clásica varía pronto, loop sostiene)."
+evaluation_falsification: "Diseño motivo-repetido × armonía-igual/cambiada con juicios de parentesco y de variación/desarrollo: si el cambio armónico nunca preserva parentesco, o si siempre se juzga desarrollo, el claim se rechaza o se delimita por nivel de cambio."
+structure_perception_composition:
+  structure: "Motivo melódico repetido (invariantes declarados) con armonía igual o cambiada en nivel declarado."
+  perception: "Parentesco con tolerancia unidimensional (EXP-001 n=1); variación/desarrollo percibidos sin medida."
+  composition: "Hipótesis operativa (variar soporte sin mover motivo); funciones candidatas pendientes de medida."

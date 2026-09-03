@@ -1,0 +1,40 @@
+id: CAND-HAR-050
+status: candidate
+compositional_problem: "Coordinar llegadas melódicas y armónicas (reforzarlas, separarlas o dejarlas abiertas) sin confundir llegada con cierre."
+claim: "Las llegadas melódica y armónica pueden converger o divergir: la armonía puede reforzar una llegada melódica (objetivo tónico/modal + soprano escalar + bajo con proceso + métrica fuerte + posición formal), contradecirla o retrasarla (loop que continúa, bajo en movimiento, cambio tras la llegada, tónica frágil deliberada), y la llegada armónica puede preceder al cierre melódico. La llegada tónica no equivale al cierre: el cierre completo exige convergencia multi-dominio (melodía, armonía, metro, forma y, donde aplique, arreglo/prosodia). Ninguna inversión, bajo o registro aislados miden fuerza de cierre."
+structural_variable: "melodic arrival + harmonic arrival + cadential process + metric/formal position evaluated jointly; closure only under cross-domain convergence, never from one domain alone"
+possible_action: "Decidir por separado llegada melódica y llegada armónica (convergen, divergen o se anticipan); para cierre, exigir convergencia declarada de dominios; para apertura deliberada, usar el repertorio de divergencias sin regla no-tónica = abierto."
+expected_effect: "Diseñar llegadas y cierres por separado; evitar scores de cierre desde un solo dominio."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - EXTERNAL_EMPIRICAL
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-EMPIRICAL-016
+  - SRC-ACADEMIC-028
+cross_references:
+  - CAND-HAR-027
+  - CAND-HAR-028
+  - CAND-HAR-029
+  - CAND-HAR-031
+  - CAND-HAR-032
+  - CAND-HAR-041
+  - CAND-HAR-042
+context_dependencies:
+  - Proceso cadencial con marco de tradición (clásico, modal, loop/pop).
+  - Posición métrica y escala formal (frase vs sección).
+  - Arreglo y prosodia donde apliquen.
+counterproductive_conditions:
+  - Rankear fuerza sentida desde categoría cadencial, inversión, bajo o registro.
+  - Exigir coincidencia de llegadas como obligación general.
+alternatives:
+  - Divergencia deliberada como apertura (mantener loop, mover bajo, cambiar tras la llegada).
+uncertainty_confidence: "Media-baja: llegada != cierre y jerarquía analítica != ranking perceptivo heredados (028/029 con Sears PARTIAL acotado); cadencia como proceso (027/Caplin VERIFIED en su alcance); inversión en llegada sin fuerza (042); sin medida multi-dominio que pondere convergencia."
+genre_sensitivity: "Alta: fórmulas de llegada (V–I, bVII–I, plagales, retorno loop) dependen de tradición."
+evaluation_falsification: "Diseño llegada-melódica × llegada-armónica (convergente/divergente) con juicios de completitud y tarea declarada: si la divergencia nunca reduce completitud, o si una sola variable predice cierre entre tradiciones, el claim se reformula con alcance."
+structure_perception_composition:
+  structure: "Eventos de llegada melódicos y armónicos convergentes o divergentes con proceso cadencial declarado."
+  perception: "Ratings de completitud por tarea acotada (Sears); fuerza sentida multi-dominio sin medir."
+  composition: "Heurística clasificatoria justificada (convergencia para cierre, divergencia para apertura); fuerza sin receta."
