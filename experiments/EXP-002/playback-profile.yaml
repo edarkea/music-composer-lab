@@ -1,0 +1,49 @@
+experiment_id: EXP-002
+purpose: Documentación del playback real de EXP-001 y del entorno planificado para EXP-002.
+playback_environment_status: PENDING_FREEZE
+human_evaluation_status: NOT_STARTED
+project_owner_exposure_to_exp002_stimuli: NONE
+planned_chain:
+  - canonical MIDI
+  - REAPER
+  - IK Multimedia Pianoverse
+  - fixed configuration
+  - offline WAV
+  - blind WAV
+  - evaluation
+device:
+  model: Redmi 14C
+  os: Android 16
+player:
+  application: Google Files
+  version: "1.12"
+output:
+  route: built-in phone speaker
+midi_playback:
+  program_change_encoded: false
+  perceived_instrument: Grand Piano
+  synthesis_engine: unknown
+  exact_sound_source: unknown
+  exact_preset_identity: unknown
+controls:
+  same_device_for_all_trials: true
+  same_application_for_all_trials: true
+  same_output_route_for_all_trials: true
+  volume_fixed_within_EXP_002: true
+  volume_exactly_equal_to_EXP_001: false
+exp002_final_environment:
+  renderer: REAPER
+  instrument: IK Multimedia Pianoverse
+  configuration: TBD
+  piano_or_library: TBD
+  preset: TBD
+  microphone_configuration: TBD
+  effects: TBD
+  renderer_settings: TBD
+notes:
+  - Redmi 14C + Google Files no es el entorno final de playback de EXP-002.
+  - La configuración Redmi/Google Files conserva la documentación del entorno utilizado para EXP-001 y del plan de replicación anterior.
+  - El entorno final planificado busca una cadena offline reproducible para EXP-002.
+  - No demuestra equivalencia tímbrica exacta entre EXP-001 y EXP-002.
+  - El volumen exacto utilizado en EXP-001 no fue registrado.
+  - EXP-002 fijará el volumen durante toda la sesión, sin afirmar que lo iguala objetivamente con EXP-001.

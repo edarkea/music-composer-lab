@@ -1,0 +1,26 @@
+experiment_id: EXP-002
+created_at: "2026-09-03"
+block_presentation_order: [K4, R7, M2]
+references:
+  K4: {base: A1, canonical: A1.mid, blind: K4-reference.mid}
+  R7: {base: A2, canonical: A2.mid, blind: R7-reference.mid}
+  M2: {base: A3, canonical: A3.mid, blind: M2-reference.mid}
+candidates:
+  K4:
+    X7: {condition: D1, canonical: D1.mid, blind: K4-X7.mid}
+    P3: {condition: B1, canonical: B1.mid, blind: K4-P3.mid}
+    V8: {condition: F1, canonical: F1.mid, blind: K4-V8.mid}
+    L5: {condition: E1, canonical: E1.mid, blind: K4-L5.mid}
+    H2: {condition: C1, canonical: C1.mid, blind: K4-H2.mid}
+  R7:
+    Q9: {condition: E2, canonical: E2.mid, blind: R7-Q9.mid}
+    C6: {condition: F2, canonical: F2.mid, blind: R7-C6.mid}
+    T4: {condition: B2, canonical: B2.mid, blind: R7-T4.mid}
+    N8: {condition: D2, canonical: D2.mid, blind: R7-N8.mid}
+    Y3: {condition: C2, canonical: C2.mid, blind: R7-Y3.mid}
+  M2:
+    G8: {condition: C3, canonical: C3.mid, blind: M2-G8.mid}
+    W5: {condition: D3, canonical: D3.mid, blind: M2-W5.mid}
+    B9: {condition: F3, canonical: F3.mid, blind: M2-B9.mid}
+    J6: {condition: E3, canonical: E3.mid, blind: M2-J6.mid}
+    S4: {condition: B3, canonical: B3.mid, blind: M2-S4.mid}
