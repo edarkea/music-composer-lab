@@ -182,8 +182,8 @@ hipotético salvo indicación; no reinvestigar contorno):
 - **Continuation:** elevar progresivamente la zona puede acompañar
   continuación, pero la continuación está establecida por otros
   medios (RQ-MEL-002); el registro solo la acompaña (hipótesis).
-- **Emphasis:** extremo + duración + acento marca el evento
-  (configuración tipo Eitan; cf. RQ-MEL-003).
+- **Emphasis:** extremo + duración + acento puede marcar el evento
+  (configuración tipo Eitan; cf. RQ-MEL-003); sin causalidad demostrada.
 - **Arrival:** ver Register and Climax / Closure; el registro solo no
   llega.
 - **Closure:** ver Register and Closure.
@@ -212,8 +212,9 @@ contorno, y su efecto no está medido (gap).
 - **Retornos de coro / coro final:** sin evidencia incorporada sobre
   elevación adicional (coro modulado, belt final, etc.); gap.
 - **Puentes:** sin evidencia registral incorporada; gap.
-- **Desplazamiento de octava entre secciones:** operación disponible
-  descrita en la práctica; sin medida; riesgos (tesitura, mezcla).
+- **Desplazamiento de octava entre secciones:** sin apoyo incorporado:
+  tratarlo como hipótesis sin medir (no como extensión de EXP-001 B);
+  riesgos hipotéticos (tesitura, mezcla).
 
 Regla de trabajo: cualquier claim seccional-registral debe formularse
 como estrategia a comprobar (con, al menos, armonía, dinámica,
@@ -371,8 +372,9 @@ gaps.
    (efectos interactivos y opuestos por dominio): no está justificado
    un mapeo simple e independiente del contexto entre altura y afecto.
 3. Extremos como prominencia (rareza) vs. extremos como coste
-   (esfuerzo/tesitura): el mismo evento es saliente Y caro; reservarlo
-   gestiona ambas caras.
+   (esfuerzo/tesitura): el mismo evento puede leerse como saliente y
+   como caro; reservarlo se postula (hipótesis, no demostrada) como
+   forma de gestionar ambas caras.
 4. Reversión post-extremo como expectativa (I-R) vs. efecto de
    tesitura (von Hippel/Huron): ambas lecturas coexisten (CAND-MEL-013).
 5. Rango amplio como expresividad vs. tesitura inhabitable como fallo:
@@ -388,8 +390,9 @@ gaps.
   tesituras amplias, esfuerzo, timbre ni función seccional.
 - **SPC-R5-2 (tesitura):** STRUCTURE concentración y extremos
   sostenidos; PERCEPTION sin medida directa (física: esfuerzo);
-  COMPOSITION: escribir tesituras habitables; reservar extremos como
-  eventos (heurística física, no estética).
+  COMPOSITION: escribir tesituras habitables (heurística física, no
+  estética); usar extremos de forma puntual, con su eventual
+  importancia formal como hipótesis provisional separada.
 - **SPC-R5-3 (prominencia):** STRUCTURE evento alto/aislado/largo;
   PERCEPTION saliencia por configuración posible, no por altura sola
   (marcos Eitan; Bregman solo como segregación general, distinto de

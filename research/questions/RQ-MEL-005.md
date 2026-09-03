@@ -50,16 +50,18 @@ Ver tabla "Sources" en la síntesis y records en
 
 ## Candidate Claims Produced
 
-- CAND-MEL-019 (desplazamiento registral conserva relaciones, cambia
-  tesitura/esfuerzo/color; HYPOTHESIS).
-- CAND-MEL-020 (tesituras habitables, extremos como eventos;
-  COMPOSITION HEURISTIC física).
-- CAND-MEL-021 (prominencia por rareza contextual + configuración, no
-  por altura absoluta; HYPOTHESIS).
+- CAND-MEL-019 (transposición exacta conserva relaciones; cautelas
+  físicas/tímbricas genéricas; EXP-001 B solo apoya transposición
+  exacta pequeña; HYPOTHESIS).
+- CAND-MEL-020 (tesituras habitables; extremos como eventos marcados:
+  hipótesis provisional separada; COMPOSITION HEURISTIC física).
+- CAND-MEL-021 (extremidad relativa y configuración pueden contribuir
+  a la prominencia junto a otros parámetros; streaming ≠ prominencia;
+  HYPOTHESIS).
 - CAND-MEL-022 (elevación registral seccional como estrategia con haz
   de marcadores; COMPOSITION HEURISTIC de género pop/rock).
-- CAND-MEL-023 (altura no mapea a emoción/energía directamente;
-  heurística negativa; HYPOTHESIS).
+- CAND-MEL-023 (sin mapeo simple justificado altura→afecto;
+  heurística negativa; HYPOTHESIS, acción vacía).
 - CAND-MEL-024 (movimiento interior tras extremos como opción local,
   no obligatorio; HYPOTHESIS; solapamiento parcial con CAND-MEL-013
   pendiente de futura integración, sin fusión).
