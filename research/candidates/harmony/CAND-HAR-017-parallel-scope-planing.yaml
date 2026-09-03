@@ -1,0 +1,33 @@
+id: CAND-HAR-017
+status: candidate
+compositional_problem: "Decidir si una restricción al movimiento paralelo aplica en el juego compositivo en curso, sin generalizar prohibiciones de tradición."
+claim: "Las restricciones al movimiento paralelo (quintas/octavas consecutivas o movimiento paralelo en general) pertenecen a sistemas acotados de contrapunto/part-writing y no deben generalizarse como prohibiciones universales de conducción: protegen el objetivo declarado de preservar N voces independientes en la polifonía de práctica común, y pierden su objeto donde ese objetivo no opera. No se infiere que las quintas paralelas suenen mal, que el movimiento paralelo destruya perceptivamente la independencia, ni que las paralelas sean siempre estilísticamente inapropiadas: las fuentes clásicas revisadas son pedagógicas/teóricas (norma de tradición con objetivo declarado), no evidencia perceptiva. La mitad positiva (planing como organización legítima) se separa en CAND-HAR-020 y no forma parte de este claim."
+structural_variable: "parallel-motion restriction scoped to the active compositional game (N independent voices vs. other textures), with stated tradition and protected objective"
+possible_action: "Aplicar restricciones al movimiento paralelo solo cuando el objetivo contrapuntístico o estilístico correspondiente se persiga realmente: en part-writing de práctica común, aplicar la norma de tradición; fuera de ella, no invocarla como prohibición."
+expected_effect: "Norma correctamente acotada en part-writing clásica; fuera de ella, ausencia de prohibición injustificada; ningún efecto perceptivo afirmado."
+evidence_class: THEORY
+support_basis:
+  - COMPOSITION_PEDAGOGY
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-005
+  - SRC-PEDAGOGICAL-007
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+context_dependencies:
+  - Juego declarado: polifonía a voces independientes (la norma aplica) u otra textura (la norma no aplica como prohibición).
+  - Tradición de práctica común para la mitad positiva de la norma; repertorios con movimiento paralelo idiomático como contraejemplos a la universalidad.
+counterproductive_conditions:
+  - Universalizar la prohibición al pop/rock/electrónica (convierte material idiomático en error).
+  - Inferir que las paralelas suenan mal o destruyen perceptivamente la independencia (sin medida; prohibido inferir).
+alternatives:
+  - Movimiento contrario/oblicuo para independencia en juego polifónico (efecto sin medir; ver matriz).
+  - Planing como organización alternativa fuera del juego polifónico (ver CAND-HAR-020, claim separado).
+uncertainty_confidence: "Media-baja para la acotación: la mitad prohibitiva descansa en pedagogía PARCIAL sin texto inspeccionado (marco de norma de tradición con objetivo declarado, estatus pedagógico/teórico y no perceptivo, dicho explícitamente); la mitad negativa (no universal) descansa en contraevidencia de repertorio inspeccionada (movimientos modales paralelos y retransiciones, Spicer VERIFIED; paralelismo en loops, Doll cap.6 vía reseña VERIFIED a nivel de reseña). División aprobada por el Director (2026-09-03): este ID preserva el claim A; el claim B pasa a CAND-HAR-020."
+genre_sensitivity: "Muy alta: la restricción es clásica con objetivo declarado; fuera de su juego no opera como prohibición."
+evaluation_falsification: "Tradición polifónica donde las paralelas sistemáticas conserven independencia de líneas medida exigiría reformular la correspondencia juego→norma; medida de que las paralelas se perciban como malas con independencia del juego exigiría revisar el estatus no-perceptivo."
+structure_perception_composition:
+  structure: "Voces que se mueven en paralelo (mismo intervalo, misma dirección) evaluadas contra el juego compositivo declarado."
+  perception: "Fusión por paralelas como explicación teórica del objetivo protegido, no como medida; 'suenan mal' NO JUSTIFICADO."
+  composition: "Heurística negativa justificada (aplicar la restricción solo con juego declarado); ninguna prohibición universal queda establecida."

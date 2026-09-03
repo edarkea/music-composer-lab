@@ -1,0 +1,32 @@
+id: CAND-HAR-019
+status: candidate
+compositional_problem: "Decidir colocación registral y duplicaciones al conectar sonoridades sin tratar las octavas como intercambiables."
+claim: "El desplazamiento registral y de octava cambia la organización de la conducción aunque las pitch classes se conserven (claim puramente estructural/analítico, sin inferencia perceptiva ni compositiva): misma altura != misma pitch class tras desplazamiento de octava; misma pitch class != mismo registro; mismo registro != misma identidad de voz; pitch class equivalente en octava != retención literal de tono común (un salto de octava no es retención). No se infiere que el desplazamiento debilite la continuidad, aumente el contraste, haga perder la identidad de voz ni que la preservación de pitch class preserve la continuidad armónica: evidencia perceptiva insuficiente, inferencia prohibida. La distinción es analítica con indicios convergentes pero parciales (penalización parcial por transposición EXP-001 B=3 con n=1; registro como marcador seccional con haz, Melody GENRE_SPECIFIC sin modificar claims MEL; convergencia melodía-sobre-bajo, Spicer VERIFIED)."
+structural_variable: "registral placement per voice (pitch vs. pitch class vs. voice identity vs. register vs. octave displacement), tracked separately from pitch-class retention; analytical distinction only"
+possible_action: ""
+expected_effect: "Conexiones evaluadas en su realización registral real (evitar falsas retenciones por equivalencia de octava); encuadre grave-agudo controlado como dimensión propia."
+evidence_class: HYPOTHESIS
+support_basis:
+  - PROJECT_EXPERIMENT
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-030
+  - SRC-ACADEMIC-018
+context_dependencies:
+  - Texturas donde el registro es audible y estable (SATB, pads, voicings fijos); en texturas por capas la asignación voz-registro es fluida.
+  - Tesitura del intérprete o instrumento (restricción física, RQ-MEL-005).
+counterproductive_conditions:
+  - Tratar la distinción como efecto medido (es analítica con indicios, no resultado).
+  - Exigir registro fijo donde la intención es re-encuadre deliberado (diferenciación seccional).
+alternatives:
+  - Desplazamiento registral deliberado como diferenciación (haz seccional con otros marcadores).
+  - Revoicing completo como cambio de sonoridad (cede a RQ-HAR-008).
+uncertainty_confidence: "Baja como hipótesis: la distinción quíntuple es analítica (no requiere medida para formularse); los indicios de que el registro altera la conexión son convergentes pero parciales (EXP-001 B=3 con n=1, indicio propio; registro seccional como marcador con haz, Melody GENRE_SPECIFIC; convergencia melodía-sobre-bajo, Spicer VERIFIED; proximidad de Bregman solo como mecanismo candidato). Sin medida dedicada de equivalencia registral en conducción. HYPOTHESIS sin pretensión de efecto cuantificado. possible_action vaciado en esta auditoría por insuficiencia de evidencia perceptiva (decisión del Director); se conserva como candidato, no se degrada a nota metodológica."
+genre_sensitivity: "Media: la distinción analítica es transversal; cuánto pesa el registro depende de textura y tradición (coral fijo vs. capas electrónicas fluidas)."
+evaluation_falsification: "Medida donde oyentes traten sistemáticamente pitch class retenida en otra octava como equivalente a nota retenida (misma continuidad, misma atribución) exigiría degradar la distinción a matiz teórico sin consecuencia perceptiva."
+structure_perception_composition:
+  structure: "Cinco operaciones distintas (pitch, pitch class, identidad, registro, octava) entre sonoridades con igual pitch-class set."
+  perception: "Indicios convergentes de que el registro altera conexión y atribución (arriba); equivalencia medida pendiente (GAP)."
+  composition: "Puente compositivo pendiente de apoyo directo: sin acción justificada todavía; ninguna regla de colocación queda establecida. Detalle de voicing/spacing cede a RQ-HAR-008."

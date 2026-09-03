@@ -1,0 +1,34 @@
+id: CAND-HAR-013
+status: candidate
+compositional_problem: "Conservar continuidad perceptible entre dos sonoridades sucesivas sin imponer una sintaxis dirigida ni una receta de minimización."
+claim: "Dos operaciones distintas, sin mecanismo común demostrado, pueden contribuir a la continuidad de la conexión cuando la continuidad es la intención: (a) RETENCIÓN DE TONO COMÚN — conservar alguna altura literal entre sonoridades (pedal que fija el centro, conexiones de loop con tonos comunes parciales); (b) MOVIMIENTO PEQUEÑO — mover las voces móviles por grado o semitono con proximidad registral (part-writing de tradición). Ninguna de las dos basta por sí sola y no comparten mecanismo probado: la retención opera por permanencia literal, el movimiento pequeño solo tiene como mecanismo candidato la proximidad genérica (Bregman, sin medida en sucesiones armónicas). Esto no implica que más tonos comunes equivalgan a mejor conexión, ni que menor distancia equivalga a mejor conducción: el pedal que fija el centro y el pedal que engaña son la misma operación de retención con resultados opuestos según contexto, y el planing organiza sin retención ni economía de movimiento."
+structural_variable: "(a) common-tone retention (literal pitch only, never pitch-class-in-other-octave: ver CAND-HAR-019); (b) small stepwise motion with registral proximity of moving voices; each evaluated jointly with bass, collection and position, never summed into a dose-response"
+possible_action: "Para favorecer conexión: conservar alguna altura literal o proximidad registral entre sonoridades y mover el resto por grado; verificar por escucha caso por caso; considerar el desplazamiento deliberado como alternativa cuando la intención sea diferenciar."
+expected_effect: "Conexión continua entre sonoridades (MAINTAIN) donde la continuidad es la meta; fuera de esa meta o sin convergencia de indicios, efecto incierto."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-ACADEMIC-018
+context_dependencies:
+  - Intención de continuidad (no de diferenciación deliberada).
+  - Convergencia con bajo, colección y posición (ningún indicio aislado basta).
+  - Oyentes enculturados en la tradición correspondiente.
+counterproductive_conditions:
+  - Retener por defecto donde la intención es diferenciar (llegada marcada, contraste seccional).
+  - Confundir retención literal con equivalencia de pitch class en otra octava (ver CAND-HAR-019).
+alternatives:
+  - Desplazamiento deliberado (saltos, cambio registral) como articulación del cambio.
+  - Planing como organización sin retención (ver CAND-HAR-020).
+  - Pedal con armonía móvil como continuidad por insistencia grave.
+uncertainty_confidence: "Baja-media como heurística débil y derrotable: pedal que fija el centro (Spicer §15 VERIFIED) y conexiones de loop con tonos comunes parciales (Doll cap.6 vía reseña VERIFIED a nivel de reseña) como apoyo analítico; proximidad de Bregman solo como mecanismo candidato genérico (sin medida en sucesiones armónicas); pedal que engaña (Spicer, VERIFIED) como contraejemplo bloqueante de cualquier versión fuerte. Sin medida dedicada de continuidad por tonos comunes ni por tamaño de movimiento en sucesiones armónicas. Retención y movimiento pequeño auditados por separado: no se asume mecanismo compartido ni relación dosis-respuesta. possible_action conservada solo como heurística débil con verificación por escucha obligatoria y alternativa declarada."
+genre_sensitivity: "Media: la cautela es transversal; qué retención cuenta como conexión depende de la tradición (pedal modal, part-writing clásica, loops pop)."
+evaluation_falsification: "Medida donde variar solo la retención (bajo, colección y posición fijos) no modifique juicios de continuidad, o donde mayor retención produzca sistemáticamente menor continuidad, exigiría reformular o retirar la heurística."
+structure_perception_composition:
+  structure: "Alturas literales retenidas + proximidad registral + movimiento por grado entre sonoridades sucesivas."
+  perception: "Continuidad documentada analíticamente (casos arriba); mecanismo de proximidad solo candidato; medida experimental pendiente (GAP)."
+  composition: "Heurística débil justificada con alternativa declarada y verificación por escucha; ninguna dosis ni receta queda establecida."

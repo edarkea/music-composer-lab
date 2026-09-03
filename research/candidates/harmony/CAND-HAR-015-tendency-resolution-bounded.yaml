@@ -1,0 +1,37 @@
+id: CAND-HAR-015
+status: candidate
+compositional_problem: "Decidir si una sensible, una séptima u otro tono activo debe resolverse en un contexto dado, sin convertir normas de tradición en leyes universales."
+claim: "Las resoluciones de tonos de tendencia son normas de la part-writing de práctica común con alcance declarado, no requisitos universales. Cada tendencia se audita por separado, sin mecanismo común asumido: (a) LEADING TONE ^7→^1 ascendente — norma de tradición con contraejemplos VERIFIED (soul-dominant sin leading tone clásico con función dominante conservada, Spicer §3; V perpetuo sin resolución, Spicer §§13–15; centros modales sin sensible, Everett §10); (b) SÉPTIMA DEL ACORDE descendente — norma acotada a séptima de dominante y suspensiones preparadas de práctica común; las séptimas de color (maj7, extensiones) quedan fuera de la norma; contraejemplo soul-dominant con 7ª/9ª/11ª sin resolución clásica (Spicer §3, VERIFIED); (c) SUSPENSIÓN con resolución descendente — vocabulario de tradición (marco pedagógico PARCIAL sin texto inspeccionado), la fila más débil; efecto propio sin medir; (d) OTROS TONOS ALTERADOS — sin claim en esta RQ; cede a RQ-HAR-006. Ningún 'must resolve' salvo enunciado normativo acotado ('en part-writing de práctica común, ^7 se conduce a ^1'). Los contraejemplos refutan la universalidad pero no establecen que la tendencia sea irrelevante dentro de su tradición. Sin expectativa de oyente medida, no se usa lenguaje perceptivo: no se afirma que lo irresuelto suene tenso ni que lo resuelto suene cerrado."
+structural_variable: "tendency-tone resolution tracked separately per tendency (^7→^1; chordal seventh downward; suspension; altered tones ceded to RQ-HAR-006), each within its bounded tradition, never bundled as one mechanism"
+possible_action: ""
+expected_effect: "Cierre de indicio (CONFIRM / llegada) dentro de práctica común con convergencia de bajo, esquema y posición; fuera de ella, efecto incierto o retonalizante si se impone."
+evidence_class: THEORY
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-005
+  - SRC-PEDAGOGICAL-006
+  - SRC-PEDAGOGICAL-007
+  - SRC-PEDAGOGICAL-008
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-031
+context_dependencies:
+  - Part-writing de práctica común o repertorio compatible (centro ya plausible, oyentes enculturados).
+  - Convergencia de indicios (bajo, esquema, posición); tendencia aislada sin contexto no basta.
+counterproductive_conditions:
+  - Exigir resolución ascendente/descendente en pop/modal/loops (retonaliza o impone sintaxis ajena; ver CAND-HAR-006/011).
+  - Leer tensión irresuelta donde solo hay ausencia de norma (ver CAND-HAR-012).
+alternatives:
+  - Transferencia o permanencia del tono activo como color (alcance por tradición).
+  - Giros propios modales (VII–I, VI–VII) en tradiciones correspondientes.
+  - Pre-tónica como expectativa sin resolución requerida (Doll vía reseña).
+uncertainty_confidence: "Media-baja para la acotación global; baja para la fuerza positiva aislada: la descripción tradicional es convergente pero los records pedagógicos están PARCIAL sin texto inspeccionado y ninguna medida dedicada aísla expectativa de resolución (^7 pendiente, séptima pendiente). La acotación negativa descansa en contraevidencia inspeccionada (Spicer §3 soul-dominant; Spicer §§13–15 V sin resolver; Everett §10 modal sin sensible; todos VERIFIED). possible_action vacío: el puente compositivo positivo requiere percepción no medida. No prescribe resolver; no afirma que lo irresuelto suene tenso."
+genre_sensitivity: "Muy alta: claim con scope clásico declarado; fuera de él solo como hipótesis de transferencia no verificada."
+evaluation_falsification: "Medida donde oyentes enculturados en práctica común no muestren expectativa de resolución tras tendencias con indicios convergentes exigiría reformular la fuerza del claim dentro de su propio scope; medida donde oyentes pop/malon muestren la misma expectativa exigiría revisar la acotación."
+structure_perception_composition:
+  structure: "Tono de tendencia (^7, séptima, alteración) seguido o no de su destino tradicional."
+  perception: "Expectativa de resolución no medida de forma dedicada; pre-tónica como expectativa sin resolución (Doll vía reseña); tensión de irresolución no medida."
+  composition: "Puente compositivo positivo pendiente de apoyo directo: sin acción justificada todavía; solo norma acotada de tradición."

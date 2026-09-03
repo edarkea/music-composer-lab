@@ -1,0 +1,38 @@
+id: CAND-HAR-026
+status: candidate
+compositional_problem: "Sostener una sección sobre armonía repetida o estática (loop, vamp, pedal) manteniendo interés formal sin imponerle sintaxis dirigida clásica."
+claim: "En pop/rock y música groove-based, la repetición cíclica (loops de 2–4 sonoridades, shuttles, vamps de uno o dos acordes, pedales) puede organizar la armonía de una sección como unidad recurrente (cyclic persistence / harmonic recurrence) sin invocar jerarquía prolongacional clásica, y la estasis armónica —descripción estructural sin carga de energía, calma o aburrimiento— coexiste con cambio en otros dominios (arreglo, densidad, registro, timbre, letra). Actividad del arreglo != ritmo armónico. Esto no establece que el loop carezca de relaciones direccionales locales (asignación interna abierta), ni que la recurrencia cree coherencia por sí sola, ni una técnica para construir loops; 'interpretable analíticamente' no equivale a coherencia medida en oyentes."
+structural_variable: "cyclic/static harmonic frame (loop/vamp/pedal) with formal change carried by arrangement/density/register/timbre domains"
+possible_action: "Para variar la forma sin mover la armonía: planificar el cambio en capas, densidad, registro o timbre manteniendo el ciclo; verificar por escucha; no juzgar el loop con criterios de desarrollo armónico clásico."
+expected_effect: "Cambio formal con identidad armónica conservada (marco cíclico como ESTABLISH/MAINTAIN) en pop/rock/loop-based; fuera de ese alcance, efecto incierto."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-014
+context_dependencies:
+  - Sintaxis cíclica pop/rock/groove sin cadencia dirigida; tolerancia a centro múltiple o débil.
+  - Arreglo/producción que articule la forma (capas, entradas/salidas, densidad, timbre).
+  - Configuración por metro y textura (desambiguadores documentados, Doll cap.6).
+counterproductive_conditions:
+  - Esperar que el loop genere dirección cadencial por sí solo.
+  - Congelar también el arreglo (estasis total; interés sin medir pero cambio formal sin vehículo).
+  - Proyectar sintaxis dirigida donde hay retorno cíclico.
+alternatives:
+  - Progresión dirigida con llegada (CAND-HAR-008) donde la tradición la sostiene.
+  - Persistencia con superficie móvil bajo marco declarado (CAND-HAR-024).
+uncertainty_confidence: "Media-baja como observación de género: análisis convergentes inspeccionados (Doll cap.6 vía reseña; Spicer VERIFIED: tónicas ausentes, vamps, V perpetuo; Tagg/shuttles vía cita) + distribuciones de corpus PARCIAL + arreglo-como-cambio descriptivo (Butler/Middleton vía integración Melody, CAND-MEL-011). Sin medida de atribución o de jerarquía interna por oyentes. possible_action débil con escucha obligatoria."
+genre_sensitivity: "Muy alta: claim pop/rock/groove-based con sintaxis cíclica; no transferir a práctica común."
+evaluation_falsification: "Medida donde oyentes describan sistemáticamente loops documentados como dirigidos con expectativa de llegada, o corpus seccional que vincule cambio formal al ritmo armónico y no al arreglo, exigiría reformular (función interna / vehículo del cambio)."
+structure_perception_composition:
+  structure: "Marco cíclico/estático recurrente con cambio documentado en otros dominios."
+  perception: "Atribución analítica múltiple/débil; interés sostenido sin medida (GAP)."
+  composition: "Heurística cross-domain débil justificada con alternativa declarada y verificación por escucha; jerarquía interna del loop abierta."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): vocabulario neutral cyclic persistence (no prolongación); estasis sin inferencia de energía/calma/aburrimiento; 026 separado de 011 (organización cíclica sin sintaxis dirigida) y MEL-011 (melodía cíclica); SRC-CORPUS-007 solo vía reseña, SRC-040 sin soporte."

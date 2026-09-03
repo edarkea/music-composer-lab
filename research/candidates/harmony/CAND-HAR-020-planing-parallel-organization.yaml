@@ -1,0 +1,31 @@
+id: CAND-HAR-020
+status: candidate
+compositional_problem: "Disponer del movimiento paralelo de sonoridades completas como procedimiento organizador sin tratarlo como error de conducción."
+claim: "Repertorios acotados pueden usar el movimiento paralelo de sonoridades completas (planing / parallel-sonority motion) como procedimiento organizador intencional en vez de tratarlo como error de conducción: la misma configuración que la norma clásica prohíbe en el juego polifónico funciona aquí como juego alternativo legítimo. Solo se preservan los elementos con apoyo directo en la evidencia inspeccionada: giros modales por movimiento paralelo/tonal documentados (Spicer: retransiciones VII–I, efecto Sísifo VI–VII, VERIFIED) y paralelismo como factor que engendra o deja de engendrar ambigüedad céntrica en loops (Doll cap.6 vía reseña VERIFIED a nivel de reseña). Qué permanece invariante (estructura interválica, calidad del acorde, registro relativo, relación con el bajo, colección de pitch classes) queda como incierto en general e invariante solo por caso documentado: ningún invariante se afirma sin apoyo de fuente/repertorio. No se afirma que el planing aumente la continuidad, cree color o fuerza, sea universalmente válido ni sea perceptivamente preferible: efecto perceptivo sin medir, inferencia prohibida."
+structural_variable: "parallel motion of whole sonorities as intentional organizing procedure in bounded repertoires, with per-case invariants stated only when source/repertoire evidence supports them"
+possible_action: ""
+expected_effect: "Disponibilidad del planing como organización documentada en repertorios acotados; fuera de ellos, efecto incierto."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+context_dependencies:
+  - Repertorios acotados donde el planing está documentado (pop/rock/electrónica; impresionismo histórico pendiente de registro, no citado como apoyo).
+  - Juego declarado de sonoridad en bloque, no de polifonía a N voces independientes.
+counterproductive_conditions:
+  - Usar planing donde la meta es independencia de líneas (funde lo que debía segregarse).
+  - Generalizar el planing como alternativa universal o como técnica preferible (no apoyado).
+  - Inferir efecto perceptivo del planing sin medida (prohibido inferir).
+alternatives:
+  - Tono común o pedal como conexión sin traslación total (ver CAND-HAR-013).
+  - Movimiento contrario/oblicuo para independencia en juego polifónico (efecto sin medir).
+uncertainty_confidence: "Baja-media para el estatus (organización legítima alternativa en repertorios acotados); incierto para cualquier invariante general y para todo efecto. Creado por división aprobada del Director (2026-09-03) desde CAND-HAR-017: contiene solo la mitad positiva (claim B) con los elementos de apoyo directo. Origen impresionista histórico pendiente de registro: no citado como apoyo. Sin investigación temática nueva más allá de la evidencia ya sintetizada."
+genre_sensitivity: "Muy alta: observación de género con alcance declarado; fuera de los repertorios documentados solo como hipótesis de transferencia no verificada."
+evaluation_falsification: "Repertorio en bloque donde el planing destruya sistemáticamente la organización exigiría reformular la correspondencia juego→procedimiento; medida de efecto perceptivo propio permitiría formular invariantes con apoyo."
+structure_perception_composition:
+  structure: "Sonoridades completas trasladadas en paralelo como procedimiento organizador en repertorios acotados."
+  perception: "Efecto del planing sin medir; ninguna inferencia perceptiva queda establecida."
+  composition: "Puente compositivo positivo pendiente de apoyo directo: sin acción justificada todavía; solo estatus documentado con invariantes por caso."

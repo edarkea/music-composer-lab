@@ -1,0 +1,34 @@
+id: CAND-HAR-025
+status: candidate
+compositional_problem: "Usar la palabra 'prolongación' sin convertirla en comodín que significa 'este acorde no cuenta'."
+claim: "'Prolongación' nombra al menos seis afirmaciones distintas según marco (sonoridad, función, región, contrapunto/grados, bajo, centro modal), cada una con sus criterios, repertorio y falsadores; ninguna teoría de la prolongación revisada (schenkeriana, GTTM, TPS/Lerdahl, Aldwell-Schachter, capliniana-formal, adaptaciones pop) vale como verdad general ni como jerarquía objetivamente audible. Todo uso debe declarar marco y alcance; la realidad psicológica no se infiere de la jerarquía analítica. PROLONGATION != REPETITION, != PEDAL, != STATIC MUSIC, != SCHENKERIAN ANALYSIS AS UNIVERSAL TRUTH."
+structural_variable: "prolongational framework declaration (FRAMEWORK + OBJECT-being-prolonged + STRUCTURAL-CRITERION + REPERTOIRE-SCOPE + EVIDENCE-TYPE)"
+possible_action: "No emplear 'prolongar/prolongación' como justificación sin declarar marco, qué se prolonga, con qué criterio y en qué repertorio; tratar todo uso sin marco como hipótesis sin verificar."
+expected_effect: "Evitar análisis infalsables y transferencias automáticas (forzar Schenker sobre loops; inferir audibilidad desde el análisis)."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-THEORETICAL-006
+  - SRC-THEORETICAL-005
+  - SRC-THEORETICAL-010
+  - SRC-THEORETICAL-002
+  - SRC-ACADEMIC-029
+context_dependencies:
+  - Ningún marco fuera de su repertorio declarado.
+  - Everett (seis sistemas sin comportamiento común) como límite de transferencia.
+  - Percepción solo con medida dedicada (ninguna inspeccionada; GAP).
+counterproductive_conditions:
+  - Ninguna conocida; es cautela metodológica, no técnica.
+alternatives:
+  - Describir persistencia sin teoría jerárquica (insistencia, ciclo, pedal como operaciones; ver CAND-HAR-024/026).
+uncertainty_confidence: "Media-baja como cautela metodológica: soporte de segundo orden (comparación de alcances declarados de marcos inspeccionados a nivel de existencia/contenido básico + tabla comparativa en síntesis); ningún marco nuevo inspeccionado a texto en esta RQ. Suficiente para auditar una cautela, insuficiente para cualquier claim positivo. Records 015/040 UNVERIFIED no sostienen nada."
+genre_sensitivity: "Baja como cautela (aplica en todas las tradiciones); cada marco concreto sí es scope-restringido."
+evaluation_falsification: "Reducción prolongacional cuyas preferencias predigan sistemáticamente juicios de oyentes enculturados (tarea declarada, repertorio declarado) exigiría elevar ese marco concreto de analítico a perceptivo; no refutaría la cautela general."
+structure_perception_composition:
+  structure: "Afirmaciones jerárquicas por marco (seis sentidos separados)."
+  perception: "Ninguna jerarquía prolongacional con realidad perceptiva establecida en la evidencia revisada."
+  composition: "Cautela justificada: declarar marco o no invocar prolongación; preferir vocabulario operacional (repetir, pedalizar, ciclar, bordar)."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): cautela metodológica con convención de escritura en cinco ranuras; SRC-015 retirado del soporte; sin promoción a STRONG por adopción de la convención; sin afirmación sobre arbitrariedad de teorías ni realidad perceptiva."

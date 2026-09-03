@@ -1,0 +1,30 @@
+id: CAND-HAR-016
+status: candidate
+compositional_problem: "Leer o planear el movimiento concreto de cada voz sin deducirlo de la etiqueta del acorde, del root motion o del bajo."
+claim: "La etiqueta del acorde, el movimiento de fundamentales y el movimiento del bajo, por sí solos o en combinación parcial, no determinan el movimiento de las voces (claim de insuficiencia, no de irrelevancia): la misma sucesión de etiquetas admite realizaciones de conducción distintas (suaves o fracturadas, con retención o con desplazamiento, con o sin paralelas). Cinco niveles separados: IDENTIDAD DEL ACORDE (qué sonoridad) != ROOT (fundamental) != BASS (voz grave realizada) != INVERSIÓN (qué grado está en el bajo) != REALIZACIÓN DE CONDUCCIÓN (qué voz se mueve cuánto en qué registro). Esto no establece que etiquetas, roots o bajo no aporten restricción ni información: su peso propio queda sin medir y la compatibilidad con CAND-HAR-007/009 (función no es etiqueta; root motion insuficiente) y con los candidatos de HAR-002 se preserva. Ninguna conducción queda justificada como deducción de un cifrado."
+structural_variable: "realized voice motion (which voice moves how far in which register) evaluated jointly with label + root motion + bass + inversion + timbre + tradition, never deduced from a subset"
+possible_action: "Al leer o planear conducción, partir de la realización (qué voz se mueve cuánto en qué registro con qué timbre), no del cifrado ni de los roots: comprobar inversión, duplicación, registro y tradición antes de calificar una conexión como suave, fracturada o dirigida."
+expected_effect: "Evitar falsas deducciones (este cifrado exige tal movimiento; esta quinta descendente es conducción fuerte); evaluar cada conexión en su realización completa."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-ACADEMIC-028
+  - SRC-CORPUS-009
+context_dependencies:
+  - Ninguna restrictiva como cautela; las realizaciones concretas sí dependen de tradición y textura.
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar mecanismo (conducción realizada, bajo, esquema, posición) antes de calificar una sucesión.
+uncertainty_confidence: "Media-baja como cautela negativa: mismo loop con distinta claridad céntrica según configuración (Doll cap.6 vía reseña VERIFIED a nivel de reseña); V sin comportamiento dominante y soul-dominant con misma etiqueta y distinto comportamiento (Spicer VERIFIED); distribuciones de corpus como conteo, no como conducción (SRC-CORPUS-009 PARCIAL). Hereda CAND-HAR-007 (etiqueta) y CAND-HAR-009 (roots) sin reabrirlos: los extiende al movimiento de voces. Sin medida que separe etiqueta de realización en juicios de continuidad."
+genre_sensitivity: "Media: la cautela es transversal; qué realizaciones son idiomáticas depende de la tradición (voicings de guitarra/teclado, bajo riff, SATB)."
+evaluation_falsification: "Medida donde variar solo la etiqueta (realización fija) modifique sistemáticamente juicios de conducción, o catálogo donde cada etiqueta admita una única realización idiomática por tradición, exigiría reformular el claim como ponderación con primado de la realización, no como cautela."
+structure_perception_composition:
+  structure: "Sucesión de etiquetas con una realización concreta (registro, inversión, duplicación, timbre) entre varias posibles."
+  perception: "Sin medida dedicada que aísle etiqueta de realización; atribución analítica contexto-dependiente."
+  composition: "Heurística negativa justificada en versión débil: no deducir movimiento desde etiqueta/root/bajo. Ninguna tabla etiqueta→conducción queda establecida."

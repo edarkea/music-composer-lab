@@ -1,0 +1,28 @@
+id: CAND-HAR-018
+status: candidate
+compositional_problem: "Diseñar continuidad de conexión y función armónica como dimensiones separables en vez de colapsarlas."
+claim: "La continuidad de la conducción y la función armónica no son equivalentes ni se determinan mutuamente (formulación de no-equivalencia e insuficiencia, no de independencia): interpretaciones funcionales similares pueden admitir realizaciones de conducción distintas, y una conducción suave y continua no determina por sí sola la función armónica. Casos: conexión suave sin dirección (tonos comunes sin dirección, pedal que sostiene sin sintaxis dirigida) y llegada que dirige con saltos (bajo 5–1 con voces superiores retenidas, giros modales por tono). Confundir suavidad con función produce falsas lecturas en ambas direcciones (suave = funcional; fracturado = disfuncional). No se afirma independencia estadística ni psicológica: la covariación queda sin medir y el límite de CAND-HAR-012 (procedencia por indicio sin pesos ni sustituibilidad, sin modelo oficial de indicios) se preserva. Referencia cruzada HAR-002 conservada sin reabrir sus candidatos."
+structural_variable: "connection continuity (retention + motion size + register) tracked separately from functional role (stay/prepare/direct/close as provisional prose, no state machine)"
+possible_action: "Al diseñar o evaluar una sucesión: puntuar por separado continuidad (¿qué conecta?) y función (¿qué rol cumple?); no usar una como proxy de la otra; desconfiar de lecturas donde toda conexión suave se declara funcional."
+expected_effect: "Lecturas desagregadas (conexión documentada sin dirección inventada; dirección documentada sin suavidad exigida); evitar el doble colapso suave-funcional."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-THEORETICAL-002
+context_dependencies:
+  - Ninguna restrictiva como cautela; los casos concretos sí dependen de tradición.
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa con instrucción de diseño, no técnica sonora.
+alternatives:
+  - Declarar mecanismo (conducción realizada, bajo, esquema, posición) antes de asignar rol (ver CAND-HAR-007/016).
+uncertainty_confidence: "Media-baja como cautela desagregada de no-equivalencia: tonos comunes sin dirección (matriz HAR-002, casos de pedal y loop); V perpetuo con conexión local y sin sintaxis dirigida (Spicer §§13–15 VERIFIED); soul-dominant con rol sin conducción clásica (Spicer §3 VERIFIED); continuación clásica como marco donde ambas dimensiones coinciden (Caplin, repo, scope clásico). 'Parcialmente independientes' retirado en esta auditoría por exceso de fuerza: sin medida de covariación no se afirma independencia de ningún tipo; la no-equivalencia por contraejemplos es el máximo justificado."
+genre_sensitivity: "Baja como cautela (aplica en todas las tradiciones); qué configuraciones realizan cada dimensión sí es genre-sensitive."
+evaluation_falsification: "Medida donde continuidad y atribución funcional covaríen perfectamente a través de tradiciones y configuraciones exigiría retirar la independencia y tratarlas como una sola dimensión."
+structure_perception_composition:
+  structure: "Configuración de conexión (retención, tamaños, registro) cruzada con rol sucesivo (permanecer/preparar/dirigir/cerrar)."
+  perception: "Atribución analítica de rol separable de la configuración (casos arriba); covariación medida pendiente (GAP)."
+  composition: "Heurística de diseño justificada en versión débil: separar dimensiones. Ninguna ponderación ni receta queda establecida. Ningún modelo oficial de indicios (límite de CAND-HAR-012 preservado)."

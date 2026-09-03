@@ -1,0 +1,28 @@
+id: CAND-HAR-014
+status: candidate
+compositional_problem: "Evitar convertir la economía de movimiento en objetivo compositivo universal al conectar sonoridades."
+claim: "No tratar la distancia mínima agregada de conducción como objetivo compositivo independiente del contexto: la distancia abstracta (semitonos totales, número de voces móviles) no equivale al coste real (registro, tesitura, timbre, rol de cada voz) ni a preferencia medida, y el movimiento amplio es estructuralmente legítimo en configuraciones documentadas (planing, pedal con armonía móvil, bajo riff con saltos, desplazamiento registral seccional). La economía de movimiento describe bien ciertas prácticas dentro de su tradición y mal otras. Fuerza lógica declarada: los contraejemplos refutan la universalidad del objetivo de minimización, pero NO establecen que el movimiento mínimo sea perceptivamente inútil ni compositivamente irrelevante en ningún contexto. Eficiencia matemática, preferencia perceptiva y calidad compositiva son tres niveles distintos: no se afirma que sean independientes ni que estén relacionados; la relación queda sin medir."
+structural_variable: "total voice-leading displacement evaluated against registral/timbral cost and compositional intent (connect vs. differentiate), never minimized blindly"
+possible_action: "Al conectar sonoridades, no minimizar automáticamente el movimiento: declarar primero la intención (conectar o diferenciar) y comprobar tesitura, registro y rol de cada voz; tratar la distancia en semitonos como descripción, no como coste."
+expected_effect: "Evitar conexiones inhabitables o inexpresivas por exceso de economía abstracta, y rupturas involuntarias por exceso de movimiento; evaluar cada conexión en su configuración completa."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+context_dependencies:
+  - Ninguna restrictiva como cautela; las economías concretas sí dependen de tradición y textura.
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar la intención (continuidad vs. diferenciación) antes de elegir tamaños de movimiento.
+  - Usar la distancia geométrica solo como descripción comparativa dentro de una tradición, nunca como criterio de calidad.
+uncertainty_confidence: "Media-baja como cautela negativa: contraejemplos documentados (pedal que engaña, giros modales con bajo por tono, loops ambiguos configurables — Spicer VERIFIED y Doll vía reseña VERIFIED a nivel de reseña). SRC-THEORETICAL-014 (Tymoczko 2011, UNVERIFIED) retirado de sources en esta auditoría: deuda bibliográfica de marco-existencia solamente, sin claim citable hasta inspección directa. Sin medida de preferencia por economía en ninguna tradición."
+genre_sensitivity: "Baja como cautela (aplica en todas las tradiciones); qué economía es idiomática sí es genre-sensitive."
+evaluation_falsification: "Medida donde oyentes de varias tradiciones prefieran sistemáticamente la realización de mínima distancia con bajo, timbre y registro controlados exigiría acotar la cautela a tradiciones concretas en vez de formularla como transversal."
+structure_perception_composition:
+  structure: "Distancia total de conducción entre sonoridades (semitonos, voces móviles)."
+  perception: "Preferencia por economía no medida en ninguna tradición revisada; proximidad solo como mecanismo candidato genérico."
+  composition: "Heurística negativa justificada en versión débil: no optimizar automáticamente. Ningún umbral ni función objetivo queda establecida."

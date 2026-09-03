@@ -1,0 +1,32 @@
+id: CAND-HAR-021
+status: candidate
+compositional_problem: "Especificar y comparar el ritmo armónico sin confundirlo con tempo, densidad de superficie o actividad del arreglo."
+claim: "La tasa de cambio armónico y el tempo son variables distintas; las comparaciones significativas del ritmo armónico deben especificar unidad temporal, ventana de observación y contexto de tempo. Cambios-por-compás y cambios-por-segundo divergen cuando el tempo varía, y ninguna medida revisada establece cuál predice mejor ningún juicio perceptivo. Esto no establece que el tempo carezca de efecto sobre la actividad armónica percibida ni que exista una unidad universal. Actividad del arreglo (capas, densidad, timbre) y densidad melódico-rítmica no equivalen a ritmo armónico."
+structural_variable: "harmonic-change specification (unit + window + tempo declared; relative-per-bar vs. absolute-per-second kept separate; arrangement activity excluded)"
+possible_action: "Al decidir o describir el ritmo armónico, declarar unidad, ventana y tempo; no trasladar una tasa entre tempos ni leer actividad del arreglo como cambio armónico."
+expected_effect: "Evitar falsas comparaciones (misma partitura relativa a dos tempos) y falsas lecturas de desarrollo armónico donde solo cambió la producción."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-014
+  - SRC-EMPIRICAL-013
+context_dependencies:
+  - Tempo declarado de cada pasaje comparado.
+  - Metro operativo fijado por el conjunto (dependencia cross-domain Rhythm).
+  - Criterio de onset armónico declarado (fundamental, bajo, colección o combinación).
+counterproductive_conditions:
+  - Usar esta cautela para eludir toda decisión temporal (la tasa sigue siendo variable controlable situada).
+alternatives:
+  - Fijar la tasa absoluta (cambios/segundo) como referencia cuando el efecto buscado sea perceptivo-temporal; declarar la elección.
+uncertainty_confidence: "Baja-media como cautela metodológica negativa: distinción conceptual con consecuencias medibles declaradas (Q2 como falsador); apoyada por bloqueos inspeccionados (density != tempo CAND-MEL-030/RQ-MEL-006; groove != frase CAND-MEL-027; arreglo != armonía CAND-MEL-011/Butler-Middleton descriptivo). SRC-ACADEMIC-014 y SRC-EMPIRICAL-013 sostienen solo los bloqueos (arreglo/densidad/groove), no una medida armónica dedicada. Sin medida armónica dedicada que privilegie una unidad."
+genre_sensitivity: "Baja como cautela (aplica en todas las tradiciones); las unidades habituales sí son genre-sensitive (compás clásico vs. ciclo loop)."
+evaluation_falsification: "Estudio que manipule tempo con ritmo relativo fijo y muestre que una de las dos medidas predice sistemáticamente mejor juicios de actividad obligaría a precisar (no a retirar) la cautela."
+structure_perception_composition:
+  structure: "Tasa de cambios armónicos en unidad U, ventana W, tempo T; actividad del arreglo como variable separada."
+  perception: "Sin medida inspeccionada que vincule ninguna unidad con juicios de actividad/energía; transferencia desde densidad/groove bloqueada."
+  composition: "Cautela metodológica justificada: declarar U/W/T; no inferir efecto desde la tasa sola."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): reformulado como distinción de variables (no independencia perceptiva); sin unidad universal; separado de actividad del arreglo y densidad melódico-rítmica; SRC-014/EMP-013 solo como bloqueos. Heurística metodológica negativa, no STRONG."

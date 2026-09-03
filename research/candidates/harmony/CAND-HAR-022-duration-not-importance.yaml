@@ -1,0 +1,34 @@
+id: CAND-HAR-022
+status: candidate
+compositional_problem: "Decidir cuánto tiempo mantener una armonía sin confundir duración con importancia estructural, estabilidad o tónica."
+claim: "La duración de un acorde no equivale a su importancia estructural: CHORD DURATION != STRUCTURAL IMPORTANCE, LONGER != MORE STABLE, LONGER != TONIC. La duración opera solo como indicio débil y convergente (modula la interpretación entre centros candidatos) junto a colección, bajo, conducción y posición; nunca como detector. Esto no establece que la duración sea irrelevante: puede contribuir como un indicio entre varios. Deben distinguirse duración notada, tiempo hasta el siguiente onset armónico, duración de la región interpretada y duración formal. Longer = más estable, tonic = longest y reglas de dosis quedan NO JUSTIFICADOS."
+structural_variable: "chord/region duration evaluated jointly with collection + bass + voice leading + metric/formal position, never alone"
+possible_action: ""
+expected_effect: "CONFIRM débil y situado de un centro ya plausible o énfasis atencional situado; sin dosis ni garantía de centralidad."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-030
+  - SRC-ACADEMIC-026
+context_dependencies:
+  - Centro previamente plausible (dependencia de CAND-HAR-001).
+  - Convergencia con bajo, colección y posición (ningún indicio aislado basta).
+  - Tradición donde la duración sea indicio disponible (vamps/loops documentados; clásico citado).
+counterproductive_conditions:
+  - Alargar una armonía competidora cuando se busca otro centro.
+  - Alargar esperando estabilidad, llegada o cierre automáticos.
+alternatives:
+  - Confirmar por moción dirigida o por bajo (CAND-HAR-002, RQ-HAR-002).
+uncertainty_confidence: "Baja-media como heurística negativa: apoyo analítico directo (Spicer §12 VERIFIED: acento duracional como modulador interpretativo) + tendencia citada sin primario (Temperley 2011 §2.4 vía Temperley 2001/Stephenson, no inspeccionados). Sin curva dosis→centro; possible_action vacío."
+genre_sensitivity: "Media: el peso de la duración varía entre vamp/loop pop y presentación clásica; ninguna dosis transfiere."
+evaluation_falsification: "Manipulación aislada de duración (colección, bajo y posición fijos) que no modifique atribución la delimitaría a contextos con competidores débiles; modificación sistemática con curva estable exigiría reformular al alza."
+structure_perception_composition:
+  structure: "Duración del evento armónico hasta el siguiente onset, distinguida de duración notada, duración de región interpretada y duración formal."
+  perception: "Modulación interpretativa entre centros documentada analíticamente (Spicer §12); medida experimental pendiente (Q1)."
+  composition: "Sin acción justificada todavía: no decidir duración como prueba de nada; coordinar como refuerzo situado."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): anti-colapso preservado sin volver la duración irrelevante; cuatro duraciones separadas; SRC-028 VERIFIED como modulador, SRC-030 solo tendencia citada sin primario, SRC-026 PARCIAL a nivel de cita. Sin curva dosis→centro."

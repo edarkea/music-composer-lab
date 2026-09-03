@@ -1,0 +1,36 @@
+id: CAND-HAR-024
+status: candidate
+compositional_problem: "Cambiar la superficie armónica (paso, bordadura, pedal, sustitución, inversión) sin abandonar necesariamente la función o región subyacente."
+claim: "Varios cambios de etiqueta en superficie pueden ocurrir dentro de una región o función más persistente, pero esa persistencia es una interpretación dependiente de marco, no un hecho bruto: SURFACE CHANGE != STRUCTURAL DEPARTURE solo bajo análisis declarado (marco, qué permanece operativo, criterio de subordinación, repertorio). Mecanismos descriptivos disponibles con apoyo acotado: paso, bordadura/vecina, pedal, auxiliar/embellecimiento, sustitución sobre la misma región, slash/inversión como superficie. Sin análisis declarado, cada acorde se trata como evento sucesivo. EMBELLISHMENT != evento poco importante (lo subordinado puede ser lo más saliente)."
+structural_variable: "surface-to-structure subordination (passing/neighbor/pedal/auxiliary/substitution/slash declared under stated framework with persistence criterion)"
+possible_action: ""
+expected_effect: "MAINTAIN situado de región/función con superficie móvil; fuera del marco declarado, efecto incierto."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+context_dependencies:
+  - Marco declarado (clásico-pedagógico, capliniano-formal, o analítico pop por caso).
+  - Convergencia con bajo, colección y posición (ver CAND-HAR-002/005/007).
+  - Intención de persistencia (no de partida real; si la partida es la meta, cede a RQ-HAR-002/006/007).
+counterproductive_conditions:
+  - Declarar 'embellecimiento' por intuición para ignorar acordes incómodos (palabra mágica; análisis infalsable).
+  - Tratar lo subordinado como perceptivamente secundario sin medida.
+  - Leer cada sustitución como partida funcional (modulaciones ficticias).
+alternatives:
+  - Partida funcional real con nueva región (RQ-HAR-002/006).
+  - Yuxtaposición sin jerarquía (cada evento cuenta; posición honesta por defecto).
+uncertainty_confidence: "Baja-media como heurística débil: casos analíticos VERIFIED en ambas direcciones (pedal que fija y pedal que engaña, Spicer; mismo loop distinta claridad, Doll cap.6 vía reseña) + vocabulario pedagógico clásico PARCIAL solo como descripción de superficie. SRC-THEORETICAL-015 UNVERIFIED no sostiene nada. Sin medida de que el oyente oiga 'una sola armonía'; sin criterios fuera de práctica común (GAP). possible_action vacío."
+genre_sensitivity: "Alta: criterios de subordinación por tradición; vocabulario clásico como descripción de superficie pop, no como jerarquía."
+evaluation_falsification: "Medida donde oyentes segmenten sistemáticamente como eventos independientes las superficies analizadas como una región (o al revés, agrupen lo analizado como partida) exigiría reformular el mecanismo correspondiente."
+structure_perception_composition:
+  structure: "Sucesión de etiquetas con marco que declara una región/función operativa y criterio de subordinación."
+  perception: "Persistencia documentada analíticamente; jerarquía audible sin medida (GAP)."
+  composition: "Sin técnica positiva establecida: declarar marco o tratar cada acorde como evento; no usar 'prolongación' como justificación."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): relación estructural posible bajo marco explícito; sin afirmación de audición unitaria por oyentes; 024 (relación estructural) separado de 025 (cautela epistémica); SRC-015 retirado del soporte."
