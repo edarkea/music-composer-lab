@@ -1,0 +1,39 @@
+id: CAND-HAR-011
+status: candidate
+compositional_problem: "Sostener una sección completa sobre un ciclo recurrente sin imponerle sintaxis dirigida clásica."
+claim: "En pop/rock, los ciclos recurrentes analizados (loops de 2–4 sonoridades, shuttles de 2 acordes) pueden sostener organización tonal interpretable sin que cada transición participe en una sintaxis dirigida clásica T–PD–D–T: la organización se documenta analíticamente vía recurrencia + colección + metro/textura/arreglo, y el mismo ciclo admite centros distintos según esa configuración. 'Interpretable analíticamente' no equivale a coherencia testada en oyentes (sin medida). Esto no establece que el loop carezca de relaciones direccionales locales (asignación interna abierta; gestos locales de retorno/expectativa siguen posibles), ni que los loops sean inherentemente ambiguos, ni que la recurrencia por sí sola cree coherencia, ni una técnica para construir loops."
+structural_variable: "cyclic progression (2–4 sonority cycle without directed cadential syntax) with meter/texture/arrangement configuration"
+possible_action: ""
+expected_effect: "Coherencia cíclica (ESTABLISH/MAINTAIN del ciclo como marco) dentro de pop/rock con tolerancia a centro múltiple o débil; fuera de ese alcance, efecto incierto."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-027
+  - SRC-CORPUS-009
+context_dependencies:
+  - Sintaxis cíclica pop/rock sin cadencia dirigida; tolerancia analítica a centro múltiple/débil.
+  - Configuración por metro, textura y paralelismo (desambiguadores documentados).
+  - Articulación formal por otros dominios (arreglo/producción; segunda mano vía Spicer fn22).
+counterproductive_conditions:
+  - Juzgar el loop con criterios de desarrollo armónico clásico (armonía defectuosa).
+  - Proyectarle sintaxis dirigida (leer cadencia donde hay retorno cíclico).
+  - Leer centro desde frecuencia/posición sin convergencia (ver CAND-HAR-004).
+alternatives:
+  - Progresión dirigida con llegada (CAND-HAR-008) donde la tradición la sostiene.
+  - Ambigüedad seccional como marco (Capuzzo, solo-marco).
+uncertainty_confidence: "Media-baja como observación de género: análisis convergentes inspeccionados (mismo loop, distinta claridad céntrica, Doll cap.6 vía reseña; tónicas ausentes y vamps, Spicer VERIFIED; shuttles vs. loops, Tagg vía cita inspeccionada) más distribuciones de corpus (PARCIAL). Sin medida de atribución o de 'dirección sentida' en loops por oyentes. possible_action vacío: el arreglo-como-dirección es segunda mano y la asignación interna queda abierta."
+genre_sensitivity: "Muy alta: claim pop/rock con sintaxis cíclica; no transferir a práctica común."
+evaluation_falsification: "Medida donde oyentes describan sistemáticamente loops documentados como dirigidos hacia un acorde con expectativa de llegada exigiría reformular (función interna) en vez de organización cíclica."
+structure_perception_composition:
+  structure: "Ciclo recurrente de 2–4 sonoridades con configuración métrica/textural dada."
+  perception: "Atribución analítica múltiple/débil documentada; medida perceptiva pendiente (GAP, ver Q2 en síntesis)."
+  composition: "Puente compositivo pendiente de apoyo directo: sin acción justificada todavía; el loop interpretable es estado documentado analíticamente, no técnica establecida ni coherencia medida en oyentes."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-03): alcance preservado como GENRE OBSERVATION pop/rock; lenguaje estructural ('interpretable analíticamente') sustituye 'coherente' sin test; dirección local dentro del ciclo explícitamente posible; possible_action permanece vacío."

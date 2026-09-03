@@ -1,0 +1,34 @@
+id: CAND-HAR-012
+status: candidate
+compositional_problem: "Leer o construir función dominante sin reducirla a 'tensión' ni a la etiqueta V."
+claim: "La etiqueta literal V no es definición suficiente y universal de comportamiento/función dominante (casos inspeccionados en ambas direcciones: función dominante documentada sin leading tone clásico en soul-dominant; acorde V sin comportamiento dominante en V perpetuo sin resolución). Distintos repertorios/marcos asocian roles de tipo dominante con configuraciones distintas de rasgos; por ello la lectura responsable desagrega indicios (bajo en 5̂, leading tone ^7, tritono donde existe, conducción, esquema de sucesión, posición formal/cadencial) sin asignarles pesos ni tratarlos como sustituibles. La clasificación como dominante no debe traducirse automáticamente en una afirmación de tensión percibida: la tensión de dominante no fue medida como constructo en la evidencia revisada."
+structural_variable: "distributed dominant cues — (a) bass on 5; (b) leading tone; (c) tritone where present; (d) voice-leading configuration; (e) succession schema; (f) position — tracked separately, none individually necessary"
+possible_action: "Al leer o planear una dominante, declarar qué indicios la sostienen (bajo, ^7, tritono, conducción, esquema, posición) en vez de invocar 'tensión'. No componer 'tensión' escribiendo V; no declarar dominante desde la etiqueta sola."
+expected_effect: "Lectura desagregada de la dominante; evitar el colapso etiqueta→tensión→receta."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-THEORETICAL-002
+context_dependencies:
+  - Tradición donde 'dominante' tiene contenido (clásica, soul/pop con marcos propios).
+  - Convergencia de al menos parte de los indicios; ningún indicio aislado basta.
+counterproductive_conditions:
+  - Exigir leading tone o tritono donde la tradición no los usa (retonaliza o impone sintaxis ajena).
+  - Usar V como generador automático de tensión narrativa.
+alternatives:
+  - Pre-tónica no dominante como expectativa (Doll vía reseña).
+  - Llegada modal/plagal sin dominante funcional (CAND-HAR-006).
+uncertainty_confidence: "Media-baja como cautela desagregada: casos inspeccionados disocian rasgos y rol (soul-dominant, Spicer §3 VERIFIED con descripción Tagg vía cita inspeccionada; V sin resolución, Spicer §§13–15 VERIFIED); Caplin delimita dominante formal vs. armónica (scope clásico, repo); pre-tónica como expectativa sin resolución (Doll vía reseña). Procedencia por indicio: soul-dominant y V-perpetuo (Spicer VERIFIED); posición formal (Caplin, scope clásico); esquema pre-tónico (Doll vía reseña); leading tone/tritono/conducción detallados como marcadores de tradición sin texto dedicado inspeccionado en esta RQ (cede a RQ-HAR-003). SRC-THEORETICAL-013 (Harrison, UNVERIFIED) NO sostiene ningún punto y deja de citarse; la posibilidad teórica de dominante-sin-V queda abierta solo como marco pendiente. Sin medida perceptiva de expectativa de dominante ni de tensión de dominante; sin pesos ni sustituibilidad entre indicios. possible_action como heurística negativa justificada en versión débil."
+genre_sensitivity: "Alta: qué indicios cuentan depende de la tradición (leading tone clásico vs. soul vs. modal)."
+evaluation_falsification: "Medida donde un único rasgo (p. ej., bajo en 5̂) prediga por sí solo juicios de función dominante a través de tradiciones exigiría reformular como ponderación con primado, no como distribución."
+structure_perception_composition:
+  structure: "Configuración de rasgos (a)–(f), cada uno presente o ausente por separado."
+  perception: "Expectativa de dominante no medida de forma dedicada; pre-tónica como expectativa sin resolución (Doll vía reseña); tensión de dominante no medida."
+  composition: "Heurística negativa justificada en versión débil: declarar indicios, no invocar tensión. Ninguna receta de 'construir dominante' queda establecida. Ningún modelo oficial de dominante distribuida queda establecido (sin pesos, sin sustituibilidad)."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-03, escrutinio estricto): eliminada dependencia de SRC-THEORETICAL-013 como soporte; anti-tensión reformulada como cautela metodológica (no traducción automática) en vez de rechazo ontológico; procedencia por indicio declarada; ambas sub-ideas (evidencia desagregada + cautela anti-tensión) retenidas en un solo candidato debilitado, sin dividir."

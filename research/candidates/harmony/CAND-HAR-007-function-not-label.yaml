@@ -1,0 +1,32 @@
+id: CAND-HAR-007
+status: candidate
+compositional_problem: "Asignar un rol (permanecer, preparar, dirigir, cerrar) a una armonía sin confundir su etiqueta con su función."
+claim: "La identidad del acorde sola es insuficiente para determinar la función armónica a través de las tradiciones inspeccionadas: la misma sonoridad puede cumplir roles distintos según contexto (colección, bajo, conducción, esquema, posición métrica/formal, tradición), y roles equivalentes pueden realizarse con sonoridades distintas. Esto no implica que las etiquetas no aporten información: dentro de una tradición acotada una etiqueta puede ser probabilísticamente informativa; implica que ninguna etiqueta (V, IV, I, números romanos) establece su función sin contexto."
+structural_variable: "functional role in context — evaluated from collection + bass + voice leading + schema + metric/formal position, never from chord label alone"
+possible_action: "Al evaluar qué rol cumple una armonía, no decidir desde su etiqueta aislada: comprobar colección, bajo, conducción, esquema y posición. No anotar función desde el cifrado."
+expected_effect: "Evitar falsas asignaciones (V declarado dominante sin comportamiento; IV declarado preparatorio sin contexto); evaluar el rol en su dimensión correcta."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+context_dependencies:
+  - Tradición donde los roles se definen (práctica común, rock/pop con marcos propios en disputa).
+  - Convergencia de indicios (ver CAND-HAR-001/002/005 para indicios de centro; aquí para rol sucesivo).
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar explícitamente marco y alcance (clásico, rock, modal) antes de asignar cualquier rol.
+uncertainty_confidence: "Media-baja como cautela negativa: apoyada por casos analíticos inspeccionados (soul-dominant sin leading tone clásico, Spicer §3 VERIFIED; V perpetuo sin resolución, Spicer §§13–15 VERIFIED; mismo loop con distinto centro según metro/textura, Doll cap.6 vía reseña VERIFIED a nivel de reseña). SRC-ACADEMIC-032 (Nobile 2016, PARCIAL solo-marco) NO sostiene ningún punto material y deja de citarse. Sin medida perceptiva de asignación de función."
+genre_sensitivity: "Baja como cautela (aplica en todas las tradiciones); los roles concretos y sus marcadores sí son genre-sensitive."
+evaluation_falsification: "Demostración de que una etiqueta aislada predice el rol percibido a través de contextos, bajos y posiciones refutaría el claim; no se conoce."
+structure_perception_composition:
+  structure: "Sonoridad con etiqueta L en contexto C (colección, bajo, conducción, esquema, posición)."
+  perception: "Atribución de rol documentada analíticamente como contexto-dependiente (casos arriba); medida experimental pendiente (GAP)."
+  composition: "Heurística negativa justificada en versión débil: no sustituir etiqueta por rol. Ninguna técnica positiva de asignación queda establecida."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-03): alcance debilitado a insuficiencia (no a determinación total por contexto); eliminada dependencia de SRC-ACADEMIC-032 como soporte; conservada cautela de que las etiquetas sí pueden ser informativas dentro de tradición acotada."

@@ -1,0 +1,33 @@
+id: CAND-HAR-009
+status: candidate
+compositional_problem: "Evitar inferir dirección o función desde el movimiento de fundamentales sin comprobar el resto del contexto."
+claim: "El root motion solo no determina la función armónica ni la dirección percibida: la misma moción de roots puede participar en interpretaciones contextuales distintas según bajo, inversión, metro, esquema y tradición. Esto no establece que el root motion sea irrelevante (su peso propio queda sin medir). Ninguna jerarquía universal de 'progresiones fuertes' queda justificada con la evidencia inspeccionada."
+structural_variable: "root motion pattern evaluated jointly with bass motion + inversion + meter + schema + tradition (never alone)"
+possible_action: "Al leer dirección en una sucesión, no decidir desde los roots solos: comprobar bajo, inversión, posición métrica y esquema de tradición. No orquestar 'más dirección' solo con quintas descendentes."
+expected_effect: "Evitar falsas jerarquías (toda quinta descendente = moción fuerte); evaluar la dirección en su configuración completa."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-CORPUS-009
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-ACADEMIC-028
+context_dependencies:
+  - Ninguna restrictiva como cautela; las mociones concretas sí dependen de tradición.
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar mecanismo (conducción, bajo, esquema, probabilidad) antes de calificar una moción como dirigida.
+uncertainty_confidence: "Media-baja como cautela negativa: misma progresión con distinto centro según metro/textura (Doll cap.6 vía reseña VERIFIED a nivel de reseña); distribuciones de corpus como conteo, no como fuerza (SRC-CORPUS-009 PARCIAL). SRC-THEORETICAL-010 (TPS, solo-marco) NO sostiene ningún punto material y deja de citarse. La equivalencia frecuencia→fuerza se cede a CAND-HAR-010. Sin medida perceptiva que separe root de bajo en función; nada de RQ-HAR-003/008 se anticipa."
+genre_sensitivity: "Media: la cautela es transversal; qué mociones son marcadas depende de la tradición."
+evaluation_falsification: "Medida donde variar solo los roots (bajo, metro y esquema fijos) modifique sistemáticamente juicios de dirección/función establecería el peso propio del root y exigiría reformular el claim como ponderación, no como cautela."
+structure_perception_composition:
+  structure: "Patrón de fundamentales entre armonías sucesivas (quintas, grados, terceras, repetición)."
+  perception: "Sin medida dedicada que aísle root motion de bajo/conducción/esquema; atribución analítica contexto-dependiente."
+  composition: "Heurística negativa justificada en versión débil: no decidir desde roots solos. Ninguna jerarquía de fuerza queda establecida."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-03): fuerza lógica delimitada (contraejemplos establecen insuficiencia, no irrelevancia); eliminada dependencia de SRC-THEORETICAL-010; distinción ROOT/BASS/VOICE LEADING/CONTEXTO preservada; solape frecuencia→fuerza cedido a CAND-HAR-010."

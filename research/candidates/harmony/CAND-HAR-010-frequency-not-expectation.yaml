@@ -1,0 +1,34 @@
+id: CAND-HAR-010
+status: candidate
+compositional_problem: "Evitar convertir estadísticas de sucesión (corpus o intuición) en expectativa de oyente, función o receta."
+claim: "La frecuencia estadística observada de una sucesión por sí sola no establece expectativa perceptiva ni función teórica: son niveles (corpus, percepción, teoría, composición) que requieren evidencia separada. Esto no afirma que sean independientes: la frecuencia puede ser informativa o contribuir a la expectativa aprendida sin equivaler a ella. Límite verificado: varias afirmaciones de frecuencia en la literatura de esquemas rock provienen de intuición auditiva, no de corpus, y no deben citarse como datos. Ninguna afirmación sobre aprendizaje estadístico armónico va más allá de marco general pendiente."
+structural_variable: "transition statistics (corpus counts vs. listening intuition) kept separate from expectancy judgments and functional labels"
+possible_action: "Al usar un dato de frecuencia (X→Y es común), no traducirlo a 'los oyentes esperan Y', 'X funciona como F' ni 'compón X→Y': exigir la evidencia del nivel correspondiente. Verificar si una frecuencia citada proviene de corpus o de intuición antes de usarla."
+expected_effect: "Evitar el triple colapso corpus→percepción→teoría→composición; citar frecuencias solo como lo que son."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - CORPUS_ANALYSIS
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-CORPUS-009
+  - SRC-ACADEMIC-012
+  - SRC-THEORETICAL-007
+context_dependencies:
+  - Ninguna restrictiva como cautela metodológica.
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar el nivel (conteo, juicio, rol, decisión) antes de discutir cualquier sucesión.
+uncertainty_confidence: "Media-baja como cautela negativa: límite intuición-vs-corpus verificado a nivel de reseña (de Clercq 2018 fn6, SRC-ACADEMIC-031); distribuciones rock como observación de género (SRC-CORPUS-009 PARCIAL); expectativa por familiaridad como marco general (Huron, repo); probabilidad aprendida como marco (Temperley-cognición, repo). Sin corpus pop con juicios de expectativa (GAP)."
+genre_sensitivity: "Baja como cautela (aplica a todo uso de estadísticas); los conteos concretos sí son genre-sensitive."
+evaluation_falsification: "Corpus donde la frecuencia de transición prediga juicios de expectativa de forma estable exigiría reformular el claim como delimitación cuantificada, no como separación."
+structure_perception_composition:
+  structure: "Conteo de X→Y en repertorio R (o intuición auditiva sin conteo)."
+  perception: "Expectativa modulada por familiaridad (marco Huron); sin medida que vincule frecuencias pop con juicios de oyentes."
+  composition: "Heurística negativa justificada: ningún puente corpus→receta queda establecido. Probabilidad ≠ calidad como anti-regla (la calidad queda fuera del claim salvo para prohibir esta inferencia)."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-03): lógica precisada como anti-colapso (frecuencia sola no establece; sin afirmar independencia ni descartar contribución al aprendizaje); aprendizaje estadístico marcado como GAP sin soporte inspeccionado; calidad retenida solo como anti-regla."
