@@ -1,0 +1,43 @@
+id: CAND-HAR-030
+status: candidate
+compositional_problem: "Elegir una fórmula de llegada (plagal, modal) adecuada a la tradición sin tratarla como cadencia universal ni como cierre deficiente."
+claim: "Las llegadas IV-I y modales (bVII-I, bVI-bVII-i, double plagal bVII-IV-I) son fórmulas de repertorio con alcance declarado, no una 'plagal cadence' universal ni cierres tonales deficientes. En clásico, IV-I es postcadencial/prolongacional, no cadencia temática (Caplin 2024 vía reseña; OMT plagal-motion); en rock seccional, IV-I es segunda fórmula de cierre (18.5% RS200) con subtipos propios (stop, grand, deceptive IV); en pop modal, bVI-bVII-i es llegada goal-oriented y los shuttles (I-bVII) son organización circular sin meta (OMT modal). La misma relación interválica cambia de función según marco: no existe 'la' cadencia plagal/modal."
+structural_variable: "plagal/modal arrival formula (IV-I sectional, bVII-I return, bVI-bVII-i aeolian, bVII-IV-I double plagal) within declared tradition and formal scale"
+possible_action: "En rock/pop-modal, considerar IV-I seccional, bVII-I o bVI-bVII-i como fórmulas idiomáticas disponibles de llegada con su alcance (sección, retransición, meta modal), sin prometer cierre percibido; en pastiche clásico, reservar IV-I a lo postcadencial/prolongacional; no importar la negación clásica al rock ni la afirmación rock al clásico; verificar por escucha."
+expected_effect: "Llegadas idiomáticas por tradición; evitar retonalización (V-I impuesto a lo modal) y postcadencias presentadas como cierres (IV-I clásico como tema)."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - CORPUS_ANALYSIS
+  - COMPOSITION_PEDAGOGY
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-042
+  - SRC-PEDAGOGICAL-009
+  - SRC-THEORETICAL-016
+  - SRC-ACADEMIC-033
+  - SRC-ACADEMIC-028
+context_dependencies:
+  - Tradición y escala formal declaradas (tema clásico vs. sección rock vs. pasaje modal).
+  - En rock: posición de fin de chorus/VCU y llegada a tónica próxima al fin vocal.
+  - En modal: colección y centro ya plausibles (CAND-HAR-006).
+counterproductive_conditions:
+  - Presentar IV-I clásico aislado como cierre temático (postcadencial mal ubicado).
+  - Exigir V-I en contexto modal (retonaliza).
+  - Leer un shuttle circular (I-bVII en loop) como llegada cadencial.
+alternatives:
+  - V-I auténtica donde la tradición la sostiene (CAND-HAR-008).
+  - Parada de loop / cierre por arreglo sin sintaxis (CAND-HAR-031).
+uncertainty_confidence: "Media-baja: estadísticas RS200 y subtipos en extractos sustantivos (texto pendiente); schemas modales en extractos sustantivos (capítulo pendiente línea por línea); negación capliniana en segundo nivel; Biamonte por puntos; Spicer VERIFIED para retransición/Sísifo. Acción débil con escucha obligatoria y alcance por tradición."
+genre_sensitivity: "Máxima: el claim ES variación por tradición; ninguna fórmula sale de su alcance."
+evaluation_falsification: "Inspección primaria que contradiga las frecuencias RS200 o los subtipos exigiría recalibrar la mitad rock; texto Caplin que admita plagal cadence temática exigiría recalibrar la mitad clásica; corpus modal con juicios que rechace bVI-bVII-i como llegada exigiría acotar la mitad modal."
+structure_perception_composition:
+  structure: "Fórmula de llegada con tradición y escala declaradas."
+  perception: "Sin medida de cierre para estas fórmulas (juicios analíticos + pedagogía); no inferir fuerza sentida."
+  composition: "Heurística de repertorio débil: usar fórmula idiomática con alcance; verificar por escucha."
+cross_references:
+  - CAND-HAR-006
+  - CAND-HAR-008
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): sin categoría universal 'modal cadence'; shuttle-vs-llegada separado por marco; sin mecanismo perceptivo común inferido de similitud superficial; sin medida de cierre para estas fórmulas; possible_action debilitado a disponibilidad idiomática sin promesa de cierre; Biamonte por puntos, Caplin-2024 segundo nivel."

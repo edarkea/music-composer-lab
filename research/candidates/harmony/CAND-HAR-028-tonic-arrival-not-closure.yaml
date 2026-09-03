@@ -1,0 +1,39 @@
+id: CAND-HAR-028
+status: candidate
+compositional_problem: "Diseñar por separado el punto de llegada armónica y los medios que producen cierre."
+claim: "La llegada a la tónica no equivale al cierre: en los repertorios revisados, el cierre medido/inferido integra varias dimensiones (armonía, melodía, ritmo/metro, forma, silencio) y la armonía contribuye como aportador parcial sin decidirlo sola y sin necesidad universal demostrada. La armonía puede contribuir al cierre, pero la evidencia revisada no justifica tratarla como indicio suficiente independiente del contexto ni como universalmente necesaria. Diseñar 'llegar a I' esperando 'cerrar' es un error de constructo (TONIC ARRIVAL != CLOSURE; ARRIVAL != CLOSURE). Esto no implica que la tónica carezca de efecto sobre el cierre, ni que el cierre requiera múltiples indicios en todo contexto musical posible. Evidencia convergente acotada: la estabilidad del bajo predice completitud en músicos y la de la soprano en no-músicos con la disonancia melódica en la llegada como modulador (Sears, extractos Mozart/teclado/tarea 1-7); el descenso no es necesario ni suficiente y la duración/silencio solo contribuyen coordinadas (Melody CAND-MEL-017/028)."
+structural_variable: "tonic arrival configuration + per-dimension closure means (soprano arrival, metric placement, final duration, post-event silence, formal position)"
+possible_action: "Al fijar una llegada, decidir por separado el punto armónico (qué armonía/bajo) y el cierre de cada dimensión (soprano consonante o no, posición métrica, duración, silencio, escala formal); no dar por cerrado lo llegado; verificar por escucha."
+expected_effect: "Llegadas evaluables por dimensión; evitar falsos cierres (llegada sin cierre) y cierres atribuidos solo a la armonía."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-EMPIRICAL-016
+  - SRC-EMPIRICAL-010
+  - SRC-EMPIRICAL-011
+context_dependencies:
+  - Soprano de llegada (consonancia/disonancia) como variable independiente.
+  - Posición métrica y formal de la llegada.
+  - Marco armónico como contribuidor parcial (necesidad universal no demostrada; ver síntesis § Closure).
+counterproductive_conditions:
+  - Llegar a I con soprano disonante/posición débil esperando cierre pleno.
+  - Alargar + callar sobre irresolución esperando cierre (falla CAND-MEL-028).
+  - Atribuir a la armonía un cierre que aportaron metro/forma/arreglo.
+alternatives:
+  - Cierre parcial deliberado (llegada sin cierre: semicadencia, deceptiva).
+  - Frontera por otros dominios con armonía constante (ver síntesis § Closure Without Harmonic Change).
+uncertainty_confidence: "Media-baja: regresión por voces y moduladores retóricos en extractos Sears (R2=.84/.53) + convergencia Melody (aditividad, anti-descenso, duración coordinada); sin diseño que aísle cada dominio; sin medida fuera de Mozart/teclado. Heurística negativa sólida (no-equivalencia), acción positiva débil con escucha obligatoria."
+genre_sensitivity: "Media: la multidimensionalidad aplica en general; los pesos por dimensión dependen de tradición y formación."
+evaluation_falsification: "Diseño donde la llegada armónica aislada (melodía/metro/forma fijos) prediga ratings de cierre igual que la configuración completa exigiría reformular la insuficiencia armónica."
+structure_perception_composition:
+  structure: "Llegada tónica configurada + estado de cada dimensión (soprano, metro, duración, silencio, posición)."
+  perception: "Bajo→músicos, soprano→no-músicos; disonancia/duración modulan; cierre desde armonía sola sin medir."
+  composition: "Heurística justificada: diseñar llegada y cierre por separado; verificar por escucha."
+cross_references:
+  - CAND-HAR-004
+  - CAND-HAR-005
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): corrección del modelo de cierre aplicada (necesidad universal retirada; 'contribuidor parcial' en vez de 'condición necesaria'); no-inferencias explicitadas (tónica sí puede tener efecto; sin requisito multi-indicio universal); betas Sears preservados con tarea/muestra sin uso como pesos; Melody no modificado."

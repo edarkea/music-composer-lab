@@ -1,0 +1,39 @@
+id: CAND-HAR-029
+status: candidate
+compositional_problem: "Ponderar la fuerza relativa de distintas llegadas sin convertir una jerarquía analítica en ranking perceptivo universal."
+claim: "La jerarquía analítica de fuerza cadencial (PAC>IAC>HC en teoría clásica) no equivale a un ranking perceptivo general: con estímulos Mozart/teclado, los músicos ordenan PAC>IAC>HC>DC>EV con apoyo empírico, pero los no-músicos no ordenan igual (DC/EV altas; HC rechazada como completadora de frase) y los rasgos retóricos (disonancia, trill, duración, densidad, contexto formal) modulan dentro de categoría. ANALYTICAL HIERARCHY != PERCEPTUAL STRENGTH. Sin puntuaciones numéricas de fuerza; sin transferencia fuera de alcance."
+structural_variable: "cadential category (PAC/IAC/HC/DC/EV) + rhetorical features (melodic dissonance, cadential trill, event density, duration, formal context) + listener training"
+possible_action: ""
+expected_effect: "Peso formal hipotetizable solo en clásica con oyentes formados; fuera de ese alcance, efecto incierto."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-EMPIRICAL-016
+  - SRC-ACADEMIC-041
+  - SRC-THEORETICAL-016
+context_dependencies:
+  - Repertorio clásico/teclado (Mozart) y tarea de completitud 1-7.
+  - Formación del oyente (músicos vs. no-músicos como poblaciones distintas).
+  - Rasgos retóricos y contexto formal del estímulo concreto.
+counterproductive_conditions:
+  - Prescribir PAC para "máximo cierre" ante audiencia o repertorio no clásico.
+  - Leer DC/EV como "débiles" perceptivamente en general (no-músicos las puntúan altas).
+  - Convertir p-valores o R2 en pesos compositivos.
+alternatives:
+  - Ponderar llegadas por énfasis/posición formal en vez de por categoría (rock: grand plagal, tonicized pre-tonic).
+  - Decidir fuerza por escucha con la población objetivo real.
+uncertainty_confidence: "Media-baja como hipótesis acotada: estadísticas sustantivas en extractos (p<.01, R2=.84/.53, betas por voz) pero texto completo pendiente (N, subtipos sin verificar a nivel primario); teoría de la jerarquía con testimonio de segundo nivel; transferencia fuera de alcance sin evidencia. possible_action vacío: ningún puente compositivo positivo justificado."
+genre_sensitivity: "Muy alta: claim clásico con oyentes enculturados; fuera de él solo como hipótesis no verificada."
+evaluation_falsification: "Réplica con no-músicos que ordene PAC>IAC>HC>DC>EV igual que músicos exigiría retirar la dependencia de formación; corpus pop con juicios que replique el ranking exigiría ampliar alcance."
+structure_perception_composition:
+  structure: "Categoría cadencial + rasgos retóricos + contexto formal en estímulo clásico."
+  perception: "Ranking graduado en músicos; ranking distinto en no-músicos; modulación intra-categoría por rasgos."
+  composition: "Sin acción justificada todavía; solo cautela (no universalizar la jerarquía)."
+cross_references:
+  - CAND-HAR-008
+  - CAND-HAR-010
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): anti-colapso analítico-vs-perceptivo preservado; estadísticas Sears retenidas solo con estímulo/tarea/muestra (Mozart/teclado/1-7/enculturados) y sin transferencia; betas/p/R2 prohibidos como pesos compositivos; sin inferencia sobre irrelevancia analítica ni sobre sistemas perceptivos fijos por formación; texto completo sigue pendiente (no STRONG)."

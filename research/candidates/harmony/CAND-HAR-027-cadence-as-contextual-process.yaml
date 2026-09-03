@@ -1,0 +1,41 @@
+id: CAND-HAR-027
+status: candidate
+compositional_problem: "Decidir si un final de frase constituye una cadencia o solo una llegada/etiqueta de dos acordes."
+claim: "En algunos marcos influyentes de práctica común, la cadencia se trata como proceso contextual con posición formal (preparación, dominante cadencial, llegada con bajo/soprano/métrica declarados), no como lookup del par final de acordes. Leer cadencia desde los dos últimos acordes sin marco, proceso ni posición es un error de objeto dentro de esos marcos: la misma sucesión funciona distinto según tipo de cadencia esperada, función temática y escala formal. Esto no establece que toda cadencia deba analizarse siempre como proceso de cuatro stages en toda tradición (los stages caplinianos tienen alcance clásico declarado). La mitad positiva (proceso con stages) descansa en teoría clásica convergente con testimonio de segundo nivel pendiente de texto primario; la mitad de contraevidencia al lookup (contexto formal y rasgos modulan juicios; pre-dominante depende de tipo) descansa en extractos empíricos y de corpus sustantivos."
+structural_variable: "cadential process (preparation stages + cadential dominant + arrival configuration with declared bass/soprano/meter/formal position) within a declared framework"
+possible_action: ""
+expected_effect: "Distinguir cadencia de llegada y de etiqueta; dentro de alcance clásico, llegadas ponderables por proceso; fuera de él, efecto incierto."
+evidence_class: THEORY
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - EXTERNAL_EMPIRICAL
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-THEORETICAL-016
+  - SRC-THEORETICAL-002
+  - SRC-EMPIRICAL-016
+  - SRC-CORPUS-010
+context_dependencies:
+  - Marco declarado (FRAMEWORK/OBJECT/CRITERION/SCOPE/EVIDENCE TYPE) que defina qué cuenta como cadencia.
+  - Stages previos y posición formal/temática (no solo par final).
+  - Oyentes enculturados en la tradición correspondiente (para la mitad perceptiva clásica).
+counterproductive_conditions:
+  - Etiquetar cadencia desde root labels sin bajo, soprano, metro ni posición.
+  - Importar stages clásicos al pop/loop sin verificar (allí la preparación puede ser pre-tónica sin resolución o inexistente).
+  - Leer el efecto de contexto formal como receta ("colocar en subordinate theme para cerrar más").
+alternatives:
+  - Llegada no-cadencial (tónica final sin proceso; CAND-HAR-032).
+  - Retorno cíclico (CAND-HAR-031) donde no hay proceso dirigido.
+uncertainty_confidence: "Media-baja: convergencia teórica clásica (Caplin 1998 repo + Caplin 2024 vía reseña sustantiva) para el proceso; extractos sustantivos Sears (contexto formal y rasgos modulan) y Brown (pre-dominante por tipo) para la insuficiencia del par; ningún texto completo nuevo inspeccionado (todos los records nuevos PARTIAL); transferencia fuera de clásico `uncertain`. possible_action vacío: el puente compositivo positivo requiere percepción + contexto no medidos fuera de Mozart."
+genre_sensitivity: "Alta: proceso con stages declarado para clásica; en rock/pop la 'preparación' puede ser pre-tónica o parada (ver CAND-HAR-030/031)."
+evaluation_falsification: "Marco clásico donde el par final prediga ratings de completitud igual que el proceso completo exigiría reformular la necesidad de stages; corpus pop donde el par final baste para acuerdo inter-juez alto en boundaries exigiría acotar el claim a clásica."
+structure_perception_composition:
+  structure: "Proceso con stages + llegada configurada (bajo/soprano/métrica) en posición formal declarada."
+  perception: "Contexto formal y rasgos retóricos modulan completitud dentro de categoría (Sears, extractos); disonancia/trill/duración/densidad como predictores parciales."
+  composition: "Puente compositivo positivo pendiente de apoyo directo: sin acción justificada todavía; solo cautela negativa (no lookup)."
+cross_references:
+  - CAND-HAR-008
+  - CAND-HAR-023
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): claim acotado a 'algunos marcos influyentes de práctica común' (no dogma de proceso universal de cuatro stages); Caplin 2024 marcado como testimonio de segundo nivel PARTIAL; mitad negativa (insuficiencia del par) apoyada en extractos Sears/Brown; possible_action permanece vacío; no se afirma percepción del proceso completo por oyentes."

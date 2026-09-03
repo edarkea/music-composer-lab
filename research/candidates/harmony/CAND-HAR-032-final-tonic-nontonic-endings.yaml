@@ -1,0 +1,40 @@
+id: CAND-HAR-032
+status: candidate
+compositional_problem: "Terminar en tónica sin proceso cadencial, o terminar fuera de tónica, sin prometer cierre ni diagnosticar fallo."
+claim: "El repertorio documentado incluye finales en tónica sin proceso cadencial clásico y finales cuya armonía final no es la tónica establecida (existencia, no licencia general): terminar en I (larga, repetida, pedal, estática, parada abrupta) CONFIRMA como máximo un centro ya plausible sin constituir cadencia (FINAL TONIC != AUTHENTIC CADENCE; tonic status != cadential function; FINAL EVENT != TONIC por CAND-HAR-004), y terminar fuera de tónica (IV/V/vi/bVII seccionales, tónica ausente global, fade) implica continuación esperada, marco modal/loop o final de producción, no debilidad automática. Esto establece existencia, no cierre equivalente: terminar en tónica no garantiza cierre (NO JUSTIFICADO como regla), los finales no-tónicos no son automáticamente fuertes ni aceptables en todo género, y la tónica o la cadencia no quedan demostradas como irrelevantes."
+structural_variable: "final-harmony status (tonic-without-cadence vs. non-tonic ending: sectional, modal/loop, absent-tonic, production ending) with declared formal scale"
+possible_action: "Si se termina en tónica sin cadencia, no prometer cierre desde la tónica: sostenerla (duración, repetición, pedal) y apoyar con otras dimensiones o aceptar cierre parcial; si se termina fuera de tónica, declararlo como continuación seccional, marco modal/loop o decisión de producción, no como cierre pleno; verificar por escucha."
+expected_effect: "Finales honestos por alcance: evitar falsos cierres tónicos y falsos diagnósticos de finales abiertos deliberados."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-042
+  - SRC-EMPIRICAL-017
+context_dependencies:
+  - Centro ya plausible (para que la tónica final confirme algo).
+  - Escala formal (frase vs. sección vs. canción: el mismo final pesa distinto).
+  - Marco modal/loop o decisión de producción declarada (para no-tónicos).
+counterproductive_conditions:
+  - Tónica final breve y sin apoyo esperando cierre de canción.
+  - Final no-tónico presentado como cierre pleno en repertorio cadencial.
+  - Leer el acorde final como prueba del centro (refuta CAND-HAR-004).
+alternatives:
+  - Cadencia auténtica/seccional donde la tradición la sostiene (CAND-HAR-008/030).
+  - Parada de loop marcada (CAND-HAR-031).
+uncertainty_confidence: "Media-baja: tónicas ausentes y vamps con análisis cercanos VERIFIED (Spicer); finales sin sectional cadence en corpus (Temperley, extractos); Smit 2020 solo como límite (emoción != cierre); sin medida de cierre para tónica-sin-cadencia ni para no-tónicos (ambos `uncertain` como dispositivos). Heurística negativa sólida, acción positiva débil."
+genre_sensitivity: "Alta: estados documentados en rock/pop/modal/loop; en pastiche clásico el final no-tónico cambia de significado (continuación tipificada, no licencia general)."
+evaluation_falsification: "Medida donde tónicas finales sin proceso cierren sistemáticamente igual que PAC en igualdad de contexto exigiría ascender la tónica-final a dispositivo; corpus clásico de finales no-tónicos con función de cierre pleno exigiría ampliar alcance."
+structure_perception_composition:
+  structure: "Estatus de la armonía final + escala formal + marco (cadencial/cíclico/modal/producción)."
+  perception: "Sin medida de cierre para estos estados; emoción (Smit) como constructo separado."
+  composition: "Heurística justificada: no prometer ni diagnosticar; declarar marco; verificar por escucha."
+cross_references:
+  - CAND-HAR-004
+  - CAND-HAR-006
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): 'legítimos' sustituido por lenguaje descriptivo de existencia en repertorio acotado; no-inferencias explicitadas (sin cierre equivalente, sin aceptabilidad trans-género, sin irrelevancia de tónica/cadencia); FINAL CHORD != TONIC (004) y tonic-arrival != closure (028) preservados; Smit 2020 solo como límite emoción != cierre; possible_action retenido como heurística negativa con escucha."

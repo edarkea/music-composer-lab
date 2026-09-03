@@ -1,0 +1,43 @@
+id: CAND-HAR-031
+status: candidate
+compositional_problem: "Crear frontera o retorno en música cíclica sin imponerle sintaxis cadencial clásica ni llamarla cadencia."
+claim: "En organización cíclica, el retorno a la posición inicial del loop es recurrencia (RETURN/RECURRENCE), no cadencia (LOOP RETURN != CADENCE AUTOMATICALLY), y una frontera seccional (BOUNDARY) sobre material cíclico se articula por parada/arreglo marcada (STOP, cambio de capas/densidad, repetición enfática, fermata), no por proceso cadencial demostrado. La parada no crea cierre armónico por sí sola (STOP != HARMONIC CLOSURE): el efecto terminal-vs-corte queda `uncertain` (sin medida). La costura del loop (LOOP SEAM) recurrente-vs-terminal queda como OPEN QUESTION / hipótesis de trabajo: se hipotetiza recurrente cuando el ciclo continúa idéntico y terminal cuando la iteración final (FINAL EVENT) se marca, sin promoverla a claim. Vocabulario obligatorio: 'retorno' para recurrencia, 'parada' para detención, 'cadencia' solo ante proceso declarado."
+structural_variable: "loop boundary construction (stop/cut/layer-density change/emphatic final iteration/fermata over a cyclic frame) with neutral return-vs-cadence vocabulary"
+possible_action: "Para articular una frontera seccional sobre un loop: marcar la iteración final (parada, cambio de arreglo/densidad, repetición enfática) en vez de insertar V-I; llamar al evento 'retorno' o 'parada', no 'cadencia', salvo proceso declarado; verificar por escucha si la frontera se oye terminal o como corte (sin promesa de cierre)."
+expected_effect: "Fronteras cíclicas articuladas sin sintaxis impuesta; evitar cadencias proyectadas (leer cierre donde hay recurrencia) y cierres prometidos por la mera última repetición."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-042
+  - SRC-PEDAGOGICAL-009
+context_dependencies:
+  - Sintaxis cíclica pop/rock/groove sin cadencia dirigida (tolerancia a centro múltiple/débil).
+  - Arreglo/producción que marque la iteración final (sin marca, no hay frontera armónica).
+  - Escala seccional (la costura fraseológica interna sigue siendo recurrencia).
+counterproductive_conditions:
+  - Insertar V-I funcional para 'cerrar' un loop modal (retonaliza; ver CAND-HAR-030).
+  - Dejar la última repetición idéntica esperando cierre terminal.
+  - Llamar cadencia a la parada (contamina el vocabulario y futuras decisiones).
+alternatives:
+  - Cadencia seccional con sintaxis (V/IV seccionales; CAND-HAR-030) donde el repertorio la sostiene.
+  - Tónica final sostenida sin proceso (CAND-HAR-032).
+  - Fade-out / final de producción (GAP de efectos).
+uncertainty_confidence: "Media-baja como observación de género: mismo-loop-distinto-centro (Doll cap.6 vía reseña), tónicas ausentes y paradas (Spicer VERIFIED), 41% RS200 sin sectional cadence (Temperley, extractos), shuttle-vs-cadence (OMT); sin medida de terminal-vs-corte ni de costura recurrente-vs-terminal (hipótesis de trabajo). Acción débil con escucha obligatoria."
+genre_sensitivity: "Muy alta: claim pop/rock/loop-based con sintaxis cíclica; no transferir a práctica común."
+evaluation_falsification: "Medida donde oyentes describan sistemáticamente retornos de loop no marcados como cadencias exigiría reformular (función interna); medida que no distinga parada marcada de corte exigiría retirar la hipótesis de la costura."
+structure_perception_composition:
+  structure: "Marco cíclico + marca de frontera (o su ausencia)."
+  perception: "Atribución analítica documentada; terminal-vs-corte y costura sin medida (GAP)."
+  composition: "Heurística débil: marcar la frontera con arreglo; vocabulario neutral; verificar por escucha."
+cross_references:
+  - CAND-HAR-011
+  - CAND-HAR-026
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit COMPLETED (2026-09-04): partes A (retorno != cadencia) y B (frontera por parada/arreglo) separadas; vocabulario neutral RETURN/STOP/BOUNDARY/LOOP SEAM/FINAL EVENT aplicado; STOP != CLOSURE explicitado; costura recurrente-vs-terminal preservada como OPEN QUESTION sin promoción; sin duplicar 011 (organización) ni 026 (persistencia cíclica); sin medida terminal-vs-corte."
