@@ -1,0 +1,36 @@
+id: CAND-HAR-002
+status: candidate
+compositional_problem: "Reforzar un centro candidato mediante el bajo sin cambiar la sucesión de fundamentales."
+claim: "Cinco elementos distintos no deben colapsarse: fundamental del acorde (root), nota del bajo (bass), pedal sostenido, bajo repetido y centro tonal percibido. Colocar la tónica candidata en el bajo puede contribuir a la atribución de centro cuando converge con otros indicios; root en bajo NO equivale a percepción de tónica como regla establecida. La ponderación exacta del bajo frente al root no está establecida y ningún primado causal-perceptivo del bajo queda demostrado."
+structural_variable: "bass note relative to chord root — tracked separately: (a) tonic in bass / root position; (b) sustained pedal/drone; (c) repeated bass on candidate tonic"
+possible_action: ""
+expected_effect: "Refuerzo del centro (CONFIRM/MAINTAIN) cuando converge con colección y recurrencia; efecto sin cuantificar."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-EMPIRICAL-014
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+project_evidence: ""
+context_dependencies:
+  - Registro grave audible y claro (dependencia de arreglo).
+  - "Tradición: pedal clásico y riff/ostinato pop como marcadores (vía repertorio inspeccionado, no pedagogía textual: records pedagógicos sin texto no se citan)."
+  - Convergencia con colección (CAND-HAR-001).
+counterproductive_conditions:
+  - Pedal prolongado que congela la dirección cuando se busca moción (cede a RQ-HAR-002/004).
+  - Bajo ambiguo o melódico que sugiere un centro competidor.
+alternatives:
+  - Reforzar por posición métrica/formal (CAND-HAR-005).
+  - Confirmar por moción dirigida (RQ-HAR-002).
+uncertainty_confidence: "Baja-media: distinción root-vs-bass como separación obligatoria; apoyo exclusivamente de repertorio inspeccionado y teoría secundaria, sin ninguna medida perceptiva dedicada; contraejemplo incluido (pedal que engaña en 'Human'); ponderación causal pendiente de medida dedicada."
+genre_sensitivity: "Alta: el rol del bajo difiere entre bajo funcional clásico, bajo riff pop y drone modal."
+evaluation_falsification: "Medida dedicada donde variar solo el bajo (tónica vs. 3̂/5̂) con colección fija no modifique la atribución de centro debilitaría el claim."
+structure_perception_composition:
+  structure: "(a) La nota del bajo coincide con la tónica candidata. (b) Un pedal sostiene una altura grave. (c) El bajo repite la tónica candidata. Cada uno por separado."
+  perception: "Pasajes inspeccionados de repertorio (SRC-EMPIRICAL-014, puntero PARCIAL sin experimento dedicado): pedal que fija centro ('Sara', Spicer §15), pedal que NO lo fija y genera expectativa fallida ('Human', Spicer §15, contraejemplo preservado), convergencia melodía-sobre-bajo que decanta la atribución ('Reach Out', Spicer §5), metro/textura/paralelismo como desambiguadores (Doll cap.6 vía reseña). Sin medida dedicada bajo-vs-root; sin primado causal demostrado."
+  composition: "Sin acción justificada todavía: registrar como indicio a coordinar, no como técnica."
+audit_recommendation: REVISE
+integration_readiness: NOT_READY
+verification_note: "Audit de candidatos COMPLETED (2026-09-03): root/bajo/pedal/bajo-repetido/centro separados como elementos distintos; regla root-en-bajo = tónica rechazada como establecida; evidencia declarada como repertorio/teórica sin medida dedicada; HYPOTHESIS sin possible_action confirmada."

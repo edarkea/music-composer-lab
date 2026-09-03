@@ -1,0 +1,35 @@
+id: CAND-HAR-004
+status: candidate
+compositional_problem: "Decidir si un pasaje establece un centro único o sostiene ambigüedad deliberada (loops, mayor/menor relativo, centros competitivos)."
+claim: "La frecuencia o repetición de una armonía no determina por sí sola la función de tónica, y el primer o el último acorde de un loop o sección tampoco la determinan por sí solos, en los contextos pop/rock inspeccionados: la evidencia revisada no justifica tratarlos como reglas context-universales ni individualmente suficientes. No individualmente suficiente NO equivale a no informativo: frecuencia y posición pueden informar dentro de una convergencia de indicios. Si repartir indicios entre competidores produce ambigüedad controlable es pregunta abierta, no técnica establecida."
+structural_variable: "chord frequency vs. first-chord vs. final-chord position (negative distinction)"
+possible_action: ""
+expected_effect: "Evitar falsas atribuciones (tónica = lo más frecuente / lo primero / lo último). Ningún efecto compositivo positivo justificado."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - CORPUS_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-ACADEMIC-036
+context_dependencies:
+  - Sintaxis cíclica sin cadencia dirigida; repertorio pop/rock con tolerancia analítica a centro múltiple o débil.
+  - Escucha seccional: la ambigüedad puede reubicarse a escala de sección (marco Capuzzo 2009).
+counterproductive_conditions:
+  - Aplicar criterios de desarrollo armónico clásico al loop (juzgarlo como armonía defectuosa).
+  - Leer tónica desde frecuencia o posición sin convergencia de indicios.
+alternatives:
+  - Resolver la atribución por arreglo/sección en vez de por acorde.
+uncertainty_confidence: "Media-baja como distinción negativa de género (múltiples análisis convergentes inspeccionados: Spicer VERIFIED; Doll cap.6 vía reseña VERIFIED como testimonio de segundo nivel); sin medida de atribución en oyentes. Capuzzo 2009 (SRC-ACADEMIC-036) solo-marco: aporta la distinción tonalidad/centricidad seccional como marco del debate, sin criterios inspeccionados. Las afirmaciones de frecuencia de esquemas en Doll provienen de intuición auditiva, no de corpus (de Clercq 2018 fn6). possible_action vaciado por decisión del Director: el repertorio ambiguo no establece la receta."
+genre_sensitivity: "Muy alta: claim pop/rock con sintaxis cíclica; no transferir a práctica común como norma."
+evaluation_falsification: "Corpus donde primero/más frecuente/último predijeran la tónica atribuida por encima del azar de forma estable exigiría reformular como heurística probabilística, no como regla."
+structure_perception_composition:
+  structure: "Ciclo de 2–4 sonoridades sin cadencia dirigida; frecuencia y posiciones inicial/final de cada candidato."
+  perception: "Atribución documentada analíticamente como múltiple, débil o ausente (Spicer VERIFIED; Doll cap.6 vía reseña VERIFIED); medida perceptiva controlada pendiente (GAP). Tónica ausente documentada ('Jane Says', 'I'll Be Around', 'Human')."
+  composition: "Puente compositivo pendiente de apoyo directo: sin acción justificada todavía; AMBIGUATE deliberado como técnica es pregunta abierta. La receta eliminada ('repartir indicios para crear ambigüedad') no retorna."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit de candidatos COMPLETED (2026-09-03): alcance pop/rock preservado sin generalizar; lógica 'no suficiente != no informativo' explicitada; Doll marcado como testimonio vía reseña con límite de intuición-vs-corpus; Capuzzo marcado solo-marco; receta de ambigüedad sigue excluida."

@@ -1,0 +1,36 @@
+id: CAND-HAR-005
+status: candidate
+compositional_problem: "Reforzar un centro ya plausible mediante duración, colocación métrica o colocación formal, sin confundir prominencia con función. Las tres son indicios separados con apoyo desigual."
+claim: "Duración, colocación métrica y colocación formal son tres indicios separados con mecanismos y apoyo desiguales, nunca un 'énfasis' genérico: (a) el acento duracional modula la interpretación entre centros candidatos en vamps (Spicer §12, analítico VERIFIED); (b) existe una tendencia citada —no medida en fuentes inspeccionadas— a oír como tónica la armonía métricamente fuerte (Temperley 2011 §2.4 citando primario no inspeccionado), y el metro desambigua loops idénticos (Doll cap.6 vía reseña); (c) la colocación formal confirma centros plausibles en pop (tónica reservada al coro; re-emergencia en coro; Spicer VERIFIED), con funciones formales clásicas (Caplin) como marco de otra tradición, no como apoyo pop. Longer = más estable, strong beat = tónica y phrase-final = tónica quedan NO JUSTIFICADOS como reglas. Límite de sección NO equivale automáticamente a atribución de tónica."
+structural_variable: "duration (cue-modulation) + metric placement (cited tendency) + formal placement (confirm device) — tracked separately"
+possible_action: ""
+expected_effect: "CONFIRM débil y situado de un centro ya plausible; prominencia sin garantía de centralidad. Sin dosis ni regla."
+evidence_class: HYPOTHESIS
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-030
+  - SRC-ACADEMIC-031
+  - SRC-ACADEMIC-026
+  - SRC-THEORETICAL-002
+context_dependencies:
+  - Centro previamente plausible (dependencia de CAND-HAR-001).
+  - Metro operativo fijado por el conjunto (dependencia cross-domain Rhythm).
+  - Función formal de la posición (inicio vs. cierre vs. retorno).
+counterproductive_conditions:
+  - Alargar o enfatizar posicionalmente una armonía competidora cuando se busca otro centro.
+  - Inferir función desde la ubicación sin convergencia de indicios.
+alternatives:
+  - Confirmar por moción dirigida o por bajo (CAND-HAR-002, RQ-HAR-002).
+uncertainty_confidence: "Baja-media y desigual por sub-indicio: (a) duración solo como modulador interpretativo entre candidatos (Spicer §12, analítico); sin curva dosis→centro. (b) métrica como tendencia citada sin texto primario (Temperley 2001 pp.262–263 no inspeccionado, acceso restringido; Stephenson pp.34–37 solo por cita inspeccionada, SRC-ACADEMIC-026 PARCIAL) más desambiguación en loops idénticos (Doll cap.6 vía reseña); NO elevar citas-vía-Temperley/Stephenson a evidencia auditiva directamente verificada. (c) formal como dispositivo de CONFIRM con mejor apoyo analítico pop (tónica emergente al coro, Spicer VERIFIED); Caplin (SRC-THEORETICAL-002, scope clásico instrumental) solo como marco de otra tradición, no como apoyo a colocación pop. possible_action permanece vacío."
+genre_sensitivity: "Media-alta: el peso formal varía entre forma clásica y forma seccional pop; la reserva de tónica al coro es recurso pop documentado (Spicer), no norma general."
+evaluation_falsification: "Manipulación aislada de cada sub-indicio (duración / metro / posición formal) con colección y bajo fijos que no modifique atribución lo delimitaría a contextos con competidores débiles."
+structure_perception_composition:
+  structure: "Duración de eventos; posición métrica de la armonía; posición formal (inicio/coro/retorno). Tres variables separadas."
+  perception: "(a) Acento duracional como factor de interpretación entre centros (analítico, Spicer §12). (b) Tendencia métrica citada sin medida en fuentes inspeccionadas; sin vínculo medido metro→tónica. (c) Sin medida de atribución por posición formal; apoyo analítico pop (emergencia al coro)."
+  composition: "Sin acción justificada todavía: coordinar como refuerzo separado por sub-indicio, nunca como prueba. CONFIRM/WEAKEN/AMBIGUATE usables como estados analíticos; ningún sub-indicio equivale a cierre o a estabilidad emocional."
+audit_recommendation: REVISE
+integration_readiness: NOT_READY
+verification_note: "Audit de candidatos COMPLETED (2026-09-03): tres indicios auditados por separado sin fusionar bajo 'énfasis'; referencia no citada P&K 1990 eliminada de la matriz; Caplin marcado como marco clásico sin transferencia pop automática; primario métrico (Temperley 2001) confirmado no inspeccionado; heterogeneidad preservada como HYPOTHESIS NOT_READY en vez de fingir un mecanismo único."

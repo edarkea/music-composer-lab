@@ -1,0 +1,37 @@
+id: CAND-HAR-006
+status: candidate
+compositional_problem: "Establecer un centro modal sin recurrir a sintaxis dominante-tónica."
+claim: "Un centro modal puede existir sin sintaxis dominante-tónica funcional: 'V–I no es universalmente necesario' es la formulación exacta y NO implica que la función dominante sea poco importante donde opera. Indicios recurrentes con apoyo separado por repertorio/tradición (ningún kit modal universal; cada sistema define sus marcadores): (a) pedal/drone y foco del bajo (Everett §10; Spicer §15; incluye contraejemplo 'Human' donde el pedal no fija centro); (b) aserción melódica con dirección propia sin tirón armónico (Everett §10, §20: centro por aserción métrica/melódica); (c) colección con grados característicos y catálogos de patrones modales (Biamonte por puntos inspeccionados, PARCIAL; Temperley shifts VERIFIED); (d) fórmulas de cierre propias de la tradición —♭VII–I retransicional, ♭VI–♭VII 'Sísifo' sin cadencia en tónica, cadencia eolia ♭VI–♭VII–i— (Spicer VERIFIED; Biamonte por cita). La ausencia de V–I no es carencia sino otro sistema de indicios; el modo no es tonalidad defectuosa."
+structural_variable: "separately-evidenced modal cues — (a) drone/pedal + bass focus; (b) melodic assertion; (c) characteristic scale degree + modal pattern; (d) repertoire-specific cadential formula; scope condition: avoidance of functional V–I that would retonalize"
+possible_action: "Al componer dentro de un contexto modal/pop apropiado, no hacer depender el centro de sintaxis V–I funcional: organizarlo con otros indicios contextuales recurrentes propios de la tradición (pedal/drone sobre la finalis, grado característico expuesto, fórmula de cierre del repertorio); comprobar por escucha si el centro modal se sostiene. Sin efectos perceptivos cuantificados asociados."
+expected_effect: "Centro modal interpretable (ESTABLISH/MAINTAIN) dentro de su tradición; fuera de ella, efecto incierto."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-030
+  - SRC-ACADEMIC-033
+  - SRC-CORPUS-007
+context_dependencies:
+  - Tradición modal o pop-modal con marcadores codificados.
+  - Enculturación del oyente en el vocabulario modal correspondiente.
+  - Coordinación melodía-armonía (futura RQ-HAR-009).
+counterproductive_conditions:
+  - Introducir V–I funcional (retonaliza el pasaje).
+  - Tratar el modo como tonalidad con piezas faltantes.
+alternatives:
+  - Centro tonal con confirmación funcional (CAND-HAR-001 + RQ-HAR-002).
+  - Ambigüedad deliberada entre centros modales vecinos (CAND-HAR-004).
+uncertainty_confidence: "Media-baja tendiendo a media como claim existencial (basta repertorio documentado, no medida): tres fuentes a texto completo inspeccionado (Everett, Spicer, Temperley) más catálogo Biamonte por puntos (PARCIAL) y Doll vía reseña (testimonio de segundo nivel). Sin medidas perceptivas de atribución modal en pop. SRC-THEORETICAL-011 queda STUB y deja de citarse. Métrica-aserción y colección-repetida como indicios modales independientes quedan sin apoyo directo separado y no se afirman."
+genre_sensitivity: "Muy alta: cada modo/sistema define sus marcadores (seis sistemas Everett); ningún kit modal universal; alcance pop/rock y prácticas modales relacionadas, no general."
+evaluation_falsification: "Tradición modal donde los grados característicos y el drone no contribuyan a la atribución de centro exigiría redefinir los marcadores por repertorio."
+structure_perception_composition:
+  structure: "Pedal/drone + colección modal con grado característico + fórmula de cierre propia; condición de alcance: sin V–I funcional retonalizante."
+  perception: "Atribución de centro modal documentada analíticamente (incluye centro por aserción en sistemas no funcionales, Everett §20 VERIFIED); medida experimental pendiente. Ningún efecto perceptivo cuantificado."
+  composition: "Hipótesis genre-aware con cautela de alcance: indicios disponibles en repertorio inspeccionado, efecto a verificar por escucha caso por caso."
+audit_recommendation: REVISE
+integration_readiness: STRONG_CANDIDATE
+verification_note: "Audit de candidatos COMPLETED (2026-09-03): alcance exacto fijado (V–I no necesario != dominante poco importante); indicios separados con procedencia por letra; receta prescriptiva sustituida por formulación estructural con ejemplos de repertorio; sin efectos perceptivos sin medida."

@@ -1,0 +1,39 @@
+id: CAND-HAR-001
+status: candidate
+compositional_problem: "Establecer un centro armónico reconocible al inicio o en una sección sin declarar la tónica por etiqueta."
+claim: "Múltiples indicios contextuales pueden contribuir a la atribución de centro; entre ellos, con apoyo separado y mecanismos distintos: (a) una colección diatónica compartida como marco de referencia; (b) la recurrencia de una armonía candidata dentro de ese marco. La evidencia revisada no justifica tratar ninguno de los dos indicios como regla context-universal ni individualmente suficiente; colección y recurrencia no tienen el mismo mecanismo ni el mismo peso evidencial."
+structural_variable: "multiple contextual cues, tracked separately — (a) diatonic collection as frame; (b) tonic-chord recurrence within frame"
+possible_action: ""
+expected_effect: "El contexto puede volverse interpretable alrededor de un centro (ESTABLISH); efecto parcial, revocable y no medido."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+  - CORPUS_ANALYSIS
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-009
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-030
+  - SRC-CORPUS-009
+context_dependencies:
+  - Oyentes enculturados occidentales.
+  - Ausencia de competidores fuertes documentada analíticamente (ver CAND-HAR-004); sin cuantificación.
+  - Convergencia con bajo y posición (ver CAND-HAR-002, CAND-HAR-005).
+counterproductive_conditions:
+  - Loop con dos centros igualmente apoyados (produce AMBIGUATE en vez de ESTABLISH).
+  - Colección cromática o con préstamo activo (cede a RQ-HAR-006).
+  - Tratar el acorde más frecuente o la mera repetición de una armonía como prueba suficiente de tónica (ver CAND-HAR-004).
+alternatives:
+  - Establecer por pedal/drone (CAND-HAR-006).
+  - Confirmar por moción dirigida V–I en práctica común (dependencia RQ-HAR-002).
+uncertainty_confidence: "Baja-media: convergencia analítica y perceptiva de laboratorio; sin curva de ponderación, sin dosis, sin medida de atribución en canciones. possible_action vaciado por decisión del Director hasta verificación de apoyo directo para el puente compositivo. Contrapeso obligatorio: Butler 1989 (SRC-ACADEMIC-035, abstract inspeccionado) critica que la jerarquía probe-tone describa el reconocimiento de centro; la tarea probe-tone mide goodness-of-fit tras contextos breves, no atribución de centro en canciones."
+genre_sensitivity: "Alta: en rock, jerarquías menos diferenciadas y supermodo (SRC-CORPUS-009, PARCIAL, solo conteos armónicos); la colección sola es indicio más débil que en práctica común."
+evaluation_falsification: "Medida de atribución donde colección/recurrencia no desplacen la interpretación de centro delimitaría el claim a repertorios con competidores débiles."
+structure_perception_composition:
+  structure: "(a) Una colección diatónica compartida enmarca el pasaje. (b) Una armonía candidata recurre dentro de ese marco."
+  perception: "(a) Colección: jerarquías probe-tone tras contextos breves de práctica común (SRC-ACADEMIC-009, VERIFIED; tarea goodness-of-fit, no atribución de centro) con contrapeso Butler 1989; distribución de supermodo en corpus rock (SRC-CORPUS-009, PARCIAL). (b) Recurrencia: atribución situada según acento, pedal, melodía y orden (Spicer §12, analítico, VERIFIED) más distribución escalar por sección (Temperley 2011, VERIFIED). Ninguna fuente mide atribución de centro por oyentes en canciones."
+  composition: "Puente compositivo pendiente de apoyo directo: sin acción justificada todavía."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "Audit de candidatos COMPLETED (2026-09-03): bundling colección/recurrencia corregido a formulación multi-indicio con apoyo separado; 'estable' desnudo eliminado del claim; contrapeso Butler registrado; possible_action sigue vacío." 

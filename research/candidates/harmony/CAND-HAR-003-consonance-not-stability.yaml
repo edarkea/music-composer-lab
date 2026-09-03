@@ -1,0 +1,33 @@
+id: CAND-HAR-003
+status: candidate
+compositional_problem: "Evitar decisiones falsas de estabilidad basadas en la sonoridad aislada del acorde."
+claim: "La consonancia sensorial y la estabilidad tonal-contextual son constructos no equivalentes y no deben sustituirse entre sí: un acorde consonante puede escucharse inestable según inversión/posición/función, y una función estable o direccional puede incluir disonancia sensorial. Esto demuestra no-equivalencia conceptual débil; NO demuestra independencia, irrelevancia mutua, oposición ni disociación experimental general. Ninguna decisión de centro debe tomarse desde la sonoridad aislada."
+structural_variable: "three separated constructs — (a) sensory/acoustic consonance; (b) tonal-hierarchical/contextual stability; (c) functional interpretation"
+possible_action: "Al evaluar si una armonía funciona como estable, no decidir solo desde su consonancia aislada: comprobar su rol en contexto (colección, función, bajo, posición). No orquestar 'estabilidad' solo con tríadas consonantes."
+expected_effect: "Evitar falsas reglas (consonante = estable); evaluar la estabilidad en su dimensión correcta."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-035
+  - SRC-ACADEMIC-024
+  - SRC-THEORETICAL-010
+  - SRC-THEORETICAL-005
+context_dependencies:
+  - Ninguna restrictiva: es cautela metodológica transversal a tradiciones.
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar explícitamente a qué dimensión de estabilidad se refiere (sensorial, jerárquica, funcional, formal) antes de decidir.
+uncertainty_confidence: "Media-baja: no-equivalencia débil apoyada a nivel analítico (tríada consonante en segunda inversión escuchada frágil, Spicer §7 VERIFIED; dominante funcional con 7ª/9ª/11ª sin leading tone clásico, soul-dominant §3 VERIFIED), a nivel de crítica experimental (Butler 1989: jerarquía probe-tone no describe reconocimiento de centro; posible artefacto de tarea; abstract inspeccionado, texto pendiente), y a nivel de sistema (pentatónica sin sintaxis consonancia/disonancia con centros por aserción, Everett §6 VERIFIED). Los casos disocian sonoridad y rol conceptualmente; no prueban independencia psicológica. Parncutt/TPS/GTTM solo-marco: Parncutt y TPS aportan existencia de marco psicoacústico/jerárquico distinto (sin contenido inspeccionado); GTTM aporta cierre jerárquico multidimensional en scope clásico, no disociación medida."
+genre_sensitivity: "Baja como cautela (aplica en todas las tradiciones); los correlatos concretos de cada faceta sí son genre-sensitive."
+evaluation_falsification: "Una correspondencia biunívoca demostrada entre rugosidad y atribución de centro a través de contextos y estilos refutaría el claim; no se conoce."
+structure_perception_composition:
+  structure: "Propiedades interválicas de la sonoridad aislada (inversión, extensiones, colección)."
+  perception: "La jerarquía probe-tone no describe el proceso de reconocimiento de centro (Butler 1989, abstract inspeccionado); casos analíticos disocian sonoridad y rol (Spicer §§3/7); centros por aserción sin sintaxis consonancia/disonancia (Everett §6)."
+  composition: "Heurística negativa justificada en la versión débil: declarar la faceta y no sustituir constructos. 'Ignorar la consonancia' queda rechazado como formulación: la rugosidad puede modular prominencia sin decidir el centro."
+audit_recommendation: REVISE
+integration_readiness: STRONG_CANDIDATE
+verification_note: "Audit de candidatos COMPLETED (2026-09-03): formulación fijada en no-equivalencia débil (sin independencia/oposición); tres constructos separados; possible_action suavizado de 'ignorar' a 'no decidir solo desde'; GTTM/Parncutt/TPS marcados como solo-marco."
