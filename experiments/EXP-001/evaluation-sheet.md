@@ -27,40 +27,41 @@ un trial una vez si no pudiste compararlo adecuadamente.
 ### Trial 1
 
 - Neutral ID: `Q7`
-- Score (1–4): ______
-- Repetición utilizada: sí / no
-- Nota breve opcional: ____________________________________
+- Score (1–4): 2
+- Repetición utilizada: sí
+- Nota breve opcional: me parece que al inicio pero termina diferente
 
 ### Trial 2
 
 - Neutral ID: `M4`
-- Score (1–4): ______
-- Repetición utilizada: sí / no
-- Nota breve opcional: ____________________________________
+- Score (1–4): 2
+- Repetición utilizada: no
+- Nota breve opcional: es como si fuera la misma melodía pero en triste
 
 ### Trial 3
 
 - Neutral ID: `J8`
-- Score (1–4): ______
-- Repetición utilizada: sí / no
-- Nota breve opcional: ____________________________________
+- Score (1–4): 3
+- Repetición utilizada: sí 
+- Nota breve opcional: es la misma pero con terminación mas arriba
 
 ### Trial 4
 
 - Neutral ID: `Z9`
-- Score (1–4): ______
-- Repetición utilizada: sí / no
-- Nota breve opcional: ____________________________________
+- Score (1–4): 4
+- Repetición utilizada: sí
+- Nota breve opcional: es la misma pero en diferente orden
 
 ### Trial 5
 
 - Neutral ID: `V3`
-- Score (1–4): ______
-- Repetición utilizada: sí / no
-- Nota breve opcional: ____________________________________
+- Score (1–4): 4
+- Repetición utilizada: sí
+- Nota breve opcional: es la misma solo que diferente ritmo
 
 ¿Qué rasgo o cambio influyó más en tus juicios de parentesco?
-
+El rasgo de las mismas notas pero diferente orden, me gustó mucho cuando
+en una melodía felíz la hizo triste, como que le da color a la melodía
 __________________________________________________________________
 
 __________________________________________________________________
