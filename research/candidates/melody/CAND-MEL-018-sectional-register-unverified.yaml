@@ -1,0 +1,25 @@
+id: CAND-MEL-018
+status: rejected
+compositional_problem: "Diferenciar secciones (p. ej., verso vs. coro) mediante registro melódico."
+claim: "RECHAZADO como claim: la afirmación de que los coros ocupan registro melódico más alto que los versos carece de evidencia sistemática suficiente (no se encontró corpus que mida altura o rango melódico por sección; solo saber práctico de oficio y un ejemplo pedagógico analizado). Se conserva este registro para preservar la historia de auditoría. NO reutilizar el ID CAND-MEL-018."
+structural_variable: "sectional register (registro por sección)"
+possible_action: ""
+expected_effect: ""
+evidence_class: GENRE OBSERVATION
+support_basis: []
+sources:
+  - SRC-PEDAGOGICAL-002
+audit_history:
+  - "SYNTHESIZED como GENRE OBSERVATION débil en RQ-MEL-003 (estrategia a verificar, no hecho)."
+  - "RECHAZADO en auditoría posterior: insufficient systematic evidence for the claim that choruses occupy a higher melodic register than verses. La pregunta subyacente se retiene como research gap explícito (futura pregunta de corpus), no como claim."
+research_gap_retained: "¿Ocupan los coros registro melódico más alto o rango distinto que los versos en pop/rock? Pregunta de corpus futuro; sin respuesta establecida."
+context_dependencies: []
+counterproductive_conditions: []
+alternatives: []
+uncertainty_confidence: "No aplica: claim rechazado."
+genre_sensitivity: ""
+evaluation_falsification: "No aplica: claim rechazado; un futuro corpus confirmatorio NO rehabilitaría este ID (no reutilizar CAND-MEL-018)."
+structure_perception_composition:
+  structure: ""
+  perception: ""
+  composition: ""

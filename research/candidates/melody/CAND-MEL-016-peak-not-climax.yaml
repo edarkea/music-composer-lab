@@ -1,0 +1,28 @@
+id: CAND-MEL-016
+status: candidate
+compositional_problem: "Colocar un punto alto para que funcione como momento culminante."
+claim: "El pitch más alto (peak) no equivale al clímax: en repertorio analizado estadísticamente, los picos operan junto a configuraciones rítmicas, armónicas y dinámicas específicas; un peak sin ese soporte ni preparación no tiene garantizada función culminante."
+structural_variable: "peak placement + supporting configuration (colocación del pico y su soporte)"
+possible_action: "When aiming for culmination, treat registral peak as one contributing dimension and coordinate it with rhythm, harmony, dynamics and formal position; do not rely on pitch height alone. (En español: al buscar culminación, tratar el pico registral como una dimensión contribuyente entre varias y coordinarlo con ritmo, armonía, dinámica y posición formal; no confiar solo en la altura.)"
+expected_effect: "El punto alto se presenta junto a las dimensiones con las que covaría en repertorio; que funcione como clímax queda sujeto a escucha y contexto formal, sin causalidad demostrada."
+evidence_class: HYPOTHESIS
+support_basis:
+  - CORPUS_ANALYSIS
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-016
+context_dependencies:
+  - Repertorio clásico-romántico analizado; configuraciones específicas por estilo.
+  - Posición formal (mismo pitch culmina o no según dónde cae).
+counterproductive_conditions:
+  - Multiplicar high points hasta neutralizar su saliencia (hipótesis sin medir).
+  - Colocar el máximo absoluto al inicio sin plan de crecimiento posterior.
+alternatives:
+  - Clímax por otros parámetros sin peak melódico (densidad, armonía, dinámica; cross-domain).
+uncertainty_confidence: "Baja-media: lo verificado de Eitan 1997 es la descripción amplia (configuraciones rítmicas, melódicas, armónicas y dinámicas de picos en Haydn/Chopin/Berg); cualquier afirmación específica más allá de eso permanece PARTIAL (texto primario no inspeccionado). Sin medidas perceptivas; transferencia compositiva, inferencia."
+genre_sensitivity: "Alta: configuraciones de pico específicas de tradición; no transferir recetas."
+evaluation_falsification: "Picos sin soporte que funcionen sistemáticamente como clímax percibidos, o picos con soporte que sistemáticamente no culminen, obligarían a reformular."
+structure_perception_composition:
+  structure: "Pitch máximo local + configuraciones rítmicas/armónicas/dinámicas asociadas."
+  perception: "Sin medida de clímax percibido; peak y clímax separados analíticamente."
+  composition: "Heurística débil de repertorio: el pico como dimensión contribuyente coordinada con otras; Eitan no demuestra causalidad de preparar o soportar picos (ver uncertainty). No asumir altura = culminación."

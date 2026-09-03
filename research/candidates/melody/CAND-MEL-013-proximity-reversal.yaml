@@ -1,0 +1,32 @@
+id: CAND-MEL-013
+status: candidate
+compositional_problem: "Elegir si la melodía sube o baja en el siguiente paso, especialmente tras un salto."
+claim: "A nivel local tono-a-tono, dos resultados coexisten sin reducirse el uno al otro. (a) EXPECTATIVA PERCEPTIVA: los oyentes juzgan aceptables las continuaciones próximas al último tono y, tras un salto, la reversión con relleno del hueco (modelo I-R simplificado a proximidad + reversión). (b) EXPLICACIÓN CORPUS/TESITURA: en repertorios vocales muestreados de cuatro continentes, esos mismos patrones (gap-fill, registral direction, registral return) aparecen como efectos secundarios de restricciones de tesitura. Por tanto, gap-fill/reversión NO se afirma como ley cognitiva universal: es una expectativa medida en ciertos contextos y, a la vez, un patrón distribucional explicable por tesitura."
+structural_variable: "next pitch direction and size (dirección y tamaño del paso siguiente)"
+possible_action: "Tras un salto, considerar reversión con paso cercano (gap-fill) cuando se busca una continuación local aceptable; tras paso pequeño, continuar por proximidad."
+expected_effect: "Continuación local congruente con la expectativa medida; sin garantía de función de frase."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-EMPIRICAL-003
+  - SRC-EMPIRICAL-005
+  - SRC-EMPIRICAL-006
+  - SRC-THEORETICAL-004
+context_dependencies:
+  - Nivel local tono-a-tono; estilos folk medidos y Lieder para la expectativa; melodías vocales de cuatro continentes para la tesitura.
+  - Las dos lecturas (expectativa vs. tesitura) pueden coexistir; ninguna queda refutada por la otra en lo incorporado.
+counterproductive_conditions:
+  - Usar proximidad/reversión como receta de frase completa o de cierre formal.
+  - Contextos donde la sorpresa deliberada es el objetivo.
+alternatives:
+  - Continuar la dirección tras salto pequeño (también aceptable localmente).
+uncertainty_confidence: "Media: expectativa medida (Schellenberg 1996) y simplificación en dos factores con record primario (Schellenberg 1997); explicación por tesitura con record primario (von Hippel & Huron 2000, abstract editorial). Textos completos no inspeccionados; transferencia a composición, inferencia."
+genre_sensitivity: "Consistencia medida entre folk británica/china y Webern sugiere cierta robustez, sin afirmar universalidad."
+evaluation_falsification: "Continuaciones por proximidad/reversión juzgadas sistemáticamente como malas continuaciones locales refutarían el núcleo; la extensión a función formal ya está excluida del claim."
+structure_perception_composition:
+  structure: "Intervalo implicativo + tono siguiente (tamaño y dirección); posición del salto dentro de la tesitura."
+  perception: "Proximidad y reversión predicen juicios de 'buena continuación' local (expectativa)."
+  composition: "Heurística local disponible; no confundir aceptabilidad local con función de frase ni con ley universal (lectura por tesitura disponible)."

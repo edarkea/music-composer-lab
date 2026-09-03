@@ -1,0 +1,26 @@
+id: CAND-MEL-015
+status: candidate
+compositional_problem: "Evitar tratar el arco (u otro tipo) como norma obligatoria de frase completa."
+claim: "El predominio del arco es un hecho distribucional en folksongs occidentales, no una norma perceptiva ni funcional. Como cautela metodológica (preprint): The analyzed corpora do not support natural clustering into a small set of discrete contour types. Usar el arco como forma disponible, nunca como requisito."
+structural_variable: "global shape (forma global: arco, etc.)"
+possible_action: ""
+expected_effect: "Se evita una falsa regla; el arco queda como opción con precedente distribucional."
+evidence_class: HYPOTHESIS
+support_basis:
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-CORPUS-001
+  - SRC-CORPUS-002
+context_dependencies:
+  - Repertorio folk occidental para la distribución; cautela preprint para la continuidad.
+counterproductive_conditions:
+  - Usar este claim para prohibir arcos (también sería normativo sin base).
+alternatives:
+  - Elegir forma global por preferencia artística explícita.
+uncertainty_confidence: "Media-baja: distribución del arco verificada (Huron 1996); cautela sobre clustering con record primario de preprint (Cornelissen et al. 2026, arXiv). Estatus perceptivo: NOT ESTABLISHED por esa fuente —el preprint analiza agrupamiento en corpus, no percepción—. Por eso possible_action queda vacío."
+genre_sensitivity: "Alta: distribuciones distintas por repertorio; no transferir frecuencias."
+evaluation_falsification: "Evidencia de agrupamiento natural robusto en tipos discretos en corpus comparables matizaría la cautela; un corpus donde el arco no predomine limitaría el alcance distribucional. Ninguna de las dos fuentes establece ni refuta realidad psicológica de los tipos."
+structure_perception_composition:
+  structure: "Forma global inicial-media-final (p. ej., arco)."
+  perception: "Estatus perceptivo NOT ESTABLISHED por estas fuentes (distribución en corpus, no medidas en oyentes)."
+  composition: "Cautela metodológica, no técnica compositiva: el arco es opción, no norma."

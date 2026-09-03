@@ -1,0 +1,32 @@
+id: CAND-MEL-017
+status: candidate
+compositional_problem: "Dar forma al final de frase para que cierre (o quede abierto deliberadamente)."
+claim: "Current evidence does not justify treating surface descent as a necessary or sufficient condition for closure. (En español: la evidencia actual no justifica tratar el descenso de superficie como condición necesaria ni suficiente del cierre.) El cierre es jerárquico y multidimensional (armonía, métrica, posición); los ascensos terminales existen como recurso, pero su función abierta concreta no está medida en lo incorporado."
+structural_variable: "ending trajectory + supporting context (trayectoria final y contexto)"
+possible_action: "Coordinate ending trajectory with harmony, timing/meter and formal position; do not prescribe descent by default. (En español: coordinar la trayectoria del final con armonía, timing/métrica y posición formal; no prescribir el descenso por defecto.)"
+expected_effect: "Final evaluable por escucha en varias dimensiones a la vez; sin prescripción de dirección."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-THEORETICAL-005
+  - SRC-THEORETICAL-003
+  - SRC-EMPIRICAL-004
+context_dependencies:
+  - Marco armónico que resuelva o no (cross-domain; RQ-MEL-007).
+  - Posición métrica y formal del final.
+  - Tradición (el fondo descendente schenkeriano no prescribe superficie).
+counterproductive_conditions:
+  - Descender sobre armonía irresuelta esperando cierre.
+  - Cerrar siempre descendiendo por hábito (predictibilidad).
+alternatives:
+  - Cierre por repetición/asentamiento sin descenso (hipótesis, no medida).
+  - Explorar finales no descendentes como recurso abierto posible (hipótesis, no prescrito por las fuentes).
+uncertainty_confidence: "Media-baja: convergencia teórica + aditividad medida; sin medida directa de cierre desde contorno."
+genre_sensitivity: "Media: el descenso final es frecuente en varias tradiciones, pero su necesidad no está establecida en ninguna."
+evaluation_falsification: "Finales descendentes con soporte que sistemáticamente no cierren, o no-descendentes que cierren igual de fuerte en igualdad de contexto, matizarían el claim (ya contempla ambas)."
+structure_perception_composition:
+  structure: "Trayectoria del final + armonía + métrica + posición."
+  perception: "Pitch y tiempo contribuyen aditivamente al juicio de frase; cierre desde contorno solo, sin medir."
+  composition: "Heurística justificada: coordinar dimensiones para cerrar; no reglar descensos."
