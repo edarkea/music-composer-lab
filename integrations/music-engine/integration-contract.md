@@ -73,7 +73,7 @@ The strict V2 codec accepts exactly these root fields:
 | `tempo` | yes | positive BPM number accepted by `Tempo` |
 | `time_signature` | yes | numerator/denominator object or accepted codec form; positive conventional values |
 | `tonic` | yes | non-empty string; metadata, not automatic note generation |
-| `mode` | yes | non-empty string |
+| `mode` | yes | one of `ionian`, `dorian`, `phrygian`, `lydian`, `mixolydian`, `aeolian`, or `locrian` in the verified runtime |
 | `style` | yes | non-empty string; descriptive metadata |
 | `arrangement` | yes | object containing `sections` and `harmony_assignments` arrays |
 | `tracks` | yes | array of typed track objects; track IDs must be unique |
@@ -82,6 +82,18 @@ Sections have `id`, `start_bar` (integer >=1), `bar_count` (integer >=1), and
 `energy` (numeric range enforced by the model/schema). Harmony assignments have
 `harmony` and either a `section_id` or explicit `start_bar`/`bar_count` range.
 Energy and harmony are metadata and do not compose notes.
+
+### Verified mode behavior
+
+En el runtime local verificado de `music-engine` 4.0.0, los valores aceptados
+para `mode` son `ionian`, `dorian`, `phrygian`, `lydian`, `mixolydian`,
+`aeolian` y `locrian`. En este runtime, `ionian` debe utilizarse para representar
+el modo mayor diatónico. Los ejemplos anteriores que utilizan `mode: major` no
+reflejan el comportamiento observado y deben leerse como corregidos a
+`mode: ionian` cuando se ejecuten con este runtime. La validación del
+runtime/codec tiene prioridad sobre los ejemplos documentales. Esta observación
+proviene del smoke test local y no debe extenderse a otras versiones de
+`music-engine` sin verificación independiente.
 
 ## Tracks and events
 
@@ -199,7 +211,7 @@ name: drum_test
 tempo: 120
 time_signature: 4/4
 tonic: C
-mode: major
+mode: ionian
 style: test
 arrangement:
   sections: [{id: main, start_bar: 1, bar_count: 1, energy: 0.5}]
@@ -339,7 +351,7 @@ name: lab_minimal
 tempo: 120
 time_signature: 4/4
 tonic: C
-mode: major
+mode: ionian
 style: experiment
 arrangement:
   sections: [{id: main, start_bar: 1, bar_count: 1, energy: 0.5}]

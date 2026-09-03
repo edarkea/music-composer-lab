@@ -5,4 +5,5 @@ music_engine:
 
 runtime:
   wheel_filename: "music_engine-4.0.0-py3-none-any.whl"
+  wheel_sha256: "110E987A1E102C1CF3D29FEC1CCC68583459030F40748E10D66CE1F8E4819FE1"
   install_method: "local-wheel"

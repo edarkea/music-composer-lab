@@ -1,2 +1,4 @@
 .vendor/
 .venv/
+
+integrations/music-engine/smoke-test/*.mid
