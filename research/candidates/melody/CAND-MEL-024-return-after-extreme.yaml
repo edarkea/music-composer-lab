@@ -1,0 +1,31 @@
+id: CAND-MEL-024
+status: candidate
+compositional_problem: "Decidir qué hacer tras un extremo registral (volver, quedarse, seguir)."
+claim: "Within a bounded tessitura, pitches near registral extremes have constrained continuation possibilities, and some observed post-leap reversal can be explained statistically by those tessitura limits rather than by an independent universal cognitive rule. (En español: dentro de una tesitura acotada, los pitches cercanos a extremos registrales tienen posibilidades de continuación restringidas, y parte de la reversión post-salto observada se explica estadísticamente por esos límites de tesitura antes que por una regla cognitiva universal independiente.) Se separan: STRUCTURAL/CORPUS (la tesitura acotada presiona estadísticamente hacia movimiento interior cerca de extremos); PERCEPTION (existen expectativas de reversión medidas, pero su interpretación es mixta: expectacional vs. tesitura); COMPOSITION (el movimiento interior tras un extremo puede considerarse como una opción local entre otras; no es obligatorio). Cf. CAND-MEL-013."
+structural_variable: "post-extreme trajectory (trayectoria tras extremo)"
+possible_action: "Tras un extremo, considerar el movimiento interior como una opción local (no por defecto normativo); sopesarlo junto a sostener o escalar según armonía y forma."
+expected_effect: "Continuación compatible con distribuciones y expectativa local; sin valor marcado asumido."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-EMPIRICAL-006
+  - SRC-EMPIRICAL-003
+context_dependencies:
+  - Proximidad del extremo al límite de tesitura (a más extremo, más retorno esperado).
+  - Función formal (cierre parcial vs. escalada hacia clímax).
+counterproductive_conditions:
+  - Tratar el retorno como ley cognitiva (convive con lectura por tesitura; cf. CAND-MEL-013).
+  - Asumir que las desviaciones del retorno se perciben como marcadas (no medido).
+alternatives:
+  - Sostener el extremo (tensión por coste; hipótesis).
+  - Escalar más allá (clímax por expansión; sin medida).
+  - Movimiento interior como opción local (este claim).
+uncertainty_confidence: "Baja-media: distribucional + expectativa local convergentes; sin medida de retorno a escala de frase/sección. Nota de redundancia (para revisión del director, sin fusión): tras esta corrección, CAND-MEL-024 se solapa parcialmente con CAND-MEL-013 (reversión post-salto: expectativa vs. tesitura); 024 aporta el encuadre de continuación restringida cerca de extremos y la opción compositiva local, 013 el núcleo expectativa/distribución tono-a-tono."
+genre_sensitivity: "Repertorios vocales muestreados en cuatro continentes para tesitura; prudencia fuera de ellos."
+evaluation_falsification: "Distribuciones donde los extremos no presionen hacia movimiento interior, o expectativas de reversión ausentes en igualdad de condiciones, matizarían el claim; ninguna opción compositiva queda prescrita."
+structure_perception_composition:
+  structure: "Extremo + posibilidades de continuación restringidas por tesitura acotada."
+  perception: "Reversión esperada localmente con interpretación mixta (expectativa vs. tesitura)."
+  composition: "Movimiento interior como una opción local, no obligatorio; coordinar con forma."

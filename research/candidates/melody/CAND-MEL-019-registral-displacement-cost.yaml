@@ -1,0 +1,34 @@
+id: CAND-MEL-019
+status: candidate
+compositional_problem: "Trasladar una idea conocida a otro registro (p. ej., subir el motivo en la repetición) sin romper su función."
+claim: "STRUCTURE: la transposición exacta y constante conserva las relaciones internas de pitch de la idea. PHYSICAL: la nueva tesitura puede cambiar la ejecutabilidad o el esfuerzo vocal/instrumental (nivel genérico inspeccionado; límites concretos sin inspeccionar). TIMBRE: los distintos registros pueden alterar la realización espectral/tímbrica (nivel genérico inspeccionado; sin medidas incorporadas). PERCEPTION: no se asumen efectos sobre prominencia, identidad, energía o color más allá de la evidencia inspeccionada. EXP-001 B fue transposición exacta de +2 semitonos y solo apoya parentesco provisional bajo transposición exacta pequeña; NO es evidencia de desplazamiento de octava, cambios amplios de tesitura, esfuerzo vocal, cambio tímbrico ni función seccional. Cf. CAND-MEL-001 para identidad bajo transposición."
+structural_variable: "registral displacement (transposición de material conocido)"
+possible_action: "Al desplazar por transposición exacta pequeña, comprobar tesitura resultante además del parentesco; para desplazamientos amplios, cambios de octava o reasignación vocal/instrumental no hay apoyo incorporado: tratarlos como hipótesis sin medir, no como extensión de este claim."
+expected_effect: "Parentesco provisional bajo transposición exacta pequeña; cualquier efecto físico, tímbrico o formal queda sujeto a comprobación y no se deriva de EXP-001 B."
+evidence_class: HYPOTHESIS
+support_basis:
+  - PROJECT_EXPERIMENT
+  - EXTERNAL_EMPIRICAL
+  - COMPOSITION_PEDAGOGY
+sources:
+  - SRC-EMPIRICAL-006
+  - SRC-ACADEMIC-017
+project_evidence: "EXP-001, condición B (experiments/EXP-001.md): transposición exacta +2 semitonos; juicio 3/4 en una realización, un evaluador, una melodía. Dato exploratorio, no generalizable; causas no separadas."
+context_dependencies:
+  - Voz/instrumento concreto y su tesitura cómoda.
+  - Distancia del desplazamiento y marco tonal resultante.
+  - Función formal del momento (repetición interna vs. cambio de sección).
+counterproductive_conditions:
+  - Desplazar a tesitura inhabitable o a registro donde el timbre contradice la función (cautela física genérica).
+  - Extender EXP-001 B a desplazamiento de octava, esfuerzo vocal, cambio tímbrico o función seccional (usos no apoyados).
+  - Desplazar esperando máxima identidad (B=3, no 4).
+alternatives:
+  - Repetición literal en el mismo registro.
+  - Cambio de color por otros parámetros sin desplazar (timbre, dinámica; cross-domain).
+uncertainty_confidence: "Baja-media: un dato propio (n=1, transposición exacta +2 st) + física vocal genérica + tesitura distribucional; sin curva dosis-respuesta. Fuentes PARTIAL (SRC-ACADEMIC-017) solo sostienen este claim en el nivel genérico ya inspeccionado; antes de futura promoción a manual deben verificarse los pasajes primarios pertinentes."
+genre_sensitivity: "La tesitura cómoda depende de voz/género/estilo; el principio (comprobar tesitura) transfiere, los límites no."
+evaluation_falsification: "Parentescos máximos sistemáticos tras transposición exacta pequeña refutarían la penalización provisional; nada en este claim se pronuncia sobre desplazamientos amplios, esfuerzo o timbre (fuera de alcance)."
+structure_perception_composition:
+  structure: "Transposición exacta y constante: mismas relaciones internas de pitch en otra zona absoluta."
+  perception: "Parentesco provisional (3/4, n=1, EXP-001 B); sin efectos asumidos sobre prominencia, identidad plena, energía o color."
+  composition: "Comprobar tesitura resultante; lo físico y lo tímbrico como cautelas genéricas, no como efectos establecidos. Cf. CAND-MEL-001."

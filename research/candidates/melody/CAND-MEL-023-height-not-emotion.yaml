@@ -1,0 +1,26 @@
+id: CAND-MEL-023
+status: candidate
+compositional_problem: "Evitar decidir emociones o energía solo por altura ('subir para emocionar')."
+claim: "The available evidence does not justify a simple, one-to-one, context-independent mapping from pitch height to energy or emotion. (En español: la evidencia disponible no justifica un mapeo simple, uno-a-uno e independiente del contexto entre altura de pitch y energía o emoción.) Lo medido (Ilie & Thompson 2006): la intensidad elevada se juzgó más agradable, energética y tensa; la altura tuvo efectos opuestos en valencia según dominio (habla aguda pero música grave → mayor agrado); efectos interactivos entre altura, intensidad y tempo; energía y tensión como dimensiones separadas. No usar 'alto = energético/tenso/brillante' como regla. Nada de esto se traslada a función formal."
+structural_variable: "pitch height in combination (altura en combinación con intensidad/tempo)"
+possible_action: ""
+expected_effect: "Se evita una falsa regla; las decisiones afectivas se toman con combinaciones y se comprueban por escucha."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-EMPIRICAL-007
+context_dependencies:
+  - Manipulaciones globales de extractos; oyentes occidentales.
+  - Distinción energía vs. tensión (misma fuente).
+counterproductive_conditions:
+  - Usar este claim para negar cualquier papel afectivo de la altura (también sería absoluto sin base).
+alternatives:
+  - Fijar asociaciones afectivas por preferencia artística explícita (entonces ARTISTIC PREFERENCE).
+uncertainty_confidence: "Media-baja: efectos principales e interacciones medidos (Ilie & Thompson 2006); transferencia a composición de canciones, inferencia. Por eso possible_action queda vacío."
+genre_sensitivity: "Asociaciones semánticas (brillante/oscuro) probablemente convencionales por tradición; sin datos transculturales aquí."
+evaluation_falsification: "Mapeos altura→afecto estables, monótonos e independientes de intensidad/tempo/dominio, replicados, refutarían el núcleo interactivo."
+structure_perception_composition:
+  structure: "Altura × intensidad × tempo en extractos."
+  perception: "Efectos interactivos y dependientes de dominio sobre valencia/energía/tensión (ratings de afecto, no de función formal)."
+  composition: "Heurística negativa/cautelar: no prescribir afecto por altura; componer combinaciones y escuchar."

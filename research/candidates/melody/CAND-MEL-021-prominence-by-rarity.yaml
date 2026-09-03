@@ -1,0 +1,31 @@
+id: CAND-MEL-021
+status: candidate
+compositional_problem: "Hacer que un momento destaque sin depender solo de subir más."
+claim: "Principio negativo que se mantiene: la altura absoluta de pitch por sí sola no determina la prominencia. En positivo, solo formulación débil: relative extremity and contextual configuration may contribute to prominence together with rhythm, dynamics, harmony and formal position (la extremidad relativa y la configuración contextual pueden contribuir a la prominencia junto con ritmo, dinámica, armonía y posición formal). La segregación auditiva por separación registral (streaming, Bregman) y la prominencia melódica son constructos distintos: lo inspeccionado de Bregman no mide prominencia y no se usa como evidencia directa de ella."
+structural_variable: "contextual rarity + supporting configuration (rareza en marco y soporte)"
+possible_action: "Construir prominencia combinando posición registral relativa con duración, acento y soporte; evitar subir por subir cuando el marco ya ocupa esa zona (heurística débil, sin causalidad demostrada)."
+expected_effect: "El evento puede resultar saliente por configuración; evaluable por escucha, sin garantía."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+  - CORPUS_ANALYSIS
+sources:
+  - SRC-ACADEMIC-018
+  - SRC-ACADEMIC-016
+  - SRC-EMPIRICAL-007
+context_dependencies:
+  - Marco registral establecido (tesitura de la unidad) y densidad/textura simultánea.
+  - Tempo y timbre (modulan segregación).
+counterproductive_conditions:
+  - Evento alto dentro de tesitura ya ocupada y sin soporte (no destaca).
+  - Separación registral que rompe continuidad cuando se buscaba legar línea (fission no deseada).
+alternatives:
+  - Prominencia por otros parámetros sin mover registro (timbre, dinámica, silencio previo; cross-domain).
+uncertainty_confidence: "Baja-media: marcos convergentes sin medida directa de prominencia por altura en canciones. Mapeo de soportes: SRC-ACADEMIC-018 (Bregman) solo como marco general de segregación vía THEORETICAL_SCHOLARSHIP —streaming ≠ prominencia—; SRC-ACADEMIC-016 (picos con configuración) vía CORPUS_ANALYSIS/REPERTOIRE_ANALYSIS; SRC-EMPIRICAL-007 (interactividad de atributos) vía EXTERNAL_EMPIRICAL. Fuente PARTIAL (018) solo sostiene este claim en el nivel ya inspeccionado; pasajes primarios pendientes antes de futura promoción a manual."
+genre_sensitivity: "La configuración de prominencia probablemente varía por tradición; el principio (rareza + soporte) se formula general e hipotético."
+evaluation_falsification: "Alturas absolutas que destaquen sistemáticamente con independencia de contexto y configuración refutarían el núcleo; harían falta medidas aislando altura."
+structure_perception_composition:
+  structure: "Evento en posición registral relativa + duración/acento/soporte."
+  perception: "Saliencia por configuración contextual (marcos); altura sola sin medida; streaming auditivo y prominencia melódica, constructos distintos."
+  composition: "Heurística débil: la extremidad relativa y la configuración pueden contribuir junto a ritmo, dinámica, armonía y posición formal; no confiar en la altura absoluta."

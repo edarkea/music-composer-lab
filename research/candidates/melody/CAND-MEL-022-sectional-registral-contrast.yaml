@@ -1,0 +1,31 @@
+id: CAND-MEL-022
+status: candidate
+compositional_problem: "Diferenciar secciones (verso→coro y análogos) con el registro como un marcador entre varios."
+claim: "In pop/rock sectional writing, registral change can be used as one of multiple coordinated markers of sectional contrast or increase. (En español: en escritura seccional pop/rock, el cambio registral puede usarse como uno de varios marcadores coordinados de contraste o incremento seccional.) Su eficacia depende del haz de marcadores (dinámica, textura/densidad, ritmo armónico, letra), no del registro solo; debe comprobarse por escucha y repertorio. NO afirma que los coros sean sistemáticamente más altos, ni que la elevación registral por sí sola cree energía, ni que esto sea un hecho poblacional de género. CAND-MEL-018 permanece rechazado."
+structural_variable: "sectional register shift + marker bundle (cambio registral y haz de marcadores)"
+possible_action: "Probar elevación/ampliación registral entre secciones junto a otros marcadores (dinámica, capas, densidad); si el contraste no aparece, revisar el haz completo antes de subir más."
+expected_effect: "Contraste seccional cuando el haz funciona en conjunto; evaluable por escucha."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+sources:
+  - SRC-THEORETICAL-008
+  - SRC-PEDAGOGICAL-004
+context_dependencies:
+  - Pop/rock con forma verso-coro (o análoga); pre-coro como ganancia de energía disponible.
+  - Tesitura vocal practicable; dejar espacio de crecimiento desde el verso.
+counterproductive_conditions:
+  - Subir el registro sin coordinar con otros marcadores (contraste débil).
+  - Agotar el registro en el verso (observación de oficio, no medida).
+  - Leer la estrategia como hecho ("los coros son más altos").
+alternatives:
+  - Contraste por instrumentación, densidad, ritmo armónico o dinámica sin cambio registral.
+  - Contraste por otros parámetros melódicos (densidad rítmica, rango sin elevación).
+uncertainty_confidence: "Baja-media: descripción analítica convergente (Summach, OMT) sin corpus ni medidas; estrategia, no hecho. Fuente PARTIAL (SRC-THEORETICAL-008: cita de la disertación vía OMT, sin inspección primaria) solo sostiene este claim en el nivel ya inspeccionado; pasajes primarios pendientes antes de futura promoción a manual."
+genre_sensitivity: "Pop/rock verso-coro; no transferir como principio general."
+evaluation_falsification: "Un corpus que mida registro por sección y no encuentre elevación sistemática debilitaría la base descriptiva (ya previsto); la estrategia como opción sobreviviría salvo que se muestre ineficaz el haz completo."
+structure_perception_composition:
+  structure: "Cambio registral en límite formal + dinámica/textura/densidad."
+  perception: "Sin medida seccional; energía seccional descrita analíticamente."
+  composition: "Heurística de género: contrastar con el haz, comprobar por escucha; no elevar a hecho."

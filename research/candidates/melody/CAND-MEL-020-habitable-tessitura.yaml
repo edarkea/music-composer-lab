@@ -1,0 +1,29 @@
+id: CAND-MEL-020
+status: candidate
+compositional_problem: "Escribir melodías cantables/ejecutables sin sacrificar ambición registral."
+claim: "Distinguir rango nominal de tesitura habitable: el material sostenido debe situarse en zona cómoda de la voz/instrumento (restricción física genérica inspeccionada). Tratar los extremos como eventos marcados con importancia formal es una HYPOTHESIS provisional separada: no se infiere del coste físico ni de la rareza por sí solos. Se separan: (a) restricción física (tesitura habitable), (b) prominencia perceptiva (no medida aquí), (c) importancia formal/compositiva (no establecida)."
+structural_variable: "tessitura + extremes (concentración y extremos exigidos)"
+possible_action: "Situar la concentración del material en tesitura cómoda; usar extremos de forma puntual (la idea de que lo puntual equivale a 'marcado' es provisional, no demostrada)."
+expected_effect: "Ejecutabilidad sin fatiga ni quiebres de registro no deseados; ningún efecto formal se deriva de lo físico por sí solo."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - COMPOSITION_PEDAGOGY
+sources:
+  - SRC-ACADEMIC-017
+  - SRC-PEDAGOGICAL-003
+context_dependencies:
+  - Voz/instrumento concreto, estilo (clásico vs. pop/belt/falsete) y duración de la exigencia.
+  - Los límites concretos varían por intérprete; comprobar con la voz/instrumento real.
+counterproductive_conditions:
+  - Aplicar límites de manual clásico a estilos con técnica distinta (belt, falsete pop) sin ajuste.
+  - Convertir la cautela física en estética ("nunca salir del centro").
+alternatives:
+  - Repartir extremos entre voces/capas (cross-domain: arreglo).
+  - Transportar la pieza (desplazamiento global).
+uncertainty_confidence: "Media como heurística física genérica (rangos finitos, registros, esfuerzo creciente); límites concretos sin inspeccionar, siempre provisionales. Fuentes PARTIAL (SRC-ACADEMIC-017, SRC-PEDAGOGICAL-003) solo sostienen este claim en el nivel genérico ya inspeccionado; antes de futura promoción a manual deben inspeccionarse los pasajes primarios pertinentes."
+genre_sensitivity: "Alta en los números (cada tradición/voz tiene los suyos); el principio (tesitura vs. rango) transfiere."
+evaluation_falsification: "Intérpretes que sostengan tesituras extremas sin coste de forma replicable matizarían la cautela física para esos casos; la parte de 'eventos marcados' es HYPOTHESIS separada y no queda refutada ni confirmada por datos físicos."
+structure_perception_composition:
+  structure: "Distribución de alturas: concentración vs. extremos."
+  perception: "Sin medida (nivel físico, no perceptivo); prominencia e importancia formal, no establecidas aquí."
+  composition: "Heurística física: habitar el centro; lo puntual-extremo como importancia formal es provisional; comprobar con el intérprete."
