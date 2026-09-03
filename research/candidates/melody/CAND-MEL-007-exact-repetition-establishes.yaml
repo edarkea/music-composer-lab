@@ -1,0 +1,33 @@
+id: CAND-MEL-007
+status: candidate
+compositional_problem: "Hacer que una idea melódica nueva exista para el oyente antes de desarrollarla."
+claim: "La repetición exacta o inmediata del motivo al presentarlo puede usarse para establecer o reforzar una idea antes de variarla: las repeticiones son detectadas por oyentes y la repetición insertada se asoció a mayor agrado en música no familiar. Que esa repetición genere reconocimiento o identidad melódica en sentido estricto, o expectativa de retorno, es una extensión teórica no medida por esas fuentes."
+structural_variable: "repetition (repetición exacta/inmediata en la presentación)"
+possible_action: "Enunciar el motivo y repetirlo (literal o con ajuste mínimo) como una forma disponible de establecerlo antes de introducir variaciones o desarrollo; no es un paso previo obligatorio."
+expected_effect: "El motivo queda expuesto como material recurrente; que se registre como idea con identidad queda sujeto a escucha."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - COMPOSITION_PEDAGOGY
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-EMPIRICAL-001
+  - SRC-EMPIRICAL-002
+  - SRC-PEDAGOGICAL-001
+  - SRC-ACADEMIC-012
+context_dependencies:
+  - Primera presentación o restatement tras exposición inicial.
+  - Familiaridad del oyente con el estilo (en música no familiar la repetición ayuda más).
+counterproductive_conditions:
+  - Repetición mecánica prolongada sin función formal ni cambio en otros parámetros.
+  - Contextos donde la novedad inmediata es el objetivo (sorpresa deliberada).
+alternatives:
+  - Statement–response (variar ya el final; cf. CAND-MEL-008).
+  - Presentar por fragmentación acumulativa (hipótesis sin apoyo incorporado).
+uncertainty_confidence: "Media: convergencia pedagogía + percepción (detección, agrado); sin números de cuántas repeticiones."
+genre_sensitivity: "Baja dentro del scope para el principio; la dosis aceptable varía por tradición (loop-based tolera más)."
+evaluation_falsification: "Oyentes que no registren como idea un motivo repetido literalmente en presentación, de forma replicable, debilitarían el claim."
+structure_perception_composition:
+  structure: "Reaparición idéntica o casi idéntica del motivo en la presentación."
+  perception: "Margulis 2012 midió detección de repeticiones (pulsar al detectar), no reconocimiento ni identidad; Margulis 2013 midió agrado/interés/artisticidad, no identidad; el registro atencional cambia con exposiciones. La expectativa de retorno es extensión teórica (Huron, marco parcial de expectativa), no medida en estas fuentes."
+  composition: "Heurística justificada en forma débil: la repetición exacta/inmediata puede usarse para establecer o reforzar antes de variar; comprobar por escucha."

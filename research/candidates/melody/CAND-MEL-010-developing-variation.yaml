@@ -1,0 +1,29 @@
+id: CAND-MEL-010
+status: candidate
+compositional_problem: "Generar material nuevo que siga sonando coherente con lo ya establecido (desarrollo a medio/largo plazo)."
+claim: "La variación desarrolladora deriva cada forma nueva de la anterior transformando progresivamente rasgos del motivo básico, de modo que lo nuevo conserva parentesco encadenado con su origen aunque el parecido directo con la forma inicial se atenúe."
+structural_variable: "motivic features across a chain (rasgos transformados paso a paso)"
+possible_action: ""
+expected_effect: "Coherencia orgánica a lo largo de una cadena de transformaciones."
+evidence_class: THEORY
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-THEORETICAL-001
+  - SRC-PEDAGOGICAL-001
+context_dependencies:
+  - Tradición analítica schoenbergiana y repertorio centroeuropeo del XIX.
+  - Escucha atenta y familiaridad (el parentesco encadenado exige seguir la cadena).
+counterproductive_conditions:
+  - Saltos transformacionales bruscos (rompen la cadena; equivalen a material nuevo).
+  - Contextos de escucha distraída o groove donde nadie sigue la cadena.
+alternatives:
+  - Recombinación de elementos conocidos.
+  - Contraste seccional deliberado.
+uncertainty_confidence: "Baja como guía compositiva general: concepto analítico sólido en su tradición, sin correlato perceptivo estudiado. Por eso possible_action queda vacío."
+genre_sensitivity: "Alta: no usar fuera de su tradición sin verificar; en pop/loop puede ser irrelevante o contraproducente."
+evaluation_falsification: "Separar dos niveles. (a) Validez estructural/teórica: solo un análisis musicológico que muestre que las cadenas documentadas son arbitrarias o post-hoc dentro de la tradición schoenbergiana invalidaría el concepto analítico. (b) Extensión perceptiva: tests de oyentes que no reconozcan parentesco en esas cadenas solo limitarían la interpretación perceptiva del concepto, sin invalidar su validez analítica dentro de su tradición."
+structure_perception_composition:
+  structure: "Cadena de formas donde cada una transforma rasgos de la anterior."
+  perception: "Sin medida; gap central de RQ-MEL-002."
+  composition: "La implicación compositiva es provisional y no se formula como acción concreta hasta disponer de evidencia directa."

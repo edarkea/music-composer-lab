@@ -1,0 +1,28 @@
+id: CAND-MEL-006
+status: candidate
+compositional_problem: "Variar el ritmo de un motivo sin romper su parentesco."
+claim: "Redistribuir duraciones y onsets conservando exactamente la secuencia de pitches puede conservar un parentesco fuerte (un dato exploratorio: EXP-001 E=4); como hipótesis separada, la estructura acentual y métrica resultante debería controlarse como dimensión propia, dado que la fuente inspeccionada la vincula al reconocimiento melódico."
+structural_variable: "temporal pattern (duraciones y onsets) + accent structure (estructura acentual)"
+possible_action: "Al variar temporalmente un motivo conservando alturas, mantener reconocible la estructura acentual o desplazarla deliberadamente según se busque continuidad o contraste."
+expected_effect: "Con estructura acentual compatible, parentesco fuerte pese al cambio rítmico."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - PROJECT_EXPERIMENT
+sources:
+  - SRC-ACADEMIC-006
+project_evidence: "EXP-001, condición E (experiments/EXP-001.md): secuencia de pitches conservada con patrón temporal modificado; juicio de parentesco 4/4 en una realización, un evaluador, una melodía. Dato exploratorio, no generalizable."
+context_dependencies:
+  - Grado de redistribución temporal; si cambia el metro percibido o solo duraciones internas.
+  - Conservación exacta vs. aproximada de pitches.
+counterproductive_conditions:
+  - Redistribuciones que caricaturizan el ritmo o desplazan todos los acentos sin intención.
+alternatives:
+  - Conservar ritmo y variar alturas (cf. CAND-MEL-002, con sus riesgos).
+uncertainty_confidence: "Baja-media: EXP-001 E=4 es un solo dato en una melodía (ver project_evidence); SRC-ACADEMIC-006 verificada solo por referencia bibliográfica, sin inspección de su diseño en esta tarea, por lo que lo relativo a estructura acentual queda como hipótesis apoyada en lo que la fuente inspeccionada efectivamente sostiene (vínculo acentos-reconocimiento)."
+genre_sensitivity: "Desconocida; tradiciones con metro rígido pueden ser más sensibles al desplazamiento acentual."
+evaluation_falsification: "Variantes con pitch intacto y redistribución temporal que reciban parentesco bajo replicable, o evidencia de que solo la estructura acentual (y no las duraciones) importa, obligarían a reformular el claim."
+structure_perception_composition:
+  structure: "Secuencia de pitches intacta; duraciones/onsets redistribuidos; estructura acentual resultante."
+  perception: "EXP-001 condición E: 4/4 en una realización (ver project_evidence); literatura inspeccionada: vínculo entre estructura acentual y reconocimiento, sin detalle de diseño."
+  composition: "Implicación provisional: controlar la estructura acentual al variar el ritmo, no solo las duraciones; lo acentual como hipótesis separada."

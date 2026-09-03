@@ -1,0 +1,31 @@
+id: CAND-MEL-002
+status: candidate
+compositional_problem: "Saber qué basta para que una variación se perciba como la misma idea."
+claim: "Conservar únicamente el contorno (y el ritmo) mientras se cambian sustancialmente los tamaños interválicos puede no bastar para un juicio fuerte de misma idea; el contorno es un rasgo relacional relevante y contributivo, pero no una condición necesaria ni suficiente de misma idea. (Nota: EXP-001 D=4, inversión con contorno alterado y juicio máximo, es incompatible con tratar la conservación del contorno como necesaria.)"
+structural_variable: "interval magnitude (tamaños interválicos con direcciones conservadas)"
+possible_action: "Al variar un motivo conservando su contorno, conservar también al menos parte de las magnitudes interválicas o del color modal si se busca un parentesco fuerte."
+expected_effect: "Sin esa conservación adicional, riesgo de que la variante se perciba como material relacionado pero claramente diferente."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - PROJECT_EXPERIMENT
+sources:
+  - SRC-ACADEMIC-001
+  - SRC-ACADEMIC-008
+project_evidence: "EXP-001, condición C (experiments/EXP-001.md): ritmo y contorno conservados con 6 de 7 magnitudes interválicas cambiadas; juicio de parentesco 2/4 en una realización, un evaluador, una melodía. Dato exploratorio, no generalizable."
+context_dependencies:
+  - Cantidad de intervalos alterados y magnitud del cambio.
+  - Cambio modal resultante (p. ej., alteraciones que cambian el color percibido).
+  - Familiaridad del material (en material familiar el detalle interválico pesa más).
+counterproductive_conditions:
+  - Variaciones deliberadamente discontinuas donde la novedad es el objetivo.
+alternatives:
+  - Conservar magnitudes y variar ritmo (cf. EXP-001 E).
+  - Conservar pitches y redistribuir duraciones.
+uncertainty_confidence: "Media-baja: EXP-001 C=2 es un solo dato y no aísla magnitudes del cambio modal; la literatura apoya que el contorno contribuye al reconocimiento sin ser suficiente para identidad exacta; EXP-001 D=4 (contorno invertido, juicio máximo) confirma que la conservación del contorno no es necesaria."
+genre_sensitivity: "Desconocida fuera del scope; dentro del scope, el color modal depende de la tradición."
+evaluation_falsification: "Variantes que cambien la mayoría de magnitudes conservando contorno+ritmo y reciban juicios replicables de 3–4 debilitarían el claim."
+structure_perception_composition:
+  structure: "Signos interválicos intactos, magnitudes cambiadas, ritmo intacto."
+  perception: "EXP-001: 2/4 en una realización; literatura: misma vs. mismo-contorno distinguible de aleatorio pero confundible entre sí bajo transposición."
+  composition: "Implicación provisional: el contorno es un rasgo a conservar cuando se busca parentesco, pero por sí solo puede no sostener un juicio fuerte de misma idea; considerar magnitudes y color modal."

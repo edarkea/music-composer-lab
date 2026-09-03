@@ -1,0 +1,32 @@
+id: CAND-MEL-001
+status: candidate
+compositional_problem: "Conservar el parentesco de un motivo al cambiar su altura o registro."
+claim: "La transposición exacta conserva todas las relaciones internas del motivo (ritmo, intervalos, contorno) y tiende a percibirse como la misma idea transformada, aunque el cambio de registro y de marco tonal puede reducir el parentesco respecto de la repetición literal."
+structural_variable: "pitch absoluto (transposición constante)"
+possible_action: "Transportar el motivo a otra altura manteniendo intactas todas las demás dimensiones cuando se busca variar registro o color sin romper la identidad."
+expected_effect: "Juicio de misma idea transformada, posiblemente algo menor que la repetición literal."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - PROJECT_EXPERIMENT
+sources:
+  - SRC-ACADEMIC-001
+  - SRC-ACADEMIC-003
+project_evidence: "EXP-001, condición B (experiments/EXP-001.md): transposición exacta +2 semitonos; juicio de parentesco 3/4 en una realización, un evaluador, una melodía. Dato exploratorio, no generalizable."
+context_dependencies:
+  - Oyentes enculturados en tonalidad occidental.
+  - Distancia de transposición y registro resultante ejecutable.
+  - Marco tonal de escucha (cercanía entre tonalidades modula la confusión).
+counterproductive_conditions:
+  - Registro extremo o tesitura que dificulte la comparación.
+  - Cambio de marco tonal que reinterprete funcionalmente el motivo (requiere dominio cross-domain).
+alternatives:
+  - Repetición literal.
+  - Transposición con ajuste de algún grado (cambia intervalos; otro claim).
+uncertainty_confidence: "Media-baja: apoyo convergente pero EXP-001 aporta un solo dato (B=3, n=1) y la literatura mide reconocimiento, no misma idea."
+genre_sensitivity: "Desconocida fuera del scope tonal/modal occidental; dentro del scope, la distancia tonal importa."
+evaluation_falsification: "Un juicio comparativo A→candidato donde una transposición exacta reciba parentesco bajo (1–2) mientras variantes parciales reciban 3–4 de forma replicable debilitaría el claim en esas condiciones."
+structure_perception_composition:
+  structure: "Desplazamiento constante de todas las alturas; ritmo, intervalos y contorno intactos."
+  perception: "Reconocida como relacionada en laboratorio; EXP-001: 3/4 en una realización."
+  composition: "Implicación provisional: estrategia disponible para conservar parentesco cambiando altura; prever posible penalización por registro o marco tonal."

@@ -1,0 +1,28 @@
+id: CAND-MEL-003
+status: candidate
+compositional_problem: "Decidir cuánto detalle interválico debe conservarse al variar un motivo ya establecido o familiar."
+claim: "En material familiar o repetido, el detalle interválico exacto gana peso en el reconocimiento; variar magnitudes interválicas en un motivo ya establecido arriesga más parentesco que variarlas en material nuevo."
+structural_variable: "interval sizes (magnitudes exactas en semitonos)"
+possible_action: ""
+expected_effect: "Posible mayor sensibilidad a cambios interválicos en motivos establecidos; qué variación concreta preferir queda sin especificar hasta disponer de evidencia directa."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-ACADEMIC-001
+  - SRC-ACADEMIC-005
+  - SRC-ACADEMIC-002
+context_dependencies:
+  - Grado de familiaridad y repetición previa del motivo.
+  - Memoria a corto vs. largo plazo.
+counterproductive_conditions:
+  - Desarrollo deliberado donde se busca precisamente transformar la identidad.
+alternatives:
+  - Variar ritmo o registro manteniendo intervalos (cf. CAND-MEL-006).
+uncertainty_confidence: "Baja-media: apoyo empírico en reconocimiento de laboratorio; la transferencia a decisiones compositivas de misma idea es inferencia no testada. Por eso possible_action queda vacío."
+genre_sensitivity: "Desconocida; probablemente ligada a tradiciones con aprendizaje de intervalos específicos."
+evaluation_falsification: "Experimentos donde oyentes acepten como misma idea variantes con magnitudes muy alteradas de motivos muy familiares, de forma replicable, debilitarían el claim."
+structure_perception_composition:
+  structure: "Tamaños exactos de intervalos sucesivos."
+  perception: "Mayor peso en melodías familiares y memoria a largo plazo."
+  composition: "La implicación compositiva es provisional y no se formula como acción concreta hasta disponer de evidencia directa."

@@ -1,0 +1,30 @@
+id: CAND-MEL-011
+status: candidate
+compositional_problem: "Organizar el cambio formal cuando la melodía repite de forma sostenida (groove, loops, dance)."
+claim: "En repertorios loop/groove-based analizados (EDM y música popular relacionada), es un patrón descriptivo documentado que el material melódico cíclico se sostiene de forma prolongada mientras el cambio formal se vehicula en otros parámetros (capas, textura, densidad, timbre). Efectos perceptivos como participación, interés, aburrimiento o estancamiento no están medidos por estas fuentes."
+structural_variable: "other parameters during melodic repetition (arreglo/textura/densidad)"
+possible_action: "Si la melodía debe repetir de forma sostenida por función de groove, planificar el cambio en textura, capas, densidad o timbre en lugar de forzar variación melódica."
+expected_effect: "Patrón descriptivo esperado: la sección presenta cambio formal sin alterar la melodía cíclica. Que eso se perciba como evolución, interés o estancamiento no está medido."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-014
+  - SRC-ACADEMIC-013
+context_dependencies:
+  - Géneros loop/groove-based (EDM, funk, hip-hop, dance-pop y afines).
+  - Coordinación con arreglo y producción (cross-domain_dependency: arrangement).
+counterproductive_conditions:
+  - Contextos de escucha atenta de desarrollo motívico, donde este patrón podría no operar (hipótesis sin medir).
+  - Repetición sin cambio en ningún parámetro durante tramos largos (posible riesgo de estancamiento percibido; hipótesis sin medir ni cuantificar).
+alternatives:
+  - Variación melódica mínima sobre loop estable.
+  - Cambios de sección con material contrastante.
+uncertainty_confidence: "Media-baja como descripción de patrones de repertorio; sin medidas perceptivas de misma idea, interés o estancamiento."
+genre_sensitivity: "Constituye observación de género; no transferir a canción de desarrollo clásico."
+evaluation_falsification: "Análisis de repertorio que muestren que en estos géneros el cambio formal se vehicula sistemáticamente por variación melódica en lugar de por otros parámetros debilitarían el claim descriptivo. Juicios de oyentes sobre estancamiento no lo refutan como patrón descriptivo."
+structure_perception_composition:
+  structure: "Melodía cíclica sostenida + variación en capas/textura/densidad."
+  perception: "Groove y participación mencionados solo como categorías analíticas de las fuentes; ningún efecto perceptivo medido."
+  composition: "Estrategia descriptiva de género: repetir melodía, variar en otros dominios; coordinar cross-domain."

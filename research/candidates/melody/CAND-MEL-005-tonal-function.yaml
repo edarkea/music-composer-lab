@@ -1,0 +1,29 @@
+id: CAND-MEL-005
+status: candidate
+compositional_problem: "Prever cómo un cambio de alturas afecta al parentesco según altere o no la función tonal de las notas."
+claim: "Los cambios que preservan la función tonal o los grados de escala de las notas podrían degradar menos el parentesco que cambios de igual tamaño físico que alteran la función tonal; la representación por grados modula la identidad más allá de intervalos físicos."
+structural_variable: "scale-degree / tonal function (grados y jerarquía tonal)"
+possible_action: ""
+expected_effect: "Cambios diatónicos que preservan función se tolerarían mejor que alteraciones cromáticas equivalentes."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-ACADEMIC-009
+  - SRC-ACADEMIC-003
+  - SRC-ACADEMIC-002
+context_dependencies:
+  - Tradición tonal/modal concreta y enculturación del oyente.
+  - Presencia de contexto armónico que fije el marco (dominio cross-domain).
+counterproductive_conditions:
+  - Música deliberadamente no tonal o ambigua.
+alternatives:
+  - Describir los cambios solo en semitonos (representación física).
+uncertainty_confidence: "Baja: apoyo indirecto (representación jerárquica + distancia tonal en reconocimiento); sin test directo sobre misma idea. Por eso possible_action queda vacío."
+genre_sensitivity: "Alta: la jerarquía tonal es específica de tradición; no transferir fuera del scope."
+evaluation_falsification: "Comparaciones controladas donde cambios que preservan función y cambios que la alteran produzcan igual parentesco de forma replicable debilitarían el claim."
+structure_perception_composition:
+  structure: "Grados de escala y funciones tonales de cada pitch en su contexto."
+  perception: "Los oyentes representan jerárquicamente y la distancia tonal modula la confusión."
+  composition: "La implicación compositiva es provisional y no se formula como acción concreta hasta disponer de evidencia directa."

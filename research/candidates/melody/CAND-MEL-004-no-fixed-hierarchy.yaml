@@ -1,0 +1,30 @@
+id: CAND-MEL-004
+status: candidate
+compositional_problem: "Elegir si sostener el parentesco de una variación en el ritmo o en la altura."
+claim: "No existe una jerarquía fija entre ritmo y pitch para el parentesco melódico; cuál pesa más depende de las condiciones (estabilidad temporal, contexto tonal previo, tarea, experiencia del oyente). No debe presuponerse que el ritmo domina siempre ni que el pitch domina siempre."
+structural_variable: "rhythm vs. pitch (ponderación relativa)"
+possible_action: "Decidir la palanca de variación según contexto y función formal en lugar de aplicar una prioridad fija; si el contexto temporal es inestable o ambiguo, el pitch (contorno/tonalidad) puede pesar más, y viceversa."
+expected_effect: "Evitar decisiones basadas en una jerarquía falsa; evaluar el parentesco en el contexto real de escucha."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - PROJECT_EXPERIMENT
+sources:
+  - SRC-ACADEMIC-007
+  - SRC-ACADEMIC-008
+project_evidence: "EXP-001, condición E (experiments/EXP-001.md): pitches conservados con patrón temporal modificado; juicio de parentesco 4/4 en una realización. Contraevidencia puntual contra la dominancia universal del ritmo; n=1, no generalizable."
+context_dependencies:
+  - Tempo estable vs. variado; presencia de contexto armónico previo.
+  - Tarea (similitud vs. discriminación vs. misma idea).
+  - Experiencia y edad del oyente.
+counterproductive_conditions:
+  - Ninguna conocida; es una cautela metodológica, no una técnica.
+alternatives:
+  - Fijar la jerarquía por preferencia artística explícita (entonces es ARTISTIC PREFERENCE, no conocimiento general).
+uncertainty_confidence: "Media: el flip de Prince 2014 entre experimentos es evidencia directa de dependencia de contexto; EXP-001 E=4 es contraevidencia puntual contra la dominancia del ritmo."
+genre_sensitivity: "Probablemente alta: tradiciones con ritmo muy marcado vs. tradiciones melódicas pueden ponderar distinto; sin datos."
+evaluation_falsification: "Una jerarquía estable ritmo>pitch (o inversa) replicada a través de tareas, contextos y poblaciones refutaría el claim."
+structure_perception_composition:
+  structure: "Contribuciones relativas de ritmo, contorno, metro y tonalidad a juicios de similitud/discrimination."
+  perception: "El orden de factores cambia con las condiciones (Prince 2014: ritmo→contorno entre Exp.1 y Exp.2)."
+  composition: "Heurística justificada: no fijar jerarquías; decidir por contexto y comprobar por escucha."

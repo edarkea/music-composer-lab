@@ -1,0 +1,30 @@
+id: CAND-MEL-009
+status: candidate
+compositional_problem: "Conducir una frase hacia su cierre con sensación de crecimiento o intensificación."
+claim: "Dentro del marco clásico de la sentence, la fragmentación, la liquidación y los procesos de continuación asociados participan en el movimiento hacia la función cadencial; fuera de ese marco, la transferencia no está verificada."
+structural_variable: "unit length + characteristic features (longitud de unidad y rasgos definitorios)"
+possible_action: "En la continuación de frase dentro del marco clásico, fragmentar el motivo conservando su célula más reconocible y simplificarla progresivamente, coordinando con la aceleración del ritmo armónico (dominio armónico, cross-domain dependency, no propiedad melódica)."
+expected_effect: "Función teórico-compositiva esperada: continuación dirigida hacia la función cadencial dentro del marco clásico. Sin medida perceptiva directa."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-PEDAGOGICAL-001
+context_dependencies:
+  - Función continuation dentro de sentence clásica (scope explícito: Haydn/Mozart/Beethoven instrumental); cadencia como punto de llegada.
+  - Ritmo armónico coordinado como cross-domain dependency del dominio armónico, no como propiedad melódica.
+counterproductive_conditions:
+  - Fragmentar sin liquidar ni coordinar con el ritmo armónico (corte sin dirección).
+  - Géneros donde la estabilidad cíclica es virtud (loop); allí puede leerse como empobrecimiento (hipótesis sin medir).
+alternatives:
+  - Secuencia ascendente.
+  - Extensión por inserción.
+uncertainty_confidence: "Media-baja: mecanismo bien descrito analíticamente; sin medida perceptiva; scope clásico."
+genre_sensitivity: "Alta: no transferir a pop/EDM sin verificar; el análogo (builds, pre-coros) es hipótesis."
+evaluation_falsification: "Análisis dentro de la tradición que muestren continuaciones de sentence sin fragmentación/liquidación, o fragmentaciones que no participen en movimiento cadencial, obligarían a reformular el alcance del claim. Tests de oyentes solo limitarían su extensión perceptiva, no su validez analítica."
+structure_perception_composition:
+  structure: "Unidades más cortas, rasgos despojados; ritmo armónico como condición coordinada del dominio armónico."
+  perception: "Sin medida directa; uncertain."
+  composition: "Heurística de scope clásico explícito: fragmentar y liquidar participan en el movimiento hacia la cadencia; no afirmar causalidad de cierre."

@@ -1,0 +1,30 @@
+id: CAND-MEL-008
+status: candidate
+compositional_problem: "Continuar una frase usando el material ya presentado, sin cerrarla ni abandonarla."
+claim: "Conservar el arranque del motivo y cambiar su final (changed ending) permite continuar la frase manteniendo la identidad; la dirección concreta del final (continuar o cerrar) depende del marco armónico."
+structural_variable: "ending (final de frase: pitches/ritmo de cierre)"
+possible_action: "Repetir el arranque del motivo y modificar su final para dirigir hacia la continuación o preparar el cierre."
+expected_effect: "Función teórico-compositiva esperada: la frase continúa con material emparentado en lugar de cerrarse o de introducir material nuevo. Sin medida perceptiva directa de continuación percibida."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-PEDAGOGICAL-001
+context_dependencies:
+  - Dentro de frase (presentation/statement–response).
+  - Marco armónico que califique el final (cross-domain: RQ-MEL-007).
+counterproductive_conditions:
+  - Final nuevo que cierra prematuramente cuando se quería continuar.
+  - Cambiar también el arranque (se pierde el ancla; equivale a idea nueva).
+alternatives:
+  - Secuencia del motivo completo.
+  - Fragmentación (cf. CAND-MEL-009).
+uncertainty_confidence: "Media-baja: apoyo teórico-pedagógico sistemático pero sin medida perceptiva directa de continuación."
+genre_sensitivity: "Alta: formulado desde la sentence clásica; en pop/verso-coro la función análoga existe (pregunta/respuesta) pero sin verificar equivalencia."
+evaluation_falsification: "Frases con arranque conservado y final cambiado que los oyentes juzguen sistemáticamente como ideas nuevas (no continuación) debilitarían el claim."
+structure_perception_composition:
+  structure: "Arranque idéntico, cierre modificado."
+  perception: "Sin medida directa; uncertain."
+  composition: "Heurística de tradición clásica: variar el final para continuar; coordinar con armonía."

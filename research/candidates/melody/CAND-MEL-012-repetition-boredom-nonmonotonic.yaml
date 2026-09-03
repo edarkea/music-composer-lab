@@ -1,0 +1,32 @@
+id: CAND-MEL-012
+status: candidate
+compositional_problem: "Evitar la monotonía sin caer en variación innecesaria."
+claim: "La relación entre cantidad de repetición y agrado/monotonía no es monótona ni universal: depende de familiaridad, complejidad del material, qué otros parámetros cambian y posición formal; 'demasiada repetición aburre' es una simplificación que no debe usarse como regla."
+structural_variable: "repetition amount in context (cantidad en contexto)"
+possible_action: "Evaluar la monotonía en el contexto real (familiaridad, complejidad, otros parámetros, función) en lugar de limitar la repetición por principio; una alternativa posible —documentada en repertorios loop-based donde el cambio se vehicula fuera de la melodía— es variar otros parámetros antes que la melodía, sin que ello constituya una prioridad normativa general."
+expected_effect: "Decisiones de dosis basadas en escucha y contexto, no en topes inventados."
+evidence_class: HYPOTHESIS
+support_basis:
+  - EXTERNAL_EMPIRICAL
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-EMPIRICAL-002
+  - SRC-EMPIRICAL-001
+  - SRC-ACADEMIC-013
+  - SRC-ACADEMIC-014
+context_dependencies:
+  - Familiaridad del oyente con el material y el estilo.
+  - Complejidad del material (en material complejo la repetición ayuda más).
+  - Qué otros parámetros cambian simultáneamente.
+counterproductive_conditions:
+  - Usar este claim para justificar repetición indefinida sin escucha crítica.
+alternatives:
+  - Fijar dosis por preferencia artística explícita (entonces es ARTISTIC PREFERENCE).
+uncertainty_confidence: "Media: efectos principales verificados (agrado con repetición insertada; atención dependiente de exposición) pero sin curva dosis-respuesta."
+genre_sensitivity: "Alta: la dosis de repetición tolerada varía ampliamente entre tradiciones (las músicas loop-based sostienen repetición prolongada como parte de su lenguaje); formulación cualitativa, sin cuantificar."
+evaluation_falsification: "Una curva dosis-respuesta estable y replicable entre cantidad de repetición y agrado, invariante a contexto y tradición, refutaría el claim."
+structure_perception_composition:
+  structure: "Cantidad de repetición en un contexto dado."
+  perception: "Agrado mayor con repetición insertada en música no familiar; detección dependiente de exposición."
+  composition: "Heurística negativa justificada: no topar la repetición por principio; decidir por contexto y escucha."
