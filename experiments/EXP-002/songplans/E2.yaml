@@ -1,0 +1,30 @@
+schema_version: "2.0"
+name: exp002_E2
+tempo: 120
+time_signature: 4/4
+tonic: C
+mode: ionian
+style: experiment
+arrangement:
+  sections:
+    - id: main
+      start_bar: 1
+      bar_count: 2
+      energy: 0.5
+  harmony_assignments: []
+tracks:
+  - id: melody
+    type: pitched
+    role: lead
+    motifs:
+      - id: phrase
+        events:
+          - {bar: 1, beat: "1", duration: "1/16", pitches: [C4], velocity: 96}
+          - {bar: 1, beat: "5/4", duration: "5/16", pitches: [E4], velocity: 96}
+          - {bar: 1, beat: "5/2", duration: "1/8", pitches: [C#4], velocity: 96, chromatic: true}
+          - {bar: 1, beat: "3", duration: "3/16", pitches: [D#4], velocity: 96, chromatic: true}
+          - {bar: 1, beat: "15/4", duration: "1/4", pitches: [B3], velocity: 96}
+          - {bar: 1, beat: "19/4", duration: "3/16", pitches: [D4], velocity: 96}
+          - {bar: 2, beat: "3/2", duration: "1/8", pitches: [Eb4], velocity: 96, chromatic: true}
+          - {bar: 2, beat: "2", duration: "1/4", pitches: [Db4], velocity: 96, chromatic: true}
+    section_assignments: [{section_id: main, motif_id: phrase}]
