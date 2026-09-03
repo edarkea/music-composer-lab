@@ -1,0 +1,8 @@
+music_engine:
+  package_version: "4.0.0"
+  git_commit: "71bbc73337da0d755618bdc796e19ce2e82cc3df"
+  songplan_schema: "2.0"
+
+runtime:
+  wheel_filename: "music_engine-4.0.0-py3-none-any.whl"
+  install_method: "local-wheel"
