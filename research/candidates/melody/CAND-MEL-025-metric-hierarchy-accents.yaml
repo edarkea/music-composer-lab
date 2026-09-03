@@ -4,7 +4,7 @@ compositional_problem: "Decidir en qué posiciones métricas colocar eventos est
 claim: "Los oyentes internalizan una jerarquía métrica que guía la expectativa de acentos (distribuciones en composiciones, goodness-of-fit, confusiones de memoria; más fina en músicos); los acentos melódicos pop resultan de reglas gestálticas multidimensionales modelables. Coordinar eventos importantes con posiciones fuertes, o desplazarlos deliberadamente, opera sobre esa expectativa; ninguna colocación garantiza función por sí sola."
 structural_variable: "metric placement + accent configuration (posición métrica y configuración de acento)"
 possible_action: "Colocar eventos estructuralmente importantes en posiciones métricamente fuertes, o desplazarlos a débiles de forma deliberada (síncopa); especificar siempre qué tipo de acento se manipula (métrico, agógico, dinámico, pitch)."
-expected_effect: "Congruencia o tensión controlada con la expectativa métrica; evaluable por escucha."
+expected_effect: "Congruencia o conflicto controlado con la expectativa métrica; evaluable por escucha. Que el desplazamiento produzca tensión, sorpresa o énfasis requeriría apoyo separado (no establecido aquí)."
 evidence_class: HYPOTHESIS
 support_basis:
   - EXTERNAL_EMPIRICAL

@@ -1,10 +1,10 @@
 id: CAND-MEL-006
 status: candidate
 compositional_problem: "Variar el ritmo de un motivo sin romper su parentesco."
-claim: "Redistribuir duraciones y onsets conservando exactamente la secuencia de pitches puede conservar un parentesco fuerte (un dato exploratorio: EXP-001 E=4); como hipótesis separada, la estructura acentual y métrica resultante debería controlarse como dimensión propia, dado que la fuente inspeccionada la vincula al reconocimiento melódico."
-structural_variable: "temporal pattern (duraciones y onsets) + accent structure (estructura acentual)"
+claim: "Redistribuir duraciones y onsets conservando exactamente la secuencia de pitches puede conservar un parentesco fuerte (un dato exploratorio: EXP-001 E=4; duraciones, onsets e IOI variaron juntos, dimensiones no aisladas). Como hipótesis separada, la estructura acentual y métrica resultante debería controlarse como dimensión propia, dado que la fuente inspeccionada la vincula al reconocimiento melódico. Distinguir siempre: patrón de duraciones, patrón de onsets, estructura IOI, patrón acentual y colocación métrica; EXP-001 E no separa estas dimensiones."
+structural_variable: "temporal pattern (patrón de duraciones + patrón de onsets/IOI, no aislados en EXP-001 E) + accent pattern and metric placement (dimensiones separadas)"
 possible_action: "Al variar temporalmente un motivo conservando alturas, mantener reconocible la estructura acentual o desplazarla deliberadamente según se busque continuidad o contraste."
-expected_effect: "Con estructura acentual compatible, parentesco fuerte pese al cambio rítmico."
+expected_effect: "Hipotéticamente, compatibilidad acentual acompañaría parentesco pese al cambio rítmico; el vínculo 'preservar acentos → preservar identidad' no está medido directamente."
 evidence_class: HYPOTHESIS
 support_basis:
   - EXTERNAL_EMPIRICAL
@@ -28,4 +28,4 @@ evaluation_falsification: "Variantes con pitch intacto y redistribución tempora
 structure_perception_composition:
   structure: "Secuencia de pitches intacta; duraciones/onsets redistribuidos; estructura acentual resultante."
   perception: "EXP-001 condición E: 4/4 en una realización (ver project_evidence); literatura inspeccionada: vínculo entre estructura acentual y reconocimiento, sin detalle de diseño."
-  composition: "Implicación provisional: controlar la estructura acentual al variar el ritmo, no solo las duraciones; lo acentual como hipótesis separada."
+  composition: "Implicación provisional: controlar la estructura acentual al variar el ritmo, no solo las duraciones; lo acentual como hipótesis separada; no inferir 'preservar acentos → preservar identidad' sin apoyo directo."
