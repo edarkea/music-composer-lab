@@ -78,24 +78,31 @@ Hechos físicos y fisiológicos generales (nivel PHYSICAL, no estético):
   escribir picos alcanzables pero tesitura inhabitable es un fallo
   físico, no estilístico.
 - Ninguna restricción física prescribe una estética: los límites
-  habilitan decisiones (reservar extremos, planificar descansos
-  registrales), no dictan emociones.
+  habilitan cautelas de escritura (tesituras habitables, descansos
+  registrales), no dictan emociones. Reservar extremos para momentos
+  formales es una HYPOTHESIS provisional separada: no se deriva del
+  coste físico ni de la rareza por sí solos. Se separan restricción
+  física, prominencia perceptiva (no medida aquí) e importancia
+  formal (no establecida).
 
 ## Register and Perceptual Prominence
 
 - **Streaming (Bregman 1990, marco general):** el sistema auditivo
   agrupa por proximidad de frecuencia; secuencias que se alejan en
-  registro tienden a segregarse en streams. Implicación prudente: un
-  salto registral puede separar perceptivamente el material (figura vs.
-  fondo, continuidad vs. ruptura) según tempo, timbre y contexto. Es
-  un marco psicoacústico general, no una medida de prominencia
-  melódica en canciones.
+  registro tienden a segregarse en streams. La segregación auditiva y
+  la prominencia melódica son constructos distintos: lo inspeccionado
+  de Bregman no mide prominencia y no se usa como evidencia directa
+  de ella. Como implicación prudente y general, un salto registral
+  puede afectar a continuidad vs. ruptura segregativa según tempo,
+  timbre y contexto; no equivale a prominencia.
 - **Altura vs. rareza contextual:** la evidencia incorporada no permite
-  atribuir la saliencia a la altura absoluta por sí sola. Un evento
-  alto destaca cuando es raro en su contexto (extremo), está
-  aislado rítmicamente, dura más o coincide con acento/soporte
-  (cf. CAND-MEL-016: el peak necesita configuración). "Alto = prominente"
-  queda como hipótesis no establecida en forma general.
+  atribuir la saliencia a la altura absoluta por sí sola. En
+  formulación débil: la extremidad relativa y la configuración
+  contextual (aislamiento rítmico, duración, acento, soporte)
+  pueden contribuir a la prominencia junto con ritmo, dinámica,
+  armonía y posición formal (cf. CAND-MEL-016: el peak necesita
+  configuración). "Alto = prominente" queda como hipótesis no
+  establecida en forma general.
 - **Primer plano/fondo:** sin medidas incorporadas que liguen registro
   melódico a foreground en mezcla; se registra como dependency de
   arreglo (cross-domain).
@@ -133,14 +140,18 @@ en descripción de repertorio y pedagogía, no en medidas.
 
 Trasladar material conocido a otro registro (transposición):
 
-- Conserva relaciones internas (cf. CAND-MEL-001); EXP-001 B (+2
-  semitonos, juicio 3/4, nota "terminación mas arriba") muestra que
-  incluso +2 st se registra como cambio con posible penalización de
-  parentesco (n=1; causas no separadas: registro, distancia tonal,
-  ruido).
-- El desplazamiento cambia tesitura efectiva, esfuerzo vocal y color
-  tímbrico aunque las relaciones se conserven: es una decisión física
-  y de color, no solo geométrica.
+- La transposición exacta y constante conserva las relaciones internas
+  (cf. CAND-MEL-001). EXP-001 B (transposición exacta +2 semitonos,
+  juicio 3/4, nota "terminación mas arriba") aporta evidencia local
+  provisional solo sobre transposición exacta pequeña (n=1; causas no
+  separadas: registro, distancia tonal, ruido). NO es evidencia de
+  desplazamiento de octava, cambios amplios de tesitura, esfuerzo
+  vocal, cambio tímbrico ni función seccional.
+- El desplazamiento puede cambiar tesitura efectiva, esfuerzo y color
+  (niveles PHYSICAL y TIMBRE en sentido genérico inspeccionado; sin
+  medidas incorporadas): es también una decisión física y de color,
+  no solo geométrica. Ningún efecto sobre prominencia, identidad,
+  energía o color se asume más allá de lo inspeccionado.
 - Ver CAND-MEL-019.
 
 ## Registral Extremes
@@ -152,11 +163,14 @@ Trasladar material conocido a otro registro (transposición):
   (instrumentos); los extremos aislados funcionan como eventos.
 - Tras un salto hacia un extremo, la reversión es lo esperado
   localmente y lo distribucionalmente frecuente (CAND-MEL-013;
-  SRC-EMPIRICAL-006): los extremos "piden" retorno por tesitura, no
-  por ley cognitiva.
+  SRC-EMPIRICAL-006). Dentro de una tesitura acotada, las
+  posibilidades de continuación cerca de extremos están
+  restringidas; el movimiento interior tras un extremo es una opción
+  local entre otras, no una obligación, y las desviaciones no se
+  asumen marcadas.
 - Reservar el extremo absoluto para un momento formal marcado es una
-  estrategia disponible (ver Register and Climax); su eficacia no está
-  medida.
+  estrategia provisional (HYPOTHESIS, no derivada del coste físico);
+  su eficacia no está medida.
 
 ## Phrase-Level Function
 
@@ -211,21 +225,27 @@ textura y letra como covariables), nunca como hecho de corpus.
   2000): en repertorios vocales muestreados, los saltos tienden a los
   extremos de la tesitura y desde allí la melodía retrocede; gap-fill
   y retornos aparecen como efectos de tesitura.
-- Consecuencia compositiva prudente: acercarse a un extremo eleva la
-  probabilidad estadística de reversión/retorno al centro — útil para
-  planificar hacia dónde "quiere" ir la línea, sin convertirlo en
-  regla cognitiva (cf. CAND-MEL-013).
+- Consecuencia compositiva prudente: cerca de un extremo, el
+  movimiento interior es una opción local compatible con
+  distribuciones y expectativa local — útil como una de varias
+  posibilidades al planificar la continuación, sin convertirlo en
+  regla cognitiva ni en default normativo (cf. CAND-MEL-013).
 - Esto separa regla cognitiva vs. restricción estadística/tesitura,
   como exige la RQ.
+- Nota de solapamiento (pendiente de futura integración, sin fusión
+  ni eliminación): CAND-MEL-024 se solapa parcialmente con
+  CAND-MEL-013 (reversión post-salto: expectativa vs. tesitura);
+  024 aporta el encuadre de continuación restringida cerca de
+  extremos, 013 el núcleo expectativa/distribución tono-a-tono.
 
 ## Register and Identity
 
 Dependencia RQ-MEL-001, no reinvestigada. Pregunta específica aquí:
 ¿cuánto desplazamiento registral tolera una idea conocida manteniendo
 su función? Lo incorporado: transposición exacta conserva relaciones
-y parentesco parcial (EXP-001 B=3, n=1); el cambio de tesitura y
-color acompaña inevitablemente al desplazamiento. Sin curva
-dosis-respuesta; gap.
+y parentesco parcial (EXP-001 B=3, n=1, solo transposición exacta
+pequeña); el posible cambio de tesitura y color acompaña al
+desplazamiento (niveles genéricos, sin curva dosis-respuesta); gap.
 
 ## Register and Climax
 
@@ -234,8 +254,9 @@ Pregunta nueva: función de reservar/repetir extremos a escala de
 frase/sección/canción.
 
 - Reservar el extremo absoluto para un momento formal marcado es una
-  estrategia disponible con lógica física (escasez = saliencia) y
-  formal (coincidencia con cierre/sección); eficacia sin medir.
+  estrategia provisional con lógica de escasez postulada, no demostrada:
+  lo físico (coste/rareza) no establece por sí solo prominencia ni
+  importancia formal; eficacia sin medir.
 - Repetir el extremo puede reforzarlo o neutralizarlo; hipótesis
   abierta (cf. RQ-MEL-003, open questions).
 - Los extremos no son siempre clímax: un extremo temprano sin
@@ -306,9 +327,10 @@ Dependencia CAND-MEL-017. Aportación registral específica:
   y tenso; la altura tiene efectos OPUESTOS en valencia según dominio
   (habla aguda pero música GRAVE → más agradable); efectos
   interactivos entre atributos; distinción energía vs. tensión.
-  Lección: la altura no mapea monótonamente a emoción/energía; los
-  atributos covarían e interactúan. Mide afecto ante manipulaciones
-  globales, NO función formal ni registro seccional.
+  Lección: no está justificado un mapeo simple, uno-a-uno e
+  independiente del contexto entre altura de pitch y energía o
+  emoción; los atributos covarían e interactúan. Mide afecto ante
+  manipulaciones globales, NO función formal ni registro seccional.
 - **Bregman 1990 (marco general):** segregación por proximidad de
   frecuencia; fission con separación/tempo. Sin medidas de
   prominencia melódica en canciones; se usa como mecanismo candidato.
@@ -346,8 +368,8 @@ gaps.
    de corpus: la práctica es plausible y los contraejemplos abundan;
    tratar como estrategia, no como hecho.
 2. Alto = energía (intuición + saber práctico) vs. Ilie/Thompson
-   (efectos interactivos y opuestos por dominio): la altura sola no
-   determina afecto.
+   (efectos interactivos y opuestos por dominio): no está justificado
+   un mapeo simple e independiente del contexto entre altura y afecto.
 3. Extremos como prominencia (rareza) vs. extremos como coste
    (esfuerzo/tesitura): el mismo evento es saliente Y caro; reservarlo
    gestiona ambas caras.
@@ -358,27 +380,30 @@ gaps.
 
 ## STRUCTURE → PERCEPTION → COMPOSITION
 
-- **SPC-R5-1 (desplazamiento):** STRUCTURE misma estructura +2 st (u
-  otro); PERCEPTION parentesco parcial con registro del cambio
-  (EXP-001 B, n=1); COMPOSITION: desplazar conserva relaciones pero
-  cambia tesitura/esfuerzo/color; decidir según voz y función.
+- **SPC-R5-1 (desplazamiento):** STRUCTURE transposición exacta
+  pequeña (+2 st en EXP-001 B; u otra exacta pequeña); PERCEPTION
+  parentesco provisional con registro del cambio (n=1); COMPOSITION:
+  comprobar tesitura resultante; lo físico y lo tímbrico como cautelas
+  genéricas, no como efectos establecidos. Sin extensión a octavas,
+  tesituras amplias, esfuerzo, timbre ni función seccional.
 - **SPC-R5-2 (tesitura):** STRUCTURE concentración y extremos
   sostenidos; PERCEPTION sin medida directa (física: esfuerzo);
   COMPOSITION: escribir tesituras habitables; reservar extremos como
   eventos (heurística física, no estética).
 - **SPC-R5-3 (prominencia):** STRUCTURE evento alto/aislado/largo;
-  PERCEPTION saliencia por configuración, no por altura sola
-  (marcos Bregman/Eitan; sin medida directa); COMPOSITION: construir
-  prominencia con configuración (duración, acento, soporte), no solo
-  subiendo.
+  PERCEPTION saliencia por configuración posible, no por altura sola
+  (marcos Eitan; Bregman solo como segregación general, distinto de
+  prominencia; sin medida directa); COMPOSITION: la extremidad
+  relativa y la configuración pueden contribuir junto a duración,
+  acento y soporte; no confiar solo en subir.
 - **SPC-R5-4 (sección):** STRUCTURE elevación registral en límite
   formal + otros marcadores; PERCEPTION sin medida seccional;
   COMPOSITION: estrategia de contraste a comprobar con el haz de
   marcadores (heurística de género, pop/rock).
 - **SPC-R5-5 (afecto):** STRUCTURE altura/intensidad/tempo;
   PERCEPTION efectos interactivos y dependientes de dominio
-  (Ilie/Thompson); COMPOSITION: no mapear altura→emoción; componer
-  con combinaciones y comprobar por escucha.
+  (Ilie/Thompson); COMPOSITION: sin mapeo simple justificado;
+  componer con combinaciones y comprobar por escucha.
 - **SPC-R5-6 (retorno):** STRUCTURE vuelta al centro/registro inicial;
   PERCEPTION sin medida; COMPOSITION: hipótesis de cierre parcial a
   coordinar con armonía y forma.

@@ -4,6 +4,8 @@
 
 SYNTHESIZED
 
+candidate_audit_status: COMPLETED
+
 ## Reformulated Question
 
 ¿Qué funciones compositivas pueden cumplir el registro absoluto, el rango
@@ -58,7 +60,9 @@ Ver tabla "Sources" en la síntesis y records en
   de marcadores; COMPOSITION HEURISTIC de género pop/rock).
 - CAND-MEL-023 (altura no mapea a emoción/energía directamente;
   heurística negativa; HYPOTHESIS).
-- CAND-MEL-024 (retorno al centro/tesitura tras extremos; HYPOTHESIS).
+- CAND-MEL-024 (movimiento interior tras extremos como opción local,
+  no obligatorio; HYPOTHESIS; solapamiento parcial con CAND-MEL-013
+  pendiente de futura integración, sin fusión).
 
 CAND-MEL-018 permanece rejected y nunca se reutiliza; ningún claim
 rehabilita automáticamente su contenido (si un futuro corpus confirma
