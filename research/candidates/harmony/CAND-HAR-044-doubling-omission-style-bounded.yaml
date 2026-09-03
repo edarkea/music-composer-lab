@@ -1,0 +1,42 @@
+id: CAND-HAR-044
+status: candidate
+compositional_problem: "Decidir qué duplicar y qué omitir al realizar una armonía sin aplicar reglas universales de duplicación u omisión."
+claim: "Las prescripciones de duplicación y omisión de un sistema acotado de part-writing no deben generalizarse como restricciones universales de armonía (anti-regla; dos mitades separadas). (a) DOUBLING: las reglas SATB de duplicación (root; evitar tercera/leading tone) pertenecen a la pedagogía de práctica común con objetivo declarado (independencia de voces + cierre de tendencias, CAND-HAR-015/017) y relevancia no establecida fuera de texturas a voces estables; el planing y los doblajes del repertorio revisado son contraejemplos de alcance (CAND-HAR-020; Spicer/Doll). Duplicar no asigna función ni peso perceptivo automáticamente. (b) OMISSION: la tolerancia a omitir la quinta preservando adscripción es marco de tradición (textos pedagógicos pendientes de inspección; sin claim independiente); la tercera/root omitidas cambian la lectura según marco; las sonoridades sin root del jazz (rootless/shell) son GAP puro sin texto inspeccionado y no sostienen ningún sub-claim (sin folklore citable; sin fundamentales implicadas percibidas). Ninguna duplicación u omisión queda justificada como regla general; ninguna regla se declara arbitraria ni sin propósito compositivo dentro de su sistema."
+structural_variable: "(a) doubling choice evaluated within declared part-writing system and texture; (b) omission choice (fifth / third / root) evaluated within declared framework; jazz rootless excluded as GAP — never as universal rule"
+possible_action: ""
+expected_effect: "Duplicación/omisión decididas por idioma declarado con escucha; fuera del marco, efecto incierto; jazz sin material citable."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+project_evidence: ""
+context_dependencies:
+  - Estilo/marco declarado (SATB clásico, rock, jazz, loop/groove).
+  - Textura a voces estables para reglas SATB (fuera de ella pierden objeto).
+  - Rol de la sonoridad (llegada, paso, color, riff).
+counterproductive_conditions:
+  - Codificar reglas SATB como armonía universal.
+  - Afirmar fundamentales implicadas percibidas desde análisis rootless.
+  - Generalizar pedagogía jazz sin fuente registrada.
+  - Omitir tercera/root esperando misma identidad en todo marco.
+alternatives:
+  - Redistribuir registro/spacing en vez de cambiar duplicación (CAND-HAR-043).
+  - Cambiar densidad de voces/arreglo (dependencia Arrangement).
+uncertainty_confidence: "Baja como anti-regla derivada: mitad doubling apoyada en alcance acotado heredado (CAND-HAR-015/017: normas de tradición con objetivo declarado) + contraejemplos de repertorio (planing CAND-HAR-020; doblajes vía Spicer/Doll); mitad omission con quinta como marco de tradición sin texto inspeccionado (records pedagógicos PARCIAL no citables hasta verificación: no sostienen sub-claim independiente); jazz UNVERIFIED = GAP puro sin material citable; sin medida perceptiva de duplicación/omisión. HYPOTHESIS sin possible_action; no se crea CAND-HAR-046 (una sola lógica anti-generalización; mitades separadas dentro del claim)."
+genre_sensitivity: "Alta: cada prescripción vive en su estilo; ninguna viaja sin verificación."
+evaluation_falsification: "Medida donde cierta duplicación/omisión produzca sistemáticamente mismos juicios de función/continuidad a través de estilos exigiría reformular hacia principio general acotado; corpus donde duplicaciones prohibidas dominen un repertorio con efecto documentado exigiría acotación por género."
+structure_perception_composition:
+  structure: "(a) Tono duplicado en realización bajo sistema declarado; (b) tono omitido bajo marco declarado (jazz excluido)."
+  perception: "Sin medida dedicada; ninguna preferencia ni ponderación perceptiva establecida; ninguna fundamental implicada afirmada."
+  composition: "Sin acción justificada todavía: decidir por idioma declarado con escucha; ninguna regla universal; no tratar reglas como arbitrarias dentro de su sistema."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (RQ-HAR-008): mitades doubling/omission separadas con soportes propios; valor inválido GENRE OBSERVATION eliminado de support_basis; base pedagógica no-citable retirada (records PARCIAL sin texto no sostienen claims); jazz como GAP puro sin folklore; split a CAND-HAR-046 innecesario (una sola anti-regla); alcance negativo acotado."
+cross_references:
+  - CAND-HAR-015
+  - CAND-HAR-017
+  - CAND-HAR-020
+  - CAND-HAR-043

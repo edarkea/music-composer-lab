@@ -1,0 +1,44 @@
+id: CAND-HAR-043
+status: candidate
+compositional_problem: "Leer las posibilidades concretas de conducción entre sonoridades desde la realización exacta, no desde el contenido de pitch classes."
+claim: "Dos realizaciones con contenido de pitch classes igual o equivalente pero distintas alturas exactas, registro, bajo o asignación a voces definen configuraciones concretas distintas de conducción entre sonoridades (qué alturas se retienen literalmente, cuáles se mueven, cuánto y en qué voz): las posibilidades de voice leading no son idénticas y deben leerse desde la realización, no desde el pitch-class set. La equivalencia de octava no es retención literal de tono común (CAND-HAR-019); la distancia mínima agregada no es el criterio (CAND-HAR-014). No se afirma discontinuidad perceptiva, preferencia, mejor/peor conexión, ni que el desplazamiento de octava debilite la continuidad; ninguna ponderación entre variables queda establecida. Consecuencias para llegada e identidad analítica se ceden a CAND-HAR-028 y CAND-HAR-040/036 respectivamente."
+structural_variable: "realization-defined voice-leading configuration (literal retention + per-voice motion size + register + allocation) read from exact pitches/bass/register/allocation, never from pitch-class set alone"
+possible_action: "Al conectar sonoridades con contenido comparable, decidir desde la realización (qué queda literal, qué cambia de octava, qué recibe cada voz) y verificar por escucha; no dar por conservado lo traspuesto de octava ni por equivalente lo de mismas pitch classes."
+expected_effect: "Conexiones evaluadas en su configuración real de voces; evitar falsas retenciones por equivalencia de octava o de pitch-class set."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-013
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+context_dependencies:
+  - Texturas donde registro y asignación son audibles y estables.
+  - Marco declarado para la lectura de identidad.
+  - Tarea de llegada acotada para el split bajo/soprano (no generalizar).
+counterproductive_conditions:
+  - Tratar pitch-class retenida en otra octava como tono común retenido.
+  - Optimizar por distancia agregada mínima (CAND-HAR-014).
+  - Esperar conexión o llegada desde el pitch-class set sin configuración.
+  - Cargar a una variable (p. ej., spacing) el efecto de la configuración completa.
+alternatives:
+  - Desplazamiento registral deliberado como diferenciación (haz seccional).
+  - Cambio de etiqueta/root en vez de revoicing (HAR-002/004).
+uncertainty_confidence: "Baja-media como heurística débil analítica: misma etiqueta admite conducciones distintas según realización (CAND-HAR-016 heredado) + distinción quíntuple analítica (CAND-HAR-019 heredado) + disociación enarmónica como prueba de que el contexto de realización participa en la lectura (OMT VERIFIED, analítico) + tónicas frágiles por inversión como caso de realización que cambia la lectura (Spicer VERIFIED, analítico) + configuración que desambigua loops (Doll cap.6 vía reseña). EXP-001 (n=1) excluido como soporte (indicio propio aislado de parentesco melódico, sin transferencia a voicing general); Bregman excluido (solo-marco); Sears excluido (llegada, no conducción entre sonoridades; se cede a 028). Sin medida dedicada de equivalencia registral en conducción (GAP). Escucha obligatoria."
+genre_sensitivity: "Media: las variables son transversales; su peso depende de textura y tradición."
+evaluation_falsification: "Medida donde oyentes traten sistemáticamente pitch-class en otra octava como equivalente a nota retenida (misma continuidad y atribución) exigiría degradar la distinción; medida de ponderación entre variables exigiría reformular como heurística ponderada."
+structure_perception_composition:
+  structure: "Mismo contenido de pitch classes con distinta realización (alturas exactas, bajo, registro, asignación) y por tanto distinta configuración concreta de conducción."
+  perception: "Ningún efecto perceptivo afirmado (ni discontinuidad, ni preferencia, ni mejor/peor conexión); equivalencia registral sin medida (GAP)."
+  composition: "Heurística débil justificada: leer posibilidades de conducción desde la realización, no desde el pitch-class set; decidir por variable con verificación por escucha."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (RQ-HAR-008): overlap test del Director superado por núcleo voice-leading (realización→configuración concreta de conducción), distinto de 019 (distinción analítica) y 040 (identidad infradeterminada); consecuencias de llegada/identidad cedidas a 028/040/036; EXP-001/Bregman/Sears excluidos como soportes (fuera de alcance); alcance analítico/decisionario sin efecto perceptivo."
+cross_references:
+  - CAND-HAR-013
+  - CAND-HAR-014
+  - CAND-HAR-019
+  - CAND-HAR-028
+  - CAND-HAR-036
+  - CAND-HAR-040

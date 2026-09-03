@@ -1,0 +1,48 @@
+id: CAND-HAR-042
+status: candidate
+compositional_problem: "Elegir entre estado fundamental e inversiones sin aplicar una jerarquía universal de estabilidad ni tratar toda segunda inversión como un fenómeno."
+claim: "Las jerarquías de estabilidad por inversión de los manuales (root-position como lo más estable en sentido teórico; primera inversión como más suave; segunda inversión como inestable) son lecturas de tradición/tarea, no leyes generales ni rankings perceptivos: el estado fundamental es posición de referencia taxonómica y configuración no-marcada de llegada en marcos acotados; la primera inversión aporta conexión de bajo por grados y uso prolongacional/lineal en texturas a voces estables (marco de práctica común, textos pendientes); la segunda inversión no se trata como un fenómeno (roles: cadential 6/4 como ornamento de dominante y no como tónica, marco clásico con apoyo inspeccionado; sonoridades de tónica fragilizada por inversión incluyendo segundas inversiones, analítico pop; subtipos passing/pedal/arpeggiating como roles de marco clásico con textos pendientes de inspección). El único efecto general con apoyo analítico es la fragilización de la tónica presente por inversión (Spicer, analítico, no perceptivo). Ninguna medida perceptiva root-vs-inversiones fue inspeccionada; ningún puente textbook→percepción queda justificado; no se afirma que root-position se oiga más estable, que la primera inversión se oiga más suave, ni que la segunda inversión tenga una propiedad intrínseca."
+structural_variable: "inversion choice (root / first / second decomposed by supported framework role: cadential-6/4-as-dominant vs. inversion-weakened-tonic vs. further classical subtypes pending text) evaluated with soprano + meter + position + tradition"
+possible_action: ""
+expected_effect: "Inversión elegida por rol declarado en marco (línea de bajo, paso, señalización cadencial clásica, fragilización deliberada) con escucha obligatoria; fuera del marco, efecto incierto."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - REPERTOIRE_ANALYSIS
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-PEDAGOGICAL-012
+  - SRC-EMPIRICAL-016
+  - SRC-THEORETICAL-002
+project_evidence: ""
+context_dependencies:
+  - Marco declarado (clásica para 6/4 taxonómico; pop para fragilidad analítica).
+  - Soprano de llegada, posición métrica y formal (llegada multidimensional).
+  - Textura a voces estables para claims de suavidad (no transferible automáticamente).
+counterproductive_conditions:
+  - Usar root-position para llegadas importantes esperando estabilidad/cierre automáticos.
+  - Tratar todo 6/4 como tónica inestable o como dominante sin declarar rol.
+  - Importar cadential 6/4 al pop/loop esperando señalización cadencial.
+  - Convertir coeficientes Sears en pesos compositivos.
+alternatives:
+  - Revoicing sin cambio de bajo (CAND-HAR-043).
+  - Llegada por otros dominios con armonía constante (CAND-HAR-028/031).
+uncertainty_confidence: "Baja-media como anti-regla acotada con taxonomía parcial: 6/4 cadencial como sonoridad afiliada a dominante (OMT Augmented Sixth VERIFIED: Ger+6 resuelve a V a menudo vía cadential 6/4; síntesis HAR-005 auditada; Sears PARTIAL como predictor en tarea 1–7 Mozart/teclado, descriptivo, nunca peso); fragilidad analítica por inversión VERIFIED (Spicer §§3/7); subtipos passing/pedal/arpeggiating como marco-existencia sin texto inspeccionado (no sostienen sub-claims); pedagogía clásica PARCIAL sin texto. COMPOSITION HEURISTIC negativa sin possible_action (ninguna técnica positiva justificada)."
+genre_sensitivity: "Alta: cada rol de inversión vive en su tradición; la fragilidad pop es analítica, no medida."
+evaluation_falsification: "Medida donde oyentes ordenen sistemáticamente root > 1ª > 2ª en estabilidad a través de contextos y estilos exigiría reformular hacia jerarquía perceptiva acotada; repertorio donde 6/4 funcione como sonoridad estable independiente exigiría ampliar la taxonomía."
+structure_perception_composition:
+  structure: "Posición del bajo (root/3ª/5ª) con rol de marco declarado (cadencial-dominante vs. tónica fragilizada vs. subtipos pendientes); soprano y posición registradas."
+  perception: "Jerarquía perceptiva general sin medida (GAP); Sears solo como descriptor de tarea acotada (ratings 1–7, Mozart/teclado, músicos vs. no-músicos)."
+  composition: "Heurística negativa: no generalizar jerarquías de manual como rankings perceptivos ni como reglas de elección; elegir por rol declarado con escucha."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (RQ-HAR-008): clase HYPOTHESIS→COMPOSITION HEURISTIC (anti-regla acotada + taxonomía parcial; ninguna técnica positiva); negaciones perceptivas explícitas (root-position/first/second sin afirmación de audición); 6/4 re-soportado en SRC-PEDAGOGICAL-012 (no 010) + HAR-005 + Sears PARTIAL; passing/pedal/arpeggiating marcados como marco sin texto (no sostienen sub-claims)."
+cross_references:
+  - CAND-HAR-003
+  - CAND-HAR-008
+  - CAND-HAR-015
+  - CAND-HAR-027
+  - CAND-HAR-028
+  - CAND-HAR-029

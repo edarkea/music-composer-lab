@@ -1,0 +1,46 @@
+id: CAND-HAR-041
+status: candidate
+compositional_problem: "Decidir qué poner en el bajo y cómo moverlo como capa estructural propia, sin deducirlo del root ni confundirlo con la función."
+claim: "Root y bajo son variables compositivas distintas que pueden divergir y deben registrarse por separado (DISTINCT VARIABLES / CAN DIVERGE, no INDEPENDENT en sentido estadístico o causal): el bajo aporta posición registral real, trayectoria lineal audible, anclaje rítmico y rol de pedal/drone — ninguno deducible del root — y su trayectoria (repetición, pedal, grados, quintas, terceras, cromatismo, línea, ostinato, contrario) puede participar en la lectura de centro, dirección y función junto al resto del contexto, sin determinarlos sola (insuficiencia, no irrelevancia; sin primado causal ni perceptivo del bajo; sin irrelevancia del root). El pedal es indicio derrotable en ambas direcciones (fija en 'Sara', engaña en 'Human'); la nota más grave no determina el root; inferir función solo desde moción de bajo comete el mismo error que desde root motion. Ninguna ponderación bajo-vs-root queda establecida y ninguna técnica de bajo queda justificada como receta."
+structural_variable: "bass note + bass role (chord member, inversion tone, pedal, line, counterpoint, anchor, riff, non-chord tone, slash bass, structural trajectory) + bass trajectory, tracked separately from root and root motion"
+possible_action: ""
+expected_effect: "Bajo evaluado como capa con rol y trayectoria propios; fuera de convergencia con colección, conducción y posición, efecto incierto."
+evidence_class: HYPOTHESIS
+support_basis:
+  - REPERTOIRE_ANALYSIS
+  - THEORETICAL_SCHOLARSHIP
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-031
+  - SRC-EMPIRICAL-014
+project_evidence: ""
+context_dependencies:
+  - Rol del bajo declarado en contexto (miembro, pedal, línea, ancla, riff).
+  - Convergencia con colección, conducción superior, metro y esquema.
+  - Registro grave audible y claro (dependencia de arreglo).
+counterproductive_conditions:
+  - Inferir centro o función desde el bajo aislado.
+  - Prescribir pedal como fijador de centro.
+  - Tratar root y bajo como intercambiables.
+  - Funcionalizar cada moción de bajo sin comprobar el resto del contexto.
+alternatives:
+  - Reforzar por root motion con esquema declarado (CAND-HAR-009).
+  - Confirmar por posición/duración (CAND-HAR-005).
+  - Organizar por loop con bajo ostinato (CAND-HAR-011/026).
+uncertainty_confidence: "Baja-media: distinción root-vs-bass analíticamente sólida; apoyo exclusivamente de repertorio inspeccionado (pedal bidireccional VERIFIED, vamp-§12, pedal modal Everett, Doll-configuración vía reseña) sin ninguna medida perceptiva dedicada; ponderación causal pendiente. HYPOTHESIS sin possible_action."
+genre_sensitivity: "Alta: el rol del bajo difiere entre bajo funcional clásico, riff pop, drone modal y sub electrónico."
+evaluation_falsification: "Medida dedicada donde variar solo el bajo (colección, conducción y metro fijos) no modifique atribución de centro/función debilitaría el claim; medida donde el bajo domine sistemáticamente exigiría reformularlo como ponderación."
+structure_perception_composition:
+  structure: "Altura grave realizada + rol + trayectoria, registrados por separado del root; divergencia documentada en ambas direcciones (mismo root/distinto bajo; mismo bajo/distinta armonía superior)."
+  perception: "Sin medida dedicada bajo-vs-root; sin peso ni primado perceptivo establecido; casos analíticos en ambas direcciones (fija/engaña)."
+  composition: "Sin acción justificada todavía (possible_action vacío): registrar como capa a coordinar, no como técnica. No desbloquea CAND-HAR-002 como guía accionable."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (RQ-HAR-008): término `independent` sustituido por DISTINCT VARIABLES / CAN DIVERGE (sin independencia estadística/causal demostrada); `co-determina` reformulado como participación contextual sin determinación en solitario; primado del bajo e irrelevancia del root explícitamente excluidos; alcance diagnóstico/analítico, sin ponderación ni técnica."
+cross_references:
+  - CAND-HAR-002
+  - CAND-HAR-009
+  - CAND-HAR-012
+  - CAND-HAR-026
+  - CAND-HAR-040

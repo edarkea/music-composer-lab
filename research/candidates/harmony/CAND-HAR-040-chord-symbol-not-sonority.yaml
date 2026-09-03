@@ -1,0 +1,41 @@
+id: CAND-HAR-040
+status: candidate
+compositional_problem: "Realizar una armonía planificada sin asumir que su cifrado determina una única sonoridad, identidad o interpretación."
+claim: "El cifrado de un acorde no especifica unívocamente bajo, alturas exactas, registro, spacing, duplicación, omisión ni asignación a voces (claim estructural/representacional, no perceptivo): la misma etiqueta admite realizaciones que los marcos leen de forma distinta (tónica frágil por inversión, analítico pop; cadential 6/4 como dominante y no como tónica, marco clásico; CTo7 vs. viio7/aplicado y CT+6 vs. Ger+6 con mismas alturas y distinta función según vecinos y resolución; mismo loop con distinto centro según configuración). Ninguna conducción, función ni efecto queda justificado como deducción del cifrado. Esto no establece que toda realización preserve la función, ni que la realización no afecte la interpretación, ni que los voicings sean equivalentes; tampoco establece que la etiqueta sea irrelevante (ancla clase y esquema analíticos); su peso propio queda sin medir."
+structural_variable: "realized harmonic sonority (bass + inversion + exact pitches + register + spacing + doubling + omission + voice allocation; timbre/instrument/production excluded — CROSS_DOMAIN_REQUIRED, Arrangement) evaluated jointly with label + framework + context, never deduced from label"
+possible_action: "Tratar la selección armónica (qué armonía) y la realización armónica (cómo suena distribuida) como dos decisiones compositivas separadas: al leer o planear, partir de la realización completa (qué suena en qué registro con qué bajo), no del cifrado; comprobar inversión, duplicación, registro y marco antes de calificar identidad, función o conducción."
+expected_effect: "Evitar falsas deducciones (este cifrado exige tal sonoridad; este V/x ya tonicaliza); evaluar cada evento en su realización completa."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-PEDAGOGICAL-013
+  - SRC-PEDAGOGICAL-010
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+context_dependencies:
+  - Marco declarado (la identidad se adscribe bajo marco, nunca en bruto).
+  - Contexto precedente/siguiente y resolución verificada (disociación enarmónica).
+  - Textura donde la realización es audible (dependencia de arreglo).
+counterproductive_conditions:
+  - Ninguna conocida; es heurística negativa, no técnica.
+alternatives:
+  - Declarar realización (bajo, inversión, registro, asignación) antes de calificar el evento.
+uncertainty_confidence: "Media-baja como cautela negativa estructural: disociación enarmónica CTo7/aplicado y CT+6/Ger+6 VERIFIED como análisis (OMT, SRC-PEDAGOGICAL-013; analítico, no perceptivo); tónicas frágiles por inversión VERIFIED analíticamente (Spicer §§3/7); mismo loop con distinto centro según configuración (Doll cap.6 vía reseña); same-symbol != no-change (HAR-004). Sin medida que separe etiqueta de realización en juicios de oyentes."
+genre_sensitivity: "Media: la cautela es transversal; qué realizaciones son idiomáticas depende de la tradición."
+evaluation_falsification: "Medida donde variar solo la etiqueta (realización fija) modifique sistemáticamente juicios de identidad/función, o catálogo donde cada etiqueta admita una única realización idiomática por tradición, exigiría reformular como ponderación con primado de la realización."
+structure_perception_composition:
+  structure: "Etiqueta con una realización concreta (bajo, inversión, registro, duplicación, asignación) entre varias posibles; sonoridad realizada sin timbre/instrumento/producción."
+  perception: "Sin medida dedicada que aísle etiqueta de realización; atribución analítica contexto-dependiente."
+  composition: "Heurística negativa justificada en versión débil: no deducir realización, identidad ni función desde el cifrado; decidir selección y realización por separado."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (RQ-HAR-008): claim fijado como representacional/estructural (no perceptivo); negaciones explícitas añadidas (no toda realización preserva función; no equivalencia de voicings); timbre excluido de la sonoridad armónica (CROSS_DOMAIN_REQUIRED, Arrangement); action de dos decisiones conservada como heurística diagnóstica, sin dogma de arquitectura."
+cross_references:
+  - CAND-HAR-007
+  - CAND-HAR-009
+  - CAND-HAR-016
+  - CAND-HAR-024
+  - CAND-HAR-036

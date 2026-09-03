@@ -1,0 +1,38 @@
+id: CAND-HAR-045
+status: candidate
+compositional_problem: "Usar registro y spacing para conformar la sonoridad sin esperar que determinen función, centro o calidad."
+claim: "Registro y spacing alteran la sonoridad armónica realizada (alturas exactas, encuadre grave-agudo, estructura interválica vertical) sin determinar función armónica, centro ni calidad compositiva: un voicing más consonante o abierto no es más estable tonalmente (extensión de CAND-HAR-003 a realización); el lenguaje emocional del spacing (abierto = poderoso/espacioso, cerrado = íntimo/denso) carece de apoyo; las reglas de spacing grave son marcos acústicos no inspeccionados (fusión, rugosidad, critical bandwidth) que no se convierten en universales armónicos; no prohibir voicings graves rugosos (aspereza intencional documentada en planing/power-chord/pedal modal). Tres constructos separados siempre: ROUGHNESS ACÚSTICA != FUNCIÓN ARMÓNICA != CALIDAD COMPOSITIVA. Efectos específicos retenidos solo con apoyo directo: la registración de llegada (bajo/soprano) modula ratings de completitud en tarea acotada (Sears PARTIAL: Mozart/teclado/1–7, por formación); prominencia por registro sin medida dedicada (no afirmada)."
+structural_variable: "register + spacing (close/open/wide + bass-to-upper gap + low-register intervals) evaluated as realized-sonority dimensions (timbre/instrument/production excluded — CROSS_DOMAIN_REQUIRED), never as function/center/quality determinants"
+possible_action: "Al conformar una sonoridad, decidir registro y spacing por el efecto sonoro buscado con escucha (claridad, encuadre, aspereza intencional o no) sin leer en ellos función, centro ni calidad; no prescribir ni prohibir spacing por sonoridad (incluido grave rugoso)."
+expected_effect: "Sonoridades evaluadas en lo que suenan; evitar falsas reglas (abierto = mejor; grave rugoso = mal voicing; consonante = estable)."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - EXTERNAL_EMPIRICAL
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-EMPIRICAL-016
+  - SRC-ACADEMIC-024
+context_dependencies:
+  - Registro grave audible y timbre declarado (dependencia de arreglo).
+  - Marco acústico declarado si se invoca rugosidad (solo-marco hasta inspeccionar).
+  - Intención (aspereza deliberada vs. claridad buscada).
+counterproductive_conditions:
+  - Ninguna conocida como cautela; como técnica positiva ninguna establecida.
+alternatives:
+  - Cambiar duplicación/omisión o densidad de arreglo en vez de spacing.
+uncertainty_confidence: "Baja-media como cautela negativa: disociación sonoridad-rol VERIFIED analíticamente (Spicer §§3/7: segunda inversión frágil; soul-dominant disonante-funcional); Sears PARTIAL (registro de llegada por formación); Parncutt/TPS solo-marco; marcos acústicos graves UNVERIFIED; sin medida rugosidad→función. Heurística negativa sólida, acción positiva solo con escucha."
+genre_sensitivity: "Media: la cautela es transversal; los correlatos sonoros concretos dependen de timbre y tradición."
+evaluation_falsification: "Medida donde cierto spacing/registro prediga sistemáticamente función o centro a través de contextos exigiría reformular como heurística ponderada acotada; correspondencia biunívoca rugosidad-centro refutaría la no-equivalencia (no conocida)."
+structure_perception_composition:
+  structure: "Distribución registral e interválica de la realización (spacing, zona, gap grave); sonoridad sin timbre/instrumento/producción."
+  perception: "Rugosidad como constructo separado sin medida dedicada con estímulos armónicos (sin efecto afirmado); prominencia por registro no afirmada; registración de llegada con efecto acotado a tarea Sears (Mozart/teclado/1–7/por formación); función no determinada."
+  composition: "Heurística negativa justificada (no leer función/calidad desde sonoridad; no prohibir grave rugoso) + decisión sonora por escucha; ningún spacing prescrito."
+audit_recommendation: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+verification_note: "AUDIT COMPLETED (RQ-HAR-008): mitad estructural directa (cambiar registro/spacing cambia la sonoridad realizada); mitad perceptiva podada a lo apoyado (Sears acotado; prominencia retirada; rugosidad como constructo separado sin efecto); frontera de sonoridad aplicada (timbre fuera, CROSS_DOMAIN_REQUIRED); solape con 003/019/043 delimitado (extensión a realización con decisión sonora propia)."
+cross_references:
+  - CAND-HAR-003
+  - CAND-HAR-019
+  - CAND-HAR-028
+  - CAND-HAR-043
