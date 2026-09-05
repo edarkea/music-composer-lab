@@ -1,5 +1,8 @@
 id: CAND-HAR-050
 status: candidate
+audit_outcome: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Separar llegada melódica y armónica; la convergencia puede contribuir en contextos inspeccionados, pero no es requisito universal de cierre."
 compositional_problem: "Coordinar llegadas melódicas y armónicas (reforzarlas, separarlas o dejarlas abiertas) sin confundir llegada con cierre."
 claim: "Las llegadas melódica y armónica pueden converger o divergir: la armonía puede reforzar una llegada melódica (objetivo tónico/modal + soprano escalar + bajo con proceso + métrica fuerte + posición formal), contradecirla o retrasarla (loop que continúa, bajo en movimiento, cambio tras la llegada, tónica frágil deliberada), y la llegada armónica puede preceder al cierre melódico. La llegada tónica no equivale al cierre: el cierre completo exige convergencia multi-dominio (melodía, armonía, metro, forma y, donde aplique, arreglo/prosodia). Ninguna inversión, bajo o registro aislados miden fuerza de cierre."
 structural_variable: "melodic arrival + harmonic arrival + cadential process + metric/formal position evaluated jointly; closure only under cross-domain convergence, never from one domain alone"

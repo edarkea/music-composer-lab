@@ -1,5 +1,8 @@
 id: CAND-HAR-052
 status: candidate
+audit_outcome: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Las categorías de no-miembro dependen de marco, tiempo y conducción; no forman un mecanismo único."
 compositional_problem: "Clasificar y usar notas melódicas fuera del acorde sin inferir tensión, belleza, error ni obligación de resolver desde la etiqueta."
 claim: "Las categorías de non-chord tone (paso, bordadura, suspensión, retardación, apoyatura, anticipación, fuga, pedal melódico, paso/bordadura acentuados, irresueltos) dependen de marco declarado, colocación temporal y comportamiento de conducción: la misma configuración interválica cambia de categoría y de disponibilidad según tradición (práctica común, modal, pop/rock vocal con anticipación documentada en corpus). Ninguna etiqueta infiere por sí sola tensión percibida, expresividad, error ni resolución obligatoria; fuera del marco clásico no existe deber general de resolver."
 structural_variable: "non-chord-tone category declared with framework + temporal placement (strong/weak, pre-onset, extended) + voice-leading behavior (step/skip, preparation, resolution, sustain), never interval alone"

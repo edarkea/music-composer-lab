@@ -1,5 +1,8 @@
 id: CAND-HAR-046
 status: candidate
+audit_outcome: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Distinción negativa: pertenencia a la sonoridad realizada no determina estabilidad, consonancia ni calidad."
 compositional_problem: "Decidir si una nota melódica es estable o utilizable sin deducirlo de su pertenencia al acorde."
 claim: "La pertenencia de un pitch melódico a la sonoridad realizada (chord tone / non-chord tone bajo marco declarado) no equivale a estabilidad melódica, ni a consonancia sensorial, ni a calidad de la nota: un miembro del acorde puede ser contextualmente activo (séptima con tendencia en marco clásico, tónica frágil por inversión en pop) y un no-miembro puede ser localmente estable (pedal melódico, tono común entre armonías, miembro estable de loop cromático, anticipación de género). El binario chord/non-chord clasifica contra una sonoridad; no diagnostica estabilidad ni prescribe uso."
 structural_variable: "melodic pitch evaluated jointly against realized sonority (declared framework) + collection + duration + metric position + repetition + phrase position, never membership alone"

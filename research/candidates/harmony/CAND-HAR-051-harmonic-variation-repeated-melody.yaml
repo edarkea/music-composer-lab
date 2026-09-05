@@ -1,5 +1,8 @@
 id: CAND-HAR-051
 status: candidate
+audit_outcome: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "El cambio armónico puede coexistir con repetición melódica, pero no establece por sí solo variación o desarrollo percibidos."
 compositional_problem: "Acompañar material melódico repetido con armonía igual o cambiada sin romper identidad ni prometer desarrollo automático."
 claim: "La variación armónica puede acompañar material melódico repetido (mismo motivo + bajo cambiado, revoicing, inversión distinta, identidad o colección cambiadas dentro del centro) sin alterar la identidad melódica, cuya preservación sigue las palancas de RQ-MEL-001 (tolerancia grande en una dimensión con el resto intacto; degradación con cambio multidimensional). El cambio armónico no crea automáticamente variación percibida ni desarrollo: es variación de superficie disponible con funciones candidatas (contexto cambiado, contraste seccional, final cambiado, retorno con reinterpretación) pendientes de medida."
 structural_variable: "repeated melodic motif (pitches / rhythm / accents / register preserved per RQ-MEL-001 levers) × harmonic change level (bass / inversion / identity / function / collection / timing / voicing), with operation vs function declared separately"

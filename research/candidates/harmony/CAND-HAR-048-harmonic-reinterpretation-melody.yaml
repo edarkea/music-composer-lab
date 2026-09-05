@@ -1,5 +1,8 @@
 id: CAND-HAR-048
 status: candidate
+audit_outcome: KEEP_AS_IS
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "La separación entre reinterpretación analítica y perceptiva está correctamente delimitada; la parte perceptiva requiere una tarea específica."
 compositional_problem: "Reinterpretar un mismo pitch o fragmento melódico cambiando su soporte armónico."
 claim: "El contexto armónico puede reinterpretar el mismo pitch melódico (distinto grado, distinto miembro, distinta función local) sin alterar la melodía: lo que cambia es el marco de referencia (root, bajo, colección, objetivo local). La reinterpretación analítica (otra lectura admisible) está soportada estructuralmente (matriz de lecturas cromáticas, disociación enarmónica con mismas alturas y distinta función según contexto); la reinterpretación perceptiva (el oyente escucha otra función) no tiene medida dedicada inspeccionada y no se infiere de la anterior. Ninguna reinterpretación promete efecto emocional."
 structural_variable: "scale-degree / chord-member / functional reading of a fixed melodic pitch under varying harmonic support (bass + collection + inversion + local target), with analytical vs perceptual reinterpretation declared separately"

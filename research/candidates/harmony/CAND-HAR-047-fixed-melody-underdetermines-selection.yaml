@@ -1,5 +1,8 @@
 id: CAND-HAR-047
 status: candidate
+audit_outcome: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Afirmación estructural de infradeterminación; varias opciones admisibles no implican opciones igualmente buenas ni preferencia perceptiva."
 compositional_problem: "Elegir una armonía que acompañe una melodía fija sin asumir que la melodía determina un único acorde."
 claim: "Una melodía fija (nota o fragmento) infradetermina la selección armónica: el mismo evento melódico admite varias armonías admisibles (distinto miembro, tono común entre acordes, pedal, préstamo con centro persistente, gesto local dentro de loop, divorce documentado donde melodía y armonía apuntan a centros distintos). La melodía propone candidatos y elimina algunos; no selecciona un único acorde ni una única función. Esto no establece que toda armonía valga (la convergencia con colección, bajo, métrica y forma filtra), ni que las opciones sean equivalentes."
 structural_variable: "harmonic selection (target identity / relation / collection / timing) under fixed melodic event, filtered by collection + bass + metric/formal position + framework, never deduced from melody alone"

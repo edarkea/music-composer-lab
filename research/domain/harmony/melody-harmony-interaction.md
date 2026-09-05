@@ -790,6 +790,20 @@ plausible-bloqueo; U = uncertain):
 26. ritmos deben alinearse — S (falsa; timing separado 021).
 27. cierre melódico predecible desde armonía sola — S (falsa; 028).
 
+# Candidate Audit (CAND-HAR-046–052)
+
+Auditoría epistémica completada: 0 `STRONG_CANDIDATE`, 7
+`POSSIBLE_WITH_SCOPE`, 0 `NOT_READY` y 0 rechazados. Todos permanecen
+`candidate`; no se promociona ninguno.
+
+046–047, 049–052 reciben `REVISE`; 048 queda `KEEP_AS_IS`. La auditoría
+mantiene separadas estructura, percepción y composición. La reinterpretación
+analítica no se presenta como cambio perceptivo; la pertenencia se refiere a
+un objeto armónico declarado, preferentemente la sonoridad realizada. Las
+acciones conservadas son diagnósticas o heurísticas débiles, no reglas
+generativas. La convergencia de llegadas puede contribuir al cierre en
+contextos inspeccionados, pero no es requisito universal ni tiene pesos.
+
 # Existing-Candidate Impact
 
 Sin editar ni re-auditar (solo contexto nuevo que HAR-009 aporta):

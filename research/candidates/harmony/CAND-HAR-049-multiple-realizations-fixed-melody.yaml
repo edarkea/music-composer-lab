@@ -1,5 +1,8 @@
 id: CAND-HAR-049
 status: candidate
+audit_outcome: REVISE
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "La melodía fija debe restringir la realización con contenido interactional frente a 040/043, sin rankear voicings."
 compositional_problem: "Realizar una armonía ya elegida bajo una melodía fija (bajo, inversión, voicing) sin asumir una única realización correcta."
 claim: "La misma identidad armónica admite varias realizaciones bajo una melodía fija: la melodía (nota techo, tesitura habitable, duplicaciones a evitar, cruces registrales) restringe el espacio (qué bajos, inversiones, spacings y asignaciones quedan estructuralmente posibles) sin determinar una única realización. Toda elección declara marco e inventario (bajo, inversión con 6/4 descompuesto, registro, spacing, duplicación/omisión, asignación); ninguna promete por sí sola estabilidad, función, cierre o calidad."
 structural_variable: "realized sonority (bass + inversion + exact pitches + register + spacing + doubling + omission + voice allocation) under fixed top-line melody + singability constraint, evaluated against framework, never deduced from label"

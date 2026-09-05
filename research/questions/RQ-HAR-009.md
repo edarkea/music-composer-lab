@@ -157,7 +157,16 @@ duplicado paralelo CAND-MEL; forma ligera del roadmap §5):
 
 IDs 001–045 no reutilizados. Ningún claim pasa a `manual/` ni `rules/`
 sin revisión y aprobación del Project Owner y del Music/Methodology
-Director. Audit de candidatos NO realizado en esta tarea.
+Director. La auditoría de candidatos queda registrada en `Candidate Audit
+Status` más abajo; no implica promoción.
+
+## Candidate Audit Status
+
+`candidate_audit_status: COMPLETED` (CAND-HAR-046–052 audit completed;
+no promotion; lifecycle remains unsolved). The audit result is seven
+`POSSIBLE_WITH_SCOPE`, zero `STRONG_CANDIDATE`, zero `NOT_READY`, and zero
+rejected candidates. The earlier synthesis status is retained as historical
+context; this section records the completed audit state.
 
 ## Unresolved Issues
 
