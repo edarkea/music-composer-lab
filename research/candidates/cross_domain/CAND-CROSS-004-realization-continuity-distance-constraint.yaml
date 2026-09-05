@@ -1,0 +1,29 @@
+id: CAND-CROSS-004
+status: candidate
+compositional_problem: "Encontrar un criterio válido para comparar realizaciones armónicas cuando el objetivo es continuidad entre sonoridades sucesivas."
+claim: "La evidencia inspeccionada permite usar perceived musical distance entre sonoridades sucesivas como constructo más estrecho que debe mantenerse separado de continuidad compositiva. En pares de trichords, el total de desplazamiento y la retención de tonos comunes influyeron en ratings de distance, pero la métrica taxicab no fue suficiente y no se validó automáticamente como medida de continuity."
+structural_variable: "realized voice displacement, common-tone retention, direction, number of moving voices, register, spacing and voice allocation"
+possible_action: "Para una futura comparación de realizaciones, declarar si el criterio es distance percibida o continuity; no usar suma de movimiento, tonos comunes o roughness como proxy automático de continuity."
+expected_effect: "Filtrar criterios analíticos o acústicos que no correspondan al objetivo secuencial y preparar una comparación futura con alcance explícito."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [EXTERNAL_EMPIRICAL, THEORETICAL_SCHOLARSHIP]
+sources:
+  - SRC-EMPIRICAL-029
+  - SRC-EMPIRICAL-030
+  - SRC-EMPIRICAL-031
+  - SRC-EMPIRICAL-032
+context_dependencies: "Tarea de distance o continuity, pares de sonoridades, número de voces, timbre, registro, spacing, afinación, contexto tonal, melodía, bajo y escala de textura."
+counterproductive_conditions: "Tratar perceived distance como continuity; minimizar movimiento universalmente; asumir que tonos comunes, roughness, consonance o preference determinan conexión armónica."
+alternatives: "Rating de distance, tarea de connectedness si se identifica, seguimiento de voice-streams, expectancy o una medida futura directamente validada."
+uncertainty_confidence: "Media para distance percibida en el paradigma de trichords; baja para continuity compositiva y transferencia a textura popular."
+genre_sensitivity: "Alta entre trichords sintéticos, secuencias tonales occidentales y realización popular; transferencia popular UNKNOWN."
+evaluation_falsification: "Una fuente directa demuestra que la misma medida predice continuity percibida bajo una tarea secuencial y con realizaciones comparables; o que distance, common tones y continuity se distinguen sistemáticamente bajo el objetivo declarado."
+structure_perception_composition:
+  structure: "Realizaciones sucesivas con desplazamientos, tonos comunes, registro, spacing y asignación declarados."
+  perception: "Ratings de distance, expectancy, consonance o streaming según tarea; no se colapsan en continuity."
+  composition: "Seleccionar un criterio declarado para futuras comparaciones sin elevar una métrica analítica a regla de voicing."
+phase2_candidate_type: CONSTRUCT_TRANSFER_CONSTRAINT
+audit_outcome: NOT_AUDITED
+promotion_readiness: POSSIBLE_WITH_SCOPE
+audit_status: NOT_STARTED
+audit_evidence_gate: PASS

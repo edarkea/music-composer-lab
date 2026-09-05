@@ -1,0 +1,27 @@
+id: CAND-CROSS-003
+status: candidate
+audit_status: COMPLETED
+audit_evidence_gate: PASS
+compositional_problem: "Elegir entre recurrencia exacta y una variante controlada cuando la meta declarada es preservar reconocimiento melodico."
+claim: "En el experimento de reconocimiento de melodias folk familiares inspeccionado, la version intacta fue mas reconocible que una distorsion que preservaba contorno y relaciones intervalicas relativas, y esta condicion fue mas reconocible que una distorsion que preservaba solo contorno. Es un ranking acotado de representaciones bajo esa tarea; no demuestra que el retorno exacto sea preferible a la variacion en general ni que una recurrencia formal tenga exito."
+structural_variable: "pitch/interval representation and contour preservation in exact or controlled varied recurrence"
+possible_action: "Si la meta declarada es reconocimiento de material previamente establecido, declarar la representacion que se quiere conservar y comparar una variante especifica con una condicion intacta; usar el resultado solo como filtro o ranking acotado, no como regla de retorno formal."
+expected_effect: "Mejor trazabilidad entre una invariante melodica declarada y una decision de variacion, con posible filtro o ranking acotado."
+evidence_class: EXPERIMENTAL RESULT
+support_basis: [EXTERNAL_EMPIRICAL]
+sources:
+  - SRC-EMPIRICAL-027
+  - SRC-EMPIRICAL-028
+context_dependencies: "Tarea de recognition, familiaridad, memoria corta/larga, transposicion, representacion comparada, repertorio melodico y escala del retorno."
+counterproductive_conditions: "Transferir reconocimiento de melodias aisladas a retorno formal de frase/seccion/cancion; confundir recognition con similarity, memorability, liking o formal success."
+alternatives: "Preservar solo contorno, preservar contorno e intervalos relativos, preservar chroma, retornar exactamente o cambiar otra dimension bajo tarea declarada."
+uncertainty_confidence: "Media para los contrastes de recognition inspeccionados; baja para transferencia compositiva y retorno formal."
+genre_sensitivity: "Desconocida fuera de melodias folk/experimentales occidentales; transferencia a popular song: UNKNOWN TRANSFER."
+evaluation_falsification: "En el mismo alcance y tarea, la version intacta no supera la distorsion contorno+intervalos relativos, o contorno+intervalos no supera contorno solo; cualquier resultado debe conservar la representacion y la tarea."
+structure_perception_composition:
+  structure: "Version intacta y variantes que preservan o alteran relaciones de pitch/interval/contour."
+  perception: "Reconocimiento/discriminacion en tareas de memoria melodica; esto no equivale automaticamente a identidad perceptiva ni a formal return."
+  composition: "Ranking posible solo entre la baseline y una variante especifica bajo criterio de recognition."
+phase2_candidate_type: COMPARATIVE_DECISION_KNOWLEDGE
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
