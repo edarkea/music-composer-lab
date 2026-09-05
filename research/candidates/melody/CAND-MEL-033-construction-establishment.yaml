@@ -1,0 +1,23 @@
+id: CAND-MEL-033
+status: candidate
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
+compositional_problem: "Distinguir inventar una unidad de hacer que se establezca."
+claim: "La especificación compositiva de una unidad candidata, su presentación o recurrencia formal y su eventual establecimiento perceptivo son procesos distintos; la repetición puede reforzar o delimitar material en marcos determinados, pero no es universalmente necesaria ni garantiza reconocimiento."
+structural_variable: "presentación y recurrencia posteriores, separadas de la especificación inicial"
+possible_action: "Componer una unidad con límites explícitos y decidir después si repetirla, variarla o no recurrir a ella."
+expected_effect: "Mantener separadas la decisión de crear material, la operación formal de presentarlo y la pregunta perceptiva de si se reconoce como unidad."
+evidence_class: COMPOSITION HEURISTIC
+support_basis: [THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY]
+sources: [SRC-THEORETICAL-018, SRC-PEDAGOGICAL-014]
+context_dependencies: ["función formal", "tradición", "objetivo de establecimiento"]
+counterproductive_conditions: ["repetición mecánica sin función"]
+alternatives: ["contraste inmediato", "presentación parcial"]
+uncertainty_confidence: "Media"
+genre_sensitivity: "Alta fuera de la presentación clásica."
+evaluation_falsification: "La distinción no cambia decisiones ni permite describir el estado de la unidad."
+structure_perception_composition:
+  structure: "Candidato inicial y recurrencia posterior son eventos separados."
+  perception: "Las fuentes citadas no miden el establecimiento perceptivo general de una unidad ni prueban que la repetición produzca reconocimiento."
+  composition: "La repetición es una estrategia formal disponible en ciertos marcos, no requisito de existencia ni proxy de memorabilidad."
+audit_note: "Caplin respalda basic idea/presentation dentro de la teoría de forma clásica; Schoenberg respalda construcción y tratamiento. El puente hacia reconocimiento perceptivo debe permanecer sin afirmar."

@@ -1,0 +1,23 @@
+id: CAND-MEL-031
+status: candidate
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
+compositional_problem: "Construir una semilla sin tratarla como universalmente buena."
+claim: "Dentro de un marco compositivo acotado, declarar una operación posterior deseada puede orientar qué propiedades de la semilla conviene hacer explícitas; no permite rankear una mejor semilla en general ni determina de forma única su estructura."
+structural_variable: "objetivo posterior e invariantes declaradas"
+possible_action: "Antes de seleccionar qué relación interna hacer explícita, declarar la operación posterior que se quiere mantener disponible y filtrar las restricciones pertinentes."
+expected_effect: "Mayor trazabilidad entre decisión inicial y operación posterior."
+evidence_class: COMPOSITION HEURISTIC
+support_basis: [THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY]
+sources: [SRC-PEDAGOGICAL-014, SRC-THEORETICAL-018]
+context_dependencies: ["objetivo explícito", "alcance estilístico declarado"]
+counterproductive_conditions: ["usar el objetivo como ranking de calidad"]
+alternatives: ["construcción exploratoria sin operación prevista"]
+uncertainty_confidence: "Media-baja"
+genre_sensitivity: "Alta; los objetivos y operaciones dependen del marco."
+evaluation_falsification: "Candidatos construidos con objetivo declarado no muestran mayor trazabilidad que candidatos sin objetivo."
+structure_perception_composition:
+  structure: "Relaciones e invariantes se seleccionan respecto de una operación."
+  perception: "No medida."
+  composition: "Heurística de planificación, no ranking."
+audit_note: "La evidencia pedagógica y teórica respalda una orientación goal-conditioned dentro de marcos concretos; no respalda que el objetivo determine la semilla ni que la acción sea universal. GOAL-CONDITIONED != GOAL-DETERMINED."

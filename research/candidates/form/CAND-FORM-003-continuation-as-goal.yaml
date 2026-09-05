@@ -1,0 +1,31 @@
+id: CAND-FORM-003
+status: candidate
+audit_status: COMPLETED
+audit_outcome: REVISE
+claim_status: SUPERSEDED_BY_AUDIT_REVISED_CLAIM
+integration_readiness: NOT_READY
+audit_note: "Caplin sostiene operaciones de continuation dentro de un marco clasico delimitado; el puente hacia continuidad compositiva general y percepcion de continuacion sigue siendo una hipotesis. No convertirlo en ley de fragmentacion o aceleracion."
+audit_revised_claim: "En el analisis de la sentence clasica, continuation puede asociarse a fragmentacion, liquidacion y aceleracion armonica. Fuera de ese marco, conservar una relacion mientras se modifica parte del material es una hipotesis, no una definicion general de continuation."
+capability_test:
+  enumerate: IMPROVES
+  filter: UNCERTAIN
+  rank: DOES NOT IMPROVE
+compositional_problem: "Continuar sin cerrar prematuramente ni perder todo parentesco."
+claim: "Cuando la función es continuation, conservar una relación reconocible mientras se modifica parte del material (por ejemplo, final, fragmentación, ritmo o soporte armónico) es una familia de operaciones disponible; ninguna dimensión aislada define continuación en todos los estilos."
+structural_variable: "preserved relation × changed dimension"
+possible_action: "Mantener una invariante declarada y cambiar otra dimensión para probar continuidad con avance."
+expected_effect: "Continuidad compositiva con posibilidad de movimiento; percepción de continuación pendiente de comprobar."
+evidence_class: HYPOTHESIS
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - CROSS_DOMAIN_CANDIDATE
+sources:
+  - SRC-THEORETICAL-002
+cross_references:
+  - CAND-MEL-008
+  - CAND-MEL-010
+  - CAND-HAR-051
+structure_perception_composition:
+  structure: "Relación preservada con cambio parcial."
+  perception: "La relación estructural no garantiza que el oyente perciba continuación."
+  composition: "El objetivo permite filtrar cambios que cierran o rompen identidad, no rankearlos universalmente."

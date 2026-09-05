@@ -1,0 +1,39 @@
+id: CAND-HAR-059
+status: candidate
+compositional_problem: "Construir un seed que pueda sostener operaciones posteriores sin convertir la aptitud potencial en una garantia estetica."
+claim: "Al construir material inicial puede ser util conservar relaciones transformables para repeticion, continuacion, apoyo melodico, llegada, apertura, retorno, contraste o expansion; esa aptitud es una condicion de diseño, no prueba de utilidad, calidad o memorabilidad."
+structural_variable: "Grados de libertad del seed y relaciones que pueden conservarse, variar o realizarse despues."
+possible_action: "Registrar que operaciones posteriores se desean mantener abiertas y usarlo solo como filtro auxiliar entre seeds, sin convertirlo en ranking."
+expected_effect: "Mejorar el filtrado temprano por compatibilidad futura sin cerrar prematuramente la composicion."
+evidence_class: HYPOTHESIS
+support_basis: "La literatura y los candidatos existentes separan seleccion, realizacion, repeticion, llegada, continuidad y retorno; la conexion operativa desde cero aun no esta validada."
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-031
+  - SRC-THEORETICAL-002
+  - SRC-ACADEMIC-014
+context_dependencies: "Depende de la melodia, forma, instrumentacion, centro, genero, ventana temporal y objetivo artistico."
+counterproductive_conditions: "Optimizar demasiadas operaciones a la vez y producir material neutro, o confundir compatibilidad futura con una razon presente para elegirlo."
+alternatives: "Elegir un seed por una sonoridad inmediata y aceptar despues restricciones de transformacion; o construir desde una melodia fija."
+uncertainty_confidence: "Baja-media; requiere auditoria y experimentos posteriores."
+genre_sensitivity: "Alta."
+evaluation_falsification: "Comparar seeds seleccionados con y sin requisitos de operaciones posteriores y medir si el filtrado mejora sin reducir variedad ni calidad percibida."
+structure_perception_composition:
+  structure: "Relaciones y grados de libertad disponibles para operaciones futuras."
+  perception: "Continuidad, contraste, llegada o retorno solo pueden evaluarse en contexto."
+  composition: "Usar la aptitud futura como filtro auxiliar, no como ranking universal."
+cross_references:
+  - CAND-HAR-040
+  - CAND-HAR-047
+  - CAND-HAR-049
+  - CAND-HAR-050
+  - CAND-HAR-051
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "La construccion inicial puede preservar grados de libertad para operaciones posteriores, pero la relacion es una hipotesis y no una medida de calidad."
+  correction: "Se distingue aptitud para manipulacion de transformabilidad, desarrollabilidad y valor compositivo."
+  possible_action_audit: "El registro de operaciones futuras puede filtrar compatibilidad; no demuestra que el seed sea mejor ni que la operacion vaya a producir coherencia o novedad."
+  structure_perception_composition: "Las relaciones disponibles son estructurales; sus efectos perceptivos solo aparecen en contexto; la recomendacion es una heuristica hipotetica."
+  source_limitations: "Las fuentes y candidatos relacionados apoyan separaciones conceptuales, no la eficacia comparativa del filtro desde cero."

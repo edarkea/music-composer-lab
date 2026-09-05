@@ -1,0 +1,31 @@
+id: CAND-FORM-006
+status: candidate
+audit_status: COMPLETED
+audit_outcome: REVISE
+claim_status: SUPERSEDED_BY_AUDIT_REVISED_CLAIM
+integration_readiness: NOT_READY
+audit_note: "La evidencia permite describir contraste seccional como fenomeno multifactorial en analisis pop/rock, pero no sostiene que el haz produzca contraste percibido ni que optimice identidad."
+audit_revised_claim: "En analisis de pop/rock, el contraste entre secciones puede describirse mediante diferencias coordinadas de varios parametros; una etiqueta o un cambio aislado no demuestra por si solo contraste percibido ni una seccion nueva."
+capability_test:
+  enumerate: IMPROVES
+  filter: UNCERTAIN
+  rank: DOES NOT IMPROVE
+compositional_problem: "Diferenciar una sección sin perder la identidad de la obra ni depender de una sola señal."
+claim: "Contrast y section identity pueden modelarse como un haz de cambios en melodía, armonía, ritmo, textura, timbre, dinámica, registro o texto; una etiqueta de sección o un cambio aislado no demuestra función contrastante."
+structural_variable: "sectional contrast bundle"
+possible_action: "Elegir qué dimensiones deben cambiar y cuáles permanecer para producir contraste con continuidad declarada."
+expected_effect: "Mayor control descriptivo sobre contraste; resultado perceptivo pendiente de escucha."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - GENRE_ANALYSIS
+sources:
+  - SRC-THEORETICAL-008
+  - SRC-PEDAGOGICAL-002
+  - SRC-PEDAGOGICAL-004
+cross_references:
+  - CAND-MEL-022
+  - CAND-HAR-051
+structure_perception_composition:
+  structure: "Cambio coordinado de varios parámetros en una frontera o sección."
+  perception: "No hay evidencia aquí para atribuir contraste a un parámetro único."
+  composition: "Filtrar combinaciones por la identidad que se quiere conservar y el contraste que se quiere introducir."

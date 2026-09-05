@@ -1,0 +1,32 @@
+id: CAND-FORM-008
+status: candidate
+audit_status: COMPLETED
+audit_outcome: REVISE
+claim_status: SUPERSEDED_BY_AUDIT_REVISED_CLAIM
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Butler y Spicer apoyan observaciones de ciclos/loops y cambios cross-domain en repertorios populares, pero la funcion formal percibida y el efecto de cada cambio siguen sin medirse. Arrangement/production permanece CROSS_DOMAIN_REQUIRED."
+audit_revised_claim: "En repertorios loop-based/populares delimitados, una organizacion ciclica puede coexistir con diferenciacion formal analitica mediante persistencia del marco y cambios cross-domain; esto no demuestra que los oyentes perciban secciones ni que esos cambios creen forma automaticamente."
+capability_test:
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES NOT IMPROVE
+compositional_problem: "Organizar forma cuando el material melódico o armónico repite cíclicamente."
+claim: "Loop-based form puede tener función formal mediante persistencia del marco y cambios en capas, densidad, timbre, registro, parada, entrada/salida o ubicación del retorno; loop, return, boundary y cadence no deben colapsarse."
+structural_variable: "cyclic frame × cross-domain formal change"
+possible_action: "Mantener o cambiar el loop según el objetivo y trasladar el contraste o la frontera a parámetros declarados de arreglo/realización."
+expected_effect: "Enumeración de formas cíclicas que no dependa de una cadencia clásica; la percepción de forma sigue abierta."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - GENRE_ANALYSIS
+  - REPERTOIRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-014
+  - SRC-ACADEMIC-028
+cross_references:
+  - CAND-MEL-011
+  - CAND-HAR-026
+  - CAND-HAR-031
+structure_perception_composition:
+  structure: "Marco cíclico con modificación formal en otros dominios o en una iteración marcada."
+  perception: "No se mide aquí cuándo el ciclo se oye como sección, retorno o cierre."
+  composition: "El objetivo permite filtrar persistencia/cambio sin imponer sintaxis dirigida."

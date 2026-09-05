@@ -1,0 +1,34 @@
+id: CAND-HAR-053
+status: candidate
+compositional_problem: "Elegir material armonico inicial cuando existe un objetivo local o formal, sin convertir el rol en una receta."
+claim: "Un objetivo como establecer, continuar, preparar, llegar, permanecer abierto, contrastar o retornar puede condicionar la enumeracion y el filtrado de seeds armonicos, pero no determina por si solo una progresion ni su realizacion."
+structural_variable: "Relacion entre rol, escala formal, organizacion armonica y propiedades del seed."
+possible_action: "Generar varias alternativas compatibles con el objetivo y descartar las que contradigan su alcance local."
+expected_effect: "Aumentar la informacion de meta disponible para construir material inicial."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: "La forma aporta informacion de meta; la teoria de la frase muestra funciones locales en un marco acotado; los vamps y loops muestran soluciones no reducibles a una sintaxis unica."
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+context_dependencies: "Depende del nivel formal, del centro, del estilo y de si el objetivo es local o de cancion completa."
+counterproductive_conditions: "Puede forzar una relacion artificial entre etiqueta formal y progresion, o confundir llegada con cierre."
+alternatives: "Construir primero desde centro, melodia, bajo, loop, pedal o textura y evaluar luego la adecuacion formal."
+uncertainty_confidence: "Media; requiere auditoria y escucha comparativa."
+genre_sensitivity: "Alta; especialmente sensible a diferencias entre practica comun, pop, rock, modal y electronica."
+evaluation_falsification: "Comparar si el objetivo mejora el filtrado de alternativas sin reducir indebidamente semillas validas ni producir una preferencia consistente por una unica receta."
+structure_perception_composition:
+  structure: "Rol o escala formal declarada."
+  perception: "Posible expectativa de establecimiento, continuidad, llegada, apertura, contraste o retorno."
+  composition: "Seleccion y transformacion del material armonico inicial; no garantiza la percepcion."
+cross_references:
+  - CAND-FORM-001
+  - CAND-FORM-002
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "Un objetivo formal o local puede orientar el filtrado de organizaciones y materiales armonicos iniciales sin determinar una progresion."
+  correction: "La contribucion especifica de Harmony es el filtrado de construcciones armonicas iniciales; no es una regla general sobre decisiones formales ni una relacion medio-efecto."
+  possible_action_audit: "Conservar solo como generacion de alternativas y filtrado con restricciones declaradas; no usarlo para ordenar progresiones."
+  structure_perception_composition: "El rol formal es estructura y meta declarada; cualquier expectativa perceptiva es dependiente del contexto; la accion compositiva queda como heuristica de filtrado."
+  source_limitations: "Caplin esta acotado a practica comun; Spicer y De Clercq son analiticos o de repertorio y no validan una preferencia perceptiva general."

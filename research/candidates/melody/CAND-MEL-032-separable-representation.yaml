@@ -1,0 +1,23 @@
+id: CAND-MEL-032
+status: candidate
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
+compositional_problem: "Preparar una semilla para transformaciones diferentes."
+claim: "Representar por separado pitch absoluto, intervalos, contorno, ritmo y registro puede hacer explícito qué aspecto de una semilla se conserva o cambia en una operación; estas son variables separables para el análisis y la composición, no variables independientes ni una jerarquía universal."
+structural_variable: "representación de la semilla"
+possible_action: "Anotar el material en más de una representación cuando la operación requiera declarar una invariante, distinguiendo la representación compositiva de cualquier resultado de una tarea perceptiva."
+expected_effect: "Transformaciones más especificadas y comparables."
+evidence_class: COMPOSITION HEURISTIC
+support_basis: [EXTERNAL_EMPIRICAL, COMPOSITION_PEDAGOGY]
+sources: [SRC-EMPIRICAL-019, SRC-PEDAGOGICAL-014]
+context_dependencies: ["tarea de transformación", "material y contexto declarados"]
+counterproductive_conditions: ["confundir descripción con identidad perceptiva"]
+alternatives: ["trabajar sólo con notación exacta"]
+uncertainty_confidence: "Media-baja"
+genre_sensitivity: "Desconocida fuera del alcance occidental investigado."
+evaluation_falsification: "La representación múltiple no permite distinguir qué se conserva en transformaciones controladas."
+structure_perception_composition:
+  structure: "Pitch, interval, contour y rhythm codifican relaciones distintas."
+  perception: "Las tareas de reconocimiento ponderan dimensiones según condiciones."
+  composition: "Usar la representación que corresponda al objetivo; no imponer jerarquía."
+audit_note: "Dowling respalda diferencias entre representaciones en la tarea inspeccionada, no preferencia compositiva, independencia perceptiva ni superioridad de pitch o ritmo. El valor nuevo es metodológico: hacer visibles invariantes durante construcción o transformación."

@@ -1,0 +1,31 @@
+id: CAND-FORM-002
+status: candidate
+audit_status: COMPLETED
+audit_outcome: REVISE
+claim_status: SUPERSEDED_BY_AUDIT_REVISED_CLAIM
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "El contenido Formistico debe limitarse al rol de presentacion/establecimiento dentro de una unidad; la construccion de la idea pertenece a CAND-MEL-033. No se afirma establecimiento perceptivo automatico."
+audit_revised_claim: "En el marco de la sentence clasica, la presentacion puede incluir idea basica y repeticion; statement-response y final cambiado son operaciones relacionadas, no requisitos universales. El objetivo de establecimiento puede filtrar operaciones que abandonan demasiado pronto una idea ya construida, pero no prueba reconocimiento perceptivo."
+capability_test:
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES NOT IMPROVE
+compositional_problem: "Hacer disponible una idea antes de pedirle continuidad, variación o retorno."
+claim: "En contextos de presentación, la repetición exacta, el statement–response y el final cambiado son operaciones candidatas distintas para establecer material; el objetivo de establecimiento filtra operaciones que abandonan demasiado pronto la idea, pero no prueba qué opción genera mayor reconocimiento."
+structural_variable: "repetition/response/changed-ending during presentation"
+possible_action: "Comparar repetición literal, respuesta y final cambiado manteniendo el material inicial constante."
+expected_effect: "Disponibilidad estructural del material para operaciones posteriores."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - COMPOSITION_PEDAGOGY
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-PEDAGOGICAL-001
+cross_references:
+  - CAND-MEL-007
+  - CAND-MEL-008
+structure_perception_composition:
+  structure: "Repetición o respuesta tras una primera idea."
+  perception: "Detección de repetición no equivale a identidad o reconocimiento."
+  composition: "Filtrar por establecimiento; dejar el ranking a evaluación de escucha."

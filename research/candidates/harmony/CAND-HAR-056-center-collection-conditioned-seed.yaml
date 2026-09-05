@@ -1,0 +1,37 @@
+id: CAND-HAR-056
+status: candidate
+compositional_problem: "Construir material inicial compatible con un centro o coleccion sin confundirlos ni derivar una unica progresion."
+claim: "Declarar centro, coleccion o ambos puede filtrar semillas incompatibles y acotar sus transformaciones, pero una coleccion no fija un centro y un centro no determina una unica secuencia, funcion o bajo."
+structural_variable: "Centro, coleccion, modalidad y relaciones permitidas entre eventos."
+possible_action: "Separar explicitamente centro, coleccion, funcion, raiz y bajo al generar material inicial."
+expected_effect: "Reducir contradicciones con el campo armonico pretendido sin imponer V-I ni una sintaxis comun-practica fuera de su alcance."
+evidence_class: THEORY
+support_basis: "Los analisis de sistemas tonales modales, rock y de centros emergentes distinguen coleccion de centro y muestran multiples medios de afirmacion."
+sources:
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-030
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-033
+  - SRC-ACADEMIC-031
+context_dependencies: "El marco analitico y la practica estilistica determinan que cuenta como centro, funcion o compatibilidad."
+counterproductive_conditions: "Tratar la escala como progresion, o tratar la presencia del acorde tonico como prueba suficiente de centro."
+alternatives: "Permitir centro emergente, pedal, coleccion no funcional, bajo independiente o ambiguedad intencional."
+uncertainty_confidence: "Media-alta para la distincion conceptual; media para recomendaciones compositivas."
+genre_sensitivity: "Alta en los medios de afirmacion del centro."
+evaluation_falsification: "Probar si separar centro y coleccion evita falsos descartes y permite seeds con centro modal, ambiguo o emergente que sigan siendo coherentes."
+structure_perception_composition:
+  structure: "Centro y coleccion como restricciones o grados de libertad."
+  perception: "Posible estabilidad o ambiguedad; no se deriva solo de pertenencia escalar."
+  composition: "Seleccionar relaciones armonicas y medios de afirmacion adecuados al contexto."
+cross_references:
+  - CAND-HAR-001
+  - CAND-HAR-006
+  - CAND-HAR-004
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "Durante la construccion inicial, un centro y una coleccion asumidos pueden filtrar material de maneras diferentes sin especificar una progresion unica."
+  correction: "La novedad es el puente constructivo desde restricciones declaradas hacia candidatos iniciales; no basta repetir que centro y coleccion son distintos."
+  possible_action_audit: "Conservar la separacion de centro, coleccion, funcion, raiz y bajo como filtro de construccion; no inferir estabilidad, funcion o centro por pertenencia escalar."
+  structure_perception_composition: "Centro y coleccion son restricciones estructurales; estabilidad o ambiguedad perceptiva requieren contexto; la composicion puede conservar varias soluciones."
+  source_limitations: "Los estudios apoyan distinciones y sistemas de repertorio, no una receta generativa ni una jerarquia universal de medios de afirmacion."

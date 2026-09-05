@@ -1,0 +1,22 @@
+id: CAND-MEL-036
+status: candidate
+pre_audit_triage: deferred_from_material_audit_set
+triage_reason: "La fuente inspeccionada no documenta de forma directa que una progresión armónica explícita no sea prerrequisito de construcción melódica. Se conserva como pregunta de dependencia, no como candidato material. El ID permanece permanentemente asignado."
+compositional_problem: "Decidir cuánto contexto armónico necesita una semilla melódica."
+claim: "La semilla puede enumerarse con centro/colección, con un scaffold armónico o sin armonía explícita; el scaffold facilita filtrar pitch pero puede restringir posteriores reinterpretaciones."
+structural_variable: "grado de dependencia armónica"
+possible_action: "Declarar si el pitch se deriva de una colección, de una sonoridad local o se mantiene abierto."
+expected_effect: "Dependencias y posibilidades de reharmonización quedan visibles."
+evidence_class: COMPOSITION HEURISTIC
+support_basis: [THEORETICAL_SCHOLARSHIP]
+sources: [SRC-THEORETICAL-018]
+context_dependencies: ["centro/colección", "objetivo de armonización"]
+counterproductive_conditions: ["chord tones como criterio de calidad", "resolver aquí la progresión inicial"]
+alternatives: ["pitch-first", "rhythm-first", "colección sin acordes"]
+uncertainty_confidence: "Baja-media"
+genre_sensitivity: "Alta"
+evaluation_falsification: "Cambiar el scaffold no altera ninguna restricción ni posibilidad relevante en la construcción."
+structure_perception_composition:
+  structure: "Pitch se filtra por diferentes grados de contexto armónico."
+  perception: "No se estudia aquí."
+  composition: "La armonía es una dependencia opcional/condicionante, no una solución de invención."

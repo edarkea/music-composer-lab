@@ -1,0 +1,36 @@
+id: CAND-HAR-057
+status: candidate
+compositional_problem: "Elegir extension y ritmo armonico iniciales sin usar longitud, numero de acordes o velocidad como sustitutos de desarrollo o importancia formal."
+claim: "Numero de eventos, duracion de regiones, ritmo armonico, tempo, densidad melodica y posicion formal son variables relacionadas pero no equivalentes; ninguna longitud o tasa es universalmente optima."
+structural_variable: "Extension temporal, cantidad de eventos, duracion relativa y pauta de cambio armonico."
+possible_action: "Generar seeds con distintas extensiones y ritmos, filtrarlos por restricciones locales y evaluar sus consecuencias posteriores."
+expected_effect: "Evitar que una representacion inicial sobrecargada o demasiado breve se confunda con mejor desarrollo."
+evidence_class: THEORY
+support_basis: "La bibliografia separa ritmo armonico de tempo y muestra que duracion, aceleracion y posicion formal tienen funciones contextuales."
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-ACADEMIC-014
+  - SRC-ACADEMIC-028
+context_dependencies: "Depende de metro, frase, textura, tempo, seccion y genero."
+counterproductive_conditions: "Acelerar cambios para fabricar tension, o añadir eventos para aparentar desarrollo sin una meta compositiva."
+alternatives: "Mantener armonia, cambiar realizacion, variar textura o desplazar el ritmo armonico segun el problema real."
+uncertainty_confidence: "Media-alta para las distinciones; media para los efectos perceptivos."
+genre_sensitivity: "Media-alta."
+evaluation_falsification: "Comparar seeds de distinta extension y ritmo manteniendo centro y material, y comprobar si las diferencias sirven a la meta sin asumir preferencia universal."
+structure_perception_composition:
+  structure: "Duracion, numero de eventos y ritmo armonico."
+  perception: "Posible densidad, estabilidad, urgencia o continuidad; mediada por textura y expectativa."
+  composition: "Ajustar la ventana armonica a la frase y al objetivo local."
+cross_references:
+  - CAND-HAR-021
+  - CAND-HAR-022
+  - CAND-HAR-023
+  - CAND-HAR-025
+audit:
+  outcome: REVISE
+  readiness: NOT_READY
+  audited_claim: "Numero de eventos, duracion temporal, ritmo armonico, persistencia regional y tasa de cambio son variables distinguibles."
+  correction: "La distincion es valida, pero la evidencia revisada no demuestra todavia que la extension del seed constituya una estrategia de construccion nueva frente a HAR-021/022/024-026."
+  possible_action_audit: "La accion propuesta queda como comparacion futura, no como recomendacion actual de generar o preferir extensiones concretas."
+  structure_perception_composition: "La estructura temporal puede describirse; densidad, urgencia o continuidad perceptivas no se siguen automaticamente; no hay preferencia compositiva justificada."
+  source_limitations: "Caplin es tradition-specific y Butler/Spicer documentan repertorio; ninguno establece una extension inicial optima ni una ventaja general."

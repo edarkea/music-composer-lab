@@ -1,0 +1,31 @@
+id: CAND-FORM-001
+status: candidate
+audit_status: COMPLETED
+audit_outcome: KEEP_AS_IS
+claim_status: RETAINED
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Se conserva como heuristica arquitectonica: la funcion formal aporta GOAL INFORMATION y puede orientar el filtro, pero no determina medios, percepcion ni ranking."
+audit_revised_claim: "Declarar una funcion formal puede orientar que operaciones son relevantes para un objetivo y escala concretos; no determina una realizacion unica, una funcion percibida ni una jerarquia universal."
+capability_test:
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES NOT IMPROVE
+compositional_problem: "Elegir entre operaciones Melodía/Armonía sin declarar qué debe hacer la unidad en el tiempo."
+claim: "Declarar una función formal (establecer, continuar, preparar, llegar, permanecer abierto, contrastar o retornar) puede convertir una lista de operaciones en alternativas condicionadas por un objetivo; no determina una realización única ni su calidad."
+structural_variable: "formal_function + scale (local/sectional/song-level)"
+possible_action: "Asignar un objetivo funcional antes de comparar operaciones y conservar alternativas que sirvan a objetivos distintos."
+expected_effect: "Mejor trazabilidad de por qué se enumeran o filtran decisiones."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - GENRE_ANALYSIS
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-ACADEMIC-043
+context_dependencies:
+  - "La función debe distinguirse de etiqueta, posición y función armónica."
+  - "La escala local o global debe declararse."
+structure_perception_composition:
+  structure: "Unidad asignada a un rol dentro de una trayectoria formal."
+  perception: "La atribución por oyentes puede diferir de la lectura analítica; falta medida general."
+  composition: "Usar la función como información de objetivo para enumerar y filtrar; no como ranking automático."

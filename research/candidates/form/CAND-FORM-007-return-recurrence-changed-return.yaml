@@ -1,0 +1,32 @@
+id: CAND-FORM-007
+status: candidate
+audit_status: COMPLETED
+audit_outcome: REVISE
+claim_status: SUPERSEDED_BY_AUDIT_REVISED_CLAIM
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Everett apoya retorno seccional en repertorio rock; la distincion entre retorno exacto y cambiado es una extension operativa que debe permanecer como hipotesis y depender de escala y contexto."
+audit_revised_claim: "Return/recurrence debe distinguirse de exact repetition: en repertorios delimitados, una reaparicion puede conservar material o funcion mientras cambia final, armonia, registro, textura o timing. Esto no establece una preferencia universal por retorno exacto o cambiado."
+capability_test:
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES NOT IMPROVE
+compositional_problem: "Retornar a material o función previa sin decidir automáticamente entre copia y novedad."
+claim: "Return/recurrence es un objetivo distinto de exact repetition: puede conservar material, posición, función o una combinación de ellos mientras cambia final, armonía, registro, textura o timing."
+structural_variable: "return identity × changed dimensions"
+possible_action: "Enumerar retorno exacto, transpuesto, rearmonizado, con final cambiado o parcial; declarar qué relación se busca conservar."
+expected_effect: "Continuidad global con espacio para novedad; parentesco y función percibidos deben evaluarse."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - GENRE_ANALYSIS
+sources:
+  - SRC-ACADEMIC-015
+  - SRC-ACADEMIC-043
+cross_references:
+  - CAND-MEL-007
+  - CAND-MEL-008
+  - CAND-HAR-051
+structure_perception_composition:
+  structure: "Reaparición posterior con invariantes y cambios declarados."
+  perception: "Retorno analítico no garantiza reconocimiento ni sensación de regreso."
+  composition: "El objetivo permite filtrar qué se conserva; no rankea exacto frente a cambiado."

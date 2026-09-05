@@ -1,0 +1,33 @@
+id: CAND-FORM-005
+status: candidate
+audit_status: COMPLETED
+audit_outcome: REVISE
+claim_status: SUPERSEDED_BY_AUDIT_REVISED_CLAIM
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "Se conserva la separacion conceptual, pero la accion se formula como diagnostico negativo. No se afirma que el cierre requiera convergencia multidominio ni que cada estado tenga un medio suficiente."
+audit_revised_claim: "Separar arrival, closure y boundary evita inferencias no justificadas: una llegada puede no cerrar, una frontera puede no ser cadencial y un cierre analitico puede prolongarse despues de la unidad principal. Esta separacion no establece que todos los repertorios distingan los estados del mismo modo."
+capability_test:
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES NOT IMPROVE
+compositional_problem: "Decidir si una unidad debe llegar, cerrar, permanecer abierta o solo marcar una frontera."
+claim: "Separar arrival, closure y boundary mejora la descripción de decisiones melódicas y armónicas: una llegada puede no cerrar, una frontera puede no ser cadencial y un cierre puede prolongarse después de la unidad principal."
+structural_variable: "arrival_state × closure_state × boundary_state"
+possible_action: "Declarar los tres estados por separado antes de elegir final melódico, acorde, silencio o parada."
+expected_effect: "Evitar que una tónica, un final largo o una frontera sean interpretados como cierre automático."
+evidence_class: COMPOSITION HEURISTIC
+support_basis:
+  - THEORETICAL_SCHOLARSHIP
+  - EXTERNAL_EMPIRICAL
+  - GENRE_ANALYSIS
+sources:
+  - SRC-THEORETICAL-005
+  - SRC-ACADEMIC-044
+cross_references:
+  - CAND-MEL-028
+  - CAND-HAR-028
+  - CAND-HAR-050
+structure_perception_composition:
+  structure: "Eventos de llegada, frontera y cierre descritos como dimensiones distintas."
+  perception: "El cierre percibido depende de múltiples indicios y tarea; no se infiere desde uno."
+  composition: "La función filtra medios según el estado buscado; no proporciona una fuerza de cierre universal."

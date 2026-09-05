@@ -1,0 +1,37 @@
+id: CAND-HAR-058
+status: candidate
+compositional_problem: "Distinguir la recurrencia interna de un seed de retorno formal, cadencia, frontera o cierre."
+claim: "El material armonico inicial puede organizarse alrededor de recurrencia o persistencia sin constituir por ello un proceso cadencial terminal ni un retorno formal; loop, vamp y pedal son ejemplos relacionados pero no un mismo mecanismo."
+structural_variable: "Recurrencia o persistencia interna y su relacion separada con un posible punto terminal, retorno formal o transicion."
+possible_action: "Declarar la recurrencia o persistencia buscada y no descartar el seed por carecer de una cadencia terminal; analizar aparte su transicion o cierre."
+expected_effect: "Permitir seeds repetibles que sigan siendo compatibles con apertura, retorno, contraste o transicion."
+evidence_class: GENRE_OBSERVATION
+support_basis: "Los estudios de loops, vamps, rock y electronica documentan coherencia recurrente sin equipararla a cadencia o cierre."
+sources:
+  - SRC-ACADEMIC-014
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-031
+  - SRC-CORPUS-007
+  - SRC-CORPUS-009
+context_dependencies: "Depende de metro, textura, voz, arreglo, posicion formal, silencio y transiciones."
+counterproductive_conditions: "Usar la etiqueta loop para evitar analizar una meta, o inferir que toda repeticion crea retorno perceptivo."
+alternatives: "Construir una trayectoria no ciclica, una region persistente, una transicion o un final explicitamente terminal."
+uncertainty_confidence: "Media; la percepcion de cierre y retorno necesita escucha controlada."
+genre_sensitivity: "Alta."
+evaluation_falsification: "Escuchar el mismo seed en posiciones iniciales, internas y finales, con y sin cambios de arreglo, para comprobar si ciclo, retorno y cierre se separan."
+structure_perception_composition:
+  structure: "Ciclo o persistencia interna y relacion terminal."
+  perception: "Posible estabilidad, retorno, apertura o cierre segun contexto; no garantizado por la repeticion."
+  composition: "Diseñar recurrencia y final como decisiones relacionadas pero independientes."
+cross_references:
+  - CAND-HAR-026
+  - CAND-HAR-031
+  - CAND-HAR-039
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "Recurrencia o persistencia pueden ser principios de organizacion inicial distintos de retorno formal, cadencia y cierre."
+  correction: "Se elimina la pretension de explicar conjuntamente loop, vamp, pedal y conducta terminal. Permanecen como ejemplos acotados y no sinonimos."
+  possible_action_audit: "El filtrado puede excluir la exigencia indebida de una cadencia inicial; no puede predecir apertura, cierre, retorno o calidad perceptiva."
+  structure_perception_composition: "La repeticion o persistencia es estructural; retorno, apertura y cierre son percepciones contextuales; la decision compositiva debe mantener esas funciones separadas."
+  source_limitations: "Butler, Spicer y los registros parciales documentan repertorio y analisis, no una receta de seam ni una ley de percepcion."

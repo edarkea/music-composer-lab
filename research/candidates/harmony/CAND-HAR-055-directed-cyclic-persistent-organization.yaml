@@ -1,0 +1,37 @@
+id: CAND-HAR-055
+status: candidate
+compositional_problem: "Elegir una organizacion inicial sin asumir que toda progresion debe ser dirigida hacia una cadencia."
+claim: "Los marcos inspeccionados admiten organizaciones iniciales no equivalentes, entre ellas trayectoria dirigida, ciclo recurrente y persistencia; los casos ambiguos pueden mantenerse como estado diagnostico sin forzarlos a una gramatica dirigida."
+structural_variable: "Tipo de relacion temporal entre eventos o regiones armonicas; la ambiguedad describe incertidumbre analitica o perceptiva y no se trata aqui como cuarta clase exhaustiva."
+possible_action: "Declarar si la construccion busca direccion, recurrencia o persistencia y filtrar alternativas compatibles antes de fijar una progresion concreta."
+expected_effect: "Mejorar el filtrado entre seeds que buscan trayectoria, recurrencia, estasis o ambiguedad."
+evidence_class: GENRE_OBSERVATION
+support_basis: "Los analisis de vamps, loops, sistemas tonales del rock y patrones electronicos documentan organizaciones no reducibles a la sintaxis T-PD-D."
+sources:
+  - SRC-ACADEMIC-028
+  - SRC-ACADEMIC-029
+  - SRC-ACADEMIC-031
+  - SRC-ACADEMIC-014
+context_dependencies: "Depende de centro, metro, textura, instrumentacion, duracion y de si la recurrencia es interna o formal."
+counterproductive_conditions: "Llamar loop a cualquier repeticion, o llamar falta de direccion a una organizacion cuya meta es sostener, retornar o preparar."
+alternatives: "Usar bajo, ritmo armonico, registro, densidad o cambios de textura como fuente primaria de movimiento."
+uncertainty_confidence: "Media; las relaciones perceptivas requieren comprobacion contextual."
+genre_sensitivity: "Alta."
+evaluation_falsification: "Comparar si declarar la organizacion mejora la seleccion de seeds sin penalizar loops, vamps o pedales que cumplen una funcion intencional."
+structure_perception_composition:
+  structure: "Direccion, ciclo, persistencia o ambiguedad como propiedades descriptivas."
+  perception: "Sensacion posible de avance, retorno, estasis o incertidumbre; no inferida automaticamente de la forma."
+  composition: "Construccion de relaciones armonicas acordes con la meta local."
+cross_references:
+  - CAND-HAR-011
+  - CAND-HAR-026
+  - CAND-HAR-031
+  - CAND-HAR-039
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "Existen modos de organizacion inicial no equivalentes; no constituyen una taxonomia exhaustiva ni una gramatica universal."
+  correction: "Ambiguous se trata como estado diagnostico, no como categoria compositiva equivalente a directed, cyclic o persistent. Loop, vamp y pedal permanecen como ejemplos relacionados pero no como sinonimos."
+  possible_action_audit: "La declaracion de una meta organizativa puede servir para filtrar candidatos; no demuestra que genere una mejor progresion ni que produzca una percepcion determinada."
+  structure_perception_composition: "La recurrencia o persistencia es estructural; direccion, estasis o ambiguedad perceptiva dependen de metro, textura y contexto; la decision es una heuristica de construccion acotada."
+  source_limitations: "La evidencia popular y de repertorio documenta posibilidades, no una taxonomia exhaustiva ni rankings de calidad."

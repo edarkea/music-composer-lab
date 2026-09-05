@@ -1,0 +1,22 @@
+id: CAND-MEL-035
+status: candidate
+pre_audit_triage: deferred_from_material_audit_set
+triage_reason: "La fuente inspeccionada apoya una función formal clásica de basic idea/presentación, pero no basta para sostener una afirmación de construcción abierta frente a acotada. El ID permanece permanentemente asignado."
+compositional_problem: "Elegir si una idea inicial invita a continuar o funciona como unidad localmente acotada."
+claim: "El compositor puede declarar una intención abierta, ambigua, cerrada localmente o loopable y filtrar finales/relaciones en consecuencia; la intención no garantiza la percepción de cierre o continuación."
+structural_variable: "estado intencional del final"
+possible_action: "Seleccionar y documentar el comportamiento de inicio-final antes de la continuación."
+expected_effect: "Handoff más claro a frase, armonía y forma."
+evidence_class: HYPOTHESIS
+support_basis: [THEORETICAL_SCHOLARSHIP]
+sources: [SRC-THEORETICAL-018]
+context_dependencies: ["métrica, armonía y frase cuando se reclama función perceptiva"]
+counterproductive_conditions: ["tratar abierto/cerrado como propiedad absoluta"]
+alternatives: ["final deliberadamente ambiguo", "loop sin cierre fuerte"]
+uncertainty_confidence: "Baja"
+genre_sensitivity: "Alta"
+evaluation_falsification: "Oyentes y análisis contextuales no distinguen las intenciones bajo condiciones declaradas."
+structure_perception_composition:
+  structure: "Endpoint elegido como variable de construcción."
+  perception: "No validada sin contexto."
+  composition: "Puede filtrar candidatos, no predecir efecto."

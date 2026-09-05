@@ -1,0 +1,23 @@
+id: CAND-MEL-034
+status: candidate
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
+compositional_problem: "Construir material que pueda ser transformado sin perder toda relación."
+claim: "Algunos marcos compositivos especifican semillas mediante relaciones explícitas —por ejemplo, intervalos, ritmo, contorno local, fragmentos o puntos de articulación— que una operación posterior puede conservar, alterar, fragmentar, transponer o combinar selectivamente; esto no hace a la semilla mejor ni demuestra desarrollo perceptivo."
+structural_variable: "relaciones internas preservadas"
+possible_action: "Seleccionar qué relación será preservable o transformable antes de una operación concreta, sin convertir su presencia en criterio de calidad."
+expected_effect: "Operación posterior más controlable."
+evidence_class: COMPOSITION HEURISTIC
+support_basis: [COMPOSITION_PEDAGOGY, THEORETICAL_SCHOLARSHIP]
+sources: [SRC-PEDAGOGICAL-014, SRC-THEORETICAL-001]
+context_dependencies: ["operación prevista", "relación suficientemente explícita"]
+counterproductive_conditions: ["maximizar relaciones sin objetivo", "confundir manipulabilidad con interés"]
+alternatives: ["material no transformacional", "transformación libre"]
+uncertainty_confidence: "Media-baja"
+genre_sensitivity: "Alta según tradición de desarrollo."
+evaluation_falsification: "Operaciones controladas no pueden identificar ni preservar la relación declarada."
+structure_perception_composition:
+  structure: "Relación interna declarada y operación que la modifica."
+  perception: "No se infiere desarrollabilidad perceptiva."
+  composition: "Preservar o alterar una relación es una restricción operativa, no un valor de calidad ni sinónimo de desarrollo."
+audit_note: "La evidencia directa describe transformación y tratamiento motivic; la construcción queda apoyada de forma pedagógica e indirecta. Se conserva la relación entre especificación inicial y transformación posterior, no una afirmación de developability."

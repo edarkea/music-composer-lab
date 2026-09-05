@@ -1,0 +1,28 @@
+id: CAND-FORM-004
+status: candidate
+audit_status: COMPLETED
+audit_outcome: REVISE
+claim_status: SUPERSEDED_BY_AUDIT_REVISED_CLAIM
+integration_readiness: POSSIBLE_WITH_SCOPE
+audit_note: "La evidencia respalda un rol de pre-coro/preparacion en pop/rock, no una teoria general de toda transicion. Los medios son asociados, no receta causal."
+audit_revised_claim: "En analisis de pre-coros y transiciones de pop/rock, la funcion preparatoria se describe junto con cambios posibles de groove, fraseo, registro, instrumentacion, timbre, progresion o ritmo armonico; esos cambios son medios asociados en repertorios delimitados, no requisitos ni causas universales."
+capability_test:
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES NOT IMPROVE
+compositional_problem: "Crear una transición orientada hacia una llegada sin imponer un mecanismo único."
+claim: "La función de preparation/transition puede servirse mediante cambios de groove, fraseo, registro, instrumentación, timbre, progresión o ritmo armónico; en pop/rock el objetivo puede mantenerse aunque el medio dominante no sea armónico."
+structural_variable: "preparatory cue bundle"
+possible_action: "Enumerar haces de medios y eliminar los que no aporten una relación explícita con la llegada prevista."
+expected_effect: "Dirección formal potencialmente más trazable; no se afirma urgencia percibida sin escucha."
+evidence_class: GENRE OBSERVATION
+support_basis:
+  - GENRE_ANALYSIS
+sources:
+  - SRC-THEORETICAL-008
+  - SRC-ACADEMIC-043
+  - SRC-PEDAGOGICAL-004
+structure_perception_composition:
+  structure: "Sección o tramo previo con cambios coordinados hacia otra unidad."
+  perception: "El movimiento puede oírse como urgencia, pero no se mide aquí."
+  composition: "El objetivo prepara un filtro de medios; no establece que la armonía sea necesaria."
