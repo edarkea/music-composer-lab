@@ -1,0 +1,35 @@
+id: CAND-RHY-006
+status: candidate
+compositional_problem: "Coordinar ataques melodicos, cambios armonicos y revoicings sin imponer sincronizacion."
+claim: "Los onsets melodicos y armonicos son variables separables: pueden coincidir, anticiparse o divergir; una armonia sostenida bajo melodia movil, un cambio bajo melodia sostenida, un cambio durante un rest y un revoicing son relaciones estructurales distintas."
+structural_variable: "melodic onset/duration, harmonic onset/change/duration y revoicing timing"
+possible_action: "Enumerar sincronizacion y divergencia, y filtrar por metro, prosodia, chord identity, realizacion y objetivo local."
+expected_effect: "Mayor espacio de coordinacion sin confundir cambio de sonoridad con cambio de identidad armonica."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [THEORETICAL_SCHOLARSHIP, CORPUS_ANALYSIS, REPERTOIRE_ANALYSIS]
+sources:
+  - SRC-CORPUS-005
+  - SRC-ACADEMIC-014
+  - SRC-ACADEMIC-028
+  - SRC-EMPIRICAL-014
+context_dependencies: "Centro, coleccion, metro, prosodia, forma, instrumentacion y distincion selection/realization."
+counterproductive_conditions: "Suponer que todo cambio conjunto produce llegada o que toda divergencia produce tension."
+alternatives: "Mantener ambas capas, cambiar solo realizacion, o coordinar un cambio local bajo restricciones formales."
+uncertainty_confidence: "Media-baja; la separacion estructural es clara, los efectos perceptivos son contextuales."
+genre_sensitivity: "Alta en anticipaciones y capas metricas; relacion general como interfaz."
+evaluation_falsification: "No poder describir o filtrar las relaciones de timing sin colapsarlas en sincronizacion unica."
+structure_perception_composition:
+  structure: "Relaciones temporales entre capas melodica y armonica."
+  perception: "No se infiere estabilidad, tension, llegada o groove de la divergencia."
+  composition: "Usar sincronizacion/divergencia como variables de seleccion y realizacion."
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "El timing melodico y armonico son coordenadas distintas que pueden coincidir, precederse o divergir."
+  correction: "La contribucion Rhythm es la coordinacion temporal cross-domain; no se afirma independencia, preferencia sincronica o efecto perceptivo."
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Representar ambas capas antes de decidir alineacion, anticipacion o divergencia es una heuristica de construccion defendible."
+  overlap: "Complementa HAR-021/024/049/050 y no reabre HAR-009; añade la relacion temporal entre capas."
+  source_limitations: "Las fuentes apoyan casos y distinciones de repertorio; no comparan preferencias entre sincronizacion y divergencia."

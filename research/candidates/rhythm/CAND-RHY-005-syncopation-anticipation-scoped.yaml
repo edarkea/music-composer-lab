@@ -1,0 +1,35 @@
+id: CAND-RHY-005
+status: candidate
+compositional_problem: "Usar desplazamiento o anticipacion sin convertir sincopa en tension, groove o energia universales."
+claim: "El desplazamiento metrico y la anticipacion son relaciones temporales que deben analizarse por separado; en rock/pop delimitado, la anticipacion con sustain y stress compatible puede describirse como practica de repertorio, sin convertirla en tension, groove, energia o prominencia universal."
+structural_variable: "attack displacement, anticipatory onset, sustain across strong position y metric reference"
+possible_action: "En un alcance pop/rock declarado, considerar anticipacion con sustain y stress compatible como alternativa de construccion; no transferirla a otros contextos ni rankearla universalmente."
+expected_effect: "Desplazamiento metricamente interpretable bajo condiciones de genero y prosodia declaradas."
+evidence_class: GENRE_OBSERVATION
+support_basis: [CORPUS_ANALYSIS, THEORETICAL_SCHOLARSHIP, EXTERNAL_EMPIRICAL]
+sources:
+  - SRC-CORPUS-005
+  - SRC-ACADEMIC-019
+  - SRC-EMPIRICAL-008
+  - SRC-EMPIRICAL-009
+context_dependencies: "Rock/pop reciente, stress silabico, sustain, metro recuperable y tarea perceptiva."
+counterproductive_conditions: "Anticipar sin referencia metrica o transferir resultados de drum-breaks funk a melodias o forma."
+alternatives: "Onset alineado, retardo, desplazamiento sin sustain o contraste por duracion/registro."
+uncertainty_confidence: "Media-baja; corpus fuerte para presencia en rock, funciones compositivas y transferencia perceptiva limitadas."
+genre_sensitivity: "Alta."
+evaluation_falsification: "Corpus o tareas dentro del alcance no muestran anticipacion interpretable, o el efecto se mantiene sin relacion metrica/sustain."
+structure_perception_composition:
+  structure: "Ataque desplazado respecto de una posicion metrica subyacente."
+  perception: "Sincopa, groove y dificultad son constructos distintos y dependientes de tarea."
+  composition: "Heuristica genre-scoped de filtrado, no regla de tension o energia."
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "El desplazamiento metrico y la anticipacion pueden describirse como relaciones distintas; la anticipacion rock/pop es una observacion acotada."
+  correction: "No se tratan sincopa y anticipacion como un mecanismo unico. La evidencia de groove funk no se usa para prescribir melodias."
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "La accion es valida solo como alternativa genre-scoped de construccion/filtrado; no implica mejor phrasing ni forward motion."
+  overlap: "Extiende MEL-026 al dominio Rhythm, conservando su alcance popular y sus limites."
+  source_limitations: "Tan/Lustig/Temperley y Temperley apoyan corpus/definicion en rock; Witek mide groove y placer en drum-breaks funk, no melodias ni forma."

@@ -1,0 +1,35 @@
+id: CAND-RHY-001
+status: candidate
+compositional_problem: "Elegir el momento, la duracion y la separacion de eventos sin colapsar variables temporales distintas."
+claim: "Onset, duration, IOI y densidad describen decisiones relacionadas pero no equivalentes; pueden enumerarse y filtrarse por metro, ventana, prosodia o frase sin que ninguna determine energia, tension o importancia."
+structural_variable: "onset, sounding/notated duration, inter-onset interval y event density en una ventana declarada"
+possible_action: "Declarar que variable temporal se modifica y filtrar alternativas por restricciones explicitas antes de atribuir un efecto."
+expected_effect: "Mayor control descriptivo y menos falsas sustituciones entre tempo, tasa, duracion y cantidad de eventos."
+evidence_class: THEORY
+support_basis: [THEORETICAL_SCHOLARSHIP, EXTERNAL_EMPIRICAL, CORPUS_ANALYSIS]
+sources:
+  - SRC-THEORETICAL-009
+  - SRC-EMPIRICAL-012
+  - SRC-CORPUS-006
+  - SRC-EMPIRICAL-013
+context_dependencies: "Unidad temporal, tempo, metro, instrumento, prosodia y ventana deben declararse."
+counterproductive_conditions: "Usar density o IOI como proxy automatico de energia, tension, continuacion o desarrollo."
+alternatives: "Cambiar registro, armonia, articulacion o arreglo si el problema no es temporal."
+uncertainty_confidence: "Media para las distinciones; baja para efectos compositivos generales."
+genre_sensitivity: "Media-alta; las distribuciones de onsets y density dependen de corpus y genero."
+evaluation_falsification: "Mostrar que dos variables supuestamente distintas no pueden separarse bajo una tarea y unidad declaradas, o que una variable aislada rankea sistematicamente un objetivo fuera de su alcance."
+structure_perception_composition:
+  structure: "Variables temporales separadas en una representacion declarada."
+  perception: "Acento, groove o continuidad solo se apoyan en tareas y repertorios especificos."
+  composition: "Usar la distincion para enumerar y filtrar, no para ordenar universalmente."
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "Durante la construccion ritmica, onset, duration, IOI y density pueden manipularse o restringirse separadamente."
+  correction: "No se afirma independencia perceptiva ni una jerarquia entre variables; la contribucion es hacer explicita la decision temporal que se cambia."
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Representar las variables por separado y filtrarlas por unidad, ventana, metro o prosodia es valido; no se justifica elegir una relacion como mejor."
+  overlap: "Extiende MEL-025/030 y HAR-021/022 al nivel de construccion Rhythm, sin sustituir sus alcances."
+  source_limitations: "Las fuentes apoyan distinciones, expectativas o distribuciones, no un efecto compositivo general."

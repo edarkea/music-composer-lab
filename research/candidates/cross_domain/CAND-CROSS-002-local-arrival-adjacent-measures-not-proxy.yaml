@@ -1,0 +1,44 @@
+id: CAND-CROSS-002
+status: candidate
+compositional_problem: "Decidir si un evento o span debe tratarse como local arrival sin confundirlo con boundary, completion o closure."
+claim: "En la evidencia inspeccionada, boundary, completion y tipos acotados de closure tienen tareas perceptivas distinguibles, mientras local arrival aparece principalmente como constructo analitico o compositivo y no cuenta con una operacionalizacion perceptiva directa estable identificada. Por tanto, no debe usarse ninguno de esos constructos como proxy automatico para rankear medios de local arrival sin justificar por separado la transferencia fuente-destino."
+structural_variable: "constructo objetivo, escala estructural, tarea perceptiva y relacion melody-harmony"
+possible_action: "Declarar primero si el objetivo es boundary, completion, closure o local arrival; usar el resultado de una tarea adyacente para filtrar razones solo despues de justificar su transferencia, y no usarlo para rankear medios de local arrival por defecto."
+expected_effect: "Evitar rankings basados en una sustitucion silenciosa del criterio compositivo."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [EXTERNAL_EMPIRICAL, THEORETICAL_SCHOLARSHIP]
+sources:
+  - SRC-EMPIRICAL-022
+  - SRC-EMPIRICAL-023
+  - SRC-EMPIRICAL-024
+  - SRC-EMPIRICAL-025
+  - SRC-EMPIRICAL-026
+  - SRC-ACADEMIC-045
+context_dependencies: "Tarea, poblacion, repertorio, escala formal, wording del juicio, dependencia armonica y relacion entre analisis y percepcion."
+counterproductive_conditions: "Tratar segmentation como closure, completion como arrival, closure armonico como llegada melodica o un boundary de frase como funcion de seccion/cancion."
+alternatives: "Usar el constructo perceptivo que corresponda al objetivo declarado, o mantener local arrival como objetivo compositivo no rankeable hasta su operacionalizacion."
+uncertainty_confidence: "Media para la distincion entre tareas; baja para cualquier medida empirica directa de local arrival."
+genre_sensitivity: "Alta; boundaries populares tienen soporte popular especifico, mientras completion/closure se apoyan mucho en repertorio tonal/common-practice."
+evaluation_falsification: "Una fuente primaria demuestra una tarea perceptiva directa y replicable de local arrival, diferenciada de boundary, completion y closure, y conectada a una decision compositiva declarada."
+structure_perception_composition:
+  structure: "Evento o span situado en una escala declarada, con melody y harmony separables cuando sea posible."
+  perception: "Boundary, completion y closure se miden mediante tareas diferentes; local arrival no tiene medida estable inspeccionada."
+  composition: "Elegir y declarar el criterio correcto antes de filtrar o rankear medios."
+phase2_candidate_type: CONSTRUCT_TRANSFER_CONSTRAINT
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
+audit_status: COMPLETED
+audit_evidence_gate: PASS
+audit_note: "La restriccion es accionable y no se reduce a una diferencia terminologica: las fuentes usan tareas, variables dependientes y escalas distintas. El claim se limita a ausencia de transferencia validada, no a una no-relacion establecida."
+local_arrival_classification: "En la evidencia inspeccionada, aparece principalmente como constructo analitico/compositivo; no se identifico una operacionalizacion perceptiva directa estable."
+boundary_correction: "Clicks, segmentation, salience, ERP y dwell time son medidas heterogeneas relacionadas con distintos aspectos de boundary; no son intercambiables."
+completion_transfer: NOT_ESTABLISHED
+closure_transfer: "NOT_ESTABLISHED como proxy automatico; closure armonico, melodico, de frase, formal y percibido requieren separacion."
+cadential_judgment_transfer: "INVALID_FOR_CURRENT_PURPOSE: evalua una relacion cadencial/cierre, no puede sustituir una meta de llegada melodica local sin cierre; puede aportar contexto armonico."
+segmentation_correction: "Segmentation puede ser tarea, proceso o resultado de agrupamiento segun la fuente; no es sinonimo universal de boundary ni de arrival."
+analytical_perceptual_transfer: "NO_DIRECT_VALIDATION_IDENTIFIED_IN_INSPECTED_EVIDENCE"
+proxy_correction: "No usar como proxy automatico sin transferencia fuente-destino especificamente justificada; esto no prueba una no-relacion."
+musical_option_enumerate: DOES_NOT_IMPROVE
+musical_option_filter: DOES_NOT_IMPROVE
+evidence_inference_filter: IMPROVES
+rank: DOES_NOT_IMPROVE

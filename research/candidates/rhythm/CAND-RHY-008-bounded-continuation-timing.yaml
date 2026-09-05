@@ -1,0 +1,33 @@
+id: CAND-RHY-008
+status: candidate
+compositional_problem: "Decidir si cambios temporales pueden participar en continuation sin universalizar aceleracion o densidad."
+claim: "En la sentence clasica, fragmentacion, liquidacion y aceleracion armonica se describen como operaciones de continuation; fuera de ese marco, la evidencia revisada no permite tratar aumento de tasa, acortamiento o densidad como continuation universal."
+structural_variable: "fragmentation, duration shortening, onset-rate trajectory y harmonic-change rate"
+possible_action: "Usar estas operaciones solo dentro del marco formal declarado o tratarlas como alternativas hipoteticas en otros repertorios."
+expected_effect: "Coherencia con una practica comun delimitada, sin atribuir continuation por una variable aislada."
+evidence_class: THEORY
+support_basis: [THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY]
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-PEDAGOGICAL-001
+context_dependencies: "Sentence clasica, presentacion previa, meta cadencial, tempo, armonia y frase."
+counterproductive_conditions: "Densificar o acelerar sin meta y esperar tension, energia, desarrollo o continuation."
+alternatives: "Conservar una invariante, cambiar registro, armonia, articulacion o arreglo."
+uncertainty_confidence: "Media-baja; positiva solo en marco tradition-specific."
+genre_sensitivity: "Alta."
+evaluation_falsification: "Analisis del repertorio acotado contradice la relacion, o tareas fuera del marco muestran una regla general sin otras variables."
+structure_perception_composition:
+  structure: "Operaciones temporales dentro de una forma teorica declarada."
+  perception: "Caplin es analitico; no prueba continuation percibida general."
+  composition: "Heuristica acotada, no regla de densidad o velocidad."
+audit:
+  outcome: REVISE
+  readiness: NOT_READY
+  audited_claim: "En la sentence clasica, ciertas operaciones temporales participan en una descripcion teorica de continuation."
+  correction: "El contenido es valido solo como confirmacion acotada de un hallazgo ya presente en FORM-003 y HAR-023; no añade suficiente decision Rhythm independiente."
+  enumerate: IMPROVES
+  filter: UNCERTAIN
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Puede servir para reconocer un marco clasico; no justifica elegir fragmentacion o aceleracion ni transferirlas a otros repertorios."
+  overlap: "Alta redundancia con FORM-003 y CAND-HAR-023."
+  source_limitations: "Caplin y Schoenberg son teoria/pedagogia acotadas, sin medida de continuation percibida ni transferencia popular."

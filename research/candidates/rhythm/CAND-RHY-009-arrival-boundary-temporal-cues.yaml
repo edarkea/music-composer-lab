@@ -1,0 +1,35 @@
+id: CAND-RHY-009
+status: candidate
+compositional_problem: "Coordinar timing de llegada o frontera local sin confundir un cue con cierre."
+claim: "Alargamiento, silencio, colocacion metrica, reduccion de densidad y timing armonico pueden participar en configuraciones de llegada o frontera, pero ningun cue aislado es suficiente y arrival, boundary y closure siguen siendo estados distintos."
+structural_variable: "duration, rest, metric placement, density and harmonic timing around a declared local target"
+possible_action: "Enumerar configuraciones convergentes y divergentes de cues y filtrarlas por una meta local de llegada o frontera."
+expected_effect: "Diseño mas explicito de llegadas abiertas, fronteras o cierres diferidos."
+evidence_class: HYPOTHESIS
+support_basis: [EXTERNAL_EMPIRICAL, THEORETICAL_SCHOLARSHIP, REPERTOIRE_ANALYSIS]
+sources:
+  - SRC-EMPIRICAL-011
+  - SRC-EMPIRICAL-010
+  - SRC-EMPIRICAL-016
+  - SRC-THEORETICAL-002
+context_dependencies: "Armonia, metro, forma, repertorio, tarea de juicio y arreglo."
+counterproductive_conditions: "Usar nota larga, rest o tiempo fuerte como prueba automatica de cierre."
+alternatives: "Llegada armonica sin cambio melodico, llegada melodica divergente, frontera por arreglo o continuidad sin parada."
+uncertainty_confidence: "Baja-media; evidencia de tareas concretas no equivale a una regla compositiva."
+genre_sensitivity: "Alta."
+evaluation_falsification: "En una tarea y repertorio declarados, la configuracion de cues no modifica ningun juicio relevante o un cue aislado predice siempre el estado."
+structure_perception_composition:
+  structure: "Configuracion temporal alrededor de un objetivo local."
+  perception: "Completitud, limite y deteccion dependen de tarea y contexto."
+  composition: "Filtrar configuraciones, no rankear ni afirmar cierre universal."
+audit:
+  outcome: REVISE
+  readiness: NOT_READY
+  audited_claim: "La organizacion temporal puede aportar evidencia estructural acotada alrededor de una llegada o frontera, sin que ningun cue sea detector independiente."
+  correction: "Se debilita la accion positiva: no existe soporte suficiente para filtrar configuraciones convergentes como medio preferente de llegada o frontera."
+  enumerate: IMPROVES
+  filter: UNCERTAIN
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Enumerar cues y mantener separados arrival, boundary y closure es diagnostico; la composicion de cues queda como pregunta abierta."
+  overlap: "Alta dependencia de MEL-028/029, HAR-027/028/050 y FORM-005."
+  source_limitations: "Las fuentes miden tareas de limite, silencio o completitud en repertorios delimitados; no validan un modelo temporal multi-cue."

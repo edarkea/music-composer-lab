@@ -1,0 +1,32 @@
+id: CAND-CROSS-001
+status: candidate
+compositional_problem: "Distinguir evidencia temporal de phrase boundary de una preferencia para producir local melodic arrival."
+claim: "En los estudios inspeccionados, materiales musicales con pausa, longitud del tono final y contexto armonico se asociaron con variacion en procesamiento de phrase boundaries; como los factores estuvieron parcialmente confundidos y las tareas no midieron local arrival, la evidencia no aisla ventajas independientes ni licencia rankear lengthening o silence para arrival o full closure."
+structural_variable: "relative final-event duration, post-event silence y contexto armonico/formal de frontera"
+possible_action: "No rankear final-event lengthening, post-event silence o su combinacion para local arrival basandose solo en estudios de phrase boundary; representar los factores por separado cuando se analice el contexto."
+expected_effect: "Mejor separacion entre una configuracion temporal compatible con boundary y una afirmacion no justificada sobre arrival o closure."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [EXTERNAL_EMPIRICAL, THEORETICAL_SCHOLARSHIP]
+sources:
+  - SRC-EMPIRICAL-020
+  - SRC-EMPIRICAL-021
+  - SRC-EMPIRICAL-010
+  - SRC-EMPIRICAL-011
+context_dependencies: "Harmonic function, metric/formal position, preceding rhythm, repertoire, listener task and phrase context."
+counterproductive_conditions: "Transferir boundary detection a local arrival, atribuir el efecto solo a duration o asumir que ambos cues son mejores que cada uno por separado."
+alternatives: "Usar harmony, contour, metric placement, articulation, register or arrangement as separate cues."
+uncertainty_confidence: "Media para boundary-related processing; baja para local-arrival composition."
+genre_sensitivity: "Alta fuera de los repertorios y tareas inspeccionados."
+evaluation_falsification: "Una comparacion musical controlada muestra que ni la pausa ni la longitud del tono intervienen en boundary processing bajo el alcance declarado, o que una de ellas rankea local arrival de forma independiente y transferible."
+structure_perception_composition:
+  structure: "Pausa y longitud del evento final como factores temporales separables dentro de una configuracion de frontera."
+  perception: "Las fuentes miden boundary processing, segmentation, detection, production timing o completion, no un constructo unico de local arrival."
+  composition: "La separacion de factores es una cautela de construccion; no prescribe lengthening, silence o su combinacion."
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
+phase2_candidate_type: COMPARATIVE_DECISION_CONSTRAINT
+audit_note: "Sobrevive como restriccion negativa y especifica sobre transferencia de evidencia de boundary a local arrival; no es comparative decision knowledge positivo."
+enumerate: DOES_NOT_IMPROVE
+filter: IMPROVES
+rank: DOES_NOT_IMPROVE
+source_limitations: "Neuhaus apoya procesamiento de boundary con confounds parciales entre pausa, tono limite y funcion armonica; Jusczyk/Krumhansl apoya estructura de frase en bebes y Mozart; Margulis y Kragness/Trainor no miden local arrival."

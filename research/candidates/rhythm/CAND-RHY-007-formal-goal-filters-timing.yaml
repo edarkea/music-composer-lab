@@ -1,0 +1,34 @@
+id: CAND-RHY-007
+status: candidate
+compositional_problem: "Usar un objetivo formal para filtrar alternativas temporales sin convertirlo en una receta."
+claim: "Un rol formal declarado puede filtrar que alternativas de onset, duracion, silencio, densidad o cambio son relevantes para una unidad, pero no determina una configuracion temporal ni mejora generalmente el ranking."
+structural_variable: "formal role/scale combinado con operaciones temporales declaradas"
+possible_action: "Enumerar configuraciones temporales compatibles con establish, continue, prepare, arrive, remain open, contrast o return y conservar varias opciones."
+expected_effect: "Mayor trazabilidad del filtrado temporal."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [THEORETICAL_SCHOLARSHIP, CORPUS_ANALYSIS, REPERTOIRE_ANALYSIS]
+sources:
+  - SRC-THEORETICAL-002
+  - SRC-ACADEMIC-043
+  - SRC-EMPIRICAL-011
+context_dependencies: "Escala formal, metro, frase, prosodia, armonia, genero y arreglo."
+counterproductive_conditions: "Convertir continuation en notas rapidas, arrival en nota larga, contrast en patron nuevo o boundary en silencio."
+alternatives: "Filtrar por centro, identidad, armonia, registro, textura o prosodia y no por timing solamente."
+uncertainty_confidence: "Media-baja; goal information apoyada, medios temporales especificos inciertos."
+genre_sensitivity: "Alta."
+evaluation_falsification: "El rol no mejora la enumeracion o filtrado temporal bajo una escala y tarea declaradas."
+structure_perception_composition:
+  structure: "Rol formal asociado a un conjunto de alternativas temporales."
+  perception: "La funcion percibida y el efecto de cada cue no estan garantizados."
+  composition: "El rol informa el filtro, no el ranking ni el medio obligatorio."
+audit:
+  outcome: REVISE
+  readiness: NOT_READY
+  audited_claim: "Un rol formal puede hacer relevante una configuracion temporal para consideracion, pero el puente especifico hacia filtrado temporal aun no esta suficientemente apoyado."
+  correction: "Se conserva como extension hipotetica de FORM-001, no como capacidad positiva de Rhythm. No se convierten roles en recetas temporales."
+  enumerate: IMPROVES
+  filter: UNCERTAIN
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Enumerar alternativas por rol es diagnostico; la evidencia no permite afirmar que el rol elimine temporalmente candidatos sin especificar un objetivo adicional."
+  overlap: "Alta dependencia de FORM-001; los medios temporales concretos permanecen inciertos."
+  source_limitations: "Las fuentes sostienen goal information y casos formales, no una relacion temporal general rol->medio."

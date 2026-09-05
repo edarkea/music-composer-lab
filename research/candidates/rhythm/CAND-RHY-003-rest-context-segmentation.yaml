@@ -1,0 +1,33 @@
+id: CAND-RHY-003
+status: candidate
+compositional_problem: "Usar rests y silencio para organizar material sin convertirlos automaticamente en frontera, tension o cierre."
+claim: "La posicion de un rest dentro, antes o despues de un evento puede participar en segmentacion o separacion, pero su lectura depende del contexto musical y no implica por si misma boundary, tension o closure."
+structural_variable: "rest location, duration, preceding/following event y contexto armonico-formal"
+possible_action: "Enumerar rests internos, pre-onset, post-evento, cercanos a llegada y de loop, y filtrarlos por la frontera o continuidad buscada."
+expected_effect: "Mayor control sobre articulacion temporal y alternativas de continuidad/apertura."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [EXTERNAL_EMPIRICAL, THEORETICAL_SCHOLARSHIP]
+sources:
+  - SRC-EMPIRICAL-010
+  - SRC-EMPIRICAL-011
+context_dependencies: "Armonia, metro, duracion, posicion formal, textura y evento siguiente."
+counterproductive_conditions: "Dejar silencio esperando cierre automatico o interpretar toda pausa como tension."
+alternatives: "Usar sustain, repeticion, cambio de registro, arreglo o cadencia contextual."
+uncertainty_confidence: "Media-baja; el contexto del silencio esta medido, la segmentacion compositiva general no."
+genre_sensitivity: "Media-alta."
+evaluation_falsification: "Silencios contextualmente manipulados no cambian deteccion, agrupacion o juicio en la tarea declarada."
+structure_perception_composition:
+  structure: "Ausencia temporal situada respecto de eventos."
+  perception: "El contexto modifica deteccion y caracterizacion del silencio."
+  composition: "Puede filtrar articulacion, no garantizar boundary ni closure."
+audit:
+  outcome: REVISE
+  readiness: NOT_READY
+  audited_claim: "La posicion contextual de un rest puede ser relevante para describir separacion temporal, pero no hay soporte suficiente para afirmar una mejora compositiva general de segmentacion."
+  correction: "Se retira la implicacion positiva de segmentacion como resultado establecido; queda como pregunta de investigacion y como cautela contra inferir frontera o cierre."
+  enumerate: IMPROVES
+  filter: UNCERTAIN
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Representar distintos contextos de rest es diagnostico; la evidencia no respalda todavia filtrar por una frontera buscada."
+  overlap: "Alta redundancia con MEL-028/029 y FORM-005."
+  source_limitations: "Margulis mide deteccion, tension y caracterizacion; Kragness/Trainor mide produccion auto-pautada de limites, no segmentacion compositiva general."

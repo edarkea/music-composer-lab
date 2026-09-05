@@ -1,0 +1,34 @@
+id: CAND-RHY-002
+status: candidate
+compositional_problem: "Colocar eventos respecto de un metro sin asumir que la posicion fuerte fija funcion o prominencia."
+claim: "Un metro declarado puede ofrecer posiciones y agrupaciones esperadas que filtren onsets, duraciones y desplazamientos; la posicion metrica no determina por si sola acento, importancia formal, estabilidad o funcion."
+structural_variable: "metric position, subdivision, grouping y relacion con el tactus"
+possible_action: "Coordinar o desplazar deliberadamente un evento respecto de la jerarquia metrica declarada y conservar alternativas cuando el objetivo sea ambiguo."
+expected_effect: "Control de congruencia o conflicto con expectativas metricas, sin prometer un efecto unico."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [THEORETICAL_SCHOLARSHIP, EXTERNAL_EMPIRICAL]
+sources:
+  - SRC-THEORETICAL-009
+  - SRC-EMPIRICAL-012
+  - SRC-ACADEMIC-022
+context_dependencies: "Metro, subdivision, acompañamiento, acento dinamico/agogico y enculturacion."
+counterproductive_conditions: "Tratar beat fuerte como equivalente de nota importante o de frontera formal."
+alternatives: "Marcar prominencia mediante duracion, registro, dinamica, timbre o armonia."
+uncertainty_confidence: "Media-baja; la expectativa metrica esta apoyada, la prescripcion compositiva es inferida."
+genre_sensitivity: "Alta fuera de metros y repertorios investigados."
+evaluation_falsification: "En una tarea declarada, la posicion metrica no modula ninguna expectativa o el efecto depende enteramente de otros cues."
+structure_perception_composition:
+  structure: "Posicion de onset dentro de una jerarquia metrica declarada."
+  perception: "Expectativa de acento; prominencia percibida es multidimensional."
+  composition: "Filtrar o desplazar colocaciones con una intencion explicita, sin ranking universal."
+audit:
+  outcome: REVISE
+  readiness: POSSIBLE_WITH_SCOPE
+  audited_claim: "Bajo un marco metrico declarado, la posicion metrica ofrece restricciones o alternativas de colocacion sin determinar funcion o prominencia."
+  correction: "La accion compositiva queda limitada a coordinar o desplazar eventos respecto de una grilla declarada; no se prescribe el tiempo fuerte."
+  enumerate: IMPROVES
+  filter: IMPROVES
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Es una accion genuina de construccion/filtrado, siempre que el tipo de acento y el marco metrico se declaren."
+  overlap: "Se relaciona con MEL-025, pero aporta el candidato Rhythm como contexto de colocacion para varias capas y no como prominencia melodica."
+  source_limitations: "London y Palmer/Krumhansl apoyan expectativas metricas; Mullensiefen apoya acento multidimensional, no una preferencia compositiva universal."

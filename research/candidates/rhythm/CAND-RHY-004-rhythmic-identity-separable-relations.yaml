@@ -1,0 +1,33 @@
+id: CAND-RHY-004
+status: candidate
+compositional_problem: "Preservar o cambiar relaciones ritmicas de una semilla sin afirmar que eso conserva automaticamente identidad motivica."
+claim: "Onset pattern, duration pattern, IOI y metric placement pueden especificarse separadamente de pitch; conservar una relacion mientras cambia otra permite enumerar transformaciones, pero no demuestra identidad perceptiva, reconocimiento o desarrollo."
+structural_variable: "relacion ritmica declarada como invariante o dimension transformada"
+possible_action: "Declarar si se conserva onset, duracion, IOI o posicion metrica antes de cambiar alturas u otras dimensiones."
+expected_effect: "Transformaciones mas trazables y comparables."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [EXTERNAL_EMPIRICAL, COMPOSITION_PEDAGOGY]
+sources:
+  - SRC-EMPIRICAL-019
+  - SRC-PEDAGOGICAL-001
+context_dependencies: "Tarea de transformacion, material, metro, instrumentacion y objetivo formal."
+counterproductive_conditions: "Confundir una invariante notada con identidad percibida o memorabilidad."
+alternatives: "Conservar pitch, contorno, articulacion o una relacion armonica en vez del ritmo."
+uncertainty_confidence: "Media-baja."
+genre_sensitivity: "Desconocida fuera del alcance investigado."
+evaluation_falsification: "La representacion declarada no permite distinguir o controlar transformaciones en una tarea compositiva concreta."
+structure_perception_composition:
+  structure: "Relaciones de ataque y duracion separadas de pitch."
+  perception: "Reconocimiento ritmico y melodico no son equivalentes."
+  composition: "La invariante sirve para filtrar operaciones, no para rankear su exito."
+audit:
+  outcome: REVISE
+  readiness: NOT_READY
+  audited_claim: "Onset, duration, IOI y metric placement pueden actuar como invariantes temporales separadas de pitch."
+  correction: "La formulacion es estructuralmente valida, pero no añade suficiente conocimiento compositivo frente a MEL-032/034 sin una operacion Rhythm especifica adicional."
+  enumerate: IMPROVES
+  filter: UNCERTAIN
+  rank: DOES_NOT_IMPROVE
+  possible_action_audit: "Declarar una invariante ayuda a describir transformaciones; no esta demostrado que mejore su seleccion o su efecto."
+  overlap: "Alta redundancia con CAND-MEL-032 y CAND-MEL-034; la distincion ritmica no basta por si sola para justificar un candidato independiente."
+  source_limitations: "Dowling estudia reconocimiento melodico y Schoenberg pedagogia; ninguno demuestra identidad motivica o utilidad compositiva de preservar ritmo."
