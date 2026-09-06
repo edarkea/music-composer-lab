@@ -84,4 +84,4 @@ async function handle(req, res) {
   return send(res, duplicate?409:201,{ok:!duplicate,status:s.status,session_id:s.session_id,payload_hash:pHash,error:duplicate?{code:"DUPLICATE",message:"Sesión completa duplicada."}:null});
 }
 const server=http.createServer((req,res)=>handle(req,res).catch(e=>fail(res,500,"STORAGE_FAILURE",e.message)));
-server.listen(PORT,"127.0.0.1",()=>console.log(`EXP-003 backend listening on http://127.0.0.1:${PORT}`));
+server.listen(PORT,"0.0.0.0",()=>console.log(`EXP-003 backend listening on http://0.0.0.0:${PORT}`));
