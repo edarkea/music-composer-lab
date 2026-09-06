@@ -1,0 +1,423 @@
+experiment_id: EXP-003
+freeze_status: ITEM_POOL_FROZEN_WITH_CAUTIONS
+freeze_version: EXP003-ITEM-FREEZE-v2
+freeze_date: 2026-09-05
+authority_status: AUTHORITATIVE_AFTER_INTEGRITY_REAUDIT
+predecessor_freeze_version: EXP003-ITEM-FREEZE-v1
+predecessor_freeze_sha256: AE1C5A93C57469CB72C95775A7ED11916A7599729F10EA0B94D4659CA6B8A093
+primary_estimand: LOWER-MOTION-SELECTION_POLICY
+pure_motion_interpretation: NOT_SUPPORTED
+selection_procedure_id: MCLEX-EXP003-v1
+selection_procedure:
+  - enumerate all R2 realizations in the frozen construction space
+  - apply hard controls
+  - form pairs with total_motion_low less than total_motion_high
+  - lexicographically minimize abs delta span, abs delta centroid, abs delta maximum adjacent spacing, abs delta minimum adjacent spacing, spacing profile L1, and abs delta maximum motion
+  - maximize motion contrast within the first lexicographic tie
+  - break remaining ties by MIDI pitch lists in lexicographic order
+voice_count: 4
+construction_space:
+  voice_ranges_midi:
+    V1: [43, 59]
+    V2: [48, 67]
+    V3: [55, 76]
+    V4: [60, 81]
+  adjacent_spacing_semitones: [3, 19]
+  total_span_semitones: [12, 31]
+  crossing_allowed: false
+  moving_voice_count_match: HARD
+  common_tone_strategy: B
+  task_wording_status: PROVISIONAL
+  audio_pipeline_status: NOT_YET_PASS
+families:
+  - item_family_id: EXP003-F01
+    harmonic_context: C major I -> G major V
+    H1_identity: C major triad with G doubled
+    H2_identity: G major triad with G doubled
+    R1_pitches_midi: [48, 52, 60, 67]
+    R2_LOW_pitches_midi: [43, 55, 62, 71]
+    R2_HIGH_pitches_midi: [43, 50, 67, 71]
+    doubling_pattern: G,B,D,G
+    bass_pitch_class: G
+    inversion: root
+    available_common_tones: [G]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-5, 3, 2, 4]
+    motion_vector_HIGH: [-5, -2, 7, 4]
+    total_motion_LOW: 14
+    total_motion_HIGH: 18
+    motion_contrast: 4
+    max_motion_LOW: 5
+    max_motion_HIGH: 7
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 28
+    span_HIGH: 28
+    centroid_LOW: 57.75
+    centroid_HIGH: 57.75
+    spacing_profile_LOW: [12, 7, 9]
+    spacing_profile_HIGH: [7, 17, 4]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE]
+  - item_family_id: EXP003-F02
+    harmonic_context: D minor ii -> A major V
+    H1_identity: D minor triad with A doubled
+    H2_identity: A major triad with A doubled
+    R1_pitches_midi: [50, 53, 62, 69]
+    R2_LOW_pitches_midi: [45, 57, 64, 73]
+    R2_HIGH_pitches_midi: [45, 52, 69, 73]
+    doubling_pattern: A,C#,E,A
+    bass_pitch_class: A
+    inversion: root
+    available_common_tones: [A]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-5, 4, 2, 4]
+    motion_vector_HIGH: [-5, -1, 7, 4]
+    total_motion_LOW: 15
+    total_motion_HIGH: 17
+    motion_contrast: 2
+    max_motion_LOW: 5
+    max_motion_HIGH: 7
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 28
+    span_HIGH: 28
+    centroid_LOW: 59.75
+    centroid_HIGH: 59.75
+    spacing_profile_LOW: [12, 7, 9]
+    spacing_profile_HIGH: [7, 17, 4]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE, WEAK_MOTION_CONTRAST]
+  - item_family_id: EXP003-F03
+    harmonic_context: E minor iii -> B major V
+    H1_identity: E minor triad with B doubled
+    H2_identity: B major triad with B doubled
+    R1_pitches_midi: [52, 55, 64, 71]
+    R2_LOW_pitches_midi: [47, 59, 66, 75]
+    R2_HIGH_pitches_midi: [47, 54, 71, 75]
+    doubling_pattern: B,D#,F#,B
+    bass_pitch_class: B
+    inversion: root
+    available_common_tones: [B]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-5, 4, 2, 4]
+    motion_vector_HIGH: [-5, -1, 7, 4]
+    total_motion_LOW: 15
+    total_motion_HIGH: 17
+    motion_contrast: 2
+    max_motion_LOW: 5
+    max_motion_HIGH: 7
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 28
+    span_HIGH: 28
+    centroid_LOW: 61.75
+    centroid_HIGH: 61.75
+    spacing_profile_LOW: [12, 7, 9]
+    spacing_profile_HIGH: [7, 17, 4]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE, WEAK_MOTION_CONTRAST]
+  - item_family_id: EXP003-F04
+    harmonic_context: F major IV -> C major I
+    H1_identity: F major triad with A doubled
+    H2_identity: C major triad with C doubled
+    R1_pitches_midi: [53, 57, 60, 69]
+    R2_LOW_pitches_midi: [48, 60, 67, 76]
+    R2_HIGH_pitches_midi: [48, 55, 72, 76]
+    doubling_pattern: C,C,E,G
+    bass_pitch_class: C
+    inversion: root
+    available_common_tones: [C]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-5, 3, 7, 7]
+    motion_vector_HIGH: [-5, -2, 12, 7]
+    total_motion_LOW: 22
+    total_motion_HIGH: 26
+    motion_contrast: 4
+    max_motion_LOW: 7
+    max_motion_HIGH: 12
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 28
+    span_HIGH: 28
+    centroid_LOW: 62.75
+    centroid_HIGH: 62.75
+    spacing_profile_LOW: [12, 7, 9]
+    spacing_profile_HIGH: [7, 17, 4]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE]
+  - item_family_id: EXP003-F05
+    harmonic_context: G major V -> C major I
+    H1_identity: G major triad with B doubled
+    H2_identity: C major triad with C doubled
+    R1_pitches_midi: [55, 59, 62, 71]
+    R2_LOW_pitches_midi: [48, 60, 67, 76]
+    R2_HIGH_pitches_midi: [48, 55, 72, 76]
+    doubling_pattern: C,C,E,G
+    bass_pitch_class: C
+    inversion: root
+    available_common_tones: [G]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-7, 1, 5, 5]
+    motion_vector_HIGH: [-7, -4, 10, 5]
+    total_motion_LOW: 18
+    total_motion_HIGH: 26
+    motion_contrast: 8
+    max_motion_LOW: 7
+    max_motion_HIGH: 10
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 28
+    span_HIGH: 28
+    centroid_LOW: 62.75
+    centroid_HIGH: 62.75
+    spacing_profile_LOW: [12, 7, 9]
+    spacing_profile_HIGH: [7, 17, 4]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE]
+  - item_family_id: EXP003-F06
+    harmonic_context: A minor vi -> F major IV
+    H1_identity: A minor triad with C doubled
+    H2_identity: F major triad with F doubled
+    R1_pitches_midi: [57, 60, 64, 72]
+    R2_LOW_pitches_midi: [53, 57, 60, 77]
+    R2_HIGH_pitches_midi: [53, 57, 72, 77]
+    doubling_pattern: F,F,A,C
+    bass_pitch_class: F
+    inversion: root
+    available_common_tones: [A, C]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-4, -3, -4, 5]
+    motion_vector_HIGH: [-4, -3, 8, 5]
+    total_motion_LOW: 16
+    total_motion_HIGH: 20
+    motion_contrast: 4
+    max_motion_LOW: 5
+    max_motion_HIGH: 8
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 24
+    span_HIGH: 24
+    centroid_LOW: 61.75
+    centroid_HIGH: 64.75
+    spacing_profile_LOW: [4, 3, 17]
+    spacing_profile_HIGH: [4, 15, 5]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE, CENTROID_DIFFERENCE]
+  - item_family_id: EXP003-F07
+    harmonic_context: G major I -> E major vi
+    H1_identity: G major triad with D doubled
+    H2_identity: E major triad with E doubled
+    R1_pitches_midi: [59, 62, 67, 74]
+    R2_LOW_pitches_midi: [52, 64, 71, 80]
+    R2_HIGH_pitches_midi: [52, 59, 76, 80]
+    doubling_pattern: E,E,G#,B
+    bass_pitch_class: E
+    inversion: root
+    available_common_tones: [B]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-7, 2, 4, 6]
+    motion_vector_HIGH: [-7, -3, 9, 6]
+    total_motion_LOW: 19
+    total_motion_HIGH: 25
+    motion_contrast: 6
+    max_motion_LOW: 7
+    max_motion_HIGH: 9
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 28
+    span_HIGH: 28
+    centroid_LOW: 66.75
+    centroid_HIGH: 66.75
+    spacing_profile_LOW: [12, 7, 9]
+    spacing_profile_HIGH: [7, 17, 4]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE]
+  - item_family_id: EXP003-F08
+    harmonic_context: C major I -> A major vi
+    H1_identity: C major seventh
+    H2_identity: A major triad with E doubled
+    R1_pitches_midi: [48, 52, 55, 59]
+    R2_LOW_pitches_midi: [45, 49, 64, 76]
+    R2_HIGH_pitches_midi: [45, 61, 64, 76]
+    doubling_pattern: A,C#,E,E
+    bass_pitch_class: A
+    inversion: root
+    available_common_tones: [E]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-3, -3, 9, 17]
+    motion_vector_HIGH: [-3, 9, 9, 17]
+    total_motion_LOW: 32
+    total_motion_HIGH: 38
+    motion_contrast: 6
+    max_motion_LOW: 17
+    max_motion_HIGH: 17
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 31
+    span_HIGH: 31
+    centroid_LOW: 58.5
+    centroid_HIGH: 61.5
+    spacing_profile_LOW: [4, 15, 12]
+    spacing_profile_HIGH: [16, 3, 12]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE, CENTROID_DIFFERENCE]
+  - item_family_id: EXP003-F09
+    harmonic_context: D7 ii7 -> G7 V7
+    H1_identity: D dominant seventh
+    H2_identity: G dominant seventh
+    R1_pitches_midi: [50, 54, 57, 60]
+    R2_LOW_pitches_midi: [43, 59, 65, 74]
+    R2_HIGH_pitches_midi: [43, 53, 71, 74]
+    doubling_pattern: G,B,D,F
+    bass_pitch_class: G
+    inversion: root
+    available_common_tones: [D, F]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-7, 5, 8, 14]
+    motion_vector_HIGH: [-7, -1, 14, 14]
+    total_motion_LOW: 34
+    total_motion_HIGH: 36
+    motion_contrast: 2
+    max_motion_LOW: 14
+    max_motion_HIGH: 14
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 31
+    span_HIGH: 31
+    centroid_LOW: 60.25
+    centroid_HIGH: 60.25
+    spacing_profile_LOW: [16, 6, 9]
+    spacing_profile_HIGH: [10, 18, 3]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE, WEAK_MOTION_CONTRAST]
+  - item_family_id: EXP003-F10
+    harmonic_context: E7 iii7 -> C7 bVI7
+    H1_identity: E dominant seventh
+    H2_identity: C dominant seventh
+    R1_pitches_midi: [52, 56, 59, 62]
+    R2_LOW_pitches_midi: [48, 58, 64, 79]
+    R2_HIGH_pitches_midi: [48, 52, 70, 79]
+    doubling_pattern: C,E,G,Bb
+    bass_pitch_class: C
+    inversion: root
+    available_common_tones: [E]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-4, 2, 5, 17]
+    motion_vector_HIGH: [-4, -4, 11, 17]
+    total_motion_LOW: 28
+    total_motion_HIGH: 36
+    motion_contrast: 8
+    max_motion_LOW: 17
+    max_motion_HIGH: 17
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 31
+    span_HIGH: 31
+    centroid_LOW: 62.25
+    centroid_HIGH: 62.25
+    spacing_profile_LOW: [10, 6, 15]
+    spacing_profile_HIGH: [4, 18, 9]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE]
+  - item_family_id: EXP003-F11
+    harmonic_context: G7 V7 -> Dm7 ii7
+    H1_identity: G dominant seventh
+    H2_identity: D minor seventh
+    R1_pitches_midi: [55, 59, 62, 65]
+    R2_LOW_pitches_midi: [50, 60, 65, 81]
+    R2_HIGH_pitches_midi: [50, 53, 72, 81]
+    doubling_pattern: D,F,A,C
+    bass_pitch_class: D
+    inversion: root
+    available_common_tones: [D, F]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-5, 1, 3, 16]
+    motion_vector_HIGH: [-5, -6, 10, 16]
+    total_motion_LOW: 25
+    total_motion_HIGH: 37
+    motion_contrast: 12
+    max_motion_LOW: 16
+    max_motion_HIGH: 16
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 31
+    span_HIGH: 31
+    centroid_LOW: 64
+    centroid_HIGH: 64
+    spacing_profile_LOW: [10, 5, 16]
+    spacing_profile_HIGH: [3, 19, 9]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE]
+  - item_family_id: EXP003-F12
+    harmonic_context: A major IV -> E7 V7
+    H1_identity: A major triad with A doubled
+    H2_identity: E dominant seventh
+    R1_pitches_midi: [57, 61, 64, 69]
+    R2_LOW_pitches_midi: [52, 62, 71, 80]
+    R2_HIGH_pitches_midi: [52, 59, 74, 80]
+    doubling_pattern: E,G#,B,D
+    bass_pitch_class: E
+    inversion: root
+    available_common_tones: [E]
+    retained_exact_pitches_LOW: []
+    retained_exact_pitches_HIGH: []
+    retaining_voices_LOW: []
+    retaining_voices_HIGH: []
+    motion_vector_LOW: [-5, 1, 7, 11]
+    motion_vector_HIGH: [-5, -2, 10, 11]
+    total_motion_LOW: 24
+    total_motion_HIGH: 28
+    motion_contrast: 4
+    max_motion_LOW: 11
+    max_motion_HIGH: 11
+    moving_voice_count_LOW: 4
+    moving_voice_count_HIGH: 4
+    span_LOW: 28
+    span_HIGH: 28
+    centroid_LOW: 66.25
+    centroid_HIGH: 66.25
+    spacing_profile_LOW: [10, 9, 9]
+    spacing_profile_HIGH: [7, 15, 6]
+    caution_flags: [SPACING_TREATMENT_ATTRIBUTE]
+freeze_cautions:
+  - all items: systematic spacing treatment-correlated attribute
+  - F02: weak motion contrast
+  - F03: weak motion contrast
+  - F09: weak motion contrast
+  - F06: centroid difference
+  - F08: centroid difference
+validation:
+  result: PASS
+  scope: executable offline structural validation
+  validator: experiments/validate-exp003-freeze-v2.py
+  families_passed: 12
+  families_failed: 0
+  music_engine_runtime: NOT_RUN
+  midi: NOT_GENERATED
+  audio: NOT_GENERATED
+  pilot: NOT_RUN
+  participants: NONE
+revision_rule: Any later change to pitches, treatment labels, selection procedure, or hard construction rules requires explicit UNFREEZE_REVISION and methodological re-audit.

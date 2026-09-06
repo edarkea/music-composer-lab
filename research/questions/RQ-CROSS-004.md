@@ -1,4 +1,4 @@
-# RQ-CROSS-004 - Constructo para continuidad entre realizaciones armónicas
+# RQ-CROSS-004 - Constructo para continuidad entre realizaciones armonicas
 
 ## Estado
 
@@ -7,212 +7,133 @@
 - `phase: Phase 2`
 - `frontier: REALIZATION RANKING`
 - `mode: CONSTRUCT-FIRST`
-- `scope: transiciones sucesivas entre sonoridades realizadas con contexto armónico declarado`
-- `candidate_audit_status: NOT_STARTED`
+- `scope: transiciones sucesivas entre sonoridades realizadas con contexto armonico declarado`
+- `candidate_audit_status: COMPLETED`
 - `candidate_audit_evidence_gate: PASS`
 - `next_unused_candidate_id: CAND-CROSS-005`
 - `experiment_gate: NOT JUSTIFIED`
 
-## Pregunta central
+## Pregunta y decision objetivo
 
-Cuando un compositor quiere mantener continuidad entre dos sonoridades
-armónicas realizadas, ¿qué constructo medible u operacionalizable podría
-servir para comparar realizaciones alternativas sin confundir distancia,
-roughness, similarity, expectativa, conectividad o preferencia con
-continuidad compositiva?
+La pregunta era que constructo podria servir para comparar realizaciones
+alternativas cuando la meta compositiva es continuidad entre sonoridades
+sucesivas. La decision futura mantiene declarado el contexto armonico y,
+cuando proceda, el contexto melodico, y varia bajo, inversion, registro,
+spacing, asignacion de voces, retencion de tonos comunes y movimiento
+individual.
 
-## Decisión compositiva objetivo
+## Hallazgo central
 
-La decisión futura es:
+Ninguna fuente inspeccionada mide simultaneamente perceived distance y
+continuity, define continuity mediante distance ni valida que menor distance
+implique mayor continuidad compositiva. Por tanto:
 
-```text
-same / declared harmonic context
-+ same / declared melodic context where necessary
-+ realization A vs realization B
-```
+`perceived distance -> continuity: NOT ESTABLISHED`
 
-Las variables potenciales son bajo, inversión, registro, spacing, asignación
-de voces, retención de tonos comunes y movimiento individual. Esta RQ no
-determina todavía qué variables deben combinarse ni compara A contra B.
+Perceived musical distance entre sonoridades sucesivas es, no obstante, un
+objetivo perceptivo mas estrecho y operacionalizable con alcance limitado.
+Declarar ese objetivo no equivale a operacionalizar continuity.
 
-## Distinciones obligatorias
+Rogers y Callender presentan pares sucesivos de trichords sinteticos y piden
+ratings de distance. En sus paradigmas, el movimiento total y la retencion de
+tonos comunes se relacionan con esos ratings, pero la taxicab distance no
+funciona como metrica lineal suficiente: importan tambien direccion, numero de
+voces, afinacion y tamano del desplazamiento. El estudio no compara
+realizaciones alternativas de la misma seleccion armonica en textura completa.
 
-```text
-voice-leading distance != perceived continuity
-minimum total motion != universal optimum
-common-tone retention != connectedness automatically
-small semitone motion != smoothness automatically
-smoothness != continuity
-continuity != similarity
-similarity != identity
-roughness != dissonance != tension
-roughness != voice-leading quality
-low roughness != continuity
-consonance != stability
-bass motion != root motion
-chord distance != voice-leading distance necessarily
-analytical parsimony != perceptual preference
-perceptual preference != compositional quality
-static sonority property != sequential transition property
-```
+Wall et al. miden expectativa y procesamiento mediante priming y tiempos de
+reaccion en secuencias polifonicas occidentales; no miden continuity,
+smoothness o connectedness. Milne y Holland comparan modelos contra juicios de
+triadic distance; esto permite estudiar distance, no continuity ni un ranking
+compositivo. Eerola y Lahdelma estudian acordes aislados: registro, roughness y
+sharpness son una cautela sobre la sonoridad estatica, no sobre una transicion.
 
-## Resultado de investigación
+## Matriz de transferencia
 
-La evidencia permite operacionalizar de forma directa un constructo más
-estrecho: **perceived musical distance entre sonoridades sucesivas**.
-
-Rogers y Callender hicieron escuchar pares de trichords en sucesión y
-solicitaron ratings de distancia. El total de desplazamiento se relacionó con
-mayor distancia percibida y los tonos comunes redujeron la distancia; sin
-embargo, los desplazamientos no se combinaron como una métrica lineal única y
-los efectos dependieron de dirección, número de voces y afinación.
-
-Esto no demuestra que menor distancia sea mayor continuidad compositiva.
-Constituye una medida secuencial relevante y un puente parcial, no una
-validación de `voice-leading distance -> perceived continuity`.
-
-Wall et al. encontraron que voice leading y armonía influyen conjuntamente en
-la expectativa durante secuencias polifónicas occidentales. La tarea fue de
-priming y tiempo de reacción, no de rating de continuidad o smoothness. Aporta
-evidencia de procesamiento/expectativa, no una medida directa del objetivo.
-
-Milne y Holland compararon modelos de distancia triádica percibida,
-incluyendo voice-leading distance, Tonnetz, distancia espectral y conteo de
-tonos comunes. Esto permite comparar modelos de distancia bajo un criterio
-declarado, pero no convierte distancia percibida en continuidad.
-
-Eerola y Lahdelma muestran que registro afecta ratings de consonancia mediante
-roughness y sharpness. Es evidencia acústico-perceptiva estática sobre una
-sonoridad, no evidencia de continuidad entre realizaciones sucesivas.
-
-## Inventario de constructos
-
-| Construct | Definition / level | Task / measure | Static or sequential | Directness | Readiness |
-|---|---|---|---|---|---|
-| Voice-leading distance | Distancia analítica entre alturas/voices | Métrica y juicio de distancia | Sequential | `PARTIAL` | `READY WITH SCOPED OPERATIONALIZATION` para distance |
-| Common-tone retention | Tonos literalmente conservados | Conteo y manipulación | Sequential | `PARTIAL` | `READY WITH SCOPED OPERATIONALIZATION` para distance |
-| Parsimony / total motion | Suma de desplazamientos o movimiento mínimo | Modelo y ratings de distancia | Sequential | `PARTIAL` | No metric single optimum |
-| Perceived connectedness | Sensación de conexión entre eventos | No tarea estable directa identificada | Sequential | `NOT ESTABLISHED` | `NEEDS MORE CONSTRUCT-FIRST` |
-| Smoothness | Término teórico/pedagógico o rating posible | No paradigma homogéneo verificado | Sequential | `NOT ESTABLISHED` | `UNRESOLVED` |
-| Voice-stream continuity | Seguimiento de líneas auditivas | Streaming e integración/segregación | Sequential | `PARTIAL` local | `ADJACENT MEASURES ONLY` |
-| Roughness | Interacción acústica de parciales | Modelos y ratings de consonancia | Usually static | `NOT ESTABLISHED` | Solo para consonance acotada |
-| Similarity | Parecido entre sonoridades | Ratings de similarity/distance | Pairwise | `PARTIAL` | Solo similarity |
-| Preference | Agrado o elección | Rating/preference | Either | `UNSUITABLE` | Separar del objetivo |
-
-## Analítico, acústico, perceptivo y compositivo
-
-Voice displacement, common tones, parsimonious movement, voice crossing,
-spacing e inversión describen la realización analíticamente. Roughness,
-spectral interaction, harmonicity, register y sharpness describen propiedades
-acústicas de la señal o sonoridad. Distance ratings, expectancy, streaming,
-consonance y similarity son resultados perceptivos dependientes de tarea.
-
-“Hacer que esta transición armónica se sienta continua” es el objetivo
-compositivo; la literatura inspeccionada no lo equipara de forma estable con
-ningún constructo anterior.
-
-## Parsimony y tonos comunes
-
-La suma de desplazamientos tiene soporte como predictor parcial de juicios de
-distancia en pares de trichords. No justifica minimizar siempre el movimiento.
-El juicio también responde a tonos comunes, tamaño de movimiento, dirección,
-relación entre voces y afinación.
-
-La retención de tonos comunes tiene evidencia directa para reducir distancia
-percibida en ese paradigma, pero no demuestra que más tonos comunes produzcan
-mejor continuidad global.
-
-## Voice-stream, bajo, inversión, registro y spacing
-
-La proximidad de pitch y otros indicios de auditory scene analysis pueden
-favorecer el seguimiento de una línea, pero continuidad de una voz individual
-no equivale a continuidad armónica global.
-
-El bajo debe tratarse separadamente: `ROOT != BASS`. No se infiere una
-jerarquía universal de root position. Registro y spacing pueden alterar
-roughness, consonancia, sharpness, streaming y similitud sin cambiar la
-identidad abstracta del acorde; son posibles confounds, no criterios
-automáticos de continuidad.
-
-## Roughness, similitud y preferencia
-
-Roughness es más maduro como constructo acústico-perceptivo que continuity,
-pero la evidencia inspeccionada se refiere principalmente a consonancia o
-estabilidad de una sonoridad. `LOW ROUGHNESS != CONTINUITY`.
-
-Similarity puede ser medible, pero `SIMILARITY != CONTINUITY`. Preference no
-es el criterio por defecto: que una realización guste más no identifica qué
-aspecto produjo continuidad ni establece calidad compositiva.
-
-## Matrix de transferencia constructo → objetivo
-
-| Source construct | Target: perceived continuity | Result |
+| Fuente | Objetivo declarado | Resultado de transferencia |
 |---|---|---|
-| Voice-leading distance | Continuidad percibida | `PARTIAL`; validado para distance |
-| Common-tone retention | Continuidad percibida | `PARTIAL`; reduce distance en alcance acotado |
-| Smoothness | Continuidad percibida | `NOT ESTABLISHED` |
-| Roughness | Continuidad percibida | `NOT ESTABLISHED`; medida estática |
-| Similarity | Continuidad percibida | `PARTIAL`, no proxy automático |
-| Voice-stream continuity | Continuidad armónica global | `PARTIAL`; seguimiento local |
-| Expectancy / processing fluency | Continuidad | `PARTIAL`; Wall mide expectativa |
-| Preference | Continuidad | `INVALID FOR CURRENT PURPOSE` |
+| Voice-leading distance analitica | Perceived distance | `PARTIAL`, con alcance de la tarea |
+| Common-tone retention | Perceived distance | `PARTIAL`, en el paradigma de trichords |
+| Perceived distance | Continuity | `NOT ESTABLISHED` |
+| Voice-leading distance | Continuity | `NOT ESTABLISHED` |
+| Common-tone retention | Continuity | `NOT ESTABLISHED` |
+| Smoothness | Continuity | `NOT ESTABLISHED`; no hay tarea homogenea establecida |
+| Roughness | Continuity | `NOT ESTABLISHED`; evidencia inspeccionada estatica |
+| Similarity | Continuity | `NOT ESTABLISHED`; similarity es objetivo alternativo |
+| Voice-stream continuity | Continuidad armonica global | `NOT ESTABLISHED`; seguimiento local sin puente validado |
+| Expectancy / processing fluency | Continuity | `NOT ESTABLISHED` |
+| Preference | Continuity | `INVALID FOR CURRENT PURPOSE`; responde a otra pregunta |
 
-La ausencia de validación no demuestra ausencia de relación; impide la
-transferencia automática.
+`PARTIAL` solo sobrevive cuando existe correspondencia observada entre el
+constructo fuente y perceived distance dentro del alcance de una tarea. No se
+usa por proximidad conceptual, vocabulario compartido o plausibilidad teorica.
 
-## Repertorio y alcance
+## Correcciones de alcance
 
-- Rogers/Callender: trichords sintéticos en Shepard tones; registro y spacing
-  reducidos; alcance específico de distance.
-- Milne/Holland: modelos y juicios de distancia triádica.
-- Wall et al.: secuencias polifónicas de tradición tonal occidental; priming y
-  expectativa.
-- Eerola/Lahdelma: acordes aislados en distintos registros; consonance,
-  roughness y sharpness.
+- Propiedad estatica de sonoridad no es propiedad secuencial de transicion.
+- Common-tone retention no equivale a continuidad ni a mejor voicing.
+- Root no es bass; inversion, registro, spacing, bajo y pitch-class deben
+  registrarse por separado.
+- Una metrica analitica puede correlacionarse con un juicio sin ser el
+  constructo perceptivo; no se afirma que los oyentes perciban taxicab distance.
+- Los resultados dependen de registro, afinacion, numero de voces, asignacion,
+  timbre, armonia, timing y contexto tonal.
+- No se inspecciono un paradigma con top-line melodica fija y realizaciones
+  alternativas comparables.
 
-No hay todavía un puente directo hacia una regla de voicing de popular song.
-La transferencia a realización en textura popular es `UNKNOWN TRANSFER`.
+## Resultado de la auditoria de CAND-CROSS-004
 
-## Readiness para comparación futura
+- `audit_outcome: REVISE`
+- `promotion_readiness: POSSIBLE_WITH_SCOPE`
+- `phase2_candidate_type: CONSTRUCT_TRANSFER_CONSTRAINT`
+- `split_required: NO`
 
-El mejor candidato no es `continuity` en sentido amplio, sino **PERCEIVED
-MUSICAL DISTANCE BETWEEN SUCCESSIVE SONORITIES**.
+El candidato contiene una sola restriccion coherente: no transferir
+automaticamente constructos adyacentes a continuity y declarar, si se desea,
+perceived distance como criterio alternativo. No rankea A frente a B y por eso
+no es `COMPARATIVE_DECISION_KNOWLEDGE`.
 
-Estado: **READY WITH SCOPED OPERATIONALIZATION**.
+## Capacidades separadas
 
-Una RQ posterior podría comparar realizaciones solo si fija progresión
-armónica, timing, timbre, registro relevante, número de voces y melodía cuando
-proceda, y usa ratings de distance o una medida de continuity validada. No se
-escoge A/B todavía.
-
-La frontera `REALIZATION RANKING` permanece **CONSTRUCT-FIRST BLOCKED** para
-continuity amplia, aunque queda mejor preparada para una comparación estrecha
-de perceived distance.
-
-## Candidate result
-
-Se crea un único candidato porque la conclusión aporta una restricción de
-transferencia reutilizable y una operacionalización más estrecha:
-`CAND-CROSS-004`, `CONSTRUCT_TRANSFER_CONSTRAINT`, `POSSIBLE_WITH_SCOPE`.
-
-La auditoría queda pendiente. El gate de evidencia para auditarlo es `PASS`;
-`PASS` no implica promoción.
-
-## Capabilities
-
-| Capability | Result |
+| Capacidad | Resultado |
 |---|---|
-| Define realization target | `PARTIAL` |
-| Operationalize target | `YES WITH SCOPE` for perceived distance; `NO` for broad continuity |
-| Transfer analytical metrics | `PARTIAL` |
-| Filter future criteria | `IMPROVES` |
-| Rank realizations now | `NO` |
+| Enumerar opciones de realizacion | `YES` |
+| Filtrar opciones musicales | `PARTIAL`, por variables y contexto declarados |
+| Filtrar evidencia | `YES` |
+| Filtrar transferencias invalidas | `YES` |
+| Operacionalizar continuity amplia | `NO` |
+| Operacionalizar perceived distance | `YES WITH SCOPE` |
+| Rankear realizaciones para continuity | `NO` |
+| Rankear realizaciones para perceived distance | `NO` todavia; criterio listo, comparacion no realizada |
 
-## Experiment policy
+## Frontera y experimento
 
-No se diseña experimento. `EXP-002` permanece `PAUSED` y el gate de esta RQ
-es `NOT JUSTIFIED`.
+`REALIZATION RANKING FOR BROAD CONTINUITY: CONSTRUCT-FIRST BLOCKED`
+
+`REALIZATION RANKING FOR PERCEIVED DISTANCE: READY FOR COMPARISON-FIRST`
+
+El segundo estado significa que existe un criterio declarado y una familia de
+tareas relevante; no significa que la literatura ya rankee voicings ni que
+Rogers/Callender haya aislado realizacion con armonia constante.
+
+El gate de experimento permanece `NOT JUSTIFIED`. El siguiente paso apropiado
+es formular una RQ comparison-first y revisar la comparacion literaria antes de
+diseñar un experimento propio.
+
+## Diversificacion
+
+`DIVERSIFY: YES`. La investigacion abrio una frontera distinta y aclaro un
+criterio mas estrecho sin forzar un ranking positivo ni cambiar silenciosamente
+el objetivo de continuidad.
 
 ## Recommended next step
 
-Auditar `CAND-CROSS-004` antes de abrir una comparación de realizaciones.
+Formular, sin iniciarla automaticamente, una RQ comparison-first con:
+
+- `GOAL`: reducir o controlar perceived musical distance entre sonoridades sucesivas;
+- `CONTEXT`: relacion armonica declarada y registro, timing, timbre, numero de voces y melodica fija cuando proceda;
+- `OPTIONS`: realizaciones A/B elegidas despues de revisar la evidencia disponible;
+- `CRITERION`: juicio de perceived distance;
+- `RISK`: chord-pair distance no equivale a ranking de realizaciones.
+
+No integrar todavia en Composer Foundations.

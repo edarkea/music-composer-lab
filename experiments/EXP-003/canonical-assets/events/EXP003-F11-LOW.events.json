@@ -1,0 +1,18 @@
+{
+  "experiment_id": "EXP-003",
+  "canary_id": null,
+  "item_family_id": "EXP003-F11",
+  "condition": "LOW_SELECTED",
+  "sample_rate_hz": 48000,
+  "duration_seconds": 2.0,
+  "events": [
+    {"event_id": "R1-V1", "pitch_midi": 55, "onset_seconds": 0.25, "duration_seconds": 0.48, "velocity": 96},
+    {"event_id": "R1-V2", "pitch_midi": 59, "onset_seconds": 0.25, "duration_seconds": 0.48, "velocity": 96},
+    {"event_id": "R1-V3", "pitch_midi": 62, "onset_seconds": 0.25, "duration_seconds": 0.48, "velocity": 96},
+    {"event_id": "R1-V4", "pitch_midi": 65, "onset_seconds": 0.25, "duration_seconds": 0.48, "velocity": 96},
+    {"event_id": "R2-V1", "pitch_midi": 50, "onset_seconds": 0.75, "duration_seconds": 0.48, "velocity": 96},
+    {"event_id": "R2-V2", "pitch_midi": 60, "onset_seconds": 0.75, "duration_seconds": 0.48, "velocity": 96},
+    {"event_id": "R2-V3", "pitch_midi": 65, "onset_seconds": 0.75, "duration_seconds": 0.48, "velocity": 96},
+    {"event_id": "R2-V4", "pitch_midi": 81, "onset_seconds": 0.75, "duration_seconds": 0.48, "velocity": 96}
+  ]
+}

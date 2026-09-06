@@ -1,0 +1,277 @@
+{
+  "schema_version": "EXP-003-pilot-private-mapping-v1",
+  "experiment_id": "EXP-003",
+  "canonical_manifest_sha256": "9B23143B7EEE384E5454056F0617E22DD2242C85848CD62920C109ABB6DDA1F0",
+  "entries": [
+    {
+      "opaque_presentation_id": "stimulus-001",
+      "opaque_audio_path": "media/stimulus-001.wav",
+      "family_id": "EXP003-F01",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F01-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F01-LOW.runA.wav",
+      "wav_sha256": "E722C0F6DD973826746DF7F8796361C8647B20DFF0C682628495ABD8A68574BF",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-002",
+      "opaque_audio_path": "media/stimulus-002.wav",
+      "family_id": "EXP003-F01",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F01-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F01-HIGH.runA.wav",
+      "wav_sha256": "5BCFA0A672E67417A627CB09EE62E3C75C68E5B6CB8520794E82DF58C9ECC879",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-003",
+      "opaque_audio_path": "media/stimulus-003.wav",
+      "family_id": "EXP003-F02",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F02-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F02-LOW.runA.wav",
+      "wav_sha256": "633BA8051A207C6BC3981BBE7311F7FB6E5A848A5A6272890513919FC5E3577C",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-004",
+      "opaque_audio_path": "media/stimulus-004.wav",
+      "family_id": "EXP003-F02",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F02-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F02-HIGH.runA.wav",
+      "wav_sha256": "D41E0BA045721D16F0DE0DB2BC59ED6AA912436BB4247B290CBDD876A0C81803",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-005",
+      "opaque_audio_path": "media/stimulus-005.wav",
+      "family_id": "EXP003-F03",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F03-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F03-LOW.runA.wav",
+      "wav_sha256": "7EF559039D22A466FD3932D80E5166A997FDDB166050BAED3A2AF02ECC0F8907",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-006",
+      "opaque_audio_path": "media/stimulus-006.wav",
+      "family_id": "EXP003-F03",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F03-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F03-HIGH.runA.wav",
+      "wav_sha256": "6A6E6F0EBEE36A71BBD409EEAEA9DD6B43DA8A689CF8CD49454E6563D90635A6",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-007",
+      "opaque_audio_path": "media/stimulus-007.wav",
+      "family_id": "EXP003-F04",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F04-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F04-LOW.runA.wav",
+      "wav_sha256": "D14EC0A8E8B7ED517335A849F84A7B0DBE24AFDC8D7BABCF7FC283B2663598AD",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-008",
+      "opaque_audio_path": "media/stimulus-008.wav",
+      "family_id": "EXP003-F04",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F04-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F04-HIGH.runA.wav",
+      "wav_sha256": "4DA7E23D4CF88635061BB4D960BE182FF2B15F774780169B08E6EB43EAA576C0",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-009",
+      "opaque_audio_path": "media/stimulus-009.wav",
+      "family_id": "EXP003-F05",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F05-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F05-LOW.runA.wav",
+      "wav_sha256": "3CDCC599214D7A3045CF22AC18F5E11EC8E99F9AA47D627629CAC2A3ED2523D7",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-010",
+      "opaque_audio_path": "media/stimulus-010.wav",
+      "family_id": "EXP003-F05",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F05-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F05-HIGH.runA.wav",
+      "wav_sha256": "6955B81C78E2C9D28F3A759871E5ED0EEC5188F4053F09164559CFE899A80D6B",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-011",
+      "opaque_audio_path": "media/stimulus-011.wav",
+      "family_id": "EXP003-F06",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F06-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F06-LOW.runA.wav",
+      "wav_sha256": "7526AA6B6F7081F2A6FCF011BF020868953BEDC9CA0290552BC473A83D1A080C",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-012",
+      "opaque_audio_path": "media/stimulus-012.wav",
+      "family_id": "EXP003-F06",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F06-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F06-HIGH.runA.wav",
+      "wav_sha256": "331F634F16921A715AF18B973E94A891C5F630FB5108C55B4619ACC8342506E0",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-013",
+      "opaque_audio_path": "media/stimulus-013.wav",
+      "family_id": "EXP003-F07",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F07-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F07-LOW.runA.wav",
+      "wav_sha256": "8C1DFF678E38829FB9D7F2017731708D64B11B8E31F2462D490CA64195BD8055",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-014",
+      "opaque_audio_path": "media/stimulus-014.wav",
+      "family_id": "EXP003-F07",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F07-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F07-HIGH.runA.wav",
+      "wav_sha256": "8592D97660CCD594FD4160FECF8A2F8EF48276FAB80EB1EFD91F38231114A6CF",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-015",
+      "opaque_audio_path": "media/stimulus-015.wav",
+      "family_id": "EXP003-F08",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F08-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F08-LOW.runA.wav",
+      "wav_sha256": "70A6B706F23DA5106E2774149BB720BBF4657A0353FF9CF1EADABD3F8F03172F",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-016",
+      "opaque_audio_path": "media/stimulus-016.wav",
+      "family_id": "EXP003-F08",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F08-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F08-HIGH.runA.wav",
+      "wav_sha256": "4466422EE5BB86FBF47065384CCFD67CA63FF82C9DA9338E6D9D170498179E6C",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-017",
+      "opaque_audio_path": "media/stimulus-017.wav",
+      "family_id": "EXP003-F09",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F09-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F09-LOW.runA.wav",
+      "wav_sha256": "E52AED0473216335C6D210B5EB0F649127921CC13EA117FA014B2F9B68F0D894",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-018",
+      "opaque_audio_path": "media/stimulus-018.wav",
+      "family_id": "EXP003-F09",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F09-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F09-HIGH.runA.wav",
+      "wav_sha256": "EA9382D132FF1B6BCFE46C7D6A4E014169FD0E9D81C1BBA944E850EBE628DDDD",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-019",
+      "opaque_audio_path": "media/stimulus-019.wav",
+      "family_id": "EXP003-F10",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F10-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F10-LOW.runA.wav",
+      "wav_sha256": "616D1F8420A1ADC51A12AFB1DA41B8AB8BD407D6A0A57C97D3AB03C603BF7478",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-020",
+      "opaque_audio_path": "media/stimulus-020.wav",
+      "family_id": "EXP003-F10",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F10-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F10-HIGH.runA.wav",
+      "wav_sha256": "ECAFD8AA7800E9408803837B3D0F9EA095AB0DFC15EA522770863E52D14219C5",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-021",
+      "opaque_audio_path": "media/stimulus-021.wav",
+      "family_id": "EXP003-F11",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F11-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F11-LOW.runA.wav",
+      "wav_sha256": "3F87F78452A988FF3458F076FD014F5083D0123B1D676443A7E5518A13B3FBB2",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-022",
+      "opaque_audio_path": "media/stimulus-022.wav",
+      "family_id": "EXP003-F11",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F11-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F11-HIGH.runA.wav",
+      "wav_sha256": "EB0213BBF238173F198CEBC34C77C8B1608C4EDDFE92A38E956052B261CC1051",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-023",
+      "opaque_audio_path": "media/stimulus-023.wav",
+      "family_id": "EXP003-F12",
+      "condition": "LOW_SELECTED",
+      "internal_asset_id": "EXP003-F12-LOW",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F12-LOW.runA.wav",
+      "wav_sha256": "9CD014AC8498E1DFD368F30C8721AB12C0198A68AE53127832291965EE470ADE",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "stimulus-024",
+      "opaque_audio_path": "media/stimulus-024.wav",
+      "family_id": "EXP003-F12",
+      "condition": "HIGH_SELECTED",
+      "internal_asset_id": "EXP003-F12-HIGH",
+      "canonical_wav_path": "experiments/EXP-003/canonical-assets/wav/EXP003-F12-HIGH.runA.wav",
+      "wav_sha256": "E77AB5745D25FE38DB28E34BAB525B94DA5BB966A135F7F19B30402ABDB0F154",
+      "record_type": "EXPERIMENTAL"
+    },
+    {
+      "opaque_presentation_id": "volume-check",
+      "opaque_audio_path": "media/volume-check.wav",
+      "family_id": null,
+      "condition": null,
+      "internal_asset_id": "DEPLOY-VOLUME-01",
+      "canonical_wav_path": "tools/exp003/pilot-deployment/media/volume-check.wav",
+      "wav_sha256": "B39658C83E2B1EC34E231AE8D1F31A6B43B662D5F08A50DF50BAB08463D84DB8",
+      "record_type": "VOLUME_CHECK"
+    },
+    {
+      "opaque_presentation_id": "practice-01",
+      "opaque_audio_path": "media/practice-01.wav",
+      "family_id": null,
+      "condition": null,
+      "internal_asset_id": "DEPLOY-PRACTICE-01",
+      "canonical_wav_path": "tools/exp003/pilot-deployment/media/practice-01.wav",
+      "wav_sha256": "26C878EC1B2709577FAC80022893CB730FFF77D7AD6E85DA77ABD3544DCD5F89",
+      "record_type": "PRACTICE"
+    },
+    {
+      "opaque_presentation_id": "practice-02",
+      "opaque_audio_path": "media/practice-02.wav",
+      "family_id": null,
+      "condition": null,
+      "internal_asset_id": "DEPLOY-PRACTICE-02",
+      "canonical_wav_path": "tools/exp003/pilot-deployment/media/practice-02.wav",
+      "wav_sha256": "7351B411EB4E64F2C77C05542B2E763F1323A1A9B016E03716F7DC97BF5481B9",
+      "record_type": "PRACTICE"
+    }
+  ]
+}

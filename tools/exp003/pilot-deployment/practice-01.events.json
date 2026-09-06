@@ -1,0 +1,16 @@
+{
+  "schema_version": "exp003-event-v2",
+  "asset_id": "DEPLOY-PRACTICE-01",
+  "duration_seconds": 2.0,
+  "sample_rate": 48000,
+  "events": [
+    {"event_id": "P01", "onset_seconds": 0.25, "duration_seconds": 0.48, "pitch_midi": 60, "velocity": 96},
+    {"event_id": "P02", "onset_seconds": 0.25, "duration_seconds": 0.48, "pitch_midi": 64, "velocity": 96},
+    {"event_id": "P03", "onset_seconds": 0.25, "duration_seconds": 0.48, "pitch_midi": 67, "velocity": 96},
+    {"event_id": "P04", "onset_seconds": 0.25, "duration_seconds": 0.48, "pitch_midi": 72, "velocity": 96},
+    {"event_id": "P05", "onset_seconds": 0.75, "duration_seconds": 0.48, "pitch_midi": 60, "velocity": 96},
+    {"event_id": "P06", "onset_seconds": 0.75, "duration_seconds": 0.48, "pitch_midi": 64, "velocity": 96},
+    {"event_id": "P07", "onset_seconds": 0.75, "duration_seconds": 0.48, "pitch_midi": 67, "velocity": 96},
+    {"event_id": "P08", "onset_seconds": 0.75, "duration_seconds": 0.48, "pitch_midi": 72, "velocity": 96}
+  ]
+}

@@ -1,0 +1,6 @@
+body { background: #fafafa; }
+.jspsych-content { max-width: 960px; }
+.distance-question { margin: 1.5rem auto; font-size: 1.2rem; }
+.distance-choice { min-width: 5.5rem; min-height: 4rem; margin: .2rem; }
+.distance-choice small { display: block; font-size: .7rem; min-height: 1.1rem; }
+.audio-note { color: #555; }

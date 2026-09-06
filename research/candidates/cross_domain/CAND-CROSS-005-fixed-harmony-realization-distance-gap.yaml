@@ -1,0 +1,40 @@
+id: CAND-CROSS-005
+status: candidate
+compositional_problem: "Decidir si una realizacion de menor movimiento analitico debe preferirse a otra de mayor movimiento cuando la seleccion armonica ya esta fijada y el criterio es perceived musical distance."
+claim: "En la evidencia inspeccionada, los estudios que relacionan variables de voice leading con perceived musical distance o con procesamiento armonico no aislan adecuadamente realizaciones de menor frente a mayor movimiento de la MISMA seleccion armonica con perceived distance como medida dependiente. Por tanto, no justifican todavia rankear alternativas de realizacion por este criterio. La ausencia de comparacion directa no implica ausencia del efecto."
+decision_form:
+  goal: "Reducir perceived musical distance entre sonoridades sucesivas."
+  context: "Misma seleccion armonica declarada; controles de voces, bajo, registro, spacing, timbre, timing y melodia cuando proceda."
+  option_a: "Realizacion con menor movimiento voice-leading segun una metrica declarada."
+  option_b: "Realizacion con mayor movimiento voice-leading segun la misma metrica."
+  criterion: "Juicio directo de perceived musical distance."
+structural_variable: "Source-specific voice-leading motion metric, common-tone retention, voice assignment, bass, inversion, register, spacing and melody/soprano."
+possible_action: "No rankear lower-motion sobre higher-motion para perceived distance desde la literatura actual de chord-distance. Antes de atribuir un resultado al movimiento, comprobar que la fuente mantiene fija la seleccion armonica y separar tonos comunes, bajo, registro, spacing, asignacion y melodia."
+expected_effect: "Evitar convertir evidencia de distancia entre pares de acordes o de procesamiento armonico en un ranking de realizaciones con armonia fija."
+evidence_class: COMPOSITION_HEURISTIC
+support_basis: [EXTERNAL_EMPIRICAL]
+sources:
+  - SRC-EMPIRICAL-029
+  - SRC-EMPIRICAL-031
+  - SRC-EMPIRICAL-033
+  - SRC-EMPIRICAL-034
+context_dependencies: "Tarea dependiente, definicion de la metrica, seleccion armonica, pitch-class content, raiz, bajo, inversion, numero y asignacion de voces, tonos comunes, registro, spacing, timbre, timing, loudness y presencia de soprano o melodia."
+counterproductive_conditions: "Tratar chord-pair distance, similarity, expectancy, consonance o roughness como ranking de realizaciones; asumir que menor suma de semitonos implica menor distance en todos los repartos de movimiento."
+alternatives: "Mantener el resultado como restriccion; revisar nueva literatura directa; o comparar por separado movimiento agregado, movimiento maximo, numero de voces moviles y retencion de tonos comunes."
+uncertainty_confidence: "Media para el gap identificado en la evidencia inspeccionada; baja para cualquier direccion universal del efecto."
+genre_sensitivity: "Unknown transfer a popular song; las fuentes cubren trichords sinteticos, triadas root-position, secuencias occidentales y representaciones de set-class."
+evaluation_falsification: "Una fuente directa con misma seleccion armonica, A/B de realizacion, diferencia de movimiento y criterio directo de perceived distance podria convertir la restriccion en conocimiento comparativo acotado."
+structure_perception_composition:
+  structure: "Dos realizaciones del mismo par armonico con una metrica de movimiento declarada y confounds registrados."
+  perception: "Distance rating u otra medida directa validada; discrimination, expectancy, similarity y consonance se mantienen separadas."
+  composition: "No rankear menor frente a mayor movimiento sin evidencia que aisle la realizacion."
+phase2_candidate_type: COMPARATIVE_DECISION_CONSTRAINT
+audit_outcome: REVISE
+promotion_readiness: POSSIBLE_WITH_SCOPE
+audit_status: COMPLETED
+audit_evidence_gate: PASS
+blocker_classification:
+  - COMPARATIVE_EVIDENCE_BLOCKER
+  - CONFOUND_IDENTIFICATION_BLOCKER
+experiment_gate: JUSTIFIED
+audit_note: "La restriccion es no redundante respecto de CAND-CROSS-004: CROSS-004 separa distance de broad continuity; CROSS-005 demuestra que el criterio estrecho tampoco dispone aun de un ranking de realizacion con armonia fija. El gate experimental queda JUSTIFIED para consideracion, no como mandato de ejecucion ni como diseño."

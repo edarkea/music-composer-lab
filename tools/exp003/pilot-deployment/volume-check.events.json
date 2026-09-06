@@ -1,0 +1,10 @@
+{
+  "experiment_id": "EXP-003",
+  "asset_id": "DEPLOY-VOLUME-01",
+  "record_type": "VOLUME_CHECK",
+  "sample_rate_hz": 48000,
+  "duration_seconds": 2.0,
+  "events": [
+    {"event_id": "VOLUME-TONE", "pitch_midi": 60, "onset_seconds": 0.5, "duration_seconds": 1.0, "velocity": 96}
+  ]
+}
