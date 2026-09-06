@@ -3,7 +3,7 @@
   const PRE_DELAY_MS = 1000, INTER_TRIAL_MS = 1000, SCALE = [1,2,3,4,5,6,7];
   const LABELS = {1:"distancia musical muy peque&ntilde;a",4:"distancia musical intermedia",7:"distancia musical muy grande"};
   const params = new URLSearchParams(location.search), cell = params.get("cell") || "A-O1";
-  const participantId = params.get("participant_id") || "TECHTEST-UI", technicalTest = params.get("technical_test") !== "false";
+  const participantId = params.get("participant_id") || "TECHTEST-001", technicalTest = params.get("technical_test") !== "false";
   //const apiBase = params.get("api") || "http://127.0.0.1:8770";
   const apiBase = ""
   const publicManifest = await fetch("public-deployment-manifest.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("manifest load failure");return r.json();});
