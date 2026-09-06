@@ -6,7 +6,7 @@ const crypto = require("node:crypto");
 const { URL } = require("node:url");
 
 const PORT = Number(process.env.EXP003_PORT || 8770);
-const DATA_DIR = path.resolve(process.env.EXP003_DATA_DIR || path.join(__dirname, "data"));
+const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(__dirname, "data"));
 const STORE_PATH = path.join(DATA_DIR, "sessions.json");
 const CELL_IDS = new Set(["A-O1", "A-O2", "A-O3", "B-O1", "B-O2", "B-O3"]);
 const PUBLIC_MANIFEST_PATH = path.join(__dirname, "..", "public-deployment-manifest.json");
