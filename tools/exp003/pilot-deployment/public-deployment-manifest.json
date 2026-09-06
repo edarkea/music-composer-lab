@@ -1,0 +1,438 @@
+{
+  "schema_version": "EXP-003-public-deployment-manifest-v1",
+  "experiment_id": "EXP-003",
+  "entries": [
+    {
+      "cell_id": "A-O1",
+      "serial_position": 1,
+      "opaque_stimulus_id": "stimulus-005",
+      "opaque_audio_path": "media/stimulus-005.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 2,
+      "opaque_stimulus_id": "stimulus-020",
+      "opaque_audio_path": "media/stimulus-020.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 3,
+      "opaque_stimulus_id": "stimulus-001",
+      "opaque_audio_path": "media/stimulus-001.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 4,
+      "opaque_stimulus_id": "stimulus-016",
+      "opaque_audio_path": "media/stimulus-016.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 5,
+      "opaque_stimulus_id": "stimulus-023",
+      "opaque_audio_path": "media/stimulus-023.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 6,
+      "opaque_stimulus_id": "stimulus-010",
+      "opaque_audio_path": "media/stimulus-010.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 7,
+      "opaque_stimulus_id": "stimulus-013",
+      "opaque_audio_path": "media/stimulus-013.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 8,
+      "opaque_stimulus_id": "stimulus-004",
+      "opaque_audio_path": "media/stimulus-004.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 9,
+      "opaque_stimulus_id": "stimulus-021",
+      "opaque_audio_path": "media/stimulus-021.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 10,
+      "opaque_stimulus_id": "stimulus-012",
+      "opaque_audio_path": "media/stimulus-012.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 11,
+      "opaque_stimulus_id": "stimulus-007",
+      "opaque_audio_path": "media/stimulus-007.wav"
+    },
+    {
+      "cell_id": "A-O1",
+      "serial_position": 12,
+      "opaque_stimulus_id": "stimulus-018",
+      "opaque_audio_path": "media/stimulus-018.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 1,
+      "opaque_stimulus_id": "stimulus-018",
+      "opaque_audio_path": "media/stimulus-018.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 2,
+      "opaque_stimulus_id": "stimulus-007",
+      "opaque_audio_path": "media/stimulus-007.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 3,
+      "opaque_stimulus_id": "stimulus-012",
+      "opaque_audio_path": "media/stimulus-012.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 4,
+      "opaque_stimulus_id": "stimulus-021",
+      "opaque_audio_path": "media/stimulus-021.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 5,
+      "opaque_stimulus_id": "stimulus-004",
+      "opaque_audio_path": "media/stimulus-004.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 6,
+      "opaque_stimulus_id": "stimulus-013",
+      "opaque_audio_path": "media/stimulus-013.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 7,
+      "opaque_stimulus_id": "stimulus-010",
+      "opaque_audio_path": "media/stimulus-010.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 8,
+      "opaque_stimulus_id": "stimulus-023",
+      "opaque_audio_path": "media/stimulus-023.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 9,
+      "opaque_stimulus_id": "stimulus-016",
+      "opaque_audio_path": "media/stimulus-016.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 10,
+      "opaque_stimulus_id": "stimulus-001",
+      "opaque_audio_path": "media/stimulus-001.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 11,
+      "opaque_stimulus_id": "stimulus-020",
+      "opaque_audio_path": "media/stimulus-020.wav"
+    },
+    {
+      "cell_id": "A-O2",
+      "serial_position": 12,
+      "opaque_stimulus_id": "stimulus-005",
+      "opaque_audio_path": "media/stimulus-005.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 1,
+      "opaque_stimulus_id": "stimulus-016",
+      "opaque_audio_path": "media/stimulus-016.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 2,
+      "opaque_stimulus_id": "stimulus-023",
+      "opaque_audio_path": "media/stimulus-023.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 3,
+      "opaque_stimulus_id": "stimulus-010",
+      "opaque_audio_path": "media/stimulus-010.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 4,
+      "opaque_stimulus_id": "stimulus-013",
+      "opaque_audio_path": "media/stimulus-013.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 5,
+      "opaque_stimulus_id": "stimulus-004",
+      "opaque_audio_path": "media/stimulus-004.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 6,
+      "opaque_stimulus_id": "stimulus-021",
+      "opaque_audio_path": "media/stimulus-021.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 7,
+      "opaque_stimulus_id": "stimulus-012",
+      "opaque_audio_path": "media/stimulus-012.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 8,
+      "opaque_stimulus_id": "stimulus-007",
+      "opaque_audio_path": "media/stimulus-007.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 9,
+      "opaque_stimulus_id": "stimulus-018",
+      "opaque_audio_path": "media/stimulus-018.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 10,
+      "opaque_stimulus_id": "stimulus-005",
+      "opaque_audio_path": "media/stimulus-005.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 11,
+      "opaque_stimulus_id": "stimulus-020",
+      "opaque_audio_path": "media/stimulus-020.wav"
+    },
+    {
+      "cell_id": "A-O3",
+      "serial_position": 12,
+      "opaque_stimulus_id": "stimulus-001",
+      "opaque_audio_path": "media/stimulus-001.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 1,
+      "opaque_stimulus_id": "stimulus-006",
+      "opaque_audio_path": "media/stimulus-006.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 2,
+      "opaque_stimulus_id": "stimulus-019",
+      "opaque_audio_path": "media/stimulus-019.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 3,
+      "opaque_stimulus_id": "stimulus-002",
+      "opaque_audio_path": "media/stimulus-002.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 4,
+      "opaque_stimulus_id": "stimulus-015",
+      "opaque_audio_path": "media/stimulus-015.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 5,
+      "opaque_stimulus_id": "stimulus-024",
+      "opaque_audio_path": "media/stimulus-024.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 6,
+      "opaque_stimulus_id": "stimulus-009",
+      "opaque_audio_path": "media/stimulus-009.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 7,
+      "opaque_stimulus_id": "stimulus-014",
+      "opaque_audio_path": "media/stimulus-014.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 8,
+      "opaque_stimulus_id": "stimulus-003",
+      "opaque_audio_path": "media/stimulus-003.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 9,
+      "opaque_stimulus_id": "stimulus-022",
+      "opaque_audio_path": "media/stimulus-022.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 10,
+      "opaque_stimulus_id": "stimulus-011",
+      "opaque_audio_path": "media/stimulus-011.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 11,
+      "opaque_stimulus_id": "stimulus-008",
+      "opaque_audio_path": "media/stimulus-008.wav"
+    },
+    {
+      "cell_id": "B-O1",
+      "serial_position": 12,
+      "opaque_stimulus_id": "stimulus-017",
+      "opaque_audio_path": "media/stimulus-017.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 1,
+      "opaque_stimulus_id": "stimulus-017",
+      "opaque_audio_path": "media/stimulus-017.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 2,
+      "opaque_stimulus_id": "stimulus-008",
+      "opaque_audio_path": "media/stimulus-008.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 3,
+      "opaque_stimulus_id": "stimulus-011",
+      "opaque_audio_path": "media/stimulus-011.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 4,
+      "opaque_stimulus_id": "stimulus-022",
+      "opaque_audio_path": "media/stimulus-022.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 5,
+      "opaque_stimulus_id": "stimulus-003",
+      "opaque_audio_path": "media/stimulus-003.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 6,
+      "opaque_stimulus_id": "stimulus-014",
+      "opaque_audio_path": "media/stimulus-014.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 7,
+      "opaque_stimulus_id": "stimulus-009",
+      "opaque_audio_path": "media/stimulus-009.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 8,
+      "opaque_stimulus_id": "stimulus-024",
+      "opaque_audio_path": "media/stimulus-024.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 9,
+      "opaque_stimulus_id": "stimulus-015",
+      "opaque_audio_path": "media/stimulus-015.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 10,
+      "opaque_stimulus_id": "stimulus-002",
+      "opaque_audio_path": "media/stimulus-002.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 11,
+      "opaque_stimulus_id": "stimulus-019",
+      "opaque_audio_path": "media/stimulus-019.wav"
+    },
+    {
+      "cell_id": "B-O2",
+      "serial_position": 12,
+      "opaque_stimulus_id": "stimulus-006",
+      "opaque_audio_path": "media/stimulus-006.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 1,
+      "opaque_stimulus_id": "stimulus-015",
+      "opaque_audio_path": "media/stimulus-015.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 2,
+      "opaque_stimulus_id": "stimulus-024",
+      "opaque_audio_path": "media/stimulus-024.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 3,
+      "opaque_stimulus_id": "stimulus-009",
+      "opaque_audio_path": "media/stimulus-009.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 4,
+      "opaque_stimulus_id": "stimulus-014",
+      "opaque_audio_path": "media/stimulus-014.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 5,
+      "opaque_stimulus_id": "stimulus-003",
+      "opaque_audio_path": "media/stimulus-003.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 6,
+      "opaque_stimulus_id": "stimulus-022",
+      "opaque_audio_path": "media/stimulus-022.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 7,
+      "opaque_stimulus_id": "stimulus-011",
+      "opaque_audio_path": "media/stimulus-011.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 8,
+      "opaque_stimulus_id": "stimulus-008",
+      "opaque_audio_path": "media/stimulus-008.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 9,
+      "opaque_stimulus_id": "stimulus-017",
+      "opaque_audio_path": "media/stimulus-017.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 10,
+      "opaque_stimulus_id": "stimulus-006",
+      "opaque_audio_path": "media/stimulus-006.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 11,
+      "opaque_stimulus_id": "stimulus-019",
+      "opaque_audio_path": "media/stimulus-019.wav"
+    },
+    {
+      "cell_id": "B-O3",
+      "serial_position": 12,
+      "opaque_stimulus_id": "stimulus-002",
+      "opaque_audio_path": "media/stimulus-002.wav"
+    }
+  ]
+}

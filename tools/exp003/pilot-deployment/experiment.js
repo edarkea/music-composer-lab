@@ -1,67 +1,29 @@
-/* EXP-003 participant-interface instrumentation. jsPsych 8.2.1. */
+/* EXP-003 participant interface. jsPsych 8.2.1; no scientific map is served. */
 (async () => {
-  const PRE_DELAY_MS = 1000;
-  const INTER_TRIAL_MS = 1000;
-  const SCALE = [1, 2, 3, 4, 5, 6, 7];
-  const LABELS = {
-    1: "distancia musical muy pequeña",
-    4: "distancia musical intermedia",
-    7: "distancia musical muy grande",
-  };
-  const LIST_A = {F01:"LOW",F02:"HIGH",F03:"LOW",F04:"LOW",F05:"HIGH",F06:"HIGH",F07:"LOW",F08:"HIGH",F09:"HIGH",F10:"HIGH",F11:"LOW",F12:"LOW"};
-  const LIST_B = Object.fromEntries(Object.entries(LIST_A).map(([f,c]) => [f,c === "LOW" ? "HIGH" : "LOW"]));
-  const ORDERS = {
-    O1: ["F03","F10","F01","F08","F12","F05","F07","F02","F11","F06","F04","F09"],
-    O2: ["F09","F04","F06","F11","F02","F07","F05","F12","F08","F01","F10","F03"],
-    O3: ["F08","F12","F05","F07","F02","F11","F06","F04","F09","F03","F10","F01"],
-  };
-  const params = new URLSearchParams(location.search);
-  const cell = params.get("cell") || "A-O1";
-  const [assignment_list, order_sequence] = cell.split("-");
-  if (!ORDERS[order_sequence] || !["A","B"].includes(assignment_list)) throw new Error("invalid operational cell");
-  const mapping = await fetch("mapping.private.json", {cache: "no-store"}).then(r => { if (!r.ok) throw Error("mapping load failure"); return r.json(); });
-  const map = mapping.entries;
-  if (!Array.isArray(map) || map.length !== 27) throw new Error("mapping cardinality failure");
-  const assignment = assignment_list === "A" ? LIST_A : LIST_B;
-  const trials = ORDERS[order_sequence].map((family, index) => {
-    const condition = assignment[family];
-    const item = map.find(x => x.family_id === `EXP003-${family}` && x.condition === `${condition}_SELECTED`);
-    if (!item) throw new Error("opaque mapping failure");
-    return { ...item, serial_position: index + 1 };
-  });
-  const jsPsych = initJsPsych({on_finish: () => {
-    window.__EXP003_DRY_RUN_EXPORT__ = jsPsych.data.get().values();
-    window.__EXP003_DRY_RUN_COMPLETE__ = true;
-  }});
-  const mark = (record_type, extra = {}) => ({data: {record_type, pilot_stage: "STAGE_1_DRY_RUN", assignment_list, order_sequence, ...extra}});
-  const delay = (duration) => ({type: jsPsychHtmlButtonResponse, stimulus: "", choices: [], trial_duration: duration, response_ends_trial: false, data: {record_type: "INTERFACE_DELAY"}});
-  const choices = SCALE.map(String);
-  const button_html = (choice) => `<button class="jspsych-btn distance-choice">${choice}<small>${LABELS[choice] || "&nbsp;"}</small></button>`;
-  const rating_trial = (item, record_type) => ({
-    type: jsPsychAudioButtonResponse,
-    stimulus: item.opaque_audio_path,
-    choices,
-    button_html,
-    prompt: `<div class="distance-question">¿Qué tan grande te parece la distancia musical entre la primera y la segunda sonoridad?</div>`,
-    response_allowed_while_playing: false,
-    response_ends_trial: true,
-    trial_ends_after_audio: false,
-    data: {record_type, internal_family_id: item.family_id, condition: item.condition, canonical_asset_sha256: item.wav_sha256, canonical_asset_reference: item.canonical_wav_path, opaque_presentation_id: item.opaque_presentation_id, serial_position: item.serial_position || null, playback_started: false, playback_completed: false, response_recorded: false},
-    on_load: () => { const audio = document.querySelector("audio"); if (audio) { audio.addEventListener("play", () => { jsPsych.data.addDataToLastTrial({playback_started: true}); }); audio.addEventListener("ended", () => { jsPsych.data.addDataToLastTrial({playback_completed: true}); }); } },
-    on_finish: data => { data.playback_started = true; data.playback_completed = true; data.rating_1_7 = data.response === null ? null : data.response + 1; data.response_recorded = data.rating_1_7 !== null; data.technical_error = data.rating_1_7 === null ? "missing_response" : null; delete data.response; },
-  });
-  const timeline = [];
-  timeline.push({type: jsPsychHtmlButtonResponse, stimulus: `<h2>Antes de comenzar</h2><p>Usa auriculares para esta tarea.</p><p>¿Confirmas que estás usando auriculares?</p>`, choices: ["Sí, estoy usando auriculares", "No"], data: {record_type: "HEADPHONE_GATE"}, on_finish: data => { if (data.response === 1) jsPsych.endExperiment("La sesión no puede continuar sin auriculares."); }});
-  timeline.push({type: jsPsychHtmlButtonResponse, stimulus: `<p>Ajusta el volumen a un nivel cómodo. Primero escucharás un sonido de comprobación.</p>`, choices: ["Continuar"], data: {record_type: "VOLUME_CHECK_READY"}});
-  timeline.push(delay(PRE_DELAY_MS));
-  const volume = map.find(x => x.internal_asset_id === "DEPLOY-VOLUME-01");
-  timeline.push({...rating_trial({...volume, opaque_audio_path: volume.opaque_audio_path, serial_position: null}, "VOLUME_CHECK"), choices: ["Continuar"], prompt: `<div class="audio-note">Comprueba que el nivel sea cómodo y continúa.</div>`, button_html: choice => `<button class="jspsych-btn">${choice}</button>`});
-  timeline.push({type: jsPsychHtmlButtonResponse, stimulus: `<h2>Práctica</h2><p>Escucharás dos ejemplos de práctica. No hay respuestas correctas o incorrectas.</p>`, choices: ["Comenzar práctica"], data: {record_type: "PRACTICE_INTRO"}});
-  for (const item of map.filter(x => x.record_type === "PRACTICE")) { timeline.push(delay(PRE_DELAY_MS), rating_trial(item, "PRACTICE"), delay(INTER_TRIAL_MS)); }
-  timeline.push({type: jsPsychHtmlButtonResponse, stimulus: `<h2>Tarea</h2><p>Escucharás 12 pares de sonoridades. Usa la escala para indicar lo que percibas.</p>`, choices: ["Comenzar tarea"], data: {record_type: "EXPERIMENTAL_INTRO"}});
-  for (const item of trials) timeline.push(delay(PRE_DELAY_MS), rating_trial(item, "EXPERIMENTAL"), delay(INTER_TRIAL_MS));
-  timeline.push({type: jsPsychSurveyText, questions: [{prompt: "Con tus propias palabras, ¿qué entendiste por ‘distancia musical’ al hacer esta tarea?", rows: 5, columns: 60}], data: {record_type: "POST_TASK_DIAGNOSTIC"}});
-  timeline.push({type: jsPsychHtmlButtonResponse, stimulus: "<p>Gracias. La sesión ha terminado.</p>", choices: ["Finalizar"], data: {record_type: "SESSION_COMPLETE"}});
-  const audio_paths = map.map(x => x.opaque_audio_path);
-  jsPsych.run([{type: jsPsychPreload, audio: audio_paths, continue_after_error: false, data: {record_type: "PRELOAD", preload_status: "PASS"}}, ...timeline]);
+  const PRE_DELAY_MS = 1000, INTER_TRIAL_MS = 1000, SCALE = [1,2,3,4,5,6,7];
+  const LABELS = {1:"distancia musical muy peque&ntilde;a",4:"distancia musical intermedia",7:"distancia musical muy grande"};
+  const params = new URLSearchParams(location.search), cell = params.get("cell") || "A-O1";
+  const participantId = params.get("participant_id") || "TECHTEST-UI", technicalTest = params.get("technical_test") !== "false";
+  const apiBase = params.get("api") || "http://127.0.0.1:8770";
+  const publicManifest = await fetch("public-deployment-manifest.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("manifest load failure");return r.json();});
+  const trials = publicManifest.entries.filter(x=>x.cell_id===cell).sort((a,b)=>a.serial_position-b.serial_position);
+  if(trials.length!==12) throw Error("invalid public cell manifest");
+  const startResponse = await fetch(`${apiBase}/api/session/start`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({participant_id:participantId,cell_id:cell,technical_test:technicalTest})});
+  if(!startResponse.ok) throw Error("session start failure");
+  const session = (await startResponse.json()).session, choices=SCALE.map(String);
+  const buttonHtml=choice=>`<button class="jspsych-btn distance-choice">${choice}<small>${LABELS[choice]||"&nbsp;"}</small></button>`;
+  const delay=duration=>({type:jsPsychHtmlButtonResponse,stimulus:"",choices:[],trial_duration:duration,response_ends_trial:false,data:{record_type:"INTERFACE_DELAY"}});
+  const ratingTrial=(item,recordType)=>({type:jsPsychAudioButtonResponse,stimulus:item.opaque_audio_path,choices,button_html:buttonHtml,prompt:`<div class="distance-question">&iquest;Qu&eacute; tan grande te parece la distancia musical entre la primera y la segunda sonoridad?</div>`,response_allowed_while_playing:false,response_ends_trial:true,trial_ends_after_audio:false,data:{record_type:recordType,cell_id:cell,opaque_stimulus_id:item.opaque_stimulus_id,serial_position:item.serial_position||null,playback_started:false,playback_completed:false,response_recorded:false,technical_error:null},on_load:()=>{const audio=document.querySelector("audio");if(audio){audio.addEventListener("play",()=>jsPsych.data.addDataToLastTrial({playback_started:true}));audio.addEventListener("ended",()=>jsPsych.data.addDataToLastTrial({playback_completed:true}));}},on_finish:data=>{data.playback_started=true;data.playback_completed=true;data.rating_1_7=data.response===null?null:data.response+1;data.response_recorded=data.rating_1_7!==null;data.technical_error=data.rating_1_7===null?"missing_response":null;delete data.response;}});
+  const timeline=[];
+  timeline.push({type:jsPsychHtmlButtonResponse,stimulus:`<h2>Antes de comenzar</h2><p>Usa auriculares para esta tarea.</p><p>&iquest;Confirmas que est&aacute;s usando auriculares?</p>`,choices:["S&iacute;, estoy usando auriculares","No"],data:{record_type:"HEADPHONE_GATE"},on_finish:data=>{if(data.response===1)jsPsych.endExperiment("La sesi&oacute;n no puede continuar sin auriculares.");}});
+  timeline.push({type:jsPsychHtmlButtonResponse,stimulus:`<p>Ajusta el volumen a un nivel c&oacute;modo. Primero escuchar&aacute;s un sonido de comprobaci&oacute;n.</p>`,choices:["Continuar"],data:{record_type:"VOLUME_CHECK_READY"}},delay(PRE_DELAY_MS));
+  timeline.push({...ratingTrial({opaque_stimulus_id:"volume-check",opaque_audio_path:"media/volume-check.wav"},"VOLUME_CHECK"),choices:["Continuar"],prompt:`<div class="audio-note">Comprueba que el nivel sea c&oacute;modo y contin&uacute;a.</div>`,button_html:choice=>`<button class="jspsych-btn">${choice}</button>`});
+  timeline.push({type:jsPsychHtmlButtonResponse,stimulus:`<h2>Pr&aacute;ctica</h2><p>Escuchar&aacute;s dos ejemplos de pr&aacute;ctica. No hay respuestas correctas o incorrectas.</p>`,choices:["Comenzar pr&aacute;ctica"],data:{record_type:"PRACTICE_INTRO"}});
+  for(const [i,name] of ["practice-01","practice-02"].entries()){const item={opaque_stimulus_id:name,opaque_audio_path:`media/${name}.wav`,serial_position:i+1};timeline.push(delay(PRE_DELAY_MS),ratingTrial(item,"PRACTICE"),delay(INTER_TRIAL_MS));}
+  timeline.push({type:jsPsychHtmlButtonResponse,stimulus:`<h2>Tarea</h2><p>Escuchar&aacute;s 12 pares de sonoridades. Usa la escala para indicar lo que percibas.</p>`,choices:["Comenzar tarea"],data:{record_type:"EXPERIMENTAL_INTRO"}});
+  for(const item of trials)timeline.push(delay(PRE_DELAY_MS),ratingTrial(item,"EXPERIMENTAL"),delay(INTER_TRIAL_MS));
+  timeline.push({type:jsPsychSurveyText,questions:[{prompt:"Con tus propias palabras, &iquest;qu&eacute; entendiste por &lsquo;distancia musical&rsquo; al hacer esta tarea?",rows:5,columns:60}],data:{record_type:"POST_TASK_DIAGNOSTIC"}});
+  timeline.push({type:jsPsychHtmlButtonResponse,stimulus:"<p>Guardando la sesi&oacute;n&hellip;</p>",choices:[],response_ends_trial:false,data:{record_type:"SERVER_SAVE_PENDING"},on_load:async()=>{const records=jsPsych.data.get().values().filter(x=>["EXPERIMENTAL","PRACTICE","POST_TASK_DIAGNOSTIC"].includes(x.record_type));const payload={participant_id:participantId,cell_id:cell,technical_test:technicalTest,records};try{const r=await fetch(`${apiBase}/api/session/${session.session_id}/complete`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(payload)}),result=await r.json();if(!r.ok)throw Error(result.error?.code||"server save failure");window.__EXP003_SERVER_SAVE__=result;jsPsych.finishTrial({server_save:"PASS"});}catch(error){window.__EXP003_SERVER_SAVE__={ok:false,error:String(error)};document.querySelector("#jspsych-target").innerHTML=`<div class="error">No se pudo guardar la sesi&oacute;n. Esta sesi&oacute;n es inv&aacute;lida.</div>`;}}});
+  const jsPsych=initJsPsych({on_finish:()=>{window.__EXP003_DRY_RUN_EXPORT__=jsPsych.data.get().values();window.__EXP003_DRY_RUN_COMPLETE__=true;if(window.__EXP003_SERVER_SAVE__?.ok)document.querySelector("#jspsych-target").innerHTML="<h2>Sesi&oacute;n guardada</h2><p>La sesi&oacute;n t&eacute;cnica ha terminado.</p>";}});
+  jsPsych.run([{type:jsPsychPreload,audio:["media/volume-check.wav","media/practice-01.wav","media/practice-02.wav",...trials.map(x=>x.opaque_audio_path)],continue_after_error:false,data:{record_type:"PRELOAD",preload_status:"PASS"}},...timeline]);
 })();

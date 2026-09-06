@@ -3,4 +3,6 @@
 __pycache__/
 *.pyc
 
+tools/exp003/pilot-deployment/server/data/
+
 integrations/music-engine/smoke-test/*.mid

@@ -1,13 +1,15 @@
 import { test, expect } from "@playwright/test";
 
 const cells = ["A-O1", "A-O2", "A-O3", "B-O1", "B-O2", "B-O3"];
+test.beforeEach(async ({page}) => { page.on("pageerror", error => console.log("PAGEERROR", error.message)); page.on("console", message => console.log("BROWSER", message.type(), message.text())); });
 
 async function clickAndWait(page, label) {
   await page.getByRole("button", {name: label}).click();
 }
 
 async function completeCell(page, cell) {
-  await page.goto(`http://127.0.0.1:8765/?cell=${cell}`);
+  const technicalId = `TECHTEST-${String(cells.indexOf(cell) + 1).padStart(3, "0")}`;
+  await page.goto(`http://127.0.0.1:8766/?cell=${cell}&api=http://127.0.0.1:8782&participant_id=${technicalId}`);
   await clickAndWait(page, "Sí, estoy usando auriculares");
   await clickAndWait(page, "Continuar");
   const volumeButton = page.getByRole("button", {name: "Continuar"});
@@ -30,7 +32,7 @@ async function completeCell(page, cell) {
   }
   await page.locator("textarea").fill("Prueba técnica del dry-run.");
   await clickAndWait(page, "Continue");
-  await clickAndWait(page, "Finalizar");
+  await expect.poll(() => page.evaluate(() => window.__EXP003_SERVER_SAVE__?.ok), {timeout: 5000}).toBe(true);
   await page.waitForTimeout(500);
   console.log("DRY_STATE", await page.evaluate(() => ({complete: window.__EXP003_DRY_RUN_COMPLETE__, exportLength: window.__EXP003_DRY_RUN_EXPORT__?.length, body: document.body.innerText})));
   await expect.poll(() => page.evaluate(() => window.__EXP003_DRY_RUN_COMPLETE__), {timeout: 5000}).toBe(true);
