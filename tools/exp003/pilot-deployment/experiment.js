@@ -2,20 +2,22 @@
 (async () => {
   const PRE_DELAY_MS = 1000, INTER_TRIAL_MS = 1000, SCALE = [1,2,3,4,5,6,7];
   const LABELS = {1:"distancia musical muy peque&ntilde;a",4:"distancia musical intermedia",7:"distancia musical muy grande"};
-  const params = new URLSearchParams(location.search), cell = params.get("cell") || "A-O1";
-  const participantId = params.get("participant_id") || "TECHTEST-001", technicalTest = params.get("technical_test") !== "false";
+  const params = new URLSearchParams(location.search), entryToken = params.get("entry_token");
+  if (!entryToken) { document.querySelector("#jspsych-target").innerHTML = "<p>No se pudo validar la entrada.</p>"; return; }
   //const apiBase = params.get("api") || "http://127.0.0.1:8770";
   const apiBase = ""
+  const startResponse = await fetch(`${apiBase}/api/session/start`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({entry_token:entryToken,participant_id:"PENDING",cell_id:"A-O1",technical_test:false})});
+  if(!startResponse.ok){document.querySelector("#jspsych-target").innerHTML = "<p>No se pudo validar la entrada.</p>"; return;}
+  const session = (await startResponse.json()).session, cell=session.cell_id, participantId=session.participant_id, technicalTest=session.technical_test;
   const publicManifest = await fetch("public-deployment-manifest.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("manifest load failure");return r.json();});
   const trials = publicManifest.entries.filter(x=>x.cell_id===cell).sort((a,b)=>a.serial_position-b.serial_position);
   if(trials.length!==12) throw Error("invalid public cell manifest");
-  const startResponse = await fetch(`${apiBase}/api/session/start`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({participant_id:participantId,cell_id:cell,technical_test:technicalTest})});
-  if(!startResponse.ok) throw Error("session start failure");
-  const session = (await startResponse.json()).session, choices=SCALE.map(String);
+  const choices=SCALE.map(String);
   const buttonHtml=choice=>`<button class="jspsych-btn distance-choice">${choice}<small>${LABELS[choice]||"&nbsp;"}</small></button>`;
   const delay=duration=>({type:jsPsychHtmlButtonResponse,stimulus:"",choices:[],trial_duration:duration,response_ends_trial:false,data:{record_type:"INTERFACE_DELAY"}});
   const ratingTrial=(item,recordType)=>({type:jsPsychAudioButtonResponse,stimulus:item.opaque_audio_path,choices,button_html:buttonHtml,prompt:`<div class="distance-question">&iquest;Qu&eacute; tan grande te parece la distancia musical entre la primera y la segunda sonoridad?</div>`,response_allowed_while_playing:false,response_ends_trial:true,trial_ends_after_audio:false,data:{record_type:recordType,cell_id:cell,opaque_stimulus_id:item.opaque_stimulus_id,serial_position:item.serial_position||null,playback_started:false,playback_completed:false,response_recorded:false,technical_error:null},on_load:()=>{const audio=document.querySelector("audio");if(audio){audio.addEventListener("play",()=>jsPsych.data.addDataToLastTrial({playback_started:true}));audio.addEventListener("ended",()=>jsPsych.data.addDataToLastTrial({playback_completed:true}));}},on_finish:data=>{data.playback_started=true;data.playback_completed=true;data.rating_1_7=data.response===null?null:data.response+1;data.response_recorded=data.rating_1_7!==null;data.technical_error=data.rating_1_7===null?"missing_response":null;delete data.response;}});
   const timeline=[];
+  timeline.push({type:jsPsychHtmlButtonResponse,stimulus:"<h2>Información del estudio</h2><p>Es un piloto de escucha musical.</p><p>Escucharás ejemplos sonoros breves y darás valoraciones.</p><p>Debes usar auriculares.</p><p>La participación es voluntaria y puedes detenerte en cualquier momento.</p><p>Las respuestas se almacenan bajo un identificador seudónimo del estudio.</p><p>No hay respuestas musicales correctas o incorrectas.</p>",choices:["Continuar"]});
   timeline.push({type:jsPsychHtmlButtonResponse,stimulus:`<h2>Antes de comenzar</h2><p>Usa auriculares para esta tarea.</p><p>&iquest;Confirmas que est&aacute;s usando auriculares?</p>`,choices:["S&iacute;, estoy usando auriculares","No"],data:{record_type:"HEADPHONE_GATE"},on_finish:data=>{if(data.response===1)jsPsych.endExperiment("La sesi&oacute;n no puede continuar sin auriculares.");}});
   timeline.push({type:jsPsychHtmlButtonResponse,stimulus:`<p>Ajusta el volumen a un nivel c&oacute;modo. Primero escuchar&aacute;s un sonido de comprobaci&oacute;n.</p>`,choices:["Continuar"],data:{record_type:"VOLUME_CHECK_READY"}},delay(PRE_DELAY_MS));
   timeline.push({...ratingTrial({opaque_stimulus_id:"volume-check",opaque_audio_path:"media/volume-check.wav"},"VOLUME_CHECK"),choices:["Continuar"],prompt:`<div class="audio-note">Comprueba que el nivel sea c&oacute;modo y contin&uacute;a.</div>`,button_html:choice=>`<button class="jspsych-btn">${choice}</button>`});

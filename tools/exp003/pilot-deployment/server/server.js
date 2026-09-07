@@ -10,6 +10,7 @@ const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(__dirname, "data
 const STORE_PATH = path.join(DATA_DIR, "sessions.json");
 const CELL_IDS = new Set(["A-O1", "A-O2", "A-O3", "B-O1", "B-O2", "B-O3"]);
 const PUBLIC_MANIFEST_PATH = path.join(__dirname, "..", "public-deployment-manifest.json");
+const PRIVATE_ALLOCATION_PATH = path.join(__dirname, "private-stage1-allocation.json");
 
 function readJson(file, fallback) { try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { return fallback; } }
 function store() { return readJson(STORE_PATH, {sessions: [], records: []}); }
@@ -19,6 +20,12 @@ function canonical(value) {
   return JSON.stringify(value);
 }
 function hash(value) { return crypto.createHash("sha256").update(canonical(value)).digest("hex").toUpperCase(); }
+function allocation() { return readJson(PRIVATE_ALLOCATION_PATH, {pilot_status:"owner_freeze_required",pilot_entries:[],technical_entries:[]}); }
+function resolveEntry(token) {
+  if (typeof token !== "string" || token.length < 8 || token.length > 128) return null;
+  const a = allocation();
+  return [...(a.pilot_entries || []), ...(a.technical_entries || [])].find(x => x.opaque_entry_token === token && x.enabled === true) || null;
+}
 function persist(db) {
   fs.mkdirSync(DATA_DIR, {recursive: true});
   const tmp = `${STORE_PATH}.tmp-${process.pid}`;
@@ -68,8 +75,14 @@ async function handle(req, res) {
   if (req.method === "POST" && u.pathname === "/api/session/start") {
     let p; try { p=await body(req); } catch { return fail(res,400,"INVALID_PAYLOAD","JSON inválido."); }
     if (!validId(p.participant_id) || !CELL_IDS.has(p.cell_id) || typeof p.technical_test !== "boolean") return fail(res,400,"INVALID_SESSION_START","participant_id, cell_id o technical_test inválido.");
+    if (p.entry_token === undefined && p.technical_test !== true) return fail(res,403,"INVALID_ENTRY","No se pudo validar la entrada.");
     if (p.technical_test && !/^TECHTEST-[0-9]{3,}$/.test(p.participant_id)) return fail(res,400,"INVALID_SESSION_START","Los technical tests requieren un ID TECHTEST-.");
-    const db=store(); const id=sessionId(); const s={session_id:id,participant_id:p.participant_id,cell_id:p.cell_id,status:"STARTED",technical_test:p.technical_test,started_at:new Date().toISOString(),completed_at:null,restart_of:validId(p.restart_of)?p.restart_of:null,payload_hash:null}; db.sessions.push(s); persist(db); return send(res,201,{ok:true,session:s});
+    const entry = resolveEntry(p.entry_token);
+    if (p.entry_token !== undefined) {
+      if (!entry || !validId(entry.participant_id) || !CELL_IDS.has(entry.cell_id) || typeof entry.technical_test !== "boolean" || typeof entry.stage !== "string") return fail(res,403,"INVALID_ENTRY","No se pudo validar la entrada.");
+      const db=store(); const id=sessionId(); const s={session_id:id,participant_id:entry.participant_id,cell_id:entry.cell_id,status:"STARTED",technical_test:entry.technical_test,stage:entry.stage,started_at:new Date().toISOString(),completed_at:null,restart_of:validId(p.restart_of)?p.restart_of:null,payload_hash:null}; db.sessions.push(s); persist(db); return send(res,201,{ok:true,session:s});
+    }
+    return fail(res,403,"INVALID_ENTRY","No se pudo validar la entrada.");
   }
   const m=u.pathname.match(/^\/api\/session\/([^/]+)\/(complete|abort)$/); if (!m) return fail(res,404,"NOT_FOUND","Ruta no encontrada.");
   const db=store(); const s=db.sessions.find(x=>x.session_id===m[1]); if (!s) return fail(res,404,"SESSION_NOT_FOUND","Sesión no encontrada.");
@@ -80,7 +93,7 @@ async function handle(req, res) {
   if (s.status !== "STARTED") return fail(res,409,"SESSION_NOT_ACTIVE","La sesión no está activa.");
   const error=validateCompletion(p,s); if (error) { s.status="INVALID"; s.completed_at=new Date().toISOString(); persist(db); return fail(res,422,"INVALID_PAYLOAD","El payload no cumple el contrato de EXP-003."); }
   const duplicate=db.sessions.some(x=>x.participant_id===s.participant_id && x.status==="COMPLETE" && !s.restart_of && x.session_id!==s.session_id);
-  s.payload_hash=pHash; s.completed_at=new Date().toISOString(); s.status=duplicate?"DUPLICATE":"COMPLETE"; db.records.push(...p.records.map((r,i)=>({...r,session_id:s.session_id,participant_id:s.participant_id,cell_id:s.cell_id,technical_test:true,session_status:s.status,record_index:i+1}))); persist(db);
+  s.payload_hash=pHash; s.completed_at=new Date().toISOString(); s.status=duplicate?"DUPLICATE":"COMPLETE"; db.records.push(...p.records.map((r,i)=>({...r,session_id:s.session_id,participant_id:s.participant_id,cell_id:s.cell_id,technical_test:s.technical_test,stage:s.stage,session_status:s.status,record_index:i+1}))); persist(db);
   return send(res, duplicate?409:201,{ok:!duplicate,status:s.status,session_id:s.session_id,payload_hash:pHash,error:duplicate?{code:"DUPLICATE",message:"Sesión completa duplicada."}:null});
 }
 const server=http.createServer((req,res)=>handle(req,res).catch(e=>fail(res,500,"STORAGE_FAILURE",e.message)));

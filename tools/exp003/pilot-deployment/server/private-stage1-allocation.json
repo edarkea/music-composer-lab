@@ -1,0 +1,15 @@
+{
+  "schema_version": "EXP-003-stage1-private-entry-v1",
+  "pilot_status": "owner_freeze_required",
+  "pilot_entries": [],
+  "technical_entries": [
+    {
+      "opaque_entry_token": "tech-exp003-smoke-7f4c9a",
+      "participant_id": "TECHTEST-900",
+      "cell_id": "A-O1",
+      "stage": "technical-test",
+      "enabled": true,
+      "technical_test": true
+    }
+  ]
+}
