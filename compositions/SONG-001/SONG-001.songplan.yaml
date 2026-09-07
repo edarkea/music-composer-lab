@@ -1,0 +1,159 @@
+schema_version: "2.0"
+name: SONG-001
+tempo: 122
+time_signature: 4/4
+tonic: C
+mode: ionian
+style: indie_dance_mvp
+arrangement:
+  sections:
+    - id: opening
+      start_bar: 1
+      bar_count: 4
+      energy: 0.25
+    - id: build
+      start_bar: 5
+      bar_count: 4
+      energy: 0.5
+    - id: focal
+      start_bar: 9
+      bar_count: 4
+      energy: 0.8
+    - id: release
+      start_bar: 13
+      bar_count: 4
+      energy: 0.35
+  harmony_assignments:
+    - section_id: opening
+      harmony: "cyclic_C_Am_F_G"
+    - section_id: build
+      harmony: "cyclic_C_Am_F_G"
+    - section_id: focal
+      harmony: "cyclic_C_Am_F_G"
+    - section_id: release
+      harmony: "cyclic_C_Am_F_G"
+tracks:
+  - id: lead
+    type: pitched
+    role: focal_lead
+    motifs:
+      - id: lead_opening
+        events:
+          - {bar: 1, beat: "1", duration: "1/4", pitches: [E4], velocity: 82}
+          - {bar: 1, beat: "2", duration: "1/4", pitches: [G4], velocity: 86}
+          - {bar: 1, beat: "3", duration: "1/2", pitches: [A4], velocity: 90}
+          - {bar: 2, beat: "1", duration: "1/4", pitches: [G4], velocity: 84}
+          - {bar: 2, beat: "2", duration: "1/4", pitches: [E4], velocity: 80}
+          - {bar: 2, beat: "3", duration: "1/2", pitches: [D4], velocity: 78}
+          - {bar: 3, beat: "1", duration: "1/4", pitches: [E4], velocity: 82}
+          - {bar: 3, beat: "2", duration: "1/4", pitches: [G4], velocity: 86}
+          - {bar: 3, beat: "3", duration: "1/2", pitches: [A4], velocity: 90}
+          - {bar: 4, beat: "1", duration: "1/2", pitches: [G4], velocity: 84}
+          - {bar: 4, beat: "3", duration: "1/2", pitches: [E4], velocity: 80}
+      - id: lead_build
+        events:
+          - {bar: 1, beat: "1", duration: "1/4", pitches: [E4], velocity: 86}
+          - {bar: 1, beat: "2", duration: "1/4", pitches: [G4], velocity: 90}
+          - {bar: 1, beat: "3", duration: "1/2", pitches: [A4], velocity: 94}
+          - {bar: 2, beat: "1", duration: "1/4", pitches: [G4], velocity: 88}
+          - {bar: 2, beat: "2", duration: "1/4", pitches: [E4], velocity: 84}
+          - {bar: 2, beat: "3", duration: "1/2", pitches: [D4], velocity: 82}
+          - {bar: 3, beat: "1", duration: "1/4", pitches: [E4], velocity: 86}
+          - {bar: 3, beat: "2", duration: "1/4", pitches: [G4], velocity: 90}
+          - {bar: 3, beat: "3", duration: "1/4", pitches: [A4], velocity: 96}
+          - {bar: 3, beat: "4", duration: "1/4", pitches: [B4], velocity: 98}
+          - {bar: 4, beat: "1", duration: "1/2", pitches: [A4], velocity: 94}
+          - {bar: 4, beat: "3", duration: "1/2", pitches: [G4], velocity: 88}
+      - id: lead_focal
+        events:
+          - {bar: 1, beat: "1", duration: "1/4", pitches: [E4], velocity: 100}
+          - {bar: 1, beat: "2", duration: "1/4", pitches: [G4], velocity: 104}
+          - {bar: 1, beat: "3", duration: "1/4", pitches: [A4], velocity: 108}
+          - {bar: 1, beat: "4", duration: "1/4", pitches: [B4], velocity: 106}
+          - {bar: 2, beat: "1", duration: "1/4", pitches: [A4], velocity: 104}
+          - {bar: 2, beat: "2", duration: "1/4", pitches: [G4], velocity: 100}
+          - {bar: 2, beat: "3", duration: "1/2", pitches: [E4], velocity: 96}
+          - {bar: 3, beat: "1", duration: "1/4", pitches: [E4], velocity: 100}
+          - {bar: 3, beat: "2", duration: "1/4", pitches: [G4], velocity: 104}
+          - {bar: 3, beat: "3", duration: "1/4", pitches: [A4], velocity: 108}
+          - {bar: 3, beat: "4", duration: "1/4", pitches: [B4], velocity: 106}
+          - {bar: 4, beat: "1", duration: "1/2", pitches: [A4], velocity: 104}
+          - {bar: 4, beat: "3", duration: "1/2", pitches: [G4], velocity: 98}
+      - id: lead_release
+        events:
+          - {bar: 1, beat: "1", duration: "1/4", pitches: [E4], velocity: 78}
+          - {bar: 1, beat: "2", duration: "1/4", pitches: [G4], velocity: 82}
+          - {bar: 1, beat: "3", duration: "1/2", pitches: [A4], velocity: 86}
+          - {bar: 2, beat: "1", duration: "1/2", pitches: [G4], velocity: 80}
+          - {bar: 2, beat: "3", duration: "1/2", pitches: [E4], velocity: 76}
+          - {bar: 3, beat: "1", duration: "1/2", pitches: [D4], velocity: 72}
+          - {bar: 3, beat: "3", duration: "1/2", pitches: [E4], velocity: 74}
+          - {bar: 4, beat: "1", duration: "1", pitches: [G4], velocity: 68}
+    section_assignments:
+      - {section_id: opening, motif_id: lead_opening}
+      - {section_id: build, motif_id: lead_build}
+      - {section_id: focal, motif_id: lead_focal}
+      - {section_id: release, motif_id: lead_release}
+  - id: harmony
+    type: pitched
+    role: harmonic_support
+    motifs:
+      - id: harmony_cycle
+        events:
+          - {bar: 1, beat: "1", duration: "1/2", pitches: [C3, E3, G3], velocity: 58}
+          - {bar: 1, beat: "3", duration: "1/2", pitches: [C3, E3, G3], velocity: 54}
+          - {bar: 2, beat: "1", duration: "1/2", pitches: [A2, C3, E3], velocity: 56}
+          - {bar: 2, beat: "3", duration: "1/2", pitches: [A2, C3, E3], velocity: 52}
+          - {bar: 3, beat: "1", duration: "1/2", pitches: [F2, A2, C3], velocity: 56}
+          - {bar: 3, beat: "3", duration: "1/2", pitches: [F2, A2, C3], velocity: 52}
+          - {bar: 4, beat: "1", duration: "1/2", pitches: [G2, B2, D3], velocity: 60}
+          - {bar: 4, beat: "3", duration: "1/2", pitches: [G2, B2, D3], velocity: 56}
+    section_assignments:
+      - {section_id: opening, motif_id: harmony_cycle}
+      - {section_id: build, motif_id: harmony_cycle}
+      - {section_id: focal, motif_id: harmony_cycle}
+      - {section_id: release, motif_id: harmony_cycle}
+  - id: bass
+    type: pitched
+    role: groove_bass
+    motifs:
+      - id: bass_cycle
+        events:
+          - {bar: 1, beat: "1", duration: "1/4", pitches: [C2], velocity: 88}
+          - {bar: 1, beat: "5/2", duration: "1/4", pitches: [G2], velocity: 78}
+          - {bar: 1, beat: "3", duration: "1/4", pitches: [C2], velocity: 84}
+          - {bar: 1, beat: "9/2", duration: "1/4", pitches: [G2], velocity: 76}
+          - {bar: 2, beat: "1", duration: "1/4", pitches: [A2], velocity: 86}
+          - {bar: 2, beat: "5/2", duration: "1/4", pitches: [E2], velocity: 76}
+          - {bar: 2, beat: "3", duration: "1/4", pitches: [A2], velocity: 82}
+          - {bar: 2, beat: "9/2", duration: "1/4", pitches: [E2], velocity: 74}
+          - {bar: 3, beat: "1", duration: "1/4", pitches: [F2], velocity: 84}
+          - {bar: 3, beat: "5/2", duration: "1/4", pitches: [C3], velocity: 76}
+          - {bar: 3, beat: "3", duration: "1/4", pitches: [F2], velocity: 80}
+          - {bar: 3, beat: "9/2", duration: "1/4", pitches: [C3], velocity: 74}
+          - {bar: 4, beat: "1", duration: "1/4", pitches: [G2], velocity: 90}
+          - {bar: 4, beat: "5/2", duration: "1/4", pitches: [D3], velocity: 80}
+          - {bar: 4, beat: "3", duration: "1/4", pitches: [G2], velocity: 86}
+          - {bar: 4, beat: "9/2", duration: "1/8", pitches: [D3], velocity: 78}
+    section_assignments:
+      - {section_id: opening, motif_id: bass_cycle}
+      - {section_id: build, motif_id: bass_cycle}
+      - {section_id: focal, motif_id: bass_cycle}
+      - {section_id: release, motif_id: bass_cycle}
+  - id: texture
+    type: pitched
+    role: focal_texture
+    motifs:
+      - id: texture_pulse
+        events:
+          - {bar: 1, beat: "3/2", duration: "1/8", pitches: [C5, G5], velocity: 48}
+          - {bar: 1, beat: "7/2", duration: "1/8", pitches: [C5, G5], velocity: 50}
+          - {bar: 2, beat: "3/2", duration: "1/8", pitches: [A4, E5], velocity: 46}
+          - {bar: 2, beat: "7/2", duration: "1/8", pitches: [A4, E5], velocity: 48}
+          - {bar: 3, beat: "3/2", duration: "1/8", pitches: [F4, C5], velocity: 46}
+          - {bar: 3, beat: "7/2", duration: "1/8", pitches: [F4, C5], velocity: 48}
+          - {bar: 4, beat: "3/2", duration: "1/8", pitches: [G4, D5], velocity: 50}
+          - {bar: 4, beat: "7/2", duration: "1/8", pitches: [G4, D5], velocity: 52}
+    section_assignments:
+      - {section_id: build, motif_id: texture_pulse}
+      - {section_id: focal, motif_id: texture_pulse}
