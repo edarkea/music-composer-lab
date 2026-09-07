@@ -1,7 +1,20 @@
 {
-  "schema_version": "EXP-003-stage1-private-entry-v1",
-  "pilot_status": "owner_freeze_required",
-  "pilot_entries": [],
+  "schema_version": "EXP-003-stage1-private-entry-v2",
+  "pilot_status": "frozen_disabled",
+  "pilot_entries": [
+    {"opaque_entry_token":"s1-entry-7f4c-a9c2","participant_id":"P001","cell_id":"A-O1","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-31b8-e6d1","participant_id":"P002","cell_id":"B-O1","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-c482-19af","participant_id":"P003","cell_id":"A-O2","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-5de7-b203","participant_id":"P004","cell_id":"B-O2","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-94ac-6f38","participant_id":"P005","cell_id":"A-O3","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-d820-47be","participant_id":"P006","cell_id":"B-O3","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-2a65-c9f0","participant_id":"P007","cell_id":"A-O1","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-e713-58ad","participant_id":"P008","cell_id":"B-O1","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-6b39-f2c4","participant_id":"P009","cell_id":"A-O2","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-a804-3d76","participant_id":"P010","cell_id":"B-O2","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-f156-8c20","participant_id":"P011","cell_id":"A-O3","stage":"pilot-stage1","enabled":false,"technical_test":false},
+    {"opaque_entry_token":"s1-entry-49da-b735","participant_id":"P012","cell_id":"B-O3","stage":"pilot-stage1","enabled":false,"technical_test":false}
+  ],
   "technical_entries": [
     {
       "opaque_entry_token": "tech-exp003-smoke-7f4c9a",
