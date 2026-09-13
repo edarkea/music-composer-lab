@@ -1,0 +1,62 @@
+{
+  "status": "SUCCESS",
+  "valid": true,
+  "issues": [],
+  "song_id": "SONG-001-R1",
+  "schema_version": "2.0",
+  "validator": "music-midi songplan validate",
+  "engine_package": "music-engine 4.0.0",
+  "engine_commit": "71bbc73337da0d755618bdc796e19ce2e82cc3df",
+  "songplan_sha256": "1C7AAEA53817C0B4AC0C9006CC2E6DB55C8CC85A635EEB645EA6EBDDEF86ED8D",
+  "percussion_mapping_validation": "PASS",
+  "percussion_notes_used": [
+    {
+      "voice": "kick",
+      "pitch": 36,
+      "note_on_count": 30
+    },
+    {
+      "voice": "snare",
+      "pitch": 38,
+      "note_on_count": 20
+    },
+    {
+      "voice": "closed_hat",
+      "pitch": 44,
+      "note_on_count": 40
+    },
+    {
+      "voice": "open_hat",
+      "pitch": 46,
+      "note_on_count": 2
+    },
+    {
+      "voice": "pedal_hat",
+      "pitch": 42,
+      "note_on_count": 2
+    },
+    {
+      "voice": "low_tom",
+      "pitch": 41,
+      "note_on_count": 1
+    },
+    {
+      "voice": "mid_tom",
+      "pitch": 45,
+      "note_on_count": 1
+    },
+    {
+      "voice": "high_tom",
+      "pitch": 48,
+      "note_on_count": 1
+    },
+    {
+      "voice": "crash",
+      "pitch": 55,
+      "note_on_count": 1
+    }
+  ],
+  "unmapped_drum_pitches": [],
+  "original_pitched_tracks_unchanged": "PASS",
+  "tempo_form_unchanged": "PASS"
+}
