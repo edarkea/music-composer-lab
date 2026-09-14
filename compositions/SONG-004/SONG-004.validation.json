@@ -1,0 +1,413 @@
+﻿{
+  "song_id": "SONG-004",
+  "schema_version": "2.0",
+  "validator": ".venv/Scripts/music-midi.exe songplan validate compositions/SONG-004/SONG-004.songplan.yaml --json",
+  "status": "SUCCESS",
+  "valid": true,
+  "issues": [],
+  "engine_package": "music-engine 4.0.0",
+  "engine_commit": "71bbc73337da0d755618bdc796e19ce2e82cc3df",
+  "engine_wheel_sha256": "110E987A1E102C1CF3D29FEC1CCC68583459030F40748E10D66CE1F8E4819FE1",
+  "songplan_sha256": "5529307F4C36099744C0BD7CEC0A2985B38CC742F8D4322BC0427ADFCB255A18",
+  "harmonic_label_voicing_audit": {
+    "status": "PASS",
+    "entries_checked": 28,
+    "consistent": 28,
+    "pass_with_scope": 0,
+    "warnings": 0,
+    "rows": [
+      {
+        "bar": 1,
+        "section": "a",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 2,
+        "section": "a",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 3,
+        "section": "a",
+        "label": "Bb major",
+        "pitches": [
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 4,
+        "section": "a",
+        "label": "Bb major",
+        "pitches": [
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 5,
+        "section": "a",
+        "label": "C major",
+        "pitches": [
+          "C3",
+          "E3",
+          "G3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 6,
+        "section": "a",
+        "label": "C major",
+        "pitches": [
+          "C3",
+          "E3",
+          "G3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 7,
+        "section": "a",
+        "label": "G minor",
+        "pitches": [
+          "G2",
+          "Bb2",
+          "D3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 8,
+        "section": "a",
+        "label": "G minor",
+        "pitches": [
+          "G2",
+          "Bb2",
+          "D3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 9,
+        "section": "b",
+        "label": "Bb major",
+        "pitches": [
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 10,
+        "section": "b",
+        "label": "Bb major",
+        "pitches": [
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 11,
+        "section": "b",
+        "label": "C major",
+        "pitches": [
+          "C3",
+          "E3",
+          "G3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 12,
+        "section": "b",
+        "label": "C major",
+        "pitches": [
+          "C3",
+          "E3",
+          "G3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 13,
+        "section": "b",
+        "label": "G minor",
+        "pitches": [
+          "G2",
+          "Bb2",
+          "D3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 14,
+        "section": "b",
+        "label": "G minor",
+        "pitches": [
+          "G2",
+          "Bb2",
+          "D3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 15,
+        "section": "b",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 16,
+        "section": "b",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 17,
+        "section": "a_prime",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 18,
+        "section": "a_prime",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 19,
+        "section": "a_prime",
+        "label": "Bb major",
+        "pitches": [
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 20,
+        "section": "a_prime",
+        "label": "Bb major",
+        "pitches": [
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 21,
+        "section": "a_prime",
+        "label": "C major",
+        "pitches": [
+          "C3",
+          "E3",
+          "G3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 22,
+        "section": "a_prime",
+        "label": "C major",
+        "pitches": [
+          "C3",
+          "E3",
+          "G3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 23,
+        "section": "a_prime",
+        "label": "G minor",
+        "pitches": [
+          "G2",
+          "Bb2",
+          "D3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 24,
+        "section": "a_prime",
+        "label": "G minor",
+        "pitches": [
+          "G2",
+          "Bb2",
+          "D3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 25,
+        "section": "coda",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 26,
+        "section": "coda",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 27,
+        "section": "coda",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 28,
+        "section": "coda",
+        "label": "D minor",
+        "pitches": [
+          "D3",
+          "F3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      }
+    ]
+  },
+  "n3p": {
+    "status": "PASS",
+    "instantiated_prospectively": true,
+    "manual_drums_reminder": false,
+    "selected_architecture": "DELEGATED",
+    "delegated_layers": [
+      "pattern",
+      "bass"
+    ],
+    "independent_percussion_track": false,
+    "structural_pulse_support": "Bass attacks on beats 1 and 3 in A/A-prime, and beat 1 plus a fifth on 3-and in B; focal pattern supplies syncopated attacks. Perceptual confirmation pending Owner listening."
+  },
+  "materialization": {
+    "status": "SUCCESS",
+    "command": ".venv/Scripts/music-midi.exe songplan render compositions/SONG-004/SONG-004.songplan.yaml --output compositions/SONG-004/SONG-004.mid",
+    "midi_path": "compositions/SONG-004/SONG-004.mid",
+    "midi_sha256": "B1B9571A654A7877ED5358FAA7A826F62EAD2EB74859C1C4A339156786D0C62E",
+    "midi_ticks_per_quarter": 960,
+    "midi_end_tick": 107520,
+    "expected_end_tick": 107520,
+    "midi_duration_seconds": 57.930992,
+    "note_on_counts_by_track_and_section": {
+      "pattern": {
+        "a": 56,
+        "b": 56,
+        "a_prime": 48,
+        "coda": 15
+      },
+      "harmony": {
+        "a": 24,
+        "b": 24,
+        "a_prime": 24,
+        "coda": 12
+      },
+      "bass": {
+        "a": 16,
+        "b": 16,
+        "a_prime": 16,
+        "coda": 6
+      },
+      "lead": {
+        "a": 3,
+        "b": 4,
+        "a_prime": 4,
+        "coda": 2
+      }
+    },
+    "note_on_counts_by_track": {
+      "SONG-004": 0,
+      "pattern": 175,
+      "harmony": 84,
+      "bass": 54,
+      "lead": 13
+    },
+    "midi_tracks": [
+      "SONG-004",
+      "pattern",
+      "harmony",
+      "bass",
+      "lead"
+    ],
+    "pitch_collection_check": {
+      "status": "PASS",
+      "collection": "D Aeolian",
+      "pitch_classes_midi": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        10
+      ]
+    },
+    "audio_generated": false
+  },
+  "artistic_priority_handoffs": {
+    "approved_before_composition": 3,
+    "new_during_composition": 0,
+    "rank_1": 0,
+    "rank_2": 0
+  },
+  "owner_listening": "PENDING"
+}
+
