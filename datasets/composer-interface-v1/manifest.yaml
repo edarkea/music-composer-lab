@@ -1,0 +1,70 @@
+interface_id: composer-interface-v1
+version: 1.0.0
+language: es
+status: derived_interface_ready_for_prospective_test
+purpose: >-
+  Exportar de forma trazable conocimiento compositivo aprobado para su uso por
+  modelos externos, sin convertir el modelo en fuente canónica.
+canonical_authority:
+  - research/integrations/composer-knowledge-v1.md
+  - research/integrations/composer-genre-pack-v1.md
+  - research/integrations/composer-decision-contract-v1.md
+  - research/integrations/composer-cross-domain-songplan-v1.md
+  - research/integrations/composer-mvp-v1.1-percussion-architecture.md
+  - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md
+contents:
+  decision_schema: decision-schema.yaml
+  guardrails: guardrails.yaml
+  general_knowledge: knowledge/approved-composition-knowledge.yaml
+  genre_packs:
+    - genres/indie-dance.yaml
+  decision_reference: knowledge/n3-p-percussion-architecture.yaml
+  examples:
+    - examples/SONG-001.yaml
+    - examples/SONG-002.yaml
+    - examples/SONG-003.yaml
+    - examples/SONG-004.yaml
+counts:
+  approved_general_knowledge_records: 12
+  genre_packs: 1
+  guardrails: 12
+  composition_examples: 4
+  decision_reference_records: 1
+capability_boundary:
+  enumerate: true
+  filter: yes_with_scope
+  rank: no_general_ranking
+  rank_1_exception: >-
+    CK-CROSS-01 permite una comparación local únicamente en una tarea de
+    reconocimiento declarada y dentro de su evidencia. Su uso real en las
+    composiciones auditadas es 0; no es ranking global ni multiobjetivo.
+  rank_1_actual_uses_in_completed_compositions: 0
+  rank_2_actual_uses_in_completed_compositions: 0
+artistic_priority:
+  required_when: >-
+    Sobreviven múltiples opciones al filtrado y no existe comparación
+    respaldada aplicable.
+  model_must_not_invent_best_option: true
+songplan:
+  target: SongPlanV2
+  schema_version: "2.0"
+  canonical_contract: research/integrations/composer-cross-domain-songplan-v1.md
+training_boundary:
+  prompt_context_injection: suitable
+  retrieval_augmented_generation: suitable
+  agent_workflows: suitable
+  structured_evaluation: suitable
+  fine_tuning_dataset_claimed: false
+  pretraining_dataset_claimed: false
+  statistical_composition_corpus_claimed: false
+  rationale: Cuatro canciones aceptadas son casos ilustrativos, no evidencia a escala de entrenamiento.
+prospective_test:
+  reserved_case: SONG-005
+  composed: false
+  protocol: evaluations/composer-agent/cross-model-evaluation-v1.md
+  artistic_brief_defined: false
+provenance_policy:
+  every_general_record_has_canonical_source_and_id: true
+  exported_text_is_non_authoritative: true
+  unresolved_claims_must_remain_unresolved: true
+  model_memory_must_not_fill_missing_claims: true

@@ -1,0 +1,43 @@
+example_id: SONG-004
+example_kind: audited_composition
+epistemic_status: case_example_and_owner_artistic_preference_not_scientific_validation
+brief: Indie-dance/electrónica-pop contenido y cinético; movimiento claro, patrón recurrente y desarrollo cross-domain.
+major_decisions:
+  tempo_meter_form: 116 BPM, 4/4, 28 compases; A/B/A'/coda (8/8/8/4).
+  harmony: D minor/D Aeolian; Dm-Bb-C-Gm; coda en Dm.
+  focal_hierarchy: Patrón armónico sincopado focal; bass de apoyo; lead breve/espaciado.
+  development: Patrón retorna con cambios de posiciones/omisiones y soporte armónico por sección.
+  ending: Coda reduce actividad y termina con D minor/D en bajo; no se declara cadencia ni se infiere cierre por el acorde solo.
+artistic_priority_handoffs: 3
+percussion:
+  n3p: {prospective: true, manual_drums_reminder: false, outcome: DELEGATED, owner_accepted: true}
+  delegated_layers: [pattern, bass]
+  independent_percussion_track: false
+important_guardrails:
+  - Patrón/bajo llevan función de pulso en esta canción; no demuestra que drums sean prescindibles generalmente.
+  - Etiquetas armónicas verificadas contra pitches explícitas.
+  - Sin pista de drums independiente según decisión aprobada.
+songplan_result:
+  status: validated_and_materialized
+  schema: SongPlanV2
+  validation: PASS
+  midi: compositions/SONG-004/SONG-004.mid
+  harmonic_integrity: 28/28 CONSISTENT; 0 PASS_WITH_SCOPE; 0 WARNING.
+owner_listening:
+  status: ACCEPTED
+  findings: [pulse_clear_without_drums, pattern_provides_rhythmic_harmonic_drive, bass_supports_pulse, lead_sparse_and_supportive, no_drums_arrangement_coherent, n3p_delegated_validated]
+  scope: Feedback is the Project Owner's artistic judgment for SONG-004, not scientific validation.
+ranking:
+  enumerate: used
+  filter: used_with_scope
+  rank_1: 0
+  rank_2: 0
+provenance:
+  canonical_sources:
+    - compositions/SONG-004/SONG-004-brief.md
+    - compositions/SONG-004/SONG-004-composition-plan.md
+    - compositions/SONG-004/SONG-004-decision-trace.md
+    - compositions/SONG-004/SONG-004.songplan.yaml
+    - compositions/SONG-004/SONG-004.validation.json
+    - compositions/SONG-004/SONG-004-process-audit.md
+    - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md

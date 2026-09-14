@@ -1,0 +1,74 @@
+guardrail_set_id: composer-interface-guardrails-v1
+language: es
+guardrails:
+  - id: GR-001
+    name: separación de estructura, percepción y composición
+    rule: Registrar las tres capas; ninguna implica automáticamente la siguiente.
+    action_on_violation: Marcar el puente como hypothesis, diagnostic_only o unresolved.
+    provenance: [research/integrations/composer-decision-contract-v1.md#H]
+  - id: GR-002
+    name: hook, prominencia y memorabilidad son constructos distintos
+    rule: No utilizar uno como proxy validado de los otros.
+    action_on_violation: Retirar la inferencia y registrar el constructo realmente medido.
+    provenance: [research/integrations/composer-cross-domain-songplan-v1.md#E]
+  - id: GR-003
+    name: tensión multidimensional
+    rule: No reducir tensión/release a un escalar o a una variable única.
+    action_on_violation: Declarar dimensiones y objetivo o dejar la relación unresolved.
+    provenance: [research/integrations/composer-knowledge-v1.md#E, research/integrations/composer-genre-pack-v1.md#E]
+  - id: GR-004
+    name: poder diagnóstico no equivale a poder generativo
+    rule: Una distinción que ayuda a describir o advertir no selecciona por sí sola una operación compositiva.
+    action_on_violation: Limitarla a DIAGNOSTIC_ONLY salvo soporte prospectivo explícito.
+    provenance: [research/integrations/composer-foundations-v0.md#Diagnostic-versus-generative-power, research/integrations/composer-decision-contract-v1.md#G]
+  - id: GR-005
+    name: ausencia de evidencia de superioridad no demuestra equivalencia
+    rule: NO EVIDENCE THAT A > B != EVIDENCE THAT A = B.
+    action_on_violation: Marcar comparación no resuelta; no inferir igualdad.
+    provenance: [research/integrations/composer-foundations-v4.md#Salvaguardas-de-ausencia-de-evidencia]
+  - id: GR-006
+    name: transferencia no validada no demuestra ausencia de relación
+    rule: NO VALIDATED X -> Y TRANSFER != EVIDENCE X AND Y ARE UNRELATED.
+    action_on_violation: Declarar transferencia sin validar; no afirmar independencia.
+    provenance: [research/integrations/composer-foundations-v4.md#Salvaguardas-de-ausencia-de-evidencia]
+  - id: GR-007
+    name: constructos adyacentes no son proxies válidos por defecto
+    rule: ADJACENT CONSTRUCT != VALID PROXY.
+    action_on_violation: Exigir operacionalización directa o marcar unresolved.
+    provenance: [research/integrations/composer-foundations-v4.md#Salvaguardas-de-ausencia-de-evidencia]
+  - id: GR-008
+    name: disciplina de alcance
+    rule: No transferir conocimiento fuera de su tradición, género, tarea o contexto declarados.
+    action_on_violation: Conservar alternativas, declarar límite o bloquear la decisión afectada.
+    provenance: [research/integrations/composer-knowledge-v1.md#A-C, research/integrations/composer-decision-contract-v1.md#G]
+  - id: GR-009
+    name: disciplina de ranking
+    rule: Separar ENUMERATE, FILTER, RANK-1 y RANK-2; ranking requiere objetivo, criterio, tarea, alcance y soporte.
+    action_on_violation: Eliminar puntuación/orden no respaldado; usar ARTISTIC_PRIORITY entre supervivientes.
+    provenance: [research/integrations/composer-decision-contract-v1.md#C-E, research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md#4]
+  - id: GR-010
+    name: arquitectura de percusión explícita (N3-P)
+    rule: Resolver una arquitectura explícita; no implica que siempre haya drums.
+    options: [FULL, MINIMAL, DELEGATED, INTENTIONALLY_ABSENT]
+    notes:
+      - FULL no exige toda articulación ni subdivisión continua.
+      - Silencio rítmico no es automáticamente un defecto.
+      - No imponer una regla de drums para el género.
+      - INTENTIONALLY_ABSENT aún no ha sido ejercitada en los casos comparativos.
+    action_on_violation: Detener el handoff de composición hasta resolver N3-P.
+    provenance: [research/integrations/composer-mvp-v1.1-percussion-architecture.md#B-D]
+  - id: GR-011
+    name: integridad entre etiqueta armónica y voicing explícito
+    rule: Comparar etiquetas con las pitches de la realización armónica declarada; pitches explícitas rigen el sonido.
+    outcomes: [CONSISTENT, PASS_WITH_SCOPE, WARNING_UNEXPLAINED_MISMATCH]
+    notes:
+      - Omisiones, adiciones, doblajes e inversiones pueden ser legítimos si la semántica queda documentada.
+      - No imponer presencia de todos los tonos teóricos ni umbrales arbitrarios.
+      - Ante discrepancia inexplicada, detener esa ruta de decisión y no reinterpretar silenciosamente.
+    action_on_violation: Warning bloquea el handoff afectado hasta resolver etiqueta/realización explícitamente.
+    provenance: [research/integrations/composer-cross-domain-songplan-v1.md#Diagnostic-guardrail-harmony-label-explicit-realization, compositions/SONG-002/SONG-002-listening-review.md#LF-022]
+  - id: GR-012
+    name: no completar huecos desde la memoria del modelo
+    rule: Si falta o es ambiguo un claim, marcar unresolved; no introducir teoría, ejemplos, opciones o semántica no autorizados.
+    action_on_violation: Retirar el dato inventado y reportar el límite.
+    provenance: [research/integrations/composer-knowledge-v1.md#B, research/integrations/composer-decision-contract-v1.md#G]

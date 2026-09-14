@@ -1,0 +1,130 @@
+schema_id: composer-interface-decision-record-v1
+language: es
+purpose: >-
+  Contrato de serialización para conocimiento de decisiones y trazas de un
+  agente compositor. Este documento define campos y semántica; no añade claims.
+record_kinds:
+  - knowledge_decision
+  - composition_decision_trace
+required_for_knowledge_decision:
+  - id
+  - name
+  - domain
+  - decision_level
+  - scope
+  - question
+  - capability
+  - actionability
+  - evidence_class
+  - integration_status
+  - ranking_status
+  - uncertainty
+  - provenance
+required_for_composition_decision_trace:
+  - decision_id
+  - version
+  - level
+  - domain
+  - artistic_goal
+  - question
+  - scope
+  - candidate_options
+  - hard_constraints
+  - soft_criteria
+  - structural_basis
+  - perceptual_basis
+  - composition_basis
+  - capability
+  - active_criterion
+  - selected_option
+  - selection_basis
+  - artistic_priority
+  - dependencies
+  - songplan_handoff
+  - uncertainty
+  - provenance
+optional_fields:
+  - goals
+  - support_basis
+  - genre_dependencies
+  - cross_domain_dependencies
+  - guardrails
+  - expected_effect
+  - ranking_status
+field_semantics:
+  id: Identificador canónico, por ejemplo CK-MEL-01.
+  decision_level: Una escala documentada; no inferir una escala ausente.
+  scope: Contexto, condiciones y límites transferidos de la fuente.
+  options: Alternativas admitidas por la fuente; no afirmar que sean exhaustivas.
+  hard_constraints: Restricciones obligatorias explícitas en el contexto.
+  soft_criteria: Consideraciones que informan filtrado sin convertirse en ley.
+  structural_basis: Rasgos u operaciones controlables observables.
+  perceptual_basis: Efecto con estado epistemológico y alcance; unresolved si no se sustenta.
+  composition_basis: Relación entre objetivo y decisión; no deducirla automáticamente de estructura.
+  evidence_class: THEORY, GENRE OBSERVATION, COMPOSITION HEURISTIC, HYPOTHESIS, EXPERIMENTAL RESULT o ARTISTIC PREFERENCE.
+  support_basis: Fuentes/tipos de soporte tal como los define la fuente canónica.
+  capability: Enumerate, filter y rank son capacidades separadas; ver capability_schema.
+  actionability: ACTIONABLE_WITH_SCOPE, DIAGNOSTIC_ONLY, REFERENCE_ONLY o EXCLUDE_FROM_MVP.
+  integration_status: Estado composer-use canónico, sin elevar estatus epistemológico.
+  genre_dependencies: Referencias separadas a registros de género; vacío si ninguna aplica.
+  cross_domain_dependencies: Relación y decisión vecina, no orden universal de composición.
+  artistic_priority_conditions: Condiciones bajo las cuales la elección pasa al Owner.
+  ranking_status: Debe indicar criterio, tarea y alcance para un RANK-1 acotado; por defecto no_rank.
+  guardrails: Identificadores, nunca prosa no trazable si hay guardrail canónico aplicable.
+  expected_effect: Distinguir esperado, hipotético, diagnóstico o no establecido.
+  songplan_handoff: Campos/vínculos verificables de SongPlanV2 más lo que queda en la traza.
+  uncertainty: Preguntas, limitaciones o puentes no validados expresos.
+  provenance: Fuente canónica, identificador y referencia de origen.
+capability_schema:
+  enumerate:
+    values: [true, false, unresolved]
+    meaning: Presentar alternativas plausibles dentro del alcance.
+  filter:
+    values: [true, yes_with_scope, false, unresolved]
+    meaning: Aplicar restricciones/criterios declarados; no implica ordenar supervivientes.
+  rank:
+    values: [false, local_only, yes_with_scope, unresolved]
+    meaning: Comparar por criterio/objetivo explícito; nunca implica ranking global.
+  rank_1:
+    fields:
+      - task
+      - target_construct
+      - criterion
+      - scope
+      - evidence_basis
+      - non_claim
+  rank_2:
+    default: no
+    requires: Procedimiento multiobjetivo explícitamente justificado y aprobado.
+artistic_priority_schema:
+  status_values: [not_needed, required, resolved_by_owner, unresolved]
+  record_when_required:
+    - surviving_options
+    - why_supported_ranking_does_not_resolve_choice
+    - owner_priority
+    - selected_option
+    - accepted_tradeoff
+    - decision_status
+  prohibition: No inventar un ganador, puntuación o preferencia atribuida al Owner.
+structure_perception_composition:
+  required_layers:
+    - structure
+    - perception
+    - composition
+  perception_status_values: [supported_with_scope, hypothesis, diagnostic_only, unresolved, not_applicable]
+  rule: Ninguna capa implica automáticamente la siguiente.
+provenance_schema:
+  required:
+    - canonical_source
+    - canonical_id
+  recommended:
+    - canonical_section
+    - source_version
+  rule: La ruta de exportación no sustituye ni edita la fuente canónica.
+songplan_contract:
+  version: "2.0"
+  target: SongPlanV2
+  explicit_events_are_authoritative_for_materialized_sound: true
+  labels_and_roles_generate_no_notes: true
+  rationale_and_uncertainty_remain_in_decision_trace: true
+  unknown_or_unsupported_field: unresolved; no schema invention

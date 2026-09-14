@@ -1,0 +1,42 @@
+example_id: SONG-003
+example_kind: audited_composition
+epistemic_status: case_example_and_owner_artistic_preference_not_scientific_validation
+brief: Indie-dance instrumental con identidad recurrente, desarrollo entre capas y claridad de groove.
+major_decisions:
+  tempo_meter_form: 132 BPM, 4/4, 24 compases; spark/stride/pocket/lift/arrival/button (4/6/4/2/6/2).
+  harmony: E Mixolydian; seis triadas realizadas explícitamente, una asignación por compás.
+  focal_hierarchy: Relación compartida lead-percussion/cowbell; bajo comparativamente sencillo.
+  lead: Identidad recurrente con cortes y variaciones.
+  development: Cambia la realización rítmica armónica; retirada en pocket y reentrada.
+  ending: Button breve en E.
+artistic_priority_handoffs: 8
+percussion:
+  n3p: {prospective: true, manual_drums_reminder: false, outcome: FULL, owner_accepted: true}
+  realization: Kick/snare/hat/cowbell; FULL no significa subdivisión continua.
+important_guardrails:
+  - Silencio rítmico no es defecto automático.
+  - El hueco de bar 18 no es error MIDI/materialización ni necesidad de rellenar.
+  - No generalizar que hats continuos o toms sean innecesarios.
+songplan_result:
+  status: validated_and_materialized
+  schema: SongPlanV2
+  validation: PASS
+  midi: compositions/SONG-003/SONG-003.mid
+  harmonic_integrity: 24/24 CONSISTENT; 0 PASS_WITH_SCOPE; 0 WARNING.
+owner_listening:
+  status: ACCEPTED_WITHOUT_REVISION
+  findings: [pulse_clear_during_bars_17_to_20_loop, bar_18_space_intentional, repetition_and_development_accepted, diversity_perceptible]
+  scope: Owner listening supports only this composition and project-level diversity observation; not scientific evidence.
+ranking:
+  enumerate: used
+  filter: used_with_scope
+  rank_1: 0
+  rank_2: 0
+provenance:
+  canonical_sources:
+    - compositions/SONG-003/SONG-003-decision-trace.md
+    - compositions/SONG-003/SONG-003.songplan.yaml
+    - compositions/SONG-003/SONG-003.validation.json
+    - compositions/SONG-003/SONG-003-process-audit.md
+    - compositions/SONG-003/SONG-003-listening-review.md
+    - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md

@@ -1,0 +1,51 @@
+example_id: SONG-001
+example_kind: audited_composition_with_controlled_revision
+epistemic_status: case_example_not_general_evidence
+brief: Instrumental indie-dance; continuidad con intensificación gradual, foco reconocible y release relativamente abierto.
+major_decisions:
+  tempo_meter_form: 122 BPM, 4/4, 16 compases; opening/build/focal/release de cuatro compases cada uno.
+  harmony: C major/Ionian context; ciclo C-Am-F-G persistente.
+  focal_hierarchy: Lead focal; bajo de apoyo raíz/quinta; texture sincopada por secciones.
+  development: Variación parcial de lead y cambios de capas/densidad; release reduce textura.
+  ending: G4 sostenido sobre el ciclo; intención relativamente abierta, no claim de cierre perceptivo.
+artistic_priority_handoffs: 7
+percussion:
+  outcome: OMITTED_ACCIDENTALLY
+  n3p_in_song: not_explicitly_resolved
+  interpretation: Omisión de aplicación/integración, no evidencia de que drums sean innecesarios.
+important_guardrails:
+  - No confundir intención de release con cierre percibido.
+  - Los timbres de FM8 son contexto de escucha, no prueba de género o conocimiento.
+songplan_result:
+  status: validated_and_materialized
+  schema: SongPlanV2
+  validation: PASS
+  midi: compositions/SONG-001/SONG-001.mid
+  cross_domain_revision: REV-001; se redujo registro de texture para proteger foco lead.
+owner_listening:
+  status: listened_historical_baseline; no revisión de material pitched solicitada
+  finding: Owner consideró la pieza musical/agradable; observó percusión omitida y ambigüedad de identidad de género/timbre.
+  scope: Esta evaluación aplica a esta realización.
+controlled_revision:
+  example_id: SONG-001-R1
+  relation: Revisión dirigida por el Owner; no es composición independiente.
+  change: Solo se añadió arquitectura completa de drums por secciones; pistas pitched originales intactas.
+  interim_rejected: Realización intermedia solo de kick considerada incompleta por el Owner.
+  percussion_outcome: COMPLETE_MULTIVOICE_DRUMS_ACCEPTED
+  owner_listening: accepted_in_REAPER
+  materialization: PASS; 98 drum note-ons mapeados.
+  handoff_count: not_counted_as_full_song_ledger
+ranking:
+  enumerate: used
+  filter: used_with_scope
+  rank_1: 0
+  rank_2: 0
+provenance:
+  canonical_sources:
+    - compositions/SONG-001/SONG-001-decision-trace.md
+    - compositions/SONG-001/SONG-001.songplan.yaml
+    - compositions/SONG-001/SONG-001.validation.json
+    - compositions/SONG-001/SONG-001-process-audit.md
+    - compositions/SONG-001/SONG-001-listening-review.md
+    - compositions/SONG-001-R1/SONG-001-R1-process-audit.md
+    - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md

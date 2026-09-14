@@ -1,0 +1,75 @@
+schema_id: composer-agent-output-v1
+language: es
+required:
+  run_id: Debe coincidir con la entrada.
+  status: [READY_FOR_VALIDATION, BLOCKED]
+  decision_trace:
+    decision_schema: composer-interface-decision-record-v1
+    decisions:
+      required_per_decision:
+        - decision_id
+        - version
+        - level
+        - domain
+        - artistic_goal
+        - question
+        - scope
+        - candidate_options
+        - hard_constraints
+        - soft_criteria
+        - structural_basis
+        - perceptual_basis
+        - composition_basis
+        - evidence_class
+        - provenance
+        - capability
+        - active_criterion
+        - selected_option
+        - selection_basis
+        - artistic_priority
+        - dependencies
+        - songplan_handoff
+        - uncertainty
+  resolved_major_decisions:
+    per_decision: [id, selected_option, selection_basis, scope, trace_reference]
+  artistic_priority_handoffs:
+    per_handoff: [decision_id, surviving_options, why_no_supported_ranking_resolves_choice, owner_question, accepted_tradeoff]
+    allowed_status: [required, resolved_by_owner, pending_owner]
+  capability_declarations:
+    per_decision: [enumerate, filter, rank, rank_1_scope, rank_2_scope, actual_basis]
+    rule: No capability may be inferred from acceptance or from another capability.
+  guardrail_results:
+    per_guardrail: [guardrail_id, status, evidence, affected_decisions, resolution_or_block]
+    status_values: [PASS, WARNING, UNRESOLVED, NOT_APPLICABLE]
+  uncertainties:
+    per_item: [id, description, affected_decision, status, what_would_resolve_it]
+  songplan_candidate:
+    format: YAML
+    schema: SongPlanV2
+    schema_version: "2.0"
+    exact_schema_fields_only: true
+    explicit_events_required: true
+    no_notes_inferred_from_labels_energy_roles_or_style: true
+conditional_requirements:
+  - when: A guardrail reports WARNING or an artistic priority is pending.
+    require: status=BLOCKED or scope-limited READY_FOR_VALIDATION with the affected path explicitly withheld.
+  - when: rank is local_only / RANK-1.
+    require: task, target construct, criterion, evidence, scope, and non_claim.
+  - when: a harmonic label and voicing use reduced/extended/altered semantics.
+    require: explicit_semantics_reference and validation_result.
+  - when: a decision is unsupported by input package.
+    require: unresolved marker; no invented rule or claim.
+forbidden:
+  - Uncited musical knowledge represented as approved.
+  - An implicit global “best” option or composite score.
+  - Collapsing enumerate/filter/rank into one capability.
+  - Treating artistic preference as evidence or ranking.
+  - Treating genre observation as universal requirement.
+  - SongPlan fields not accepted by SongPlanV2.
+  - Silent harmonic label reinterpretation.
+  - A global quality score that masks guardrail failures.
+post_generation_validation:
+  - Validate SongPlanV2 using the declared engine/runtime.
+  - Run harmonic label/voicing audit and N3-P coverage check.
+  - Record validator/runtime identity and issues without rewriting the model trace.
+  - Record materialization separately from artistic listening.

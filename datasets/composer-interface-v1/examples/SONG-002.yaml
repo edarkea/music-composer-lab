@@ -1,0 +1,43 @@
+example_id: SONG-002
+example_kind: audited_composition
+epistemic_status: case_example_and_owner_artistic_preference_not_scientific_validation
+brief: Indie-dance; movimiento rítmico, con espacio para bajo/groove y desarrollo por secciones.
+major_decisions:
+  tempo_meter_form: 118 BPM, 4/4, 28 compases; threshold/pulse/lift/focal/afterglow (4/8/4/8/4).
+  harmony: A Dorian; ciclo Am9-D6-Am9-G6; afterglow G6-D6-Am9-Am9.
+  focal_hierarchy: Bajo percibido como protagonista de groove; lead más espaciado.
+  development: Células de bajo y actividad de groove cambian; percepciones alrededor de bars 5, 13 y 19 (19 es retorno local dentro de focal).
+  ending: Afterglow con Am9 prolongado.
+artistic_priority_handoffs: 8
+percussion:
+  n3p: {prospective: true, manual_drums_reminder: false, outcome: MINIMAL, owner_accepted: true}
+  realization: Kick, closed hat y rimshot escaso en relación estrecha con bajo.
+important_guardrails:
+  - Percusión mínima es decisión local; no superioridad general ni obligación de género.
+  - Lead menos activo no establece una regla universal de jerarquía.
+  - FM8 ambient/spatial es contexto de reproducción.
+  - Las alturas explícitas rigen la sonoridad materializada.
+songplan_result:
+  status: validated_and_materialized
+  schema: SongPlanV2
+  validation: PASS
+  midi: compositions/SONG-002/SONG-002.mid
+  harmonic_integrity: "LF-022 historical mismatch at bar 26: label D6; explicit D3-A3-E4; preserved without musical revision."
+owner_listening:
+  status: ACCEPTED_WITHOUT_MUSICAL_REVISION
+  findings: [bass_as_groove_protagonist, groove_development, minimal_percussion_accepted, lead_restraint_accepted, overall_coherence_positive]
+  scope: Artistic assessment of this composition and audition realization only.
+ranking:
+  enumerate: used
+  filter: used_with_scope
+  rank_1: 0
+  rank_2: 0
+provenance:
+  canonical_sources:
+    - compositions/SONG-002/SONG-002-decision-trace.md
+    - compositions/SONG-002/SONG-002.songplan.yaml
+    - compositions/SONG-002/SONG-002.validation.json
+    - compositions/SONG-002/SONG-002-process-audit.md
+    - compositions/SONG-002/SONG-002-listening-review.md
+    - research/integrations/composer-mvp-v1.1-percussion-architecture.md
+    - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md

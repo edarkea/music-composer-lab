@@ -1,0 +1,40 @@
+schema_id: composer-agent-input-v1
+language: es
+purpose: Paquete común inyectado a cada ejecución de composición externa.
+required:
+  run_id: Identificador externo de ejecución; no sustituye identificadores canónicos.
+  artistic_brief:
+    text: Brief provisto o aprobado por Project Owner.
+    priorities: Prioridades explícitas, con orden solo si el Owner lo declara.
+    hard_constraints: Restricciones explícitas del brief.
+    open_decisions: Decisiones intencionalmente delegadas o aún abiertas.
+    scope: Género, formato y condiciones de uso declarados.
+  interface_manifest: datasets/composer-interface-v1/manifest.yaml
+  general_knowledge: datasets/composer-interface-v1/knowledge/approved-composition-knowledge.yaml
+  genre_package:
+    reference: datasets/composer-interface-v1/genres/indie-dance.yaml
+    required_if_style_applies: true
+    rule: No fusionar sus observaciones con conocimiento general.
+  decision_schema: datasets/composer-interface-v1/decision-schema.yaml
+  guardrails: datasets/composer-interface-v1/guardrails.yaml
+  songplan_representation_contract:
+    source: integrations/music-engine/integration-contract.md
+    target: SongPlanV2
+    schema_version: "2.0"
+    runtime_validation: Requerida externamente antes de aceptar/materializar.
+optional:
+  reference_examples:
+    values: [SONG-001, SONG-002, SONG-003, SONG-004]
+    rule: Solo ilustran instancias; no son prescripciones ni plantillas a copiar.
+  owner_preferences: Preferencias expresas para esta canción; distinguirlas del conocimiento general.
+  materialization_resources: Mapeos/perfiles técnicos aprobados; no contienen decisiones compositivas implícitas.
+excluded_by_default:
+  - Corpus completo research/candidates/.
+  - Memoria del modelo usada como sustituto de fuente o de una decisión del Owner.
+  - Brief de SONG-005 hasta que el Owner lo defina.
+  - Datos de modelo/proveedor como variable de composición.
+input_integrity_rules:
+  - Exportación derivada no reemplaza autoridad canónica.
+  - Claims ausentes/ambiguos se reciben como unresolved.
+  - No agregar fuentes o reglas externas sin autorización explícita.
+  - Cada corrida comparativa debe recibir contenido idéntico para los campos comunes.
