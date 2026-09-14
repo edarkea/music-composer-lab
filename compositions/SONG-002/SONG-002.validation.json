@@ -1,0 +1,66 @@
+{
+  "song_id": "SONG-002",
+  "schema_version": "2.0",
+  "validator": "music-midi songplan validate compositions/SONG-002/SONG-002.songplan.yaml --json",
+  "status": "SUCCESS",
+  "valid": true,
+  "issues": [],
+  "engine_package": "music-engine 4.0.0",
+  "engine_commit": "71bbc73337da0d755618bdc796e19ce2e82cc3df",
+  "engine_wheel_sha256": "110E987A1E102C1CF3D29FEC1CCC68583459030F40748E10D66CE1F8E4819FE1",
+  "songplan_sha256": "2FD66DFA10DDD8BC393B0115205B8CF5C50122F6ABA64CAEB4EDE90EC3D30272",
+  "materialization": {
+    "status": "SUCCESS",
+    "command": "music-midi songplan render compositions/SONG-002/SONG-002.songplan.yaml --output compositions/SONG-002/SONG-002.mid --drum-map-dir compositions/SONG-001-R1/maps --drum-map-id song001_r1_steven_slate_map",
+    "midi_path": "compositions/SONG-002/SONG-002.mid",
+    "midi_sha256": "95BB7688830DD2996A08C9A9B1292931920B4A6A09C635FBB9D7CEA7F93E2066",
+    "map_path": "compositions/SONG-001-R1/maps/song001_r1_steven_slate_map.yaml",
+    "map_sha256": "3C8F366F7EA0EE870DFD8CCAAC563EBD8545D1F17AB87D49658AA058FAF8A1AB",
+    "midi_ticks_per_quarter": 960,
+    "midi_end_tick": 107520,
+    "expected_end_tick": 107520,
+    "note_on_counts_by_track_and_section": {
+      "lead": {
+        "threshold": 5,
+        "pulse": 24,
+        "lift": 12,
+        "focal": 25,
+        "afterglow": 7
+      },
+      "harmony": {
+        "threshold": 18,
+        "pulse": 36,
+        "lift": 18,
+        "focal": 36,
+        "afterglow": 17
+      },
+      "bass": {
+        "threshold": 8,
+        "pulse": 24,
+        "lift": 16,
+        "focal": 32,
+        "afterglow": 4
+      },
+      "drums": {
+        "threshold": 2,
+        "pulse": 24,
+        "lift": 17,
+        "focal": 36,
+        "afterglow": 5
+      }
+    },
+    "drum_pitch_counts": {
+      "36": 34,
+      "40": 6,
+      "44": 44
+    },
+    "drum_note_on_counts_by_section": {
+      "threshold": 2,
+      "pulse": 24,
+      "lift": 17,
+      "focal": 36,
+      "afterglow": 5
+    },
+    "wav_generated": false
+  }
+}
