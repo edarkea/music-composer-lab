@@ -1,0 +1,1752 @@
+schema_version: '2.0'
+name: SONG-003
+tempo: 132
+time_signature: 4/4
+tonic: E
+mode: mixolydian
+style: indie_dance_mvp
+arrangement:
+  sections:
+  - id: spark
+    start_bar: 1
+    bar_count: 4
+    energy: 0.3
+  - id: stride
+    start_bar: 5
+    bar_count: 6
+    energy: 0.58
+  - id: pocket
+    start_bar: 11
+    bar_count: 4
+    energy: 0.22
+  - id: lift
+    start_bar: 15
+    bar_count: 2
+    energy: 0.63
+  - id: arrival
+    start_bar: 17
+    bar_count: 6
+    energy: 0.9
+  - id: button
+    start_bar: 23
+    bar_count: 2
+    energy: 0.35
+  harmony_assignments:
+  - start_bar: 1
+    bar_count: 1
+    harmony: E major
+  - start_bar: 2
+    bar_count: 1
+    harmony: A major
+  - start_bar: 3
+    bar_count: 1
+    harmony: F# minor
+  - start_bar: 4
+    bar_count: 1
+    harmony: B minor
+  - start_bar: 5
+    bar_count: 1
+    harmony: D major
+  - start_bar: 6
+    bar_count: 1
+    harmony: A major
+  - start_bar: 7
+    bar_count: 1
+    harmony: E major
+  - start_bar: 8
+    bar_count: 1
+    harmony: B minor
+  - start_bar: 9
+    bar_count: 1
+    harmony: C# minor
+  - start_bar: 10
+    bar_count: 1
+    harmony: A major
+  - start_bar: 11
+    bar_count: 1
+    harmony: C# minor
+  - start_bar: 12
+    bar_count: 1
+    harmony: D major
+  - start_bar: 13
+    bar_count: 1
+    harmony: B minor
+  - start_bar: 14
+    bar_count: 1
+    harmony: A major
+  - start_bar: 15
+    bar_count: 1
+    harmony: C# minor
+  - start_bar: 16
+    bar_count: 1
+    harmony: D major
+  - start_bar: 17
+    bar_count: 1
+    harmony: E major
+  - start_bar: 18
+    bar_count: 1
+    harmony: D major
+  - start_bar: 19
+    bar_count: 1
+    harmony: A major
+  - start_bar: 20
+    bar_count: 1
+    harmony: B minor
+  - start_bar: 21
+    bar_count: 1
+    harmony: E major
+  - start_bar: 22
+    bar_count: 1
+    harmony: D major
+  - start_bar: 23
+    bar_count: 1
+    harmony: E major
+  - start_bar: 24
+    bar_count: 1
+    harmony: E major
+tracks:
+- id: lead
+  type: pitched
+  role: focal_lead
+  motifs:
+  - id: lead_spark
+    events:
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      pitches: &id001
+      - B4
+      velocity: 71
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      pitches: &id002
+      - D5
+      velocity: 68
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches: &id003
+      - F#5
+      velocity: 74
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      pitches: &id004
+      - E5
+      velocity: 69
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      pitches: &id005
+      - G#5
+      velocity: 72
+    - bar: 2
+      beat: '2'
+      duration: 1/4
+      pitches: &id006
+      - B5
+      velocity: 77
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      pitches: &id007
+      - A5
+      velocity: 73
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      pitches: &id008
+      - D5
+      velocity: 67
+    - bar: 3
+      beat: 3/2
+      duration: 1/8
+      pitches: *id001
+      velocity: 74
+    - bar: 3
+      beat: 5/2
+      duration: 1/8
+      pitches: *id002
+      velocity: 71
+    - bar: 3
+      beat: '3'
+      duration: 1/4
+      pitches: *id003
+      velocity: 77
+    - bar: 3
+      beat: 9/2
+      duration: 1/8
+      pitches: *id004
+      velocity: 72
+    - bar: 4
+      beat: '1'
+      duration: 1/8
+      pitches: *id005
+      velocity: 75
+    - bar: 4
+      beat: '2'
+      duration: 1/4
+      pitches: *id006
+      velocity: 80
+    - bar: 4
+      beat: 7/2
+      duration: 1/8
+      pitches: *id007
+      velocity: 76
+    - bar: 4
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - F#5
+      velocity: 70
+  - id: lead_stride
+    events:
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      pitches: *id001
+      velocity: 76
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      pitches: *id002
+      velocity: 73
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches: *id003
+      velocity: 79
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      pitches: *id004
+      velocity: 74
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      pitches: *id005
+      velocity: 77
+    - bar: 2
+      beat: '2'
+      duration: 1/4
+      pitches: *id006
+      velocity: 82
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      pitches: *id007
+      velocity: 78
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      pitches: *id008
+      velocity: 72
+    - bar: 3
+      beat: 3/2
+      duration: 1/8
+      pitches: *id001
+      velocity: 78
+    - bar: 3
+      beat: 5/2
+      duration: 1/8
+      pitches: *id002
+      velocity: 75
+    - bar: 3
+      beat: '3'
+      duration: 1/4
+      pitches: *id003
+      velocity: 81
+    - bar: 3
+      beat: 9/2
+      duration: 1/8
+      pitches: *id004
+      velocity: 76
+    - bar: 4
+      beat: '1'
+      duration: 1/8
+      pitches: *id005
+      velocity: 79
+    - bar: 4
+      beat: '2'
+      duration: 1/4
+      pitches: *id006
+      velocity: 84
+    - bar: 4
+      beat: 7/2
+      duration: 1/8
+      pitches: *id007
+      velocity: 80
+    - bar: 4
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - F#5
+      velocity: 74
+    - bar: 5
+      beat: 3/2
+      duration: 1/8
+      pitches: *id001
+      velocity: 80
+    - bar: 5
+      beat: 5/2
+      duration: 1/8
+      pitches: *id002
+      velocity: 77
+    - bar: 5
+      beat: '3'
+      duration: 1/4
+      pitches: *id003
+      velocity: 83
+    - bar: 5
+      beat: 9/2
+      duration: 1/8
+      pitches: *id004
+      velocity: 78
+    - bar: 6
+      beat: '1'
+      duration: 1/8
+      pitches: *id005
+      velocity: 81
+    - bar: 6
+      beat: '2'
+      duration: 1/4
+      pitches: *id006
+      velocity: 86
+    - bar: 6
+      beat: 7/2
+      duration: 1/8
+      pitches: *id007
+      velocity: 82
+    - bar: 6
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - B4
+      velocity: 76
+  - id: lead_pocket
+    events:
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      pitches:
+      - D5
+      velocity: 67
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - E5
+      velocity: 65
+    - bar: 2
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - G#5
+      velocity: 68
+    - bar: 2
+      beat: '3'
+      duration: 1/8
+      pitches:
+      - A5
+      velocity: 66
+    - bar: 3
+      beat: '1'
+      duration: 1/8
+      pitches:
+      - B4
+      velocity: 64
+    - bar: 3
+      beat: 5/2
+      duration: 1/8
+      pitches:
+      - D5
+      velocity: 64
+    - bar: 3
+      beat: '4'
+      duration: 1/8
+      pitches:
+      - F#5
+      velocity: 65
+    - bar: 4
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - E5
+      velocity: 62
+  - id: lead_lift
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/8
+      pitches:
+      - B4
+      velocity: 76
+    - bar: 1
+      beat: '2'
+      duration: 1/8
+      pitches:
+      - D5
+      velocity: 78
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - F#5
+      velocity: 82
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - G#5
+      velocity: 84
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      pitches:
+      - A5
+      velocity: 86
+    - bar: 2
+      beat: '2'
+      duration: 1/4
+      pitches:
+      - B5
+      velocity: 90
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      pitches:
+      - D5
+      velocity: 80
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - E5
+      velocity: 82
+  - id: lead_arrival
+    events:
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      pitches: *id001
+      velocity: 88
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      pitches: *id002
+      velocity: 85
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches: *id003
+      velocity: 91
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      pitches: *id004
+      velocity: 86
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      pitches: *id005
+      velocity: 89
+    - bar: 2
+      beat: '2'
+      duration: 1/4
+      pitches: *id006
+      velocity: 94
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      pitches: *id007
+      velocity: 90
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      pitches: *id008
+      velocity: 84
+    - bar: 3
+      beat: 3/2
+      duration: 1/8
+      pitches: *id001
+      velocity: 90
+    - bar: 3
+      beat: 5/2
+      duration: 1/8
+      pitches: *id002
+      velocity: 87
+    - bar: 3
+      beat: '3'
+      duration: 1/4
+      pitches: *id003
+      velocity: 93
+    - bar: 3
+      beat: 9/2
+      duration: 1/8
+      pitches: *id004
+      velocity: 88
+    - bar: 4
+      beat: '1'
+      duration: 1/8
+      pitches: *id005
+      velocity: 91
+    - bar: 4
+      beat: '2'
+      duration: 1/4
+      pitches: *id006
+      velocity: 96
+    - bar: 4
+      beat: 7/2
+      duration: 1/8
+      pitches: *id007
+      velocity: 92
+    - bar: 4
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - A5
+      velocity: 86
+    - bar: 5
+      beat: 3/2
+      duration: 1/8
+      pitches: *id001
+      velocity: 92
+    - bar: 5
+      beat: 5/2
+      duration: 1/8
+      pitches: *id002
+      velocity: 89
+    - bar: 5
+      beat: '3'
+      duration: 1/4
+      pitches: *id003
+      velocity: 95
+    - bar: 5
+      beat: 9/2
+      duration: 1/8
+      pitches: *id004
+      velocity: 90
+    - bar: 6
+      beat: '1'
+      duration: 1/8
+      pitches: *id005
+      velocity: 93
+    - bar: 6
+      beat: '2'
+      duration: 1/4
+      pitches: *id006
+      velocity: 98
+    - bar: 6
+      beat: 7/2
+      duration: 1/8
+      pitches: *id007
+      velocity: 94
+    - bar: 6
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - B5
+      velocity: 88
+  - id: lead_button
+    events:
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - B4
+      velocity: 68
+    - bar: 2
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - E5
+      velocity: 74
+  section_assignments:
+  - section_id: spark
+    motif_id: lead_spark
+  - section_id: stride
+    motif_id: lead_stride
+  - section_id: pocket
+    motif_id: lead_pocket
+  - section_id: lift
+    motif_id: lead_lift
+  - section_id: arrival
+    motif_id: lead_arrival
+  - section_id: button
+    motif_id: lead_button
+- id: harmony
+  type: pitched
+  role: harmonic_support
+  motifs:
+  - id: harmony_spark
+    events:
+    - bar: 1
+      beat: '1'
+      duration: '1'
+      pitches: &id011
+      - E3
+      - G#3
+      - B3
+      velocity: 54
+    - bar: 2
+      beat: '1'
+      duration: '1'
+      pitches: &id010
+      - A3
+      - C#4
+      - E4
+      velocity: 54
+    - bar: 3
+      beat: '1'
+      duration: '1'
+      pitches:
+      - F#3
+      - A3
+      - C#4
+      velocity: 54
+    - bar: 4
+      beat: '1'
+      duration: '1'
+      pitches: &id012
+      - B2
+      - D3
+      - F#3
+      velocity: 54
+  - id: harmony_stride
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/4
+      pitches: &id009
+      - D3
+      - F#3
+      - A3
+      velocity: 59
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches: *id009
+      velocity: 55
+    - bar: 2
+      beat: '1'
+      duration: 1/4
+      pitches: *id010
+      velocity: 59
+    - bar: 2
+      beat: '3'
+      duration: 1/4
+      pitches: *id010
+      velocity: 55
+    - bar: 3
+      beat: '1'
+      duration: 1/4
+      pitches: *id011
+      velocity: 59
+    - bar: 3
+      beat: '3'
+      duration: 1/4
+      pitches: *id011
+      velocity: 55
+    - bar: 4
+      beat: '1'
+      duration: 1/4
+      pitches: *id012
+      velocity: 59
+    - bar: 4
+      beat: '3'
+      duration: 1/4
+      pitches: *id012
+      velocity: 55
+    - bar: 5
+      beat: '1'
+      duration: 1/4
+      pitches: &id013
+      - C#3
+      - E3
+      - G#3
+      velocity: 59
+    - bar: 5
+      beat: '3'
+      duration: 1/4
+      pitches: *id013
+      velocity: 55
+    - bar: 6
+      beat: '1'
+      duration: 1/4
+      pitches: *id010
+      velocity: 59
+    - bar: 6
+      beat: '3'
+      duration: 1/4
+      pitches: *id010
+      velocity: 55
+  - id: harmony_pocket
+    events:
+    - bar: 1
+      beat: '1'
+      duration: '1'
+      pitches: *id013
+      velocity: 54
+    - bar: 2
+      beat: '1'
+      duration: '1'
+      pitches: *id009
+      velocity: 54
+    - bar: 3
+      beat: '1'
+      duration: '1'
+      pitches: *id012
+      velocity: 54
+    - bar: 4
+      beat: '1'
+      duration: '1'
+      pitches: *id010
+      velocity: 54
+  - id: harmony_lift
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/2
+      pitches: *id013
+      velocity: 64
+    - bar: 1
+      beat: '4'
+      duration: 1/4
+      pitches: *id013
+      velocity: 58
+    - bar: 2
+      beat: '1'
+      duration: 1/2
+      pitches: *id009
+      velocity: 64
+    - bar: 2
+      beat: '4'
+      duration: 1/4
+      pitches: *id009
+      velocity: 58
+  - id: harmony_arrival
+    events:
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      pitches: *id011
+      velocity: 68
+    - bar: 1
+      beat: 7/2
+      duration: 1/8
+      pitches: *id011
+      velocity: 63
+    - bar: 2
+      beat: 3/2
+      duration: 1/8
+      pitches: *id009
+      velocity: 68
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      pitches: *id009
+      velocity: 63
+    - bar: 3
+      beat: 3/2
+      duration: 1/8
+      pitches: *id010
+      velocity: 68
+    - bar: 3
+      beat: 7/2
+      duration: 1/8
+      pitches: *id010
+      velocity: 63
+    - bar: 4
+      beat: 3/2
+      duration: 1/8
+      pitches: *id012
+      velocity: 68
+    - bar: 4
+      beat: 7/2
+      duration: 1/8
+      pitches: *id012
+      velocity: 63
+    - bar: 5
+      beat: 3/2
+      duration: 1/8
+      pitches: *id011
+      velocity: 68
+    - bar: 5
+      beat: 7/2
+      duration: 1/8
+      pitches: *id011
+      velocity: 63
+    - bar: 6
+      beat: 3/2
+      duration: 1/8
+      pitches: *id009
+      velocity: 68
+    - bar: 6
+      beat: 7/2
+      duration: 1/8
+      pitches: *id009
+      velocity: 63
+  - id: harmony_button
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/2
+      pitches: *id011
+      velocity: 60
+    - bar: 2
+      beat: '1'
+      duration: 1/4
+      pitches: *id011
+      velocity: 50
+  section_assignments:
+  - section_id: spark
+    motif_id: harmony_spark
+  - section_id: stride
+    motif_id: harmony_stride
+  - section_id: pocket
+    motif_id: harmony_pocket
+  - section_id: lift
+    motif_id: harmony_lift
+  - section_id: arrival
+    motif_id: harmony_arrival
+  - section_id: button
+    motif_id: harmony_button
+- id: bass
+  type: pitched
+  role: support_bass
+  motifs:
+  - id: bass_spark
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/2
+      pitches:
+      - E2
+      velocity: 74
+    - bar: 1
+      beat: '4'
+      duration: 1/8
+      pitches:
+      - B2
+      velocity: 64
+    - bar: 2
+      beat: '1'
+      duration: 1/2
+      pitches:
+      - A2
+      velocity: 74
+    - bar: 2
+      beat: '4'
+      duration: 1/8
+      pitches:
+      - E3
+      velocity: 64
+    - bar: 3
+      beat: '1'
+      duration: 1/2
+      pitches:
+      - F#2
+      velocity: 74
+    - bar: 3
+      beat: '4'
+      duration: 1/8
+      pitches:
+      - C#3
+      velocity: 64
+    - bar: 4
+      beat: '1'
+      duration: 1/2
+      pitches:
+      - B1
+      velocity: 74
+    - bar: 4
+      beat: '4'
+      duration: 1/8
+      pitches:
+      - F#2
+      velocity: 64
+  - id: bass_stride
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - D2
+      velocity: 78
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - A2
+      velocity: 68
+    - bar: 2
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - A2
+      velocity: 78
+    - bar: 2
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - E3
+      velocity: 68
+    - bar: 3
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - E2
+      velocity: 78
+    - bar: 3
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - B2
+      velocity: 68
+    - bar: 4
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - B1
+      velocity: 78
+    - bar: 4
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - F#2
+      velocity: 68
+    - bar: 5
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - C#2
+      velocity: 78
+    - bar: 5
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - G#2
+      velocity: 68
+    - bar: 6
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - A2
+      velocity: 78
+    - bar: 6
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - E3
+      velocity: 68
+  - id: bass_pocket
+    events:
+    - bar: 1
+      beat: '1'
+      duration: '1'
+      pitches:
+      - C#2
+      velocity: 58
+    - bar: 2
+      beat: '1'
+      duration: '1'
+      pitches:
+      - D2
+      velocity: 58
+    - bar: 3
+      beat: '1'
+      duration: '1'
+      pitches:
+      - B1
+      velocity: 58
+    - bar: 4
+      beat: '1'
+      duration: '1'
+      pitches:
+      - A2
+      velocity: 58
+  - id: bass_lift
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/2
+      pitches:
+      - C#2
+      velocity: 82
+    - bar: 1
+      beat: '4'
+      duration: 1/8
+      pitches:
+      - G#2
+      velocity: 70
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - C#2
+      velocity: 74
+    - bar: 2
+      beat: '1'
+      duration: 1/2
+      pitches:
+      - D2
+      velocity: 82
+    - bar: 2
+      beat: '4'
+      duration: 1/8
+      pitches:
+      - A2
+      velocity: 70
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - D2
+      velocity: 74
+  - id: bass_arrival
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - E2
+      velocity: 83
+    - bar: 1
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - B2
+      velocity: 72
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - E2
+      velocity: 76
+    - bar: 2
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - D2
+      velocity: 83
+    - bar: 2
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - A2
+      velocity: 72
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - D2
+      velocity: 76
+    - bar: 3
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - A2
+      velocity: 83
+    - bar: 3
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - E3
+      velocity: 72
+    - bar: 3
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - A2
+      velocity: 76
+    - bar: 4
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - B1
+      velocity: 83
+    - bar: 4
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - F#2
+      velocity: 72
+    - bar: 4
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - B1
+      velocity: 76
+    - bar: 5
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - E2
+      velocity: 83
+    - bar: 5
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - B2
+      velocity: 72
+    - bar: 5
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - E2
+      velocity: 76
+    - bar: 6
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - D2
+      velocity: 83
+    - bar: 6
+      beat: '3'
+      duration: 1/4
+      pitches:
+      - A2
+      velocity: 72
+    - bar: 6
+      beat: 9/2
+      duration: 1/8
+      pitches:
+      - D2
+      velocity: 76
+  - id: bass_button
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - E2
+      velocity: 68
+    - bar: 2
+      beat: '1'
+      duration: 1/4
+      pitches:
+      - E2
+      velocity: 72
+  section_assignments:
+  - section_id: spark
+    motif_id: bass_spark
+  - section_id: stride
+    motif_id: bass_stride
+  - section_id: pocket
+    motif_id: bass_pocket
+  - section_id: lift
+    motif_id: bass_lift
+  - section_id: arrival
+    motif_id: bass_arrival
+  - section_id: button
+    motif_id: bass_button
+- id: drums
+  type: drums
+  role: full_percussion
+  motifs:
+  - id: drums_spark
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 68
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 47
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 68
+    - bar: 2
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 47
+    - bar: 3
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 68
+    - bar: 3
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 3
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 47
+    - bar: 4
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 68
+    - bar: 4
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 4
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 47
+  - id: drums_stride
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 65
+    - bar: 1
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 57
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 42
+    - bar: 1
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 1
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 54
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 2
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 65
+    - bar: 2
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 57
+    - bar: 2
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 42
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 50
+    - bar: 3
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 3
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 65
+    - bar: 3
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 57
+    - bar: 3
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 42
+    - bar: 3
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 3
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 54
+    - bar: 4
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 4
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 65
+    - bar: 4
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 57
+    - bar: 4
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 42
+    - bar: 4
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 4
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 50
+    - bar: 5
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 5
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 65
+    - bar: 5
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 57
+    - bar: 5
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 42
+    - bar: 5
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 5
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 54
+    - bar: 6
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 6
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 65
+    - bar: 6
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 57
+    - bar: 6
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 42
+    - bar: 6
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 6
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 50
+  - id: drums_pocket
+    events:
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 32
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 39
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 39
+    - bar: 3
+      beat: 5/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 32
+    - bar: 3
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 39
+    - bar: 4
+      beat: 9/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 39
+  - id: drums_lift
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 82
+    - bar: 1
+      beat: '3'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 78
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      drum_voice: snare
+      velocity: 60
+    - bar: 1
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 62
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 43
+    - bar: 1
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 53
+    - bar: 1
+      beat: 7/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 53
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 82
+    - bar: 2
+      beat: '3'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 78
+    - bar: 2
+      beat: 5/2
+      duration: 1/8
+      drum_voice: snare
+      velocity: 60
+    - bar: 2
+      beat: '4'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 62
+    - bar: 2
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 2
+      beat: 5/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 43
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 2
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 53
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 53
+  - id: drums_arrival
+    events:
+    - bar: 1
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 88
+    - bar: 1
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 1
+      beat: '3'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 70
+    - bar: 1
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 47
+    - bar: 1
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 1
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 59
+    - bar: 1
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 59
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 88
+    - bar: 2
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 2
+      beat: '3'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 70
+    - bar: 2
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 47
+    - bar: 2
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 2
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 59
+    - bar: 3
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 88
+    - bar: 3
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 3
+      beat: '3'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 70
+    - bar: 3
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 47
+    - bar: 3
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 3
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 59
+    - bar: 3
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 59
+    - bar: 4
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 88
+    - bar: 4
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 4
+      beat: '3'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 70
+    - bar: 4
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 47
+    - bar: 4
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 4
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 59
+    - bar: 5
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 88
+    - bar: 5
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 5
+      beat: '3'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 70
+    - bar: 5
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 47
+    - bar: 5
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 5
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 59
+    - bar: 5
+      beat: 9/2
+      duration: 1/8
+      drum_voice: open_hat
+      velocity: 59
+    - bar: 6
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 88
+    - bar: 6
+      beat: 5/2
+      duration: 1/8
+      drum_voice: kick
+      velocity: 76
+    - bar: 6
+      beat: '3'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 70
+    - bar: 6
+      beat: 3/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 47
+    - bar: 6
+      beat: 7/2
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 45
+    - bar: 6
+      beat: '2'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 59
+  - id: drums_button
+    events:
+    - bar: 1
+      beat: '4'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 44
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: kick
+      velocity: 74
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: snare
+      velocity: 66
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: closed_hat
+      velocity: 40
+    - bar: 2
+      beat: '1'
+      duration: 1/8
+      drum_voice: cowbell
+      velocity: 59
+  section_assignments:
+  - section_id: spark
+    motif_id: drums_spark
+  - section_id: stride
+    motif_id: drums_stride
+  - section_id: pocket
+    motif_id: drums_pocket
+  - section_id: lift
+    motif_id: drums_lift
+  - section_id: arrival
+    motif_id: drums_arrival
+  - section_id: button
+    motif_id: drums_button

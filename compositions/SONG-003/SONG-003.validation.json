@@ -1,0 +1,337 @@
+{
+  "song_id": "SONG-003",
+  "schema_version": "2.0",
+  "validator": "music-midi songplan validate compositions/SONG-003/SONG-003.songplan.yaml --json",
+  "status": "SUCCESS",
+  "valid": true,
+  "issues": [],
+  "engine_package": "music-engine 4.0.0",
+  "engine_commit": "71bbc73337da0d755618bdc796e19ce2e82cc3df",
+  "engine_wheel_sha256": "110E987A1E102C1CF3D29FEC1CCC68583459030F40748E10D66CE1F8E4819FE1",
+  "songplan_sha256": "EDA0A7282A715DFE1C8A6246C5E853278EBC720FF76C681E6BF45A0D1A00DA6F",
+  "harmonic_label_voicing_audit": {
+    "status": "PASS",
+    "entries_checked": 24,
+    "consistent": 24,
+    "pass_with_scope": 0,
+    "warnings": 0,
+    "rows": [
+      {
+        "bar": 1,
+        "section": "spark",
+        "label": "E major",
+        "pitches": [
+          "E3",
+          "G#3",
+          "B3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 2,
+        "section": "spark",
+        "label": "A major",
+        "pitches": [
+          "A3",
+          "C#4",
+          "E4"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 3,
+        "section": "spark",
+        "label": "F# minor",
+        "pitches": [
+          "F#3",
+          "A3",
+          "C#4"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 4,
+        "section": "spark",
+        "label": "B minor",
+        "pitches": [
+          "B2",
+          "D3",
+          "F#3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 5,
+        "section": "stride",
+        "label": "D major",
+        "pitches": [
+          "D3",
+          "F#3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 6,
+        "section": "stride",
+        "label": "A major",
+        "pitches": [
+          "A3",
+          "C#4",
+          "E4"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 7,
+        "section": "stride",
+        "label": "E major",
+        "pitches": [
+          "E3",
+          "G#3",
+          "B3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 8,
+        "section": "stride",
+        "label": "B minor",
+        "pitches": [
+          "B2",
+          "D3",
+          "F#3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 9,
+        "section": "stride",
+        "label": "C# minor",
+        "pitches": [
+          "C#3",
+          "E3",
+          "G#3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 10,
+        "section": "stride",
+        "label": "A major",
+        "pitches": [
+          "A3",
+          "C#4",
+          "E4"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 11,
+        "section": "pocket",
+        "label": "C# minor",
+        "pitches": [
+          "C#3",
+          "E3",
+          "G#3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 12,
+        "section": "pocket",
+        "label": "D major",
+        "pitches": [
+          "D3",
+          "F#3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 13,
+        "section": "pocket",
+        "label": "B minor",
+        "pitches": [
+          "B2",
+          "D3",
+          "F#3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 14,
+        "section": "pocket",
+        "label": "A major",
+        "pitches": [
+          "A3",
+          "C#4",
+          "E4"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 15,
+        "section": "lift",
+        "label": "C# minor",
+        "pitches": [
+          "C#3",
+          "E3",
+          "G#3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 16,
+        "section": "lift",
+        "label": "D major",
+        "pitches": [
+          "D3",
+          "F#3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 17,
+        "section": "arrival",
+        "label": "E major",
+        "pitches": [
+          "E3",
+          "G#3",
+          "B3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 18,
+        "section": "arrival",
+        "label": "D major",
+        "pitches": [
+          "D3",
+          "F#3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 19,
+        "section": "arrival",
+        "label": "A major",
+        "pitches": [
+          "A3",
+          "C#4",
+          "E4"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 20,
+        "section": "arrival",
+        "label": "B minor",
+        "pitches": [
+          "B2",
+          "D3",
+          "F#3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 21,
+        "section": "arrival",
+        "label": "E major",
+        "pitches": [
+          "E3",
+          "G#3",
+          "B3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 22,
+        "section": "arrival",
+        "label": "D major",
+        "pitches": [
+          "D3",
+          "F#3",
+          "A3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 23,
+        "section": "button",
+        "label": "E major",
+        "pitches": [
+          "E3",
+          "G#3",
+          "B3"
+        ],
+        "result": "CONSISTENT"
+      },
+      {
+        "bar": 24,
+        "section": "button",
+        "label": "E major",
+        "pitches": [
+          "E3",
+          "G#3",
+          "B3"
+        ],
+        "result": "CONSISTENT"
+      }
+    ]
+  },
+  "materialization": {
+    "status": "SUCCESS",
+    "command": "music-midi songplan render compositions/SONG-003/SONG-003.songplan.yaml --output compositions/SONG-003/SONG-003.mid --drum-map-dir compositions/SONG-001-R1/maps --drum-map-id song001_r1_steven_slate_map",
+    "midi_path": "compositions/SONG-003/SONG-003.mid",
+    "midi_sha256": "CAE4DC4D07BAF44BB1FA83108D7A2285419CC58A63AAF29365047F4315E4C70D",
+    "map_path": "compositions/SONG-001-R1/maps/song001_r1_steven_slate_map.yaml",
+    "map_sha256": "3C8F366F7EA0EE870DFD8CCAAC563EBD8545D1F17AB87D49658AA058FAF8A1AB",
+    "midi_ticks_per_quarter": 960,
+    "midi_end_tick": 89280,
+    "note_on_counts_by_track_and_section": {
+      "lead": {
+        "spark": 16,
+        "stride": 24,
+        "pocket": 8,
+        "lift": 8,
+        "arrival": 24,
+        "button": 2
+      },
+      "harmony": {
+        "spark": 12,
+        "stride": 36,
+        "pocket": 12,
+        "lift": 12,
+        "arrival": 36,
+        "button": 6
+      },
+      "bass": {
+        "spark": 8,
+        "stride": 12,
+        "pocket": 4,
+        "lift": 6,
+        "arrival": 18,
+        "button": 2
+      },
+      "drums": {
+        "spark": 12,
+        "stride": 36,
+        "pocket": 6,
+        "lift": 18,
+        "arrival": 39,
+        "button": 5
+      }
+    },
+    "drum_midi_pitch_counts": {
+      "36": 33,
+      "38": 17,
+      "44": 37,
+      "46": 8,
+      "50": 21
+    },
+    "wav_generated": false
+  }
+}
