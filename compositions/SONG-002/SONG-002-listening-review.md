@@ -47,6 +47,7 @@ La percepci?n de desarrollo cerca de los compases **5** y **13** coincide con lo
 | LF-019 | La variaci?n r?tmica conserva coherencia | El Owner escucha cambios r?tmicos sin p?rdida de identidad/coherencia en esta canci?n. |
 | LF-020 | La coherencia musical global resulta positiva | El Owner considera que la obra tiene ritmo y sentido musical. |
 | LF-021 | Hay car?cter ambiental/espacial con los timbres actuales | Observaci?n ligada a los presets/configuraci?n FM8 usados durante esta escucha; no se atribuye solo a la composici?n. |
+| LF-022 | Harmonic label / voicing inconsistency (inconsistencia etiqueta/voicing) | Hallazgo historico de integridad: en el compas 26, la etiqueta `D6` no coincide con las pitches explicitas `D3-A3-E4`; el SongPlan no deja semantica previa que explique esta realizacion reducida/extendida como intencional. |
 
 ## Evaluaci?n de Composer MVP v1.1
 
@@ -58,6 +59,12 @@ La percepci?n de desarrollo cerca de los compases **5** y **13** coincide con lo
 La correcci?n arquitect?nica introducida tras SONG-001 ha superado **una prueba prospectiva de composici?n y una escucha aceptada por el Owner**. Esto valida el procedimiento en este caso de uso, no una afirmaci?n general ni cient?fica.
 
 No se infiere que la percusi?n m?nima sea generalmente superior, que el bajo deba dominar indie-dance, que un lead escaso sea universalmente mejor ni que SONG-002 valide cient?ficamente Composer Knowledge. La discrepancia localizada entre etiqueta D6 y voicing del comp?s 26 queda como nota de consistencia del SongPlan; no se solicita ni se realiza una revisi?n de material en este cierre.
+
+**LF-022 queda como WARNING historico de consistencia descriptiva.** Las
+pitches explicitas del SongPlan/MIDI siguen siendo la autoridad para lo que
+suena; el rotulo `D6` no describe por si solo `D3-A3-E4`. El Owner ya acepto la
+realizacion auditiva y no pidio revision musical. Este hallazgo no modifica
+SONG-002 ni invalida la decision prospectiva N3-P.
 
 ## Estado y alcance
 

@@ -301,6 +301,49 @@ SongPlanV2, `schema_version: "2.0"`.
 6. jerarquía focal → roles, capas y densidad de tracks;
 7. restricciones cross-domain → filtros previos y registro de handoff.
 
+### Diagnostic guardrail - harmony label / explicit realization
+
+En la revision de SongPlan, comparar cada etiqueta de `harmony_assignments` con
+las pitches explicitas que realizan esa armonia en el mismo tramo temporal. La
+comprobacion se aplica a la pista o combinacion de pistas que el plan declara
+como realizacion armonica; no se deben mezclar automaticamente lead, bajo,
+notas no armonicas u otras capas para forzar una correspondencia.
+
+Las pitches explicitas son la autoridad para el sonido materializado. La
+etiqueta es una afirmacion analitica y de trazabilidad: no genera notas ni se
+debe reinterpretar silenciosamente cuando no describe la realizacion. Este
+guardrail es diagnostico humano, no un parser de cifrados ni una regla que
+exija incluir todos los tonos teoricos de cada acorde.
+
+Registrar para cada tramo o realizacion distinta: seccion/compases, etiqueta,
+pitches efectivamente especificadas en la realizacion relevante, resultado y,
+si aplica, la semantica intencional en la traza externa. Las inversiones,
+duplicaciones, omisiones y adiciones pueden ser validas; cuando cambian como se
+debe interpretar la relacion etiqueta/sonoridad, la intencion debe constar
+explicitamente antes del handoff. No inventar un umbral de tonos requeridos ni
+deducir la funcion a partir de una lista de alturas aislada.
+
+Fila de auditoria: `seccion/compases | etiqueta | track(s) y pitches | resultado | semantica/referencia a traza (si aplica)`.
+
+Resultados obligatorios en la auditoria previa a materializar:
+
+- **PASS - CONSISTENT:** la etiqueta describe razonablemente la realizacion
+  en el contexto indicado.
+- **PASS WITH SCOPE - DOCUMENTED REALIZATION:** una realizacion reducida,
+  extendida, invertida o duplicada se declara intencionalmente y su alcance o
+  semantica esta explicado en la traza.
+- **WARNING - UNEXPLAINED MISMATCH:** la etiqueta y la realizacion explicita
+  difieren en un aspecto relevante y no hay explicacion intencional trazable.
+  Registrar el tramo, la etiqueta, las pitches y la discrepancia. No resolverla
+  reinterpretando la etiqueta despues de ver el MIDI; mantener el warning hasta
+  que la decision de analisis/realizacion quede explicita.
+
+El resultado evalua consistencia de representacion, no calidad, funcion,
+adecuacion estilistica ni percepcion. Si la representacion no permite
+determinar que pistas son la realizacion relevante, registrar WARNING por
+ambiguedad y aclarar la interpretacion en la traza; no cambiar el schema de
+SongPlan ni `music-engine` para resolver este caso.
+
 ### Trace-only decisions — 5
 
 1. evidencia, clase epistemológica y alcance;
