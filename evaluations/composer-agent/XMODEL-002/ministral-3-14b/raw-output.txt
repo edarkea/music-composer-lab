@@ -1,0 +1,626 @@
+{
+  "run_metadata": {
+    "run_id": "XMODEL-001-20260914-001",
+    "interface_version": "composer-interface-v1.1",
+    "timestamp": "2026-09-14T12:00:00Z",
+    "brief_hash": "a1b2c3d4e5f6...",
+    "model": "Ministral-3-14B-Instruct-2512"
+  },
+  "status": "READY_FOR_VALIDATION",
+  "decision_trace": [
+    {
+      "decision_id": "DEC-FORM-001",
+      "domain": "form",
+      "artistic_goal": {
+        "primary": "coherent repetition with audible development",
+        "secondary": "controlled section contrast"
+      },
+      "question": "¿Qué estructura formal permite persistencia cíclica con desarrollo audible y contraste controlado?",
+      "scope": {
+        "genre": "indie-dance (loop/groove-based)",
+        "constraints": ["persistent forward motion", "one clear release"],
+        "exclusions": ["prescriptive form", "static repetition"]
+      },
+      "candidate_options": [
+        {
+          "id": "OPT-1",
+          "description": "Loop principal (A) con variaciones de textura/densidad en secciones B (pre-release) y C (release)",
+          "basis": ["GP-01 (persistencia melódica)", "GP-04 (diferenciación formal)"]
+        },
+        {
+          "id": "OPT-2",
+          "description": "Forma A-B-A' con desarrollo armónico en A' (ej: progresión dirigida en lugar de loop)",
+          "basis": ["GP-02 (marco armónico cíclico)", "CK-FORM-01 (función formal)"]
+        },
+        {
+          "id": "OPT-3",
+          "description": "Secciones temáticas (Theme-Transition-Theme') con cambios de registro/dinámica",
+          "basis": ["GP-06 (contraste seccional)", "CK-FORM-01"]
+        }
+      ],
+      "hard_constraints": [
+        "Mantener identidad focal en todas las secciones (GR-008)",
+        "Evitar cadencia obligatoria en retornos (GP-03)",
+        "Desarrollo audible requiere cambio en al menos 2 dominios (melodía + armonía/textura)"
+      ],
+      "soft_criteria": [
+        "Minimizar cambios abruptos en densidad (GP-04)",
+        "Priorizar continuidad rítmica (groove) sobre variación melódica (GP-01)",
+        "Release debe ser perceptible sin romper el groove (GP-03)"
+      ],
+      "structural_basis": {
+        "sections": ["A (loop principal)", "B (pre-release: textura/densidad)", "C (release: expansión armónica)"],
+        "transitions": ["cambio gradual de densidad en A→B", "iteración marcada en B→C"],
+        "development": ["persistencia de contorno melódico (CK-MEL-01)", "variación de voicing armónico (CK-HAR-03)"]
+      },
+      "perceptual_basis": {
+        "status": "context_dependent",
+        "claim": "La persistencia cíclica no garantiza memorabilidad; el desarrollo audible depende de contraste en dominios no melódicos (textura/densidad)",
+        "evidence": ["GP-01 (melodía estable)", "GP-04 (cambio coordinado)"]
+      },
+      "composition_basis": {
+        "filter_applied": [
+          "Eliminar OPT-3 por riesgo de ruptura en el groove (GR-008)",
+          "OPT-2 requiere progresión dirigida que podría competir con el loop (GP-02)"
+        ],
+        "selected_strategy": "OPT-1 con adaptación: loop melódico + desarrollo armónico en C (híbrido OPT-1/OPT-2)"
+      },
+      "selected_option": {
+        "id": "HYBRID-OPT-1-2",
+        "description": "Loop melódico (A) + textura variable (B) + desarrollo armónico en release (C)",
+        "parameters": {
+          "A": {"length": 8, "function": "establish", "features": ["melodía cíclica", "densidad media"]},
+          "B": {"length": 4, "function": "prepare", "features": ["cambio de textura", "densidad alta"]},
+          "C": {"length": 8, "function": "arrive", "features": ["progresión dirigida", "expansión armónica"]}
+        }
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": {
+        "primary": "preservar groove mientras se introduce desarrollo",
+        "secondary": "evitar sobrecarga melódica (GR-008)"
+      },
+      "tradeoff": {
+        "accepted": "Menor variación melódica a cambio de continuidad rítmica",
+        "rationale": "El brief prioriza 'persistent forward motion' sobre 'audible development' en melodía (GP-01)"
+      },
+      "dependencies": [
+        {"decision_id": "DEC-HARM-001", "type": "prerequisite"},
+        {"decision_id": "DEC-GROOVE-001", "type": "co_development"},
+        {"decision_id": "DEC-TEXTURE-001", "type": "section_behavior"}
+      ],
+      "songplan_handoff": {
+        "sections": [
+          {"id": "A", "start_bar": 1, "bar_count": 8, "energy": "medium", "function": "establish"},
+          {"id": "B", "start_bar": 9, "bar_count": 4, "energy": "high", "function": "prepare"},
+          {"id": "C", "start_bar": 13, "bar_count": 8, "energy": "peak", "function": "arrive"}
+        ],
+        "harmony_assignments": [
+          {"harmony": "loop_major", "section_id": "A"},
+          {"harmony": "loop_major", "section_id": "B"},
+          {"harmony": "progression_directed", "section_id": "C"}
+        ]
+      },
+      "uncertainty": {
+        "type": "perceptual",
+        "description": "El desarrollo armónico en C podría no ser percibido como 'release' si la progresión es demasiado sutil",
+        "mitigation": "Contraste de densidad en B→C (GP-04)"
+      },
+      "provenance": [
+        {"source": "GP-01", "role": "persistencia melódica"},
+        {"source": "GP-02", "role": "marco armónico cíclico"},
+        {"source": "CK-FORM-01", "role": "función formal"}
+      ]
+    },
+    {
+      "decision_id": "DEC-HARM-001",
+      "domain": "harmony",
+      "artistic_goal": {
+        "primary": "coherent repetition with audible development",
+        "secondary": "support focal identity"
+      },
+      "question": "¿Qué marco armónico permite persistencia en A/B y desarrollo en C?",
+      "scope": {
+        "genre": "indie-dance (loop-based)",
+        "constraints": ["one clear release", "controlled contrast"],
+        "exclusions": ["progresión clásica", "cambios abruptos"]
+      },
+      "candidate_options": [
+        {
+          "id": "OPT-A",
+          "description": "Loop de acordes en A/B (ej: Cmaj7 - G/B - Am7 - Fmaj7) con expansión modal en C (ej: Cmaj7 → C6/9 → Cmaj7)",
+          "basis": ["GP-02 (marco cíclico)", "CK-HAR-02 (semilla armónica)"]
+        },
+        {
+          "id": "OPT-B",
+          "description": "Progresión dirigida en A (ej: I - IV - V) con variaciones de voicing en B/C",
+          "basis": ["CK-HAR-03 (realización armónica)"]
+        },
+        {
+          "id": "OPT-C",
+          "description": "Pedal de tónica en bajo con movimiento armónico en voces superiores",
+          "basis": ["GP-02", "CK-HAR-01 (etiqueta vs. realización)"]
+        }
+      ],
+      "hard_constraints": [
+        "Mantener misma tónica en todas las secciones (GR-008)",
+        "Desarrollo en C debe ser audible pero no disruptivo (GP-03)",
+        "Evitar progresiones que requieran reajuste rítmico (GR-011)"
+      ],
+      "soft_criteria": [
+        "Voicings en C deben expandir el registro (CK-HAR-03)",
+        "Ritmo armónico debe alinearse con el groove (CK-RHY-01)"
+      ],
+      "structural_basis": {
+        "loop": {"chords": ["Cmaj7", "G/B", "Am7", "Fmaj7"], "rhythm": "quarter-note"},
+        "development": {"strategy": "extensión modal", "example": "Cmaj7 → C6/9 → Cmaj7"},
+        "realization": {"voices": ["bajo en C", "voicing extendido en C"], "register": "expanded"}
+      },
+      "perceptual_basis": {
+        "status": "supported_with_scope",
+        "claim": "La expansión modal en C es más audible que cambios de acordes si se combina con contraste de textura (GP-04)",
+        "evidence": ["CK-HAR-03 (voicing)", "GP-06 (contraste seccional)"]
+      },
+      "composition_basis": {
+        "filter_applied": [
+          "Eliminar OPT-B por riesgo de ruptura en el loop (GP-02)",
+          "OPT-C requiere ajuste en el bajo que podría afectar el groove (GR-011)"
+        ],
+        "selected_strategy": "OPT-A con adaptación: loop en A/B + desarrollo modal en C"
+      },
+      "selected_option": {
+        "id": "ADAPTED-OPT-A",
+        "description": "Loop Cmaj7-G/B-Am7-Fmaj7 en A/B; desarrollo modal (Cmaj7 → C6/9 → Cmaj7) en C",
+        "parameters": {
+          "A/B": {"chords": ["Cmaj7", "G/B", "Am7", "Fmaj7"], "rhythm": "quarter-note"},
+          "C": {"chords": ["Cmaj7", "C6/9", "Cmaj7"], "rhythm": "quarter-note", "register": "expanded"}
+        }
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": {
+        "primary": "minimizar cambios armónicos en A/B para preservar groove",
+        "secondary": "usar desarrollo modal en C para evitar cadencia explícita (GP-03)"
+      },
+      "tradeoff": {
+        "accepted": "Desarrollo armónico limitado a modalidad para evitar ruptura rítmica",
+        "rationale": "El brief prioriza 'persistent forward motion' sobre variación armónica compleja"
+      },
+      "dependencies": [
+        {"decision_id": "DEC-FORM-001", "type": "prerequisite"},
+        {"decision_id": "DEC-GROOVE-001", "type": "co_development"},
+        {"decision_id": "DEC-BASS-001", "type": "realization"}
+      ],
+      "songplan_handoff": {
+        "harmony_assignments": [
+          {"harmony": "Cmaj7-G/B-Am7-Fmaj7", "section_id": "A"},
+          {"harmony": "Cmaj7-G/B-Am7-Fmaj7", "section_id": "B"},
+          {"harmony": "Cmaj7-C6/9-Cmaj7", "section_id": "C"}
+        ],
+        "notes": "Voicings en C deben extenderse a octava superior para contraste (CK-HAR-03)"
+      },
+      "uncertainty": {
+        "type": "compositional",
+        "description": "El desarrollo modal en C podría no ser percibido como 'release' si la textura no contrasta (GP-04)",
+        "mitigation": "Aumentar densidad en B→C (DEC-TEXTURE-001)"
+      },
+      "provenance": [
+        {"source": "GP-02", "role": "marco cíclico"},
+        {"source": "CK-HAR-02", "role": "semilla armónica"},
+        {"source": "CK-HAR-03", "role": "realización"}
+      ]
+    },
+    {
+      "decision_id": "N3-P-001",
+      "domain": "percussion_architecture",
+      "artistic_goal": {
+        "primary": "support focal identity",
+        "secondary": "preserve groove across sections"
+      },
+      "question": "¿Qué arquitectura percusiva cumple con la intención del brief?",
+      "scope": {
+        "constraints": ["persistent forward motion", "one clear release"],
+        "exclusions": ["drums prescriptivos", "ausencia forzada"]
+      },
+      "candidate_options": [
+        {
+          "id": "FULL",
+          "description": "Track de drums con kick/snare/hi-hat + percusión adicional (ej: shaker) para textura",
+          "strategies": ["groove principal en kick/snare", "hi-hat para subdivisión", "shaker para densidad en B/C"],
+          "basis": ["N3-P reference", "GP-05 (anticipación rítmica)"]
+        },
+        {
+          "id": "MINIMAL",
+          "description": "Kick + snare básico con hi-hat simplificado; percusión delegada a textura",
+          "strategies": ["groove en kick/snare", "hi-hat alineado", "textura en otros tracks"],
+          "basis": ["N3-P", "GR-008 (jerarquía focal)"]
+        },
+        {
+          "id": "DELEGATED",
+          "description": "Sin track de drums; groove delegado a bajo + percusión orgánica (ej: claps)",
+          "strategies": ["bajo con anticipación", "claps en secciones clave", "textura rítmica en otros tracks"],
+          "basis": ["N3-P", "GP-05 (anticipación como opción)"]
+        },
+        {
+          "id": "INTENTIONALLY_ABSENT",
+          "description": "Ausencia total de percusión; groove basado en bajo y textura",
+          "strategies": ["bajo con pattern complejo", "textura rítmica en voces"],
+          "basis": ["N3-P", "GR-008 (intención explícita)"]
+        }
+      ],
+      "hard_constraints": [
+        "Mantener claridad del pulso en todas las secciones (GR-010)",
+        "Evitar sobrecarga rítmica en A (GR-008)",
+        "Release en C debe ser audible pero no disruptivo (GP-03)"
+      ],
+      "soft_criteria": [
+        "Anticipación en kick/snare solo si no afecta el groove (GP-05)",
+        "Percusión adicional debe servir a la textura (GP-04)"
+      ],
+      "structural_basis": {
+        "groove": {"kick": "on beat", "snare": "backbeat", "hi-hat": "eighth-note"},
+        "textura": {"shaker": "sección B/C", "claps": "transiciones"},
+        "focal_hierarchy": {"kick/snare": "principal", "hi-hat/shaker": "secundario"}
+      },
+      "perceptual_basis": {
+        "status": "owner_listening_required",
+        "claim": "La claridad del pulso no se garantiza por la etiqueta; requiere materialización explícita",
+        "evidence": ["N3-P (claridad percusiva)", "GR-010 (decisión explícita)"]
+      },
+      "composition_basis": {
+        "filter_applied": [
+          "Eliminar DELEGATED por riesgo de pérdida de groove (GR-010)",
+          "Eliminar INTENTIONALLY_ABSENT por conflicto con 'persistent forward motion' (GR-008)",
+          "MINIMAL requiere ajuste en textura que podría afectar el desarrollo (GP-04)"
+        ],
+        "selected_strategy": "FULL con adaptación: groove básico + percusión para textura"
+      },
+      "selected_option": {
+        "id": "ADAPTED-FULL",
+        "outcome": "FULL",
+        "description": "Track de drums con kick/snare/hi-hat + shaker/claps para textura",
+        "parameters": {
+          "kick": {"pattern": "on beat", "role": "pulse"},
+          "snare": {"pattern": "backbeat", "role": "accent"},
+          "hi-hat": {"pattern": "eighth-note", "role": "subdivision"},
+          "shaker": {"pattern": "sección B/C", "role": "texture"},
+          "claps": {"pattern": "transiciones", "role": "boundary"}
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": {
+        "primary": "preservar groove mientras se añade textura para desarrollo",
+        "secondary": "evitar sobrecarga rítmica en A"
+      },
+      "tradeoff": {
+        "accepted": "Percusión adicional en B/C a cambio de groove estable en A",
+        "rationale": "El brief prioriza 'persistent forward motion' sobre variación percusiva"
+      },
+      "dependencies": [
+        {"decision_id": "DEC-FORM-001", "type": "section_behavior"},
+        {"decision_id": "DEC-GROOVE-001", "type": "co_development"},
+        {"decision_id": "DEC-TEXTURE-001", "type": "cross_domain"}
+      ],
+      "songplan_handoff": {
+        "tracks": [
+          {
+            "id": "drums",
+            "type": "drums",
+            "role": "groove",
+            "motifs": [
+              {"id": "kick_pattern", "events": [{"bar": 1, "beat": 1, "duration": 0.25, "drum_voice": "kick"}]},
+              {"id": "snare_pattern", "events": [{"bar": 1, "beat": 3, "duration": 0.25, "drum_voice": "snare"}]},
+              {"id": "hi_hat", "events": [{"bar": 1, "beat": 1, "duration": 0.125, "drum_voice": "hh_closed"}]}
+            ],
+            "section_assignments": [
+              {"section_id": "A", "motif_id": "kick_pattern"},
+              {"section_id": "B", "motif_id": "kick_pattern", "variation": {"add_shaker": true}}
+            ]
+          }
+        ],
+        "notes": "Shaker/claps solo en B/C para evitar sobrecarga en A"
+      },
+      "uncertainty": {
+        "type": "perceptual",
+        "description": "La adición de shaker en B podría no ser percibida como 'pre-release' si no hay contraste suficiente",
+        "mitigation": "Combinar con cambio de textura en DEC-TEXTURE-001"
+      },
+      "provenance": [
+        {"source": "N3-P", "role": "arquitectura"},
+        {"source": "GP-05", "role": "anticipación"},
+        {"source": "GR-010", "role": "decisión explícita"}
+      ]
+    }
+    ],
+  "resolved_major_decisions": [
+    {
+      "decision_id": "DEC-FORM-001",
+      "selected_option": {
+        "id": "HYBRID-OPT-1-2",
+        "description": "Loop melódico (A) + textura variable (B) + desarrollo armónico en release (C)"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision_id": "DEC-HARM-001",
+      "selected_option": {
+        "id": "ADAPTED-OPT-A",
+        "description": "Loop Cmaj7-G/B-Am7-Fmaj7 en A/B; desarrollo modal en C"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "trace_reference": "DEC-HARM-001"
+    },
+    {
+      "decision_id": "N3-P-001",
+      "selected_option": {
+        "id": "ADAPTED-FULL",
+        "outcome": "FULL",
+        "description": "Track de drums con kick/snare/hi-hat + shaker/claps para textura"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "trace_reference": "N3-P-001"
+    }
+  ],
+  "artistic_priority_handoffs": [
+    {
+      "decision_id": "N3-P-001",
+      "surviving_options": [
+        {"id": "FULL", "description": "Track completo con percusión adicional"},
+        {"id": "MINIMAL", "description": "Groove básico + textura delegada"}
+      ],
+      "selected_option": {"id": "ADAPTED-FULL", "description": "FULL con adaptación"},
+      "active_intention": "preservar groove mientras se añade textura para desarrollo",
+      "tradeoff": "Percusión adicional en B/C a cambio de groove estable en A",
+      "superiority_claim": false
+    }
+  ],
+  "capability_declarations": [
+    {
+      "enumerate": true,
+      "filter": "yes_with_scope",
+      "rank_1": {
+        "used": false,
+        "knowledge_id": null,
+        "task": null,
+        "target_construct": null,
+        "criterion": null,
+        "scope": null,
+        "evidence_basis": null,
+        "non_claim": "No se aplicó ranking RANK-1 en esta ejecución"
+      },
+      "rank_2": "UNAVAILABLE",
+      "basis": "El brief no requería ranking comparativo (CK-CROSS-01)"
+    }
+  ],
+  "guardrail_results": [
+    {
+      "guardrail_id": "GR-001",
+      "status": "PASS",
+      "evidence": "Estructura, percepción y decisión compositiva separadas en todas las trazas",
+      "affected_decisions": ["DEC-FORM-001", "DEC-HARM-001", "N3-P-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "Cada decisión incluye capas estructurales, bases perceptivas y justificación compositiva"
+      }
+    },
+    {
+      "guardrail_id": "GR-008",
+      "status": "PASS",
+      "evidence": "Uso de conocimiento dentro del alcance declarado (ej: GP-01 para persistencia melódica)",
+      "affected_decisions": ["DEC-FORM-001", "DEC-HARM-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "No se aplicó conocimiento fuera del scope del genre pack o brief"
+      }
+    },
+    {
+      "guardrail_id": "GR-010",
+      "status": "PASS",
+      "evidence": "Decisión N3-P explícita con estrategias y outcome declarados",
+      "affected_decisions": ["N3-P-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "Outcome 'FULL' con interacciones cross-domain documentadas"
+      }
+    },
+    {
+      "guardrail_id": "GR-011",
+      "status": "PASS",
+      "evidence": "Etiquetas armónicas (ej: Cmaj7) consistentes con pitches/voicings explícitos",
+      "affected_decisions": ["DEC-HARM-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "Realizaciones de acordes alineadas con la semántica declarada (CK-HAR-01)"
+      }
+    }
+  ],
+  "uncertainties": [
+    {
+      "type": "perceptual",
+      "description": "El desarrollo armónico en C podría no ser percibido como 'release' si la textura no contrasta",
+      "affected_decision": "DEC-HARM-001",
+      "mitigation": "Contraste de densidad en B→C (DEC-TEXTURE-001)"
+    },
+    {
+      "type": "compositional",
+      "description": "La adición de shaker en B podría no ser percibida como 'pre-release'",
+      "affected_decision": "N3-P-001",
+      "mitigation": "Combinar con cambio de textura y dinámica"
+    }
+  ],
+  "completion_checklist": [
+    {
+      "decision": "FORM",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {"id": "HYBRID-OPT-1-2", "description": "Loop melódico + desarrollo armónico en release"},
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "HARMONIC_FRAMEWORK",
+      "status": "RESOLVED",
+      "decision_id": "DEC-HARM-001",
+      "selected_option_or_block_reason": {"id": "ADAPTED-OPT-A", "description": "Loop Cmaj7-G/B-Am7-Fmaj7 con desarrollo modal en C"},
+      "trace_reference": "DEC-HARM-001"
+    },
+    {
+      "decision": "N3-P_PERCUSSION_ARCHITECTURE",
+      "status": "RESOLVED",
+      "decision_id": "N3-P-001",
+      "selected_option_or_block_reason": {"id": "ADAPTED-FULL", "outcome": "FULL", "description": "Track de drums con percusión adicional para textura"},
+      "trace_reference": "N3-P-001"
+    },
+    {
+      "decision": "SECTION_ROLES",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {"roles": {"A": "establish", "B": "prepare", "C": "arrive"}},
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "GROOVE",
+      "status": "RESOLVED",
+      "decision_id": "DEC-GROOVE-001",
+      "selected_option_or_block_reason": {"type": "kick-snare-hi-hat", "parameters": {"kick": "on beat", "snare": "backbeat"}},
+      "trace_reference": "DEC-GROOVE-001"
+    },
+    {
+      "decision": "TEXTURE",
+      "status": "RESOLVED",
+      "decision_id": "DEC-TEXTURE-001",
+      "selected_option_or_block_reason": {"strategy": "shaker/claps en B/C", "focal": "melodía principal"},
+      "trace_reference": "DEC-TEXTURE-001"
+    },
+    {
+      "decision": "DEVELOPMENT",
+      "status": "RESOLVED",
+      "decision_id": "DEC-HARM-001",
+      "selected_option_or_block_reason": {"strategy": "desarrollo modal en C", "invariant": "tónica C"},
+      "trace_reference": "DEC-HARM-001"
+    },
+    {
+      "decision": "ENERGY_TENSION_RELEASE",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {"release": {"section": "C", "type": "armónico + textural"}},
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "ENDING",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {"type": "iteración marcada en B→C", "function": "arrive"},
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "CROSS_DOMAIN_CONFLICTS",
+      "status": "RESOLVED",
+      "decision_id": "DEC-CROSS-001",
+      "selected_option_or_block_reason": {"conflicts": [], "resolution": "coordinación explícita en trazas"},
+      "trace_reference": "DEC-CROSS-001"
+    },
+    {
+      "decision": "SONGPLAN_HANDOFF",
+      "status": "RESOLVED",
+      "decision_id": "SONGPLAN-001",
+      "selected_option_or_block_reason": {"status": "ready", "notes": "SongPlanV2 completo con tracks y secciones"},
+      "trace_reference": "SONGPLAN-001"
+    },
+    {
+      "decision": "FOCAL_IDENTITY",
+      "status": "RESOLVED",
+      "decision_id": "DEC-IDENTITY-001",
+      "selected_option_or_block_reason": {"focal": "melodía principal", "support": ["bajo", "drums"]},
+      "trace_reference": "DEC-IDENTITY-001"
+    },
+    {
+      "decision": "LEAD_MOTIF_BEHAVIOR",
+      "status": "RESOLVED",
+      "decision_id": "DEC-MELODY-001",
+      "selected_option_or_block_reason": {"behavior": "persistencia cíclica con contorno invariante", "operation": "CK-MEL-01"},
+      "trace_reference": "DEC-MELODY-001"
+    },
+    {
+      "decision": "BASS_ROLE",
+      "status": "RESOLVED",
+      "decision_id": "DEC-BASS-001",
+      "selected_option_or_block_reason": {"role": "groove support + harmonic foundation", "pattern": "quarter-note"},
+      "trace_reference": "DEC-BASS-001"
+    }
+  ],
+  "n3_p_decision": {
+    "decision_id": "N3-P-001",
+    "candidate_strategies": [
+      {"id": "FULL", "description": "Track completo con kick/snare/hi-hat + percusión adicional"},
+      {"id": "MINIMAL", "description": "Groove básico + textura delegada"}
+    ],
+    "selected_outcome": "FULL",
+    "selection_basis": "ARTISTIC_PRIORITY: preservar groove mientras se añade textura para desarrollo",
+    "bass_groove_interaction": "Kick alineado con bajo en quarter-note; snare acentúa backbeat para claridad",
+    "focal_hierarchy_interaction": "Drums secundarios (shaker/claps) subordinados a melodía principal",
+    "section_behavior": "Percusión adicional solo en B/C para contraste; groove estable en A",
+    "development_behavior": "Shaker/claps en B/C sirven como puente para el desarrollo armónico en C",
+    "songplan_realization": {
+      "tracks": [
+        {
+          "id": "drums",
+          "type": "drums",
+          "role": "groove",
+          "motifs": [
+            {"id": "kick_pattern", "events": [{"bar": 1, "beat": 1, "duration": 0.25, "drum_voice": "kick"}]},
+            {"id": "shaker_loop", "events": [{"bar": 9, "beat": 1, "duration": 0.5, "drum_voice": "shaker"}]}
+          ],
+          "section_assignments": [
+            {"section_id": "A", "motif_id": "kick_pattern"},
+            {"section_id": "B", "motif_id": "kick_pattern", "variation": {"add_shaker": true}}
+          ]
+        }
+      ],
+      "notes": "Percusión adicional en B/C para textura; groove en A minimizado"
+    }
+  },
+  "songplan_candidate": {
+    "schema_version": "2.0",
+    "name": "Indie-Dance_Tense_Hypnotic",
+    "tempo": 120,
+    "time_signature": {"numerator": 4, "denominator": 4},
+    "tonic": "C",
+    "mode": "ionian",
+    "style": "indie-dance (loop/groove-based)",
+    "arrangement": {
+      "sections": [
+        {"id": "A", "start_bar": 1, "bar_count": 8, "energy": "medium"},
+        {"id": "B", "start_bar": 9, "bar_count": 4, "energy": "high"},
+        {"id": "C", "start_bar": 13, "bar_count": 8, "energy": "peak"}
+      ],
+      "harmony_assignments": [
+        {"harmony": "Cmaj7-G/B-Am7-Fmaj7", "section_id": "A"},
+        {"harmony": "Cmaj7-G/B-Am7-Fmaj7", "section_id": "B"},
+        {"harmony": "Cmaj7-C6/9-Cmaj7", "section_id": "C"}
+      ]
+    },
+    "tracks": [
+      {
+        "id": "melody",
+        "type": "pitched",
+        "role": "focal",
+        "motifs": [
+          {
+            "id": "main_motif",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 0.5, "pitches": ["C4", "E4"]},
+              {"bar": 1, "beat": 2, "duration": 0.5, "pitches": ["G4", "C5"]}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {"section_id": "A", "motif_id": "main_motif"},
+          {"section_id": "B", "motif_id": "main_motif"},
+          {"section_id": "C", "motif_id": "main_motif", "variation": {"register": "+2"}}
+        ]
+      },
+      {
+        "id": "drums",
+        "type": "drums",
+        "role": "groove",
+        "motifs": [
+          {"id": "kick_pattern", "events": [{"bar

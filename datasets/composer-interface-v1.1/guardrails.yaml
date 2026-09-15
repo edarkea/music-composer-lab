@@ -1,0 +1,87 @@
+guardrail_set_id: composer-interface-guardrails-v1.1
+language: es
+guardrails:
+  - id: GR-001
+    purpose: Separar estructura, percepción y decisión compositiva.
+    when_applicable: Toda justificación que conecte estructura y efecto musical.
+    PASS: Cada capa queda distinguida y cada puente tiene estado y alcance.
+    WARNING: Efecto perceptivo presentado como hipótesis sin etiquetarlo.
+    BLOCK: Un claim no sustentado determina una decisión o se presenta como ley.
+    what_it_does_not_mean: No prohíbe elegir material por intención artística.
+  - id: GR-002
+    purpose: Mantener hook, prominencia y memorabilidad como constructos distintos.
+    when_applicable: Se mencionan estos constructos o se usa uno para inferir otro.
+    PASS: No se intercambian como proxies validados.
+    WARNING: Proxy sugerido sin evidencia del paquete.
+    BLOCK: Decisión depende de la equivalencia no sustentada.
+    what_it_does_not_mean: No prohíbe decidir crear un hook como intención.
+  - id: GR-003
+    purpose: Evitar reducir tensión y release a una variable única.
+    when_applicable: Se explica o planifica tensión/release.
+    PASS: Dimensiones e intención se declaran sin ley causal inventada.
+    WARNING: Se usa dimensión ambigua o efecto no establecido.
+    BLOCK: La decisión depende de una causalidad no suministrada.
+    what_it_does_not_mean: No exige cuantificar tensión.
+  - id: GR-004
+    purpose: Separar utilidad diagnóstica de selección generativa.
+    when_applicable: Una distinción o diagnóstico se usa para escoger operación.
+    PASS: La selección tiene base independiente trazable o ARTISTIC_PRIORITY.
+    WARNING: Diagnóstico se presenta como recomendación.
+    BLOCK: Diagnóstico sin soporte se declara regla obligatoria.
+    what_it_does_not_mean: No impide usar diagnósticos para describir.
+  - id: GR-005
+    purpose: No inferir equivalencia de ausencia de evidencia de superioridad.
+    when_applicable: Se comparan opciones sin ranking autorizado.
+    PASS: No se afirma equivalencia; se aplica ARTISTIC_PRIORITY.
+    WARNING: Equivalencia insinuada.
+    BLOCK: Se declara igualdad o superioridad sin soporte.
+    what_it_does_not_mean: No impide seleccionar una opción por prioridad artística.
+  - id: GR-006
+    purpose: Mantener explícita la transferencia no validada.
+    when_applicable: Se traslada una relación entre tareas, estilos o contextos.
+    PASS: Alcance declarado o transferencia marcada sin validar.
+    WARNING: Transferencia fuera del alcance sin marcar.
+    BLOCK: Transferencia no validada se usa como hecho decisivo.
+    what_it_does_not_mean: No demuestra que los dominios sean independientes.
+  - id: GR-007
+    purpose: Evitar usar constructos adyacentes como proxies por defecto.
+    when_applicable: Una variable representa otra en una afirmación o decisión.
+    PASS: Medida/constructo coincide con la afirmación o el límite se declara.
+    WARNING: Proxy no validado presentado como indicio.
+    BLOCK: Decisión depende del proxy como hecho.
+    what_it_does_not_mean: No prohíbe describir variables relacionadas.
+  - id: GR-008
+    purpose: Respetar el alcance de conocimiento y brief.
+    when_applicable: Se aplica conocimiento general, de género o externo.
+    PASS: Uso dentro del alcance declarado.
+    WARNING: Alcance insuficiente o incierto.
+    BLOCK: Restricción/claim externo gobierna la decisión sin autorización.
+    what_it_does_not_mean: No prohíbe crear material dentro de la libertad del brief.
+  - id: GR-009
+    purpose: Separar enumeración, filtrado y ranking autorizado.
+    when_applicable: Se comparan, eliminan, puntúan u ordenan opciones.
+    PASS: Filtros tienen base y todo ranking satisface contrato RANK-1.
+    WARNING: Orden implícito no explicado.
+    BLOCK: RANK-2, rank_1_scope inventado o superioridad no autorizada.
+    what_it_does_not_mean: No prohíbe seleccionar por ARTISTIC_PRIORITY.
+  - id: GR-010
+    purpose: Exigir decisión prospectiva y explícita de arquitectura N3-P.
+    when_applicable: Toda composición.
+    PASS: decision_id, estrategias, outcome, base e interacciones requeridas explícitas.
+    WARNING: Outcome presente pero falta cualquier elemento obligatorio.
+    BLOCK: Falta decisión N3-P explícita antes de SongPlan handoff.
+    what_it_does_not_mean: FULL no requiere subdivisión continua; no obliga a usar drums.
+  - id: GR-011
+    purpose: Detectar desacuerdo no explicado entre etiqueta armónica y pitches/voicing explícito.
+    when_applicable: Una etiqueta armónica se asocia a contenido de pitch materializado.
+    PASS: CONSISTENT, o realización reducida/extendida/invertida/doblada con semántica explícita.
+    WARNING: UNEXPLAINED_LABEL_PITCH_MISMATCH; detener solo la ruta afectada.
+    BLOCK: El handoff afectado queda bloqueado mientras siga el WARNING.
+    what_it_does_not_mean: No prohíbe modos, acordes, omisiones, adiciones, inversiones ni voicings no textuales; no exige todos los tonos teóricos.
+  - id: GR-012
+    purpose: Impedir completar desde memoria huecos de evidencia, Owner o interfaz.
+    when_applicable: Falta/ambigüedad de claim, preferencia, decisión o sintaxis.
+    PASS: Ausencia indicada como incertidumbre/bloqueo o resuelta por ARTISTIC_PRIORITY dentro del mandato.
+    WARNING: Afirmación sin fuente o preferencia atribuida.
+    BLOCK: Se inventa evidencia, regla, preferencia del Owner o semántica de interfaz.
+    what_it_does_not_mean: No restringe generar material musical como candidato compositivo.

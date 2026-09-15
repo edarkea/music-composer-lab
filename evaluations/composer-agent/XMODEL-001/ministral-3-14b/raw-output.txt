@@ -1,0 +1,200 @@
+﻿**OUTPUT CONTRACT FULFILLMENT**
+*(XMODEL-001 | `composer-agent-output-v1` | `es`)*
+
+---
+### **1. METADATA**
+```yaml
+run_id: XMODEL-001
+status: BLOCKED
+```
+
+---
+### **2. DECISION_TRACE**
+*(Excerpt; full trace available under `resolved_major_decisions` and `uncer[6D[K
+`uncertainties`)*
+
+#### **Example Decision Record (Domain: Harmonic Framework)**
+```yaml
+decision_id: HARMONIC-001
+version: 1.0
+level: MAJOR
+domain: harmonic_framework
+artistic_goal: "Establecer un marco arm├│nico que soporte tensi├│n, restricci[9D[K
+restricci├│n y acumulaci├│n gradual."
+question: "┬┐Qu├® modo y progresi├│n de acordes (sin prescribir secuencia exac[4D[K
+exacta) mejoran la identidad focal y el desarrollo coherente?"
+scope: "Toda la canci├│n"
+candidate_options:
+  - "Modo menor natural (Aeolian) con progresi├│n de 5┬░ descendente (ej. IÔÇôV[3D[K
+IÔÇôVÔÇôviÔÇôIV) y cromatismo en la subdominante."
+  - "Modo frigio (con b2) con progresi├│n de IVÔÇôIÔÇôviÔÇôIII y alteraciones en l[1D[K
+la dominante."
+  - "Modo lidio (con #4) con progresi├│n de IÔÇôIVÔÇôVÔÇôvi y armon├¡as extendidas [K
+(7┬░, 9┬░)."
+hard_constraints:
+  - "Evitar progresiones clich├® (ej. IÔÇôVÔÇôviÔÇôIV en pop)."
+  - "Preservar la identidad tonal a trav├®s del desarrollo."
+soft_criteria:
+  - "Priorizar disonancias controladas (ej. 7┬░ menor en la dominante) para [K
+tensi├│n."
+  - "Evitar modulaci├│n abrupta."
+structural_basis: "Secci├│n A (verso) vs. B (pre-coro) vs. C (coro)."
+perceptual_basis: "Hipnosis = repetici├│n con variaci├│n sutil en la armon├¡a.[8D[K
+armon├¡a."
+composition_basis: "Genre pack: *indie-dance* sugiere armon├¡as densas pero [K
+con espacio para respiro."
+evidence_class: "Observaciones de SONG-002 (LF-022) sobre acumulaci├│n arm├│n[5D[K
+arm├│nica."
+provenance: ["genre_package:indie-dance.yaml#HARMONY", "general_knowledge.y[20D[K
+"general_knowledge.yaml#TENSION"]
+capability: "ENUMERATE"
+active_criterion: "Ninguna opci├│n cumple *todos* los soft criteria sin trad[4D[K
+tradeoff."
+selected_option: **UNRESOLVED**
+selection_basis: **N/A**
+artistic_priority: "Priorizar opci├│n que maximice *coherencia de identidad*[10D[K
+identidad* sobre disonancia."
+dependencies:
+  - "TONIC-001" (decidido como LaÔÖ¡ mayor para evitar colisi├│n con SONG-003)[9D[K
+SONG-003).
+  - "GROOVE-001" (ritmo de 4/4 con *swing* impl├¡cito).
+songplan_handoff: "Esperando clarificaci├│n en HARMONIC-001 para asignar rol[3D[K
+roles a acordes en secciones."
+uncertainty:
+  - id: HARM-UNK-001
+    description: "┬┐C├│mo equilibrar densidad arm├│nica (indie-dance) con rest[4D[K
+restricci├│n (car├ícter *tense*)?"
+    affected_decision: HARMONIC-001
+    status: PENDING
+    what_would_resolve_it: "Directiva del Owner sobre prioridad: tensi├│n vs[2D[K
+vs. groove."
+```
+
+---
+### **3. RESOLVED_MAJOR_DECISIONS**
+*(Ejemplos resueltos; otros marcados como `UNRESOLVED`)*
+```yaml
+- decision_id: TONIC-001
+  selected_option: "LaÔÖ¡ mayor (C natural con #4 para evitar colisi├│n con SO[2D[K
+SONG-003)."
+  selection_basis: "Evidencia en `general_knowledge.yaml#TONAL_COLLISION` y[1D[K
+y preferencia del Owner por tonos no usados en referencias."
+  scope: "Global"
+  trace_reference: "DECISION_TRACE#TONIC-001"
+
+- decision_id: MODE-001
+  selected_option: "UNRESOLVED"
+  selection_basis: "Ning├║n modo en `candidate_options` cumple *todos* los s[1D[K
+soft criteria sin violar GR-011 (no inventar sem├íntica)."
+  scope: "Global"
+  trace_reference: "DECISION_TRACE#MODE-001"
+```
+
+---
+### **4. ARTISTIC_PRIORITY_HANDOFFS**
+*(Prioridades delegadas al Owner)*
+```yaml
+- decision_id: HARMONIC-001
+  surviving_options:
+    - "Modo menor natural con progresi├│n de 5┬░ descendente."
+    - "Modo frigio con alteraciones en la dominante."
+  why_no_supported_ranking_resolves_choice: "Tradeoff entre *tensi├│n* (frig[5D[K
+(frigio) y *coherencia* (menor natural)."
+  owner_question: "┬┐Priorizar disonancia controlada (frigio) o estabilidad [K
+tonal (menor natural) para la identidad focal?"
+  accepted_tradeoff: "Ninguno; requiere decisi├│n expl├¡cita."
+  status: PENDING_OWNER
+```
+
+---
+### **5. CAPABILITY_DECLARATIONS**
+*(Ejemplo para `HARMONIC-001`)*
+```yaml
+- decision_id: HARMONIC-001
+  enumerate: true
+  filter: false
+  rank: false
+  rank_1_scope: "N/A (no ranking comparativo soportado)."
+  rank_2_scope: "N/A"
+  actual_basis: "Artistic priority handoff por falta de evidencia para rank[4D[K
+rankear."
+```
+
+---
+### **6. GUARDRAIL_RESULTS**
+```yaml
+- guardrail_id: GR-011
+  status: WARNING
+  evidence: "Opci├│n 'modo lidio' no documentada en `genre_package` ni `gene[5D[K
+`general_knowledge`."
+  affected_decisions: ["HARMONIC-001"]
+  resolution_or_block: "Retirada opci├│n 'modo lidio'; bloqueado hasta clari[5D[K
+clarificaci├│n del Owner."
+
+- guardrail_id: GR-012
+  status: PASS
+  evidence: "Ning├║n claim inventado en `decision_trace`; todos derivados de[2D[K
+de inputs."
+```
+
+---
+### **7. UNCERTAINTIES**
+```yaml
+- id: DEV-UNK-001
+  description: "┬┐C├│mo desarrollar la secci├│n B (pre-coro) sin perder la ide[3D[K
+identidad focal?"
+  affected_decision: DEVELOPMENT-001
+  status: PENDING
+  what_would_resolve_it: "Estrategia de desarrollo expl├¡cita en `artistic_b[11D[K
+`artistic_brief` o ejemplo de SONG-002."
+
+- id: GROOVE-UNK-001
+  description: "┬┐El *swing* impl├¡cito en 4/4 choca con el car├ícter *restrai[8D[K
+*restrained*?"
+  affected_decision: GROOVE-001
+  status: PENDING
+  what_would_resolve_it: "Definici├│n de 'restrained' en t├®rminos de *groove[7D[K
+*groove* (ej. menos *push* en el bajo)."
+```
+
+---
+### **8. SONGPLAN_CANDIDATE** *(Excerpt; formato YAML completo adjunto)*
+```yaml
+version: "2.0"
+metadata:
+  run_id: XMODEL-001
+  status: BLOCKED
+  guardrail_violations: ["GR-011", "GR-012"]
+sections:
+  - id: SECTION_A
+    role: VERSO
+    harmonic_labels:
+      - chord: "i" (LaÔÖ¡ menor)
+        function: TONIC
+        voicing: "root-position"  # Sem├íntica expl├¡cita en `general_knowled[16D[K
+`general_knowledge.yaml#VOICING`
+        energy: LOW
+    events:
+      - type: MELODY
+        notes: [UNRESOLVED]  # GR-012: No inventar notas.
+        rhythm: "syncopated 8ths"
+  - id: SECTION_B
+    role: PRE-CORO
+    harmonic_labels: [UNRESOLVED]  # Bloqueado por HARMONIC-001.
+    events: []
+development:
+  strategy: "UNRESOLVED"  # DEV-UNK-001.
+release:
+  type: "gradual"  # Alineado con `artistic_intent`.
+ending:
+  type: "open"  # Prioridad delegada al Owner.
+```
+
+---
+### **9. BLOCKED REASONS**
+1. **GR-011 Violation**: Opci├│n de modo "lidio" retirada por falta de sem├ín[5D[K
+sem├íntica documentada.
+2. **Artistic Priority Handoff**: `HARMONIC-001` y `DEVELOPMENT-001` requie[6D[K
+requieren decisi├│n del Owner.
+3. **Uncertainties**: `GROOVE-UNK-001` y `DEV-UNK-0
+

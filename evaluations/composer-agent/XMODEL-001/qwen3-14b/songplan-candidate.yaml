@@ -1,0 +1,37 @@
+# Exact extraction from raw-output.txt; no musical or semantic repair applied.
+# source: evaluations/composer-agent/XMODEL-001/qwen3-14b/raw-output.txt
+# source_sha256: AA13E9374A32D37E33413FCC891E1BCDDB5B9F0A24D9CF522D7336A44DC3B8F3
+format: YAML
+schema: SongPlanV2
+schema_version: "2.0"
+structure:
+  title: "Indie Hypnotic Build"
+  key: C minor
+  tempo: 128
+  sections:
+    - name: Intro
+      duration: 0:00-0:30
+      elements:
+        - synth pads (C minor)
+        - syncopated hi-hats
+    - name: Build
+      duration: 0:30-2:00
+      elements:
+        - layered synths (C minor)
+        - polyrhythmic percussion
+        - gradual intensity increase
+    - name: Release
+      duration: 2:00-3:30
+      elements:
+        - sustained chords (C minor)
+        - dynamic hi-hat patterns
+        - controlled climax
+  harmonic_progression:
+    - Cm - Ab - F - Dm (repeated with variations)
+  rhythmic_structure:
+    - 4/4 time with syncopated hi-hats
+    - polyrhythmic layers in build section
+  instrumentation:
+    - Synthesizers
+    - Drum machines
+    - Sub-bass

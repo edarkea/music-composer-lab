@@ -1,0 +1,61 @@
+interface_id: composer-interface-v1.1
+version: 1.1.0
+language: es
+status: prepared_for_prospective_no_example_test
+purpose: >-
+  Exportación derivada y neutral respecto del modelo para transferir conocimiento
+  compositivo aprobado, decisiones musicales y límites de integridad sin convertir
+  al modelo en autoridad canónica.
+source_interface: datasets/composer-interface-v1
+canonical_authority:
+  - research/integrations/composer-knowledge-v1.md
+  - research/integrations/composer-genre-pack-v1.md
+  - research/integrations/composer-decision-contract-v1.md
+  - research/integrations/composer-cross-domain-songplan-v1.md
+  - research/integrations/composer-mvp-v1.1-percussion-architecture.md
+  - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md
+contents:
+  decision_schema: decision-schema.yaml
+  guardrails: guardrails.yaml
+  completion_checklist: completion-checklist.yaml
+  songplan_v2_contract: songplan-v2-contract.yaml
+  output_schema: output-schema.json
+  general_knowledge: knowledge/approved-composition-knowledge.yaml
+  genre_packs: [genres/indie-dance.yaml]
+  decision_reference: knowledge/n3-p-percussion-architecture.yaml
+  examples_in_prompt: false
+  transfer_redactions:
+    - Historical song-case table removed from the N3-P reference for the NO-EXAMPLE condition.
+capability_boundary:
+  enumerate: true
+  filter: yes_with_scope
+  rank_2: unavailable
+  rank_1:
+    only_from_exported_record: true
+    current_authorized_scope:
+      knowledge_id: CK-CROSS-01
+      task: recognition
+      target_construct: recognition of related material
+      criterion: the exact comparison described by CK-CROSS-01
+      scope: only the evidence and scope stated in that record
+    model_may_create_scope: false
+  unsupported_ranking_fallback: FILTER_THEN_ARTISTIC_PRIORITY
+artistic_priority:
+  when: Multiple candidates survive FILTER and no authorized ranking applies.
+  composer_may_select: true
+  required_fields: [decision_id, surviving_options, selected_option, active_intention, tradeoff]
+  owner_intervention_only_if: Input explicitly reserves that decision for Owner.
+  superiority_claim_allowed: false
+songplan:
+  target: SongPlanV2
+  schema_version: "2.0"
+  exact_root_contract: songplan-v2-contract.yaml
+training_boundary:
+  fine_tuning_dataset_claimed: false
+  pretraining_dataset_claimed: false
+  statistical_composition_corpus_claimed: false
+provenance_policy:
+  exported_text_is_non_authoritative: true
+  model_memory_must_not_fill_missing_claims: true
+  previous_owner_preferences_transfer: false
+  unresolved_claims_must_remain_unresolved: true

@@ -1,0 +1,26 @@
+﻿test_id: XMODEL-001
+interface_version: composer-interface-v1
+
+models:
+  - qwen3:14b
+  - ministral-3:14b
+
+same_prompt_for_both: true
+
+genre_pack:
+  indie-dance
+
+examples_in_prompt: false
+
+purpose:
+  - test model-independent transfer of composer decision knowledge
+  - test decision-contract compliance
+  - test SongPlanV2 generation
+  - test epistemic/ranking discipline
+
+raw_outputs_are_immutable: true
+
+notes:
+  - Do not edit raw-output.txt files.
+  - This run is treated as the no-example condition.
+  - Examples may be tested later in a separate run.

@@ -1,0 +1,38 @@
+﻿test_id: XMODEL-002
+status: PREPARED_NOT_EXECUTED
+interface_version: composer-interface-v1.1
+artistic_brief: brief.yaml
+brief_sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B
+frozen_prompt: frozen-prompt.txt
+prompt_sha256: F98BED243462602EAF5DE7A1E34DE53E7D4E261BFBB71916ED68CC2B165E2AB5
+models:
+  - qwen3:14b
+  - ministral-3:14b
+same_frozen_prompt_for_both: true
+examples_in_prompt: false
+condition: NO-EXAMPLE
+generation_parameters:
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  num_predict: 8192
+structured_output: JSON_SCHEMA_FORMAT_ONLY
+runner: integrations/composer-agent/ollama_runner.py
+new_immutable_output_directories:
+  - qwen3-14b
+  - ministral-3-14b
+raw_outputs_are_immutable: true
+execution:
+  xmodel_002_run_count: 0
+  run_authorized_by_this_preparation: false
+notes:
+  - Both models receive the same prompt bytes, brief, schema, and generation parameters.
+  - Equal parameters do not guarantee bit-identical outputs across hardware/backend configurations.
+  - Ollama model identifier and reported identifier are recorded per capture.
+
+
+
+

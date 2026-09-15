@@ -1,0 +1,146 @@
+genre_pack_id: GP-INDIE-DANCE-MVP
+name: Indie-dance MVP
+status: GENRE_ADMIT_WITH_SCOPE
+scope: >-
+  Realización loop/groove-based de electrónica-pop limitada a rasgos representados
+  en el repositorio. La etiqueta no describe todo el indie-dance.
+evidence_boundary:
+  basis: Observaciones de género y análisis de repertorio sobre loop/groove-based, EDM y pop/rock relacionado.
+  no_claims:
+    - La frecuencia en repertorio no convierte un rasgo en requisito.
+    - Las observaciones no demuestran causalidad sobre interés, energía, memorabilidad, coherencia o calidad.
+    - La transferencia exacta a todo indie-dance es desconocida.
+layers:
+  - general_composition_knowledge
+  - genre_specialization
+  - artistic_intent
+priorities:
+  - Permitir persistencia cíclica de material melódico o armónico.
+  - Considerar cambio formal en capas, textura, densidad, timbre o registro mientras otro material persiste.
+  - Separar retorno, parada, frontera y cadencia.
+  - Mantener explícita la jerarquía focal al añadir capas.
+  - Coordinar dominios sin exigir variación melódica.
+  - Mantener anticipación rítmica como opción condicionada, no firma obligatoria.
+entries:
+  - id: GP-01
+    name: Persistencia melódica con cambio cross-domain
+    evidence_class: GENRE_OBSERVATION
+    scope: Repertorios loop/groove-based, EDM y música popular relacionada; melodía cíclica sostenida.
+    question: Si la melodía debe permanecer, ¿dónde planificar el cambio formal?
+    options: [melodía estable, variación mínima, contraste nuevo, cambio en otras capas]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Repetición y variación pueden organizarse como decisiones contextualizadas.
+    genre_specialization: El cambio puede situarse en capas, textura, densidad o timbre.
+    use: Conservar melodía solo si concuerda con intención de continuidad/groove; declarar parámetro de cambio.
+    artistic_handoff: Elegir qué parámetro y cuánto cambia.
+    cross_domain_dependencies: [melody_to_texture, melody_to_density, melody_to_timbre]
+    songplan_handoff: Material melódico recurrente y parámetros de cambio por sección.
+    non_claim: No prueba interés, participación, menor aburrimiento ni que la melodía deba repetirse.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-01, supporting_ids: [CAND-MEL-011]}
+  - id: GP-02
+    name: Marco armónico cíclico/estático
+    evidence_class: GENRE_OBSERVATION
+    scope: Pop/rock y música groove-based con loop, vamp o pedal; no transferir automáticamente a práctica común.
+    question: ¿Puede persistir un marco armónico mientras la diferenciación ocurre en otros dominios?
+    options: [loop, vamp, pedal, progresión alternativa]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Selección armónica y realización son decisiones separadas.
+    genre_specialization: La persistencia cíclica puede enmarcar sección mientras arreglo, registro, densidad o timbre cambian.
+    use: Considerar el marco como opción de continuidad y filtrar cambios que contradicen persistencia explícita.
+    artistic_handoff: Elegir persistencia, superficie móvil o progresión dirigida según intención.
+    cross_domain_dependencies: [harmony_to_arrangement, harmony_to_density, harmony_to_register, harmony_to_timbre]
+    songplan_handoff: Marco, ciclo, secciones de persistencia y capas que pueden cambiar.
+    non_claim: Loop no genera por sí solo coherencia, energía, calma, aburrimiento o dirección.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-02, supporting_ids: [CAND-HAR-026]}
+  - id: GP-03
+    name: Vocabulario de retorno, parada y frontera en loop
+    evidence_class: GENRE_OBSERVATION
+    scope: Organización cíclica pop/rock/groove-based.
+    question: ¿Cómo articular una frontera sobre un ciclo sin llamar cadencia a todo retorno?
+    options: [continuar, cortar/parar, retorno marcado, cambio de arreglo, evento final]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Arrival, closure, boundary y return son estados distintos.
+    genre_specialization: Parada, cambio de capa/densidad o iteración final marcada son opciones de frontera.
+    use: Nombrar RETURN, STOP, BOUNDARY y FINAL EVENT neutralmente; cadence requiere proceso declarado.
+    artistic_handoff: Elegir el carácter de frontera con rasgos combinados.
+    cross_domain_dependencies: [form_to_arrangement, boundary_to_closure_review]
+    songplan_handoff: Tipo de retorno/parada, repetición marcada, entradas/salidas y estado de frontera.
+    non_claim: Parada no prueba cierre armónico; retorno no es cadencia.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-03, supporting_ids: [CAND-HAR-031]}
+  - id: GP-04
+    name: Diferenciación formal loop-based
+    evidence_class: GENRE_OBSERVATION
+    scope: Repertorios populares/loop-based delimitados.
+    question: ¿Cómo diferenciar unidades cuando persiste un marco cíclico?
+    options: [cambio coordinado de capas, densidad, timbre, registro, entradas/salidas, parada o retorno]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Función formal orienta objetivos pero no determina un medio.
+    genre_specialization: Diferenciación posible en variables coordinadas sin asumir cambio aislado suficiente.
+    use: Proponer estrategias de continuidad y cambio y filtrar según la intención explícita.
+    artistic_handoff: Elegir dimensiones que cambian y que conservan identidad.
+    cross_domain_dependencies: [form, melody, harmony, arrangement]
+    songplan_handoff: Función de sección, marco persistente, cambios de capas y retornos.
+    non_claim: El oyente no necesariamente percibe unidades como secciones; ningún cambio aislado crea forma automáticamente.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-04, supporting_ids: [CAND-FORM-008]}
+  - id: GP-05
+    name: Anticipación rítmica como opción acotada
+    evidence_class: GENRE_OBSERVATION
+    scope: Pop/rock reciente; opción para indie-dance solo si prosodia, metro y material coinciden.
+    question: ¿Cuándo considerar anticipación sin perder referencia métrica?
+    options: [onset alineado, anticipado o retardado]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Desplazamiento se evalúa respecto de metro y contexto declarados.
+    genre_specialization: Anticipación con sustain/stress compatible es alternativa documentada.
+    use: Considerar solo con metro recuperable y sustain, stress y armonía compatibles.
+    artistic_handoff: Elegir colocación según intención y legibilidad.
+    cross_domain_dependencies: [rhythm, melody, prosody, harmony]
+    songplan_handoff: Onset, sustain, stress y condición métrica.
+    non_claim: No es requisito ni prueba de groove, energía, tensión, prominencia o mejor phrasing.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-05, supporting_ids: [CAND-RHY-005, CAND-MEL-026]}
+  - id: GP-06
+    name: Contraste seccional como conjunto de variables
+    evidence_class: GENRE_OBSERVATION
+    scope: Pop/rock verso-coro o forma análoga; no prescribe coro más alto.
+    question: ¿Qué conjunto de cambios diferencia sección sin perder continuidad?
+    options: [registro, dinámica, textura, densidad, ritmo armónico, letra]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Contraste seccional puede usar varios parámetros coordinados.
+    genre_specialization: Cambio de registro puede ser uno entre marcadores posibles.
+    use: Evaluar un conjunto de marcadores; no elevar registro como solución automática.
+    artistic_handoff: Elegir dimensiones que contrastan y permanecen.
+    cross_domain_dependencies: [form, register, density, texture, dynamics]
+    songplan_handoff: Diferencias de sección, registro relativo y capas coordinadas.
+    non_claim: Registro aislado no crea energía, contraste ni función de coro; eficacia requiere escucha.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-06, supporting_ids: [CAND-MEL-022]}
+style_compatible_options:
+  - loop/vamp/pedal o progresión dirigida
+  - melodía estable, variación mínima o material nuevo por sección
+  - cambio mediante capas, densidad, timbre, registro, dinámica o ritmo
+  - frontera por parada, iteración marcada, cambio de arreglo o continuidad
+  - onset alineado o anticipado bajo condiciones métricas
+  - contraste concentrado en un dominio o distribuido
+genre_specific_handoffs:
+  - Qué material permanece y qué parámetro cambia.
+  - Marco cíclico o progresión dirigida según intención.
+  - Capa focal y capas que se retiran/reducen.
+  - Dimensiones de contraste y elementos identitarios que persisten.
+  - Frontera abierta, corte o terminal.
+  - Anticipación según metro, prosodia y armonía.
+  - Incertidumbre perceptiva aceptada.
+guardrails:
+  - El loop no requiere cadencia; retorno no equivale a cadencia.
+  - La melodía no debe variar obligatoriamente para que exista forma.
+  - Densidad no crea automáticamente energía.
+  - Registro alto no crea automáticamente contraste o coro.
+  - Anticipación no crea automáticamente groove o tensión.
+  - Repetición no crea automáticamente memorabilidad.
+  - Cambio de capa no garantiza nueva sección percibida.
+  - No asignar pesos numéricos ni ranking al pack.
+known_limitations:
+  - Es una acotación de integración, no una taxonomía histórica completa.
+  - Fuentes directas tratan loop/groove-based, EDM y pop/rock relacionado.
+  - No hay ranking de realizaciones, densidad, registro o textura.
+  - Hook, prominence y memorability siguen separados.
+  - Tensión es multidimensional, sin scalar oficial.
+  - Producción, mezcla, prosodia exhaustiva e instrumentación detallada quedan fuera.
+provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_ids: [GP-01, GP-02, GP-03, GP-04, GP-05, GP-06]}
