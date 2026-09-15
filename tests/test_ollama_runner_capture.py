@@ -40,7 +40,7 @@ class RunnerCaptureTest(unittest.TestCase):
                 out = temp / "model-out"
                 prompt.write_text("prueba ñ", encoding="utf-8")
                 brief.write_text("brief", encoding="utf-8")
-                command = ["python", str(RUNNER), "--model", "fixture", "--input", str(prompt), "--brief", str(brief), "--output-dir", str(out), "--schema", str(SCHEMA), "--ollama-url", f"http://127.0.0.1:{server.server_port}/api/chat"]
+                command = ["python", str(RUNNER), "--model", "fixture", "--input", str(prompt), "--brief", str(brief), "--output-dir", str(out), "--schema", str(SCHEMA), "--ollama-url", f"http://127.0.0.1:{server.server_port}/api/chat", "--num-predict", "12288"]
                 first = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
                 self.assertEqual(first.returncode, 0, first.stderr)
                 raw = out / "raw-output.txt"
@@ -52,6 +52,8 @@ class RunnerCaptureTest(unittest.TestCase):
                 self.assertFalse(manifest["semantic_repair_performed"])
                 payload = json.loads(server.request_body.decode("utf-8"))
                 self.assertEqual(payload["options"]["temperature"], 0)
+                self.assertEqual(payload["options"]["num_predict"], 12288)
+                self.assertEqual(manifest["generation_parameters"]["num_predict"], 12288)
                 original = raw.read_bytes()
                 second = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
                 self.assertNotEqual(second.returncode, 0)

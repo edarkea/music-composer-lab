@@ -1,0 +1,75 @@
+test_id: XMODEL-003
+status: PREPARED_NOT_EXECUTED
+purpose: controlled_output_budget_test
+primary_question: >-
+  Does a larger output token cap allow Ministral to finish the required response?
+secondary_question: >-
+  Does Qwen retain or change its semantic compliance under the same larger cap?
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+models:
+  - qwen3:14b
+  - ministral-3:14b
+same_frozen_prompt_for_both: true
+same_artistic_brief_as_XMODEL-001_and_XMODEL-002: true
+brief: brief.yaml
+brief_sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B
+frozen_prompt: frozen-prompt.txt
+prompt_sha256: F98BED243462602EAF5DE7A1E34DE53E7D4E261BFBB71916ED68CC2B165E2AB5
+prompt_byte_identical_to_XMODEL-002: true
+examples_in_prompt: false
+prompt_reconstruction_matches_current_v1_1_package: true
+structured_output_schema:
+  file: structured-output-schema.json
+  source: datasets/composer-interface-v1.1/output-schema.json
+  sha256: 7D334387404BD312A300460D2986E7E19AD8D885E842701A219EE91D935E332B
+  mode: JSON_SCHEMA_FORMAT_ONLY
+  semantic_repair: false
+generation_parameters:
+  shared_between_models_except_model_identifier: true
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  num_predict: 12288
+output_budget_control:
+  XMODEL-002_num_predict: 8192
+  XMODEL-003_num_predict: 12288
+  absolute_increase_tokens: 4096
+  relative_increase_percent: 50
+  XMODEL-002_ministral_prompt_eval_tokens: 17473
+  XMODEL-002_qwen_prompt_eval_tokens: 16820
+  estimated_context_headroom_at_12288:
+    ministral_tokens: 3007
+    qwen_tokens: 3660
+  rationale: >-
+    XMODEL-002 used all 8192 output tokens for Ministral and ended with
+    done_reason length. The 12288 cap adds 4096 tokens while preserving num_ctx
+    32768 and leaves approximately 3000 tokens of context headroom based on the
+    largest measured XMODEL-002 prompt.
+input_component_sha256:
+  system_contract_v1_1: 032DC7738DB9F8723F02C4E734B10A07B0FF49F2D68DDA963F7410B01B174373
+  interface_manifest_v1_1: DF82DEAD159385B95DED79A094AB242AE84E67D6C7F5DC2674AB5982B322B83B
+  decision_schema: F71C622E6F275369CCB024818051F6955AE37DE8BC34C8558AB38C7BF1EF4168
+  guardrails: ABCF1432758AAD5C67A4B13CB259414013C7F2261BB58160B8ED2D5A702CA0B2
+  completion_checklist: 5B454C9FB8D3ACB303E930196CE0B684B3A7D01C3293A6237312625A287114F2
+  songplan_v2_contract: 1E6582557EBEB9DB4022E8E8DB301529FB0BD9901B8768D38AD4DFBF3E79C27D
+  approved_composition_knowledge: F4F9373B35FE5E87BFD28B51B5CF0DDD7A673E414C97F9A700C3A003EB29F76A
+  n3_p_reference: 97F0763FC13F2EF5EDD316636028C50A6BFA840B3A09764CDD33E3755FD1333A
+  genre_pack_indie_dance: 5FB9AB64D7703EE5129BC8CD62B9E4D0D411928F9C5F4344D1606FF9DD3181FD
+  music_engine_songplan_contract: BB4B88DDF4CF12642DE62E72CB679DEC0DFC718AF1A94F2C99F0A7DCC2BE843D
+runner: integrations/composer-agent/ollama_runner.py
+runner_argument: --num-predict 12288
+output_directories:
+  - qwen3-14b
+  - ministral-3-14b
+raw_outputs_immutable: true
+execution:
+  xmodel_003_run_count: 0
+  run_authorized_by_preparation: false
+notes:
+  - The intended experimental variable is only num_predict.
+  - All other model/API generation parameters, prompt bytes, brief bytes, interface content and response schema are held constant from XMODEL-002.
+  - XMODEL-002 artifacts remain unchanged and are not reused as XMODEL-003 output.

@@ -26,6 +26,13 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def positive_int(value: str) -> int:
+    parsed = int(value)
+    if parsed <= 0:
+        raise argparse.ArgumentTypeError("must be a positive integer")
+    return parsed
+
+
 def create_exclusive(path: Path, data: bytes) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("xb") as stream:
@@ -43,6 +50,7 @@ def main() -> int:
     parser.add_argument("--interface-version", default="composer-interface-v1.1")
     parser.add_argument("--ollama-url", default="http://127.0.0.1:11434/api/chat")
     parser.add_argument("--schema", type=Path, default=Path("datasets/composer-interface-v1.1/output-schema.json"))
+    parser.add_argument("--num-predict", type=positive_int, default=SETTINGS["num_predict"], help="Maximum generated tokens (default preserves the v1.1/XMODEL-002 setting)")
     args = parser.parse_args()
 
     prompt_bytes = args.input.read_bytes()
@@ -54,12 +62,14 @@ def main() -> int:
     # Decode solely to ensure the frozen inputs are valid UTF-8; preserve source bytes.
     prompt = prompt_bytes.decode("utf-8")
     schema = json.loads(args.schema.read_text(encoding="utf-8"))
+    generation_settings = dict(SETTINGS)
+    generation_settings["num_predict"] = args.num_predict
     request_object = {
         "model": args.model,
         "messages": [{"role": "user", "content": prompt}],
         "stream": False,
         "format": schema,
-        "options": SETTINGS,
+        "options": generation_settings,
     }
     request_bytes = json.dumps(request_object, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     request = Request(args.ollama_url, data=request_bytes, headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
@@ -85,7 +95,7 @@ def main() -> int:
         "request_sha256": sha256(request_bytes),
         "raw_api_response_sha256": sha256(api_bytes),
         "raw_output_sha256": sha256(content_bytes),
-        "generation_parameters": SETTINGS,
+        "generation_parameters": generation_settings,
         "structured_output_schema": str(args.schema),
         "semantic_repair_performed": False,
         "note": "Parámetros de generación iguales no garantizan igualdad bit a bit entre hardware/backends.",
