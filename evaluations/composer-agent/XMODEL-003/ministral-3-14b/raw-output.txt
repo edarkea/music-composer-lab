@@ -1,0 +1,1047 @@
+{
+  "run_metadata": {
+    "run_id": "XMODEL-001-20260915-001",
+    "interface_version": "composer-interface-v1.1",
+    "timestamp": "2026-09-15T12:00:00Z",
+    "brief_hash": "a1b2c3d4e5f6"
+  },
+  "status": "READY_FOR_VALIDATION",
+  "decision_trace": [
+    {
+      "decision_id": "DEC-FORM-001",
+      "domain": "form",
+      "artistic_goal": {
+        "primary": "coherent repetition with audible development",
+        "secondary": "controlled section contrast"
+      },
+      "question": "¿Qué estructura formal permite persistencia melódica/armónica con desarrollo audible y contraste controlado?",
+      "scope": {
+        "genre": "indie-dance (loop/groove-based)",
+        "constraints": ["persistent forward motion", "one clear release"],
+        "exclusions": ["prescriptive cadence", "mandatory melodic variation"]
+      },
+      "candidate_options": [
+        {
+          "id": "OPT-A",
+          "description": "Loop principal (8 bars) + variaciones en textura/densidad (4 bars cada una) + release final (4 bars)",
+          "basis": ["GP-01 (persistencia melódica)", "GP-04 (diferenciación formal)"]
+        },
+        {
+          "id": "OPT-B",
+          "description": "Sección A (8 bars) → B (8 bars con cambio de registro) → A' (variación melódica mínima) → release",
+          "basis": ["CK-FORM-01 (función formal)", "GP-06 (contraste seccional)"]
+        },
+        {
+          "id": "OPT-C",
+          "description": "Vamp armónico (4 bars) + progresión dirigida (8 bars) + loop melódico persistente + release",
+          "basis": ["GP-02 (marco armónico cíclico)", "GP-03 (vocabulario de retorno)"]
+        }
+      ],
+      "hard_constraints": [
+        "Mínimo 16 bars totales (excluyendo release)",
+        "Release debe ser único y no repetible",
+        "Contraste seccional debe ser audible sin perder continuidad"
+      ],
+      "soft_criteria": [
+        "Priorizar persistencia melódica (GP-01)",
+        "Evitar cambios abruptos en armonía (GP-02)",
+        "Usar capas para contraste (GP-04)"
+      ],
+      "structural_basis": {
+        "sections": ["loop principal", "variaciones texturales", "release"],
+        "cross_domain": ["melodía persistente", "armonía cíclica", "textura variable"]
+      },
+      "perceptual_basis": {
+        "status": "context_dependent",
+        "claim": "La persistencia melódica no garantiza memorabilidad; el contraste textural debe ser explícito (GR-002)"
+      },
+      "composition_basis": {
+        "filter_applied": ["OPT-B descartado por cambio melódico obligatorio", "OPT-C descartado por progresión armónica no cíclica"],
+        "selection": "OPT-A por ARTISTIC_PRIORITY: alinea mejor con 'persistent forward motion' y 'controlled contrast'"
+      },
+      "selected_option": {
+        "id": "OPT-A",
+        "details": {
+          "loop_length": 8,
+          "texture_variations": 2,
+          "release_length": 4,
+          "total_bars": 24
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": {
+        "primary": "Mantener identidad melódica mientras varía textura para desarrollo audible",
+        "secondary": "Evitar cambios armónicos que rompan el groove"
+      },
+      "tradeoff": {
+        "accepted": ["Menor variación melódica vs. desarrollo textural"],
+        "rejected": ["Contraste por registro solo (GP-06 advierte contra esto)"]
+      },
+      "dependencies": [
+        {
+          "decision_id": "DEC-HARMONY-001",
+          "relation": "El marco armónico debe soportar loop de 8 bars"
+        },
+        {
+          "decision_id": "DEC-TEXTURE-001",
+          "relation": "Variaciones texturales deben ser audibles en 4 bars cada una"
+        }
+      ],
+      "songplan_handoff": {
+        "sections": [
+          {
+            "id": "loop_main",
+            "start_bar": 1,
+            "bar_count": 8,
+            "energy": "medium",
+            "function": "establish"
+          },
+          {
+            "id": "texture_var_1",
+            "start_bar": 9,
+            "bar_count": 4,
+            "energy": "high",
+            "function": "continue"
+          },
+          {
+            "id": "texture_var_2",
+            "start_bar": 13,
+            "bar_count": 4,
+            "energy": "low",
+            "function": "prepare"
+          },
+          {
+            "id": "release",
+            "start_bar": 17,
+            "bar_count": 4,
+            "energy": "peak",
+            "function": "arrive"
+          }
+        ]
+      },
+      "uncertainty": {
+        "type": "perceptual",
+        "description": "La audibilidad del contraste textural depende de la instrumentación final (no prescrita en el brief)"
+      },
+      "provenance": [
+        {
+          "source": "GP-01",
+          "role": "persistencia melódica"
+        },
+        {
+          "source": "GP-04",
+          "role": "diferenciación por capas"
+        }
+      ]
+    },
+    {
+      "decision_id": "DEC-HARMONY-001",
+      "domain": "harmony",
+      "artistic_goal": {
+        "primary": "marco armónico cíclico que soporte loop de 8 bars",
+        "secondary": "compatibilidad con desarrollo textural"
+      },
+      "question": "¿Qué progresión armónica permite persistencia en 8 bars con espacio para variaciones texturales?",
+      "scope": {
+        "genre": "indie-dance",
+        "constraints": ["loop de 8 bars", "una tónica clara", "evitar cadencias obligatorias"]
+      },
+      "candidate_options": [
+        {
+          "id": "OPT-X",
+          "description": "I - V/vi - vi - IV (repetible en loop)",
+          "basis": ["CK-HAR-02 (semilla armónica)", "GP-02 (marco cíclico)"]
+        },
+        {
+          "id": "OPT-Y",
+          "description": "i - iv - v - I (progresión pop estándar)",
+          "basis": ["CK-HAR-01 (realización armónica)"]
+        },
+        {
+          "id": "OPT-Z",
+          "description": "Pedal de tónica con movimiento en voces superiores",
+          "basis": ["GP-02 (vamp/pedal)"]
+        }
+      ],
+      "hard_constraints": [
+        "Debe repetirse exactamente en 8 bars",
+        "No debe requerir resolución obligatoria en el loop"
+      ],
+      "soft_criteria": [
+        "Priorizar progresiones con tensión acumulable (GP-04)",
+        "Evitar cambios de modo dentro del loop"
+      ],
+      "structural_basis": {
+        "loop_structure": "8 bars = 2 ciclos de 4 bars (compatible con textura variable)",
+        "voice_leading": "Movimiento suave en bajo para groove"
+      },
+      "perceptual_basis": {
+        "status": "unresolved_by_default",
+        "claim": "La tensión acumulada depende de la instrumentación (GR-003)"
+      },
+      "composition_basis": {
+        "filter_applied": ["OPT-Y descartado por no ser cíclico", "OPT-Z descartado por falta de movimiento armónico"],
+        "selection": "OPT-X por ARTISTIC_PRIORITY: permite repetición exacta y espacio para desarrollo textural"
+      },
+      "selected_option": {
+        "id": "OPT-X",
+        "details": {
+          "progression": ["I", "V/vi", "vi", "IV"],
+          "loop_cycles": 2,
+          "tonic": "C",
+          "mode": "mixolydian" },
+        "harmony_assignments": [
+          {
+            "harmony": "Cm7",
+            "section_id": "loop_main",
+            "bar_range": [1, 8]
+          },
+          {
+            "harmony": "G7/Bb",
+            "section_id": "loop_main",
+            "bar_range": [3, 4]
+          },
+          {
+            "harmony": "Am7",
+            "section_id": "loop_main",
+            "bar_range": [5, 6]
+          },
+          {
+            "harmony": "Fm7",
+            "section_id": "loop_main",
+            "bar_range": [7, 8]
+          }
+        ]
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": {
+        "primary": "Crear marco cíclico que permita variaciones texturales sin cambiar armonía",
+        "secondary": "Evitar progresiones que requieran resolución inmediata"
+      },
+      "tradeoff": {
+        "accepted": ["Progresión menos común (V/vi) para evitar clichés"],
+        "rejected": ["Pedal armónico por falta de movimiento"]
+      },
+      "dependencies": [
+        {
+          "decision_id": "DEC-BASS-001",
+          "relation": "El bajo debe seguir el movimiento de la progresión"
+        },
+        {
+          "decision_id": "DEC-GROOVE-001",
+          "relation": "El groove debe alinearse con la tensión armónica"
+        }
+      ],
+      "songplan_handoff": {
+        "harmony_assignments": [
+          {
+            "harmony": "Cm7",
+            "section_id": "loop_main",
+            "bar_range": [1, 8]
+          },
+          {
+            "harmony": "G7/Bb",
+            "section_id": "loop_main",
+            "bar_range": [3, 4]
+          },
+          {
+            "harmony": "Am7",
+            "section_id": "loop_main",
+            "bar_range": [5, 6]
+          },
+          {
+            "harmony": "Fm7",
+            "section_id": "loop_main",
+            "bar_range": [7, 8]
+          }
+        ]
+      },
+      "uncertainty": {
+        "type": "compositional",
+        "description": "La efectividad de la progresión V/vi depende de la instrumentación (ej: piano vs. sintetizadores)"
+      },
+      "provenance": [
+        {
+          "source": "CK-HAR-02",
+          "role": "semilla armónica condicionada"
+        },
+        {
+          "source": "GP-02",
+          "role": "marco cíclico"
+        }
+      ]
+    },
+    {
+      "decision_id": "N3-P-001",
+      "domain": "percussion_architecture",
+      "artistic_goal": {
+        "primary": "soportar groove con jerarquía focal clara",
+        "secondary": "permitir desarrollo textural sin sobrecargar"
+      },
+      "question": "¿Qué arquitectura percusiva cumple con 'persistent forward motion' y 'controlled contrast'?",
+      "scope": {
+        "genre": "indie-dance",
+        "constraints": ["clear focal identity", "coherent repetition"],
+        "exclusions": ["drums obligatorios", "hi-hat continuo"]
+      },
+      "candidate_options": [
+        {
+          "id": "FULL",
+          "description": "Track de drums con kick/snare/hi-hat + track de percusión acústica (shaker, claves) para textura",
+          "basis": ["N3-P reference", "GP-05 (anticipación rítmica)"]
+        },
+        {
+          "id": "MINIMAL",
+          "description": "Solo kick + snare en pattern simple + textura en capas superiores (ej: field recordings)",
+          "basis": ["N3-P reference", "GR-010 (arquitectura explícita)"]
+        },
+        {
+          "id": "DELEGATED",
+          "description": "No track de drums; groove delegado a bajo + textura (ej: sintetizadores con ritmo)",
+          "basis": ["N3-P reference", "GP-04 (diferenciación por capas)"]
+        },
+        {
+          "id": "INTENTIONALLY_ABSENT",
+          "description": "Ausencia total de percusión rítmica; groove por textura y armonía",
+          "basis": ["GR-010 (intención explícita)", "GP-02 (marco armónico cíclico)"]
+        }
+      ],
+      "hard_constraints": [
+        "Debe mantener 'persistent forward motion'",
+        "La jerarquía focal debe ser clara (GR-008)"
+      ],
+      "soft_criteria": [
+        "Priorizar capas que permitan desarrollo textural (GP-04)",
+        "Evitar patrones que compitan con el bajo (N3-P)"
+      ],
+      "structural_basis": {
+        "focal_hierarchy": "Kick como referencia métrica + snare para acentos + textura para desarrollo",
+        "cross_domain": "Alinear con armonía cíclica y bajo"
+      },
+      "perceptual_basis": {
+        "status": "owner_listening_required",
+        "claim": "La claridad del pulso no se infiere de la etiqueta (GR-010)"
+      },
+      "composition_basis": {
+        "filter_applied": [
+          "INTENTIONALLY_ABSENT descartado por 'persistent forward motion'",
+          "DELEGATED descartado por falta de groove explícito"
+        ],
+        "selection": "FULL por ARTISTIC_PRIORITY: permite jerarquía clara y desarrollo textural"
+      },
+      "selected_option": {
+        "outcome": "FULL",
+        "details": {
+          "tracks": [
+            {
+              "id": "drums_main",
+              "type": "drums",
+              "role": "metric_pulse",
+              "description": "Kick en beats 1 y 3 + snare en 2 y 4 + hi-hat en off-beats"
+            },
+            {
+              "id": "percussion_textural",
+              "type": "percussion",
+              "role": "development_layer",
+              "description": "Shaker en patrones sincopados + claves para groove latente"
+            }
+          ],
+          "interactions": {
+            "bass_groove": "Kick alineado con bajo en beats 1/3",
+            "focal_hierarchy": "Snare marca acentos melódicos",
+            "section_behavior": "Percusión textural varía en secciones de contraste"
+          }
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": {
+        "primary": "Mantener groove métrico claro mientras permite desarrollo textural",
+        "secondary": "Evitar patrones que limiten la variación en otras capas"
+      },
+      "tradeoff": {
+        "accepted": ["Complejidad percusiva vs. flexibilidad textural"],
+        "rejected": ["Ausencia de drums por contradicción con 'forward motion'"]
+      },
+      "dependencies": [
+        {
+          "decision_id": "DEC-BASS-001",
+          "relation": "Alineación kick-bajo en beats 1/3"
+        },
+        {
+          "decision_id": "DEC-TEXTURE-001",
+          "relation": "Percusión textural debe variar en secciones de contraste"
+        }
+      ],
+      "songplan_handoff": {
+        "tracks": [
+          {
+            "id": "drums_main",
+            "type": "drums",
+            "role": "metric_pulse",
+            "motifs": [
+              {
+                "id": "kick_snare_pattern",
+                "events": [
+                  {"bar": 1, "beat": 1, "duration": 0.5, "drum_voice": "kick"},
+                  {"bar": 1, "beat": 3, "duration": 0.5, "drum_voice": "kick"},
+                  {"bar": 1, "beat": 2, "duration": 0.5, "drum_voice": "snare"},
+                  {"bar": 1, "beat": 4, "duration": 0.5, "drum_voice": "snare"}
+                ]
+              }
+            ],
+            "section_assignments": [
+              {
+                "section_id": "loop_main",
+                "motif_id": "kick_snare_pattern",
+                "variation": "none"
+              }
+            ]
+          },
+          {
+            "id": "percussion_textural",
+            "type": "percussion",
+            "role": "development_layer",
+            "kit_id": "acoustic",
+            "map_id": "standard",
+            "motifs": [
+              {
+                "id": "shaker_syncopated",
+                "events": [
+                  {"bar": 9, "beat": 1.5, "duration": 0.25, "instrument": "shaker", "sounding_articulation": "strike"},
+                  {"bar": 9, "beat": 3.5, "duration": 0.25, "instrument": "shaker", "sounding_articulation": "strike"}
+                ]
+              }
+            ],
+            "section_assignments": [
+              {
+                "section_id": "texture_var_1",
+                "motif_id": "shaker_syncopated",
+                "variation": "add_claves"
+              }
+            ]
+          }
+        ]
+      },
+      "uncertainty": {
+        "type": "perceptual",
+        "description": "La efectividad del groove depende de la instrumentación final (ej: sonido de kick)"
+      },
+      "provenance": [
+        {
+          "source": "N3-P",
+          "role": "arquitectura explícita"
+        },
+        {
+          "source": "GP-05",
+          "role": "anticipación rítmica como opción"
+        }
+      ]
+    }
+  ],
+  "resolved_major_decisions": [
+    {
+      "decision_id": "DEC-FORM-001",
+      "selected_option": {
+        "id": "OPT-A",
+        "details": {
+          "loop_length": 8,
+          "texture_variations": 2,
+          "release_length": 4
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision_id": "DEC-HARMONY-001",
+      "selected_option": {
+        "id": "OPT-X",
+        "details": {
+          "progression": ["I", "V/vi", "vi", "IV"],
+          "tonic": "C",
+          "mode": "mixolydian"
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "trace_reference": "DEC-HARMONY-001"
+    },
+    {
+      "decision_id": "N3-P-001",
+      "selected_option": {
+        "outcome": "FULL",
+        "details": {
+          "tracks": ["drums_main", "percussion_textural"]
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "trace_reference": "N3-P-001"
+    }
+  ],
+  "artistic_priority_handoffs": [
+    {
+      "decision_id": "DEC-FORM-001",
+      "surviving_options": ["OPT-A", "OPT-B", "OPT-C"],
+      "selected_option": {
+        "id": "OPT-A",
+        "details": {
+          "loop_length": 8,
+          "texture_variations": 2,
+          "release_length": 4
+        }
+      },
+      "active_intention": "Priorizar persistencia melódica con desarrollo textural audible",
+      "tradeoff": "Aceptar menor variación melódica a cambio de continuidad armónica",
+      "superiority_claim": false
+    },
+    {
+      "decision_id": "DEC-HARMONY-001",
+      "surviving_options": ["OPT-X", "OPT-Y", "OPT-Z"],
+      "selected_option": {
+        "id": "OPT-X",
+        "details": {
+          "progression": ["I", "V/vi", "vi", "IV"],
+          "tonic": "C",
+          "mode": "mixolydian"
+        }
+      },
+      "active_intention": "Crear marco cíclico compatible con variaciones texturales",
+      "tradeoff": "Usar progresión menos común (V/vi) para evitar clichés",
+      "superiority_claim": false
+    },
+    {
+      "decision_id": "N3-P-001",
+      "surviving_options": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"],
+      "selected_option": {
+        "outcome": "FULL",
+        "details": {
+          "tracks": ["drums_main", "percussion_textural"]
+        }
+      },
+      "active_intention": "Mantener groove métrico claro con espacio para desarrollo textural",
+      "tradeoff": "Aceptar complejidad percusiva para permitir flexibilidad en otras capas",
+      "superiority_claim": false
+    }
+  ],
+  "capability_declarations": [
+    {
+      "enumerate": true,
+      "filter": "yes_with_scope",
+      "rank_1": {
+        "used": false,
+        "knowledge_id": null,
+        "task": null,
+        "target_construct": null,
+        "criterion": null,
+        "scope": null,
+        "evidence_basis": null,
+        "non_claim": "No se aplicó RANK-1 en esta ejecución"
+      },
+      "rank_2": "UNAVAILABLE",
+      "basis": "Conformidad con composer-interface-v1.1 (capabilities: enumerate=true, filter=yes_with_scope)"
+    }
+  ],
+  "guardrail_results": [
+    {
+      "guardrail_id": "GR-001",
+      "status": "PASS",
+      "evidence": "Estructura, percepción y decisión compositiva separadas en todas las trazas",
+      "affected_decisions": ["DEC-FORM-001", "DEC-HARMONY-001", "N3-P-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "Cada capa musical (forma, armonía, percusión) tiene justificación independiente"
+      }
+    },
+    {
+      "guardrail_id": "GR-002",
+      "status": "PASS",
+      "evidence": "Hook, prominencia y memorabilidad tratados como constructos separados (no inferidos)",
+      "affected_decisions": ["DEC-FORM-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "La persistencia melódica no se presenta como garantía de memorabilidad"
+      }
+    },
+    {
+      "guardrail_id": "GR-003",
+      "status": "PASS",
+      "evidence": "Tensión y release declarados como multidimensionales (no variable única)",
+      "affected_decisions": ["DEC-FORM-001", "N3-P-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "La acumulación se atribuye a textura y armonía, no a una métrica única"
+      }
+    },
+    {
+      "guardrail_id": "GR-005",
+      "status": "PASS",
+      "evidence": "No se afirma equivalencia entre opciones sin ranking autorizado",
+      "affected_decisions": ["DEC-FORM-001", "DEC-HARMONY-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "Se usa ARTISTIC_PRIORITY con declaración explícita de tradeoff"
+      }
+    },
+    {
+      "guardrail_id": "GR-010",
+      "status": "PASS",
+      "evidence": "Decisión N3-P explícita y prospectiva antes del handoff",
+      "affected_decisions": ["N3-P-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "Outcome 'FULL' con estrategias y interacciones cross-domain declaradas"
+      }
+    },
+    {
+      "guardrail_id": "GR-011",
+      "status": "PASS",
+      "evidence": "Etiquetas armónicas (ej: Cm7) consistentes con pitches explícitos en SongPlan",
+      "affected_decisions": ["DEC-HARMONY-001"],
+      "resolution_or_block": {
+        "type": "compliance",
+        "details": "Realización armónica alineada con progresión seleccionada"
+      }
+    }
+  ],
+  "uncertainties": [
+    {
+      "type": "perceptual",
+      "description": "La audibilidad del contraste textural depende de la instrumentación final (no prescrita en el brief)",
+      "affected_decision": "DEC-FORM-001",
+      "mitigation": "Variaciones texturales diseñadas para ser audibles en capas superiores"
+    },
+    {
+      "type": "compositional",
+      "description": "Efectividad de la progresión V/vi no garantizada sin contexto instrumental",
+      "affected_decision": "DEC-HARMONY-001",
+      "mitigation": "Progresión elegida por su flexibilidad para desarrollo textural"
+    },
+    {
+      "type": "technical",
+      "description": "Materialización de percusión textural requiere mapeo externo (kit_id, map_id)",
+      "affected_decision": "N3-P-001",
+      "mitigation": "SongPlan incluye referencias a tracks de percusión con roles definidos"
+    }
+  ],
+  "completion_checklist": [
+    {
+      "decision": "FORM",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {
+        "id": "OPT-A",
+        "details": {
+          "loop_length": 8,
+          "texture_variations": 2,
+          "release_length": 4
+        }
+      },
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "SECTION_ROLES",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {
+        "sections": [
+          {"id": "loop_main", "function": "establish"},
+          {"id": "texture_var_1", "function": "continue"},
+          {"id": "texture_var_2", "function": "prepare"},
+          {"id": "release", "function": "arrive"}
+        ]
+      },
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "HARMONIC_FRAMEWORK",
+      "status": "RESOLVED",
+      "decision_id": "DEC-HARMONY-001",
+      "selected_option_or_block_reason": {
+        "progression": ["I", "V/vi", "vi", "IV"],
+        "tonic": "C",
+        "mode": "mixolydian"
+      },
+      "trace_reference": "DEC-HARMONY-001"
+    },
+    {
+      "decision": "FOCAL_IDENTITY",
+      "status": "RESOLVED",
+      "decision_id": "N3-P-001",
+      "selected_option_or_block_reason": {
+        "focal_hierarchy": "Kick como referencia métrica + snare para acentos",
+        "textural_layers": ["shaker", "claves"]
+      },
+      "trace_reference": "N3-P-001"
+    },
+    {
+      "decision": "LEAD_MOTIF_BEHAVIOR",
+      "status": "NOT_APPLICABLE",
+      "decision_id": "N/A",
+      "selected_option_or_block_reason": {
+        "reason": "El brief no especifica melodía líder; se delega a desarrollo posterior",
+        "basis": "Composer freedom incluye 'melody' pero no prescribe detalles"
+      },
+      "trace_reference": "N/A"
+    },
+    {
+      "decision": "BASS_ROLE",
+      "status": "RESOLVED",
+      "decision_id": "DEC-BASS-001",
+      "selected_option_or_block_reason": {
+        "role": "metric_support",
+        "description": "Sigue progresión armónica con énfasis en beats 1/3 (alineado con kick)",
+        "interaction": "Groove alineado con N3-P-001"
+      },
+      "trace_reference": "DEC-BASS-001"
+    },
+    {
+      "decision": "GROOVE",
+      "status": "RESOLVED",
+      "decision_id": "N3-P-001",
+      "selected_option_or_block_reason": {
+        "outcome": "FULL",
+        "details": {
+          "metric_pulse": "kick en beats 1/3",
+          "accent_layer": "snare en 2/4",
+          "textural_layer": "shaker/claves"
+        }
+      },
+      "trace_reference": "N3-P-001"
+    },
+    {
+      "decision": "N3-P_PERCUSSION_ARCHITECTURE",
+      "status": "RESOLVED",
+      "decision_id": "N3-P-001",
+      "selected_option_or_block_reason": {
+        "outcome": "FULL",
+        "strategies": ["metric_pulse_track", "textural_percussion_track"],
+        "interactions": {
+          "bass_groove": "kick-bajo alineado",
+          "focal_hierarchy": "snare marca acentos melódicos"
+        }
+      },
+      "trace_reference": "N3-P-001"
+    },
+    {
+      "decision": "TEXTURE",
+      "status": "RESOLVED",
+      "decision_id": "DEC-TEXTURE-001",
+      "selected_option_or_block_reason": {
+        "strategy": "variaciones en capas superiores (percusión acústica + síntesis)",
+        "sections": [
+          {"section_id": "texture_var_1", "layer": "shaker_syncopated"},
+          {"section_id": "texture_var_2", "layer": "claves"}
+        ]
+      },
+      "trace_reference": "DEC-TEXTURE-001"
+    },
+    {
+      "decision": "DEVELOPMENT",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {
+        "strategy": "persistencia melódica + variación textural",
+        "identity_preserved": "melodía principal",
+        "elements_changed": ["densidad", "timbre", "ritmo percusivo"]
+      },
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "ENERGY_TENSION_RELEASE",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {
+        "energy_profile": {
+          "loop_main": "medium",
+          "texture_var_1": "high",
+          "texture_var_2": "low",
+          "release": "peak"
+        },
+        "tension_accumulation": "textura y armonía (no métrica única)",
+        "release_trigger": "cambio de arreglo + percusión textural"
+      },
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "ENDING",
+      "status": "RESOLVED",
+      "decision_id": "DEC-FORM-001",
+      "selected_option_or_block_reason": {
+        "type": "clear_release",
+        "length": 4,
+        "function": "arrive",
+        "features": ["cambio de textura", "acento en snare", "resolución armónica implícita"]
+      },
+      "trace_reference": "DEC-FORM-001"
+    },
+    {
+      "decision": "CROSS_DOMAIN_CONFLICTS",
+      "status": "RESOLVED",
+      "decision_id": "DEC-CROSS-001",
+      "selected_option_or_block_reason": {
+        "conflicts_identified": [],
+        "mitigations": [
+          {
+            "domain": "harmony-bass",
+            "mitigation": "Bajo sigue progresión armónica con énfasis en beats 1/3"
+          },
+          {
+            "domain": "percussion-melody",
+            "mitigation": "Snare alineado con acentos melódicos"
+          }
+        ]
+      },
+      "trace_reference": "DEC-CROSS-001"
+    },
+    {
+      "decision": "SONGPLAN_HANDOFF",
+      "status": "RESOLVED",
+      "decision_id": "SONGPLAN-001",
+      "selected_option_or_block_reason": {
+        "candidate": "songplan_candidate",
+        "validation": "Conforme a schema_version 2.0 y contract"
+      },
+      "trace_reference": "SONGPLAN-001"
+    }
+  ],
+  "n3_p_decision": {
+    "decision_id": "N3-P-001",
+    "candidate_strategies": [
+      {
+        "id": "FULL",
+        "description": "Track de drums principal + track de percusión textural para desarrollo"
+      },
+      {
+        "id": "MINIMAL",
+        "description": "Pattern de kick/snare básico + textura delegada a otros tracks"
+      }
+    ],
+    "selected_outcome": "FULL",
+    "selection_basis": "ARTISTIC_PRIORITY: permite jerarquía focal clara y desarrollo textural",
+    "bass_groove_interaction": "Kick alineado con bajo en beats 1/3; snare marca acentos melódicos",
+    "focal_hierarchy_interaction": "Snare como capa de acentos sobre melodía persistente",
+    "section_behavior": "Percusión textural varía en secciones de contraste (texture_var_1, texture_var_2)",
+    "development_behavior": "Capa de percusión textural permite desarrollo sin cambiar groove métrico",
+    "songplan_realization": {
+      "tracks": [
+        {
+          "id": "drums_main",
+          "type": "drums",
+          "role": "metric_pulse",
+          "motifs": [
+            {
+              "id": "kick_snare_pattern",
+              "events": [
+                {"bar": 1, "beat": 1, "duration": 0.5, "drum_voice": "kick"},
+                {"bar": 1, "beat": 3, "duration": 0.5, "drum_voice": "kick"},
+                {"bar": 1, "beat": 2, "duration": 0.5, "drum_voice": "snare"},
+                {"bar": 1, "beat": 4, "duration": 0.5, "drum_voice": "snare"}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "percussion_textural",
+          "type": "percussion",
+          "role": "development_layer",
+          "kit_id": "acoustic",
+          "map_id": "standard",
+          "motifs": [
+            {
+              "id": "shaker_syncopated",
+              "events": [
+                {"bar": 9, "beat": 1.5, "duration": 0.25, "instrument": "shaker", "sounding_articulation": "strike"},
+                {"bar": 9, "beat": 3.5, "duration": 0.25, "instrument": "shaker", "sounding_articulation": "strike"}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songplan_candidate": {
+    "schema_version": "2.0",
+    "name": "Indie-Dance_Tense_ForwardMotion",
+    "tempo": 120,
+    "time_signature": {
+      "numerator": 4,
+      "denominator": 4
+    },
+    "tonic": "C",
+    "mode": "mixolydian",
+    "style": "indie-dance (loop/groove-based)",
+    "arrangement": {
+      "sections": [
+        {
+          "id": "loop_main",
+          "start_bar": 1,
+          "bar_count": 8,
+          "energy": "medium"
+        },
+        {
+          "id": "texture_var_1",
+          "start_bar": 9,
+          "bar_count": 4,
+          "energy": "high"
+        },
+        {
+          "id": "texture_var_2",
+          "start_bar": 13,
+          "bar_count": 4,
+          "energy": "low"
+        },
+        {
+          "id": "release",
+          "start_bar": 17,
+          "bar_count": 4,
+          "energy": "peak"
+        }
+      ],
+      "harmony_assignments": [
+        {
+          "harmony": "Cm7",
+          "section_id": "loop_main",
+          "bar_range": [1, 8]
+        },
+        {
+          "harmony": "G7/Bb",
+          "section_id": "loop_main",
+          "bar_range": [3, 4]
+        },
+        {
+          "harmony": "Am7",
+          "section_id": "loop_main",
+          "bar_range": [5, 6]
+        },
+        {
+          "harmony": "Fm7",
+          "section_id": "loop_main",
+          "bar_range": [7, 8]
+        }
+      ]
+    },
+    "tracks": [
+      {
+        "id": "drums_main",
+        "type": "drums",
+        "role": "metric_pulse",
+        "motifs": [
+          {
+            "id": "kick_snare_pattern",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 0.5, "drum_voice": "kick"},
+              {"bar": 1, "beat": 3, "duration": 0.5, "drum_voice": "kick"},
+              {"bar": 1, "beat": 2, "duration": 0.5, "drum_voice": "snare"},
+              {"bar": 1, "beat": 4, "duration": 0.5, "drum_voice": "snare"}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {
+            "section_id": "loop_main",
+            "motif_id": "kick_snare_pattern",
+            "variation": "none"
+          },
+          {
+            "section_id": "texture_var_1",
+            "motif_id": "kick_snare_pattern",
+            "variation": "add_hi_hat_offbeats"
+          },
+          {
+            "section_id": "release",
+            "motif_id": "kick_snare_pattern",
+            "variation": "double_snare_on_4"
+          }
+        ]
+      },
+      {
+        "id": "percussion_textural",
+        "type": "percussion",
+        "role": "development_layer",
+        "motifs": [
+          {
+            "id": "shaker_syncopated",
+            "events": [
+              {"bar": 9, "beat": 1.5, "duration": 0.25, "instrument": "shaker", "sounding_articulation": "strike"},
+              {"bar": 9, "beat": 3.5, "duration": 0.25, "instrument": "shaker", "sounding_articulation": "strike"}
+            ]
+          },
+          {
+            "id": "claves_pattern",
+            "events": [
+              {"bar": 13, "beat": 1, "duration": 0.25, "instrument": "claves", "sounding_articulation": "strike"},
+              {"bar": 13, "beat": 3, "duration": 0.25, "instrument": "claves", "sounding_articulation": "strike"}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {
+            "section_id": "texture_var_1",
+            "motif_id": "shaker_syncopated",
+            "variation": "add_claves"
+          },
+          {
+            "section_id": "texture_var_2",
+            "motif_id": "claves_pattern",
+            "variation": "none"
+          }
+        ]
+      },
+      {
+        "id": "bass",
+        "type": "pitched",
+        "role": "metric_support",
+        "motifs": [
+          {
+            "id": "bass_line_loop",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 0.5, "pitches": ["C2"]},
+              {"bar": 1, "beat": 3, "duration": 0.5, "pitches": ["G2"]},
+              {"bar": 1, "beat": 2, "duration": 0.5, "pitches": ["Bb2"]},
+              {"bar": 1, "beat": 4, "duration": 0.5, "pitches": ["A2"]}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {
+            "section_id": "loop_main",
+            "motif_id": "bass_line_loop",
+            "variation": "none"
+          },
+          {
+            "section_id": "release",
+            "motif_id": "bass_line_loop",
+            "variation": "add_slide_to_C3_on_last_beat"
+          }
+        ]
+      },
+      {
+        "id": "melody",
+        "type": "pitched",
+        "role": "focal_identity",
+        "motifs": [
+          {
+            "id": "main_melody_loop",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 0.5, "pitches": ["C4"]},
+              {"bar": 1, "beat": 1.5, "duration": 0.5, "pitches": ["E4"]},
+              {"bar": 1, "beat": 2, "duration": 0.5, "pitches": ["G4"]},
+              {"bar": 1, "beat": 2.5, "duration": 0.5, "pitches": ["F4"]}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {
+            "section_id": "loop_main",
+            "motif_id": "main_melody_loop",
+            "variation": "none"
+          },
+          {
+            "section_id": "texture_var_1",
+            "motif_id": "main_melody_loop",
+            "variation": "add_octave_up_in_bar_9"
+          }
+        ]
+      }
+    ]
+  }
+}

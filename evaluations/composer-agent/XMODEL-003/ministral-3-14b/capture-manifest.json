@@ -1,0 +1,24 @@
+{
+  "capture_status": "CAPTURED",
+  "captured_at_utc": "2026-09-16T03:49:01.905649+00:00",
+  "model_identifier_requested": "ministral-3:14b",
+  "model_identifier_reported": "ministral-3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "prompt_input_sha256": "f98bed243462602eaf5de7a1e34de53e7d4e261bfbb71916ed68cc2b165e2ab5",
+  "request_sha256": "32587a3301d0848956065674895719774414518db401cdbba02941ff8d2887a5",
+  "raw_api_response_sha256": "75d07fa1d1662cdb324d46fd2f26003192787401bb7cde8d6900aeb236b545b6",
+  "raw_output_sha256": "a7ed92993dc6c9712e73196f07d181b79f1b37c714c7c27539e5566a09f22209",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 12288
+  },
+  "structured_output_schema": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-003\\structured-output-schema.json",
+  "semantic_repair_performed": false,
+  "note": "Parámetros de generación iguales no garantizan igualdad bit a bit entre hardware/backends."
+}

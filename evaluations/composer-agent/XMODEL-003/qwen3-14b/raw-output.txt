@@ -1,0 +1,492 @@
+{
+  "run_metadata": {
+    "run_id": "XMODEL-001-OUTPUT",
+    "interface_version": "composer-interface-v1.1"
+  },
+  "status": "READY_FOR_VALIDATION",
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "domain": "form",
+      "artistic_goal": {
+        "persistent_forward_motion": true,
+        "controlled_section_contrast": true
+      },
+      "question": "What structural framework supports persistent motion and controlled contrast?",
+      "scope": {
+        "genre_pack": "indie-dance",
+        "constraints": "loop-based with audible development"
+      },
+      "candidate_options": ["ABABCB", "Verse-Chorus-Verse-Chorus-Bridge-Chorus", "Loop-based with variation"],
+      "hard_constraints": ["No prescribed form", "Preserve identity across development"],
+      "soft_criteria": ["Coherence with hypnotic character", "Gradual accumulation"],
+      "structural_basis": {
+        "sections": ["Verse", "Pre-Chorus", "Chorus", "Bridge", "Outro"],
+        "repetition": "Chorus repetition with incremental variation"
+      },
+      "perceptual_basis": {
+        "status": "supported_with_scope",
+        "claim": "ABABCB structure enables controlled contrast while maintaining forward motion"
+      },
+      "composition_basis": {
+        "selection": "ABABCB with 8-bar sections",
+        "rationale": "Balances repetition and development per indie-dance genre pack"
+      },
+      "selected_option": {
+        "structure": "ABABCB",
+        "section_lengths": [8, 8, 8, 8, 8, 8]
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": {
+        "forward_motion": "Maintained through consistent groove and harmonic framework",
+        "development": "Achieved via incremental motif variation and texture changes"
+      },
+      "tradeoff": {
+        "complexity": "Simpler than ABABCB with bridge",
+        "development": "Sufficient for hypnotic character"
+      },
+      "dependencies": ["HARMONIC_FRAMEWORK", "GROOVE"],
+      "songplan_handoff": {
+        "sections": [
+          {"id": "A", "start_bar": 1, "bar_count": 8, "energy": "moderate"},
+          {"id": "B", "start_bar": 9, "bar_count": 8, "energy": "increasing"},
+          {"id": "A", "start_bar": 17, "bar_count": 8, "energy": "moderate"},
+          {"id": "B", "start_bar": 25, "bar_count": 8, "energy": "increasing"},
+          {"id": "C", "start_bar": 33, "bar_count": 8, "energy": "peak"},
+          {"id": "B", "start_bar": 41, "bar_count": 8, "energy": "decreasing"}
+        ]
+      },
+      "uncertainty": {
+        "formal_boundaries": "No explicit genre constraints on section count"
+      },
+      "provenance": [
+        "CK-FORM-01",
+        "GP-04"
+      ]
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "domain": "percussion",
+      "artistic_goal": {
+        "focal_identity": true,
+        "controlled_texture": true
+      },
+      "question": "What percussion architecture supports hypnotic motion and controlled development?",
+      "scope": {
+        "genre": "indie-dance",
+        "constraints": "No specific drum patterns prescribed"
+      },
+      "candidate_options": ["FULL", "MINIMAL", "DELEGATED"],
+      "hard_constraints": ["No default silence", "Must align with groove"],
+      "soft_criteria": ["Texture control", "Focal hierarchy"],
+      "structural_basis": {
+        "selected_outcome": "FULL",
+        "strategies": [
+          "Kick-snare-hi-hat layering",
+          "Sub-bass reinforcement",
+          "Textural variation across sections"
+        ]
+      },
+      "perceptual_basis": {
+        "status": "owner_listening_required_for_perceptual_claims",
+        "claim": "Layered percussion maintains hypnotic motion while allowing textural development"
+      },
+      "composition_basis": {
+        "selection": "FULL with dynamic layering",
+        "rationale": "Matches indie-dance's electronic texture needs while preserving focal identity"
+      },
+      "selected_option": {
+        "outcome": "FULL",
+        "bass_groove_interaction": "Kick aligned with bass line",
+        "focal_hierarchy_interaction": "Hi-hats maintain rhythmic focus",
+        "section_behavior": "Hi-hat density increases in choruses",
+        "development_behavior": "Sub-bass added in bridge"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": {
+        "texture": "Controlled variation through layering",
+        "focal_identity": "Maintained via consistent hi-hat pattern"
+      },
+      "tradeoff": {
+        "complexity": "More layers than minimal approach",
+        "development": "Enables textural evolution"
+      },
+      "dependencies": ["GROOVE", "TEXTURE"],
+      "songplan_handoff": {
+        "percussion_tracks": [
+          {
+            "id": "drums_01",
+            "type": "drums",
+            "role": "groove",
+            "motifs": [
+              {
+                "id": "kick_pattern",
+                "events": [
+                  {"bar": 1, "beat": 1, "duration": 1, "drum_voice": "kick"},
+                  {"bar": 1, "beat": 3, "duration": 1, "drum_voice": "kick"}
+                ]
+              },
+              {
+                "id": "snare_pattern",
+                "events": [
+                  {"bar": 1, "beat": 2, "duration": 1, "drum_voice": "snare"},
+                  {"bar": 1, "beat": 4, "duration": 1, "drum_voice": "snare"}
+                ]
+              }
+            ],
+            "section_assignments": [
+              {"section_id": "A", "motif_id": "kick_pattern"},
+              {"section_id": "B", "motif_id": "snare_pattern"}
+            ]
+          },
+          {
+            "id": "hihats_01",
+            "type": "percussion",
+            "role": "texture",
+            "motifs": [
+              {
+                "id": "hihat_pattern",
+                "events": [
+                  {"bar": 1, "beat": 1, "duration": 0.5, "instrument": "hihat", "sounding_articulation": "closed"}
+                ]
+              }
+            ],
+            "section_assignments": [
+              {"section_id": "C", "motif_id": "hihat_pattern"}
+            ]
+          }
+        ]
+      },
+      "uncertainty": {
+        "exact_realization": "Depends on host-supplied drum maps"
+      },
+      "provenance": [
+        "CK-SONG-01",
+        "GP-05"
+      ]
+    }
+  ],
+  "resolved_major_decisions": [
+    {
+      "decision_id": "FORM",
+      "selected_option": {
+        "structure": "ABABCB",
+        "section_lengths": [8, 8, 8, 8, 8, 8]
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "selected_option": {
+        "outcome": "FULL",
+        "bass_groove_interaction": "Kick aligned with bass line",
+        "focal_hierarchy_interaction": "Hi-hats maintain rhythmic focus"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "trace_reference": "decision_trace[1]"
+    }
+  ],
+  "artistic_priority_handoffs": [
+    {
+      "decision_id": "TEXTURE",
+      "surviving_options": ["Layered percussion", "Minimalist approach"],
+      "selected_option": {
+        "strategy": "Layered percussion with dynamic variation"
+      },
+      "active_intention": "Enhance hypnotic motion through textural development",
+      "tradeoff": "Increased complexity vs. simplicity",
+      "superiority_claim": false
+    }
+  ],
+  "capability_declarations": [
+    {
+      "enumerate": true,
+      "filter": "yes_with_scope",
+      "rank_1": {
+        "used": false,
+        "knowledge_id": null,
+        "task": null,
+        "target_construct": null,
+        "criterion": null,
+        "scope": null,
+        "evidence_basis": null,
+        "non_claim": "No rank-1 used in this composition"
+      },
+      "rank_2": "UNAVAILABLE",
+      "basis": "composer-interface-v1.1"
+    }
+  ],
+  "guardrail_results": [
+    {
+      "guardrail_id": "GR-011",
+      "status": "PASS",
+      "evidence": "Harmonic labels consistent with realized pitches",
+      "affected_decisions": ["HARMONIC_FRAMEWORK"],
+      "resolution_or_block": {
+        "action": "Confirmed consistency between harmonic labels and actual chord progressions"
+      }
+    },
+    {
+      "guardrail_id": "GR-001",
+      "status": "PASS",
+      "evidence": "Structure, perception, and decisions kept distinct",
+      "affected_decisions": ["FORM", "TEXTURE"],
+      "resolution_or_block": {
+        "action": "Maintained separation between formal structure and perceptual claims"
+      }
+    }
+  ],
+  "uncertainties": [
+    "Exact realization of percussion depends on host drum maps",
+    "Perceptual impact of textural changes requires listening validation"
+  ],
+  "completion_checklist": [
+    {
+      "decision": "FORM",
+      "status": "RESOLVED",
+      "decision_id": "FORM",
+      "selected_option_or_block_reason": {
+        "structure": "ABABCB",
+        "section_lengths": [8, 8, 8, 8, 8, 8]
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "SECTION_ROLES",
+      "status": "RESOLVED",
+      "decision_id": "SECTION_ROLES",
+      "selected_option_or_block_reason": {
+        "roles": ["Verse", "Pre-Chorus", "Chorus", "Bridge", "Outro"]
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "HARMONIC_FRAMEWORK",
+      "status": "RESOLVED",
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "selected_option_or_block_reason": {
+        "tonic": "C",
+        "mode": "ionian",
+        "framework": "Diatonic with modal interchange"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "FOCAL_IDENTITY",
+      "status": "RESOLVED",
+      "decision_id": "FOCAL_IDENTITY",
+      "selected_option_or_block_reason": {
+        "element": "Lead melody",
+        "character": "Persistent with gradual variation"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "LEAD_MOTIF_BEHAVIOR",
+      "status": "RESOLVED",
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "selected_option_or_block_reason": {
+        "behavior": "Persistent with rhythmic and harmonic development"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "BASS_ROLE",
+      "status": "RESOLVED",
+      "decision_id": "BASS_ROLE",
+      "selected_option_or_block_reason": {
+        "role": "Groove foundation",
+        "interaction": "Aligned with kick drum"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "GROOVE",
+      "status": "RESOLVED",
+      "decision_id": "GROOVE",
+      "selected_option_or_block_reason": {
+        "type": "4/4 with syncopation",
+        "tempo": 120
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "N3-P_PERCUSSION_ARCHITECTURE",
+      "status": "RESOLVED",
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "selected_option_or_block_reason": {
+        "outcome": "FULL",
+        "description": "Layered percussion with dynamic variation"
+      },
+      "trace_reference": "decision_trace[1]"
+    },
+    {
+      "decision": "TEXTURE",
+      "status": "RESOLVED",
+      "decision_id": "TEXTURE",
+      "selected_option_or_block_reason": {
+        "strategy": "Controlled layering with section-specific density"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "DEVELOPMENT",
+      "status": "RESOLVED",
+      "decision_id": "DEVELOPMENT",
+      "selected_option_or_block_reason": {
+        "strategy": "Incremental motif variation and textural evolution"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "ENERGY_TENSION_RELEASE",
+      "status": "RESOLVED",
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "selected_option_or_block_reason": {
+        "strategy": "Gradual build-up through layering and intensity"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "ENDING",
+      "status": "RESOLVED",
+      "decision_id": "ENDING",
+      "selected_option_or_block_reason": {
+        "strategy": "Fade-out with final chord resolution"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "CROSS_DOMAIN_CONFLICTS",
+      "status": "RESOLVED",
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "selected_option_or_block_reason": {
+        "resolution": "Ensured groove complements harmonic framework"
+      },
+      "trace_reference": "decision_trace[0]"
+    },
+    {
+      "decision": "SONGPLAN_HANDOFF",
+      "status": "RESOLVED",
+      "decision_id": "SONGPLAN_HANDOFF",
+      "selected_option_or_block_reason": {
+        "status": "SongPlanV2 prepared with all decisions"
+      },
+      "trace_reference": "decision_trace[0]"
+    }
+  ],
+  "n3_p_decision": {
+    "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+    "candidate_strategies": ["FULL", "MINIMAL", "DELEGATED"],
+    "selected_outcome": "FULL",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "bass_groove_interaction": "Kick aligned with bass line",
+    "focal_hierarchy_interaction": "Hi-hats maintain rhythmic focus",
+    "section_behavior": "Hi-hat density increases in choruses",
+    "development_behavior": "Sub-bass added in bridge"
+  },
+  "songplan_candidate": {
+    "schema_version": "2.0",
+    "name": "Hypnotic Motion",
+    "tempo": 120,
+    "time_signature": "4/4",
+    "tonic": "C",
+    "mode": "ionian",
+    "style": "indie-dance",
+    "arrangement": {
+      "sections": [
+        {"id": "A", "start_bar": 1, "bar_count": 8, "energy": "moderate"},
+        {"id": "B", "start_bar": 9, "bar_count": 8, "energy": "increasing"},
+        {"id": "A", "start_bar": 17, "bar_count": 8, "energy": "moderate"},
+        {"id": "B", "start_bar": 25, "bar_count": 8, "energy": "increasing"},
+        {"id": "C", "start_bar": 33, "bar_count": 8, "energy": "peak"},
+        {"id": "B", "start_bar": 41, "bar_count": 8, "energy": "decreasing"}
+      ],
+      "harmony_assignments": [
+        {"harmony": "C Ionian", "section_id_or_start_bar_bar_count": "A"},
+        {"harmony": "G Mixolydian", "section_id_or_start_bar_bar_count": "B"},
+        {"harmony": "C Ionian", "section_id_or_start_bar_bar_count": "C"}
+      ]
+    },
+    "tracks": [
+      {
+        "id": "melody_01",
+        "type": "pitched",
+        "role": "lead",
+        "motifs": [
+          {
+            "id": "lead_melody",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 1, "pitches": ["C5", "E5"], "velocity": 90},
+              {"bar": 1, "beat": 2, "duration": 1, "pitches": ["G5", "C6"], "velocity": 85}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {"section_id": "A", "motif_id": "lead_melody"},
+          {"section_id": "B", "motif_id": "lead_melody"}
+        ]
+      },
+      {
+        "id": "bass_01",
+        "type": "pitched",
+        "role": "bass",
+        "motifs": [
+          {
+            "id": "bass_line",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 1, "pitches": ["C2"], "velocity": 70},
+              {"bar": 1, "beat": 3, "duration": 1, "pitches": ["G2"], "velocity": 65}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {"section_id": "A", "motif_id": "bass_line"},
+          {"section_id": "B", "motif_id": "bass_line"}
+        ]
+      },
+      {
+        "id": "drums_01",
+        "type": "drums",
+        "role": "groove",
+        "motifs": [
+          {
+            "id": "kick_pattern",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 1, "drum_voice": "kick"},
+              {"bar": 1, "beat": 3, "duration": 1, "drum_voice": "kick"}
+            ]
+          },
+          {
+            "id": "snare_pattern",
+            "events": [
+              {"bar": 1, "beat": 2, "duration": 1, "drum_voice": "snare"},
+              {"bar": 1, "beat": 4, "duration": 1, "drum_voice": "snare"}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {"section_id": "A", "motif_id": "kick_pattern"},
+          {"section_id": "B", "motif_id": "snare_pattern"}
+        ]
+      },
+      {
+        "id": "hihats_01",
+        "type": "percussion",
+        "role": "texture",
+        "motifs": [
+          {
+            "id": "hihat_pattern",
+            "events": [
+              {"bar": 1, "beat": 1, "duration": 0.5, "instrument": "hihat", "sounding_articulation": "closed"}
+            ]
+          }
+        ],
+        "section_assignments": [
+          {"section_id": "C", "motif_id": "hihat_pattern"}
+        ]
+      }
+    ]
+  }
+}

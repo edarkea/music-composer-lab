@@ -1,0 +1,24 @@
+{
+  "capture_status": "CAPTURED",
+  "captured_at_utc": "2026-09-16T03:10:25.159276+00:00",
+  "model_identifier_requested": "qwen3:14b",
+  "model_identifier_reported": "qwen3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "prompt_input_sha256": "f98bed243462602eaf5de7a1e34de53e7d4e261bfbb71916ed68cc2b165e2ab5",
+  "request_sha256": "a8f7d6da9c6fb38c5be97d8140e7fe81d7238acabef5f693adde81c14d07cf3e",
+  "raw_api_response_sha256": "2bdac21caaa2db9dd754996d43e581ae84f428fda1f3677700d39ebbe87e857c",
+  "raw_output_sha256": "eaf53702cce48908df35d4312fce73f67199f3441182c0ca0f8fc6e8524ac7c1",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 12288
+  },
+  "structured_output_schema": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-003\\structured-output-schema.json",
+  "semantic_repair_performed": false,
+  "note": "Parámetros de generación iguales no garantizan igualdad bit a bit entre hardware/backends."
+}
