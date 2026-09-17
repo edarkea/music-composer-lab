@@ -40,10 +40,12 @@ def records(stage: int):
             ROOT / "integrations/composer-agent/stage-3-songplan-serialization-schema.yaml"]
 
 def assemble(stage: int, brief: Path, instruction: Path, out: Path,
-             prior: Path | None = None) -> dict:
+             prior: Path | None = None, extras: list[Path] | None = None) -> dict:
     brief, instruction, out = brief.resolve(), instruction.resolve(), out.resolve()
     prior = prior.resolve() if prior else None
+    extras = [p.resolve() for p in (extras or [])]
     files = [brief] + records(stage) + [instruction]
+    files += extras
     if prior: files.append(prior)
     missing = [str(p) for p in files if not p.exists()]
     if missing: raise FileNotFoundError("missing required records: " + ", ".join(missing))
@@ -56,7 +58,7 @@ def assemble(stage: int, brief: Path, instruction: Path, out: Path,
         blocks += [f"BEGIN RECORD: {p.as_posix()}", text, f"END RECORD: {p.as_posix()}"]
         resolved.append({"path": str(p.relative_to(ROOT)), "sha256": digest(p.read_bytes())})
     payload = "\n\n".join(blocks) + "\n"
-    result = preflight(payload, stage, brief, instruction, prior, resolved)
+    result = preflight(payload, stage, brief, instruction, prior, resolved, extras)
     if not result["pass"]: raise ValueError(json.dumps(result, ensure_ascii=False))
     out.parent.mkdir(parents=True, exist_ok=True); out.write_text(payload, encoding="utf-8", newline="")
     manifest = {"payload_path": str(out.relative_to(ROOT)), "payload_sha256": digest(payload.encode()),
@@ -66,7 +68,7 @@ def assemble(stage: int, brief: Path, instruction: Path, out: Path,
     return manifest
 
 def preflight(payload: str, stage: int, brief: Path, instruction: Path,
-              prior: Path | None = None, resolved=None) -> dict:
+              prior: Path | None = None, resolved=None, extras: list[Path] | None = None) -> dict:
     errors=[]
     brief_text=read(brief) if brief.exists() else ""
     instruction_text=read(instruction) if instruction.exists() else ""
@@ -75,6 +77,7 @@ def preflight(payload: str, stage: int, brief: Path, instruction: Path,
     if stage > 1 and (not prior or not prior.exists() or read(prior) not in payload): errors.append("prior accepted output missing from payload")
     if FORBIDDEN_EXAMPLES.search(payload): errors.append("forbidden composition example marker present")
     required = records(stage)
+    required += [p.resolve() for p in (extras or [])]
     for p in required:
         if not p.exists() or read(p) not in payload: errors.append(f"required record missing from payload: {p.relative_to(ROOT)}")
     return {"pass": not errors, "stage": stage, "errors": errors,
@@ -175,11 +178,11 @@ def gate_stage3(data, trace, material):
 
 def main():
     p=argparse.ArgumentParser(); sub=p.add_subparsers(dest="cmd",required=True)
-    a=sub.add_parser("assemble"); a.add_argument("--stage",type=int,choices=[1,2,3],required=True); a.add_argument("--brief",type=Path,required=True); a.add_argument("--instruction",type=Path,required=True); a.add_argument("--out",type=Path,required=True); a.add_argument("--prior",type=Path)
+    a=sub.add_parser("assemble"); a.add_argument("--stage",type=int,choices=[1,2,3],required=True); a.add_argument("--brief",type=Path,required=True); a.add_argument("--instruction",type=Path,required=True); a.add_argument("--out",type=Path,required=True); a.add_argument("--prior",type=Path); a.add_argument("--extra-record",type=Path,action="append",default=[])
     r=sub.add_parser("retry-payload"); r.add_argument("--original",type=Path,required=True); r.add_argument("--out",type=Path,required=True); r.add_argument("--diagnostic",action="append",required=True)
     g=sub.add_parser("gate"); g.add_argument("--stage",type=int,choices=[1,2,3],required=True); g.add_argument("--output",type=Path,required=True)
     args=p.parse_args()
-    if args.cmd=="assemble": print(json.dumps(assemble(args.stage,args.brief,args.instruction,args.out,args.prior),ensure_ascii=False,indent=2)); return 0
+    if args.cmd=="assemble": print(json.dumps(assemble(args.stage,args.brief,args.instruction,args.out,args.prior,args.extra_record),ensure_ascii=False,indent=2)); return 0
     if args.cmd=="retry-payload": print(json.dumps(build_retry_payload(args.original,args.diagnostic,args.out),ensure_ascii=False,indent=2)); return 0
     result=gate(args.stage,args.output); print(json.dumps(result,ensure_ascii=False,indent=2)); return 0 if result["pass"] else 1
 if __name__ == "__main__": main()

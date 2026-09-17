@@ -1,0 +1,22 @@
+test_id: XMODEL-006
+status: PREPARED_NOT_EXECUTED
+brief: {file: brief.yaml, sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B}
+stage_1_records:
+  - integrations/composer-agent/system-contract-v1.1.md
+  - datasets/composer-interface-v1.1/decision-schema.yaml
+  - datasets/composer-interface-v1.1/guardrails.yaml
+  - datasets/composer-interface-v1.1/completion-checklist.yaml
+  - datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml
+  - datasets/composer-interface-v1.1/genres/indie-dance.yaml
+  - datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml
+  - integrations/composer-agent/stage-1-output-schema-v1.1-hardened.json
+  - evaluations/composer-agent/XMODEL-006/frozen-prompt-stage-1-clarified.txt
+stage_2_records: [runtime: accepted_stage_1_output, brief.yaml, frozen-prompt-stage-2.txt, stage-2-musical-material-schema.yaml]
+stage_3_records: [runtime: accepted_stage_1_output, runtime: accepted_stage_2_output, frozen-prompt-stage-3.txt, songplan-v2-contract.yaml, stage-3-songplan-serialization-schema.yaml]
+payload_requirements:
+  exact_brief_embedded: true
+  required_records_embedded: true
+  genre_records_embedded: true
+  no_example_markers: true
+  schema_transmitted_via_ollama_format: true
+  retry_original_context_preserved: true

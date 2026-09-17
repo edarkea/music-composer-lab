@@ -1,0 +1,9 @@
+STAGE 1 — DECISION PLANNING
+
+Use the supplied artistic brief and only the supplied composer-interface-v1.1 records. Resolve every required Stage 1 decision and return exactly one JSON object conforming to the supplied Stage 1 schema.
+
+Serialization requirements (mechanical only): return exactly one JSON object; no Markdown; no ``` fences; no prose before or after the JSON; do not emit multiple JSON objects; include every required field from the supplied schema with the exact field names.
+
+Resolve FORM, SECTION_ROLES, HARMONIC_FRAMEWORK, FOCAL_IDENTITY, LEAD_MOTIF_BEHAVIOR, BASS_ROLE, GROOVE, N3-P_PERCUSSION_ARCHITECTURE, TEXTURE, DEVELOPMENT, ENERGY_TENSION_RELEASE, ENDING and CROSS_DOMAIN_CONFLICTS. Apply ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION → CONTINUE when applicable. Rank-2 is unavailable. Do not add SongPlan or note-level complete material.
+
+This clarification changes presentation and serialization only. It provides no musical recommendation, chord, note, rhythm, form, instrumentation or preference.

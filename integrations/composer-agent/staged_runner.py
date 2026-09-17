@@ -40,11 +40,12 @@ def main() -> int:
     p.add_argument("--instruction", type=Path, required=True)
     p.add_argument("--prior", type=Path)
     p.add_argument("--format-schema", type=Path, help="Stage-specific JSON Schema for Ollama structured output")
+    p.add_argument("--required-record", type=Path, action="append", default=[], help="Additional record required in the model-visible payload")
     p.add_argument("--ollama-url", default="http://127.0.0.1:11434/api/chat")
     a = p.parse_args()
     prompt_bytes = a.input.read_bytes(); brief_bytes = a.brief.read_bytes()
     prompt = prompt_bytes.decode("utf-8")
-    pf = preflight(prompt, a.stage_number, a.brief.resolve(), a.instruction.resolve(), a.prior.resolve() if a.prior else None)
+    pf = preflight(prompt, a.stage_number, a.brief.resolve(), a.instruction.resolve(), a.prior.resolve() if a.prior else None, extras=a.required_record)
     if not pf["pass"]:
         raise ValueError("preflight failed: " + json.dumps(pf, ensure_ascii=False))
     settings = dict(SETTINGS); settings["num_predict"] = a.num_predict

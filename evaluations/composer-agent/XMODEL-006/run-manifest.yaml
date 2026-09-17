@@ -1,0 +1,50 @@
+test_id: XMODEL-006
+status: PREPARED_NOT_EXECUTED
+purpose: prospective_stage_1_nonsemantic_hardening_test
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+models: [qwen3:14b, ministral-3:14b]
+brief: brief.yaml
+brief_sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B
+same_brief_as_XMODEL-005: true
+not_byte_identical_to_XMODEL-005: true
+changed_variable: technical_stage_1_structured_output_enforcement
+historical_artifacts:
+  XMODEL-004: invalid_not_evidence
+  XMODEL-005: valid_negative_test_untouched
+stages:
+  stage_1:
+    prompt: frozen-prompt-stage-1-clarified.txt
+    prompt_sha256: F9A90DE46B2246E2282607F9E1F19894D569382576DC396ECD062741CBA897C7
+    schema: stage-1-output-schema-v1.1-hardened.json
+    schema_sha256: 527387A470CE8D9BB07D249A56410E78689CBD7133CD0C1109B3CBF1B914582E
+    num_predict: 4096
+    format: ollama_json_schema
+  stage_2:
+    prompt: frozen-prompt-stage-2.txt
+    prompt_sha256: 7E1753261628973D74BFF599E5AD53E502E7E0EFBA439AAA4647715F44221027
+    num_predict: 8192
+    runs_only_after_stage_1_pass: true
+  stage_3:
+    prompt: frozen-prompt-stage-3.txt
+    prompt_sha256: 400E024ACDE2F47D2AB5AEDCC09D064E443839AA2D9442423C0CE495B4BC1C80
+    num_predict: 8192
+    runs_only_after_stage_2_pass: true
+generation_parameters:
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  num_predict_change_since_XMODEL-005: none
+retry_policy: {max_attempts_per_stage: 3, diagnostics_only: true, previous_raw_output_replay: false, semantic_repair: false}
+harness:
+  assembler: integrations/composer-agent/staged_harness.py
+  runner: integrations/composer-agent/staged_runner.py
+  gate: integrations/composer-agent/staged_harness.py gate
+  execution_commands: execution-commands.md
+  stage_1_payload_sha256: 0CC5EF7762AC226258FFAC9F7564D2199BA27F4EE4E7D81D3183A83A77F76C8A
+  test_command: python integrations/composer-agent/test_staged_harness.py -v
+  adapter_musical_decisions: 0
+execution: {authorized: false, executed: false, run_count: 0}

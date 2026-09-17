@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "composer-agent-stage-1-output-v1.1-hardened",
+  "title": "Stage 1 DecisionTrace structural output",
+  "description": "Enforcement estructural únicamente; no selecciona ni inventa contenido musical.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision_trace"],
+  "properties": {
+    "decision_trace": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": { "$ref": "#/$defs/decision" }
+    }
+  },
+  "$defs": {
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision_id", "options_considered", "selected_option", "selection_basis", "active_intention", "tradeoff", "trace_reference"],
+      "properties": {
+        "decision_id": { "type": "string", "minLength": 1 },
+        "options_considered": { "type": "array", "minItems": 1 },
+        "selected_option": {},
+        "selection_basis": { "enum": ["EXPORTED_KNOWLEDGE_FILTER", "ARTISTIC_PRIORITY", "RANK-1_AUTHORIZED", "NOT_APPLICABLE"] },
+        "active_intention": { "type": "string", "minLength": 1 },
+        "tradeoff": {},
+        "trace_reference": { "type": "string", "minLength": 1 },
+        "surviving_options": { "type": "array" },
+        "superiority_claim": { "const": false },
+        "candidate_strategies": { "type": "array", "minItems": 1 },
+        "selected_outcome": { "enum": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"] },
+        "bass_groove_interaction": { "type": "string", "minLength": 1 },
+        "focal_hierarchy_interaction": { "type": "string", "minLength": 1 },
+        "section_behavior": {},
+        "development_behavior": {}
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "decision_id": { "const": "N3-P_PERCUSSION_ARCHITECTURE" } } },
+          "then": { "required": ["candidate_strategies", "selected_outcome", "bass_groove_interaction", "focal_hierarchy_interaction", "section_behavior", "development_behavior"] }
+        }
+      ]
+    }
+  }
+}

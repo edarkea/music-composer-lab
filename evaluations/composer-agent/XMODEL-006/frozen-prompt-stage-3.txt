@@ -1,0 +1,5 @@
+STAGE 3 — SONGPLAN SERIALIZATION
+
+Use the frozen DecisionTrace, frozen Stage-2 musical material and the exact authoritative SongPlanV2 contract supplied by the runner. Serialize the already-decided material into one SongPlanV2 object.
+
+Do not reconsider harmony, form, motifs or N3-P. Do not add or remove musical content for artistic reasons. Use only contract-supported fields, values and operations. Return only the SongPlanV2 object. Deterministic validation will decide whether it is valid; do not claim that it is valid in prose.
