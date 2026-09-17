@@ -1,0 +1,55 @@
+test_id: XMODEL-005
+status: PREPARED_NOT_EXECUTED
+purpose: repaired_valid_staged_transfer_test
+protocol_status: XMODEL-004_PERMANENTLY_INVALID
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+models: [qwen3:14b, ministral-3:14b]
+brief: brief.yaml
+brief_sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B
+same_brief_as_XMODEL-001_to_XMODEL-003: true
+not_continuation_of_XMODEL-004_evidence: true
+staged_architecture: integrations/composer-agent/staged-execution-v1.md
+harness:
+  runner: integrations/composer-agent/staged_harness.py
+  model_runner: integrations/composer-agent/staged_runner.py
+  model_runner_preflight: >-
+    staged_runner.py requires the assembled payload as --input, the exact brief,
+    stage-number, instruction and prior accepted output when applicable; it
+    aborts before API submission if preflight fails.
+  gate: executable_functions_preflight_gate_can_advance
+  resolved_input_manifest: resolved-input-manifest.yaml
+  preflight_results: preflight-validation.md
+  stage_prompts:
+    stage_1: frozen-prompt-stage-1.txt
+    stage_2: frozen-prompt-stage-2.txt
+    stage_3: frozen-prompt-stage-3.txt
+  schemas:
+    stage_1: integrations/composer-agent/stage-1-decision-trace-schema.yaml
+    stage_2: integrations/composer-agent/stage-2-musical-material-schema.yaml
+    stage_3: integrations/composer-agent/stage-3-songplan-serialization-schema.yaml
+    songplan_v2: datasets/composer-interface-v1.1/songplan-v2-contract.yaml
+generation_parameters:
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  num_predict: {stage_1: 4096, stage_2: 8192, stage_3: 8192}
+  change_from_XMODEL-004: >-
+    none; these are the prepared values. The repair changes input assembly and
+    gate execution, not model generation settings.
+retry_policy: {max_attempts_per_stage: 3, diagnostics_only: true, semantic_repair: false}
+execution:
+  authorized: false
+  executed: false
+  run_count: 0
+  model_order: [qwen3:14b, ministral-3:14b]
+outputs:
+  qwen3:14b: outputs/ (empty; no model invocation)
+  ministral-3:14b: outputs/ (empty; no model invocation)
+comparability:
+  XMODEL-004: invalid_no_comparison
+  XMODEL-003: only_dimensions_with_matching_conditions
+  staged_execution_is_changed_condition: true

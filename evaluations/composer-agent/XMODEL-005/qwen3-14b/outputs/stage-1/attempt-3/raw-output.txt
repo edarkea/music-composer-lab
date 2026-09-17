@@ -1,0 +1,108 @@
+{
+  "FORM": {
+    "options_considered": ["Verse-Chorus-Verse-Chorus structure with bridge", "Continuous loop with gradual textural shifts"],
+    "selected_option": "Verse-Chorus-Verse-Chorus structure with bridge",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Maintain structural clarity while enabling controlled contrast",
+    "tradeoff": "Balances indie-dance's loop-based continuity with the brief's requirement for section differentiation",
+    "trace_reference": "GP-04 (indie-dance genre pack)"
+  },
+  "SECTION_ROLES": {
+    "options_considered": ["Verse-Chorus-Verse-Chorus structure with bridge", "Continuous loop with gradual textural shifts"],
+    "selected_option": "Verse-Chorus-Verse-Chorus structure with bridge",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Maintain structural clarity while enabling controlled contrast",
+    "tradeoff": "Balances indie-dance's loop-based continuity with the brief's requirement for section differentiation",
+    "trace_reference": "GP-04 (indie-dance genre pack)"
+  },
+  "HARMONIC_FRAMEWORK": {
+    "options_considered": ["Static vamp in D minor with modal variation", "Progressive loop with key shifts"],
+    "selected_option": "Static vamp in D minor with modal variation",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Create tension through modal exploration within a fixed harmonic foundation",
+    "tradeoff": "Prioritizes indie-dance's groove continuity over harmonic complexity",
+    "trace_reference": "GP-02 (indie-dance genre pack)"
+  },
+  "FOCAL_IDENTITY": {
+    "options_considered": ["Synth lead with evolving timbre", "Percussive rhythm as primary focus"],
+    "selected_option": "Synth lead with evolving timbre",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Maintain clear melodic identity through textural development",
+    "tradeoff": "Chooses synthetic timbral evolution over purely rhythmic focus",
+    "trace_reference": "CK-MEL-01 (approved composition knowledge)"
+  },
+  "LEAD_MOTIF_BEHAVIOR": {
+    "options_considered": ["Repetitive phrase with gradual ornamentation", "Fragmented motifs with reassembly"],
+    "selected_option": "Repetitive phrase with gradual ornamentation",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Enable audible development through incremental melodic expansion",
+    "tradeoff": "Balances repetition requirements with the need for audible transformation",
+    "trace_reference": "CK-DEV-01 (approved composition knowledge)"
+  },
+  "BASS_ROLE": {
+    "options_considered": ["Persistent kick-drum groove", "Melodic bassline with rhythmic variation"],
+    "selected_option": "Persistent kick-drum groove",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Establish stable rhythmic foundation for harmonic and melodic development",
+    "tradeoff": "Prioritizes groove continuity over melodic bass complexity",
+    "trace_reference": "GP-05 (indie-dance genre pack)"
+  },
+  "GROOVE": {
+    "options_considered": ["120 BPM mid-tempo drive", "130 BPM energetic pulse"],
+    "selected_option": "125 BPM hybrid groove",
+    "selection_basis": "ARTISTIC_PRIORITY",
+    "active_intention": "Create tension through rhythmic persistence and gradual acceleration",
+    "tradeoff": "Chooses intermediate tempo to balance energy and developmental pacing",
+    "trace_reference": "CK-RHY-01 (approved composition knowledge)"
+  },
+  "N3-P_PERCUSSION_ARCHITECTURE": {
+    "candidate_strategies": ["FULL with layered percussion", "DELEGATED to synth arpeggios"],
+    "selected_outcome": "DELEGATED",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "bass_groove_interaction": "Kick-drum aligns with bass pulse",
+    "focal_hierarchy_interaction": "Percussion supports synth lead without competing",
+    "section_behavior": "Percussive elements evolve with textural shifts",
+    "development_behavior": "Synth arpeggios assume rhythmic roles in absence of dedicated percussion",
+    "trace_reference": "GP-06 (indie-dance genre pack)"
+  },
+  "TEXTURE": {
+    "options_considered": ["Layered synths with gradual density increase", "Sparse arrangement with sudden additions"],
+    "selected_option": "Layered synths with gradual density increase",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Enable controlled accumulation while maintaining clarity",
+    "tradeoff": "Balances indie-dance's textural richness with the need for audible development",
+    "trace_reference": "GP-04 (indie-dance genre pack)"
+  },
+  "DEVELOPMENT": {
+    "options_considered": ["Motivic transformation through inversion", "Textural evolution with harmonic variation"],
+    "selected_option": "Textural evolution with harmonic variation",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Create audible progression through layering and modal shifts",
+    "tradeoff": "Prioritizes textural development over strict motivic transformation",
+    "trace_reference": "CK-DEV-01 (approved composition knowledge)"
+  },
+  "ENERGY_TENSION_RELEASE": {
+    "options_considered": ["Gradual build through layering", "Sudden dynamic shifts"],
+    "selected_option": "Gradual build through layering",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Create tension through incremental textural and harmonic expansion",
+    "tradeoff": "Balances energy buildup with the need for controlled release",
+    "trace_reference": "CK-HAR-02 (approved composition knowledge)"
+  },
+  "ENDING": {
+    "options_considered": ["Return to initial vamp with fade-out", "Sudden stop with final chord"],
+    "selected_option": "Return to initial vamp with fade-out",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Provide resolution while maintaining harmonic continuity",
+    "tradeoff": "Balances closure with the need for sustained tension",
+    "trace_reference": "GP-03 (indie-dance genre pack)"
+  },
+  "CROSS_DOMAIN_CONFLICTS": {
+    "options_considered": ["Harmonic-melodic alignment checks", "Textural-groove compatibility reviews"],
+    "selected_option": "Harmonic-melodic alignment checks",
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "active_intention": "Ensure melodic development remains compatible with harmonic framework",
+    "tradeoff": "Prioritizes melodic-harmonic coherence over textural considerations",
+    "trace_reference": "CK-HAR-01 (approved composition knowledge)"
+  }
+}

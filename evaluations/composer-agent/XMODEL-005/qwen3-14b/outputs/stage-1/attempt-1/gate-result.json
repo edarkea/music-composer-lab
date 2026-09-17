@@ -1,0 +1,10 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  1,
+    "gate":  "FAIL",
+    "errors":  [
+                   "markdown wrapper is not valid structured output"
+               ],
+    "done_reason":  "stop",
+    "semantic_repair_performed":  false
+}

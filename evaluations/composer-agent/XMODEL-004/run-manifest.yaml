@@ -1,0 +1,71 @@
+test_id: XMODEL-004
+status: EXECUTED_INVALID
+purpose: staged_third_party_composer_execution
+primary_question: >-
+  ¿Pueden los mismos modelos 14B aplicar composer-interface-v1.1 cuando las
+  decisiones, el material musical y la serialización se separan mediante gates?
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+models:
+  - qwen3:14b
+  - ministral:3-14b
+brief: brief.yaml
+brief_sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B
+same_artistic_brief_as_XMODEL-001_and_XMODEL-002: true
+staged_execution:
+  architecture: integrations/composer-agent/staged-execution-v1.md
+  stage_1_prompt: frozen-prompt-stage-1.txt
+  stage_1_prompt_sha256: 998ECD3D167640671B060FDDF78CE35D56C4409FC3696641C4C7EDC7DEA3C306
+  stage_1_schema: integrations/composer-agent/stage-1-decision-trace-schema.yaml
+  stage_1_gate: integrations/composer-agent/staged-gates.yaml#stage_1
+  stage_2_prompt: frozen-prompt-stage-2.txt
+  stage_2_prompt_sha256: D736B86D30D95F1AA38F0006FA0B25B78B4337D2D464F0CF07067B5FA07F4AB5
+  stage_2_schema: integrations/composer-agent/stage-2-musical-material-schema.yaml
+  stage_2_gate: integrations/composer-agent/staged-gates.yaml#stage_2
+  stage_3_prompt: frozen-prompt-stage-3.txt
+  stage_3_prompt_sha256: A281A4305C12E94A714D3994DF059719C5C88D494557BC8426DB6E0724919CD3
+  stage_3_schema: integrations/composer-agent/stage-3-songplan-serialization-schema.yaml
+  stage_3_gate: integrations/composer-agent/staged-gates.yaml#stage_3
+retry_policy:
+  max_retries_per_stage: 2
+  semantic_repair: false
+generation_parameters:
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  num_predict:
+    stage_1: 4096
+    stage_2: 8192
+    stage_3: 8192
+  same_sampling_between_models_except_model_identifier: true
+immutable_capture:
+  required_per_attempt: [model_identifier, interface_version, stage_identifier, attempt_number, input_hash, brief_hash, generation_parameters, raw_api_response, raw_model_output, sha256]
+  overwrite_prior_attempts: false
+execution:
+  run_count: 1
+  authorized: true
+  executed: true
+  completed_at_local_date: 2026-09-16
+  model_order: [qwen3:14b, ministral-3:14b]
+  stage_1:
+    qwen3:14b: {status: BLOCKED, attempts: 3}
+    ministral-3:14b: {status: BLOCKED, attempts: 3}
+  stage_2: NOT_RUN
+  stage_3: NOT_RUN
+  validity: INVALID
+  validity_reason: >-
+    Captured requests contained only each frozen prompt; the brief and records
+    named by the prompts were not assembled into the model input. Deterministic
+    gates were descriptive YAML/manual checks, not executable validators.
+success_gate:
+  stage_1: PASS
+  stage_2: PASS
+  stage_3: PASS
+  songplan_v2: VALID
+  unsupported_rank: 0
+  false_owner_attribution: 0
+  n3_p: PASS
+  adapter_semantic_repair: 0

@@ -1,0 +1,9 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  2,
+    "gate":  "FAIL",
+    "errors":  [
+                   "done_reason length",
+                   "output incomplete; no stage advancement"
+               ]
+}

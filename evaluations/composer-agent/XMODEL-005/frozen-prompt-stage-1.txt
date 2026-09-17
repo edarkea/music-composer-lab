@@ -1,0 +1,7 @@
+STAGE 1 — DECISION PLANNING
+
+Use the supplied artistic brief and only the listed composer-interface-v1.1 records. Produce one DecisionTrace object and no SongPlan or note-level complete material.
+
+Resolve FORM, SECTION_ROLES, HARMONIC_FRAMEWORK, FOCAL_IDENTITY, LEAD_MOTIF_BEHAVIOR, BASS_ROLE, GROOVE, N3-P_PERCUSSION_ARCHITECTURE, TEXTURE, DEVELOPMENT, ENERGY_TENSION_RELEASE, ENDING and CROSS_DOMAIN_CONFLICTS. For every required decision provide options, selection basis, intention, trade-off and trace reference. Apply ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION → CONTINUE when applicable. Do not self-certify a later stage. Rank-2 is unavailable. Return only the stage-1 schema object.
+
+Supplied records: artistic brief, decision-schema.yaml, relevant guardrails.yaml, completion-checklist.yaml, relevant approved knowledge, relevant indie-dance pack, n3-p reference, stage-1-decision-trace-schema.yaml.

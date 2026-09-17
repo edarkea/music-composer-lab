@@ -1,0 +1,10 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  1,
+    "gate":  "FAIL",
+    "errors":  [
+                   "required selected_option absent for all 13 decisions",
+                   "selection_basis not declared enum",
+                   "N3-P required fields absent"
+               ]
+}

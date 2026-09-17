@@ -1,0 +1,9 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  3,
+    "gate":  "FAIL",
+    "errors":  [
+                   "N3-P declares RANK-1_AUTHORIZED without authorized CK-CROSS-01 scope/evidence",
+                   "Artistic Priority/filter evidence is not structurally represented for non-N3 decisions"
+               ]
+}

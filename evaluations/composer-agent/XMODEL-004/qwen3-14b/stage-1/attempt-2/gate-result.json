@@ -1,0 +1,10 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  2,
+    "gate":  "FAIL",
+    "errors":  [
+                   "selection_basis values are not declared enum",
+                   "Artistic Priority marker/surviving_options absent where multiple candidates remain",
+                   "N3-P required interaction fields absent"
+               ]
+}

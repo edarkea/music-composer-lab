@@ -1,0 +1,11 @@
+```json
+{
+  "decision_id": "FORM",
+  "options_considered": ["Loop-based progression with verse-chorus differentiation", "Continuous build with no clear section boundaries"],
+  "selected_option": "Loop-based progression with verse-chorus differentiation",
+  "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+  "active_intention": "Enable gradual accumulation while maintaining structural clarity",
+  "tradeoff": "Balances indie-dance's loop-based continuity with the brief's requirement for controlled section contrast",
+  "trace_reference": "GP-04 (indie-dance genre pack)"
+}
+```

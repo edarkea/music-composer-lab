@@ -1,0 +1,41 @@
+test_id: XMODEL-005
+status: PREPARED_NOT_EXECUTED
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+brief:
+  file: evaluations/composer-agent/XMODEL-005/brief.yaml
+  sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B
+stage_records:
+  stage_1:
+    - integrations/composer-agent/system-contract-v1.1.md
+    - datasets/composer-interface-v1.1/decision-schema.yaml
+    - datasets/composer-interface-v1.1/guardrails.yaml
+    - datasets/composer-interface-v1.1/completion-checklist.yaml
+    - datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml
+    - datasets/composer-interface-v1.1/genres/indie-dance.yaml
+    - datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml
+    - integrations/composer-agent/stage-1-decision-trace-schema.yaml
+    - evaluations/composer-agent/XMODEL-005/frozen-prompt-stage-1.txt
+  stage_2:
+    - integrations/composer-agent/system-contract-v1.1.md
+    - datasets/composer-interface-v1.1/decision-schema.yaml
+    - datasets/composer-interface-v1.1/guardrails.yaml
+    - datasets/composer-interface-v1.1/completion-checklist.yaml
+    - datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml
+    - datasets/composer-interface-v1.1/genres/indie-dance.yaml
+    - datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml
+    - integrations/composer-agent/stage-2-musical-material-schema.yaml
+    - evaluations/composer-agent/XMODEL-005/frozen-prompt-stage-2.txt
+    - runtime: accepted_stage_1_output_required
+  stage_3:
+    - integrations/composer-agent/system-contract-v1.1.md
+    - datasets/composer-interface-v1.1/songplan-v2-contract.yaml
+    - integrations/music-engine/integration-contract.md
+    - integrations/composer-agent/stage-3-songplan-serialization-schema.yaml
+    - evaluations/composer-agent/XMODEL-005/frozen-prompt-stage-3.txt
+    - runtime: accepted_stage_1_and_stage_2_outputs_required
+payload_visibility:
+  assembled_by: integrations/composer-agent/staged_harness.py
+  evidence: model-visible payload file plus payload-manifest.json per stage/attempt
+  preflight_assertions: [brief_exact_bytes_present, required_records_present, no_forbidden_examples, instruction_present, prior_output_present_when_required]
+  path_only_is_insufficient: true

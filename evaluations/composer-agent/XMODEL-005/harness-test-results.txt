@@ -1,0 +1,5 @@
+XMODEL-005 harness tests (no model invocation)
+Command: python integrations/composer-agent/test_staged_harness.py -v
+Result: PASS
+Tests: 11
+Cases: A missing brief; B missing required v1.1 record; C forbidden composition example; D malformed structured output; E missing mandatory decision; F invalid N3-P; G unsupported rank; H incomplete readiness; I valid structural fixture; J failed Stage 1 blocks Stage 2; K adapter inserts no musical decisions.

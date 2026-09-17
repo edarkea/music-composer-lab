@@ -1,0 +1,42 @@
+schema_id: staged-composer-deterministic-gates-v1
+version: 1.0.0
+authority: deterministic_gate
+gates:
+  stage_1:
+    checks:
+      - required_decisions_present_and_unique
+      - no_unresolved_required_decisions
+      - n3_p_enum_and_required_fields
+      - rank_2_absent
+      - rank_1_authorized_scope_only
+      - owner_attribution_matches_run_input
+      - artistic_priority_fields_complete_when_used
+      - no_ready_with_unresolved_state
+    prohibited_action: recommend_or_modify_musical_content
+  stage_2:
+    checks:
+      - frozen_trace_hash_matches
+      - required_section_coverage
+      - implied_layers_present
+      - n3_p_realization_matches_selected_category
+      - material_parseable
+      - no_contradiction_with_frozen_decisions
+    prohibited_action: judge_quality_or_rank_artistic_options
+  stage_3:
+    checks:
+      - songplan_v2_schema
+      - exact_root_and_nested_fields
+      - section_ranges_and_references
+      - motif_assignments
+      - event_and_pitch_structure
+      - drum_voice_validity
+      - harmonic_label_voicing_integrity
+      - handoff_consistency
+    prohibited_action: repair_or_invent_musical_semantics
+retry:
+  max_retries_per_stage: 2
+  retry_input: [original_stage_input, previous_model_output, deterministic_error_diagnostics]
+  human_coaching: false
+failure:
+  after_retry_budget: BLOCK
+  preserve: [stage, attempt_count, deterministic_errors, immutable_model_outputs]

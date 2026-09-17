@@ -1,0 +1,8 @@
+﻿{
+    "model":  "ministral-3:14b",
+    "stage":  "stage-1",
+    "final":  "BLOCKED",
+    "attempts":  3,
+    "reason":  "Stage 1 gate failed after two corrective retries; attempt 2 also terminated at output length",
+    "timestamp":  "2026-09-16T05:32:31.2422971Z"
+}

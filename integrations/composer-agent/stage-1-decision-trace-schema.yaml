@@ -1,0 +1,45 @@
+schema_id: staged-composer-stage-1-decision-trace-v1
+version: 1.0.0
+purpose: Solo decisiones y trazabilidad; no contiene SongPlan ni material completo.
+required_decisions:
+  - FORM
+  - SECTION_ROLES
+  - HARMONIC_FRAMEWORK
+  - FOCAL_IDENTITY
+  - LEAD_MOTIF_BEHAVIOR
+  - BASS_ROLE
+  - GROOVE
+  - N3-P_PERCUSSION_ARCHITECTURE
+  - TEXTURE
+  - DEVELOPMENT
+  - ENERGY_TENSION_RELEASE
+  - ENDING
+  - CROSS_DOMAIN_CONFLICTS
+interface_aliases:
+  CROSS_DOMAIN_DEPENDENCIES: CROSS_DOMAIN_CONFLICTS
+decision_fields:
+  - decision_id
+  - options_considered
+  - selected_option
+  - selection_basis
+  - active_intention
+  - tradeoff
+  - trace_reference
+selection_basis_enum:
+  - EXPORTED_KNOWLEDGE_FILTER
+  - ARTISTIC_PRIORITY
+  - RANK-1_AUTHORIZED
+  - NOT_APPLICABLE
+artistic_priority_required:
+  when: multiple_options_survive_filter_without_authorized_ranking
+  fields: [decision_id, surviving_options, selected_option, active_intention, tradeoff, superiority_claim]
+  superiority_claim: false
+n3_p:
+  selected_outcomes: [FULL, MINIMAL, DELEGATED, INTENTIONALLY_ABSENT]
+  required_fields: [decision_id, candidate_strategies, selected_outcome, selection_basis, bass_groove_interaction, focal_hierarchy_interaction, section_behavior, development_behavior]
+capability_constraints:
+  rank_2: UNAVAILABLE
+  rank_1: only_authorized_scope
+  owner_attribution: must_match_run_input
+status:
+  allowed: [COMPLETE, BLOCKED]

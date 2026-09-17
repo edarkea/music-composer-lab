@@ -1,0 +1,27 @@
+{
+  "capture_status": "CAPTURED",
+  "captured_at_utc": "2026-09-16T05:09:24.827558+00:00",
+  "model_identifier_requested": "qwen3:14b",
+  "model_identifier_reported": "qwen3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "stage": "stage-1",
+  "attempt": 2,
+  "input_sha256": "ccc3eee0b111e0e96096c52c1007b4872e256c010ab59de49a68d036bf4746cd",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 4096
+  },
+  "request_sha256": "bb17102b6193515bcafd2b8caf5d5b2b01c0847408bf2bc81c1e786a35e80c75",
+  "raw_api_response_sha256": "43ac3aa7b0aa2ba62c4adc34dddd6ad968aec26b35f0e172295c8db69c305f96",
+  "raw_output_sha256": "99d521f5e438a40b7acf7083c368413795121e465b3edd061b6b3ffd6e518e4e",
+  "semantic_repair_performed": false,
+  "done_reason": "stop",
+  "eval_count": 2785,
+  "prompt_eval_count": 1747
+}

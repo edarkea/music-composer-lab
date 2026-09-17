@@ -1,0 +1,275 @@
+```json
+{
+  "stage": 1,
+  "context": {
+    "artistic_brief": {
+      "title": "Neon Mirage (Indie-Dance Fusion)",
+      "genre": "Indie-Dance / Synthwave with Organic Groove",
+      "mood": "Hypnotic, dreamlike, with a touch of melancholy",
+      "target": "Late-night club vibes, intimate live performances",
+      "key_constraints": {
+        "harmony": "Modal interchange (Mixolydian/Dorian), chromatic inflections",
+        "rhythm": "Syncopated bass, swung 16ths, occasional polyrhythms",
+        "texture": "Layered pads, detuned synths, live acoustic elements (guitar, piano)",
+        "energy": "Builds from ambient to peak-drop climax"
+      }
+    }
+  },
+  "decisions": [
+    {
+      "decision_id": "FORM",
+      "selected_option": "Through-Composed with Modular Sections",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize thematic cohesion and live adaptability over rigid structure.",
+      "tradeoff": {
+        "pro": "Supports improvisation and organic transitions.",
+        "con": "Less predictable for DJ mixing; requires precise motif recall."
+      },
+      "surviving_options": [
+        {
+          "name": "Verse-Chorus-Bridge",
+          "superiority_claim": false,
+          "rationale": "Rejected for genre mismatch (indie-dance favors organic evolution)."
+        }
+      ],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "selected_option": {
+        "A": "Ambient Pad (Intro)",
+        "B": "Groove Cell (Verse)",
+        "C": "Focal Point (Pre-Chorus)",
+        "D": "Climax (Chorus Variant)",
+        "E": "Outro (Ambient Decay)"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Enable modular rearrangement for live performance flexibility.",
+      "tradeoff": {
+        "pro": "Adaptable to performance dynamics; emphasizes organic transitions.",
+        "con": "Less predictable for DJ mixing (mitigated by modular design)."
+      },
+      "surviving_options": [],
+      "trace_reference": "ENUMERATE → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "selected_option": "Modal Interchange with Chromatic Mediants (D Mixolydian → C# Phrygian → A Dorian)",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create harmonic ambiguity and 'floating' tonal centers.",
+      "tradeoff": {
+        "pro": "Enhances dreamlike quality; supports chromatic inflections.",
+        "con": "Requires careful voice-leading to avoid dissonance."
+      },
+      "surviving_options": [
+        {
+          "name": "Secondary Dominants (G7 → Cmaj7 in D Mixolydian)",
+          "superiority_claim": false,
+          "rationale": "Reserved for climax sections to preserve modal ambiguity."
+        }
+      ],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "selected_option": {
+        "primary": "Detuned Synth Pad (Saw Wave, Reverse Delay)",
+        "counterpoint": "Live Piano (Prepared with Muted Strings)"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Hybridize electronic 'neon' and organic acoustic elements.",
+      "tradeoff": {
+        "pro": "Balances futuristic and organic textures.",
+        "con": "Requires careful mixing to avoid clutter."
+      },
+      "surviving_options": [],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "selected_option": "Call-and-Response (Synth Lead ↔ Live Guitar with Pitch Variation)",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Encourage dynamic interaction between electronic and acoustic elements.",
+      "tradeoff": {
+        "pro": "Enhances live performance engagement; aligns with swung 16ths.",
+        "con": "Requires precise timing between synth and guitar."
+      },
+      "surviving_options": [
+        {
+          "name": "Static Ostinato with Pitch Bend",
+          "superiority_claim": false,
+          "rationale": "Lacks dynamic contrast; rejected for genre inappropriateness."
+        }
+      ],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "selected_option": "Syncopated Chromatic Walks with Occasional Lock (16th-Note Runs)",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Define organic groove while supporting harmonic chromaticism.",
+      "tradeoff": {
+        "pro": "Enhances rhythmic and harmonic depth.",
+        "con": "Technically demanding for live performance."
+      },
+      "surviving_options": [
+        {
+          "name": "Pulsing Octaves (Sub-Bass + Mid)",
+          "superiority_claim": false,
+          "rationale": "Reserved for ambient sections to avoid rhythmic monotony."
+        }
+      ],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "GROOVE",
+      "selected_option": "Swung 16ths with Polyrhythmic Accents (Primary) / Shuffle Feel (Ambient)",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Primary groove for hypnotic feel; polyrhythms reserved for climax.",
+      "tradeoff": {
+        "pro": "Enhances rhythmic complexity and organic groove.",
+        "con": "Requires precise rhythmic coordination."
+      },
+      "surviving_options": [],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "selected_outcome": "FULL",
+      "candidate_strategies": [
+        {
+          "name": "Layered Kit: Acoustic Snare + Electronic Percussion",
+          "superiority_claim": true,
+          "rationale": "Blends organic and electronic; builds tension via electronic elements."
+        },
+        {
+          "name": "Pure Electronic (MPC-Style)",
+          "superiority_claim": false,
+          "rationale": "Lacks 'live' feel; rejected for performance constraints."
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "bass_groove_interaction": "Electronic percussion syncopated against live bass",
+      "focal_hierarchy_interaction": "Live kit anchors groove; electronic elements highlight focal points",
+      "section_behavior": {
+        "A": "Acoustic brush snare + reversed cymbal swells",
+        "B": "Swung electronic hi-hats + live toms",
+        "D": "Polyrhythmic percussion layers (3:2 or 4:3)"
+      },
+      "development_behavior": "Electronic elements evolve via granular effects in climax",
+      "active_intention": "Align with live performance constraints while enhancing electronic tension.",
+      "tradeoff": {
+        "pro": "Balances organic and electronic textures.",
+        "con": "Requires precise synchronization between live and electronic elements."
+      },
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "TEXTURE",
+      "selected_option": {
+        "primary": "Layered: Detuned Pads + Live Guitar/Piano + FX",
+        "ambient": "Minimalist: Sparse Pads + Bass"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Primary choice for immersive dynamics; minimalism for contrast.",
+      "tradeoff": {
+        "pro": "Creates dynamic, layered textures.",
+        "con": "Requires careful mixing to avoid clutter."
+      },
+      "surviving_options": [],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "selected_option": "Motif Evolution via Transposition (Minor 3rd) / Inversion (Bass)",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Align with through-composed form and harmonic goals.",
+      "tradeoff": {
+        "pro": "Enhances thematic cohesion and dynamic contrast.",
+        "con": "Requires precise motif design."
+      },
+      "surviving_options": [
+        {
+          "name": "Static Motifs with FX Variation",
+          "superiority_claim": false,
+          "rationale": "Lacks dynamic development; rejected for genre inappropriateness."
+        }
+      ],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "selected_option": {
+        "build": "Gradual Percussion Density + Harmonic Tension (Electronic Layers + Raised Bass)",
+        "release": "Controlled Drop (Filtered White Noise + Reversed Cymbals)"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Better suits intimate, hypnotic build-up.",
+      "tradeoff": {
+        "pro": "Creates dynamic tension and release.",
+        "con": "Requires precise timing for build-up."
+      },
+      "surviving_options": [
+        {
+          "name": "Abrupt Drop (Full Band Stop → Silence)",
+          "superiority_claim": false,
+          "rationale": "Clashes with organic groove; rejected for genre mismatch."
+        }
+      ],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "ENDING",
+      "selected_option": {
+        "type": "Ambient Decay with Harmonic Reverse Motion",
+        "elements": {
+          "harmonic": "D Mixolydian → C# Phrygian resolution",
+          "percussion": "Filtered percussion tails + live piano fade-out",
+          "fx": "Reverse delay tails on detuned pads"
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a cohesive, dreamlike conclusion.",
+      "tradeoff": {
+        "pro": "Enhances thematic closure; aligns with mood.",
+        "con": "Requires careful mixing for smooth decay."
+      },
+      "surviving_options": [
+        {
+          "name": "Abrupt Stop (Silence)",
+          "superiority_claim": false,
+          "rationale": "Clashes with organic, evolving structure."
+        }
+      ],
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "selected_resolution": {
+        "conflict_1": {
+          "domain": "Harmony vs. Rhythm",
+          "conflict": "Chromatic bass walks vs. swung 16ths groove",
+          "resolution": "Bass syncopation aligns with harmonic chromaticism; swung 16ths maintained via polyrhythmic accents."
+        },
+        "conflict_2": {
+          "domain": "Texture vs. Energy",
+          "conflict": "Layered pads vs. peak-drop climax",
+          "resolution": "Pads filtered/attenuated during climax; electronic percussion density increases."
+        },
+        "conflict_3": {
+          "domain": "Live Performance vs. Electronic Elements",
+          "conflict": "Acoustic instruments vs. detuned synths",
+          "resolution": "Synths processed to blend with acoustic (e.g., reverse delays on guitar)."
+        }
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize cohesion over rigid domain separation.",
+      "tradeoff": {
+        "pro": "Enhances hybrid genre identity.",
+        "con": "Requires meticulous mixing and performance coordination."
+      },
+      "trace_reference": "ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION"
+    }
+  ]
+}
+```

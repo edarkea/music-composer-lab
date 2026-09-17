@@ -1,0 +1,109 @@
+{
+  "FORM": {
+    "options": ["AABA", "ABAB", "Freeform with repetition"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Maintain momentum through repetitive, driving forms.",
+    "trade_off": "Complexity vs. memorability; freeform risks losing listener engagement.",
+    "trace_reference": "Indie-dance pack: 'Repetition as propulsion in 4/4 structures.'",
+    "selected_option": "Freeform with repetition"
+  },
+  "SECTION_ROLES": {
+    "options": ["Traditional (verse/chorus/bridge)", "Hybrid (e.g., pre-chorus + breakdown)"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Balance familiarity with dynamic variation.",
+    "trade_off": "Hybrid roles may confuse listeners; traditional roles limit innovation.",
+    "trace_reference": "Guardrails: 'Section roles must align with harmonic progression.'",
+    "selected_option": "Hybrid (e.g., pre-chorus + breakdown)"
+  },
+  "HARMONIC_FRAMEWORK": {
+    "options": ["Minor key with borrowed chords", "Modal (Dorian/Phrygian)", "Parallel harmonies"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Create emotional contrast through modal shifts.",
+    "trade_off": "Modal frameworks may lack resolution; borrowed chords risk dissonance.",
+    "trace_reference": "Approved knowledge: 'Modal interchange enhances indie-dance tension.'",
+    "selected_option": "Modal (Dorian/Phrygian)"
+  },
+  "FOCAL_IDENTITY": {
+    "options": ["Lead vocal", "Instrumental motif", "Percussive rhythm"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Anchor the track with a clear, evolving vocal line.",
+    "trade_off": "Vocal dominance may overshadow instrumental development.",
+    "trace_reference": "Artistic brief: 'Vocal melody as primary narrative driver.'",
+    "selected_option": "Lead vocal"
+  },
+  "LEAD_MOTIF_BEHAVIOR": {
+    "options": ["Repetition with variation", "Call-and-response", "Through-composed"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Build momentum through incremental motif transformation.",
+    "trade_off": "Repetition risks monotony; through-composed may fragment cohesion.",
+    "trace_reference": "N3-P reference: 'Motif variation as energy catalyst.'",
+    "selected_option": "Repetition with variation"
+  },
+  "BASS_ROLE": {
+    "options": ["Walking bass", "Rhythmic patterns", "Melodic counterpoint"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Drive the track with syncopated, melodic bass lines.",
+    "trade_off": "Melodic bass may compete with lead vocal; walking bass risks predictability.",
+    "trace_reference": "Indie-dance pack: 'Bass as rhythmic backbone with melodic flourishes.'",
+    "selected_option": "Melodic counterpoint"
+  },
+  "GROOVE": {
+    "options": ["Syncopated", "Swung", "Straight 4/4"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Create propulsive, off-grid rhythmic feel.",
+    "trade_off": "Syncopation may challenge listener synchronization.",
+    "trace_reference": "Guardrails: 'Groove must align with 120-130 BPM.'",
+    "selected_option": "Syncopated"
+  },
+  "N3-P_PERCUSSION_ARCHITECTURE": {
+    "decision_id": "N3-P-001",
+    "candidate_strategies": ["Layered ethnic elements", "Minimalist tech beats", "Hybrid approach"],
+    "selected_outcome": "FULL",
+    "selection_basis": "RANK-1_AUTHORIZED",
+    "bass_groove_interaction": "Layered ethnic elements complement syncopated groove, while tech beats provide rhythmic stability.",
+    "focal_hierarchy_interaction": "Percussive layers support lead vocal without overshadowing it.",
+    "section_behavior": "Hybrid approach maintains rhythmic cohesion across section transitions.",
+    "development_behavior": "Percussive motifs evolve in parallel with harmonic shifts."
+  },
+  "TEXTURE": {
+    "options": ["Sparse", "Dense", "Dynamic shifts"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Build intensity through textural evolution.",
+    "trade_off": "Density may overwhelm; sparse textures risk losing impact.",
+    "trace_reference": "Completion checklist: 'Texture must support harmonic progression.'",
+    "selected_option": "Dynamic shifts"
+  },
+  "DEVELOPMENT": {
+    "options": ["Gradual", "Abrupt", "Cyclical"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Create inevitability through recurring themes.",
+    "trade_off": "Cyclical development may feel repetitive; abrupt shifts risk dissonance.",
+    "trace_reference": "Artistic brief: 'Development must mirror emotional arc.'",
+    "selected_option": "Cyclical"
+  },
+  "ENERGY_TENSION_RELEASE": {
+    "options": ["Gradual build with sudden release", "Sustained tension", "Pulsed energy"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Maximize emotional impact through controlled release.",
+    "trade_off": "Sudden releases may feel jarring; sustained tension risks fatigue.",
+    "trace_reference": "Guardrails: 'Energy peaks must align with harmonic cadences.'",
+    "selected_option": "Gradual build with sudden release"
+  },
+  "ENDING": {
+    "options": ["Cyclical return", "Abrupt cutoff", "Fading resolution"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Leave a lingering impression through unresolved tension.",
+    "trade_off": "Abrupt cutoff may feel unsatisfying; fading resolution risks ambiguity.",
+    "trace_reference": "Approved knowledge: 'Unresolved endings enhance indie-dance mystique.'",
+    "selected_option": "Fading resolution"
+  },
+  "CROSS_DOMAIN_CONFLICTS": {
+    "options": ["Modulation to resolve dissonance", "Accept controlled dissonance", "Textural masking"],
+    "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+    "intention": "Use modulation to resolve conflicts while preserving tension.",
+    "trade_off": "Modulation may disrupt groove; textural masking risks losing clarity.",
+    "trace_reference": "Guardrails: 'Conflicts must align with focal identity.'",
+    "selected_outcome": "Modulation to resolve dissonance",
+    "interaction_with_harmonic_framework": "Modulation aligns with harmonic progression to resolve dissonance without disrupting the groove."
+  }
+}

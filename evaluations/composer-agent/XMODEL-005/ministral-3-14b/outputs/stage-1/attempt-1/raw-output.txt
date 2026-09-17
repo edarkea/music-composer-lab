@@ -1,0 +1,355 @@
+Understood. Below is the **Stage 1 Decision Trace** for the given **indie-dance** brief, adhering strictly to the provided records, guardrails, and schema. Each decision follows the **ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION** workflow, with explicit justification, trade-offs, and cross-domain dependencies.
+
+---
+
+### **DecisionTrace (Stage 1)**
+```json
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "domain": "form",
+      "artistic_goal": "Persistent forward motion with gradual accumulation and one clear release",
+      "question": "How to structure sections to reflect tension, restraint, and hypnotic release?",
+      "scope": "Indie-dance loop/groove-based with controlled contrast",
+      "candidate_options": [
+        {
+          "id": "LOOP_BASED_VAMP",
+          "description": "Cyclic harmonic/melodic loop with cross-domain layering (e.g., texture/density changes)",
+          "basis": ["GP-01", "GP-02", "GP-04"],
+          "hard_constraints": ["Preserve melodic identity", "Avoid abrupt cadences"],
+          "soft_criteria": ["Gradual density/texture shifts", "One focal release"]
+        },
+        {
+          "id": "VERSE_CHORUS_VARIANT",
+          "description": "Verse (restrained) → Chorus (release) with harmonic/melodic persistence",
+          "basis": ["GP-06", "CK-FORM-01"],
+          "hard_constraints": ["No forced melodic variation", "Contrast via texture/arrangement"],
+          "soft_criteria": ["Hypnotic groove continuity", "Clear release at ending"]
+        },
+        {
+          "id": "MINIMALISTIC_PHRASE_REPETITION",
+          "description": "Short phrases with rhythmic displacement (anticipation) and harmonic stasis",
+          "basis": ["GP-05", "CK-RHY-01"],
+          "hard_constraints": ["No full-form sections", "Focus on groove/melodic contour"],
+          "soft_criteria": ["Tense, restrained atmosphere"]
+        }
+      ],
+      "hard_constraints": ["No prescribed form", "Preserve focal identity"],
+      "soft_criteria": ["Controlled section contrast", "Audible development"],
+      "structural_basis": ["GP-04: Differentiation via coordinated layers", "CK-FORM-01: Functional roles"],
+      "perceptual_basis": {
+        "status": "context_dependent",
+        "claim": "Release perceived via texture/density shifts, not harmonic cadence"
+      },
+      "composition_basis": "Filter options preserving melodic identity and cross-domain flexibility",
+      "selected_option": "LOOP_BASED_VAMP",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize hypnotic groove with gradual layering for restrained tension",
+      "tradeoff": "Avoids verse-chorus predictability; relies on texture/density for contrast",
+      "dependencies": ["HARMONIC_FRAMEWORK", "TEXTURE", "GROOVE"],
+      "songplan_handoff": {
+        "sections": ["Loop_A (intro)", "Loop_B (development)", "Loop_C (release)"],
+        "cross_domain_changes": ["Texture: sparse → dense", "Density: low → high"]
+      },
+      "uncertainty": "Perceptual release depends on listener’s expectation of closure",
+      "provenance": ["GP-01", "GP-04", "CK-FORM-01"]
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "domain": "form",
+      "artistic_goal": "Coherent repetition with audible development",
+      "question": "How to assign roles to sections while maintaining identity?",
+      "scope": "Loop-based with cross-domain variation",
+      "candidate_options": [
+        {
+          "id": "ESTABLISH_CONTINUE_PREPARE",
+          "description": "Loop_A: Establish (melodic hook), Loop_B: Continue (texture shift), Loop_C: Prepare (density buildup)",
+          "basis": ["CK-FORM-01", "GP-04"],
+          "hard_constraints": ["No forced harmonic arrival"],
+          "soft_criteria": ["Focal identity preserved"]
+        },
+        {
+          "id": "OPEN_CONTRAST_RETURN",
+          "description": "Loop_A: Open (melodic loop), Loop_B: Contrast (texture), Loop_C: Return (density)",
+          "basis": ["GP-03", "GP-06"],
+          "hard_constraints": ["No cadence at Loop_C"],
+          "soft_criteria": ["Hypnotic continuity"]
+        }
+      ],
+      "selected_option": "ESTABLISH_CONTINUE_PREPARE",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual accumulation via texture/density",
+      "tradeoff": "Avoids abrupt contrast; relies on subtle shifts",
+      "dependencies": ["FORM", "TEXTURE", "DEVELOPMENT"],
+      "songplan_handoff": {
+        "Loop_A": {"role": "establish", "focus": "melodic hook"},
+        "Loop_B": {"role": "continue", "focus": "texture shift"},
+        "Loop_C": {"role": "prepare", "focus": "density buildup"}
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "domain": "harmony",
+      "artistic_goal": "Clear focal identity with controlled development",
+      "question": "How to structure harmony for persistence and gradual change?",
+      "scope": "Indie-dance loop/vamp with cross-domain variation",
+      "candidate_options": [
+        {
+          "id": "TONIC_PEDAL",
+          "description": "Tonic pedal (e.g., C major) with harmonic rhythm shifts in other layers",
+          "basis": ["GP-02", "CK-HAR-02"],
+          "hard_constraints": ["No forced progression", "Preserve tonal center"],
+          "soft_criteria": ["Harmonic stasis for groove"]
+        },
+        {
+          "id": "MINOR_MODE_PROGRESSION",
+          "description": "Minor-mode progression (e.g., i-iv-V) with modal mixture",
+          "basis": ["CK-HAR-01", "GP-02"],
+          "hard_constraints": ["Avoid tonal ambiguity"],
+          "soft_criteria": ["Tense, restrained character"]
+        }
+      ],
+      "selected_option": "TONIC_PEDAL",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Stable harmonic foundation for hypnotic groove",
+      "tradeoff": "Limits harmonic development; relies on texture for contrast",
+      "dependencies": ["FORM", "BASS_ROLE", "GROOVE"],
+      "songplan_handoff": {
+        "framework": "C major tonic pedal",
+        "harmonic_rhythm": "Slow (1 chord per 4 bars) in Loop_A, faster in Loop_C"
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "domain": "cross_domain",
+      "artistic_goal": "Preserve identity across development",
+      "question": "Which element carries the focal identity?",
+      "scope": "Indie-dance with loop-based structure",
+      "candidate_options": [
+        {
+          "id": "MELODIC_HOOK",
+          "description": "Persistent melodic contour (e.g., stepwise motion with rhythmic displacement)",
+          "basis": ["GP-01", "CK-MEL-01"],
+          "hard_constraints": ["No forced variation"],
+          "soft_criteria": ["Hypnotic, restrained character"]
+        },
+        {
+          "id": "GROOVE_PATTERN",
+          "description": "Rhythmic displacement (anticipation) as focal element",
+          "basis": ["GP-05", "CK-RHY-01"],
+          "hard_constraints": ["Preserve metric alignment"],
+          "soft_criteria": ["Tense, forward motion"]
+        }
+      ],
+      "selected_option": "MELODIC_HOOK",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Melodic persistence for hypnotic effect",
+      "tradeoff": "Groove supports but does not dominate",
+      "dependencies": ["LEAD_MOTIF_BEHAVIOR", "GROOVE"],
+      "songplan_handoff": {
+        "focal_element": "melodic contour (C-D-E-F#-G)",
+        "rhythmic_support": "Subtle anticipation in Loop_C"
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "domain": "melody",
+      "artistic_goal": "Coherent repetition with audible development",
+      "question": "How to develop the melodic motif?",
+      "scope": "Indie-dance with loop-based structure",
+      "candidate_options": [
+        {
+          "id": "CONTOUR_PRESERVATION",
+          "description": "Preserve melodic contour; vary rhythmic placement (e.g., anticipation)",
+          "basis": ["CK-MEL-01", "CK-DEV-01"],
+          "hard_constraints": ["No forced transposition"],
+          "soft_criteria": ["Hypnotic, restrained variation"]
+        },
+        {
+          "id": "INTERVALIC_VARIATION",
+          "description": "Vary intervals while preserving contour (e.g., step-wise → leap)",
+          "basis": ["CK-CROSS-01", "GP-01"],
+          "hard_constraints": ["Maintain tonal center"],
+          "soft_criteria": ["Audible development"]
+        }
+      ],
+      "selected_option": "CONTOUR_PRESERVATION",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Subtle rhythmic displacement for tension",
+      "tradeoff": "Avoids harmonic/melodic complexity",
+      "dependencies": ["FOCAL_IDENTITY", "GROOVE"],
+      "songplan_handoff": {
+        "motif": "C-D-E-F#-G (Loop_A)",
+        "development": "Rhythmic anticipation in Loop_C"
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "domain": "bass",
+      "artistic_goal": "Support groove without dominating",
+      "question": "How to integrate bass with harmonic framework?",
+      "scope": "Indie-dance with tonic pedal",
+      "candidate_options": [
+        {
+          "id": "TONIC_DRONE",
+          "description": "Tonic drone (C) with rhythmic displacement",
+          "basis": ["GP-02", "CK-HAR-01"],
+          "hard_constraints": ["No forced progression"],
+          "soft_criteria": ["Groove support"]
+        },
+        {
+          "id": "SYNCOPATED_ROOTS",
+          "description": "Syncopated roots (e.g., C-G-C) with harmonic rhythm",
+          "basis": ["CK-RHY-01", "GP-05"],
+          "hard_constraints": ["Avoid metric conflict"],
+          "soft_criteria": ["Forward motion"
+        }
+      ],
+      "selected_option": "TONIC_DRONE",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Stable foundation for hypnotic groove",
+      "tradeoff": "Limits harmonic development",
+      "dependencies": ["HARMONIC_FRAMEWORK", "GROOVE"],
+      "songplan_handoff": {
+        "bass_line": "C (tonic drone) with rhythmic displacement in Loop_C"
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "domain": "rhythm",
+      "artistic_goal": "Persistent forward motion",
+      "question": "How to structure groove for hypnotic effect?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "METRIC_DISPLACEMENT",
+          "description": "Subtle rhythmic displacement (e.g., 16th-note anticipation)",
+          "basis": ["GP-05", "CK-RHY-01"],
+          "hard_constraints": ["Preserve metric alignment"],
+          "soft_criteria": ["Tense, forward motion"]
+        },
+        {
+          "id": "STEADY_16TH_NOTES",
+          "description": "Steady 16th-note pulse with syncopation",
+          "basis": ["GP-01", "CK-RHY-02"],
+          "hard_constraints": ["No metric ambiguity"],
+          "soft_criteria": ["Hypnotic continuity"]
+        }
+      ],
+      "selected_option": "METRIC_DISPLACEMENT",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual tension buildup",
+      "tradeoff": "Requires careful rhythmic alignment",
+      "dependencies": ["BASS_ROLE", "N3-P_PERCUSSION_ARCHITECTURE"],
+      "songplan_handoff": {
+        "groove": "16th-note pulse with 8th-note anticipation in Loop_C"
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "domain": "percussion",
+      "artistic_goal": "Support groove without dominating",
+      "question": "What percussion architecture to use?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "FULL",
+          "description": "Kick/snare/hi-hat with rhythmic displacement",
+          "basis": ["N3-P", "GP-05"],
+          "hard_constraints": ["No metric conflict"],
+          "soft_criteria": ["Hypnotic groove"]
+        },
+        {
+          "id": "MINIMAL",
+          "description": "Kick-only with bass syncopation",
+          "basis": ["N3-P", "GP-02"],
+          "hard_constraints": ["Preserve groove"],
+          "soft_criteria": ["Restrained texture"]
+        }
+      ],
+      "selected_option": "MINIMAL",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Focus on melodic/bass groove",
+      "tradeoff": "Limits rhythmic complexity",
+      "dependencies": ["GROOVE", "BASS_ROLE"],
+      "songplan_handoff": {
+        "architecture": "Kick (tonic drone) + subtle hi-hat displacement",
+        "section_behavior": "Hi-hat anticipation in Loop_C"
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "domain": "texture",
+      "artistic_goal": "Controlled section contrast",
+      "question": "How to vary texture for gradual accumulation?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "LAYERED_SYNTHS",
+          "description": "Sparse pads (Loop_A) → dense synths (Loop_C)",
+          "basis": ["GP-04", "GP-06"],
+          "hard_constraints": ["Preserve focal identity"],
+          "soft_criteria": ["Hypnotic buildup"]
+        },
+        {
+          "id": "RHYTHMIC_DISPLACEMENT",
+          "description": "Rhythmic displacement in percussion/synths",
+          "basis": ["GP-05", "CK-RHY-02"],
+          "hard_constraints": ["No metric conflict"],
+          "soft_criteria": ["Tense atmosphere"]
+        }
+      ],
+      "selected_option": "LAYERED_SYNTHS",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual density increase",
+      "tradeoff": "Avoids abrupt contrast",
+      "dependencies": ["FORM", "DEVELOPMENT"],
+      "songplan_handoff": {
+        "Loop_A": "Sparse pads (1 layer)",
+        "Loop_C": "Dense synths (3 layers)"
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "domain": "development",
+      "artistic_goal": "Audible development with preserved identity",
+      "question": "How to develop material across sections?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "TEXTURE_DENSITY",
+          "description": "Increase texture density (Loop_A → Loop_C)",
+          "basis": ["GP-04", "CK-DEV-01"],
+          "hard_constraints": ["Preserve melodic contour"],
+          "soft_criteria": ["Hypnotic accumulation"]
+        },
+        {
+          "id": "RHYTHMIC_DISPLACEMENT",
+          "description": "Rhythmic displacement in melody/percussion",
+          "basis": ["GP-05", "CK-RHY-01"],
+          "hard_constraints": ["No metric conflict"],
+          "soft_criteria": ["Tense forward motion"]
+        }
+      ],
+      "selected_option": "TEXTURE_DENSITY",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Subtle buildup via texture",
+      "tradeoff": "Avoids harmonic/melodic complexity",
+      "dependencies": ["TEXTURE", "GROOVE"],
+      "songplan_handoff": {
+        "development_strategy": "Density increase (1 → 3 layers)",
+        "identity_preservation": "Melodic contour unchanged"
+      }
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "domain": "cross_domain",
+      "artistic_goal": "One clear release",
+      "question": "How to structure tension and release?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "TEXTURE_DENSITY_BUILdup",
+          "description": "Tension via density (Loop_A → Loop_C), release via harmonic stasis",
+          "basis

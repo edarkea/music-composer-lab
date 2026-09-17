@@ -1,0 +1,14 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  3,
+    "gate":  "FAIL",
+    "errors":  [
+                   "output remains Markdown-wrapped rather than one raw schema object",
+                   "invented brief and context persist despite retry diagnostic",
+                   "decision objects omit required options_considered structure and decision key mapping",
+                   "surviving options/AP markers incomplete or contradictory",
+                   "N3-P candidate claims superiority_claim=true, prohibited",
+                   "N3-P required field shape and selected_outcome enum partly invalid",
+                   "unapproved artistic claims and scope remain"
+               ]
+}

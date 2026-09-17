@@ -1,0 +1,11 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  2,
+    "gate":  "FAIL",
+    "errors":  [
+                   "output contains multiple JSON fragments and Markdown fences",
+                   "Extra data after first JSON object"
+               ],
+    "done_reason":  "stop",
+    "semantic_repair_performed":  false
+}

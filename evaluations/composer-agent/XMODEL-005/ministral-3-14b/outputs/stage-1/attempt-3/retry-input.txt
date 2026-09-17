@@ -1,0 +1,1401 @@
+﻿STAGED EXECUTION v1 — MODEL-VISIBLE PAYLOAD
+
+STAGE: 1
+
+INTERFACE VERSION: composer-interface-v1.1
+
+CONDITION: NO-EXAMPLE
+
+
+
+BEGIN RECORD: D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-005/brief.yaml
+
+test_id: XMODEL-001
+
+genre:
+  pack: indie-dance
+  use_genre_pack: true
+
+artistic_intent:
+  character:
+    - tense
+    - restrained
+    - hypnotic
+
+  movement:
+    - persistent forward motion
+    - gradual accumulation
+    - one clear release
+
+requirements:
+  - instrumental
+  - clear focal identity
+  - coherent repetition with audible development
+  - controlled section contrast
+  - preserve identity across development
+
+composer_freedom:
+  decide:
+    - tonic
+    - mode
+    - tempo
+    - form
+    - section lengths
+    - harmonic framework
+    - harmonic rhythm
+    - focal hierarchy
+    - melody
+    - bass
+    - groove
+    - percussion architecture
+    - texture
+    - development strategy
+    - release strategy
+    - ending
+
+do_not_prescribe:
+  - specific chord progression
+  - specific melody
+  - specific bass line
+  - specific drum pattern
+  - specific percussion outcome
+  - specific form
+  - specific instrumentation
+
+evaluation_intent:
+  - test transfer of composer-interface-v1 to a third-party model
+  - test prospective decision making
+  - test scope and guardrail compliance
+  - test SongPlanV2 production
+
+notes:
+  - examples are precedents, not templates
+  - do not copy previous songs
+  - do not invent comparative ranking where none is supported
+
+
+END RECORD: D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-005/brief.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md
+
+# Contrato de sistema — agente compositor externo v1.1
+
+La interfaz es derivada, neutral respecto del modelo y no canónica. El modelo
+puede crear material musical dentro del brief; crear material no equivale a
+crear reglas, evidencia, causalidades, leyes perceptivas, prescripciones de
+género, capacidades de ranking ni preferencias del Owner.
+
+## Flujo decisional
+
+1. Resolver explícitamente cada elemento de `completion-checklist.yaml` o
+   marcarlo `BLOCKED`/`NOT_APPLICABLE` con razón. No declarar
+   `READY_FOR_VALIDATION` si falta una decisión requerida o el candidato
+   SongPlanV2.
+2. Aplicar restricciones y filtros trazables al brief o al paquete.
+   `RANK-2` no está disponible. `RANK-1` solo existe para el criterio, tarea y
+   alcance expresos de CK-CROSS-01; el modelo no puede crear ese alcance ni
+   inferir ranking de familiaridad, memoria, ejemplos o intuición.
+3. Si pasan varias opciones y no aplica ranking autorizado, el compositor
+   selecciona una con `selection_basis: ARTISTIC_PRIORITY`, indica intención
+   activa y tradeoff, no afirma superioridad comparativa y continúa. Solo pide
+   intervención del Owner si la entrada de esta ejecución reserva explícitamente
+   esa decisión. Una decisión/preferencia anterior del Owner no se transfiere.
+4. No presentar efectos perceptivos o relaciones causales como hechos sin soporte
+   explícito del paquete. Una elección artística puede declararse como tal, sin
+   justificación causal.
+5. Completar N3-P de forma explícita, incluyendo las relaciones exigidas por el
+   checklist. Eventos, hi-hats, batería o su ausencia no resuelven N3-P por sí
+   solos.
+6. Aplicar cada guardrail solo a su propósito y activar sus condiciones.
+   Particularmente, GR-011 trata exclusivamente de etiqueta armónica frente a
+   pitches/voicing explícitos; no prohíbe modos o acordes. Ante mismatch
+   inexplicado, detener esa ruta y declarar WARNING, sin reinterpretación.
+7. Entregar una raíz SongPlanV2 exacta y eventos/pitches explícitos. Etiquetas,
+   roles, energía, estilo y tonalidad no generan notas. No inventar campos.
+
+## Autoridad y salida
+
+`integrations/music-engine/integration-contract.md` y
+`songplan-v2-contract.yaml` describen el formato; el runtime instalado es la
+autoridad final sobre validez detallada. El JSON Schema de salida limita forma
+de respuesta solamente: no completa decisiones musicales. El adaptador puede
+capturar, parsear, validar o rechazar; nunca puede reparar semántica.
+
+Devuelva la envolvente JSON descrita por `output-schema.json`, incluyendo
+decision trace, decisiones resueltas, declaraciones de capacidad, handoffs,
+guardrails, incertidumbres, checklist y candidato. Una respuesta estructurada
+por formato no es evidencia de corrección musical.
+
+
+END RECORD: D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md
+
+BEGIN RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/decision-schema.yaml
+
+schema_id: composer-interface-decision-record-v1.1
+language: es
+purpose: Contrato de trazabilidad; no añade conocimiento musical.
+creative_generation_boundary:
+  may_create: [notes, rhythms, chords, voicings, bass_lines, motifs, forms, section_lengths, textures, percussion_patterns, silences, development_variants]
+  may_not_invent: [composition_rules, evidence, causal_claims, perceptual_laws, genre_prescriptions, ranking_capability, owner_preferences]
+  principle: Crear material musical no equivale a inventar conocimiento.
+decision_trace_required:
+  - decision_id
+  - domain
+  - artistic_goal
+  - question
+  - scope
+  - candidate_options
+  - hard_constraints
+  - soft_criteria
+  - structural_basis
+  - perceptual_basis
+  - composition_basis
+  - selected_option
+  - selection_basis
+  - active_intention
+  - tradeoff
+  - dependencies
+  - songplan_handoff
+  - uncertainty
+  - provenance
+selection_basis_values: [BRIEF_CONSTRAINT, EXPORTED_KNOWLEDGE_FILTER, RANK_1_AUTHORIZED, ARTISTIC_PRIORITY, OWNER_EXPLICIT_DECISION]
+artistic_priority:
+  required_if: Multiple candidates survive FILTER and no authorized ranking applies.
+  fields: [decision_id, surviving_options, selected_option, active_intention, tradeoff]
+  may_continue: true
+  claim_of_superiority: forbidden
+  owner_handoff_required_if: Decision is explicitly reserved for Owner in this run input.
+ranking:
+  rank_2: unavailable
+  rank_1_requires: [exported_knowledge_id, exact_task, target_construct, criterion, scope, evidence_basis, non_claim]
+  rank_1_scope_may_be_created_by_model: false
+  invalid_inference_sources: [genre_familiarity, model_memory, examples, intuition]
+owner_attribution:
+  allowed_only_when_exact_decision_is_present_in_current_run_input: true
+  past_song_decisions_transfer_implicitly: false
+musical_claims:
+  unsupported_perceptual_or_causal_claims: forbidden
+  allowed_choice_statement: "Elijo esta opción por ARTISTIC_PRIORITY para el brief; no afirmo superioridad comparativa."
+songplan_handoff:
+  exact_contract: songplan-v2-contract.yaml
+  explicit_pitch_events_authoritative: true
+  rationale_and_uncertainty_location: decision_trace
+
+
+END RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/decision-schema.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/guardrails.yaml
+
+guardrail_set_id: composer-interface-guardrails-v1.1
+language: es
+guardrails:
+  - id: GR-001
+    purpose: Separar estructura, percepción y decisión compositiva.
+    when_applicable: Toda justificación que conecte estructura y efecto musical.
+    PASS: Cada capa queda distinguida y cada puente tiene estado y alcance.
+    WARNING: Efecto perceptivo presentado como hipótesis sin etiquetarlo.
+    BLOCK: Un claim no sustentado determina una decisión o se presenta como ley.
+    what_it_does_not_mean: No prohíbe elegir material por intención artística.
+  - id: GR-002
+    purpose: Mantener hook, prominencia y memorabilidad como constructos distintos.
+    when_applicable: Se mencionan estos constructos o se usa uno para inferir otro.
+    PASS: No se intercambian como proxies validados.
+    WARNING: Proxy sugerido sin evidencia del paquete.
+    BLOCK: Decisión depende de la equivalencia no sustentada.
+    what_it_does_not_mean: No prohíbe decidir crear un hook como intención.
+  - id: GR-003
+    purpose: Evitar reducir tensión y release a una variable única.
+    when_applicable: Se explica o planifica tensión/release.
+    PASS: Dimensiones e intención se declaran sin ley causal inventada.
+    WARNING: Se usa dimensión ambigua o efecto no establecido.
+    BLOCK: La decisión depende de una causalidad no suministrada.
+    what_it_does_not_mean: No exige cuantificar tensión.
+  - id: GR-004
+    purpose: Separar utilidad diagnóstica de selección generativa.
+    when_applicable: Una distinción o diagnóstico se usa para escoger operación.
+    PASS: La selección tiene base independiente trazable o ARTISTIC_PRIORITY.
+    WARNING: Diagnóstico se presenta como recomendación.
+    BLOCK: Diagnóstico sin soporte se declara regla obligatoria.
+    what_it_does_not_mean: No impide usar diagnósticos para describir.
+  - id: GR-005
+    purpose: No inferir equivalencia de ausencia de evidencia de superioridad.
+    when_applicable: Se comparan opciones sin ranking autorizado.
+    PASS: No se afirma equivalencia; se aplica ARTISTIC_PRIORITY.
+    WARNING: Equivalencia insinuada.
+    BLOCK: Se declara igualdad o superioridad sin soporte.
+    what_it_does_not_mean: No impide seleccionar una opción por prioridad artística.
+  - id: GR-006
+    purpose: Mantener explícita la transferencia no validada.
+    when_applicable: Se traslada una relación entre tareas, estilos o contextos.
+    PASS: Alcance declarado o transferencia marcada sin validar.
+    WARNING: Transferencia fuera del alcance sin marcar.
+    BLOCK: Transferencia no validada se usa como hecho decisivo.
+    what_it_does_not_mean: No demuestra que los dominios sean independientes.
+  - id: GR-007
+    purpose: Evitar usar constructos adyacentes como proxies por defecto.
+    when_applicable: Una variable representa otra en una afirmación o decisión.
+    PASS: Medida/constructo coincide con la afirmación o el límite se declara.
+    WARNING: Proxy no validado presentado como indicio.
+    BLOCK: Decisión depende del proxy como hecho.
+    what_it_does_not_mean: No prohíbe describir variables relacionadas.
+  - id: GR-008
+    purpose: Respetar el alcance de conocimiento y brief.
+    when_applicable: Se aplica conocimiento general, de género o externo.
+    PASS: Uso dentro del alcance declarado.
+    WARNING: Alcance insuficiente o incierto.
+    BLOCK: Restricción/claim externo gobierna la decisión sin autorización.
+    what_it_does_not_mean: No prohíbe crear material dentro de la libertad del brief.
+  - id: GR-009
+    purpose: Separar enumeración, filtrado y ranking autorizado.
+    when_applicable: Se comparan, eliminan, puntúan u ordenan opciones.
+    PASS: Filtros tienen base y todo ranking satisface contrato RANK-1.
+    WARNING: Orden implícito no explicado.
+    BLOCK: RANK-2, rank_1_scope inventado o superioridad no autorizada.
+    what_it_does_not_mean: No prohíbe seleccionar por ARTISTIC_PRIORITY.
+  - id: GR-010
+    purpose: Exigir decisión prospectiva y explícita de arquitectura N3-P.
+    when_applicable: Toda composición.
+    PASS: decision_id, estrategias, outcome, base e interacciones requeridas explícitas.
+    WARNING: Outcome presente pero falta cualquier elemento obligatorio.
+    BLOCK: Falta decisión N3-P explícita antes de SongPlan handoff.
+    what_it_does_not_mean: FULL no requiere subdivisión continua; no obliga a usar drums.
+  - id: GR-011
+    purpose: Detectar desacuerdo no explicado entre etiqueta armónica y pitches/voicing explícito.
+    when_applicable: Una etiqueta armónica se asocia a contenido de pitch materializado.
+    PASS: CONSISTENT, o realización reducida/extendida/invertida/doblada con semántica explícita.
+    WARNING: UNEXPLAINED_LABEL_PITCH_MISMATCH; detener solo la ruta afectada.
+    BLOCK: El handoff afectado queda bloqueado mientras siga el WARNING.
+    what_it_does_not_mean: No prohíbe modos, acordes, omisiones, adiciones, inversiones ni voicings no textuales; no exige todos los tonos teóricos.
+  - id: GR-012
+    purpose: Impedir completar desde memoria huecos de evidencia, Owner o interfaz.
+    when_applicable: Falta/ambigüedad de claim, preferencia, decisión o sintaxis.
+    PASS: Ausencia indicada como incertidumbre/bloqueo o resuelta por ARTISTIC_PRIORITY dentro del mandato.
+    WARNING: Afirmación sin fuente o preferencia atribuida.
+    BLOCK: Se inventa evidencia, regla, preferencia del Owner o semántica de interfaz.
+    what_it_does_not_mean: No restringe generar material musical como candidato compositivo.
+
+
+END RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/guardrails.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/completion-checklist.yaml
+
+checklist_id: composition-completion-v1.1
+language: es
+required_decisions:
+  - FORM
+  - SECTION_ROLES
+  - HARMONIC_FRAMEWORK
+  - FOCAL_IDENTITY
+  - LEAD_MOTIF_BEHAVIOR
+  - BASS_ROLE
+  - GROOVE
+  - N3-P_PERCUSSION_ARCHITECTURE
+  - TEXTURE
+  - DEVELOPMENT
+  - ENERGY_TENSION_RELEASE
+  - ENDING
+  - CROSS_DOMAIN_CONFLICTS
+  - SONGPLAN_HANDOFF
+entry_contract:
+  fields: [decision, status, decision_id, selected_option_or_block_reason, trace_reference]
+  status_values: [RESOLVED, BLOCKED, NOT_APPLICABLE]
+  not_applicable_requires_reason: true
+ready_gate:
+  every_required_decision_must_be_resolved_or_validly_not_applicable: true
+  blocked_or_missing_required_decision_forbids_ready: true
+  songplan_candidate_must_be_present: true
+  warnings_block_only_affected_path_unless_contract_marks_song_level: true
+n3_p_required_fields:
+  - decision_id
+  - candidate_strategies
+  - selected_outcome
+  - selection_basis
+  - bass_groove_interaction
+  - focal_hierarchy_interaction
+  - section_behavior
+  - development_behavior
+  - songplan_realization
+n3_p_outcomes: [FULL, MINIMAL, DELEGATED, INTENTIONALLY_ABSENT]
+n3_p_implicit_satisfaction_forbidden: true
+
+
+END RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/completion-checklist.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml
+
+export_id: approved-composition-knowledge-v1
+canonical_source: research/integrations/composer-knowledge-v1.md
+canonical_status: 12 entradas ADMIT_WITH_SCOPE; no se eleva el estatus de las fuentes.
+records:
+  - id: CK-MEL-01
+    name: Semilla melódica condicionada por el objetivo
+    domain: melody
+    decision_level: material_seed
+    scope: Declarar operación posterior, relación preservable y alcance estilístico.
+    question: ¿Qué relación conviene hacer explícita para una operación posterior y qué semillas la mantienen disponible?
+    goals: [hacer explícita una operación posterior]
+    options: [representación por pitch, intervalo, contorno, ritmo o registro, según objetivo]
+    hard_constraints: Una invariante solo es restricción dura si el objetivo la exige explícitamente.
+    soft_criteria: Compatibilidad de la semilla con la operación prevista.
+    structural_basis: Las relaciones entre eventos pueden representarse y filtrarse antes de una transformación.
+    perceptual_basis:
+      status: unresolved_by_default
+      claim: La relación perceptiva depende de la tarea; no se presume reconocimiento ni memorabilidad.
+    composition_basis: Seleccionar representación/invariante y filtrar semillas incompatibles con la operación declarada.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY, EXTERNAL_EMPIRICAL]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [declarar alcance estilístico; no hay default universal]
+    cross_domain_dependencies: [operación posterior, motivo y representación]
+    artistic_priority_conditions: Varias semillas pasan los filtros; elegir por preferencia artística.
+    ranking_status: No hay ranking de semillas como mejores, más memorables o más desarrollables.
+    guardrails: [GR-001, GR-008, GR-009]
+    expected_effect: Hace más explícita y controlable la operación posterior; no asegura calidad ni desarrollo perceptible.
+    songplan_handoff: Material explícito, relación preservada y operación prevista; justificación en la traza.
+    uncertainty: Transferir entre estilos solo con alcance declarado; efecto perceptivo no determinado por la estructura.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-MEL-01
+      canonical_section: D
+      supporting_ids: [CAND-MEL-031, CAND-MEL-032, CAND-MEL-034]
+
+  - id: CK-MEL-02
+    name: Presentación y recurrencia como operaciones disponibles
+    domain: melody/form
+    decision_level: phrase_or_section
+    scope: Marco formal declarado, como presentación o relación statement-response.
+    question: ¿Conviene presentar o hacer recurrir una unidad antes de variarla; se conserva el arranque mientras cambia el final?
+    goals: [hacer disponible material antes del desarrollo]
+    options: [repetición exacta, respuesta, cambio de final]
+    hard_constraints: Ninguna estrategia de recurrencia es universalmente obligatoria.
+    soft_criteria: Función declarada de la unidad y dependencia con armonía/forma.
+    structural_basis: Repetición y cambio de parte de una unidad son operaciones describibles.
+    perceptual_basis:
+      status: supported_with_scope
+      claim: Detección y reconocimiento son resultados distintos; la recurrencia no garantiza ninguno.
+    composition_basis: Considerar estas operaciones como alternativas para un objetivo formal explícito.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [EXTERNAL_EMPIRICAL, THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [función formal y alcance estilístico explícitos]
+    cross_domain_dependencies: [melodía, armonía, forma]
+    artistic_priority_conditions: Elegir mediante preferencia artística si el filtro no determina una opción.
+    ranking_status: Sin ranking de repetición/variación como estrategia generalmente mejor.
+    guardrails: [GR-001, GR-002, GR-009]
+    expected_effect: Poner una unidad a disposición antes del desarrollo; no asegura identidad, memorabilidad ni éxito formal.
+    songplan_handoff: Material inicial, relación de recurrencia y función de la unidad.
+    uncertainty: Las consecuencias perceptivas dependen de contexto y tarea.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-MEL-02
+      canonical_section: D
+      supporting_ids: [CAND-MEL-007, CAND-MEL-008, CAND-MEL-033, CAND-FORM-002]
+
+  - id: CK-DEV-01
+    name: Relación transformable explícita
+    domain: development/melody
+    decision_level: material_development
+    scope: Operación concreta, relación preservada y estilo declarados; no generalizar la cadena clásica a todo género.
+    question: ¿Qué relación se conserva, altera, fragmenta o combina al desarrollar material?
+    goals: [controlar qué relación cambia durante el desarrollo]
+    options: [transformaciones compatibles con la invariante declarada]
+    hard_constraints: Filtrar transformaciones que contradigan una invariante exigida por el objetivo.
+    soft_criteria: Correspondencia con el contexto y operación prevista.
+    structural_basis: Una transformación puede describirse respecto de una relación preservada.
+    perceptual_basis:
+      status: unresolved
+      claim: Transformabilidad no demuestra parentesco percibido.
+    composition_basis: Declarar operación e invariante para hacer controlable una transformación.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORY, COMPOSITION_PEDAGOGY]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [la cadena transformacional clásica no se universaliza]
+    cross_domain_dependencies: [motivo, recurrencia, armonía, ritmo y textura cuando aplique]
+    artistic_priority_conditions: Elegir entre transformaciones compatibles por prioridad artística.
+    ranking_status: No ranking de interés, coherencia o calidad.
+    guardrails: [GR-001, GR-008, GR-009]
+    expected_effect: Restricción operativa explícita; no garantiza interés ni desarrollo logrado.
+    songplan_handoff: Operación, invariante y versión resultante; rationale en la traza.
+    uncertainty: La percepción de parentesco no está medida por esta entrada.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-DEV-01
+      canonical_section: D
+      supporting_ids: [CAND-MEL-010, CAND-MEL-034]
+
+  - id: CK-HAR-01
+    name: Etiqueta armónica y realización son decisiones separadas
+    domain: harmony/melody_harmony
+    decision_level: harmonic_selection_and_realization
+    scope: Declarar marco analítico, contexto precedente/siguiente y realización completa.
+    question: ¿Qué armonía se selecciona y cómo se realiza en bajo, inversión, registro, spacing y voces?
+    goals: [hacer explícitas selección y realización sin confundirlas]
+    options: [realizaciones explícitas compatibles con el marco y el objetivo]
+    hard_constraints: La etiqueta no sustituye pitches explícitas; una incompatibilidad inexplicada detiene la ruta afectada.
+    soft_criteria: Dependencias melódicas, de registro, spacing, bajo y textura.
+    structural_basis: Analizar conjuntamente etiqueta declarada y pitches de la realización relevante.
+    perceptual_basis:
+      status: unresolved_by_default
+      claim: La función, identidad y distancia dependen del contexto; no se derivan de la etiqueta sola.
+    composition_basis: Enumerar y filtrar realizaciones explícitas antes de atribuir función o compatibilidad.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY, REPERTOIRE_ANALYSIS]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [marco analítico/tradición declarados]
+    cross_domain_dependencies: [melodía, bajo, textura, registro y voicing]
+    artistic_priority_conditions: Si varias realizaciones pasan filtros, declarar preferencia o prioridad de género acotada.
+    ranking_status: Ningún voicing se rankea como equivalente o superior por la etiqueta sola.
+    guardrails: [GR-001, GR-008, GR-011]
+    expected_effect: Hace trazable la relación entre marco armónico y sonoridad especificada; no garantiza función o efecto únicos.
+    songplan_handoff: harmony_assignments más pistas/pitches explícitas; semántica de alcance y rationale en la traza.
+    uncertainty: No exigir todos los tonos teóricos; una realización cualificada necesita semántica explícita.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-HAR-01
+      canonical_section: D
+      supporting_ids: [CAND-HAR-040, CAND-HAR-047, CAND-HAR-049]
+
+  - id: CK-HAR-02
+    name: Semilla armónica condicionada por el objetivo y grados de libertad posteriores
+    domain: harmony
+    decision_level: harmonic_seed
+    scope: Declarar objetivo, organización, centro/colección y operaciones posteriores.
+    question: ¿Qué marco y semilla armónica mantienen disponibles las operaciones que la canción necesita después?
+    goals: [filtrar semillas incompatibles con restricciones u operaciones futuras declaradas]
+    options: [semillas compatibles con objetivos y restricciones explícitos]
+    hard_constraints: No eliminar grados de libertad que una operación posterior requiera explícitamente.
+    soft_criteria: Compatibilidad con organización, centro/colección y operaciones previstas.
+    structural_basis: Comparar organización armónica y grados de libertad preservados.
+    perceptual_basis:
+      status: unresolved_by_default
+      claim: La aptitud para operaciones futuras no demuestra calidad o éxito perceptivo.
+    composition_basis: Planificar opciones disponibles en lugar de declarar una semilla como mejor.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY, REPERTOIRE_ANALYSIS]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [organización armónica y tradición explícitas]
+    cross_domain_dependencies: [forma, operaciones posteriores, melodía y realización]
+    artistic_priority_conditions: Elegir por ARTISTIC_PRIORITY entre seeds compatibles.
+    ranking_status: No se rankea aptitud futura como calidad/coherencia.
+    guardrails: [GR-001, GR-008, GR-009]
+    expected_effect: Mantener una opción operativa disponible; no asegura resultado artístico.
+    songplan_handoff: Centro/colección, organización, ritmo armónico y operaciones permitidas.
+    uncertainty: Resultado contextual; no existe un orden general de seeds.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-HAR-02
+      canonical_section: D
+      supporting_ids: [CAND-HAR-053, CAND-HAR-054, CAND-HAR-055, CAND-HAR-056, CAND-HAR-059]
+
+  - id: CK-HAR-03
+    name: Selección fija no determina una realización única
+    domain: melody_harmony/realization
+    decision_level: harmonic_realization
+    scope: Selección fija; declarar voces, bajo, registro, spacing, timbre y criterio.
+    question: ¿Qué realizaciones siguen siendo válidas cuando armonía y melodía están fijadas?
+    goals: [mantener alternativas y detectar variables de confusión antes de comparar]
+    options: [realizaciones que satisfacen restricciones explícitas]
+    hard_constraints: Mantener separados los constructos comparados y los factores de confusión declarados.
+    soft_criteria: Compatibilidad con criterio y contexto expresamente definidos.
+    structural_basis: Enumerar opciones de voicing y variables de movimiento.
+    perceptual_basis:
+      status: unresolved_by_default
+      claim: Similarity, expectancy, consonance y roughness no son sustitutos entre sí.
+    composition_basis: Elegir por preferencia o por criterio explícito solo si existe comparación válida.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [EXTERNAL_EMPIRICAL, THEORETICAL_SCHOLARSHIP]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [timbre, tradición y textura declarados]
+    cross_domain_dependencies: [pitch fijo, voces, bajo, registro, spacing y timbre]
+    artistic_priority_conditions: Si no hay criterio comparativo válido, la elección pertenece a preferencia artística.
+    ranking_status: Movimiento mínimo no tiene RANK-1 demostrado para distancia percibida.
+    guardrails: [GR-001, GR-007, GR-009]
+    expected_effect: Hace explícitas realizaciones comparables; no implica preferencia perceptiva.
+    songplan_handoff: Realización concreta; criterio/limitación en la traza.
+    uncertainty: Comparación válida depende de constructo y operación directa.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-HAR-03
+      canonical_section: D
+      supporting_ids: [CAND-HAR-047, CAND-HAR-049, CAND-CROSS-005]
+
+  - id: CK-RHY-01
+    name: Metro como filtro de colocación
+    domain: rhythm/meter
+    decision_level: event_placement
+    scope: Declarar metro, subdivisión, acompañamiento, acento y enculturación pertinente.
+    question: ¿Qué onsets, duraciones o desplazamientos son compatibles con el metro declarado?
+    goals: [coordinar o desplazar eventos respecto de una grilla declarada]
+    options: [colocaciones alineadas, desplazadas u otras expresamente consideradas]
+    hard_constraints: Solo restricciones métricas explícitas son duras.
+    soft_criteria: Expectativa de acento bajo condiciones declaradas.
+    structural_basis: Posición y duración respecto de una grilla métrica explícita.
+    perceptual_basis:
+      status: supported_with_scope
+      claim: La expectativa de acento depende de condiciones; beat fuerte no equivale a prominencia.
+    composition_basis: Coordinar o contrariar deliberadamente la grilla conforme al objetivo.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, EXTERNAL_EMPIRICAL]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [enculturación, groove y estilo declarados]
+    cross_domain_dependencies: [melodía, textura, acento y acompañamiento]
+    artistic_priority_conditions: Elegir por prioridad artística si varias colocaciones son válidas.
+    ranking_status: No implica ranking de prominencia, importancia formal, estabilidad o función.
+    guardrails: [GR-001, GR-002, GR-008, GR-009]
+    expected_effect: Ordenar opciones según compatibilidad con la grilla y objetivo, no predecir su calidad.
+    songplan_handoff: Metro, subdivisión, onset, duración y dependencias explícitas.
+    uncertainty: No transferir expectativas métricas fuera de condiciones declaradas.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-RHY-01
+      canonical_section: D
+      supporting_ids: [CAND-RHY-002]
+
+  - id: CK-RHY-02
+    name: Alternativas temporales dependientes del contexto
+    domain: rhythm/form
+    decision_level: temporal_organization
+    scope: Declarar escala, metro, frase, armonía, género y arreglo pertinentes.
+    question: ¿Qué alternativas de silencio, densidad, duración o tasa de eventos conservar para la función declarada?
+    goals: [mantener opciones temporales salvo contradicción con restricción declarada]
+    options: [alternativas de silencio, densidad, duración y tasa]
+    hard_constraints: Descartar solo opciones que contradigan una restricción explícita.
+    soft_criteria: Función, escala y contexto declarados.
+    structural_basis: Silencio, densidad, duración y tasa son variables diferenciables.
+    perceptual_basis:
+      status: context_dependent
+      claim: La lectura perceptiva depende del contexto; no asignar automáticamente continuidad, llegada, tensión o cierre.
+    composition_basis: Conservar alternativas temporales y evitar receta automática.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, EXTERNAL_EMPIRICAL, REPERTOIRE_ANALYSIS]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [género y arreglo declarados]
+    cross_domain_dependencies: [metro, frase, armonía, forma y textura]
+    artistic_priority_conditions: Preferencia artística entre alternativas compatibles.
+    ranking_status: No hay ranking general de aceleración, densidad, fragmentación o silencio para fines formales.
+    guardrails: [GR-001, GR-005, GR-006, GR-007, GR-008, GR-009]
+    expected_effect: Mantener control explícito de organización temporal; efecto perceptivo queda contextual.
+    songplan_handoff: Patrón temporal, restricciones y función declarada; no receta automática.
+    uncertainty: No se justifica una regla means-end temporal general.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-RHY-02
+      canonical_section: D
+      supporting_ids: [CAND-RHY-003, CAND-RHY-007, CAND-RHY-008, FORM-003]
+
+  - id: CK-FORM-01
+    name: Función formal aporta información del objetivo
+    domain: form
+    decision_level: local_section_song
+    scope: Separar función formal de posición, función armónica y función percibida.
+    question: ¿Qué función y escala tiene la unidad y qué operaciones contradicen el objetivo declarado?
+    goals: [usar función como información para orientar filtros]
+    options: [establish, continue, prepare, arrive, open, contrast, return cuando proceda]
+    hard_constraints: Solo contradicciones explícitas al objetivo constituyen restricción dura.
+    soft_criteria: Compatibilidad de opciones con rol formal declarado.
+    structural_basis: Asignar rol y escala a una unidad.
+    perceptual_basis:
+      status: may_diverge_from_analysis
+      claim: El rol analítico no garantiza función percibida.
+    composition_basis: Orientar y filtrar opciones con la función; no determinar el medio.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, GENRE_ANALYSIS, REPERTOIRE_ANALYSIS]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [forma/escala y alcance estilístico declarados]
+    cross_domain_dependencies: [melodía, armonía, groove y textura según rol]
+    artistic_priority_conditions: Elegir forma concreta por preferencia artística entre alternativas filtradas.
+    ranking_status: Función formal no determina medio ni ranking universal.
+    guardrails: [GR-001, GR-008, GR-009]
+    expected_effect: Ofrecer información del objetivo para decisiones posteriores; no garantiza percepción de sección.
+    songplan_handoff: Posición, función, escala y consecuencias locales explícitas.
+    uncertainty: Loop, return, boundary y cadence permanecen conceptos separados.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-FORM-01
+      canonical_section: D
+      supporting_ids: [CAND-FORM-001, CAND-FORM-002, CAND-FORM-005, CAND-FORM-008]
+
+  - id: CK-FORM-02
+    name: Llegada, apertura, cierre y frontera son estados separados
+    domain: form/melody_harmony
+    decision_level: phrase_section_song
+    scope: Declarar contexto, tarea y tradición.
+    question: ¿La unidad debe llegar, cerrar, permanecer abierta o marcar una frontera?
+    goals: [mantener estados separados antes de seleccionar medios]
+    options: [arrival, openness, closure, boundary, según intención]
+    hard_constraints: No deducir un estado a partir de un solo indicio.
+    soft_criteria: Contexto melódico, armónico y formal declarado.
+    structural_basis: Registrar arrival_state, closure_state y boundary_state separadamente.
+    perceptual_basis:
+      status: context_and_task_dependent
+      claim: El cierre depende de múltiples indicios y de la tarea.
+    composition_basis: Evitar deducciones de cierre desde tónica, duración, descenso o frontera aislados.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, EXTERNAL_EMPIRICAL, GENRE_ANALYSIS]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [contexto y tradición declarados]
+    cross_domain_dependencies: [melodía, armonía, forma y eventos finales]
+    artistic_priority_conditions: Preferencia artística sobre el carácter deseado cuando medios admisibles permanecen abiertos.
+    ranking_status: No se rankea cierre por tónica, final largo, descenso o frontera aislados.
+    guardrails: [GR-001, GR-007, GR-008, GR-009]
+    expected_effect: Evitar que un único rasgo determine el estado pretendido; escucha posterior conserva autoridad perceptiva.
+    songplan_handoff: Estados deseados y operaciones compatibles; fuerza percibida queda en traza/escucha.
+    uncertainty: No hay garantía de cierre perceptivo por medios aislados.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-FORM-02
+      canonical_section: D
+      supporting_ids: [CAND-FORM-005]
+
+  - id: CK-CROSS-01
+    name: Ranking de reconocimiento bajo una tarea declarada
+    domain: melody/recurrence
+    decision_level: local_pairwise_rank
+    scope: Tarea de reconocimiento/discriminación, familiaridad, representación y comparación declaradas.
+    question: ¿Qué variante conserva mejor el reconocimiento en la tarea explícita?
+    goals: [preservar reconocimiento de material melódico previamente establecido]
+    options: [material intacto, contorno e intervalos relativos preservados, solo contorno preservado]
+    hard_constraints: Usar solo si recognition es el criterio activo y coincide el alcance de la evidencia.
+    soft_criteria: Ninguno adicional especificado por esta entrada.
+    structural_basis: Relaciones de pitch, intervalo y contorno preservadas.
+    perceptual_basis:
+      status: supported_with_scope
+      claim: En la comparación inspeccionada, intacta > contorno+intervalos relativos > solo contorno para reconocimiento.
+    composition_basis: Aplicar la comparación únicamente cuando el objetivo explícito sea recognition.
+    evidence_class: EXPERIMENTAL_RESULT
+    support_basis: [EXTERNAL_EMPIRICAL, CAND-CROSS-003]
+    capability: {enumerate: true, filter: yes_with_scope, rank: local_only}
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [tarea y familiaridad declaradas; no transferir ranking a calidad compositiva]
+    cross_domain_dependencies: [melody, recurrence, variation]
+    artistic_priority_conditions: Novedad, contraste, estilo u otro objetivo distinto pueden justificar una prioridad artística diferente.
+    ranking_status:
+      level: RANK-1
+      scope: Solo comparación local descrita; no es ranking de calidad, memorabilidad, retorno, estilo o composición global.
+      actual_uses_in_completed_song_compositions: 0
+      rank_2: unsupported
+    guardrails: [GR-001, GR-005, GR-007, GR-009]
+    expected_effect: La relación preferida se limita a reconocimiento en la tarea comparada.
+    songplan_handoff: Registrar invariante/variante y criterio; referir alcance y resultado en DecisionTrace.
+    uncertainty: No demuestra superioridad de retorno exacto ni equivalencia o calidad compositiva.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-CROSS-01
+      canonical_section: D/G
+      supporting_ids: [CAND-CROSS-003]
+
+  - id: CK-SONG-01
+    name: Contrato explícito de intención y revisión
+    domain: song/cross_domain
+    decision_level: song_level
+    scope: Decisiones song-level/cross-domain y dependencias; contrato de proceso, no claim musical independiente.
+    question: ¿Qué intención organiza la decisión y qué dependencia puede reabrirla?
+    goals: [declarar intención, alcance, dependencias y base antes del handoff]
+    options: [alternativas que sobreviven a restricciones y criterios declarados]
+    hard_constraints: No serializar valores musicales no resueltos ni pedir al motor que invente material.
+    soft_criteria: Criterios contextualizados; prioridad artística cuando no hay selección única.
+    structural_basis: Registrar decisiones, restricciones, dependencias, versiones y cambios.
+    perceptual_basis:
+      status: not_presumed
+      claim: El contrato no determina por sí mismo qué música es mejor.
+    composition_basis: Filtrar con base trazable y reabrir solo la decisión mínima afectada por conflicto identificado.
+    evidence_class: COMPOSITION_HEURISTIC
+    support_basis: [THEORETICAL_SCHOLARSHIP, COMPOSITION_PEDAGOGY, INTEGRATION_CONTRACT]
+    capability: {enumerate: true, filter: yes_with_scope, rank: false}
+    global_ranking: unsupported
+    actionability: ACTIONABLE_WITH_SCOPE
+    integration_status: ADMIT_WITH_SCOPE
+    genre_dependencies: [general, genre y prioridad artística permanecen en capas separadas]
+    cross_domain_dependencies: [prerequisite, constraint, co_development, revision_trigger]
+    artistic_priority_conditions: Elección normal cuando sobreviven opciones y el conocimiento no selecciona una única opción.
+    ranking_status: No producir score compuesto ni ranking global sin procedimiento justificado.
+    guardrails: [GR-001, GR-008, GR-009, GR-012]
+    expected_effect: Mejora trazabilidad y capacidad de revisar decisiones; no decide calidad musical.
+    songplan_handoff: Valores y eventos explícitos de SongPlanV2; rationale, evidencia, preferencia e incertidumbre en DecisionTrace.
+    uncertainty: Si no existe conocimiento adecuado, declarar BLOCKED en vez de completar el vacío desde memoria del modelo.
+    provenance:
+      canonical_source: research/integrations/composer-knowledge-v1.md
+      canonical_id: CK-SONG-01
+      canonical_section: D
+      supporting_ids: [CAND-FORM-001, CAND-MEL-031, composer-foundations-v5, composer-decision-contract-v1]
+
+
+END RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/genres/indie-dance.yaml
+
+genre_pack_id: GP-INDIE-DANCE-MVP
+name: Indie-dance MVP
+status: GENRE_ADMIT_WITH_SCOPE
+scope: >-
+  Realización loop/groove-based de electrónica-pop limitada a rasgos representados
+  en el repositorio. La etiqueta no describe todo el indie-dance.
+evidence_boundary:
+  basis: Observaciones de género y análisis de repertorio sobre loop/groove-based, EDM y pop/rock relacionado.
+  no_claims:
+    - La frecuencia en repertorio no convierte un rasgo en requisito.
+    - Las observaciones no demuestran causalidad sobre interés, energía, memorabilidad, coherencia o calidad.
+    - La transferencia exacta a todo indie-dance es desconocida.
+layers:
+  - general_composition_knowledge
+  - genre_specialization
+  - artistic_intent
+priorities:
+  - Permitir persistencia cíclica de material melódico o armónico.
+  - Considerar cambio formal en capas, textura, densidad, timbre o registro mientras otro material persiste.
+  - Separar retorno, parada, frontera y cadencia.
+  - Mantener explícita la jerarquía focal al añadir capas.
+  - Coordinar dominios sin exigir variación melódica.
+  - Mantener anticipación rítmica como opción condicionada, no firma obligatoria.
+entries:
+  - id: GP-01
+    name: Persistencia melódica con cambio cross-domain
+    evidence_class: GENRE_OBSERVATION
+    scope: Repertorios loop/groove-based, EDM y música popular relacionada; melodía cíclica sostenida.
+    question: Si la melodía debe permanecer, ¿dónde planificar el cambio formal?
+    options: [melodía estable, variación mínima, contraste nuevo, cambio en otras capas]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Repetición y variación pueden organizarse como decisiones contextualizadas.
+    genre_specialization: El cambio puede situarse en capas, textura, densidad o timbre.
+    use: Conservar melodía solo si concuerda con intención de continuidad/groove; declarar parámetro de cambio.
+    artistic_handoff: Elegir qué parámetro y cuánto cambia.
+    cross_domain_dependencies: [melody_to_texture, melody_to_density, melody_to_timbre]
+    songplan_handoff: Material melódico recurrente y parámetros de cambio por sección.
+    non_claim: No prueba interés, participación, menor aburrimiento ni que la melodía deba repetirse.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-01, supporting_ids: [CAND-MEL-011]}
+  - id: GP-02
+    name: Marco armónico cíclico/estático
+    evidence_class: GENRE_OBSERVATION
+    scope: Pop/rock y música groove-based con loop, vamp o pedal; no transferir automáticamente a práctica común.
+    question: ¿Puede persistir un marco armónico mientras la diferenciación ocurre en otros dominios?
+    options: [loop, vamp, pedal, progresión alternativa]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Selección armónica y realización son decisiones separadas.
+    genre_specialization: La persistencia cíclica puede enmarcar sección mientras arreglo, registro, densidad o timbre cambian.
+    use: Considerar el marco como opción de continuidad y filtrar cambios que contradicen persistencia explícita.
+    artistic_handoff: Elegir persistencia, superficie móvil o progresión dirigida según intención.
+    cross_domain_dependencies: [harmony_to_arrangement, harmony_to_density, harmony_to_register, harmony_to_timbre]
+    songplan_handoff: Marco, ciclo, secciones de persistencia y capas que pueden cambiar.
+    non_claim: Loop no genera por sí solo coherencia, energía, calma, aburrimiento o dirección.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-02, supporting_ids: [CAND-HAR-026]}
+  - id: GP-03
+    name: Vocabulario de retorno, parada y frontera en loop
+    evidence_class: GENRE_OBSERVATION
+    scope: Organización cíclica pop/rock/groove-based.
+    question: ¿Cómo articular una frontera sobre un ciclo sin llamar cadencia a todo retorno?
+    options: [continuar, cortar/parar, retorno marcado, cambio de arreglo, evento final]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Arrival, closure, boundary y return son estados distintos.
+    genre_specialization: Parada, cambio de capa/densidad o iteración final marcada son opciones de frontera.
+    use: Nombrar RETURN, STOP, BOUNDARY y FINAL EVENT neutralmente; cadence requiere proceso declarado.
+    artistic_handoff: Elegir el carácter de frontera con rasgos combinados.
+    cross_domain_dependencies: [form_to_arrangement, boundary_to_closure_review]
+    songplan_handoff: Tipo de retorno/parada, repetición marcada, entradas/salidas y estado de frontera.
+    non_claim: Parada no prueba cierre armónico; retorno no es cadencia.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-03, supporting_ids: [CAND-HAR-031]}
+  - id: GP-04
+    name: Diferenciación formal loop-based
+    evidence_class: GENRE_OBSERVATION
+    scope: Repertorios populares/loop-based delimitados.
+    question: ¿Cómo diferenciar unidades cuando persiste un marco cíclico?
+    options: [cambio coordinado de capas, densidad, timbre, registro, entradas/salidas, parada o retorno]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Función formal orienta objetivos pero no determina un medio.
+    genre_specialization: Diferenciación posible en variables coordinadas sin asumir cambio aislado suficiente.
+    use: Proponer estrategias de continuidad y cambio y filtrar según la intención explícita.
+    artistic_handoff: Elegir dimensiones que cambian y que conservan identidad.
+    cross_domain_dependencies: [form, melody, harmony, arrangement]
+    songplan_handoff: Función de sección, marco persistente, cambios de capas y retornos.
+    non_claim: El oyente no necesariamente percibe unidades como secciones; ningún cambio aislado crea forma automáticamente.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-04, supporting_ids: [CAND-FORM-008]}
+  - id: GP-05
+    name: Anticipación rítmica como opción acotada
+    evidence_class: GENRE_OBSERVATION
+    scope: Pop/rock reciente; opción para indie-dance solo si prosodia, metro y material coinciden.
+    question: ¿Cuándo considerar anticipación sin perder referencia métrica?
+    options: [onset alineado, anticipado o retardado]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Desplazamiento se evalúa respecto de metro y contexto declarados.
+    genre_specialization: Anticipación con sustain/stress compatible es alternativa documentada.
+    use: Considerar solo con metro recuperable y sustain, stress y armonía compatibles.
+    artistic_handoff: Elegir colocación según intención y legibilidad.
+    cross_domain_dependencies: [rhythm, melody, prosody, harmony]
+    songplan_handoff: Onset, sustain, stress y condición métrica.
+    non_claim: No es requisito ni prueba de groove, energía, tensión, prominencia o mejor phrasing.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-05, supporting_ids: [CAND-RHY-005, CAND-MEL-026]}
+  - id: GP-06
+    name: Contraste seccional como conjunto de variables
+    evidence_class: GENRE_OBSERVATION
+    scope: Pop/rock verso-coro o forma análoga; no prescribe coro más alto.
+    question: ¿Qué conjunto de cambios diferencia sección sin perder continuidad?
+    options: [registro, dinámica, textura, densidad, ritmo armónico, letra]
+    capabilities: {enumerate: true, filter: yes_with_scope, rank: false}
+    general_basis: Contraste seccional puede usar varios parámetros coordinados.
+    genre_specialization: Cambio de registro puede ser uno entre marcadores posibles.
+    use: Evaluar un conjunto de marcadores; no elevar registro como solución automática.
+    artistic_handoff: Elegir dimensiones que contrastan y permanecen.
+    cross_domain_dependencies: [form, register, density, texture, dynamics]
+    songplan_handoff: Diferencias de sección, registro relativo y capas coordinadas.
+    non_claim: Registro aislado no crea energía, contraste ni función de coro; eficacia requiere escucha.
+    provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_id: GP-06, supporting_ids: [CAND-MEL-022]}
+style_compatible_options:
+  - loop/vamp/pedal o progresión dirigida
+  - melodía estable, variación mínima o material nuevo por sección
+  - cambio mediante capas, densidad, timbre, registro, dinámica o ritmo
+  - frontera por parada, iteración marcada, cambio de arreglo o continuidad
+  - onset alineado o anticipado bajo condiciones métricas
+  - contraste concentrado en un dominio o distribuido
+genre_specific_handoffs:
+  - Qué material permanece y qué parámetro cambia.
+  - Marco cíclico o progresión dirigida según intención.
+  - Capa focal y capas que se retiran/reducen.
+  - Dimensiones de contraste y elementos identitarios que persisten.
+  - Frontera abierta, corte o terminal.
+  - Anticipación según metro, prosodia y armonía.
+  - Incertidumbre perceptiva aceptada.
+guardrails:
+  - El loop no requiere cadencia; retorno no equivale a cadencia.
+  - La melodía no debe variar obligatoriamente para que exista forma.
+  - Densidad no crea automáticamente energía.
+  - Registro alto no crea automáticamente contraste o coro.
+  - Anticipación no crea automáticamente groove o tensión.
+  - Repetición no crea automáticamente memorabilidad.
+  - Cambio de capa no garantiza nueva sección percibida.
+  - No asignar pesos numéricos ni ranking al pack.
+known_limitations:
+  - Es una acotación de integración, no una taxonomía histórica completa.
+  - Fuentes directas tratan loop/groove-based, EDM y pop/rock relacionado.
+  - No hay ranking de realizaciones, densidad, registro o textura.
+  - Hook, prominence y memorability siguen separados.
+  - Tensión es multidimensional, sin scalar oficial.
+  - Producción, mezcla, prosodia exhaustiva e instrumentación detallada quedan fuera.
+provenance: {canonical_source: research/integrations/composer-genre-pack-v1.md, canonical_ids: [GP-01, GP-02, GP-03, GP-04, GP-05, GP-06]}
+
+
+END RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/genres/indie-dance.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml
+
+record_id: N3-P
+record_kind: decision_reference_not_composer_knowledge_entry
+name: Decisión explícita de arquitectura de percusión
+decision_level: dependent_subdecision_of_N3_groove_harmony
+question: ¿Qué lleva la función percusiva/rítmica de esta canción?
+scope: Resolver para cada composición antes del handoff SongPlan; ninguna salida es requisito de género.
+goals: La función que la percusión debe cumplir o dejar de cumplir en el brief actual.
+options:
+  - id: FULL
+    meaning: Varias funciones/estratos explícitos con alcance y uso por sección decididos.
+  - id: MINIMAL
+    meaning: Arquitectura deliberadamente limitada con función y suficiencia prevista declaradas.
+  - id: DELEGATED
+    meaning: Identificar qué otras capas llevan cada función pertinente y declarar que no habrá drums independiente.
+  - id: INTENTIONALLY_ABSENT
+    meaning: Ausencia escogida explícitamente con intención/contexto y consecuencias aceptadas.
+hard_constraints:
+  - La decisión N3-P debe quedar explícita; un groove resuelto no la sustituye.
+  - No hay default silencioso de ausencia.
+soft_criteria:
+  - groove
+  - relación con bajo
+  - jerarquía focal
+  - diferenciación por sección
+  - trayectoria de energía
+  - desarrollo
+  - interacción de textura
+structural_basis: Declarar arquitectura elegida, capas/eventos, sección y relaciones cross-domain.
+perceptual_basis:
+  status: owner_listening_required_for_perceptual_claims
+  claim: La claridad del pulso y suficiencia percusiva no se infieren de la etiqueta de arquitectura sola.
+composition_basis: Filtrar opciones por restricciones y dependencias; entregar supervivientes a prioridad artística si no hay criterio comparativo.
+capability: {enumerate: true, filter: yes_with_scope, rank: false}
+actionability: ACTIONABLE_WITH_SCOPE
+ranking_status:
+  rank_1: no
+  rank_2: no
+  actual_song_case_rank_1_uses: 0
+  actual_song_case_rank_2_uses: 0
+artistic_priority_conditions: Si más de una arquitectura pasa los filtros y no hay ranking autorizado, el compositor puede seleccionar por ARTISTIC_PRIORITY, declarar intención/tradeoff y continuar; pedir al Owner solo si la entrada actual le reserva la decisión.
+guardrails: [GR-001, GR-008, GR-009, GR-010]
+cross_domain_dependencies:
+  - Groove/metro y percusión: co-development contextual.
+  - Bajo/kick: revisar alineación, anticipación, solapamiento y duración; no imponer unísono ni prohibirlo.
+  - Jerarquía focal: filtrar actividad/acento respecto del foco declarado.
+  - Forma/secciones: definir entradas, salidas y cambios.
+  - Desarrollo: registrar qué identidad permanece, qué cambia, dónde y por qué.
+  - Densidad/textura: revisar conflictos; la energía de SongPlan no crea dinámica.
+songplan_handoff:
+  schema: SongPlanV2
+  full_or_minimal: Materializar únicamente tracks/eventos y mapeos explícitos admitidos por el contrato.
+  delegated: Eventos explícitos en las otras capas; sin track drums inventado.
+  intentionally_absent: Puede no haber track percusivo; decisión y razón permanecen en la traza.
+  rationale: DecisionTrace externa.
+intentionally_absent_status: not_exercised; no es fallo y no debe forzarse para completar cobertura.
+non_claims:
+  - No compara superioridad entre arquitecturas.
+  - FULL no exige cada articulación ni subdivisión continua.
+  - Silencio rítmico no es automáticamente defecto.
+  - No existe una regla de género que obligue a usar drums.
+provenance:
+  canonical_source: research/integrations/composer-mvp-v1.1-percussion-architecture.md
+  canonical_id: N3-P
+  supporting_sources:
+    - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md
+
+
+END RECORD: D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/integrations/composer-agent/stage-1-decision-trace-schema.yaml
+
+schema_id: staged-composer-stage-1-decision-trace-v1
+version: 1.0.0
+purpose: Solo decisiones y trazabilidad; no contiene SongPlan ni material completo.
+required_decisions:
+  - FORM
+  - SECTION_ROLES
+  - HARMONIC_FRAMEWORK
+  - FOCAL_IDENTITY
+  - LEAD_MOTIF_BEHAVIOR
+  - BASS_ROLE
+  - GROOVE
+  - N3-P_PERCUSSION_ARCHITECTURE
+  - TEXTURE
+  - DEVELOPMENT
+  - ENERGY_TENSION_RELEASE
+  - ENDING
+  - CROSS_DOMAIN_CONFLICTS
+interface_aliases:
+  CROSS_DOMAIN_DEPENDENCIES: CROSS_DOMAIN_CONFLICTS
+decision_fields:
+  - decision_id
+  - options_considered
+  - selected_option
+  - selection_basis
+  - active_intention
+  - tradeoff
+  - trace_reference
+selection_basis_enum:
+  - EXPORTED_KNOWLEDGE_FILTER
+  - ARTISTIC_PRIORITY
+  - RANK-1_AUTHORIZED
+  - NOT_APPLICABLE
+artistic_priority_required:
+  when: multiple_options_survive_filter_without_authorized_ranking
+  fields: [decision_id, surviving_options, selected_option, active_intention, tradeoff, superiority_claim]
+  superiority_claim: false
+n3_p:
+  selected_outcomes: [FULL, MINIMAL, DELEGATED, INTENTIONALLY_ABSENT]
+  required_fields: [decision_id, candidate_strategies, selected_outcome, selection_basis, bass_groove_interaction, focal_hierarchy_interaction, section_behavior, development_behavior]
+capability_constraints:
+  rank_2: UNAVAILABLE
+  rank_1: only_authorized_scope
+  owner_attribution: must_match_run_input
+status:
+  allowed: [COMPLETE, BLOCKED]
+
+
+END RECORD: D:/projects/music-composer-lab/integrations/composer-agent/stage-1-decision-trace-schema.yaml
+
+BEGIN RECORD: D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-005/frozen-prompt-stage-1.txt
+
+STAGE 1 — DECISION PLANNING
+
+Use the supplied artistic brief and only the listed composer-interface-v1.1 records. Produce one DecisionTrace object and no SongPlan or note-level complete material.
+
+Resolve FORM, SECTION_ROLES, HARMONIC_FRAMEWORK, FOCAL_IDENTITY, LEAD_MOTIF_BEHAVIOR, BASS_ROLE, GROOVE, N3-P_PERCUSSION_ARCHITECTURE, TEXTURE, DEVELOPMENT, ENERGY_TENSION_RELEASE, ENDING and CROSS_DOMAIN_CONFLICTS. For every required decision provide options, selection basis, intention, trade-off and trace reference. Apply ENUMERATE → FILTER → ARTISTIC_PRIORITY → SELECTION → CONTINUE when applicable. Do not self-certify a later stage. Rank-2 is unavailable. Return only the stage-1 schema object.
+
+Supplied records: artistic brief, decision-schema.yaml, relevant guardrails.yaml, completion-checklist.yaml, relevant approved knowledge, relevant indie-dance pack, n3-p reference, stage-1-decision-trace-schema.yaml.
+
+
+END RECORD: D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-005/frozen-prompt-stage-1.txt
+
+
+PREVIOUS IMMUTABLE OUTPUT
+```json
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "domain": "form",
+      "artistic_goal": "Persistent forward motion with gradual accumulation and one clear release",
+      "question": "How to structure sections to reflect tension, restraint, and hypnotic release?",
+      "scope": "Indie-dance loop/groove-based with controlled contrast",
+      "candidate_options": [
+        {
+          "id": "LOOP_BASED_VAMP",
+          "description": "Cyclic harmonic/melodic loop with cross-domain layering (e.g., texture/density changes)",
+          "basis": ["GP-01", "GP-02", "GP-04"],
+          "hard_constraints": ["Preserve melodic identity", "Avoid abrupt cadences"],
+          "soft_criteria": ["Gradual density/texture shifts", "One focal release"]
+        },
+        {
+          "id": "VERSE_CHORUS_VARIANT",
+          "description": "Verse (restrained) → Chorus (release) with harmonic/melodic persistence",
+          "basis": ["GP-06", "CK-FORM-01"],
+          "hard_constraints": ["No forced melodic variation", "Contrast via texture/arrangement"],
+          "soft_criteria": ["Hypnotic groove continuity", "Clear release at ending"]
+        },
+        {
+          "id": "MINIMALISTIC_PHRASE_REPETITION",
+          "description": "Short phrases with rhythmic displacement (anticipation) and harmonic stasis",
+          "basis": ["GP-05", "CK-RHY-01"],
+          "hard_constraints": ["No full-form sections", "Focus on groove/melodic contour"],
+          "soft_criteria": ["Tense, restrained atmosphere"]
+        }
+      ],
+      "selected_option": "LOOP_BASED_VAMP",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize hypnotic groove with gradual layering for restrained tension",
+      "tradeoff": "Avoids verse-chorus predictability; relies on texture/density for contrast",
+      "dependencies": ["HARMONIC_FRAMEWORK", "TEXTURE", "GROOVE"],
+      "songplan_handoff": {
+        "sections": ["Loop_A (intro)", "Loop_B (development)", "Loop_C (release)"],
+        "cross_domain_changes": ["Texture: sparse → dense", "Density: low → high"]
+      },
+      "uncertainty": "Perceptual release depends on listener’s expectation of closure",
+      "provenance": ["GP-01", "GP-04", "CK-FORM-01"]
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "domain": "form",
+      "artistic_goal": "Coherent repetition with audible development",
+      "question": "How to assign roles to sections while maintaining identity?",
+      "scope": "Loop-based with cross-domain variation",
+      "candidate_options": [
+        {
+          "id": "ESTABLISH_CONTINUE_PREPARE",
+          "description": "Loop_A: Establish (melodic hook), Loop_B: Continue (texture shift), Loop_C: Prepare (density buildup)",
+          "basis": ["CK-FORM-01", "GP-04"],
+          "hard_constraints": ["No forced harmonic arrival"],
+          "soft_criteria": ["Focal identity preserved"]
+        },
+        {
+          "id": "OPEN_CONTRAST_RETURN",
+          "description": "Loop_A: Open (melodic loop), Loop_B: Contrast (texture), Loop_C: Return (density)",
+          "basis": ["GP-03", "GP-06"],
+          "hard_constraints": ["No cadence at Loop_C"],
+          "soft_criteria": ["Hypnotic continuity"]
+        }
+      ],
+      "selected_option": "ESTABLISH_CONTINUE_PREPARE",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual accumulation via texture/density",
+      "tradeoff": "Avoids abrupt contrast; relies on subtle shifts",
+      "dependencies": ["FORM", "TEXTURE", "DEVELOPMENT"],
+      "songplan_handoff": {
+        "Loop_A": {"role": "establish", "focus": "melodic hook"},
+        "Loop_B": {"role": "continue", "focus": "texture shift"},
+        "Loop_C": {"role": "prepare", "focus": "density buildup"}
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "domain": "harmony",
+      "artistic_goal": "Clear focal identity with controlled development",
+      "question": "How to structure harmony for persistence and gradual change?",
+      "scope": "Indie-dance loop/vamp with cross-domain variation",
+      "candidate_options": [
+        {
+          "id": "TONIC_PEDAL",
+          "description": "Tonic pedal (e.g., C major) with harmonic rhythm shifts in other layers",
+          "basis": ["GP-02", "CK-HAR-02"],
+          "hard_constraints": ["No forced progression", "Preserve tonal center"],
+          "soft_criteria": ["Harmonic stasis for groove"]
+        },
+        {
+          "id": "MINOR_MODE_PROGRESSION",
+          "description": "Minor-mode progression (e.g., i-iv-V) with modal mixture",
+          "basis": ["CK-HAR-01", "GP-02"],
+          "hard_constraints": ["Avoid tonal ambiguity"],
+          "soft_criteria": ["Tense, restrained character"]
+        }
+      ],
+      "selected_option": "TONIC_PEDAL",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Stable harmonic foundation for hypnotic groove",
+      "tradeoff": "Limits harmonic development; relies on texture for contrast",
+      "dependencies": ["FORM", "BASS_ROLE", "GROOVE"],
+      "songplan_handoff": {
+        "framework": "C major tonic pedal",
+        "harmonic_rhythm": "Slow (1 chord per 4 bars) in Loop_A, faster in Loop_C"
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "domain": "cross_domain",
+      "artistic_goal": "Preserve identity across development",
+      "question": "Which element carries the focal identity?",
+      "scope": "Indie-dance with loop-based structure",
+      "candidate_options": [
+        {
+          "id": "MELODIC_HOOK",
+          "description": "Persistent melodic contour (e.g., stepwise motion with rhythmic displacement)",
+          "basis": ["GP-01", "CK-MEL-01"],
+          "hard_constraints": ["No forced variation"],
+          "soft_criteria": ["Hypnotic, restrained character"]
+        },
+        {
+          "id": "GROOVE_PATTERN",
+          "description": "Rhythmic displacement (anticipation) as focal element",
+          "basis": ["GP-05", "CK-RHY-01"],
+          "hard_constraints": ["Preserve metric alignment"],
+          "soft_criteria": ["Tense, forward motion"]
+        }
+      ],
+      "selected_option": "MELODIC_HOOK",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Melodic persistence for hypnotic effect",
+      "tradeoff": "Groove supports but does not dominate",
+      "dependencies": ["LEAD_MOTIF_BEHAVIOR", "GROOVE"],
+      "songplan_handoff": {
+        "focal_element": "melodic contour (C-D-E-F#-G)",
+        "rhythmic_support": "Subtle anticipation in Loop_C"
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "domain": "melody",
+      "artistic_goal": "Coherent repetition with audible development",
+      "question": "How to develop the melodic motif?",
+      "scope": "Indie-dance with loop-based structure",
+      "candidate_options": [
+        {
+          "id": "CONTOUR_PRESERVATION",
+          "description": "Preserve melodic contour; vary rhythmic placement (e.g., anticipation)",
+          "basis": ["CK-MEL-01", "CK-DEV-01"],
+          "hard_constraints": ["No forced transposition"],
+          "soft_criteria": ["Hypnotic, restrained variation"]
+        },
+        {
+          "id": "INTERVALIC_VARIATION",
+          "description": "Vary intervals while preserving contour (e.g., step-wise → leap)",
+          "basis": ["CK-CROSS-01", "GP-01"],
+          "hard_constraints": ["Maintain tonal center"],
+          "soft_criteria": ["Audible development"]
+        }
+      ],
+      "selected_option": "CONTOUR_PRESERVATION",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Subtle rhythmic displacement for tension",
+      "tradeoff": "Avoids harmonic/melodic complexity",
+      "dependencies": ["FOCAL_IDENTITY", "GROOVE"],
+      "songplan_handoff": {
+        "motif": "C-D-E-F#-G (Loop_A)",
+        "development": "Rhythmic anticipation in Loop_C"
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "domain": "bass",
+      "artistic_goal": "Support groove without dominating",
+      "question": "How to integrate bass with harmonic framework?",
+      "scope": "Indie-dance with tonic pedal",
+      "candidate_options": [
+        {
+          "id": "TONIC_DRONE",
+          "description": "Tonic drone (C) with rhythmic displacement",
+          "basis": ["GP-02", "CK-HAR-01"],
+          "hard_constraints": ["No forced progression"],
+          "soft_criteria": ["Groove support"]
+        },
+        {
+          "id": "SYNCOPATED_ROOTS",
+          "description": "Syncopated roots (e.g., C-G-C) with harmonic rhythm",
+          "basis": ["CK-RHY-01", "GP-05"],
+          "hard_constraints": ["Avoid metric conflict"],
+          "soft_criteria": ["Forward motion"]
+        }
+      ],
+      "selected_option": "TONIC_DRONE",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Stable foundation for hypnotic groove",
+      "tradeoff": "Limits harmonic development",
+      "dependencies": ["HARMONIC_FRAMEWORK", "GROOVE"],
+      "songplan_handoff": {
+        "bass_line": "C (tonic drone) with rhythmic displacement in Loop_C"
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "domain": "rhythm",
+      "artistic_goal": "Persistent forward motion",
+      "question": "How to structure groove for hypnotic effect?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "METRIC_DISPLACEMENT",
+          "description": "Subtle rhythmic displacement (e.g., 16th-note anticipation)",
+          "basis": ["GP-05", "CK-RHY-01"],
+          "hard_constraints": ["Preserve metric alignment"],
+          "soft_criteria": ["Tense, forward motion"]
+        },
+        {
+          "id": "STEADY_16TH_NOTES",
+          "description": "Steady 16th-note pulse with syncopation",
+          "basis": ["GP-01", "CK-RHY-02"],
+          "hard_constraints": ["No metric ambiguity"],
+          "soft_criteria": ["Hypnotic continuity"]
+        }
+      ],
+      "selected_option": "METRIC_DISPLACEMENT",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual tension buildup",
+      "tradeoff": "Requires careful rhythmic alignment",
+      "dependencies": ["BASS_ROLE", "N3-P_PERCUSSION_ARCHITECTURE"],
+      "songplan_handoff": {
+        "groove": "16th-note pulse with 8th-note anticipation in Loop_C"
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "domain": "percussion",
+      "artistic_goal": "Support groove without dominating",
+      "question": "What percussion architecture to use?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "FULL",
+          "description": "Kick/snare/hi-hat with rhythmic displacement",
+          "basis": ["N3-P", "GP-05"],
+          "hard_constraints": ["No metric conflict"],
+          "soft_criteria": ["Hypnotic groove"],
+          "candidate_strategies": [
+            {
+              "strategy": "Kick on beat 1, snare on 2 and 4, hi-hat on 8th notes with displacement in Loop_C",
+              "bass_groove_interaction": "Kick aligns with bass drone, hi-hat displacement complements rhythmic anticipation",
+              "focal_hierarchy_interaction": "Hi-hat supports melodic focal identity",
+              "section_behavior": "Hi-hat displacement intensifies in Loop_C",
+              "development_behavior": "No change in kick/snare, hi-hat becomes more pronounced"
+            }
+          ],
+          "selected_outcome": "FULL"
+        },
+        {
+          "id": "MINIMAL",
+          "description": "Kick-only with bass syncopation",
+          "basis": ["N3-P", "GP-02"],
+          "hard_constraints": ["Preserve groove"],
+          "soft_criteria": ["Restrained texture"],
+          "candidate_strategies": [
+            {
+              "strategy": "Kick on beat 1 and 3, no snare/hi-hat",
+              "bass_groove_interaction": "Kick aligns with bass drone, no additional percussion",
+              "focal_hierarchy_interaction": "Melodic hook dominates",
+              "section_behavior": "No percussion variation",
+              "development_behavior": "No percussion development"
+            }
+          ],
+          "selected_outcome": "MINIMAL"
+        },
+        {
+          "id": "DELEGATED",
+          "description": "No independent percussion track; rely on bass and melodic rhythm",
+          "basis": ["N3-P"],
+          "hard_constraints": ["No percussion track"],
+          "soft_criteria": ["Simplified texture"],
+          "candidate_strategies": [
+            {
+              "strategy": "No percussion; bass and melody carry rhythmic function",
+              "bass_groove_interaction": "Bass drone with subtle rhythmic displacement",
+              "focal_hierarchy_interaction": "Melodic hook and bass dominate",
+              "section_behavior": "No percussion changes",
+              "development_behavior": "No percussion development"
+            }
+          ],
+          "selected_outcome": "DELEGATED"
+        },
+        {
+          "id": "INTENTIONALLY_ABSENT",
+          "description": "No percussion at all",
+          "basis": ["N3-P"],
+          "hard_constraints": ["No percussion"],
+          "soft_criteria": ["Extreme restraint"],
+          "candidate_strategies": [
+            {
+              "strategy": "No percussion track",
+              "bass_groove_interaction": "Bass drone only",
+              "focal_hierarchy_interaction": "Melodic hook and bass dominate entirely",
+              "section_behavior": "No percussion changes",
+              "development_behavior": "No percussion development"
+            }
+          ],
+          "selected_outcome": "INTENTIONALLY_ABSENT"
+        }
+      ],
+      "selected_option": "MINIMAL",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Focus on melodic/bass groove, avoid rhythmic clutter",
+      "tradeoff": "Limits rhythmic complexity but enhances melodic focus",
+      "dependencies": ["GROOVE", "BASS_ROLE"],
+      "songplan_handoff": {
+        "architecture": "MINIMAL",
+        "strategy": "Kick on beat 1 and 3, no snare/hi-hat",
+        "bass_groove_interaction": "Kick aligns with bass drone",
+        "focal_hierarchy_interaction": "Melodic hook dominates",
+        "section_behavior": "No percussion variation",
+        "development_behavior": "No percussion development"
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "domain": "texture",
+      "artistic_goal": "Controlled section contrast",
+      "question": "How to vary texture for gradual accumulation?",
+      "scope": "Indie-dance with loop-based form",
+      "candidate_options": [
+        {
+          "id": "LAYERED_SYNTHS",
+          "description": "Sparse pads (Loop_A) → dense synths (Loop_C)",
+          "basis": ["GP-04", "GP-06"],
+          "hard_constraints": ["Preserve focal identity"],
+          "soft_criteria": ["Hypnotic buildup"]
+        },
+        {
+          "id": "RHYTHMIC_DISPLACEMENT",
+          "description": "Rhythmic displacement in percussion/synths",
+          "basis": ["GP-05", "CK-RHY-02"],
+          "hard_constraints": ["No metric conflict"],
+          "soft_criteria": ["Tense atmosphere"]
+        }
+      ],
+      "selected_option": "LAYERED_SYNTHS",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual density increase",
+      "tradeoff": "Avoids abrupt contrast",
+      "dependencies": ["FORM", "DEVELOPMENT"],
+      "songplan_handoff": {
+        "Loop_A": {"layers": ["sparse pads"], "density": "low"},
+        "Loop_B": {"layers": ["sparse pads", "subtle synth"], "density": "medium"},
+
+DETERMINISTIC GATE DIAGNOSTICS — STAGE 1 FINAL RETRY
+
+Return only one complete JSON object. Do not use Markdown fences, headings, commentary, or explanatory text.
+
+FAIL: previous output ended with done_reason=length and was incomplete.
+FAIL: Markdown-wrapped output is invalid.
+FAIL: resolve all required Stage 1 decisions using the supplied brief and records already present in this payload.
+FAIL: N3-P must contain exactly one allowed selected_outcome and all required fields.
+FAIL: do not add SongPlan or note-level material.
+
+These diagnostics provide no musical recommendation.

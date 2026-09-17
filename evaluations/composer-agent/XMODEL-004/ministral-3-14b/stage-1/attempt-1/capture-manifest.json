@@ -1,0 +1,27 @@
+{
+  "capture_status": "CAPTURED",
+  "captured_at_utc": "2026-09-16T05:19:17.452697+00:00",
+  "model_identifier_requested": "ministral-3:14b",
+  "model_identifier_reported": "ministral-3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "stage": "stage-1",
+  "attempt": 1,
+  "input_sha256": "998ecd3d167640671b060fddf78ce35d56c4409fc3696641c4c7edc7dea3c306",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 4096
+  },
+  "request_sha256": "930f4228425929bc5c621008f6a58157f1ec8012124ca9a121137340cef594e3",
+  "raw_api_response_sha256": "8dabd9d2ac5270f6a2ab85b54c690b21f244f3b117aefaaddd47145dfaffa903",
+  "raw_output_sha256": "089b79480ee0f3efa99df226f0dd53f23e923784c03e8e0ddb2f56a70d5fe773",
+  "semantic_repair_performed": false,
+  "done_reason": "stop",
+  "eval_count": 3690,
+  "prompt_eval_count": 800
+}
