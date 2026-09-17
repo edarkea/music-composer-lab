@@ -1,0 +1,41 @@
+{
+  "kind": "TECHNICAL_SCHEMA_PROBE",
+  "model": "qwen3:14b",
+  "results": [
+    {
+      "probe": "plain_required",
+      "parse": false,
+      "content": "",
+      "done_reason": "length",
+      "request_sha256": "802e41fe16e7c138c399b77b8243cd78b0b72b7d1018ccc8e108a47d07838314"
+    },
+    {
+      "probe": "nested_required",
+      "parse": false,
+      "content": "",
+      "done_reason": "length",
+      "request_sha256": "68a67b9a786e8a089a38c20b6d675265a95d8309346c547db137019c0d8e9cc5"
+    },
+    {
+      "probe": "if_then_required",
+      "parse": false,
+      "content": "",
+      "done_reason": "length",
+      "request_sha256": "3a97858e8cc42a28664c24599bdaef465d3969241ea6381d5177559d3e3d9fc1"
+    },
+    {
+      "probe": "one_of",
+      "parse": false,
+      "content": "",
+      "done_reason": "length",
+      "request_sha256": "e9d94402567557f4dce6adcb57b205aefc8460dd246d3f6245e83bd8b12bf1ef"
+    },
+    {
+      "probe": "additional_properties_false",
+      "parse": false,
+      "content": "",
+      "done_reason": "length",
+      "request_sha256": "4f6f34d20ec3333379832724ffc6580b6193501ef491e7f86556914e910a272f"
+    }
+  ]
+}

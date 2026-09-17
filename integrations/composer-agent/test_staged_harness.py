@@ -66,6 +66,25 @@ class HarnessTests(unittest.TestCase):
             original=Path(d)/"payload.txt"; original.write_text("BRIEF EXACT\nREQUIRED RECORD\nSTAGE INSTRUCTION",encoding="utf-8")
             out=Path(d)/"retry.txt"; build_retry_payload(original,["schema validation failed at /decision_trace/0"],out)
             text=out.read_text(encoding="utf-8"); self.assertIn("BRIEF EXACT",text); self.assertIn("REQUIRED RECORD",text); self.assertIn("STAGE INSTRUCTION",text)
+    def test_o_n3_parent_fields_pass(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; p.write_text(json.dumps(valid_trace()),encoding="utf-8"); self.assertTrue(gate(1,p)["pass"])
+    def test_p_n3_nested_fields_fail_with_path(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_trace(); n=x["N3-P_PERCUSSION_ARCHITECTURE"]
+            nested={k:n.pop(k) for k in ("selected_outcome","candidate_strategies","bass_groove_interaction","focal_hierarchy_interaction","section_behavior","development_behavior")}; n["selected_option"]=nested
+            p.write_text(json.dumps(x),encoding="utf-8"); r=gate(1,p)
+            self.assertFalse(r["pass"]); self.assertTrue(any("expected decision_trace[i].selected_outcome" in e for e in r["errors"]))
+    def test_q_n3_duplicate_nested_fields_fail(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_trace(); n=x["N3-P_PERCUSSION_ARCHITECTURE"]; n["selected_option"]={"selected_outcome":"MINIMAL"}; p.write_text(json.dumps(x),encoding="utf-8"); self.assertFalse(gate(1,p)["pass"])
+    def test_r_schema_required_path_matches_gate(self):
+        with open(ROOT/"integrations/composer-agent/stage-1-output-schema-v1.1-n3-canonical.json",encoding="utf-8") as f:
+            s=json.load(f)
+        req=s["$defs"]["n3_decision"]["required"]
+        self.assertTrue(set(["selected_outcome","candidate_strategies","bass_groove_interaction","focal_hierarchy_interaction","section_behavior","development_behavior"]) <= set(req))
+    def test_s_adapter_makes_no_n3_decision(self):
+        x=valid_trace(); before=copy.deepcopy(x); gate_stage1_for_test(x); self.assertEqual(x,before)
 
 def read_text(p): return p.read_text(encoding="utf-8-sig") if p.exists() else ""
 def gate_stage1_for_test(x):

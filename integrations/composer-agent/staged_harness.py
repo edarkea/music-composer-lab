@@ -134,6 +134,10 @@ def gate_stage1(data):
     n3=ds.get("N3-P_PERCUSSION_ARCHITECTURE") or data.get("n3_p_decision")
     if not isinstance(n3,dict): errors.append("N3-P decision missing")
     else:
+        nested = n3.get("selected_option") if isinstance(n3.get("selected_option"), dict) else {}
+        for field in ("selected_outcome","candidate_strategies","bass_groove_interaction","focal_hierarchy_interaction","section_behavior","development_behavior"):
+            if field in nested:
+                errors.append(f"N3-P field path invalid: expected decision_trace[i].{field}; found decision_trace[i].selected_option.{field}")
         if n3.get("selected_outcome") not in N3: errors.append("N3-P selected_outcome invalid or missing")
         for k in ("decision_id","candidate_strategies","selection_basis","bass_groove_interaction","focal_hierarchy_interaction","section_behavior","development_behavior"):
             if not n3.get(k): errors.append(f"N3-P required field missing: {k}")
