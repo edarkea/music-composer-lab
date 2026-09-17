@@ -1,0 +1,11 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  1,
+    "gate":  "FAIL",
+    "errors":  [
+                   "output does not parse as complete JSON: line 346 column 10",
+                   "done_reason length; output truncated"
+               ],
+    "done_reason":  "length",
+    "semantic_repair_performed":  false
+}

@@ -1,0 +1,346 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density/timbre changes (GP-01, GP-04)",
+          "strategies": ["persistent melody loop", "harmonic vamp", "sectional contrast via texture/density"],
+          "cross_domain_dependencies": ["melody", "harmony", "texture", "arrangement"]
+        },
+        {
+          "description": "A-B-A' form with minimal melodic variation and harmonic progression driving section contrast (CK-FORM-01, GP-06)",
+          "strategies": ["melodic repetition with slight variation", "harmonic progression", "register/density shifts"],
+          "cross_domain_dependencies": ["melody", "harmony", "register", "dynamics"]
+        },
+        {
+          "description": "Through-composed with gradual accumulation and one clear release (artistic_intent: 'persistent forward motion', 'one clear release')",
+          "strategies": ["melodic/harmonic development", "controlled tension buildup", "single focal release"],
+          "cross_domain_dependencies": ["melody", "harmony", "groove", "percussion"]
+        }
+      ],
+      "selected_option": {
+        "description": "Through-composed with gradual accumulation and one clear release",
+        "strategies": ["melodic/harmonic development", "controlled tension buildup", "single focal release"],
+        "cross_domain_dependencies": ["melody", "harmony", "groove", "percussion"]
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Align with brief's 'persistent forward motion' and 'one clear release' while preserving 'coherent repetition with audible development'.",
+      "tradeoff": {
+        "pros": ["Maintains focal identity through development", "Allows controlled contrast via gradual accumulation"],
+        "cons": ["Requires precise harmonic/melodic planning to avoid fragmentation"]
+      },
+      "trace_reference": "CK-FORM-01, artistic_intent, GP-04 (differentiation via cross-domain variables)"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "Establish-Continue-Prepare-Arrive (ECPA) with tension release at 'Arrive' (CK-FORM-01)",
+          "roles": ["Establish (Intro)", "Continue (Development)", "Prepare (Climax)", "Arrive (Release)"],
+          "cross_domain_dependencies": ["melody", "harmony", "groove", "percussion"]
+        },
+        {
+          "description": "Open-Contrast-Return (OCR) with focal release at 'Return' (GP-03, GP-04)",
+          "roles": ["Open (Intro)", "Contrast (Middle)", "Return (Release)"],
+          "cross_domain_dependencies": ["texture", "density", "timbre", "harmony"]
+        },
+        {
+          "description": "Single-section with gradual accumulation and release (artistic_intent: 'one clear release')",
+          "roles": ["Accumulation (Entire span)", "Release (Final event)"],
+          "cross_domain_dependencies": ["melody", "harmony", "groove"]
+        }
+      ],
+      "selected_option": {
+        "description": "Establish-Continue-Prepare-Arrive (ECPA) with tension release at 'Arrive'",
+        "roles": ["Establish (Intro)", "Continue (Development)", "Prepare (Climax)", "Arrive (Release)"],
+        "cross_domain_dependencies": ["melody", "harmony", "groove", "percussion"]
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Map 'persistent forward motion' to ECPA's linear progression and 'one clear release' to the 'Arrive' section.",
+      "tradeoff": {
+        "pros": ["Clear narrative arc", "Explicit tension-release structure"],
+        "cons": ["Requires careful section transitions"]
+      },
+      "trace_reference": "CK-FORM-01, artistic_intent, GP-03 (boundary articulation)"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Modal vamp with persistent tonic/dominant polarity (GP-02)",
+          "framework": {
+            "mode": "Phrygian or Dorian (tensed, restrained)",
+            "progression": "Tonic-dominant loop with chromatic inflections",
+            "rhythmic_harmony": "Syncopated chords or static voicings"
+          },
+          "cross_domain_dependencies": ["melody", "bass", "percussion"]
+        },
+        {
+          "description": "Directed progression with gradual harmonic tension (CK-HAR-02)",
+          "framework": {
+            "progression": "I-IV-V-I with chromatic mediants or modal interchange",
+            "rhythmic_harmony": "Steady 4/4 or syncopated"
+          },
+          "cross_domain_dependencies": ["melody", "bass", "groove"]
+        },
+        {
+          "description": "Atonal clusters with focal tonal center (artistic_intent: 'hypnotic')",
+          "framework": {
+            "mode": "Atonal with implied tonic",
+            "progression": "Cluster-based with tonal pull",
+            "rhythmic_harmony": "Static or slowly evolving"
+          },
+          "cross_domain_dependencies": ["melody", "texture"]
+        }
+      ],
+      "selected_option": {
+        "description": "Modal vamp with persistent tonic/dominant polarity",
+        "framework": {
+          "mode": "Phrygian (tensed, restrained)",
+          "progression": "Tonic-dominant loop with chromatic inflections (e.g., C Phrygian: C-Db-Eb-F-G-Ab-Bb)",
+          "rhythmic_harmony": "Syncopated chords (e.g., 16th-note stabs)"
+        },
+        "cross_domain_dependencies": ["melody", "bass", "percussion"]
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support 'hypnotic' and 'restrained' character while enabling 'persistent forward motion' via chromatic inflections.",
+      "tradeoff": {
+        "pros": ["Strong focal identity", "Flexibility for development"],
+        "cons": ["Limited harmonic variety"]
+      },
+      "trace_reference": "GP-02, CK-HAR-02, artistic_intent (mode selection)"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Melodic hook with rhythmic ostinato (GP-01)",
+          "identity": {
+            "domain": "melody",
+            "material": "4-bar rhythmic motif + 2-bar melodic hook",
+            "preservation": "Persistent across sections with slight variation"
+          },
+          "cross_domain_dependencies": ["harmony", "groove", "percussion"]
+        },
+        {
+          "description": "Harmonic ostinato with melodic counterpoint (GP-02)",
+          "identity": {
+            "domain": "harmony",
+            "material": "Chord progression loop with counter-melody",
+            "preservation": "Harmonic loop, melodic variation"
+          },
+          "cross_domain_dependencies": ["melody", "bass", "texture"]
+        },
+        {
+          "description": "Rhythmic groove with melodic fragments (N3-P_PERCUSSION_ARCHITECTURE: FULL)",
+          "identity": {
+            "domain": "groove",
+            "material": "Percussive pattern + sparse melodic accents",
+            "preservation": "Groove persistent, melody fragmented"
+          },
+          "cross_domain_dependencies": ["percussion", "melody", "harmony"]
+        }
+      ],
+      "selected_option": {
+        "description": "Melodic hook with rhythmic ostinato",
+        "identity": {
+          "domain": "melody",
+          "material": "4-bar rhythmic ostinato (Phrygian mode) + 2-bar melodic hook (ascending minor 3rd leap)",
+          "preservation": "Ostinato persistent, hook varied via register/density"
+        },
+        "cross_domain_dependencies": ["harmony", "groove", "percussion"]
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize melodic focal identity to align with 'hypnotic' and 'tense' character while enabling development.",
+      "tradeoff": {
+        "pros": ["Strong memorability", "Flexibility for cross-domain contrast"],
+        "cons": ["Requires careful melodic planning"]
+      },
+      "trace_reference": "GP-01, CK-MEL-01 (seed behavior), artistic_intent"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Preserved pitch contour with rhythmic variation (CK-MEL-01, CK-DEV-01)",
+          "behavior": {
+            "invariant": "Ascending minor 3rd leap (hook)",
+            "variation": "Rhythmic displacement (anticipation/retardation)",
+            "development": "Fragmented into smaller motifs"
+          },
+          "cross_domain_dependencies": ["harmony", "groove", "texture"]
+        },
+        {
+          "description": "Interval preservation with melodic transposition (CK-CROSS-01)",
+          "behavior": {
+            "invariant": "Intervalic structure (e.g., minor 3rd + major 2nd)",
+            "variation": "Transposed to new registers",
+            "development": "Layered with harmonic rhythm"
+          },
+          "cross_domain_dependencies": ["harmony", "bass"]
+        },
+        {
+          "description": "Rhythmic ostinato with melodic accents (N3-P_PERCUSSION_ARCHITECTURE: FULL)",
+          "behavior": {
+            "invariant": "Rhythmic pattern",
+            "variation": "Melodic accents on off-beats",
+            "development": "Accents become independent motifs"
+          },
+          "cross_domain_dependencies": ["percussion", "harmony"]
+        }
+      ],
+      "selected_option": {
+        "description": "Preserved pitch contour with rhythmic variation",
+        "behavior": {
+          "invariant": "Ascending minor 3rd leap (e.g., C-Eb)",
+          "variation": "Rhythmic anticipation (onset shifted to & of 2)",
+          "development": "Fragmented into 2-bar motifs with harmonic inflections"
+        },
+        "cross_domain_dependencies": ["harmony", "groove", "texture"]
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain 'hypnotic' quality through rhythmic variation while preserving melodic contour for coherence.",
+      "tradeoff": {
+        "pros": ["Audible development", "Controlled tension"],
+        "cons": ["Limited harmonic flexibility"]
+      },
+      "trace_reference": "CK-MEL-01, CK-DEV-01, artistic_intent (development strategy)"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Ostinato with chromatic inflections (GP-02)",
+          "role": {
+            "pattern": "8th-note ostinato aligned with harmonic rhythm",
+            "inflections": "Chromatic passing tones (e.g., C-B-C-Db)",
+            "interaction": "Locks with groove, supports harmonic tension"
+          },
+          "cross_domain_dependencies": ["harmony", "percussion", "groove"]
+        },
+        {
+          "description": "Walking bass with modal focus (CK-HAR-01)",
+          "role": {
+            "pattern": "Quarter-note walking bass",
+            "inflections": "Modal scale notes (Phrygian)",
+            "interaction": "Leads harmonic progression"
+          },
+          "cross_domain_dependencies": ["harmony", "melody"]
+        },
+        {
+          "description": "Static drone with rhythmic accents (N3-P_PERCUSSION_ARCHITECTURE: MINIMAL)",
+          "role": {
+            "pattern": "Tonic drone (C)",
+            "inflections": "Rhythmic accents on downbeats",
+            "interaction": "Minimal groove support"
+          },
+          "cross_domain_dependencies": ["harmony", "percussion"]
+        }
+      ],
+      "selected_option": {
+        "description": "Ostinato with chromatic inflections",
+        "role": {
+          "pattern": "8th-note ostinato (C-Db-Eb-F-G-Ab-Bb-C)",
+          "inflections": "Chromatic passing tones between chord tones",
+          "interaction": "Locks with groove, anticipates harmonic shifts"
+        },
+        "cross_domain_dependencies": ["harmony", "percussion", "groove"]
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support 'persistent forward motion' and 'hypnotic' character through rhythmic and chromatic bass motion.",
+      "tradeoff": {
+        "pros": ["Strong groove alignment", "Harmonic tension"],
+        "cons": ["Less melodic flexibility"]
+      },
+      "trace_reference": "GP-02, CK-HAR-01, N3-P_PERCUSSION_ARCHITECTURE (bass-groove interaction)"
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "Syncopated 4/4 with anticipatory hi-hats (N3-P_PERCUSSION_ARCHITECTURE: FULL)",
+          "groove": {
+            "meter": "4/4",
+            "tempo": "120 BPM (moderate, restrained)",
+            "pattern": "Kick on 1 & 3, snare on 2 & 4, hi-hat on & of 2 and 4",
+            "anticipation": "Hi-hat accents on & of 2 and 4"
+          },
+          "cross_domain_dependencies": ["bass", "percussion", "melody"]
+        },
+        {
+          "description": "Static pulse with sparse percussion (N3-P_PERCUSSION_ARCHITECTURE: MINIMAL)",
+          "groove": {
+            "meter": "4/4",
+            "tempo": "110 BPM (slower, hypnotic)",
+            "pattern": "Kick on 1, snare on 3, no hi-hat",
+            "anticipation": "None"
+          },
+          "cross_domain_dependencies": ["bass", "harmony"]
+        },
+        {
+          "description": "Polyrhythmic groove with metric modulation (artistic_intent: 'persistent forward motion')",
+          "groove": {
+            "meter": "5/4 or 7/8",
+            "tempo": "130 BPM",
+            "pattern": "Complex percussion layering",
+            "anticipation": "Metric displacement"
+          },
+          "cross_domain_dependencies": ["percussion", "melody", "harmony"]
+        }
+      ],
+      "selected_option": {
+        "description": "Syncopated 4/4 with anticipatory hi-hats",
+        "groove": {
+          "meter": "4/4",
+          "tempo": "120 BPM",
+          "pattern": "Kick: 1 & 3; Snare: 2 & 4; Hi-hat: & of 2 and 4 (16th-note stabs)",
+          "anticipation": "Hi-hat accents on & of 2 and 4"
+        },
+        "cross_domain_dependencies": ["bass", "percussion", "melody"]
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Balance 'hypnotic' and 'persistent forward motion' through syncopation and anticipation.",
+      "tradeoff": {
+        "pros": ["Dynamic groove", "Supports melodic anticipation"],
+        "cons": ["Complex percussion coordination"]
+      },
+      "trace_reference": "N3-P_PERCUSSION_ARCHITECTURE, artistic_intent (tempo/meter)"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Explicit percussion with layered roles (kick, snare, hi-hat, percussion)",
+          "candidate_strategies": [
+            "Kick: rhythmic foundation",
+            "Snare: backbeat emphasis",
+            "Hi-hat: syncopation/anticipation",
+            "Percussion: textural contrast"
+          ],
+          "selected_outcome": "FULL",
+          "bass_groove_interaction": "Kick locks with bass ostinato; hi-hat anticipates melodic accents",
+          "focal_hierarchy_interaction": "Percussion supports melodic hook prominence",
+          "section_behavior": {
+            "Establish": "Full percussion",
+            "Continue": "Reduced hi-hat density",
+            "Prepare": "Percussion accents only",
+            "Arrive": "Minimal percussion (kick + snare)"
+          },
+          "development_behavior": "Percussion density mirrors harmonic tension"
+        },
+        {
+          "description": "MINIMAL: Percussion limited to kick and snare (N3-P_PERCUSSION_ARCHITECTURE: MINIMAL)",
+          "candidate_strategies": ["Kick: rhythmic pulse", "Snare: backbeat"],
+          "selected_outcome": "MINIMAL",
+          "bass_groove_interaction": "Kick aligns with bass ostinato",
+          "focal_hierarchy_interaction": "Melody and harmony carry focal weight",
+          "section_behavior": {
+            "Establish": "Full kick/snare",
+            "Continue": "Snare drops out",
+            "Prepare": "Kick only",
+            "Arrive": "Silence"
+          },
+          "development_behavior": "Percussion reduces with harmonic tension"
+        },
+        {

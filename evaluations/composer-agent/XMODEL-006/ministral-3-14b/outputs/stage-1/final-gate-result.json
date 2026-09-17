@@ -1,0 +1,19 @@
+﻿{
+    "model":  "ministral-3:14b",
+    "stage":  "stage-1",
+    "final":  "BLOCKED",
+    "attempts":  3,
+    "gate":  "FAIL",
+    "errors":  [
+                   "N3-P selected_outcome invalid or missing",
+                   "N3-P required field missing: candidate_strategies",
+                   "N3-P required field missing: bass_groove_interaction",
+                   "N3-P required field missing: focal_hierarchy_interaction",
+                   "N3-P required field missing: section_behavior",
+                   "N3-P required field missing: development_behavior"
+               ],
+    "semantic_repair_performed":  false,
+    "stage_2":  "NOT_RUN",
+    "stage_3":  "NOT_RUN",
+    "recorded_at_utc":  "2026-09-17T06:02:51.0628034Z"
+}

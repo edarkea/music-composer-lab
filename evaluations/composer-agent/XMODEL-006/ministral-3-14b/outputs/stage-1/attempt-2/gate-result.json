@@ -1,0 +1,10 @@
+﻿{
+    "stage":  "stage-1",
+    "attempt":  2,
+    "gate":  "FAIL",
+    "errors":  [
+                   "output does not parse as complete JSON: Unterminated string at line 343 column 26",
+                   "output incomplete/truncated"
+               ],
+    "semantic_repair_performed":  false
+}

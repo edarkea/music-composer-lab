@@ -1,0 +1,343 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        "Loop-based with persistent groove and gradual accumulation",
+        "Through-composed with clear section contrast",
+        "Hybrid loop/through-composed with focal identity preservation"
+      ],
+      "selected_option": {
+        "type": "Loop-based with persistent groove and gradual accumulation",
+        "description": "A loop-based structure where the groove and harmonic framework persist, with gradual accumulation of material (melodic, textural, or rhythmic) leading to a single release. This aligns with the brief's emphasis on 'persistent forward motion' and 'one clear release'."
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve groove and harmonic identity while allowing controlled development through accumulation. The release will serve as the focal point of tension resolution.",
+      "tradeoff": {
+        "preserve_identity": true,
+        "controlled_development": true,
+        "clear_release": true,
+        "avoid_abrupt_contrasts": true
+      },
+      "trace_reference": "CK-FORM-01, GP-04, GP-02"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "type": "Establish-Continue-Prepare-Arrive",
+          "sections": ["Intro (Establish)", "Build (Continue)", "Accumulation (Prepare)", "Release (Arrive)"]
+        },
+        {
+          "type": "Loop-Vamp-Release",
+          "sections": ["Loop (Persistent Groove)", "Vamp (Accumulation)", "Release (Single Event)"]
+        },
+        {
+          "type": "A-B-A'-B'",
+          "sections": ["A (Intro)", "B (Development)", "A' (Variation)", "B' (Release)"]
+        }
+      ],
+      "selected_option": {
+        "type": "Loop-Vamp-Release",
+        "sections": [
+          {
+            "name": "Loop",
+            "role": "Establish groove and harmonic framework",
+            "description": "Persistent loop with minimal variation, focusing on groove and harmonic identity."
+          },
+          {
+            "name": "Vamp",
+            "role": "Accumulation of material",
+            "description": "Gradual addition of melodic, textural, or rhythmic layers while maintaining the loop's groove."
+          },
+          {
+            "name": "Release",
+            "role": "Single clear release",
+            "description": "Audible development culminates in a release, preserving the identity established in the loop."
+          }
+        ]
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize the brief's emphasis on 'persistent forward motion' and 'one clear release'. The Loop-Vamp-Release structure allows for gradual accumulation while maintaining a clear focal identity.",
+      "tradeoff": {
+        "preserve_loop_identity": true,
+        "controlled_accumulation": true,
+        "clear_release": true,
+        "avoid_section_overlap": true
+      },
+      "trace_reference": "GP-04, GP-03, CK-FORM-01"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "type": "Persistent loop with static harmony",
+          "description": "A harmonic loop (e.g., vamp) where chords remain static or cycle minimally, allowing other domains (melody, texture) to vary."
+        },
+        {
+          "type": "Modulating progression",
+          "description": "A progression that modulates gradually, aligning with the 'persistent forward motion' while allowing harmonic development."
+        },
+        {
+          "type": "Hybrid loop/progression",
+          "description": "A combination of static harmony in the loop and a directed progression during accumulation."
+        }
+      ],
+      "selected_option": {
+        "type": "Persistent loop with static harmony",
+        "description": "A static or minimally cycling harmonic loop (e.g., vamp on a single chord or a 2-chord progression) to preserve harmonic identity. The accumulation phase will introduce subtle harmonic variations (e.g., extensions, inversions) without altering the core loop."
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve harmonic identity and allow controlled development through subtle variations in the accumulation phase. This aligns with GP-02 and avoids abrupt harmonic shifts.",
+      "tradeoff": {
+        "harmonic_identity_preservation": true,
+        "controlled_development": true,
+        "avoid_abrupt_changes": true
+      },
+      "trace_reference": "GP-02, CK-HAR-02, CK-HAR-01"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "type": "Melodic hook",
+          "description": "A short, repetitive melodic motif that serves as the focal identity, preserved across sections."
+        },
+        {
+          "type": "Groove/rhythmic pattern",
+          "description": "A rhythmic or percussive groove as the primary identity, with melodic and harmonic elements supporting it."
+        },
+        {
+          "type": "Harmonic ostinato",
+          "description": "A repeating harmonic pattern (e.g., vamp) as the focal identity, with other elements varying around it."
+        }
+      ],
+      "selected_option": {
+        "type": "Melodic hook with rhythmic support",
+        "description": "A short, repetitive melodic motif (4-8 notes) with a distinctive rhythmic contour, serving as the focal identity. The groove will reinforce this identity, but the melody will be the primary carrier of the 'hypnotic' and 'tense' character."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize the melodic hook to align with the brief's 'hypnotic' and 'tense' character, while ensuring the groove supports and reinforces it. This balances the brief's emphasis on 'focal identity' and 'controlled section contrast'.",
+      "tradeoff": {
+        "melodic_focus": true,
+        "groove_support": true,
+        "avoid_overwhelming_rhythm": true
+      },
+      "trace_reference": "GP-01, CK-MEL-01, CK-MEL-02"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "type": "Static repetition with rhythmic variation",
+          "description": "The melodic hook repeats verbatim, with rhythmic displacement or accent shifts to create development."
+        },
+        {
+          "type": "Fragmented transformation",
+          "description": "The hook is fragmented or transposed, with preserved intervals/contours to maintain identity."
+        },
+        {
+          "type": "Harmonic recontextualization",
+          "description": "The hook is played over different harmonies or registers during accumulation, preserving its contour."
+        }
+      ],
+      "selected_option": {
+        "type": "Fragmented transformation with preserved contour",
+        "description": "The melodic hook is fragmented into smaller motifs (e.g., 2-4 note cells) and transposed or reordered during accumulation. The contour and key intervals of the hook are preserved to maintain identity, while rhythmic and textural variations create development."
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use fragmented transformation to align with the brief's 'coherent repetition with audible development'. Preserving contour ensures identity, while fragmentation allows controlled variation.",
+      "tradeoff": {
+        "identity_preservation": true,
+        "audible_development": true,
+        "avoid_arbitrary_changes": true
+      },
+      "trace_reference": "CK-DEV-01, CK-MEL-01, CK-CROSS-01"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "type": "Groove alignment",
+          "description": "The bass follows the groove's pulse, reinforcing the harmonic loop and providing rhythmic stability."
+        },
+        {
+          "type": "Melodic counterpoint",
+          "description": "The bass complements the melodic hook with complementary intervals or rhythmic syncopation."
+        },
+        {
+          "type": "Harmonic reinforcement",
+          "description": "The bass plays root notes or simple extensions to emphasize the harmonic loop, with occasional syncopation for groove."
+        }
+      ],
+      "selected_option": {
+        "type": "Groove alignment with harmonic reinforcement",
+        "description": "The bass primarily aligns with the groove's pulse, reinforcing the harmonic loop with root notes or simple extensions. Occasional syncopated notes or rhythmic displacement will add subtle variation during accumulation, supporting the melodic development without overwhelming it."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize groove alignment to maintain the 'persistent forward motion', while allowing harmonic reinforcement to preserve identity. Syncopation will be used sparingly to support melodic development.",
+      "tradeoff": {
+        "groove_priority": true,
+        "harmonic_support": true,
+        "subtle_variation": true
+      },
+      "trace_reference": "N3-P, CK-RHY-01, GP-02"
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "type": "Persistent 4/4 kick-snare pattern",
+          "description": "A steady 4/4 kick-snare groove with consistent subdivision (e.g., 16th or 32nd notes), serving as the backbone of the loop."
+        },
+        {
+          "type": "Syncopated rhythmic layer",
+          "description": "A syncopated pattern (e.g., shaker, claps) layered over a simpler kick-snare groove to create rhythmic interest."
+        },
+        {
+          "type": "Minimalist pulse",
+          "description": "A sparse pulse (e.g., kick on beats 1 and 3, snare on 2) with additional percussive elements added during accumulation."
+        }
+      ],
+      "selected_option": {
+        "type": "Persistent 4/4 kick-snare pattern with layered syncopation",
+        "description": "A steady 4/4 kick-snare groove (16th-note subdivision) as the core, with a subtle syncopated layer (e.g., hi-hat or shaker) added during the accumulation phase. The core groove remains unchanged, while the syncopated layer introduces rhythmic development."
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve the core groove for 'persistent forward motion' while allowing rhythmic development through layered syncopation. This aligns with the brief's 'controlled section contrast' and 'coherent repetition'.",
+      "tradeoff": {
+        "groove_persistence": true,
+        "rhythmic_development": true,
+        "avoid_overcomplication": true
+      },
+      "trace_reference": "N3-P, CK-RHY-01, GP-05"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "type": "FULL",
+          "candidate_strategies": [
+            {
+              "strategy": "Layered groove with explicit roles",
+              "description": "A full percussion architecture where the kick-snare groove is the primary driver, with layered syncopation (hi-hats, shaker) and auxiliary percussion (e.g., claps, tambourine) introduced during accumulation."
+            }
+          ]
+        },
+        {
+          "type": "MINIMAL",
+          "candidate_strategies": [
+            {
+              "strategy": "Core groove with delegated variation",
+              "description": "A minimal architecture where the kick-snare groove is the sole percussive element, with rhythmic variation delegated to the bass or melodic layers."
+            }
+          ]
+        },
+        {
+          "type": "DELEGATED",
+          "candidate_strategies": [
+            {
+              "strategy": "No independent percussion",
+              "description": "Percussive functions (groove, rhythm) are delegated to the bass or melodic instruments, with no dedicated percussion track."
+            }
+          ]
+        }
+      ],
+      "selected_option": {
+        "selected_outcome": "FULL",
+        "candidate_strategies": [
+          {
+            "strategy": "Layered groove with explicit roles",
+            "description": "A full percussion architecture where the kick-snare groove is the primary driver, with layered syncopation (hi-hats, shaker) introduced during accumulation. Auxiliary percussion (e.g., claps) will mark the release."
+          }
+        ],
+        "bass_groove_interaction": "The bass aligns with the kick-snare groove but includes subtle syncopation to complement the melodic development. No rhythmic conflict with the percussion.",
+        "focal_hierarchy_interaction": "The kick-snare groove is the primary focal point, with layered syncopation serving as secondary emphasis. The melodic hook is the primary identity carrier.",
+        "section_behavior": {
+          "Loop": "Core groove (kick-snare) with minimal percussion layers.",
+          "Vamp": "Layered syncopation (hi-hats, shaker) added to the core groove.",
+          "Release": "Auxiliary percussion (claps, tambourine) introduced to emphasize the release."
+        },
+        "development_behavior": "Percussive development is coordinated with melodic and harmonic accumulation. The core groove remains unchanged, while additional layers are added incrementally."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize a full percussion architecture to support the 'persistent forward motion' and 'controlled section contrast'. Layered syncopation will reinforce the melodic development without overwhelming the groove.",
+      "tradeoff": {
+        "groove_persistence": true,
+        "rhythmic_development": true,
+        "focal_clarity": true
+      },
+      "trace_reference": "N3-P, CK-RHY-01, CK-RHY-02"
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "type": "Layered with persistent core",
+          "description": "A core texture (e.g., melodic hook + groove) with additional layers (e.g., pads, synth stabs) added during accumulation."
+        },
+        {
+          "type": "Sparse with focal emphasis",
+          "description": "A sparse texture where the melodic hook and groove are the primary elements, with occasional harmonic or percussive accents."
+        },
+        {
+          "type": "Dynamic with section contrast",
+          "description": "A texture that varies significantly between sections (e.g., dense loop, sparse vamp, layered release) to create contrast."
+        }
+      ],
+      "selected_option": {
+        "type": "Layered with persistent core and controlled accumulation",
+        "description": "A core texture consisting of the melodic hook, groove, and bass. During accumulation, additional layers (e.g., synth pads, ambient textures) are introduced gradually. The release will feature a denser texture with auxiliary percussion and harmonic reinforcement."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize a persistent core texture to maintain 'focal identity', with controlled accumulation of layers to support 'gradual development'. The release will use texture to emphasize the climax.",
+      "tradeoff": {
+        "core_persistence": true,
+        "controlled_accumulation": true,
+        "release_emphasis": true
+      },
+      "trace_reference": "GP-04, CK-TEXTURE-01 (hypothetical), GP-06"
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "type": "Fragmented motif expansion",
+          "description": "The melodic hook is fragmented into smaller motifs, which are expanded and recontextualized during accumulation."
+        },
+        {
+          "type": "Harmonic recontextualization",
+          "description": "The hook is played over different harmonies or registers, with its contour preserved."
+        },
+        {
+          "type": "Rhythmic displacement",
+          "description": "The hook is rhythmically displaced (e.g., anticipations, delays) while maintaining its melodic contour."
+        }
+      ],
+      "selected_option": {
+        "type": "Fragmented motif expansion with harmonic recontextualization",
+        "description": "The melodic hook is fragmented into 2-4 note cells, which are expanded and recontextualized harmonically during accumulation. For example, a 4-note hook might be broken into two 2-note motifs, transposed, or played in different registers. The contour and key intervals of the hook are preserved to maintain identity."
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use fragmented expansion to align with the brief's 'coherent repetition with audible development'. Harmonic recontextualization will support the 'gradual accumulation' while preserving the hook's identity.",
+      "tradeoff": {
+        "identity_preservation": true,
+        "audible_development": true,
+        "harmonic_coherence": true
+      },
+      "trace_reference": "CK-DEV-01, CK-MEL-01, CK-HAR-03"
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": [
+        {
+          "type": "Gradual buildup with harmonic tension",
+          "description": "Tension accumulates through harmonic extensions, rhythmic complexity, and textural density, culminating in a release marked by a cadence or percussive accent."
+        },
+        {
+          "type": "Rhythmic displacement with melodic climax",
+          "description": "Tension builds through rhythmic displacement (e.g., syncopation, metric modulation) and melodic anticipation, with the release marked by a return to the original groove and a melodic climax."
+        },
+        {
+          "type": "Textural contrast with focal release",
+          "description": "Tension accumulates through textural layering (e.g., adding synths, percussion), with the

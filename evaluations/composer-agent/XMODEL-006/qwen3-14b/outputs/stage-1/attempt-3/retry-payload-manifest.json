@@ -1,0 +1,15 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-006\\qwen3-14b\\outputs\\stage-1\\attempt-3\\retry-input.txt",
+  "payload_sha256": "39396aeb0c487d127f9eee4d4201c502a39c79d159d2e9866707ad4adb5ca595",
+  "original_payload_sha256": "0cc5ef7762ac226258ffac9f7564d2199ba27f4ee4e7d81d3183a83a77f76c8a",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "N3-P selected_outcome invalid or missing",
+    "N3-P required field missing: candidate_strategies",
+    "N3-P required field missing: bass_groove_interaction",
+    "N3-P required field missing: focal_hierarchy_interaction",
+    "N3-P required field missing: section_behavior",
+    "N3-P required field missing: development_behavior",
+    "selected_outcome must be exactly FULL, MINIMAL, DELEGATED, or INTENTIONALLY_ABSENT"
+  ]
+}

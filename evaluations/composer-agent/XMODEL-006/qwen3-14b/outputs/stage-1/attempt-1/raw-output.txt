@@ -1,0 +1,209 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["loop-based structure", "verse-chorus", "progressive build"],
+      "selected_option": {
+        "structure": "progressive build with recurring motifs",
+        "sections": ["intro", "build", "release", "outro"]
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support persistent forward motion and gradual accumulation",
+      "tradeoff": {
+        "considered": "loop-based structures may limit dynamic development",
+        "chosen": "progressive build allows controlled tension/release"
+      },
+      "trace_reference": "GP-04: Diferenciación formal loop-based"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["intro (establish groove)", "build (layer textures)", "release (peak energy)", "outro (gradual decay)"],
+      "selected_option": {
+        "intro": "minimalistic groove establishment",
+        "build": "textural layering with harmonic progression",
+        "release": "maximized energy with rhythmic complexity",
+        "outro": "gradual reduction to intro motif"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain coherent repetition with audible development",
+      "tradeoff": {
+        "considered": "traditional verse-chorus may conflict with hypnotic continuity",
+        "chosen": "custom section roles align with indie-dance genre traits"
+      },
+      "trace_reference": "GP-01: Persistencia melódica con cambio cross-domain"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["modal interchange (Dorian/Phrygian)", "pentatonic-based", "chromatic tension"],
+      "selected_option": {
+        "tonic": "E minor",
+        "mode": "Dorian",
+        "progression": "Em - G - Am - D (with chromatic passing tones)"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create restrained, hypnotic harmonic motion",
+      "tradeoff": {
+        "considered": "chromaticism might exceed 'restrained' intent",
+        "chosen": "Dorian mode provides tension without excess complexity"
+      },
+      "trace_reference": "CK-HAR-02: Semilla armónica condicionada por el objetivo"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["repeating melodic motif", "rhythmic ostinato", "textural contrast"],
+      "selected_option": {
+        "focal_element": "repeating melodic motif in E Dorian",
+        "identity_preservation": "maintain motif shape through development"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Ensure clear focal identity across development",
+      "tradeoff": {
+        "considered": "textural contrast might fragment focal identity",
+        "chosen": "melodic motif provides consistent reference point"
+      },
+      "trace_reference": "CK-MEL-01: Semilla melódica condicionada por el objetivo"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["static repetition", "gradual variation", "fragmentation/reassembly"],
+      "selected_option": {
+        "behavior": "gradual variation with preserved intervallic structure",
+        "development_strategy": "add rhythmic syncopation in later sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Achieve coherent repetition with audible development",
+      "tradeoff": {
+        "considered": "fragmentation might compromise 'restrained' intent",
+        "chosen": "gradual variation balances consistency and evolution"
+      },
+      "trace_reference": "CK-DEV-01: Relación transformable explícita"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["rhythmic kick/snare focus", "melodic bassline", "textural support"],
+      "selected_option": {
+        "role": "rhythmic foundation with melodic embellishment",
+        "interaction": "syncopated kick aligns with harmonic accents"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support persistent forward motion and groove",
+      "tradeoff": {
+        "considered": "melodic bassline might compete with lead motif",
+        "chosen": "rhythmic focus maintains clarity"
+      },
+      "trace_reference": "GP-02: Marco armónico cíclico/estático"
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["steady 4/4", "syncopated patterns", "polyrhythmic layers"],
+      "selected_option": {
+        "meter": "4/4 with syncopated hi-hats",
+        "accent_pattern": "dotted eighth-note emphasis on off-beats"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create hypnotic, forward-moving rhythmic foundation",
+      "tradeoff": {
+        "considered": "polyrhythms might exceed 'restrained' intent",
+        "chosen": "syncopated 4/4 balances complexity and control"
+      },
+      "trace_reference": "CK-RHY-01: Metro como filtro de colocación"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL (layered percussion)", "MINIMAL (essential groove)", "DELEGATED (to other elements)"],
+      "selected_option": {
+        "selected_outcome": "FULL",
+        "candidate_strategies": ["hi-hat patterns", "snare accents", "textural fills"],
+        "bass_groove_interaction": "kick-snare alignment with harmonic accents",
+        "focal_hierarchy_interaction": "hi-hats maintain rhythmic continuity",
+        "section_behavior": "intensity increases with additional percussion layers",
+        "development_behavior": "fills become more complex in 'release' section"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support hypnotic texture and rhythmic development",
+      "tradeoff": {
+        "considered": "minimal approach might limit textural possibilities",
+        "chosen": "full architecture enables controlled intensity build"
+      },
+      "trace_reference": "N3-P: Decisión explícita de arquitectura de percusión"
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["sparse early layers", "gradual density increase", "textural contrast"],
+      "selected_option": {
+        "strategy": "gradual density increase with harmonic progression",
+        "layering": "add synths/strings in 'build' section"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Achieve controlled section contrast and development",
+      "tradeoff": {
+        "considered": "textural contrast might fragment harmonic continuity",
+        "chosen": "gradual addition maintains coherence"
+      },
+      "trace_reference": "GP-06: Contraste seccional como conjunto de variables"
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["motivic variation", "textural evolution", "harmonic expansion"],
+      "selected_option": {
+        "strategy": "motivic variation with textural evolution",
+        "key_moments": ["syncopation addition in 'build'", "harmonic modulation in 'release'"]
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Ensure coherent repetition with audible development",
+      "tradeoff": {
+        "considered": "harmonic expansion might exceed 'restrained' intent",
+        "chosen": "balanced approach maintains artistic intent"
+      },
+      "trace_reference": "CK-DEV-01: Relación transformable explícita"
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["gradual build", "sudden release", "sustained tension"],
+      "selected_option": {
+        "strategy": "gradual build with climactic release",
+        "release_mechanism": "harmonic resolution + textural reduction"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Achieve one clear release with controlled tension",
+      "tradeoff": {
+        "considered": "sudden release might conflict with 'persistent motion'",
+        "chosen": "gradual approach aligns with indie-dance conventions"
+      },
+      "trace_reference": "GP-03: Vocabulario de retorno, parada y frontera en loop"
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["fade-out", "return to intro", "textural decay"],
+      "selected_option": {
+        "strategy": "return to intro motif with textural decay",
+        "implementation": "gradual reduction of layers to original groove"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Provide clear resolution while maintaining identity",
+      "tradeoff": {
+        "considered": "fade-out might feel abrupt",
+        "chosen": "return to intro ensures continuity"
+      },
+      "trace_reference": "GP-01: Persistencia melódica con cambio cross-domain"
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["harmony-rhythm alignment", "textural density limits", "focal element clarity"],
+      "selected_option": {
+        "resolution": "maintain rhythmic clarity through textural layering",
+        "key_resolutions": [
+          "ensure kick-snare alignment with harmonic accents",
+          "limit simultaneous textural additions to avoid overload"
+        ]
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain coherence across all domains",
+      "tradeoff": {
+        "considered": "textural density might compromise rhythmic clarity",
+        "chosen": "controlled layering preserves balance"
+      },
+      "trace_reference": "CK-FORM-01: Función formal aporta información del objetivo"
+    }
+  ]
+}

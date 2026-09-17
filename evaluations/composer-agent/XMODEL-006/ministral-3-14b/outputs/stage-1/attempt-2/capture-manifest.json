@@ -1,0 +1,29 @@
+{
+  "capture_status": "CAPTURED",
+  "captured_at_utc": "2026-09-17T05:41:19.184981+00:00",
+  "model_identifier_requested": "ministral-3:14b",
+  "model_identifier_reported": "ministral-3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "stage": "stage-1",
+  "attempt": 2,
+  "input_sha256": "0e0cf6912ab953bd9d9cf868d29bf0304c689da034f28e35b8cb57e854f156ed",
+  "payload_sha256": "0e0cf6912ab953bd9d9cf868d29bf0304c689da034f28e35b8cb57e854f156ed",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 4096
+  },
+  "request_sha256": "43a065dcbee1c50bbfd01583ef912c47714be27eb7f4d535f867e1258d6f4bad",
+  "structured_output_schema": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-006\\stage-1-output-schema-v1.1-hardened.json",
+  "raw_api_response_sha256": "988ed11e34f6d0405a1f21d84d679d8fe764019b8f47abf53fa3d1816bf18047",
+  "raw_output_sha256": "9c5957544a9571362ae9ef910eccd625e64beacb35611eb7d863931f35b2be37",
+  "semantic_repair_performed": false,
+  "done_reason": "length",
+  "eval_count": 4096,
+  "prompt_eval_count": 16235
+}

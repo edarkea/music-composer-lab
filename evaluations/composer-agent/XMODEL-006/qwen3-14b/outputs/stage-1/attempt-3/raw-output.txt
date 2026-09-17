@@ -1,0 +1,203 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["A-B-A-B", "A-B-C-A", "Through-composed"],
+      "selected_option": {
+        "structure": "A-B-A-B with coda",
+        "section_lengths": "A: 8 bars, B: 8 bars, A: 8 bars, B: 8 bars, coda: 4 bars"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Establish clear section contrast while maintaining cyclical melodic identity",
+      "tradeoff": {
+        "considered": ["Through-composed for development", "A-B-C-A for variation"],
+        "rejected": "Through-composed would weaken the hypnotic repetition required by artistic intent"
+      },
+      "trace_reference": "CK-FORM-01, CK-FORM-02"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["A: Melodic statement, B: Harmonic development", "A: Groove foundation, B: Textural contrast"],
+      "selected_option": {
+        "A": "Melodic statement with harmonic foundation",
+        "B": "Textural contrast with rhythmic variation"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain persistent forward motion through textural contrast while preserving melodic identity",
+      "tradeoff": {
+        "considered": ["Rhythmic variation in A section", "Harmonic development in B section"],
+        "rejected": "Rhythmic variation in A would fragment the hypnotic quality"
+      },
+      "trace_reference": "CK-DEV-01, GP-04"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["D minor with modal mixture", "E Phrygian with chromaticism", "F# diminished with whole-tone"],
+      "selected_option": {
+        "tonic": "D minor",
+        "mode": "Dorian with Phrygian borrowings",
+        "harmonic_rhythm": "4/4 with occasional 3/4 in B sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create tension through modal mixture while maintaining a clear focal identity",
+      "tradeoff": {
+        "considered": ["E Phrygian for exoticism", "F# diminished for dissonance"],
+        "rejected": "Phrygian would weaken the persistent forward motion, diminished too unstable"
+      },
+      "trace_reference": "CK-HAR-02, CK-HAR-03"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["Melodic motif in upper register", "Rhythmic groove in lower register", "Harmonic progression as focal point"],
+      "selected_option": {
+        "focal_element": "Melodic motif in upper register",
+        "textural_role": "Persistent in A sections, reduced in B sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic repetition through melodic motif while allowing textural contrast",
+      "tradeoff": {
+        "considered": ["Rhythmic groove as focal point", "Harmonic progression as focal point"],
+        "rejected": "Rhythmic groove would fragment melodic identity, harmonic progression too abstract"
+      },
+      "trace_reference": "CK-MEL-01, GP-01"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["Exact repetition with variation", "Fragmented recall", "Intervallic transformation"],
+      "selected_option": {
+        "behavior": "Exact repetition with rhythmic variation in B sections",
+        "development_strategy": "Gradual addition of chromatic passing tones"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain melodic identity through repetition while allowing gradual development",
+      "tradeoff": {
+        "considered": ["Fragmented recall for variation", "Intervallic transformation for interest"],
+        "rejected": "Fragmented recall would weaken hypnotic quality, intervallic too abstract"
+      },
+      "trace_reference": "CK-DEV-01, CK-MEL-02"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["Percussive kick with root motion", "Melodic bassline with rhythmic independence", "Textural support with harmonic emphasis"],
+      "selected_option": {
+        "role": "Percussive kick with root motion",
+        "interaction": "Syncopated with groove, emphasizing harmonic changes"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Provide rhythmic foundation while supporting harmonic progression",
+      "tradeoff": {
+        "considered": ["Melodic bassline for interest", "Textural support for density"],
+        "rejected": "Melodic bassline would compete with lead motif, textural support too abstract"
+      },
+      "trace_reference": "CK-RHY-01, GP-02"
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["4/4 with syncopation", "7/8 with hemiola", "3/4 with dotted rhythms"],
+      "selected_option": {
+        "meter": "4/4 with syncopation",
+        "subdivision": "Dotted eighth notes with triplets in B sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain persistent forward motion through syncopation while allowing rhythmic variation",
+      "tradeoff": {
+        "considered": ["7/8 for complexity", "3/4 for contrast"],
+        "rejected": "7/8 would fragment the hypnotic quality, 3/4 too unstable"
+      },
+      "trace_reference": "CK-RHY-01, GP-05"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL with layered textures", "MINIMAL with essential elements", "DELEGATED to other layers", "INTENTIONALLY_ABSENT"],
+      "selected_option": {
+        "selected_outcome": "MINIMAL",
+        "candidate_strategies": ["Kick and snare only", "Kick, snare, and minimal hi-hats", "Kick and ambient textures"],
+        "bass_groove_interaction": "Kick emphasizes harmonic changes, snare syncopated with melodic motif",
+        "focal_hierarchy_interaction": "Percussion supports melodic motif without competing",
+        "section_behavior": "Minimal hi-hats in A sections, ambient textures in B sections",
+        "development_behavior": "Gradual addition of ambient textures in later B sections"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Provide rhythmic foundation without overwhelming the melodic identity",
+      "tradeoff": {
+        "considered": ["FULL for complexity", "DELEGATED to other layers"],
+        "rejected": "FULL would compete with melodic motif, DELEGATED too abstract"
+      },
+      "trace_reference": "N3-P, GP-06"
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["Sparse with occasional density", "Layered with continuous motion", "Contrasting densities by section"],
+      "selected_option": {
+        "behavior": "Contrasting densities by section",
+        "density_profile": "Sparse in A sections, layered in B sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic repetition through sparseness while allowing textural contrast",
+      "tradeoff": {
+        "considered": ["Layered for interest", "Sparse for clarity"],
+        "rejected": "Layered would compete with melodic motif, sparse too abstract"
+      },
+      "trace_reference": "CK-TEXT-01, GP-04"
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["Gradual addition of chromaticism", "Fragmented recall with variation", "Intervallic expansion"],
+      "selected_option": {
+        "strategy": "Gradual addition of chromaticism",
+        "implementation": "Chromatic passing tones in B sections, resolving in final A"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain melodic identity through gradual development while building tension",
+      "tradeoff": {
+        "considered": ["Fragmented recall for variation", "Intervallic expansion for interest"],
+        "rejected": "Fragmented recall would weaken hypnotic quality, intervallic too abstract"
+      },
+      "trace_reference": "CK-DEV-01, CK-MEL-02"
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["Gradual build with sudden release", "Sustained tension with gradual release", "Cyclical tension with resolution"],
+      "selected_option": {
+        "strategy": "Cyclical tension with resolution",
+        "implementation": "Tension built through chromaticism in B sections, resolved in final A"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic repetition while allowing gradual tension and resolution",
+      "tradeoff": {
+        "considered": ["Gradual build for drama", "Sustained tension for intensity"],
+        "rejected": "Gradual build would fragment the hypnotic quality, sustained tension too unstable"
+      },
+      "trace_reference": "CK-HAR-03, GP-03"
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["Repetition of final A with coda", "Modulation to relative major", "Ambiguous resolution"],
+      "selected_option": {
+        "strategy": "Repetition of final A with coda",
+        "implementation": "Final A repeated with added chromaticism, resolving on D minor"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain melodic identity through repetition while providing resolution",
+      "tradeoff": {
+        "considered": ["Modulation for interest", "Ambiguous resolution for tension"],
+        "rejected": "Modulation would weaken hypnotic quality, ambiguous too unstable"
+      },
+      "trace_reference": "CK-FORM-02, GP-03"
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["Melodic motif vs. rhythmic groove", "Harmonic progression vs. textural density", "Percussion vs. melodic focus"],
+      "selected_option": {
+        "resolution": "Melodic motif prioritized with rhythmic groove supporting, harmonic progression guiding textural density, percussion subservient to melodic focus"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain melodic identity as primary focus while allowing supportive elements",
+      "tradeoff": {
+        "considered": ["Rhythmic groove prioritized", "Harmonic progression prioritized"],
+        "rejected": "Rhythmic groove would compete with melodic motif, harmonic progression too abstract"
+      },
+      "trace_reference": "CK-CROSS-01, GP-06"
+    }
+  ]
+}

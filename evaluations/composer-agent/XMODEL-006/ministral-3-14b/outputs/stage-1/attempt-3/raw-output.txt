@@ -1,0 +1,376 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        "Loop-based with persistent groove and gradual accumulation",
+        "Through-composed with clear section contrast",
+        "Verse-chorus with minimal repetition"
+      ],
+      "selected_option": {
+        "description": "Loop-based with persistent groove and gradual accumulation",
+        "basis": "Aligns with the brief's emphasis on 'persistent forward motion' and 'coherent repetition with audible development'"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create a hypnotic, tense atmosphere through cyclical structure and controlled development",
+      "tradeoff": {
+        "pro": "Preserves identity across development, allows for gradual tension buildup",
+        "con": "Less dynamic contrast between sections"
+      },
+      "trace_reference": "CK-FORM-01, GP-01, GP-04"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "roles": ["Intro", "Build", "Release", "Outro"],
+          "description": "Clear functional roles with gradual energy escalation"
+        },
+        {
+          "roles": ["A", "B", "A'", "C"],
+          "description": "Contrast-driven sections with thematic return"
+        },
+        {
+          "roles": ["Loop", "Variation 1", "Variation 2", "Loop"],
+          "description": "Persistent loop with incremental changes"
+        }
+      ],
+      "selected_option": {
+        "roles": ["Intro (Establish)", "Build (Accumulate)", "Release (Climax)", "Outro (Resolve)"],
+        "description": "Functional roles with gradual tension and release"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain a clear focal identity while allowing for development",
+      "tradeoff": {
+        "pro": "Clear narrative arc, preserves hypnotic quality",
+        "con": "Less flexibility for abrupt contrast"
+      },
+      "trace_reference": "CK-FORM-01, GP-03"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "mode": "Phrygian",
+          "tonic": "D",
+          "description": "Dark, tense mode with persistent tonic"
+        },
+        {
+          "mode": "Dorian",
+          "tonic": "C",
+          "description": "Balanced mode with minor tonality"
+        },
+        {
+          "mode": "Minor Pentatonic",
+          "tonic": "A",
+          "description": "Simple, hypnotic scale with no third"
+        }
+      ],
+      "selected_option": {
+        "mode": "Phrygian",
+        "tonic": "D",
+        "description": "Persistent tonic with dark, tense character"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create a restrained, hypnotic atmosphere",
+      "tradeoff": {
+        "pro": "Strong focal identity, aligns with artistic intent",
+        "con": "Limited harmonic flexibility"
+      },
+      "trace_reference": "CK-HAR-02, GP-02"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "focus": "Melodic hook",
+          "description": "Persistent melodic motif with subtle variations"
+        },
+        {
+          "focus": "Harmonic drone",
+          "description": "Static harmonic foundation with rhythmic variation"
+        },
+        {
+          "focus": "Percussive groove",
+          "description": "Complex rhythmic pattern as primary identity"
+        }
+      ],
+      "selected_option": {
+        "focus": "Melodic hook with harmonic drone",
+        "description": "Persistent melodic motif over static harmonic foundation"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a hypnotic, restrained focal point",
+      "tradeoff": {
+        "pro": "Clear identity, allows for development",
+        "con": "Less rhythmic complexity"
+      },
+      "trace_reference": "CK-MEL-01, GP-01"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "behavior": "Persistent with subtle pitch variations",
+          "description": "Maintains identity while allowing for development"
+        },
+        {
+          "behavior": "Fragmented with rhythmic displacement",
+          "description": "Breaks into smaller motifs with rhythmic shifts"
+        },
+        {
+          "behavior": "Static with harmonic variation",
+          "description": "Unchanging melody over shifting harmonies"
+        }
+      ],
+      "selected_option": {
+        "behavior": "Persistent with subtle pitch variations",
+        "description": "Maintains melodic identity while allowing for gradual development"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic quality while allowing for development",
+      "tradeoff": {
+        "pro": "Clear identity, gradual development",
+        "con": "Less dramatic contrast"
+      },
+      "trace_reference": "CK-MEL-02, CK-DEV-01"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "role": "Pedal tone",
+          "description": "Static bass note supporting harmonic drone"
+        },
+        {
+          "role": "Syncopated groove",
+          "description": "Rhythmic bass line complementing percussion"
+        },
+        {
+          "role": "Arpeggiated chords",
+          "description": "Bass outlines harmonic progression"
+        }
+      ],
+      "selected_option": {
+        "role": "Pedal tone with occasional rhythmic displacement",
+        "description": "Static bass note with subtle rhythmic variation"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support hypnotic quality while allowing for subtle development",
+      "tradeoff": {
+        "pro": "Clear focal identity, restrained character",
+        "con": "Less rhythmic complexity"
+      },
+      "trace_reference": "CK-HAR-01, GP-02"
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "groove": "Steady 4/4 with subtle swing",
+          "description": "Persistent, hypnotic groove"
+        },
+        {
+          "groove": "Polyrhythmic with shifting accents",
+          "description": "Complex, evolving groove"
+        },
+        {
+          "groove": "Static with rhythmic displacement",
+          "description": "Minimal groove with occasional shifts"
+        }
+      ],
+      "selected_option": {
+        "groove": "Steady 4/4 with subtle swing and occasional rhythmic displacement",
+        "description": "Persistent groove with subtle variations"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create a hypnotic, restrained groove",
+      "tradeoff": {
+        "pro": "Clear identity, allows for development",
+        "con": "Less rhythmic complexity"
+      },
+      "trace_reference": "CK-RHY-01, GP-05"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "strategies": ["Minimal hi-hat pattern", "Kick on downbeats", "Snare on backbeats"],
+          "description": "FULL: Minimal but effective percussion"
+        },
+        {
+          "strategies": ["Delegated to bass and melody", "No independent percussion"],
+          "description": "DELEGATED: Percussion integrated into other layers"
+        },
+        {
+          "strategies": ["Intentional absence of percussion"],
+          "description": "INTENTIONALLY_ABSENT: Percussion-free texture"
+        }
+      ],
+      "selected_option": {
+        "selected_outcome": "MINIMAL",
+        "candidate_strategies": [
+          "Hi-hat on every eighth note with subtle swing",
+          "Kick aligned with downbeats",
+          "Snare on backbeats with occasional ghost notes"
+        ],
+        "bass_groove_interaction": "Pedal bass note with occasional rhythmic displacement to complement percussion",
+        "focal_hierarchy_interaction": "Percussion supports melodic hook as primary focal point",
+        "section_behavior": {
+          "Intro": "Minimal percussion, establishing groove",
+          "Build": "Increased rhythmic complexity, accented snare",
+          "Release": "Full percussion with syncopated accents",
+          "Outro": "Gradual reduction to minimal pattern"
+        },
+        "development_behavior": "Percussion evolves in complexity while maintaining hypnotic quality"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support hypnotic quality while allowing for development",
+      "tradeoff": {
+        "pro": "Clear groove, supports focal identity",
+        "con": "Less rhythmic complexity than FULL"
+      },
+      "trace_reference": "N3-P, CK-RHY-01"
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "texture": "Layered with sparse instrumentation",
+          "description": "Melody, bass, and minimal percussion"
+        },
+        {
+          "texture": "Dense with multiple rhythmic layers",
+          "description": "Complex interplay between instruments"
+        },
+        {
+          "texture": "Monophonic with harmonic accompaniment",
+          "description": "Single melodic line with chordal support"
+        }
+      ],
+      "selected_option": {
+        "texture": "Layered with sparse instrumentation and subtle rhythmic displacement",
+        "description": "Melodic hook, pedal bass, and minimal percussion with occasional rhythmic variation"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create a restrained, hypnotic texture",
+      "tradeoff": {
+        "pro": "Clear focal identity, allows for development",
+        "con": "Less rhythmic complexity"
+      },
+      "trace_reference": "GP-01, GP-04"
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "strategy": "Gradual accumulation of rhythmic complexity",
+          "description": "Persistent melody with increasing rhythmic displacement"
+        },
+        {
+          "strategy": "Harmonic variation with static melody",
+          "description": "Shifting harmonies under static melodic hook"
+        },
+        {
+          "strategy": "Fragmentation and recombination",
+          "description": "Breaking melody into smaller motifs and recombining"
+        }
+      ],
+      "selected_option": {
+        "strategy": "Gradual accumulation of rhythmic complexity and harmonic variation",
+        "description": "Persistent melodic hook with subtle rhythmic displacement and harmonic shifts"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a hypnotic, restrained development",
+      "tradeoff": {
+        "pro": "Clear identity, gradual tension buildup",
+        "con": "Less dramatic contrast"
+      },
+      "trace_reference": "CK-DEV-01, GP-04"
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": [
+        {
+          "strategy": "Gradual buildup with clear release",
+          "description": "Persistent tension with one clear release point"
+        },
+        {
+          "strategy": "Multiple micro-releases",
+          "description": "Frequent small releases to maintain tension"
+        },
+        {
+          "strategy": "Static tension with abrupt release",
+          "description": "Prolonged tension followed by sudden release"
+        }
+      ],
+      "selected_option": {
+        "strategy": "Gradual buildup with one clear release",
+        "description": "Persistent tension through rhythmic accumulation and harmonic shifts, culminating in a single release"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create a hypnotic, restrained tension and release",
+      "tradeoff": {
+        "pro": "Clear focal identity, aligns with artistic intent",
+        "con": "Less dynamic contrast"
+      },
+      "trace_reference": "CK-FORM-02, GP-03"
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": [
+        {
+          "strategy": "Gradual fade-out with persistent groove",
+          "description": "Retains hypnotic quality while resolving"
+        },
+        {
+          "strategy": "Abrupt stop with final release",
+          "description": "Sudden cessation following climax"
+        },
+        {
+          "strategy": "Return to intro with subtle variation",
+          "description": "Circular structure with slight modification"
+        }
+      ],
+      "selected_option": {
+        "strategy": "Gradual fade-out with persistent groove and subtle harmonic resolution",
+        "description": "Retains hypnotic quality while providing a sense of closure"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a hypnotic, restrained ending",
+      "tradeoff": {
+        "pro": "Clear resolution, maintains identity",
+        "con": "Less dramatic contrast"
+      },
+      "trace_reference": "GP-03"
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": [
+        {
+          "conflicts": ["None identified"],
+          "description": "All decisions align with brief and genre pack"
+        },
+        {
+          "conflicts": ["Melodic persistence vs. harmonic variation"],
+          "description": "Potential tension between melodic identity and harmonic development"
+        },
+        {
+          "conflicts": ["Rhythmic complexity vs. hypnotic quality"],
+          "description": "Balancing rhythmic displacement with restrained character"
+        }
+      ],
+      "selected_option": {
+        "conflicts": ["None identified; all decisions align with brief and genre pack"],
+        "resolution": "Decisions are mutually supportive and maintain artistic intent"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Ensure coherence across all domains",
+      "tradeoff": {
+        "pro": "Clear alignment with brief and genre pack",
+        "con": "None"
+      },
+      "trace_reference": "CK-SONG-01"
+    }
+  ]
+}

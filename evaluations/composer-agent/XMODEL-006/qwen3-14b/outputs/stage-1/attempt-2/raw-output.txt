@@ -1,0 +1,208 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["A-B-A-B", "A-B-C-A", "Through-composed"],
+      "selected_option": {
+        "structure": "A-B-A-B with coda",
+        "section_lengths": "A: 8 bars, B: 8 bars, A: 8 bars, B: 8 bars, Coda: 4 bars"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Establish clear section contrast while maintaining cyclical melodic identity",
+      "tradeoff": {
+        "considered": ["Through-composed for development", "A-B-C-A for variation"],
+        "chosen": "A-B-A-B with coda for structural clarity"
+      },
+      "trace_reference": "CK-FORM-01, CK-FORM-02"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["Verse-Chorus-Verse-Chorus-Coda", "Intro-Verse-Chorus-Bridge-Chorus-Coda"],
+      "selected_option": {
+        "roles": "Intro (4 bars) → Verse (8 bars) → Chorus (8 bars) → Bridge (8 bars) → Chorus (8 bars) → Coda (4 bars)"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create gradual accumulation through section progression",
+      "tradeoff": {
+        "considered": ["Intro-Verse-Chorus-Verse-Chorus-Coda", "Intro-Verse-Bridge-Chorus-Coda"],
+        "chosen": "Intro-Verse-Chorus-Bridge-Chorus-Coda for dynamic contrast"
+      },
+      "trace_reference": "CK-FORM-01, CK-FORM-02"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["D minor with modal mixture", "E Phrygian dominant", "F# Aeolian"],
+      "selected_option": {
+        "tonic": "D minor",
+        "mode": "Dorian with Phrygian borrowings",
+        "harmonic_rhythm": "4/4 with occasional 3/4 sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create tense, restrained harmonic environment",
+      "tradeoff": {
+        "considered": ["E Phrygian dominant for exoticism", "F# Aeolian for melancholy"],
+        "chosen": "D Dorian with Phrygian borrowings for tension"
+      },
+      "trace_reference": "CK-HAR-01, CK-HAR-02"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["Synth lead with arpeggiated patterns", "Piano with sparse chords", "Electric guitar with palm-muted riffs"],
+      "selected_option": {
+        "instrument": "Synth lead",
+        "technique": "Arpeggiated patterns with microtonal bends"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain hypnotic, forward-moving melodic identity",
+      "tradeoff": {
+        "considered": ["Piano for clarity", "Guitar for grit"],
+        "chosen": "Synth lead for textural cohesion"
+      },
+      "trace_reference": "CK-MEL-01, CK-MEL-02"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["Repetition with gradual variation", "Call-and-response phrasing", "Fragmented motifs with reassembly"],
+      "selected_option": {
+        "behavior": "Repetition with gradual variation",
+        "development_strategy": "Add chromaticism and rhythmic displacement in later sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create coherent repetition with audible development",
+      "tradeoff": {
+        "considered": ["Call-and-response for interaction", "Fragmented motifs for unpredictability"],
+        "chosen": "Repetition with variation for hypnotic effect"
+      },
+      "trace_reference": "CK-DEV-01"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["Piano bass line", "Synth bass with portamento", "Electric bass with slap technique"],
+      "selected_option": {
+        "instrument": "Synth bass",
+        "technique": "Portamento with microtonal slides"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support harmonic framework with textural cohesion",
+      "tradeoff": {
+        "considered": ["Electric bass for groove", "Piano for clarity"],
+        "chosen": "Synth bass for harmonic integration"
+      },
+      "trace_reference": "CK-HAR-01"
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["12/8 shuffle", "4/4 with syncopation", "7/8 irregular meter"],
+      "selected_option": {
+        "meter": "4/4 with syncopation",
+        "groove_character": "Persistent forward motion with gradual rhythmic complexity"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain consistent forward motion with rhythmic development",
+      "tradeoff": {
+        "considered": ["12/8 shuffle for groove", "7/8 for unpredictability"],
+        "chosen": "4/4 with syncopation for rhythmic accumulation"
+      },
+      "trace_reference": "CK-RHY-01"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL with layered percussion", "MINIMAL with sparse hits", "DELEGATED to other instruments", "INTENTIONALLY_ABSENT"],
+      "selected_option": {
+        "selected_outcome": "FULL",
+        "candidate_strategies": [
+          "Layered percussion with kick, snare, hi-hats, and ambient textures",
+          "Minimalist approach with sparse hits and ambient pads",
+          "Delegated to synth arpeggios and bass portamento",
+          "Intentionally absent with focus on melodic and harmonic elements"
+        ],
+        "bass_groove_interaction": "Kick drum aligns with bass portamento, snare syncopates against melodic rhythm",
+        "focal_hierarchy_interaction": "Percussion supports but does not compete with synth lead and bass",
+        "section_behavior": "Hi-hats become denser in chorus sections, ambient textures increase in bridge",
+        "development_behavior": "Percussion layers add complexity in later sections while maintaining textural cohesion"
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Enhance hypnotic quality through layered textures while maintaining clarity",
+      "tradeoff": {
+        "considered": ["Minimalist approach for restraint", "Delegated to other instruments for focus"],
+        "chosen": "FULL with layered percussion for textural development"
+      },
+      "trace_reference": "N3-P, CK-RHY-02"
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["Dense polyphony", "Sparse with ambient pads", "Contrasting layers"],
+      "selected_option": {
+        "texture": "Contrasting layers",
+        "description": "Synth lead with arpeggiated patterns, synth bass with portamento, layered ambient pads, and rhythmic percussion"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create controlled section contrast while maintaining identity",
+      "tradeoff": {
+        "considered": ["Dense polyphony for complexity", "Sparse for restraint"],
+        "chosen": "Contrasting layers for dynamic textural shifts"
+      },
+      "trace_reference": "CK-SONG-01"
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["Gradual chromaticism", "Rhythmic displacement", "Textural layering"],
+      "selected_option": {
+        "strategy": "Gradual chromaticism with rhythmic displacement",
+        "description": "Add chromatic passing tones in melodic line, displace rhythmic patterns in later sections"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Achieve coherent repetition with audible development",
+      "tradeoff": {
+        "considered": ["Textural layering for complexity", "Rhythmic displacement for unpredictability"],
+        "chosen": "Gradual chromaticism for controlled development"
+      },
+      "trace_reference": "CK-DEV-01"
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["Gradual build with sudden release", "Sustained tension with gradual release", "Cyclical tension with no release"],
+      "selected_option": {
+        "strategy": "Gradual build with sudden release",
+        "description": "Increase density and chromaticism through sections, sudden release in final chorus"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create one clear release after persistent forward motion",
+      "tradeoff": {
+        "considered": ["Sustained tension for atmosphere", "Cyclical tension for hypnotic effect"],
+        "chosen": "Gradual build with sudden release for dramatic effect"
+      },
+      "trace_reference": "CK-HAR-03"
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["Coda with resolution", "Fade-out with unresolved tension", "Reprise of intro"],
+      "selected_option": {
+        "strategy": "Coda with resolution",
+        "description": "Final 4 bars with resolved harmonic cadence and fading textures"
+      },
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Provide clear resolution after development",
+      "tradeoff": {
+        "considered": ["Fade-out for ambiguity", "Reprise of intro for cyclical effect"],
+        "chosen": "Coda with resolution for structural closure"
+      },
+      "trace_reference": "CK-FORM-02"
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["Harmonic-melodic conflicts", "Rhythmic-textural conflicts", "No significant conflicts"],
+      "selected_option": {
+        "resolution": "No significant conflicts",
+        "description": "All domains align with artistic intent and brief requirements"
+      },
+      "selection_basis": "NOT_APPLICABLE",
+      "active_intention": "Ensure all domains work together cohesively",
+      "tradeoff": {
+        "considered": [],
+        "chosen": "No conflicts detected"
+      },
+      "trace_reference": "CK-SONG-01"
+    }
+  ]
+}
