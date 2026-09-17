@@ -1,0 +1,25 @@
+schema_id: staged-composer-stage-2-musical-material-v1
+version: 1.0.0
+purpose: Material musical estructurado que realiza un DecisionTrace congelado.
+required:
+  - frozen_decision_trace_hash
+  - sections
+  - layers
+  - material_events
+  - realization_notes
+sections:
+  required_fields: [section_id, start_bar, bar_count, decision_references]
+layers:
+  allowed_types: [pitched, drums, percussion, effect, texture]
+  required_fields: [layer_id, type, role, section_assignments]
+material_events:
+  pitched_event_fields: [start, duration, pitch]
+  rhythm_event_fields: [start, duration]
+  section_assignments_required: true
+consistency:
+  decision_trace_hash_required: true
+  n3_p_realization_required: true
+  missing_implied_layer: BLOCK
+  contradictory_frozen_decision: BLOCK
+  quality_judgement: prohibited
+  artistic_ranking: prohibited

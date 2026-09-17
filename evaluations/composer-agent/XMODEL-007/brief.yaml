@@ -1,0 +1,62 @@
+﻿test_id: XMODEL-001
+
+genre:
+  pack: indie-dance
+  use_genre_pack: true
+
+artistic_intent:
+  character:
+    - tense
+    - restrained
+    - hypnotic
+
+  movement:
+    - persistent forward motion
+    - gradual accumulation
+    - one clear release
+
+requirements:
+  - instrumental
+  - clear focal identity
+  - coherent repetition with audible development
+  - controlled section contrast
+  - preserve identity across development
+
+composer_freedom:
+  decide:
+    - tonic
+    - mode
+    - tempo
+    - form
+    - section lengths
+    - harmonic framework
+    - harmonic rhythm
+    - focal hierarchy
+    - melody
+    - bass
+    - groove
+    - percussion architecture
+    - texture
+    - development strategy
+    - release strategy
+    - ending
+
+do_not_prescribe:
+  - specific chord progression
+  - specific melody
+  - specific bass line
+  - specific drum pattern
+  - specific percussion outcome
+  - specific form
+  - specific instrumentation
+
+evaluation_intent:
+  - test transfer of composer-interface-v1 to a third-party model
+  - test prospective decision making
+  - test scope and guardrail compliance
+  - test SongPlanV2 production
+
+notes:
+  - examples are precedents, not templates
+  - do not copy previous songs
+  - do not invent comparative ranking where none is supported

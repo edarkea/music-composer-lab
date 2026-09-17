@@ -1,0 +1,20 @@
+{
+  "test_id": "XMODEL-007",
+  "brief_sha256": "464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B",
+  "models": [
+    {
+      "model": "qwen3-14b",
+      "payload": "qwen3-14b\\stage-1-payload.txt",
+      "payload_sha256": "2227CEA46DC83CFAE6863547ED4A85D014622AB5FD1E0741687AD40F3ED9A7D3",
+      "preflight": "PASS",
+      "resolved_record_count": 11
+    },
+    {
+      "model": "ministral-3-14b",
+      "payload": "ministral-3-14b\\stage-1-payload.txt",
+      "payload_sha256": "2227CEA46DC83CFAE6863547ED4A85D014622AB5FD1E0741687AD40F3ED9A7D3",
+      "preflight": "PASS",
+      "resolved_record_count": 11
+    }
+  ]
+}

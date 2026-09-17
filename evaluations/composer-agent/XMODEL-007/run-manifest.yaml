@@ -1,0 +1,65 @@
+{
+  "test_id": "XMODEL-007",
+  "status": "PREPARED_NOT_EXECUTED",
+  "execution_authorized": false,
+  "executed": false,
+  "purpose": "prospective_stage_transfer_with_canonical_n3_p",
+  "interface_version": "composer-interface-v1.1",
+  "condition": "NO-EXAMPLE",
+  "models": [
+    "qwen3:14b",
+    "ministral-3:14b"
+  ],
+  "same_brief_as": "XMODEL-005/XMODEL-006",
+  "brief_sha256": "464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B",
+  "stages": {
+    "stage_1": {
+      "prompt": "frozen-prompt-stage-1-n3-canonical.txt",
+      "schema": "stage-1-output-schema-v1.1-n3-canonical.json",
+      "num_predict": 4096,
+      "max_attempts": 3,
+      "runs_only_after_previous_pass": true
+    },
+    "stage_2": {
+      "prompt": "frozen-prompt-stage-2.txt",
+      "schema": "stage-2-musical-material-schema.yaml",
+      "num_predict": 8192,
+      "runs_only_after_previous_pass": true
+    },
+    "stage_3": {
+      "prompt": "frozen-prompt-stage-3.txt",
+      "schema": "stage-3-songplan-serialization-schema.yaml",
+      "num_predict": 8192,
+      "runs_only_after_previous_pass": true
+    }
+  },
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "stage_1_num_predict": 4096,
+    "stage_2_num_predict": 8192,
+    "stage_3_num_predict": 8192
+  },
+  "retry_policy": {
+    "max_attempts_per_stage": 3,
+    "diagnostics_only": true,
+    "previous_raw_output_replay": false,
+    "semantic_repair": false
+  },
+  "harness": {
+    "assembler": "integrations/composer-agent/staged_harness.py",
+    "runner": "integrations/composer-agent/staged_runner.py",
+    "gate": "integrations/composer-agent/staged_harness.py gate",
+    "local_test": "python integrations/composer-agent/test_staged_harness.py -q",
+    "adapter_musical_decisions": 0
+  },
+  "comparability": {
+    "XMODEL-004": "invalid_not_comparable",
+    "XMODEL-005": "historical_only",
+    "XMODEL-006": "structural_progression_only"
+  }
+}
