@@ -1,4 +1,4 @@
-"""Immutable capture runner for XMODEL-004 staged prompts.
+"""Immutable capture runner for staged composer prompts.
 
 This runner only calls Ollama and stores raw bytes plus hashes. It does not
 repair, normalize, or decide musical content.
@@ -20,6 +20,13 @@ def exclusive(path: Path, data: bytes) -> None:
     with path.open("xb") as f:
         f.write(data); f.flush(); os.fsync(f.fileno())
 
+def build_request(model: str, prompt: str, settings: dict, format_schema: dict | None = None) -> dict:
+    request = {"model": model, "messages":[{"role":"user","content":prompt}],
+               "stream":False, "options":settings}
+    if format_schema is not None:
+        request["format"] = format_schema
+    return request
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--model", required=True)
@@ -32,6 +39,7 @@ def main() -> int:
     p.add_argument("--stage-number", type=int, choices=[1,2,3], required=True)
     p.add_argument("--instruction", type=Path, required=True)
     p.add_argument("--prior", type=Path)
+    p.add_argument("--format-schema", type=Path, help="Stage-specific JSON Schema for Ollama structured output")
     p.add_argument("--ollama-url", default="http://127.0.0.1:11434/api/chat")
     a = p.parse_args()
     prompt_bytes = a.input.read_bytes(); brief_bytes = a.brief.read_bytes()
@@ -40,8 +48,8 @@ def main() -> int:
     if not pf["pass"]:
         raise ValueError("preflight failed: " + json.dumps(pf, ensure_ascii=False))
     settings = dict(SETTINGS); settings["num_predict"] = a.num_predict
-    req_obj = {"model": a.model, "messages":[{"role":"user","content":prompt}],
-               "stream":False, "options":settings}
+    schema = json.loads(a.format_schema.read_text(encoding="utf-8")) if a.format_schema else None
+    req_obj = build_request(a.model, prompt, settings, schema)
     req_bytes = json.dumps(req_obj, ensure_ascii=False, separators=(",", ":")).encode()
     with urlopen(Request(a.ollama_url, data=req_bytes,
                          headers={"Content-Type":"application/json; charset=utf-8"},
@@ -57,6 +65,7 @@ def main() -> int:
             "interface_version":"composer-interface-v1.1", "stage":a.stage, "attempt":a.attempt,
             "input_sha256":sha(prompt_bytes), "payload_sha256":sha(prompt_bytes), "brief_sha256":sha(brief_bytes),
             "generation_parameters":settings, "request_sha256":sha(req_bytes),
+            "structured_output_schema":str(a.format_schema) if a.format_schema else None,
             "raw_api_response_sha256":sha(api_bytes), "raw_output_sha256":sha(content.encode()),
             "semantic_repair_performed":False, "done_reason":api.get("done_reason"),
             "eval_count":api.get("eval_count"), "prompt_eval_count":api.get("prompt_eval_count")}

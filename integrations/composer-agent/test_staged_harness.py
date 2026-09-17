@@ -2,7 +2,8 @@ import copy, json, tempfile, unittest
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from staged_harness import ROOT, INTERFACE, REQUIRED, assemble, can_advance, gate, preflight
+from staged_harness import ROOT, INTERFACE, REQUIRED, assemble, build_retry_payload, can_advance, gate, preflight
+from staged_runner import build_request
 
 BRIEF = ROOT / "evaluations/composer-agent/XMODEL-005/brief.yaml"
 PROMPT = ROOT / "evaluations/composer-agent/XMODEL-005/frozen-prompt-stage-1.txt"
@@ -49,6 +50,22 @@ class HarnessTests(unittest.TestCase):
         self.assertFalse(can_advance({"pass":False,"stage":1},2))
     def test_k_no_adapter_musical_decisions(self):
         x=valid_trace(); before=copy.deepcopy(x); _=gate_stage1_for_test(x); self.assertEqual(x,before)
+    def test_l_ollama_stage_schema_is_transmitted(self):
+        schema={"type":"object","required":["decision_trace"]}
+        req=build_request("qwen3:14b","prompt",{"num_ctx":32768},schema)
+        self.assertEqual(req["format"],schema); self.assertEqual(req["messages"][0]["content"],"prompt")
+    def test_m_retry_contains_diagnostics_without_previous_output(self):
+        with tempfile.TemporaryDirectory() as d:
+            original=Path(d)/"payload.txt"; original.write_text("FULL ORIGINAL CONTEXT",encoding="utf-8")
+            out=Path(d)/"retry.txt"; r=build_retry_payload(original,["missing required field: decision_id"],out)
+            self.assertTrue(r["previous_raw_output_embedded"] is False)
+            self.assertIn("decision_id",out.read_text(encoding="utf-8"))
+            self.assertEqual(out.read_text(encoding="utf-8").count("FULL ORIGINAL CONTEXT"),1)
+    def test_n_retry_preserves_full_context(self):
+        with tempfile.TemporaryDirectory() as d:
+            original=Path(d)/"payload.txt"; original.write_text("BRIEF EXACT\nREQUIRED RECORD\nSTAGE INSTRUCTION",encoding="utf-8")
+            out=Path(d)/"retry.txt"; build_retry_payload(original,["schema validation failed at /decision_trace/0"],out)
+            text=out.read_text(encoding="utf-8"); self.assertIn("BRIEF EXACT",text); self.assertIn("REQUIRED RECORD",text); self.assertIn("STAGE INSTRUCTION",text)
 
 def read_text(p): return p.read_text(encoding="utf-8-sig") if p.exists() else ""
 def gate_stage1_for_test(x):

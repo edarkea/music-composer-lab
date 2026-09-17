@@ -80,6 +80,19 @@ def preflight(payload: str, stage: int, brief: Path, instruction: Path,
     return {"pass": not errors, "stage": stage, "errors": errors,
             "resolved_record_count": len(resolved or required)}
 
+def build_retry_payload(original_payload: Path, diagnostics: list[str], out: Path) -> dict:
+    """Re-send complete original context plus diagnostics, without raw output."""
+    original = original_payload.read_text(encoding="utf-8-sig")
+    diag = "\n".join(["DETERMINISTIC GATE DIAGNOSTICS — RETRY", *diagnostics])
+    payload = original.rstrip() + "\n\n" + diag + "\n"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(payload, encoding="utf-8", newline="")
+    result = {"payload_path": str(out), "payload_sha256": digest(payload.encode()),
+              "original_payload_sha256": digest(original.encode()),
+              "previous_raw_output_embedded": False, "diagnostics": diagnostics}
+    (out.parent / "retry-payload-manifest.json").write_text(json.dumps(result, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+    return result
+
 def parse_output(path: Path):
     raw = path.read_text(encoding="utf-8-sig")
     if raw.lstrip().startswith("```"): return None, ["markdown wrapper is not valid structured output"]
@@ -100,6 +113,8 @@ def can_advance(previous_gate: dict, next_stage: int) -> bool:
     return bool(previous_gate.get("pass") is True and next_stage == int(previous_gate.get("stage", 0)) + 1)
 
 def decisions(data):
+    if isinstance(data.get("decision_trace"), list):
+        return {str(x.get("decision_id", x.get("decision"))): x for x in data["decision_trace"] if isinstance(x,dict)}
     if isinstance(data.get("decisions"), list):
         return {str(x.get("decision_id", x.get("decision"))): x for x in data["decisions"] if isinstance(x,dict)}
     return {k:v for k,v in data.items() if k in REQUIRED and isinstance(v,dict)}
@@ -161,8 +176,10 @@ def gate_stage3(data, trace, material):
 def main():
     p=argparse.ArgumentParser(); sub=p.add_subparsers(dest="cmd",required=True)
     a=sub.add_parser("assemble"); a.add_argument("--stage",type=int,choices=[1,2,3],required=True); a.add_argument("--brief",type=Path,required=True); a.add_argument("--instruction",type=Path,required=True); a.add_argument("--out",type=Path,required=True); a.add_argument("--prior",type=Path)
+    r=sub.add_parser("retry-payload"); r.add_argument("--original",type=Path,required=True); r.add_argument("--out",type=Path,required=True); r.add_argument("--diagnostic",action="append",required=True)
     g=sub.add_parser("gate"); g.add_argument("--stage",type=int,choices=[1,2,3],required=True); g.add_argument("--output",type=Path,required=True)
     args=p.parse_args()
     if args.cmd=="assemble": print(json.dumps(assemble(args.stage,args.brief,args.instruction,args.out,args.prior),ensure_ascii=False,indent=2)); return 0
+    if args.cmd=="retry-payload": print(json.dumps(build_retry_payload(args.original,args.diagnostic,args.out),ensure_ascii=False,indent=2)); return 0
     result=gate(args.stage,args.output); print(json.dumps(result,ensure_ascii=False,indent=2)); return 0 if result["pass"] else 1
 if __name__ == "__main__": main()
