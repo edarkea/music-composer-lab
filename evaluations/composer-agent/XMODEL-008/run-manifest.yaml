@@ -1,0 +1,69 @@
+{
+  "test_id": "XMODEL-008",
+  "status": "PREPARED_NOT_EXECUTED",
+  "execution_authorized": false,
+  "executed": false,
+  "materialized": false,
+  "purpose": "prospective_full_staged_transfer_after_nonsemantic_hardening",
+  "interface_version": "composer-interface-v1.1",
+  "condition": "NO-EXAMPLE",
+  "models": [
+    "qwen3:14b",
+    "ministral-3:14b"
+  ],
+  "brief_sha256": "464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B",
+  "stages": {
+    "stage_1": {
+      "prompt": "frozen-prompt-stage-1-n3-canonical.txt",
+      "schema": "stage-1-output-schema-v1.1-n3-canonical.json",
+      "ollama_format": true,
+      "num_predict": 4096,
+      "max_attempts": 3
+    },
+    "stage_2": {
+      "prompt": "stage-2-prompt-hardened-v1.1.txt",
+      "validator": "integrations/composer-agent/staged_harness.py gate",
+      "ollama_format": false,
+      "num_predict": 8192,
+      "max_attempts": 3
+    },
+    "stage_3": {
+      "prompt": "stage-3-prompt-hardened-v1.1.txt",
+      "schema": "stage-3-songplan-format-schema-v1.1.json",
+      "ollama_format": true,
+      "local_authority": "songplan-v2-contract.yaml plus executable gate",
+      "num_predict": 8192,
+      "max_attempts": 3
+    }
+  },
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "stage_1_num_predict": 4096,
+    "stage_2_num_predict": 8192,
+    "stage_3_num_predict": 8192
+  },
+  "retry_policy": {
+    "max_attempts_per_stage": 3,
+    "diagnostics_only": true,
+    "previous_raw_output_replay": false,
+    "semantic_repair": false,
+    "musical_suggestions": false
+  },
+  "harness": {
+    "assembler": "integrations/composer-agent/staged_harness.py",
+    "runner": "integrations/composer-agent/staged_runner.py",
+    "gate": "integrations/composer-agent/staged_harness.py gate",
+    "tests": "python integrations/composer-agent/test_staged_harness.py -q",
+    "adapter_musical_decisions": 0
+  },
+  "comparability": {
+    "XMODEL-007": "technical progression only",
+    "XMODEL-006": "historical structural progression only",
+    "XMODEL-004": "invalid_not_comparable"
+  }
+}
