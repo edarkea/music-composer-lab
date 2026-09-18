@@ -1,0 +1,29 @@
+{
+  "capture_status": "CAPTURED",
+  "captured_at_utc": "2026-09-18T04:53:27.514798+00:00",
+  "model_identifier_requested": "ministral-3:14b",
+  "model_identifier_reported": "ministral-3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "stage": "stage-2",
+  "attempt": 1,
+  "input_sha256": "461d16386c06a59e2286740c762744b73cc99afb7b65ea3a248e032a8d170ce1",
+  "payload_sha256": "461d16386c06a59e2286740c762744b73cc99afb7b65ea3a248e032a8d170ce1",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 8192
+  },
+  "request_sha256": "e95634db384d9d315d9332c0cbc7030144451eac8ac749f125a90815feaf3cd7",
+  "structured_output_schema": null,
+  "raw_api_response_sha256": "c0a626d84f3300911327fcc81a16ea9260fe06e9815ec283913232e26917a2fe",
+  "raw_output_sha256": "6059e770d9dddcb62d9ee8aefbff2fc063f5ca32a405b11e77ff075ac7643e62",
+  "semantic_repair_performed": false,
+  "done_reason": "stop",
+  "eval_count": 2059,
+  "prompt_eval_count": 18940
+}

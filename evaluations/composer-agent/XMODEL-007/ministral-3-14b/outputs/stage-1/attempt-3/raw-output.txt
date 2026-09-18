@@ -1,0 +1,381 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic and harmonic material, section differentiation through texture/density changes (GP-01, GP-04)",
+          "strategy": "A-B-A-B with A as groove-based loop and B as contrasting density/texture"
+        },
+        {
+          "description": "Through-composed with gradual harmonic progression and subtle rhythmic shifts (GP-02, GP-05)",
+          "strategy": "Continuous development with persistent groove, harmonic motion as primary driver"
+        },
+        {
+          "description": "Verse-Chorus structure with minimal melodic variation, contrast via arrangement (GP-06)",
+          "strategy": "Verse: sparse texture, Chorus: layered density, persistent groove"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic quality through persistent motion while allowing controlled contrast via density/texture",
+      "tradeoff": {
+        "persistent_motion": "Maintains hypnotic character",
+        "section_contrast": "Limited to texture/density to avoid disrupting groove"
+      },
+      "trace_reference": "CK-FORM-01, GP-01, GP-04",
+      "selected_option": {
+        "description": "Loop-based form with persistent melodic and harmonic material, section differentiation through texture/density changes",
+        "strategy": "A-B-A-B with A as groove-based loop and B as contrasting density/texture"
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "A: Establish groove and focal identity, B: Contrast via density/texture while preserving groove",
+          "roles": ["A: establish", "B: contrast"]
+        },
+        {
+          "description": "A: Persistent groove with subtle harmonic shifts, B: Full harmonic release with reduced density",
+          "roles": ["A: continue", "B: arrive"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain forward motion while allowing controlled release in B sections",
+      "tradeoff": {
+        "groove_persistence": "Ensures hypnotic quality",
+        "controlled_release": "Limited to density/texture to preserve identity"
+      },
+      "trace_reference": "CK-FORM-01, GP-03",
+      "selected_option": {
+        "description": "A: Establish groove and focal identity, B: Contrast via density/texture while preserving groove",
+        "roles": ["A: establish", "B: contrast"]
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Persistent vamp loop (e.g., I-IV-V) with harmonic rhythm aligned to groove",
+          "strategy": "Static harmonic loop, rhythmic motion as primary driver"
+        },
+        {
+          "description": "Gradual harmonic progression (e.g., I-IV-V-vi) with subtle shifts",
+          "strategy": "Persistent groove with harmonic motion"
+        },
+        {
+          "description": "Modal framework (e.g., Dorian/Phrygian) with harmonic tension/release",
+          "strategy": "Non-functional harmony with tension built via voice leading"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support persistent groove while allowing subtle harmonic development",
+      "tradeoff": {
+        "harmonic_stability": "Preserves groove",
+        "subtle_development": "Limited to voice leading within loop"
+      },
+      "trace_reference": "CK-HAR-02, GP-02",
+      "selected_option": {
+        "description": "Persistent vamp loop (e.g., I-IV-V) with harmonic rhythm aligned to groove",
+        "strategy": "Static harmonic loop, rhythmic motion as primary driver"
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Melodic hook with persistent rhythmic motif",
+          "strategy": "Lead motif anchored to groove, bass reinforcing harmonic loop"
+        },
+        {
+          "description": "Harmonic rhythm as focal point with melodic counterpoint",
+          "strategy": "Bass and drums emphasize harmonic changes, melody secondary"
+        },
+        {
+          "description": "Textural focus (e.g., arpeggiated pads, sparse percussion)",
+          "strategy": "Density as primary driver, groove secondary"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize melodic hook to reinforce hypnotic character while maintaining groove",
+      "tradeoff": {
+        "melodic_focus": "Strengthens hypnotic quality",
+        "groove_support": "Ensures persistent motion"
+      },
+      "trace_reference": "CK-MEL-01, GP-01",
+      "selected_option": {
+        "description": "Melodic hook with persistent rhythmic motif",
+        "strategy": "Lead motif anchored to groove, bass reinforcing harmonic loop"
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Persistent melodic loop with subtle rhythmic variation",
+          "strategy": "Preserve pitch contour, vary rhythmic placement (GP-05)"
+        },
+        {
+          "description": "Fragmented motif with harmonic alignment",
+          "strategy": "Retain intervals, recontextualize rhythmically"
+        },
+        {
+          "description": "Development via transposition/registration",
+          "strategy": "Preserve contour, shift octave/transpose"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic quality through persistent melodic contour",
+      "tradeoff": {
+        "contour_persistence": "Reinforces hypnotic character",
+        "rhythmic_variation": "Limited to subtle shifts to preserve groove"
+      },
+      "trace_reference": "CK-MEL-02, CK-DEV-01",
+      "selected_option": {
+        "description": "Persistent melodic loop with subtle rhythmic variation",
+        "strategy": "Preserve pitch contour, vary rhythmic placement"
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Harmonic reinforcement with rhythmic alignment to groove",
+          "strategy": "Kick-driven, syncopated accents reinforcing harmonic loop"
+        },
+        {
+          "description": "Melodic counterpoint with harmonic support",
+          "strategy": "Bassline mirrors lead motif, harmonically anchored"
+        },
+        {
+          "description": "Textural filler with rhythmic groove",
+          "strategy": "Sparse, rhythmic bassline without harmonic emphasis"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Reinforce harmonic loop while contributing to groove",
+      "tradeoff": {
+        "harmonic_clarity": "Supports vamp loop",
+        "groove_contribution": "Syncopated accents align with rhythmic motion"
+      },
+      "trace_reference": "CK-HAR-01, GP-02",
+      "selected_option": {
+        "description": "Harmonic reinforcement with rhythmic alignment to groove",
+        "strategy": "Kick-driven, syncopated accents reinforcing harmonic loop"
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "Persistent 4/4 groove with syncopated kick/snare",
+          "strategy": "Stable tempo, rhythmic displacement for forward motion"
+        },
+        {
+          "description": "Polyrhythmic groove with harmonic alignment",
+          "strategy": "Cross-rhythms reinforcing harmonic changes"
+        },
+        {
+          "description": "Minimalist groove with textural emphasis",
+          "strategy": "Sparse percussion, groove derived from harmonic rhythm"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support hypnotic quality through persistent rhythmic motion",
+      "tradeoff": {
+        "stability": "Ensures hypnotic character",
+        "variation": "Limited to syncopation to preserve groove"
+      },
+      "trace_reference": "CK-RHY-01, GP-05",
+      "selected_option": {
+        "description": "Persistent 4/4 groove with syncopated kick/snare",
+        "strategy": "Stable tempo, rhythmic displacement for forward motion"
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Multi-layered percussion with kick/snare/hi-hat and auxiliary percussion",
+          "strategy": "Kick on 1/4, snare on 2/4, hi-hat on 8ths, auxiliary percussion for texture"
+        },
+        {
+          "description": "MINIMAL: Kick/snare only with rhythmic displacement",
+          "strategy": "Kick on 1/4, snare on 2/4, no hi-hat, sparse auxiliary"
+        },
+        {
+          "description": "DELEGATED: Groove carried by bass and harmonic rhythm",
+          "strategy": "No independent percussion track, groove derived from bass/kick"
+        },
+        {
+          "description": "INTENTIONALLY_ABSENT: No percussion",
+          "strategy": "Groove derived from harmonic rhythm and bass motion"
+        }
+      ],
+      "selected_outcome": "FULL",
+      "candidate_strategies": [
+        {
+          "description": "Multi-layered percussion with kick/snare/hi-hat and auxiliary percussion",
+          "rationale": "Supports hypnotic groove and forward motion (GP-05)"
+        },
+        {
+          "description": "Minimal percussion with rhythmic displacement",
+          "rationale": "Preserves hypnotic quality while reducing complexity"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize multi-layered percussion to reinforce hypnotic groove and forward motion",
+      "tradeoff": {
+        "groove_complexity": "Enhances hypnotic quality",
+        "textural_focus": "Supports density-based section contrast"
+      },
+      "trace_reference": "CK-RHY-01, GP-05, N3-P",
+      "bass_groove_interaction": "Kick aligns with harmonic loop, syncopated accents reinforce groove",
+      "focal_hierarchy_interaction": "Percussion supports melodic hook via rhythmic displacement",
+      "section_behavior": {
+        "A_sections": "Full percussion layer for hypnotic groove",
+        "B_sections": "Reduced auxiliary percussion, persistent kick/snare"
+      },
+      "development_behavior": {
+        "persistent_elements": "Kick/snare pattern, hi-hat rhythm",
+        "variable_elements": "Auxiliary percussion density/texture"
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "description": "Layered textures with persistent groove",
+          "strategy": "Sparse in A, dense in B, groove as common thread"
+        },
+        {
+          "description": "Monophonic with harmonic reinforcement",
+          "strategy": "Bass/melody focus, percussion minimal"
+        },
+        {
+          "description": "Polyrhythmic with textural contrast",
+          "strategy": "Cross-rhythms in B sections, sparse in A"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use texture to differentiate sections while preserving groove",
+      "tradeoff": {
+        "groove_persistence": "Ensures hypnotic quality",
+        "section_contrast": "Limited to density/texture"
+      },
+      "trace_reference": "GP-04, GP-06",
+      "selected_option": {
+        "description": "Layered textures with persistent groove",
+        "strategy": "Sparse in A, dense in B, groove as common thread"
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "description": "Persistent melodic contour with rhythmic variation",
+          "strategy": "Preserve pitch contour, vary rhythmic placement (CK-DEV-01)"
+        },
+        {
+          "description": "Harmonic progression with melodic counterpoint",
+          "strategy": "Subtle harmonic shifts, melodic fragments"
+        },
+        {
+          "description": "Textural development with groove persistence",
+          "strategy": "Density/texture changes, groove unchanged"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize melodic development to reinforce hypnotic character",
+      "tradeoff": {
+        "contour_persistence": "Strengthens hypnotic quality",
+        "rhythmic_variation": "Limited to subtle shifts"
+      },
+      "trace_reference": "CK-DEV-01, GP-01",
+      "selected_option": {
+        "description": "Persistent melodic contour with rhythmic variation",
+        "strategy": "Preserve pitch contour, vary rhythmic placement"
+      }
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": [
+        {
+          "description": "Persistent groove with textural release",
+          "strategy": "A: sparse texture, B: dense texture, release via density reduction"
+        },
+        {
+          "description": "Harmonic tension with rhythmic release",
+          "strategy": "A: harmonic tension, B: rhythmic resolution"
+        },
+        {
+          "description": "Melodic climax with groove persistence",
+          "strategy": "A: build via melodic repetition, B: release via harmonic shift"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use textural density to create controlled release",
+      "tradeoff": {
+        "groove_persistence": "Ensures hypnotic quality",
+        "textural_contrast": "Limited to density for controlled release"
+      },
+      "trace_reference": "CK-FORM-02, GP-03",
+      "selected_option": {
+        "description": "Persistent groove with textural release",
+        "strategy": "A: sparse texture, B: dense texture, release via density reduction"
+      }
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": [
+        {
+          "description": "Full stop with harmonic resolution",
+          "strategy": "Cadence on tonic, abrupt silence"
+        },
+        {
+          "description": "Gradual fade with groove persistence",
+          "strategy": "Density reduction, harmonic loop continues"
+        },
+        {
+          "description": "Iterative release with textural contrast",
+          "strategy": "Final B section with sparse texture, groove intact"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize gradual fade to preserve hypnotic quality",
+      "tradeoff": {
+        "groove_persistence": "Ensures hypnotic character",
+        "controlled_release": "Limited to density reduction"
+      },
+      "trace_reference": "GP-03, CK-FORM-02",
+      "selected_option": {
+        "description": "Gradual fade with groove persistence",
+        "strategy": "Density reduction, harmonic loop continues"
+      }
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": [
+        {
+          "description": "None identified; all domains aligned to groove persistence",
+          "strategy": "No conflicts, all decisions support hypnotic character"
+        },
+        {
+          "description": "Potential conflict: melodic hook vs. harmonic loop",
+          "strategy": "Resolve via rhythmic alignment (GP-05)"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Ensure all domains support hypnotic groove and forward motion",
+      "tradeoff": {
+        "domain_alignment": "All decisions reinforce groove",
+        "no_conflicts": "No cross-domain issues identified"
+      },
+      "trace_reference": "CK-SONG-01",
+      "selected_option": {
+        "description": "None identified; all domains aligned to groove persistence",
+        "strategy": "No conflicts, all decisions support hypnotic character"
+      }
+    }
+  ]
+}

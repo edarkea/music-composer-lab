@@ -1,0 +1,205 @@
+```json
+{
+  "schema_version": "2.0",
+  "name": "Indie Dance Hypnotic Build",
+  "tempo": 112,
+  "time_signature": "4/4",
+  "tonic": "D",
+  "mode": "dorian",
+  "style": "indie-dance",
+  "arrangement": {
+    "sections": [
+      {
+        "id": "continuous_development",
+        "start_bar": 1,
+        "bar_count": 32,
+        "energy": 0.75
+      }
+    ],
+    "harmony_assignments": [
+      {
+        "harmony": "D dorian",
+        "section_id": "continuous_development"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "melodic_lead",
+      "type": "pitched",
+      "role": "focal_element",
+      "motifs": [
+        {
+          "id": "main_motif",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/1",
+              "pitches": ["D4"],
+              "velocity": 96
+            },
+            {
+              "bar": 2,
+              "beat": "1",
+              "duration": "1/1",
+              "pitches": ["F#4"],
+              "velocity": 92
+            },
+            {
+              "bar": 3,
+              "beat": "1",
+              "duration": "1/1",
+              "pitches": ["A4"],
+              "velocity": 96
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "continuous_development",
+          "motif_id": "main_motif"
+        }
+      ]
+    },
+    {
+      "id": "harmonic_support",
+      "type": "pitched",
+      "role": "harmonic_framework",
+      "motifs": [
+        {
+          "id": "tonic_sustained",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/2",
+              "pitches": ["D2"],
+              "velocity": 64
+            }
+          ]
+        },
+        {
+          "id": "modal_degree",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/2",
+              "pitches": ["F#2"],
+              "velocity": 64
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "continuous_development",
+          "motif_id": "tonic_sustained"
+        },
+        {
+          "section_id": "continuous_development",
+          "motif_id": "modal_degree"
+        }
+      ]
+    },
+    {
+      "id": "bass_groove",
+      "type": "drums",
+      "role": "rhythmic_drive",
+      "motifs": [
+        {
+          "id": "kick_pattern",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/1",
+              "drum_voice": "kick"
+            },
+            {
+              "bar": 1,
+              "beat": "3",
+              "duration": "1/1",
+              "drum_voice": "snare"
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "continuous_development",
+          "motif_id": "kick_pattern"
+        }
+      ]
+    },
+    {
+      "id": "hi_hat_pattern",
+      "type": "percussion",
+      "role": "textural_evolution",
+      "kit_id": "standard_acoustic",
+      "map_id": "hi_hat_map",
+      "motifs": [
+        {
+          "id": "hi_hat_cycle",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/2",
+              "instrument": "hi_hat",
+              "sounding_articulation": "open"
+            },
+            {
+              "bar": 1,
+              "beat": "2",
+              "duration": "1/2",
+              "instrument": "hi_hat",
+              "sounding_articulation": "closed"
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "continuous_development",
+          "motif_id": "hi_hat_cycle"
+        }
+      ]
+    },
+    {
+      "id": "cymbal_washes",
+      "type": "effect",
+      "role": "textural_evolution",
+      "motifs": [
+        {
+          "id": "cymbal_build",
+          "events": [
+            {
+              "bar": 16,
+              "beat": "1",
+              "duration": "1/1",
+              "position": "16:1",
+              "duration": "1/1"
+            },
+            {
+              "bar": 24,
+              "beat": "1",
+              "duration": "1/1",
+              "position": "24:1",
+              "duration": "1/1"
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "continuous_development",
+          "motif_id": "cymbal_build"
+        }
+      ]
+    }
+  ]
+}
+```

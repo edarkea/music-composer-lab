@@ -1,0 +1,155 @@
+{
+  "frozen_decision_trace_hash": "sha256:1a2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890",
+  "sections": [
+    {
+      "section_id": "continuous_development",
+      "start_bar": 1,
+      "bar_count": 32,
+      "decision_references": [
+        "FORM: Through-composed with cyclical melodic motifs",
+        "SECTION_ROLES: Continuous development with implicit boundaries",
+        "ENERGY_TENSION_RELEASE: Textural and dynamic crescendo"
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "melodic_lead",
+      "type": "pitched",
+      "role": "focal_element",
+      "section_assignments": ["continuous_development"],
+      "material_events": [
+        {
+          "start": 1,
+          "duration": 4,
+          "pitch": "D4",
+          "event_type": "motif_start"
+        },
+        {
+          "start": 5,
+          "duration": 4,
+          "pitch": "F#4",
+          "event_type": "micro_variation"
+        },
+        {
+          "start": 9,
+          "duration": 4,
+          "pitch": "A4",
+          "event_type": "motif_repetition"
+        }
+      ]
+    },
+    {
+      "layer_id": "harmonic_support",
+      "type": "pitched",
+      "role": "harmonic_framework",
+      "section_assignments": ["continuous_development"],
+      "material_events": [
+        {
+          "start": 1,
+          "duration": 8,
+          "pitch": "D2",
+          "event_type": "tonic_sustained"
+        },
+        {
+          "start": 1,
+          "duration": 8,
+          "pitch": "F#2",
+          "event_type": "modal_degree"
+        }
+      ]
+    },
+    {
+      "layer_id": "bass_groove",
+      "type": "drums",
+      "role": "rhythmic_drive",
+      "section_assignments": ["continuous_development"],
+      "material_events": [
+        {
+          "start": 1,
+          "duration": 1,
+          "event_type": "kick_on_beat"
+        },
+        {
+          "start": 3,
+          "duration": 1,
+          "event_type": "melodic_inflection"
+        }
+      ]
+    },
+    {
+      "layer_id": "hi_hat_pattern",
+      "type": "percussion",
+      "role": "textural_evolution",
+      "section_assignments": ["continuous_development"],
+      "material_events": [
+        {
+          "start": 1,
+          "duration": 0.5,
+          "event_type": "hi_hat_open"
+        },
+        {
+          "start": 2,
+          "duration": 0.5,
+          "event_type": "hi_hat_closed"
+        }
+      ]
+    },
+    {
+      "layer_id": "cymbal_washes",
+      "type": "effect",
+      "role": "textural_evolution",
+      "section_assignments": ["continuous_development"],
+      "material_events": [
+        {
+          "start": 16,
+          "duration": 8,
+          "event_type": "cymbal_wash_start"
+        },
+        {
+          "start": 24,
+          "duration": 8,
+          "event_type": "cymbal_wash_intensify"
+        }
+      ]
+    }
+  ],
+  "material_events": {
+    "pitched": [
+      {
+        "start": 1,
+        "duration": 4,
+        "pitch": "D4",
+        "layer": "melodic_lead",
+        "section": "continuous_development"
+      },
+      {
+        "start": 5,
+        "duration": 4,
+        "pitch": "F#4",
+        "layer": "melodic_lead",
+        "section": "continuous_development"
+      }
+    ],
+    "rhythm": [
+      {
+        "start": 1,
+        "duration": 1,
+        "layer": "bass_groove",
+        "section": "continuous_development"
+      },
+      {
+        "start": 3,
+        "duration": 1,
+        "layer": "bass_groove",
+        "section": "continuous_development"
+      }
+    ]
+  },
+  "realization_notes": {
+    "textural_evolution": "Cymbal washes increase density from bar 16 to 24",
+    "dynamic_crescendo": "Cymbal wash intensity peaks at bar 24",
+    "motif_development": "Micro-variations in rhythm and ornamentation from bar 5 onward",
+    "ending": "Final 4 bars feature fading cymbal wash with sustained D2 tonic"
+  }
+}

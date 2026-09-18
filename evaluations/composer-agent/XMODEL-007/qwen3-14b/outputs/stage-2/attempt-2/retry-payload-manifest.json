@@ -1,0 +1,9 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-007\\qwen3-14b\\outputs\\stage-2\\attempt-2\\retry-input.txt",
+  "payload_sha256": "be065f1b04ff96fbbbd6f3d4b03659b184d7f7cd495ae70e0fd68fefecbce883",
+  "original_payload_sha256": "c4e4c5f4c296a7c3bbf9bf5442dd818a4bec6a82125049c445f56d70ac637eba",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "markdown wrapper is not valid structured output"
+  ]
+}

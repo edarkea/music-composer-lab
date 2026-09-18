@@ -1,0 +1,201 @@
+Understood. Based on the **Stage 2** requirements and the frozen **DecisionTrace** from Stage 1, I will now generate the **musical material** for the **indie-dance** composition with the following characteristics:
+
+- **Genre Pack**: Indie-dance (loop-based, hypnotic, restrained, persistent motion).
+- **Form**: A-B-A-B (groove-based loop with texture/density contrast).
+- **Harmonic Framework**: Persistent vamp loop (e.g., I-IV-V).
+- **Focal Identity**: Melodic hook with rhythmic motif.
+- **Percussion Architecture**: **FULL** (multi-layered percussion with kick/snare/hi-hat and auxiliary percussion).
+- **Texture**: Layered (sparse in A, dense in B).
+- **Development**: Persistent melodic contour with subtle rhythmic variation.
+- **Energy/Tension/Release**: Textural density (A: sparse, B: dense, release via density reduction).
+- **Ending**: Gradual fade with groove persistence.
+
+---
+
+### **Stage 2 Output (Musical Material Schema)**
+```json
+{
+  "frozen_decision_trace_hash": "a1b2c3...",  // Placeholder; actual hash from Stage 1
+  "sections": [
+    {
+      "section_id": "A",
+      "start_bar": 1,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "GROOVE", "TEXTURE"]
+    },
+    {
+      "section_id": "B",
+      "start_bar": 9,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "TEXTURE", "ENERGY_TENSION_RELEASE"]
+    },
+    {
+      "section_id": "A",
+      "start_bar": 17,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "GROOVE", "TEXTURE"]
+    },
+    {
+      "section_id": "B",
+      "start_bar": 25,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "TEXTURE", "ENDING"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "lead_melody",
+      "type": "pitched",
+      "role": "hook",
+      "section_assignments": {
+        "A": { "pitches": ["C4", "E4", "G4", "A4"], "rhythm": "syncopated_8ths" },
+        "B": { "pitches": ["C4", "E4", "G4", "A4", "B4"], "rhythm": "dotted_8ths" }
+      }
+    },
+    {
+      "layer_id": "bass",
+      "type": "pitched",
+      "role": "harmonic_reinforcement",
+      "section_assignments": {
+        "A": { "pitches": ["C2", "F2", "G2"], "rhythm": "syncopated_quarter" },
+        "B": { "pitches": ["C2", "F2", "G2", "A2"], "rhythm": "staccato_8ths" }
+      }
+    },
+    {
+      "layer_id": "drums",
+      "type": "drums",
+      "role": "groove",
+      "section_assignments": {
+        "A": {
+          "kick": { "onset": [1, 3], "duration": "16th" },
+          "snare": { "onset": [2], "duration": "8th" },
+          "hi_hat": { "onset": [1, 2, 3, 4], "duration": "16th" },
+          "aux_percussion": { "onset": [1, 3], "duration": "8th", "instrument": "shaker" }
+        },
+        "B": {
+          "kick": { "onset": [1, 3], "duration": "16th" },
+          "snare": { "onset": [2], "duration": "8th" },
+          "hi_hat": { "onset": [1, 2, 3, 4], "duration": "16th" },
+          "aux_percussion": { "onset": [1, 2, 3, 4], "duration": "8th", "instrument": "tambourine" }
+        }
+      }
+    },
+    {
+      "layer_id": "pads",
+      "type": "texture",
+      "role": "atmosphere",
+      "section_assignments": {
+        "A": { "pitches": ["C3", "E3", "G3"], "rhythm": "sustained", "density": "sparse" },
+        "B": { "pitches": ["C3", "E3", "G3", "A3"], "rhythm": "arpeggiated", "density": "dense" }
+      }
+    }
+  ],
+  "material_events": [
+    {
+      "type": "pitched",
+      "layer": "lead_melody",
+      "start": 1,
+      "duration": 2,
+      "pitch": "C4",
+      "section": "A"
+    },
+    {
+      "type": "pitched",
+      "layer": "lead_melody",
+      "start": 2,
+      "duration": 1,
+      "pitch": "E4",
+      "section": "A"
+    },
+    {
+      "type": "pitched",
+      "layer": "lead_melody",
+      "start": 3,
+      "duration": 2,
+      "pitch": "G4",
+      "section": "A"
+    },
+    {
+      "type": "pitched",
+      "layer": "lead_melody",
+      "start": 4,
+      "duration": 1,
+      "pitch": "A4",
+      "section": "A"
+    },
+    {
+      "type": "pitched",
+      "layer": "bass",
+      "start": 1,
+      "duration": 1,
+      "pitch": "C2",
+      "section": "A"
+    },
+    {
+      "type": "drum",
+      "layer": "drums",
+      "start": 1,
+      "duration": 0.5,
+      "instrument": "kick",
+      "section": "A"
+    },
+    {
+      "type": "drum",
+      "layer": "drums",
+      "start": 1,
+      "duration": 0.5,
+      "instrument": "hi_hat",
+      "section": "A"
+    },
+    {
+      "type": "texture",
+      "layer": "pads",
+      "start": 1,
+      "duration": 8,
+      "pitches": ["C3", "E3", "G3"],
+      "section": "A"
+    }
+  ],
+  "realization_notes": {
+    "harmonic_loop": "I-IV-V vamp (C major) with harmonic rhythm aligned to groove",
+    "melodic_development": "Persistent contour (C-E-G-A) with rhythmic variation in B sections",
+    "percussion_architecture": "FULL: Kick/snare/hi-hat + auxiliary percussion (shaker/tambourine)",
+    "textural_contrast": "A: sparse pads, B: dense arpeggiated pads",
+    "ending": "Gradual fade (density reduction, harmonic loop continues)"
+  }
+}
+```
+
+---
+
+### **Key Realizations**
+1. **Melodic Hook**:
+   - **A Sections**: Persistent contour (`C-E-G-A`) with syncopated rhythm.
+   - **B Sections**: Extended contour (`C-E-G-A-B`) with dotted 8th-note phrasing.
+
+2. **Bass Role**:
+   - Reinforces harmonic loop (`C2-F2-G2`) with syncopated accents in A, staccato 8ths in B.
+
+3. **Percussion (FULL Architecture)**:
+   - **Kick/Snare/Hi-Hat**: Standard 4/4 groove with syncopation.
+   - **Auxiliary Percussion**: Shaker in A (sparse), tambourine in B (dense).
+
+4. **Texture**:
+   - **A**: Sparse sustained pads (`C3-E3-G3`).
+   - **B**: Dense arpeggiated pads (`C3-E3-G3-A3`).
+
+5. **Development**:
+   - Melodic contour preserved; rhythmic variation in B (dotted 8ths).
+   - Harmonic loop unchanged; textural density shifts for contrast.
+
+6. **Ending**:
+   - Gradual fade via density reduction (pads taper out), groove persists.
+
+---
+### **Compliance Notes**
+- **No reinterpretation of Stage 1 decisions**: All material adheres to the frozen trace.
+- **No ranking or prescriptive rules**: Material is generated as a candidate, not a prescription.
+- **Cross-domain alignment**: Percussion, bass, and melody reinforce the groove and hypnotic intent.
+- **Section contrast**: Achieved via texture/density (not melodic/harmonic variation).
+
+Would you like any refinements or additional details on specific layers?

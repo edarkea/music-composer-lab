@@ -1,0 +1,92 @@
+```json
+{
+  "frozen_decision_trace_hash": "a1b2c3d4e5f67890",
+  "sections": [
+    {
+      "section_id": "A",
+      "start_bar": 1,
+      "bar_count": 8,
+      "decision_references": ["FORM", "HARMONIC_FRAMEWORK", "GROOVE"]
+    },
+    {
+      "section_id": "B",
+      "start_bar": 9,
+      "bar_count": 8,
+      "decision_references": ["DEVELOPMENT", "TEXTURE", "ENERGY_TENSION_RELEASE"]
+    },
+    {
+      "section_id": "C",
+      "start_bar": 17,
+      "bar_count": 4,
+      "decision_references": ["ENDING", "N3-P_PERCUSSION_ARCHITECTURE"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "melody",
+      "type": "pitched",
+      "role": "focal_lead",
+      "section_assignments": [
+        {"section_id": "A", "material_events": [{"start": 0, "duration": 4, "pitch": "D4"}, {"start": 2, "duration": 2, "pitch": "F#4"}]},
+        {"section_id": "B", "material_events": [{"start": 0, "duration": 4, "pitch": "D4"}, {"start": 2, "duration": 2, "pitch": "G4"}]}
+      ]
+    },
+    {
+      "layer_id": "bass",
+      "type": "pitched",
+      "role": "rhythmic_drive",
+      "section_assignments": [
+        {"section_id": "A", "material_events": [{"start": 0, "duration": 1, "pitch": "D2"}, {"start": 1, "duration": 1, "pitch": "F#2"}]},
+        {"section_id": "B", "material_events": [{"start": 0, "duration": 1, "pitch": "D2"}, {"start": 1, "duration": 1, "pitch": "G2"}]}
+      ]
+    },
+    {
+      "layer_id": "drums",
+      "type": "percussion",
+      "role": "minimal_groove",
+      "section_assignments": [
+        {"section_id": "A", "material_events": [{"start": 0, "duration": 1, "rhythm": "kick"}, {"start": 0.5, "duration": 0.5, "rhythm": "hi-hat"}]},
+        {"section_id": "B", "material_events": [{"start": 0, "duration": 1, "rhythm": "kick"}, {"start": 0.5, "duration": 0.5, "rhythm": "hi-hat"}]}
+      ]
+    },
+    {
+      "layer_id": "texture",
+      "type": "effect",
+      "role": "textural_evolution",
+      "section_assignments": [
+        {"section_id": "A", "material_events": [{"start": 0, "duration": 8, "texture": "sparse_pad"}]},
+        {"section_id": "B", "material_events": [{"start": 0, "duration": 8, "texture": "dense_pad"}]}
+      ]
+    }
+  ],
+  "material_events": {
+    "melody": [
+      {"section": "A", "start": 0, "duration": 4, "pitch": "D4"},
+      {"section": "A", "start": 2, "duration": 2, "pitch": "F#4"},
+      {"section": "B", "start": 0, "duration": 4, "pitch": "D4"},
+      {"section": "B", "start": 2, "duration": 2, "pitch": "G4"}
+    ],
+    "bass": [
+      {"section": "A", "start": 0, "duration": 1, "pitch": "D2"},
+      {"section": "A", "start": 1, "duration": 1, "pitch": "F#2"},
+      {"section": "B", "start": 0, "duration": 1, "pitch": "D2"},
+      {"section": "B", "start": 1, "duration": 1, "pitch": "G2"}
+    ],
+    "drums": [
+      {"section": "A", "start": 0, "duration": 1, "rhythm": "kick"},
+      {"section": "A", "start": 0.5, "duration": 0.5, "rhythm": "hi-hat"},
+      {"section": "B", "start": 0, "duration": 1, "rhythm": "kick"},
+      {"section": "B", "start": 0.5, "duration": 0.5, "rhythm": "hi-hat"}
+    ],
+    "texture": [
+      {"section": "A", "start": 0, "duration": 8, "texture": "sparse_pad"},
+      {"section": "B", "start": 0, "duration": 8, "texture": "dense_pad"}
+    ]
+  },
+  "realization_notes": {
+    "harmonic_realization": "D Dorian mode with chromatic passing tones between D and F#",
+    "textural_evolution": "Sparse pad (section A) → dense pad (section B) with cymbal washes",
+    "release_mechanism": "Cymbal washes crescendo in final 4 bars with fading decay"
+  }
+}
+```

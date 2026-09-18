@@ -1,0 +1,9 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-007\\ministral-3-14b\\outputs\\stage-2\\attempt-2\\retry-input.txt",
+  "payload_sha256": "ade6fffe1259269be35fd1e69bf1857814dcb9cc28b4eb6f036fb78f9f399ea9",
+  "original_payload_sha256": "461d16386c06a59e2286740c762744b73cc99afb7b65ea3a248e032a8d170ce1",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "output does not parse as complete JSON: Expecting value: line 1 column 1 (char 0)"
+  ]
+}

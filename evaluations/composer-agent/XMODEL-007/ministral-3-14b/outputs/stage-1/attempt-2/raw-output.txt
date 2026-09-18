@@ -1,0 +1,381 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic and harmonic material, section differentiation through texture/density changes",
+          "basis": "GP-01, GP-04"
+        },
+        {
+          "description": "A-B-A' form with minimal melodic variation, harmonic loop, and textural contrast",
+          "basis": "CK-FORM-01, GP-02"
+        },
+        {
+          "description": "Through-composed with gradual accumulation of layers, no strict repetition",
+          "basis": "Artistic intent: 'persistent forward motion', 'gradual accumulation'"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Preserve hypnotic tension through controlled repetition and gradual release, avoiding abrupt section breaks",
+      "tradeoff": {
+        "repetition_vs_variation": "Prioritize melodic/harmonic persistence over melodic variation to maintain identity",
+        "formal_clarity_vs_organic_flow": "Embrace ambiguity in section boundaries to align with 'restrained' character"
+      },
+      "trace_reference": "CK-FORM-01, GP-04, artistic_intent",
+      "selected_option": {
+        "description": "Through-composed with persistent melodic/harmonic core, section differentiation via texture/density/registration, and one clear release point",
+        "structure": {
+          "A": "Intro/Establishment (melodic core + sparse texture)",
+          "B": "Development (layered accumulation, density increase)",
+          "C": "Release (textural thinning, harmonic resolution)"
+        }
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "Intro: Establish focal motif, sparse texture; Verse: Develop motif with harmonic loop, mid-density; Chorus: Release with full texture, higher register",
+          "basis": "GP-06, CK-FORM-01"
+        },
+        {
+          "description": "Intro: Harmonic loop + motif, Verse: Motif variation + density, Chorus: Textural contrast + release",
+          "basis": "GP-04, artistic_intent"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain 'persistent forward motion' while allowing gradual accumulation of tension",
+      "tradeoff": {
+        "section_contrast_vs_identity": "Prioritize harmonic/melodic identity over textural contrast for coherence",
+        "development_vs_release": "Delay release until the final section to preserve hypnotic tension"
+      },
+      "trace_reference": "GP-04, CK-FORM-01",
+      "selected_option": {
+        "roles": {
+          "Intro": {
+            "function": "Establish",
+            "harmonic_role": "Loop",
+            "texture": "Sparse"
+          },
+          "Development": {
+            "function": "Prepare",
+            "harmonic_role": "Loop",
+            "texture": "Layered accumulation"
+          },
+          "Release": {
+            "function": "Arrive",
+            "harmonic_role": "Resolution",
+            "texture": "Thinned"
+          }
+        }
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Minor pentatonic loop with modal interchange (Dorian/Lydian)",
+          "basis": "GP-02, artistic_intent ('hypnotic')"
+        },
+        {
+          "description": "Phrygian dominant loop with chromatic passing chords",
+          "basis": "Tense character, 'restrained' mood"
+        },
+        {
+          "description": "Whole-tone scale loop with ambiguous tonality",
+          "basis": "Avoid tonal resolution until release"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create harmonic ambiguity to reinforce hypnotic tension",
+      "tradeoff": {
+        "tonal_identity_vs_ambiguity": "Prioritize modal ambiguity over clear tonal center",
+        "development_vs_resolution": "Delay harmonic resolution until release section"
+      },
+      "trace_reference": "GP-02, artistic_intent",
+      "selected_option": {
+        "framework": {
+          "scale": "Dorian mode (D minor)",
+          "loop": "I - iv - V - iv (Dm - Gm - Am - Gm)",
+          "rhythmic_harmony": "Chords held for 2 bars, arpeggiated in development"
+        },
+        "development_strategy": "Modal interchange (Lydian in Release section)"
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Melodic motif with descending interval pattern (e.g., minor 3rd + major 2nd)",
+          "basis": "CK-MEL-01, GP-01"
+        },
+        {
+          "description": "Harmonic rhythm as focal identity (e.g., arpeggiation pattern)",
+          "basis": "Artistic intent: 'persistent forward motion'"
+        },
+        {
+          "description": "Textural contrast (e.g., sparse vs. dense layers)",
+          "basis": "GP-04, 'controlled section contrast'"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve melodic identity across development while allowing harmonic/textural variation",
+      "tradeoff": {
+        "melodic_vs_harmonic_focus": "Prioritize melodic identity for coherence",
+        "static_vs_dynamic_identity": "Use harmonic rhythm to imply motion without melodic variation"
+      },
+      "trace_reference": "CK-MEL-01, GP-01",
+      "selected_option": {
+        "identity": {
+          "type": "Melodic motif",
+          "pitch_contour": "Descending minor 3rd + major 2nd (e.g., D-C-B)",
+          "rhythmic_contour": "Dotted quarter + eighth note",
+          "preservation_strategy": "Transpose in Development, retain contour in Release"
+        }
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Persistent motif with transposition (same contour, new pitch center)",
+          "basis": "CK-MEL-02, GP-01"
+        },
+        {
+          "description": "Motif fragmentation (intervals preserved, rhythm altered)",
+          "basis": "Artistic intent: 'gradual accumulation'"
+        },
+        {
+          "description": "Motif inversion (contour mirrored)",
+          "basis": "Development strategy: 'one clear release'"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain hypnotic quality through subtle melodic transformation",
+      "tradeoff": {
+        "recognizability_vs_variation": "Prioritize contour preservation over pitch transposition",
+        "development_vs_release": "Fragment motif in Development, invert in Release"
+      },
+      "trace_reference": "CK-MEL-02, artistic_intent",
+      "selected_option": {
+        "behavior": {
+          "Intro": "Full motif",
+          "Development": "Fragmented intervals (e.g., D-C, B-A)",
+          "Release": "Inverted contour (B-C-D)"
+        },
+        "rhythmic_treatment": "Syncopation in Development, straight rhythm in Release"
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Pulsing root notes (1/4 = tempo) with occasional chromatic passing tones",
+          "basis": "Groove alignment, GP-02"
+        },
+        {
+          "description": "Arpeggiated chords (root + 3rd + 5th)",
+          "basis": "Harmonic clarity, 'persistent forward motion'"
+        },
+        {
+          "description": "Silent bass with harmonic rhythm carried by pads/synths",
+          "basis": "Minimalist texture, 'restrained' character"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support groove while maintaining harmonic ambiguity",
+      "tradeoff": {
+        "groove_vs_harmony": "Prioritize harmonic ambiguity over rhythmic drive",
+        "texture_vs_focus": "Use bass to reinforce focal motif"
+      },
+      "trace_reference": "GP-02, N3-P",
+      "selected_option": {
+        "role": {
+          "pattern": "Root notes on beats 1 & 3, chromatic passing tones on off-beats",
+          "dynamics": "Pizzicato in Intro, bowed in Development, muted in Release"
+        },
+        "interaction_with_groove": "Aligns with kick drum but avoids locking to harmonic rhythm"
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "4/4 swing groove with kick on beat 1, snare on 2 & 4, hi-hat 16th notes",
+          "basis": "Indie-dance convention, 'persistent forward motion'"
+        },
+        {
+          "description": "Triplet-based groove (e.g., 12/8 feel) with syncopated hi-hats",
+          "basis": "Hypnotic tension, 'gradual accumulation'"
+        },
+        {
+          "description": "Minimal groove (kick + snare only, no hi-hats)",
+          "basis": "Restrained character, 'controlled section contrast'"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create hypnotic pull through rhythmic ambiguity",
+      "tradeoff": {
+          "groove_clarity_vs_ambiguity": "Prioritize rhythmic ambiguity over conventional groove",
+          "energy_vs_restraint": "Use triplet feel to imply motion without explicit drive"
+      },
+      "trace_reference": "GP-05, artistic_intent",
+      "selected_option": {
+        "groove": {
+          "meter": "4/4 with triplet subdivision",
+          "kick": "Beat 1 (aligned) + syncopated off-beat",
+          "snare": "Beat 2 (aligned), beat 4 (anticipated)",
+          "hi-hat": "16th-note triplet pattern, displaced by 1/8 note"
+        },
+        "development": "Add shaker on beat 3 in Development section"
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Kick, snare, hi-hat, shaker, percussion (e.g., claps, tambourine)",
+          "candidate_strategies": ["Layered percussion with section-specific additions"],
+          "bass_groove_interaction": "Kick aligns with bass root notes; snare anticipates harmonic rhythm",
+          "focal_hierarchy_interaction": "Hi-hat carries rhythmic focus; shaker adds textural density",
+          "section_behavior": {
+            "Intro": "Kick + snare + hi-hat",
+            "Development": "Add shaker + claps",
+            "Release": "Thin to kick + hi-hat only"
+          },
+          "development_behavior": "Percussion density increases with harmonic complexity"
+        },
+        {
+          "description": "MINIMAL: Kick + snare only, no hi-hat",
+          "candidate_strategies": ["Sparse percussion to emphasize harmonic ambiguity"],
+          "bass_groove_interaction": "Kick aligns with bass; snare marks harmonic changes",
+          "focal_hierarchy_interaction": "Bass carries rhythmic focus",
+          "section_behavior": {
+            "Intro": "Kick + snare",
+            "Development": "Add muted snare rolls",
+            "Release": "Kick only"
+          },
+          "development_behavior": "Percussion intensity mirrors harmonic tension"
+        },
+        {
+          "description": "DELEGATED: No independent percussion; groove carried by bass + synth textures",
+          "candidate_strategies": ["Textural groove via bass articulation and synth layers"],
+          "bass_groove_interaction": "Bass mimics kick pattern; synth pads provide harmonic rhythm",
+          "focal_hierarchy_interaction": "Melodic focus dominates",
+          "section_behavior": {
+            "Intro": "Bass + synth pads",
+            "Development": "Bass articulation + filtered synths",
+            "Release": "Bass only"
+          },
+          "development_behavior": "Groove implied through bass motion and textural changes"
+        },
+        {
+          "description": "INTENTIONALLY_ABSENT: No percussion track",
+          "candidate_strategies": ["Acoustic instrumentation (e.g., strings, piano) for 'restrained' character"],
+          "bass_groove_interaction": "Bass provides rhythmic anchor",
+          "focal_hierarchy_interaction": "Melodic and harmonic elements carry focus",
+          "section_behavior": {
+            "Intro": "Piano + cello",
+            "Development": "Add vibraphone",
+            "Release": "Piano + muted strings"
+          },
+          "development_behavior": "Rhythmic tension built through instrumental articulation"
+        }
+      ],
+      "selected_outcome": "FULL",
+      "candidate_strategies": ["Layered percussion with section-specific additions to support hypnotic tension"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Use percussion to reinforce hypnotic quality while maintaining restraint",
+      "tradeoff": {
+        "percussion_density_vs_restraint": "Prioritize textural restraint over rhythmic drive",
+        "groove_vs_ambiguity": "Use displaced hi-hats and triplet subdivisions to imply motion without explicit groove"
+      },
+      "trace_reference": "GP-05, N3-P, artistic_intent",
+      "bass_groove_interaction": "Kick aligns with bass root notes; snare anticipates harmonic rhythm by 1/8 note",
+      "focal_hierarchy_interaction": "Hi-hat carries rhythmic focus; shaker and claps add textural density without competing with melody",
+      "section_behavior": {
+        "Intro": {
+          "elements": ["Kick", "Snare", "Hi-hat"],
+          "dynamics": "Low volume, sparse"
+        },
+        "Development": {
+          "elements": ["Kick", "Snare", "Hi-hat", "Shaker", "Claps"],
+          "dynamics": "Increased density, syncopated accents"
+        },
+        "Release": {
+          "elements": ["Kick", "Hi-hat"],
+          "dynamics": "Thinned, muted"
+        }
+      },
+      "development_behavior": {
+        "Intro_to_Development": "Add shaker and claps on beat 3; displace hi-hat by 1/8 note",
+        "Development_to_Release": "Remove shaker and claps; mute snare and hi-hat"
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "description": "Sparse in Intro (melody + bass + pads), layered in Development (add synths, percussion), thinned in Release",
+          "basis": "GP-04, 'controlled section contrast'"
+        },
+        {
+          "description": "Persistent dense texture with dynamic filtering",
+          "basis": "Hypnotic tension, 'persistent forward motion'"
+        },
+        {
+          "description": "Acoustic instrumentation (strings, piano) with minimal electronics",
+          "basis": "Restrained character, 'controlled section contrast'"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use texture to reinforce hypnotic tension and gradual release",
+      "tradeoff": {
+        "density_vs_focus": "Prioritize melodic focus over textural complexity",
+        "development_vs_release": "Layer texture in Development, thin in Release"
+      },
+      "trace_reference": "GP-04, artistic_intent",
+      "selected_option": {
+        "texture": {
+          "Intro": ["Melody (lead synth)", "Bass", "Pads (long sustain)"],
+          "Development": ["Melody", "Bass", "Pads", "Synth stabs", "Percussion"],
+          "Release": ["Melody", "Bass", "Pads (filtered)"]
+        },
+        "development_strategy": {
+          "Intro_to_Development": "Add synth stabs and percussion",
+          "Development_to_Release": "Filter pads, remove stabs"
+        }
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "description": "Gradual layering of harmonic and textural elements, motif fragmentation",
+          "basis": "Artistic intent: 'gradual accumulation'"
+        },
+        {
+          "description": "Modular section expansion (e.g., repeat Intro motif with variations)",
+          "basis": "GP-01, 'persistent forward motion'"
+        },
+        {
+          "description": "Harmonic tension buildup (e.g., chromatic bass motion)",
+          "basis": "Hypnotic tension, 'one clear release'"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create hypnotic pull through controlled accumulation",
+      "tradeoff": {
+        "layering_vs_fragmentation": "Prioritize textural layering over melodic fragmentation",
+        "tension_vs_release": "Delay harmonic resolution until Release"
+      },
+      "trace_reference": "GP-04, artistic_intent",
+      "selected_option": {
+        "strategy": {
+          "Intro_to_Development": {
+            "harmonic": "Add chromatic passing chords",
+            "melodic": "Fragment motif into intervals",
+            "textural": "Layer synth stabs and percussion"
+          },
+          "

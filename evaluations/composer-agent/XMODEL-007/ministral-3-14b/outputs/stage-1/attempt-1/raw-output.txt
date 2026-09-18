@@ -1,0 +1,463 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density/timbre changes (GP-01, GP-04)",
+          "strategies": ["persistent loop with cross-domain variation", "layered contrast via arrangement"]
+        },
+        {
+          "description": "Progression-driven form with harmonic directionality and minimal melodic repetition (GP-02, CK-FORM-01)",
+          "strategies": ["harmonic progression as primary driver", "melodic variation per section"]
+        },
+        {
+          "description": "Hybrid loop/progression with focal material cycling and secondary material evolving (GP-02, GP-04)",
+          "strategies": ["core loop with evolving accompaniment", "modular section roles"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic tension through persistent forward motion while allowing gradual accumulation via controlled contrast",
+      "tradeoff": {
+        "persistent_material": "Maintains identity and hypnotic quality",
+        "sectional_contrast": "Enables development and release"
+      },
+      "trace_reference": "CK-FORM-01, GP-01, GP-04",
+      "selected_option": {
+        "description": "Hybrid loop/progression with modular section roles",
+        "details": {
+          "core_loop": "Persistent melodic/harmonic material",
+          "evolving_accompaniment": "Texture/density/timbre changes per section",
+          "section_roles": ["Establish", "Continue", "Prepare", "Arrive"]
+        }
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "Four-section A-B-A-B' with harmonic progression and texture contrast (GP-04)",
+          "roles": ["Intro (Establish)", "Verse (Continue)", "Chorus (Arrive)", "Bridge (Prepare)"]
+        },
+        {
+          "description": "Three-section A-B-A with loop-based persistence and density variation (GP-01)",
+          "roles": ["Intro (Establish)", "Main (Continue)", "Outro (Arrive)"]
+        },
+        {
+          "description": "Five-section A-B-C-B-A with layered focal material (GP-04)",
+          "roles": ["Intro (Establish)", "Verse (Continue)", "Chorus (Arrive)", "Bridge (Prepare)", "Outro (Arrive)"]
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Balance hypnotic persistence with gradual development and one clear release",
+      "tradeoff": {
+        "section_count": "Four sections allow controlled contrast without overcomplicating form",
+        "role_assignment": "Modular roles enable flexible development"
+      },
+      "trace_reference": "GP-04, CK-FORM-01",
+      "selected_option": {
+        "description": "Four-section A-B-A-B' with modular roles",
+        "details": {
+          "sections": [
+            {
+              "role": "Establish",
+              "function": "Introduce focal identity (melody + harmonic loop)",
+              "contrast": "Minimal (texture-only)"
+            },
+            {
+              "role": "Continue",
+              "function": "Develop through density/timbre variation",
+              "contrast": "Moderate (layered accompaniment)"
+            },
+            {
+              "role": "Arrive",
+              "function": "Release via harmonic resolution and focal prominence",
+              "contrast": "High (full arrangement)"
+            },
+            {
+              "role": "Prepare",
+              "function": "Transition with reduced density and altered groove",
+              "contrast": "Low (stripped-down focal material)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Persistent loop with static harmony (GP-02)",
+          "details": {
+            "center": "Tonic minor (A)",
+            "organization": "I - iv - V - vi (repeating)",
+            "rhythmic_harmony": "Quarter-note chords"
+          }
+        },
+        {
+          "description": "Modular progression with harmonic directionality (CK-HAR-02)",
+          "details": {
+            "center": "Tonic minor (A)",
+            "organization": "I - iv - V - vi (progression-driven)",
+            "rhythmic_harmony": "Syncopated chords"
+          }
+        },
+        {
+          "description": "Hybrid loop/progression with focal harmonic motion (GP-02, CK-HAR-02)",
+          "details": {
+            "center": "Tonic minor (A)",
+            "organization": "I (loop) with V/vi substitutions in sections",
+            "rhythmic_harmony": "Static loop + sectional variations"
+          }
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support persistent forward motion while enabling gradual accumulation",
+      "tradeoff": {
+        "harmonic_stability": "Maintains hypnotic quality",
+        "directionality": "Enables development"
+      },
+      "trace_reference": "GP-02, CK-HAR-02",
+      "selected_option": {
+        "description": "Hybrid loop/progression with focal harmonic motion",
+        "details": {
+          "tonic": "A minor",
+          "mode": "Natural minor",
+          "framework": {
+            "loop": "I (A minor) - iv (D minor) - V (E major) - vi (F minor)",
+            "sectional_variations": {
+              "Arrive": "V/vi substitutions (E7 - F major)",
+              "Prepare": "Modal interchange (A Phrygian)"
+            }
+          },
+          "rhythmic_harmony": "Static loop (quarter-note) with sectional syncopation"
+        }
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Melodic hook with persistent contour (CK-MEL-01)",
+          "details": {
+            "seed": "Rising minor 3rd interval (A-C)",
+            "operation": "Preserve contour, vary rhythmic placement"
+          }
+        },
+        {
+          "description": "Harmonic rhythm as focal identity (GP-02)",
+          "details": {
+            "seed": "Syncopated chord changes",
+            "operation": "Static harmonic loop with rhythmic variation"
+          }
+        },
+        {
+          "description": "Hybrid melodic/harmonic identity (GP-01, CK-MEL-01)",
+          "details": {
+            "seed": "Persistent melodic motif + harmonic loop",
+            "operation": "Melodic variation via rhythm/texture, harmonic via voicing"
+          }
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a clear, restrained focal point that accumulates tension",
+      "tradeoff": {
+        "melodic_persistence": "Strengthens hypnotic quality",
+        "harmonic_stability": "Supports forward motion"
+      },
+      "trace_reference": "GP-01, CK-MEL-01",
+      "selected_option": {
+        "description": "Hybrid melodic/harmonic identity",
+        "details": {
+          "melodic_seed": {
+            "pitches": ["A", "C", "E", "G"],
+            "contour": "Rising minor 3rd (A-C) followed by descending perfect 4th (C-G)",
+            "operation": "Preserve contour, vary rhythmic placement and voicing"
+          },
+          "harmonic_seed": {
+            "loop": "A minor - D minor - E major - F minor",
+            "sectional_variations": {
+              "Arrive": "E7 - F major",
+              "Prepare": "A Phrygian (A-B-C-D-E-F-G)"
+            }
+          },
+          "focal_hierarchy": {
+            "melody": "Primary (sustained notes)",
+            "harmony": "Secondary (chord voicings)",
+            "rhythm": "Tertiary (groove alignment)"
+          }
+        }
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Static motif with rhythmic variation (CK-MEL-02)",
+          "details": {
+            "recurrence": "Exact repetition with displaced onsets",
+            "development": "No transformation"
+          }
+        },
+        {
+          "description": "Transformable motif with preserved contour (CK-DEV-01)",
+          "details": {
+            "recurrence": "Response variation (change of final note)",
+            "development": "Interval preservation"
+          }
+        },
+        {
+          "description": "Fragmented motif with cross-domain variation (GP-01)",
+          "details": {
+            "recurrence": "Layered repetition (melody persists, accompaniment varies)",
+            "development": "Textural evolution"
+          }
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Enable gradual accumulation through controlled development",
+      "tradeoff": {
+        "motif_integrity": "Preserves hypnotic quality",
+        "development_flexibility": "Supports tension accumulation"
+      },
+      "trace_reference": "CK-DEV-01, GP-01",
+      "selected_option": {
+        "description": "Fragmented motif with cross-domain variation",
+        "details": {
+          "core_motif": {
+            "pitches": ["A", "C", "E", "G"],
+            "rhythm": "Dotted quarter - eighth - quarter"
+          },
+          "recurrence_strategies": [
+            {
+              "section": "Establish",
+              "type": "Exact repetition",
+              "domain": "Melody"
+            },
+            {
+              "section": "Continue",
+              "type": "Response variation (G → F)",
+              "domain": "Melody"
+            },
+            {
+              "section": "Arrive",
+              "type": "Fragmented repetition (A-C-E only)",
+              "domain": "Melody + Harmony"
+            },
+            {
+              "section": "Prepare",
+              "type": "Rhythmic displacement (onset shift)",
+              "domain": "Melody"
+            }
+          ],
+          "development_operations": [
+            {
+              "type": "Textural layering",
+              "section": "Continue",
+              "details": "Add sustained chords in background"
+            },
+            {
+              "type": "Voicing variation",
+              "section": "Arrive",
+              "details": "Close voicings (A-C-E-G)"
+            },
+            {
+              "type": "Rhythmic displacement",
+              "section": "Prepare",
+              "details": "Anticipated onsets (GP-05)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Root-only with groove alignment (GP-02)",
+          "details": {
+            "function": "Metric reinforcement",
+            "alignment": "Kick on beat 1 and 3"
+          }
+        },
+        {
+          "description": "Walking bass with harmonic directionality (CK-HAR-03)",
+          "details": {
+            "function": "Linear harmonic motion",
+            "alignment": "Syncopated with chords"
+          }
+        },
+        {
+          "description": "Hybrid root/walking with focal prominence (GP-02, CK-HAR-03)",
+          "details": {
+            "function": "Root reinforcement + harmonic direction",
+            "alignment": "Root on beat 1, walking in off-beats"
+          }
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support hypnotic groove while enabling harmonic development",
+      "tradeoff": {
+        "groove_stability": "Maintains forward motion",
+        "harmonic_direction": "Enables accumulation"
+      },
+      "trace_reference": "GP-02, CK-HAR-03",
+      "selected_option": {
+        "description": "Hybrid root/walking bass",
+        "details": {
+          "role": {
+            "primary": "Root reinforcement (beat 1)",
+            "secondary": "Harmonic direction (off-beats)"
+          },
+          "alignment": {
+            "kick": "Beat 1 (root) + backbeat (snare)",
+            "bass": "Root on beat 1, walking in off-beats (8th notes)"
+          },
+          "harmonic_interaction": {
+            "loop_sections": "Root-only",
+            "progression_sections": "Walking bass with chord tones"
+          },
+          "focal_hierarchy": {
+            "melody": "Primary",
+            "bass": "Secondary (supports harmony)",
+            "percussion": "Tertiary (groove)"
+          }
+        }
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "Static 4/4 groove with consistent subdivision (CK-RHY-01)",
+          "details": {
+            "meter": "4/4",
+            "subdivision": "Eighth-note hi-hats",
+            "accent": "Kick on beat 1, snare on 2 and 4"
+          }
+        },
+      {
+        "description": "Syncopated groove with rhythmic variation (GP-05)",
+        "details": {
+          "meter": "4/4",
+          "subdivision": "Sixteenth-note hi-hats with displacement",
+          "accent": "Anticipated kick/snare"
+        }
+      },
+      {
+        "description": "Hybrid static/syncopated groove (CK-RHY-01, GP-05)",
+        "details": {
+          "meter": "4/4",
+          "subdivision": "Eighth-note loop with sectional syncopation",
+          "accent": "Static kick/snare with displaced hi-hats"
+        }
+      }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create persistent forward motion with controlled tension accumulation",
+      "tradeoff": {
+        "groove_stability": "Maintains hypnotic quality",
+        "rhythmic_variation": "Enables development"
+      },
+      "trace_reference": "CK-RHY-01, GP-05",
+      "selected_option": {
+        "description": "Hybrid static/syncopated groove",
+        "details": {
+          "meter": "4/4 at 120 BPM",
+          "subdivision": {
+            "loop": "Eighth-note hi-hats",
+            "sectional_variations": {
+              "Continue": "Sixteenth-note hi-hats with displacement",
+              "Arrive": "Triplet subdivision"
+            }
+          },
+          "accent_pattern": {
+            "kick": "Beat 1 (static) + displaced in Continue/Arrive",
+            "snare": "Beat 2 and 4 (static) + backbeat variation",
+            "hi-hats": "Eighth-note loop with sectional syncopation"
+          },
+          "cross_domain_interaction": {
+            "bass": "Root on kick, walking in off-beats",
+            "melody": "Onset alignment with groove shifts"
+          }
+        }
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Multi-layered percussion with explicit roles",
+          "candidate_strategies": [
+            {
+              "layer": "Kick",
+              "function": "Metric reinforcement + harmonic alignment",
+              "section_behavior": "Static in loop, displaced in progression"
+            },
+            {
+              "layer": "Snare",
+              "function": "Phrasing accentuation",
+              "section_behavior": "Backbeat variation per section"
+            },
+            {
+              "layer": "Hi-hats",
+              "function": "Groove subdivision",
+              "section_behavior": "Static loop with sectional syncopation"
+            },
+            {
+              "layer": "Percussion (shaker, claps)",
+              "function": "Textural contrast",
+              "section_behavior": "Added in Continue/Arrive"
+            }
+          ]
+        },
+        {
+          "description": "MINIMAL: Kick-snare-hihat with reduced roles",
+          "candidate_strategies": [
+            {
+              "layer": "Kick-Snare-Hi-hats",
+              "function": "Basic groove",
+              "section_behavior": "Static with slight displacement"
+            }
+          ]
+        },
+        {
+          "description": "DELEGATED: Percussive functions handled by other layers",
+          "candidate_strategies": [
+            {
+              "layer": "Bass + Melody",
+              "function": "Groove via rhythmic alignment",
+              "section_behavior": "No independent percussion"
+            }
+          ]
+        }
+      ],
+      "selected_outcome": "FULL",
+      "candidate_strategies": [
+        {
+          "layer": "Kick",
+          "function": "Metric reinforcement + harmonic alignment",
+          "section_behavior": {
+            "Establish": "Static (beat 1)",
+            "Continue": "Displaced (beat 1 + off-beat)",
+            "Arrive": "Triplet-based",
+            "Prepare": "Reduced (beat 1 only)"
+          }
+        },
+        {
+          "layer": "Snare",
+          "function": "Phrasing accentuation + sectional contrast",
+          "section_behavior": {
+            "Establish": "Backbeat (2,4)",
+            "Continue": "Varied backbeat (e.g., 2, 4, and +)",
+            "Arrive": "Full kit (snare + toms)",
+            "Prepare": "Stripped (snare only)"
+          }
+        },
+        {
+          "layer": "Hi-hats",
+          "function": "Groove subdivision + rhythmic development",
+          "section_behavior": {
+            "Establish": "Eighth-note loop",
+            "Continue": "Sixteenth-note syncopation",
+            "Arrive": "Triplet

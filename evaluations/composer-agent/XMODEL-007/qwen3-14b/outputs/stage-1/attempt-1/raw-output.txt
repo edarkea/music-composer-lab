@@ -1,0 +1,126 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["A-B-A", "Through-composed", "Verse-Chorus"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Persistent forward motion with gradual accumulation",
+      "tradeoff": {"simpler_form_for_coherence": "Through-composed allows continuous development without section repetition"},
+      "trace_reference": "CK-FORM-01",
+      "selected_option": {"form": "Through-composed with cyclical melodic motifs"}
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["Intro-Verse-Chorus-Bridge-Outro", "Continuous development without explicit sections"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain coherent repetition with audible development",
+      "tradeoff": {"explicit_sections_for_identity": "Continuous development preserves hypnotic tension"},
+      "trace_reference": "GP-04",
+      "selected_option": {"section_behavior": "Continuous development with implicit section boundaries"}
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["Modal (Dorian)", "Chromatic cluster progressions", "Pentatonic-based"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Restraint through harmonic simplicity",
+      "tradeoff": {"modal_harmony_for_tension": "Dorian mode provides unresolved tension"},
+      "trace_reference": "CK-HAR-02",
+      "selected_option": {"framework": "Dorian mode with limited chromaticism"}
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["Melodic lead", "Rhythmic drive", "Textural contrast"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain clear focal identity across development",
+      "tradeoff": {"melodic_focal_point": "Melodic motif preserves identity through variations"},
+      "trace_reference": "CK-MEL-01",
+      "selected_option": {"focal_element": "Melodic lead with rhythmic reinforcement"}
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["Repetition with micro-variations", "Fragmentation and reassembly", "Static motif"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual accumulation through motif development",
+      "tradeoff": {"controlled_variation_for_release": "Micro-variations build tension toward climax"},
+      "trace_reference": "CK-DEV-01",
+      "selected_option": {"behavior": "Repetition with micro-variations in rhythm and ornamentation"}
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["Percussive kick-driven", "Melodic counterpoint", "Textural drone"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support forward motion and harmonic framework",
+      "tradeoff": {"kick_driven_groove": "Provides rhythmic foundation without overpowering melody"},
+      "trace_reference": "GP-02",
+      "selected_option": {"role": "Percussive kick with melodic inflections"}
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["4/4 steady pulse", "Syncopated polyrhythms", "Floating tempo"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Persistent forward motion through rhythmic continuity",
+      "tradeoff": {"steady_pulse_for_hypnotic_effect": "4/4 provides stable foundation"},
+      "trace_reference": "CK-RHY-01",
+      "selected_option": {"groove": "4/4 steady pulse with syncopated hi-hats"}
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"],
+      "selected_outcome": "MINIMAL",
+      "candidate_strategies": ["Sparse hi-hats and kick", "Textural cymbal washes", "Minimal snare accents"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support hypnotic tension without overpowering focal elements",
+      "tradeoff": {"minimal_implementation": "Preserves restraint while maintaining rhythmic drive"},
+      "trace_reference": "GP-05",
+      "bass_groove_interaction": "Kick and hi-hats aligned with melodic phrasing",
+      "focal_hierarchy_interaction": "Percussion supports melodic lead without competing",
+      "section_behavior": {"consistent_pattern": "Minimal hi-hat pattern with gradual intensity increase"},
+      "development_behavior": {"textural_evolution": "Cymbal washes add density toward climax"}
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["Layered density", "Sparse sparseness", "Contrasting timbres"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Controlled section contrast while preserving identity",
+      "tradeoff": {"textural_evolution_for_release": "Gradual addition of layers builds toward climax"},
+      "trace_reference": "CK-TEXT-01",
+      "selected_option": {"texture_strategy": "Sparse to dense textural evolution"}
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["Motivic fragmentation", "Harmonic modulation", "Textural evolution"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Audible development through controlled variation",
+      "tradeoff": {"textural_and_rhythmic_evolution": "Balances harmonic simplicity with textural complexity"},
+      "trace_reference": "CK-DEV-01",
+      "selected_option": {"development_strategy": "Textural evolution with rhythmic variation"}
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["Gradual crescendo", "Sudden dynamic shifts", "Textural release"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "One clear release through textural and dynamic resolution",
+      "tradeoff": {"textural_release_for_climax": "Cymbal washes and density increase create release"},
+      "trace_reference": "CK-TEN-01",
+      "selected_option": {"release_mechanism": "Textural and dynamic crescendo toward climax"}
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["Climactic resolution", "Abrupt cutoff", "Fading decay"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Clear release through textural dissolution",
+      "tradeoff": {"fading_decay_for_hypnotic_closure": "Maintains tension while resolving"},
+      "trace_reference": "CK-FORM-02",
+      "selected_option": {"ending_type": "Fading decay with sustained cymbal wash"}
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["None", "Harmony-rhythm clashes", "Melody-texture conflicts"],
+      "selection_basis": "NOT_APPLICABLE",
+      "active_intention": "No explicit conflicts in this composition",
+      "tradeoff": {"integrated_domains": "All elements coexist without conflict"},
+      "trace_reference": "CK-CROSS-01",
+      "selected_option": {"conflict_status": "No conflicts detected"}
+    }
+  ]
+}

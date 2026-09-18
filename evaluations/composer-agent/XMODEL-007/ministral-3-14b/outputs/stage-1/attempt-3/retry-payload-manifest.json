@@ -1,0 +1,9 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-007\\ministral-3-14b\\outputs\\stage-1\\attempt-3\\retry-input.txt",
+  "payload_sha256": "c527f9cb62b07f95ad9e46baa12ea7c8aabdd7678cd98db9cd463b632391d8e5",
+  "original_payload_sha256": "2227cea46dc83cfae6863547ed4a85d014622ab5fd1e0741687ad40f3ed9a7d3",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "output does not parse as complete JSON: Unterminated string starting at: line 381 column 11 (char 16670)"
+  ]
+}
