@@ -1,0 +1,14 @@
+STAGE 2 — MUSICAL MATERIAL
+
+Use the artistic brief and the accepted frozen DecisionTrace supplied by the runner. Create the musical material needed for later SongPlanV2 serialization: pitches, motifs, rhythms, chord voicings, bass events, drum/percussion patterns, texture events, section variations and development realizations as required by the frozen decisions.
+
+Do not change, reinterpret or rank frozen decisions. Do not invent composition rules, evidence, genre prescriptions or Owner preferences. Return only the stage-2 musical-material schema object, including the frozen trace hash. This stage may create music; it must not serialize the final SongPlan.
+
+SERIALIZATION REQUIREMENT (technical clarification only):
+- Return exactly ONE JSON object.
+- Return raw JSON only.
+- Do NOT use Markdown or ``` code fences.
+- Do NOT include prose before or after the JSON.
+- Do NOT explain the answer.
+- Do NOT ask follow-up questions.
+- Do NOT return multiple JSON objects.

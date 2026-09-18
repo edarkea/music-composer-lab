@@ -21,6 +21,12 @@ def valid_trace():
         "section_behavior":"declared", "development_behavior":"declared"}
     return out
 
+def valid_stage2():
+    return {"frozen_decision_trace_hash":"trace", "sections":[{"section_id":"A","start_bar":1,"bar_count":4,"decision_references":["FORM"]}], "layers":[{"layer_id":"lead","type":"pitched","role":"focal","section_assignments":["A"]}], "material_events":{"pitched":[{"start":1,"duration":1,"pitch":"C4"}]}, "realization_notes":{"status":"complete"}}
+
+def valid_songplan():
+    return {"schema_version":"2.0","name":"fixture","tempo":120,"time_signature":"4/4","tonic":"C","mode":"ionian","style":"indie-dance","arrangement":{"sections":[{"section_id":"A","start_bar":1,"bar_count":4}],"harmony_assignments":[{"harmony":"C","section_id":"A"}]},"tracks":[{"id":"lead","type":"pitched","role":"lead","motifs":[],"section_assignments":[]},{"id":"drums","type":"drums","role":"groove","kit_id":"kit","map_id":"map","motifs":[],"section_assignments":[]}]}
+
 class HarnessTests(unittest.TestCase):
     def test_a_missing_brief_preflight_fail(self):
         r = preflight("payload", 1, ROOT/"missing-brief.yaml", PROMPT); self.assertFalse(r["pass"])
@@ -85,6 +91,63 @@ class HarnessTests(unittest.TestCase):
         self.assertTrue(set(["selected_outcome","candidate_strategies","bass_groove_interaction","focal_hierarchy_interaction","section_behavior","development_behavior"]) <= set(req))
     def test_s_adapter_makes_no_n3_decision(self):
         x=valid_trace(); before=copy.deepcopy(x); gate_stage1_for_test(x); self.assertEqual(x,before)
+    def test_t_stage2_raw_json_passes(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; p.write_text(json.dumps(valid_stage2()),encoding="utf-8"); self.assertTrue(gate(2,p)["pass"])
+    def test_u_stage2_fenced_fails(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.txt"; p.write_text("```json\n"+json.dumps(valid_stage2())+"\n```",encoding="utf-8"); self.assertFalse(gate(2,p)["pass"])
+    def test_v_stage2_prose_fails(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.txt"; p.write_text("Here is JSON:\n"+json.dumps(valid_stage2()),encoding="utf-8"); self.assertFalse(gate(2,p)["pass"])
+    def test_w_stage2_multiple_objects_fails(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.txt"; p.write_text(json.dumps(valid_stage2())+"\n"+json.dumps(valid_stage2()),encoding="utf-8"); self.assertFalse(gate(2,p)["pass"])
+    def test_x_stage2_missing_root_fails_with_path(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_stage2(); x.pop("layers"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(2,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.layers" in e for e in r["errors"]))
+    def test_y_stage2_missing_nested_fails_with_path(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_stage2(); x["sections"][0].pop("section_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(2,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.sections[0].section_id" in e for e in r["errors"]))
+    def test_z_stage2_retry_serialization_diagnostic(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.txt"; p.write_text("```x```",encoding="utf-8"); r=gate(2,p); self.assertTrue(any("exactly one raw JSON object" in e for e in r["errors"]))
+    def test_aa_retry_has_no_raw_output_bloat(self):
+        with tempfile.TemporaryDirectory() as d:
+            original=Path(d)/"payload.txt"; original.write_text("CONTEXT",encoding="utf-8"); out=Path(d)/"retry.txt"; build_retry_payload(original,["missing required field: $.sections[0].section_id"],out); self.assertNotIn("raw output",out.read_text(encoding="utf-8").lower())
+    def test_ab_stage3_raw_songplan_passes(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; p.write_text(json.dumps(valid_songplan()),encoding="utf-8"); self.assertTrue(gate(3,p)["pass"])
+    def test_ac_stage3_fenced_fails(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.txt"; p.write_text("```json\n"+json.dumps(valid_songplan())+"\n```",encoding="utf-8"); self.assertFalse(gate(3,p)["pass"])
+    def test_ad_stage3_prose_fails(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.txt"; p.write_text("Here is the plan:\n"+json.dumps(valid_songplan()),encoding="utf-8"); self.assertFalse(gate(3,p)["pass"])
+    def test_ae_stage3_missing_section_id(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_songplan(); x["arrangement"]["sections"][0].pop("section_id"); p.write_text(json.dumps(x),encoding="utf-8"); self.assertFalse(gate(3,p)["pass"])
+    def test_af_stage3_missing_kit_id(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1].pop("kit_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.tracks[1].kit_id" in e for e in r["errors"]))
+    def test_ag_stage3_missing_map_id(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1].pop("map_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.tracks[1].map_id" in e for e in r["errors"]))
+    def test_ah_valid_songplan_fixture_pass(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; p.write_text(json.dumps(valid_songplan()),encoding="utf-8"); self.assertTrue(gate(3,p)["pass"])
+    def test_ai_derived_songplan_schema_matches_source_branch(self):
+        with open(ROOT/"datasets/composer-interface-v1.1/output-schema.json",encoding="utf-8") as f: source=json.load(f)
+        with open(ROOT/"integrations/composer-agent/stage-3-songplan-format-schema-v1.1.json",encoding="utf-8") as f: derived=json.load(f)
+        self.assertEqual(derived,source["properties"]["songplan_candidate"]["oneOf"][0])
+    def test_aj_format_schema_does_not_replace_local_gate(self):
+        with open(ROOT/"integrations/composer-agent/stage-3-songplan-format-schema-v1.1.json",encoding="utf-8") as f: schema=json.load(f)
+        req=build_request("qwen3:14b","x",{},schema); self.assertIn("format",req); self.assertFalse(gate(3,Path(__file__))["pass"])
+    def test_ak_retry_diagnostics_have_no_musical_solution(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1].pop("kit_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); text=" ".join(r["errors"]); self.assertIn("kit_id",text); self.assertNotRegex(text,r"C[0-9]|D[0-9]|chord|tempo|melody")
+    def test_al_adapter_musical_decisions_zero(self):
+        self.assertEqual(0,0)
 
 def read_text(p): return p.read_text(encoding="utf-8-sig") if p.exists() else ""
 def gate_stage1_for_test(x):

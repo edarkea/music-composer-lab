@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "name",
+    "tempo",
+    "time_signature",
+    "tonic",
+    "mode",
+    "style",
+    "arrangement",
+    "tracks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tempo": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "time_signature": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "numerator",
+            "denominator"
+          ],
+          "properties": {
+            "numerator": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "denominator": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "tonic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "ionian",
+        "dorian",
+        "phrygian",
+        "lydian",
+        "mixolydian",
+        "aeolian",
+        "locrian"
+      ]
+    },
+    "style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "arrangement": {
+      "type": "object",
+      "required": [
+        "sections",
+        "harmony_assignments"
+      ],
+      "properties": {
+        "sections": {
+          "type": "array"
+        },
+        "harmony_assignments": {
+          "type": "array"
+        }
+      },
+      "additionalProperties": false
+    },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "role",
+          "motifs",
+          "section_assignments"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "pitched",
+              "drums",
+              "percussion",
+              "effect"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "motifs": {
+            "type": "array"
+          },
+          "section_assignments": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

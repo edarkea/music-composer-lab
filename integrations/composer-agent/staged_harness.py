@@ -98,9 +98,10 @@ def build_retry_payload(original_payload: Path, diagnostics: list[str], out: Pat
 
 def parse_output(path: Path):
     raw = path.read_text(encoding="utf-8-sig")
-    if raw.lstrip().startswith("```"): return None, ["markdown wrapper is not valid structured output"]
+    serialization = "Return exactly one raw JSON object. No Markdown, no code fences, no prose before or after JSON."
+    if raw.lstrip().startswith("```"): return None, ["markdown wrapper is not valid structured output", serialization]
     try: return json.loads(raw), []
-    except Exception as e: return None, [f"output does not parse as complete JSON: {e}"]
+    except Exception as e: return None, [f"output does not parse as complete JSON: {e}", serialization]
 
 def gate(stage: int, output: Path, trace: dict | None = None, material: dict | None = None) -> dict:
     data, errors = parse_output(output)
@@ -149,9 +150,34 @@ def gate_stage1(data):
 
 def gate_stage2(data, trace):
     errors=[]
-    for k in ("frozen_decision_trace_hash","sections","layers","material_events","realization_notes"):
-        if k not in data: errors.append(f"Stage 2 required field missing: {k}")
-    if trace and data.get("frozen_decision_trace_hash") != trace.get("trace_hash"): errors.append("frozen DecisionTrace hash mismatch")
+    required=("frozen_decision_trace_hash","sections","layers","material_events","realization_notes")
+    for k in required:
+        if k not in data: errors.append(f"missing required field: $.{k}")
+    if trace and data.get("frozen_decision_trace_hash") != trace.get("trace_hash"): errors.append("frozen DecisionTrace hash mismatch: $.frozen_decision_trace_hash")
+    sections=data.get("sections")
+    if sections is not None:
+        if not isinstance(sections,list): errors.append("invalid type: $.sections must be array")
+        else:
+            for i,s in enumerate(sections):
+                if not isinstance(s,dict): errors.append(f"invalid type: $.sections[{i}] must be object"); continue
+                for k in ("section_id","start_bar","bar_count","decision_references"):
+                    if k not in s: errors.append(f"missing required field: $.sections[{i}].{k}")
+                if "start_bar" in s and (not isinstance(s["start_bar"],int) or isinstance(s["start_bar"],bool)): errors.append(f"invalid type: $.sections[{i}].start_bar")
+                if "bar_count" in s and (not isinstance(s["bar_count"],int) or isinstance(s["bar_count"],bool)): errors.append(f"invalid type: $.sections[{i}].bar_count")
+    layers=data.get("layers")
+    if layers is not None:
+        if not isinstance(layers,list): errors.append("invalid type: $.layers must be array")
+        else:
+            allowed={"pitched","drums","percussion","effect","texture"}
+            for i,l in enumerate(layers):
+                if not isinstance(l,dict): errors.append(f"invalid type: $.layers[{i}] must be object"); continue
+                for k in ("layer_id","type","role","section_assignments"):
+                    if k not in l: errors.append(f"missing required field: $.layers[{i}].{k}")
+                if l.get("type") is not None and l.get("type") not in allowed: errors.append(f"invalid enum: $.layers[{i}].type")
+                if "section_assignments" in l and not isinstance(l["section_assignments"],list): errors.append(f"invalid type: $.layers[{i}].section_assignments")
+    events=data.get("material_events")
+    if events is not None and not isinstance(events,(dict,list)): errors.append("invalid type: $.material_events must be object or array")
+    if "realization_notes" in data and not isinstance(data["realization_notes"],(dict,list,str)): errors.append("invalid type: $.realization_notes")
     return errors
 
 def gate_stage3(data, trace, material):
@@ -165,7 +191,9 @@ def gate_stage3(data, trace, material):
         if not isinstance(sections,list): errors.append("arrangement.sections must be array")
         else:
             for i,s in enumerate(sections):
-                if not isinstance(s,dict) or not {"section_id","start_bar","bar_count"} <= set(s): errors.append(f"section {i} missing section_id/start_bar/bar_count")
+                if not isinstance(s,dict) or not {"section_id","start_bar","bar_count"} <= set(s):
+                    for field in ("section_id","start_bar","bar_count"):
+                        if not isinstance(s,dict) or field not in s: errors.append(f"missing required field: $.arrangement.sections[{i}].{field}")
         if not isinstance(ha,list): errors.append("arrangement.harmony_assignments must be array")
         else:
             for i,h in enumerate(ha):
@@ -176,7 +204,9 @@ def gate_stage3(data, trace, material):
         for i,t in enumerate(tracks):
             if not isinstance(t,dict) or not {"id","type","role","motifs","section_assignments"} <= set(t): errors.append(f"track {i} missing required fields")
             elif t.get("type") not in {"pitched","drums","percussion","effect"}: errors.append(f"track {i} invalid type")
-            elif t.get("type") in {"drums","percussion"} and not {"kit_id","map_id"} <= set(t): errors.append(f"track {i} percussion requires kit_id/map_id")
+            elif t.get("type") in {"drums","percussion"}:
+                for field in ("kit_id","map_id"):
+                    if field not in t: errors.append(f"missing required field: $.tracks[{i}].{field}")
     if trace and data.get("frozen_decision_trace_hash") not in (None, trace.get("trace_hash")): errors.append("serialization changed frozen trace")
     return errors
 
