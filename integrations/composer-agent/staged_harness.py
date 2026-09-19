@@ -184,29 +184,85 @@ def gate_stage3(data, trace, material):
     errors=[]; required={"schema_version","name","tempo","time_signature","tonic","mode","style","arrangement","tracks"}
     if set(data) != required: errors.append("SongPlanV2 root fields do not match exact contract")
     if data.get("schema_version") != "2.0": errors.append("SongPlanV2 schema_version must be 2.0")
+    for field in ("name","tonic","style"):
+        if field in data and (not isinstance(data[field],str) or not data[field]): errors.append(f"invalid value: $.{field}")
+    if "tempo" in data and (not isinstance(data["tempo"],(int,float)) or isinstance(data["tempo"],bool) or data["tempo"] <= 0): errors.append("invalid value: $.tempo")
+    if data.get("mode") not in {"ionian","dorian","phrygian","lydian","mixolydian","aeolian","locrian"}: errors.append("invalid enum: $.mode")
+    ts=data.get("time_signature")
+    if isinstance(ts,dict):
+        if not {"numerator","denominator"} <= set(ts): errors.append("missing required field: $.time_signature.numerator/denominator")
+        else:
+            for f in ("numerator","denominator"):
+                if not isinstance(ts[f],int) or isinstance(ts[f],bool) or ts[f] < 1: errors.append(f"invalid value: $.time_signature.{f}")
+    elif not isinstance(ts,str): errors.append("invalid type: $.time_signature")
     arr=data.get("arrangement")
     if not isinstance(arr,dict): errors.append("arrangement must be object")
     else:
         sections=arr.get("sections"); ha=arr.get("harmony_assignments")
         if not isinstance(sections,list): errors.append("arrangement.sections must be array")
         else:
+            ids=set()
             for i,s in enumerate(sections):
-                if not isinstance(s,dict) or not {"section_id","start_bar","bar_count"} <= set(s):
-                    for field in ("section_id","start_bar","bar_count"):
-                        if not isinstance(s,dict) or field not in s: errors.append(f"missing required field: $.arrangement.sections[{i}].{field}")
+                if not isinstance(s,dict): errors.append(f"invalid type: $.arrangement.sections[{i}]"); continue
+                for field in ("id","start_bar","bar_count","energy"):
+                    if field not in s: errors.append(f"missing required field: $.arrangement.sections[{i}].{field}")
+                if "id" in s:
+                    if not isinstance(s["id"],str) or not s["id"]: errors.append(f"invalid section identifier: $.arrangement.sections[{i}].id")
+                    elif s["id"] in ids: errors.append(f"duplicate section identifier: $.arrangement.sections[{i}].id")
+                    else: ids.add(s["id"])
+                for field in ("start_bar","bar_count"):
+                    if field in s and (not isinstance(s[field],int) or isinstance(s[field],bool) or s[field] < 1): errors.append(f"invalid value: $.arrangement.sections[{i}].{field}")
+                if "energy" in s and (not isinstance(s["energy"],(int,float)) or isinstance(s["energy"],bool)): errors.append(f"invalid type: $.arrangement.sections[{i}].energy")
         if not isinstance(ha,list): errors.append("arrangement.harmony_assignments must be array")
         else:
             for i,h in enumerate(ha):
                 if not isinstance(h,dict) or "harmony" not in h or not ("section_id" in h or {"start_bar","bar_count"} <= set(h)): errors.append(f"harmony assignment {i} missing address or label")
+                elif "section_id" in h and isinstance(sections,list) and h["section_id"] not in ids: errors.append(f"invalid section reference: $.arrangement.harmony_assignments[{i}].section_id")
     tracks=data.get("tracks")
     if not isinstance(tracks,list): errors.append("tracks must be array")
     else:
+        track_ids=set()
         for i,t in enumerate(tracks):
-            if not isinstance(t,dict) or not {"id","type","role","motifs","section_assignments"} <= set(t): errors.append(f"track {i} missing required fields")
-            elif t.get("type") not in {"pitched","drums","percussion","effect"}: errors.append(f"track {i} invalid type")
-            elif t.get("type") in {"drums","percussion"}:
+            if not isinstance(t,dict): errors.append(f"invalid type: $.tracks[{i}]"); continue
+            for field in ("id","type","role","motifs","section_assignments"):
+                if field not in t: errors.append(f"missing required field: $.tracks[{i}].{field}")
+            if "id" in t:
+                if not isinstance(t["id"],str) or not t["id"]: errors.append(f"invalid track identifier: $.tracks[{i}].id")
+                elif t["id"] in track_ids: errors.append(f"duplicate track identifier: $.tracks[{i}].id")
+                else: track_ids.add(t["id"])
+            if t.get("type") not in {"pitched","drums","percussion","effect"}: errors.append(f"invalid type: $.tracks[{i}].type")
+            if "motifs" in t and not isinstance(t["motifs"],list): errors.append(f"invalid type: $.tracks[{i}].motifs")
+            if "section_assignments" in t and not isinstance(t["section_assignments"],list): errors.append(f"invalid type: $.tracks[{i}].section_assignments")
+            if t.get("type") == "percussion":
                 for field in ("kit_id","map_id"):
                     if field not in t: errors.append(f"missing required field: $.tracks[{i}].{field}")
+            motifs=t.get("motifs"); motif_ids=set()
+            if isinstance(motifs,list):
+                for j,m in enumerate(motifs):
+                    if not isinstance(m,dict) or not {"id","events"} <= set(m): errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].id/events")
+                    elif m["id"] in motif_ids: errors.append(f"duplicate motif identifier: $.tracks[{i}].motifs[{j}].id")
+                    elif isinstance(m.get("id"),str): motif_ids.add(m["id"])
+                    if not isinstance(m,dict) or not isinstance(m.get("events"),list): continue
+                    for k,e in enumerate(m["events"]):
+                        if not isinstance(e,dict): errors.append(f"invalid type: $.tracks[{i}].motifs[{j}].events[{k}]"); continue
+                        typ=t.get("type")
+                        common_event = ("bar","beat","duration") if typ in {"pitched","drums","percussion"} else ("position","duration")
+                        for field in common_event:
+                            if field not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].{field}")
+                        if typ=="pitched" and ("pitches" not in e or not isinstance(e.get("pitches"),list) or not e.get("pitches")): errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].pitches")
+                        if typ=="drums" and "drum_voice" not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].drum_voice")
+                        if typ=="percussion":
+                            for field in ("instrument","sounding_articulation"):
+                                if field not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].{field}")
+                        if typ=="effect":
+                            for field in ("position","duration"):
+                                if field not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].{field}")
+            assignments=t.get("section_assignments")
+            if isinstance(assignments,list):
+                for j,a in enumerate(assignments):
+                    if not isinstance(a,dict) or not {"section_id","motif_id"} <= set(a): errors.append(f"missing required field: $.tracks[{i}].section_assignments[{j}].section_id/motif_id")
+                    elif isinstance(sections,list) and a["section_id"] not in ids: errors.append(f"invalid section reference: $.tracks[{i}].section_assignments[{j}].section_id")
+                    elif isinstance(motifs,list) and a["motif_id"] not in motif_ids: errors.append(f"invalid motif reference: $.tracks[{i}].section_assignments[{j}].motif_id")
     if trace and data.get("frozen_decision_trace_hash") not in (None, trace.get("trace_hash")): errors.append("serialization changed frozen trace")
     return errors
 

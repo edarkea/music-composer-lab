@@ -1,0 +1,21 @@
+STAGE 3 — SONGPLAN SERIALIZATION
+
+Use the frozen DecisionTrace, frozen Stage-2 musical material and the exact authoritative SongPlanV2 contract supplied by the runner. Serialize the already-decided material into one SongPlanV2 object.
+
+Do not reconsider harmony, form, motifs or N3-P. Do not add or remove musical content for artistic reasons. Use only contract-supported fields, values and operations. Return only the SongPlanV2 object. Deterministic validation will decide whether it is valid; do not claim that it is valid in prose.
+
+SERIALIZATION REQUIREMENT (technical clarification only):
+- Return exactly ONE SongPlanV2 JSON object.
+- Return raw JSON only.
+- Do NOT use Markdown or code fences.
+- Do NOT include prose before or after the JSON.
+- Do NOT explain the answer.
+- Do NOT ask follow-up questions.
+- All fields required by SongPlanV2 must be present.
+- Do not invent an alternate SongPlan representation.
+
+CONTRACT PATH CLARIFICATION (technical only):
+- In `arrangement.sections`, the required identifier field is `id`.
+- `section_id` is used only by harmony assignments and track section assignments.
+- Percussion and drums tracks require `kit_id` and `map_id` at the direct track-object path.
+This clarification does not add musical content or change SongPlanV2 semantics.
