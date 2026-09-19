@@ -1,0 +1,8 @@
+schema_version: "1.0"
+purpose: approved host mappings for prospective SongPlanV2 validation
+drums:
+  map_dir: integrations/music-engine/host-maps
+  map_id: song001_r1_steven_slate_map
+percussion:
+  map_dir: null
+  approved_map_ids: []

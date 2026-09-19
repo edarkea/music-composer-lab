@@ -1,0 +1,57 @@
+test_id: XMODEL-009
+status: PREPARED_NOT_EXECUTED
+execution_authorized: false
+executed: false
+materialized: false
+purpose: prospective end-to-end external-composer transfer through real SongPlanV2 boundary
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+brief_sha256: 464AE4378BCB7236F0FB36DA52EB65DCB03735197284E3A6899B8686D51EDE0B
+models:
+  - qwen3:14b
+  - ministral-3:14b
+generation_parameters:
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  stage_1_num_predict: 4096
+  stage_2_num_predict: 8192
+  stage_3_num_predict: 8192
+stages:
+  stage_1:
+    max_attempts: 3
+    ollama_structured_schema: stage-1-output-schema-v1.1-n3-canonical.json
+  stage_2:
+    max_attempts: 3
+    ollama_structured_schema: null
+    serialization_gate: raw JSON single-object gate
+  stage_3:
+    max_attempts: 3
+    ollama_structured_schema: stage-3-songplan-format-schema-v1.1.json
+    acceptance_gate: local gate plus music-engine 4.0.0 plus host configuration
+retry_policy:
+  diagnostics_only: true
+  previous_raw_output_replay: false
+  semantic_repair: false
+  musical_suggestions: false
+  later_stage_after_failed_gate: false
+host:
+  engine_package: music-engine 4.0.0
+  runtime_lock: integrations/music-engine/runtime-lock.yaml
+  host_config: host-config.yaml
+  approved_drums_map_id: song001_r1_steven_slate_map
+  approved_percussion_map_ids: []
+  midi_generation_during_test: false
+harness:
+  assembler: integrations/composer-agent/staged_harness.py assemble
+  runner: integrations/composer-agent/staged_runner.py
+  gate: integrations/composer-agent/staged_harness.py gate
+  tests: python integrations/composer-agent/test_staged_harness.py -q
+  adapter_musical_decisions: 0
+comparison:
+  qwen_and_ministral: identical brief, records, schemas, host capabilities, parameters and retry limits
+  XMODEL-008: historical partial-transfer context only; no numerical continuation claim
+  human_audition: required after transfer acceptance; engine PASS is not artistic acceptance

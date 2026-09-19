@@ -1,0 +1,65 @@
+contract_id: authoritative-songplan-v2-transfer-contract
+source: integrations/music-engine/integration-contract.md
+schema_version: "2.0"
+root:
+  exact_fields:
+    schema_version: {required: true, type: string, const: "2.0"}
+    name: {required: true, type: non_empty_string}
+    tempo: {required: true, type: positive_number_bpm}
+    time_signature: {required: true, type: non_empty_string, format: "numerator/denominator; denominator positive power of two"}
+    tonic: {required: true, type: non_empty_string, effect: metadata_only}
+    mode: {required: true, enum: [ionian, dorian, phrygian, lydian, mixolydian, aeolian, locrian]}
+    style: {required: true, type: non_empty_string, effect: metadata_only}
+    arrangement:
+      required: true
+      exact_fields: [sections, harmony_assignments]
+      sections: {type: array, item_fields: [id, start_bar, bar_count, energy]}
+      harmony_assignments: {type: array, item_fields: [harmony, section_id_or_start_bar_bar_count]}
+    tracks:
+      required: true
+      type: array_of_typed_tracks
+      common_required: [id, type, role, motifs, section_assignments]
+      types: [pitched, drums, percussion, effect]
+tracks:
+  common:
+    required_fields: [id, type, role, motifs, section_assignments]
+    motifs: Each motif has id and events; events are relative to motif occurrence.
+    section_assignments: Each assignment references section_id and motif_id; variation is optional.
+  pitched:
+    event_required: [bar, beat, duration, pitches]
+    event_optional: [velocity, chromatic, articulation, id]
+    pitches: Non-empty list of explicit pitch strings; each list is simultaneous.
+  drums:
+    event_required: [bar, beat, duration, drum_voice]
+    event_optional: [velocity, articulation, id]
+    external_map: drum_voice identifiers require an explicit host-supplied map for materialization.
+  percussion:
+    track_required_in_addition_to_common: [kit_id, map_id]
+    event_required: [bar, beat, duration, instrument, sounding_articulation]
+    external_map: Semantic pairs resolve only through the explicit host-supplied map.
+  effect:
+    event_required: [bar, beat, duration]
+    event_optional: [id]
+    limitation: It is not an audio generator.
+events:
+  pitched_required: [bar, beat, duration, pitches]
+  pitched_optional: [velocity, chromatic, articulation, id]
+  pitches_are_authoritative_for_sounding_content: true
+  harmony_labels_generate_notes: false
+  energy_roles_style_and_tonic_generate_notes: false
+timing:
+  beat: 1_based_quarter_note_beat_position
+  duration: whole_note_fraction
+  these_units_are_not_interchangeable: true
+  effect_events: use_bar_beat_duration_only
+additional_constraints:
+  - Unknown root/track/event fields are forbidden.
+  - Duplicate JSON object keys are forbidden and must be rejected before parsing.
+  - Pitched notes must be in the declared scale unless the event explicitly has chromatic: true.
+  - Section assignments must reference declared sections and motifs.
+  - Each section has id, start_bar, bar_count, energy; bars and bar counts are positive integers.
+  - Each harmony assignment has harmony and either section_id or start_bar plus bar_count.
+  - Track IDs must be unique.
+  - Do not use free-form clock-time durations or generic harmonic_progression descriptions as substitutes for V2 fields.
+  - Decision rationale, N3-P, and harmonic label semantics belong in the output trace, not invented SongPlan fields.
+validation_boundary: This is a field-level transfer contract; installed music-engine codec/validator behavior is authoritative for detailed nested validation.
