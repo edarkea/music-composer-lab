@@ -71,7 +71,7 @@ The strict V2 codec accepts exactly these root fields:
 | `schema_version` | yes | string exactly `"2.0"` |
 | `name` | yes | non-empty string |
 | `tempo` | yes | positive BPM number accepted by `Tempo` |
-| `time_signature` | yes | numerator/denominator object or accepted codec form; positive conventional values |
+| `time_signature` | yes | non-empty string such as `4/4`; parser requires a positive numerator and a positive power-of-two denominator |
 | `tonic` | yes | non-empty string; metadata, not automatic note generation |
 | `mode` | yes | one of `ionian`, `dorian`, `phrygian`, `lydian`, `mixolydian`, `aeolian`, or `locrian` in the verified runtime |
 | `style` | yes | non-empty string; descriptive metadata |
@@ -112,8 +112,9 @@ Track event structures are type-specific:
   velocity/articulation.
 - `percussion` uses percussion motifs/events with `instrument` and
   `sounding_articulation`, plus required `kit_id` and `map_id`.
-- `effect` uses effect motifs/events with position and duration; it is not an
-  audio generator.
+- `effect` uses effect motifs/events with `bar`, `beat`, `duration`, and optional
+  `id`; `position` is not a supported SongPlanV2 field. It is not an audio
+  generator.
 
 Track objects require `id`, `type`, `role`, `motifs`, and
 `section_assignments`; type-specific required fields are described above.
@@ -135,7 +136,9 @@ A pitched event is:
 including note letter, optional accidental, and octave (for example `C4`, `Bb3`,
 `C#5`). A list creates simultaneous notes. `velocity` is optional and, when
 present, is 1..127. `chromatic` is an explicit boolean policy field exposed by
-the V2 event codec; it does not invent pitches. MIDI channel is not authored on
+the V2 event codec; a pitched note outside the declared tonic/mode scale is
+rejected unless that event sets `chromatic: true`. This flag does not invent
+pitches. MIDI channel is not authored on
 V2 events; channel assignment is an engine/MIDI concern.
 
 Position and duration deliberately use different units. `beat` is a **1-based
@@ -160,7 +163,8 @@ dotted quarter `3/8`, dotted eighth `3/16`, quarter-note triplet `1/6`, and
 eighth-note triplet `1/12`. Beat and duration reference units are different and
 must never be interchanged.
 
-Tempo is BPM. Time signature supplies numerator/denominator. Domain timing uses
+Tempo is BPM. Time signature is serialized as the `numerator/denominator`
+string consumed by the verified codec. Domain timing uses
 exact `Fraction` values. PPQ is not a SongPlan root field; MIDI export uses the
 engine's configured/default MIDI PPQ and converts exact positions/durations to
 ticks. Values not exactly representable at the chosen PPQ are subject to the

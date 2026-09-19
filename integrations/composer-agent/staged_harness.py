@@ -17,6 +17,28 @@ N3 = {"FULL","MINIMAL","DELEGATED","INTENTIONALLY_ABSENT"}
 # XMODEL identifiers are test metadata; only composition-example identifiers
 # are forbidden in NO-EXAMPLE payloads.
 FORBIDDEN_EXAMPLES = re.compile(r"SONG[-_ ]?00[1-4]\b", re.I)
+HOST_CONFIG = ROOT / "integrations/music-engine/host-config.yaml"
+
+class JSONObject(dict):
+    """JSON object retaining source pairs so duplicate keys remain observable."""
+    def __init__(self, pairs):
+        super().__init__(pairs)
+        self.pairs = pairs
+
+def _json_object_hook(pairs): return JSONObject(pairs)
+
+def _duplicate_paths(value, path="$", out=None):
+    out = [] if out is None else out
+    if isinstance(value, JSONObject):
+        seen = {}
+        for key, child in value.pairs:
+            seen[key] = seen.get(key, 0) + 1
+            if seen[key] > 1:
+                out.append(f"{path}.{key} (occurrence {seen[key]})")
+            _duplicate_paths(child, f"{path}.{key}", out)
+    elif isinstance(value, list):
+        for i, child in enumerate(value): _duplicate_paths(child, f"{path}[{i}]", out)
+    return out
 
 def digest(data: bytes) -> str: return hashlib.sha256(data).hexdigest()
 def read(path: Path) -> str: return path.read_text(encoding="utf-8-sig")
@@ -37,7 +59,9 @@ def records(stage: int):
     return [ROOT / "integrations/composer-agent/system-contract-v1.1.md",
             INTERFACE / "songplan-v2-contract.yaml",
             ROOT / "integrations/music-engine/integration-contract.md",
-            ROOT / "integrations/composer-agent/stage-3-songplan-serialization-schema.yaml"]
+            ROOT / "integrations/composer-agent/stage-3-songplan-serialization-schema.yaml",
+            HOST_CONFIG,
+            ROOT / "integrations/music-engine/host-maps/song001_r1_steven_slate_map.yaml"]
 
 def assemble(stage: int, brief: Path, instruction: Path, out: Path,
              prior: Path | None = None, extras: list[Path] | None = None) -> dict:
@@ -100,17 +124,109 @@ def parse_output(path: Path):
     raw = path.read_text(encoding="utf-8-sig")
     serialization = "Return exactly one raw JSON object. No Markdown, no code fences, no prose before or after JSON."
     if raw.lstrip().startswith("```"): return None, ["markdown wrapper is not valid structured output", serialization]
-    try: return json.loads(raw), []
+    try:
+        data = json.loads(raw, object_pairs_hook=_json_object_hook)
+        duplicates = _duplicate_paths(data)
+        if duplicates:
+            return None, [f"duplicate JSON object key at {p}" for p in duplicates] + [serialization]
+        return data, []
     except Exception as e: return None, [f"output does not parse as complete JSON: {e}", serialization]
 
-def gate(stage: int, output: Path, trace: dict | None = None, material: dict | None = None) -> dict:
+def _load_engine_api():
+    from music_engine.songplan.v2.codec import song_plan_v2_from_dict
+    from music_engine.songplan.v2.validation import validate_song_plan_v2
+    from music_engine.songplan.percussion import (load_drum_external_map,
+        load_percussion_map, PercussionInstrument, PercussionSoundingArticulation,
+        PercussionKit)
+    return song_plan_v2_from_dict, validate_song_plan_v2, load_drum_external_map, load_percussion_map, PercussionInstrument, PercussionSoundingArticulation, PercussionKit
+
+def _host_path(value):
+    p = Path(value)
+    return p if p.is_absolute() else ROOT / p
+
+def validate_host_configuration(plan, host_config: Path | None = None):
+    """Validate only host mappings; never change the plan or invent identifiers."""
+    try:
+        _, _, load_drum, load_perc, PercussionInstrument, PercussionArticulation, PercussionKit = _load_engine_api()
+    except Exception as exc:
+        return {"status":"RUNTIME_FAILURE", "category":"engine_dependency_failure", "message":str(exc)}
+    cfg_path = (host_config or HOST_CONFIG).resolve()
+    if not cfg_path.exists():
+        return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"host config missing: {cfg_path}"}
+    try:
+        import yaml
+        cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"host config unreadable: {exc}"}
+    drum_cfg = cfg.get("drums") or {}
+    perc_cfg = cfg.get("percussion") or {}
+    for track in plan.tracks:
+        typ = getattr(track.type, "value", track.type)
+        if typ == "drums":
+            events = [e for m in track.motifs for e in m.events]
+            if not events: continue
+            map_id = drum_cfg.get("map_id")
+            map_dir = drum_cfg.get("map_dir")
+            if not map_id or not map_dir:
+                return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"drums track '{track.id}' requires approved drum map configuration"}
+            path = _host_path(map_dir) / f"{map_id}.yaml"
+            if not path.exists(): path = _host_path(map_dir) / f"{map_id}.json"
+            try: mapping = load_drum(path)
+            except Exception as exc:
+                return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"invalid DrumExternalMap '{map_id}': {exc}"}
+            missing = sorted({e.drum_voice.id for e in events if mapping.pitch_for(e.drum_voice.id) is None})
+            if missing:
+                return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"DrumExternalMap '{map_id}' lacks voices: {', '.join(missing)}"}
+        elif typ == "percussion":
+            map_id = track.map_id
+            map_dir = perc_cfg.get("map_dir")
+            if not map_dir:
+                return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"percussion track '{track.id}' map_id '{map_id}' has no approved map directory"}
+            path = _host_path(map_dir) / f"{map_id}.yaml"
+            if not path.exists(): path = _host_path(map_dir) / f"{map_id}.json"
+            try: mapping = load_perc(path)
+            except Exception as exc:
+                return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"invalid PercussionMap '{map_id}': {exc}"}
+            pairs = {(e.instrument.id, e.sounding_articulation.id) for m in track.motifs for e in m.events}
+            unresolved = [f"{i}.{a}" for i, a in sorted(pairs) if mapping.pitch_for(PercussionInstrument(i), PercussionArticulation(a)) is None]
+            if unresolved:
+                return {"status":"HOST_CONFIGURATION_INVALID", "category":"host_configuration_failure", "message":f"PercussionMap '{map_id}' unresolved: {', '.join(unresolved)}"}
+    return {"status":"PASS", "category":"host_configuration", "message":"approved host mappings resolved"}
+
+def validate_with_engine(data, host_config: Path | None = None):
+    """Run engine parse/validation only; never materialize or write MIDI."""
+    try:
+        song_plan_v2_from_dict, validate_song_plan_v2, *_ = _load_engine_api()
+    except Exception as exc:
+        return {"status":"BLOCK", "category":"runtime_dependency_failure", "message":str(exc), "engine_invoked":False}
+    try:
+        plan = song_plan_v2_from_dict(data)
+    except Exception as exc:
+        return {"status":"FAIL", "category":"invalid_songplan_structure", "message":str(exc), "engine_invoked":True}
+    result = validate_song_plan_v2(plan)
+    if not result.valid:
+        return {"status":"FAIL", "category":"musical_semantic_validation_failure", "message":"; ".join(f"{x.code}: {x.path}: {x.message}" for x in result.issues), "engine_invoked":True}
+    host = validate_host_configuration(plan, host_config)
+    if host["status"] != "PASS": return {**host, "engine_invoked":True}
+    return {"status":"PASS", "category":"engine_songplan_validation", "message":"SongPlanV2 and host configuration valid; no MIDI materialized", "engine_invoked":True}
+
+def gate(stage: int, output: Path, trace: dict | None = None, material: dict | None = None,
+         host_config: Path | None = None) -> dict:
     data, errors = parse_output(output)
-    if errors: return {"pass":False,"stage":stage,"errors":errors,"semantic_repair_performed":False}
+    if errors: return {"pass":False,"stage":stage,"category":"serialization_failure","errors":errors,"semantic_repair_performed":False}
     if not isinstance(data, dict): errors.append("structured output root must be object")
     if stage == 1: errors += gate_stage1(data)
     elif stage == 2: errors += gate_stage2(data, trace)
     elif stage == 3: errors += gate_stage3(data, trace, material)
-    return {"pass":not errors,"stage":stage,"errors":errors,"semantic_repair_performed":False}
+    result = {"pass":not errors,"stage":stage,"category":"contract_failure" if errors else "contract_validation","errors":errors,"semantic_repair_performed":False}
+    if stage == 3 and not errors:
+        engine = validate_with_engine(data, host_config)
+        result["engine_validation"] = engine
+        result["category"] = engine["category"]
+        if engine["status"] != "PASS":
+            result["pass"] = False
+            result["errors"].append(f"engine validation {engine['status']}: {engine['category']}: {engine['message']}")
+    return result
 
 def can_advance(previous_gate: dict, next_stage: int) -> bool:
     """Stage progression is mechanical; a failed prior gate always blocks."""
@@ -189,12 +305,7 @@ def gate_stage3(data, trace, material):
     if "tempo" in data and (not isinstance(data["tempo"],(int,float)) or isinstance(data["tempo"],bool) or data["tempo"] <= 0): errors.append("invalid value: $.tempo")
     if data.get("mode") not in {"ionian","dorian","phrygian","lydian","mixolydian","aeolian","locrian"}: errors.append("invalid enum: $.mode")
     ts=data.get("time_signature")
-    if isinstance(ts,dict):
-        if not {"numerator","denominator"} <= set(ts): errors.append("missing required field: $.time_signature.numerator/denominator")
-        else:
-            for f in ("numerator","denominator"):
-                if not isinstance(ts[f],int) or isinstance(ts[f],bool) or ts[f] < 1: errors.append(f"invalid value: $.time_signature.{f}")
-    elif not isinstance(ts,str): errors.append("invalid type: $.time_signature")
+    if not isinstance(ts,str) or not ts: errors.append("invalid type: $.time_signature; SongPlanV2 requires a non-empty string such as '4/4'")
     arr=data.get("arrangement")
     if not isinstance(arr,dict): errors.append("arrangement must be object")
     else:
@@ -246,17 +357,22 @@ def gate_stage3(data, trace, material):
                     for k,e in enumerate(m["events"]):
                         if not isinstance(e,dict): errors.append(f"invalid type: $.tracks[{i}].motifs[{j}].events[{k}]"); continue
                         typ=t.get("type")
-                        common_event = ("bar","beat","duration") if typ in {"pitched","drums","percussion"} else ("position","duration")
+                        common_event = ("bar","beat","duration")
                         for field in common_event:
                             if field not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].{field}")
+                        allowed_event = {
+                            "pitched":{"bar","beat","duration","pitches","velocity","chromatic","articulation","id","instrument_articulation"},
+                            "drums":{"bar","beat","duration","drum_voice","velocity","articulation","id"},
+                            "percussion":{"bar","beat","duration","instrument","sounding_articulation","velocity","id"},
+                            "effect":{"bar","beat","duration","id"},
+                        }.get(typ, set())
+                        for field in sorted(set(e) - allowed_event): errors.append(f"unsupported field: $.tracks[{i}].motifs[{j}].events[{k}].{field}")
                         if typ=="pitched" and ("pitches" not in e or not isinstance(e.get("pitches"),list) or not e.get("pitches")): errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].pitches")
                         if typ=="drums" and "drum_voice" not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].drum_voice")
                         if typ=="percussion":
                             for field in ("instrument","sounding_articulation"):
                                 if field not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].{field}")
-                        if typ=="effect":
-                            for field in ("position","duration"):
-                                if field not in e: errors.append(f"missing required field: $.tracks[{i}].motifs[{j}].events[{k}].{field}")
+                        if typ=="effect": pass
             assignments=t.get("section_assignments")
             if isinstance(assignments,list):
                 for j,a in enumerate(assignments):
@@ -270,9 +386,9 @@ def main():
     p=argparse.ArgumentParser(); sub=p.add_subparsers(dest="cmd",required=True)
     a=sub.add_parser("assemble"); a.add_argument("--stage",type=int,choices=[1,2,3],required=True); a.add_argument("--brief",type=Path,required=True); a.add_argument("--instruction",type=Path,required=True); a.add_argument("--out",type=Path,required=True); a.add_argument("--prior",type=Path); a.add_argument("--extra-record",type=Path,action="append",default=[])
     r=sub.add_parser("retry-payload"); r.add_argument("--original",type=Path,required=True); r.add_argument("--out",type=Path,required=True); r.add_argument("--diagnostic",action="append",required=True)
-    g=sub.add_parser("gate"); g.add_argument("--stage",type=int,choices=[1,2,3],required=True); g.add_argument("--output",type=Path,required=True)
+    g=sub.add_parser("gate"); g.add_argument("--stage",type=int,choices=[1,2,3],required=True); g.add_argument("--output",type=Path,required=True); g.add_argument("--host-config",type=Path)
     args=p.parse_args()
     if args.cmd=="assemble": print(json.dumps(assemble(args.stage,args.brief,args.instruction,args.out,args.prior,args.extra_record),ensure_ascii=False,indent=2)); return 0
     if args.cmd=="retry-payload": print(json.dumps(build_retry_payload(args.original,args.diagnostic,args.out),ensure_ascii=False,indent=2)); return 0
-    result=gate(args.stage,args.output); print(json.dumps(result,ensure_ascii=False,indent=2)); return 0 if result["pass"] else 1
+    result=gate(args.stage,args.output,host_config=args.host_config); print(json.dumps(result,ensure_ascii=False,indent=2)); return 0 if result["pass"] else 1
 if __name__ == "__main__": main()

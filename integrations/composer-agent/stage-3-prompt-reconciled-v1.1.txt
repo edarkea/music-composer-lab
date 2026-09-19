@@ -17,5 +17,10 @@ SERIALIZATION REQUIREMENT (technical clarification only):
 CONTRACT PATH CLARIFICATION (technical only):
 - In `arrangement.sections`, the required identifier field is `id`.
 - `section_id` is used only by harmony assignments and track section assignments.
-- Percussion and drums tracks require `kit_id` and `map_id` at the direct track-object path.
+- `drums` tracks use `drum_voice` events and do not require `kit_id` or `map_id` in the SongPlan track. Host validation supplies the approved DrumExternalMap.
+- `percussion` tracks require `kit_id` and `map_id` at the direct track-object path; their events use `instrument` and `sounding_articulation`.
+- `time_signature` is a non-empty string such as `"4/4"`; object forms are invalid.
+- `effect` events use only `bar`, `beat`, `duration`, and optional `id`; `position` is unsupported.
+- Pitched events must use pitches in the declared scale unless `chromatic: true` is explicitly present.
+- Unknown fields and duplicate JSON object keys are invalid.
 This clarification does not add musical content or change SongPlanV2 semantics.

@@ -6,7 +6,7 @@ root:
     schema_version: {required: true, type: string, const: "2.0"}
     name: {required: true, type: non_empty_string}
     tempo: {required: true, type: positive_number_bpm}
-    time_signature: {required: true, type: numerator_denominator_or_codec_form}
+    time_signature: {required: true, type: non_empty_string, format: "numerator/denominator; denominator positive power of two"}
     tonic: {required: true, type: non_empty_string, effect: metadata_only}
     mode: {required: true, enum: [ionian, dorian, phrygian, lydian, mixolydian, aeolian, locrian]}
     style: {required: true, type: non_empty_string, effect: metadata_only}
@@ -38,7 +38,8 @@ tracks:
     event_required: [bar, beat, duration, instrument, sounding_articulation]
     external_map: Semantic pairs resolve only through the explicit host-supplied map.
   effect:
-    event_required: [position, duration]
+    event_required: [bar, beat, duration]
+    event_optional: [id]
     limitation: It is not an audio generator.
 events:
   pitched_required: [bar, beat, duration, pitches]
@@ -50,8 +51,11 @@ timing:
   beat: 1_based_quarter_note_beat_position
   duration: whole_note_fraction
   these_units_are_not_interchangeable: true
+  effect_events: use_bar_beat_duration_only
 additional_constraints:
   - Unknown root/track/event fields are forbidden.
+  - Duplicate JSON object keys are forbidden and must be rejected before parsing.
+  - Pitched notes must be in the declared scale unless the event explicitly has chromatic: true.
   - Section assignments must reference declared sections and motifs.
   - Each section has id, start_bar, bar_count, energy; bars and bar counts are positive integers.
   - Each harmony assignment has harmony and either section_id or start_bar plus bar_count.

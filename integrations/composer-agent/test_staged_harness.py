@@ -2,7 +2,7 @@ import copy, json, tempfile, unittest
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from staged_harness import ROOT, INTERFACE, REQUIRED, assemble, build_retry_payload, can_advance, gate, preflight
+from staged_harness import ROOT, INTERFACE, REQUIRED, assemble, build_retry_payload, can_advance, gate, preflight, validate_with_engine, parse_output
 from staged_runner import build_request
 
 BRIEF = ROOT / "evaluations/composer-agent/XMODEL-005/brief.yaml"
@@ -25,7 +25,7 @@ def valid_stage2():
     return {"frozen_decision_trace_hash":"trace", "sections":[{"section_id":"A","start_bar":1,"bar_count":4,"decision_references":["FORM"]}], "layers":[{"layer_id":"lead","type":"pitched","role":"focal","section_assignments":["A"]}], "material_events":{"pitched":[{"start":1,"duration":1,"pitch":"C4"}]}, "realization_notes":{"status":"complete"}}
 
 def valid_songplan():
-    return {"schema_version":"2.0","name":"fixture","tempo":120,"time_signature":"4/4","tonic":"C","mode":"ionian","style":"indie-dance","arrangement":{"sections":[{"id":"A","start_bar":1,"bar_count":4,"energy":0.5}],"harmony_assignments":[{"harmony":"C","section_id":"A"}]},"tracks":[{"id":"lead","type":"pitched","role":"lead","motifs":[],"section_assignments":[]},{"id":"drums","type":"drums","role":"groove","kit_id":"kit","map_id":"map","motifs":[],"section_assignments":[]}]}
+    return {"schema_version":"2.0","name":"fixture","tempo":120,"time_signature":"4/4","tonic":"C","mode":"ionian","style":"indie-dance","arrangement":{"sections":[{"id":"A","start_bar":1,"bar_count":4,"energy":0.5}],"harmony_assignments":[{"harmony":"C","section_id":"A"}]},"tracks":[{"id":"lead","type":"pitched","role":"lead","motifs":[],"section_assignments":[]},{"id":"drums","type":"drums","role":"groove","motifs":[],"section_assignments":[]}]}
 
 class HarnessTests(unittest.TestCase):
     def test_a_missing_brief_preflight_fail(self):
@@ -129,13 +129,13 @@ class HarnessTests(unittest.TestCase):
             p=Path(d)/"o.json"; x=valid_songplan(); x["arrangement"]["sections"][0].pop("id"); p.write_text(json.dumps(x),encoding="utf-8"); self.assertFalse(gate(3,p)["pass"])
     def test_af_stage3_missing_kit_id(self):
         with tempfile.TemporaryDirectory() as d:
-            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1]["type"]="percussion"; x["tracks"][1].pop("kit_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.tracks[1].kit_id" in e for e in r["errors"]))
+            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1]["type"]="percussion"; x["tracks"][1]["kit_id"]="kit"; x["tracks"][1]["map_id"]="map"; x["tracks"][1].pop("kit_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.tracks[1].kit_id" in e for e in r["errors"]))
     def test_ag_stage3_missing_map_id(self):
         with tempfile.TemporaryDirectory() as d:
-            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1]["type"]="percussion"; x["tracks"][1].pop("map_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.tracks[1].map_id" in e for e in r["errors"]))
+            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1]["type"]="percussion"; x["tracks"][1]["kit_id"]="kit"; x["tracks"][1]["map_id"]="map"; x["tracks"][1].pop("map_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("$.tracks[1].map_id" in e for e in r["errors"]))
     def test_ao_drums_do_not_require_percussion_kit_map(self):
         with tempfile.TemporaryDirectory() as d:
-            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1].pop("kit_id"); x["tracks"][1].pop("map_id"); p.write_text(json.dumps(x),encoding="utf-8"); self.assertTrue(gate(3,p)["pass"])
+            p=Path(d)/"o.json"; x=valid_songplan(); p.write_text(json.dumps(x),encoding="utf-8"); self.assertTrue(gate(3,p)["pass"])
     def test_ah_valid_songplan_fixture_pass(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/"o.json"; p.write_text(json.dumps(valid_songplan()),encoding="utf-8"); self.assertTrue(gate(3,p)["pass"])
@@ -148,7 +148,7 @@ class HarnessTests(unittest.TestCase):
         req=build_request("qwen3:14b","x",{},schema); self.assertIn("format",req); self.assertFalse(gate(3,Path(__file__))["pass"])
     def test_ak_retry_diagnostics_have_no_musical_solution(self):
         with tempfile.TemporaryDirectory() as d:
-            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1]["type"]="percussion"; x["tracks"][1].pop("kit_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); text=" ".join(r["errors"]); self.assertIn("kit_id",text); self.assertNotRegex(text,r"C[0-9]|D[0-9]|chord|tempo|melody")
+            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"][1]["type"]="percussion"; x["tracks"][1]["kit_id"]="kit"; x["tracks"][1]["map_id"]="map"; x["tracks"][1].pop("kit_id"); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); text=" ".join(r["errors"]); self.assertIn("kit_id",text); self.assertNotRegex(text,r"C[0-9]|D[0-9]|chord|tempo|melody")
     def test_al_adapter_musical_decisions_zero(self):
         self.assertEqual(0,0)
     def test_am_authoritative_section_uses_id_not_section_id(self):
@@ -159,6 +159,41 @@ class HarnessTests(unittest.TestCase):
             p1=Path(d)/"s1.json"; p2=Path(d)/"s2.json"; p3=Path(d)/"s3.json"
             p1.write_text(json.dumps(valid_trace()),encoding="utf-8"); p2.write_text(json.dumps(valid_stage2()),encoding="utf-8"); p3.write_text(json.dumps(valid_songplan()),encoding="utf-8")
             self.assertTrue(gate(1,p1)["pass"]); self.assertTrue(gate(2,p2)["pass"]); self.assertTrue(gate(3,p3)["pass"])
+
+    def test_ao_duplicate_json_keys_rejected_with_exact_path(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; p.write_text('{"tracks":[{"motifs":[{"events":[{"duration":"1/4","duration":"1/2"}]}]}]}',encoding="utf-8"); _, errors=parse_output(p); self.assertTrue(any("$.tracks[0].motifs[0].events[0].duration" in e for e in errors))
+
+    def test_ap_effect_position_rejected(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_songplan(); x["tracks"].append({"id":"fx","type":"effect","role":"fx","motifs":[{"id":"m","events":[{"bar":1,"beat":"1","duration":"1/1","position":0}]}],"section_assignments":[]}); p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("unsupported field" in e and "position" in e for e in r["errors"]))
+
+    def test_aq_time_signature_object_rejected(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"o.json"; x=valid_songplan(); x["time_signature"]={"numerator":4,"denominator":4}; p.write_text(json.dumps(x),encoding="utf-8"); r=gate(3,p); self.assertFalse(r["pass"]); self.assertTrue(any("time_signature" in e for e in r["errors"]))
+
+    def test_ar_engine_validation_invoked_and_passes_valid_fixture(self):
+        r=validate_with_engine(valid_songplan()); self.assertTrue(r["engine_invoked"]); self.assertEqual(r["status"],"PASS")
+
+    def test_as_engine_semantic_scale_failure(self):
+        x=valid_songplan(); x["tonic"]="D"; x["tracks"][0]["motifs"]=[{"id":"m","events":[{"bar":1,"beat":"1","duration":"1/4","pitches":["F4"]}]}]; r=validate_with_engine(x); self.assertTrue(r["engine_invoked"]); self.assertEqual(r["category"],"musical_semantic_validation_failure")
+
+    def test_at_invalid_host_configuration_distinguished(self):
+        x=valid_songplan(); x["tracks"][1]["motifs"]=[{"id":"m","events":[{"bar":1,"beat":"1","duration":"1/4","drum_voice":"kick"}]}]
+        with tempfile.TemporaryDirectory() as d:
+            cfg=Path(d)/"host.yaml"; cfg.write_text("schema_version: '1.0'\ndrums:\n  map_dir: missing\n  map_id: missing\npercussion:\n  map_dir: null\n",encoding="utf-8"); r=validate_with_engine(x,cfg); self.assertEqual(r["category"],"host_configuration_failure")
+
+    def test_au_unavailable_engine_blocks(self):
+        import staged_harness
+        old=staged_harness._load_engine_api
+        try:
+            staged_harness._load_engine_api=lambda: (_ for _ in ()).throw(ImportError("missing engine"))
+            r=staged_harness.validate_with_engine(valid_songplan())
+            self.assertEqual(r["status"],"BLOCK"); self.assertEqual(r["category"],"runtime_dependency_failure")
+        finally: staged_harness._load_engine_api=old
+
+    def test_av_no_adapter_musical_decisions_from_engine_gate(self):
+        x=valid_songplan(); before=copy.deepcopy(x); validate_with_engine(x); self.assertEqual(x,before)
 
 def read_text(p): return p.read_text(encoding="utf-8-sig") if p.exists() else ""
 def gate_stage1_for_test(x):

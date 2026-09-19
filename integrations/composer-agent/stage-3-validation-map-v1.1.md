@@ -12,6 +12,10 @@ Fuente autoritativa: `datasets/composer-interface-v1.1/songplan-v2-contract.yaml
 | track common fields | `id`, `type`, `role`, `motifs`, `section_assignments` | `$.tracks[i]` |
 | track type | `pitched`, `drums`, `percussion`, `effect` | `$.tracks[i].type` |
 | percussion resources | `kit_id` y `map_id` requeridos para `percussion`; `drums` usa `drum_voice` y mapa externo | `$.tracks[i].kit_id/map_id` |
+| time signature | cadena no vacía `numerator/denominator`; denominador potencia de dos | `$.time_signature` |
+| effect events | `bar`, `beat`, `duration`, `id` opcional; `position` no permitido | `$.tracks[i].motifs[j].events[k]` |
+| scale validation | pitch dentro de la escala declarada salvo `chromatic: true` | engine validator |
+| duplicate keys | rechazadas antes de parsear | raw JSON object path |
 | motif envelope | `id` y `events` | `$.tracks[i].motifs[j]` |
 
 `section_id` no es un campo de secci?n; es v?lido en asignaciones.

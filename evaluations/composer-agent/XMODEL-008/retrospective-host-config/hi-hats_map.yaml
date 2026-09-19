@@ -1,0 +1,6 @@
+﻿schema_version: "1.0"
+id: hi-hats_map
+assignments:
+  - instrument: hi-hat
+    sounding_articulation: open
+    pitch: 46

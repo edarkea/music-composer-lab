@@ -1,0 +1,16 @@
+schema_version: "1.0"
+id: song001_r1_steven_slate_map
+mappings:
+  kick: 36
+  snare: 38
+  rimshot: 40
+  closed_hat: 44
+  open_hat: 46
+  pedal_hat: 42
+  low_tom: 41
+  mid_tom: 45
+  high_tom: 48
+  crash: 55
+  ride: 51
+  ride_bell: 53
+  cowbell: 50
