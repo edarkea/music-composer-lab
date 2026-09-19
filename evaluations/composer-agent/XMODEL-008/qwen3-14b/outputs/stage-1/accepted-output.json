@@ -1,0 +1,126 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["A-B-A", "Through-composed", "Verse-Chorus"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Persistent forward motion with gradual accumulation",
+      "tradeoff": {"minimal_section_repetition": "to maintain tension"},
+      "trace_reference": "CK-FORM-01",
+      "selected_option": {"form": "Modified A-B-A with extended coda"}
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["Verse", "Chorus", "Bridge"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Gradual accumulation through section contrast",
+      "tradeoff": {"section_length_balance": "to maintain hypnotic continuity"},
+      "trace_reference": "GP-04",
+      "selected_option": {"roles": "Intro (looped), Build (accumulating), Release (coda)"}
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["Modal", "Tonal", "Percussive"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Restraint through harmonic simplicity",
+      "tradeoff": {"modal_centering": "to avoid overcomplication"},
+      "trace_reference": "CK-HAR-02",
+      "selected_option": {"framework": "Modal (Dorian mode with drone bass)"}
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["Melodic", "Rhythmic", "Textural"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain identity through persistent motif",
+      "tradeoff": {"textural_simplicity": "to avoid diluting the hypnotic effect"},
+      "trace_reference": "CK-MEL-01",
+      "selected_option": {"identity": "Melodic focal point with rhythmic reinforcement"}
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["Repetition", "Variation", "Fragmentation"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Gradual development through motif transformation",
+      "tradeoff": {"fragmentation_risk": "to maintain coherence"},
+      "trace_reference": "CK-DEV-01",
+      "selected_option": {"behavior": "Repetition with intervallic expansion"}
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["Drone", "Rhythmic", "Melodic"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support harmonic framework and groove",
+      "tradeoff": {"melodic_complexity": "to maintain restraint"},
+      "trace_reference": "GP-02",
+      "selected_option": {"role": "Drone with rhythmic accents"}
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["Syncopated", "Straight", "Polyrhythmic"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Hypnotic forward motion through consistent groove",
+      "tradeoff": {"polyrhythmic_complexity": "to maintain accessibility"},
+      "trace_reference": "CK-RHY-01",
+      "selected_option": {"groove": "Straight 4/4 with syncopated hi-hats"}
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"],
+      "selected_outcome": "MINIMAL",
+      "candidate_strategies": ["Kick-snare minimalism", "Hi-hat layering", "Textural fills"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support groove without overpowering the hypnotic atmosphere",
+      "tradeoff": {"percussive_complexity": "to maintain restrained aesthetic"},
+      "trace_reference": "GP-05",
+      "bass_groove_interaction": "Kick aligned with bass drone, snare on off-beats",
+      "focal_hierarchy_interaction": "Percussion supports lead motif without competing",
+      "section_behavior": {"intro": "Minimal kick-snare", "build": "Added hi-hats", "release": "Textural fills"},
+      "development_behavior": {"gradual_addition": "of percussive layers during build phase"}
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["Sparse", "Dense", "Layered"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Controlled contrast through textural evolution",
+      "tradeoff": {"density_risk": "to avoid overwhelming the hypnotic core"},
+      "trace_reference": "CK-TEXT-01",
+      "selected_option": {"texture": "Sparse intro, layered build, sparse release"}
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["Motivic", "Textural", "Harmonic"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Gradual accumulation through textural and rhythmic development",
+      "tradeoff": {"harmonic_complexity": "to maintain restraint"},
+      "trace_reference": "CK-DEV-01",
+      "selected_option": {"development": "Textural layering with rhythmic expansion"}
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["Linear", "Cyclical", "Explosive"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Controlled release through gradual tension build",
+      "tradeoff": {"explosive_release_risk": "to maintain restraint"},
+      "trace_reference": "CK-TEN-01",
+      "selected_option": {"energy": "Linear build with climactic release"}
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["Coda", "Reprise", "Fade"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Clear release through extended coda",
+      "tradeoff": {"reprise_risk": "to avoid redundancy"},
+      "trace_reference": "CK-FORM-02",
+      "selected_option": {"ending": "Extended coda with fading textures"}
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["None", "Harmony-Rhythm", "Melody-Texture"],
+      "selection_basis": "NOT_APPLICABLE",
+      "active_intention": "No conflicts identified in this composition",
+      "tradeoff": {},
+      "trace_reference": "CK-CROSS-01",
+      "selected_option": {"conflicts": "None"}
+    }
+  ]
+}

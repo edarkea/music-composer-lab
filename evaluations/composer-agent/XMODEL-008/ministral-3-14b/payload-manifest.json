@@ -1,9 +1,9 @@
 {
-  "payload_path": "evaluations\\composer-agent\\XMODEL-008\\ministral-3-14b\\stage-1-payload.txt",
-  "payload_sha256": "7d5b2578bc224da788d1885e1711d408be845f1f1633d077f84bfa46f7749721",
+  "payload_path": "evaluations\\composer-agent\\XMODEL-008\\ministral-3-14b\\stage-2-payload.txt",
+  "payload_sha256": "153432dcc2d371d609c9457f0dc0693ae6b6dbce9aa302c671c3c7b9b3f138cd",
   "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
   "interface_version": "composer-interface-v1.1",
-  "stage": 1,
+  "stage": 2,
   "resolved_records": [
     {
       "path": "evaluations\\composer-agent\\XMODEL-008\\brief.yaml",
@@ -38,22 +38,26 @@
       "sha256": "97f0763fc13f2ef5edd316636028c50a6bfa840b3a09764cdd33e3755fd1333a"
     },
     {
-      "path": "integrations\\composer-agent\\stage-1-decision-trace-schema.yaml",
-      "sha256": "25fc8a5f721b3826560ee4e65246228540a6344fef874031a45c3e946435eca0"
+      "path": "integrations\\composer-agent\\stage-2-musical-material-schema.yaml",
+      "sha256": "8d7bd738b889696d1be058d72f4f20912f40cb8b2c67d389a99795be74596748"
     },
     {
-      "path": "evaluations\\composer-agent\\XMODEL-008\\frozen-prompt-stage-1-n3-canonical.txt",
-      "sha256": "73d796fa33f47b1cea520acb7449e12e18daeb7f6fe29321aa35230349fee0af"
+      "path": "evaluations\\composer-agent\\XMODEL-008\\stage-2-prompt-hardened-v1.1.txt",
+      "sha256": "a99be2672ba7da31881024f252ed7c9c60bc7e3a9ca3e14788d1f7a9139c8191"
     },
     {
-      "path": "evaluations\\composer-agent\\XMODEL-008\\stage-1-output-schema-v1.1-n3-canonical.json",
-      "sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5"
+      "path": "evaluations\\composer-agent\\XMODEL-008\\stage-2-contract-validation-map-v1.1.md",
+      "sha256": "577688aaebf35e498c64eee9097fbcd8173e5dee47f88a92cb1089fd699569c2"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-008\\ministral-3-14b\\outputs\\stage-1\\accepted-output.json",
+      "sha256": "9ccd1b314d9e7abfc4a9d8c40d70bd67f0af442a1c815502005651e6561467b8"
     }
   ],
   "preflight": {
     "pass": true,
-    "stage": 1,
+    "stage": 2,
     "errors": [],
-    "resolved_record_count": 11
+    "resolved_record_count": 12
   }
 }

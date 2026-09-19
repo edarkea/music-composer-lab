@@ -1,0 +1,11 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-008\\ministral-3-14b\\outputs\\stage-1\\attempt-2\\retry-input.txt",
+  "payload_sha256": "2f88866a84053783242c1122aefde79b2895f1da17768c6ef5a333b9186145cd",
+  "original_payload_sha256": "7d5b2578bc224da788d1885e1711d408be845f1f1633d077f84bfa46f7749721",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "output does not parse as complete JSON: Unterminated string starting at: line 339 column 7 (char 16695)",
+    "Return exactly one raw JSON object. No Markdown, no code fences, no prose before or after JSON.",
+    "The previous response was truncated by the output limit. Complete the JSON object within the allowed output budget."
+  ]
+}

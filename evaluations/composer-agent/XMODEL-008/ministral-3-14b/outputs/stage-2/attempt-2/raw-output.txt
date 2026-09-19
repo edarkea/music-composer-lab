@@ -1,0 +1,585 @@
+```json
+{
+  "frozen_decision_trace_hash": "a1b2c3d4e5f6...", // Placeholder; replace with actual hash of the accepted DecisionTrace
+  "sections": [
+    {
+      "section_id": "intro_loop",
+      "start_bar": 1,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "HARMONIC_FRAMEWORK", "FOCAL_IDENTITY", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE"]
+    },
+    {
+      "section_id": "vamp_section_1",
+      "start_bar": 9,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "LEAD_MOTIF_BEHAVIOR", "BASS_ROLE", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "vamp_section_2",
+      "start_bar": 17,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "LEAD_MOTIF_BEHAVIOR", "BASS_ROLE", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "release",
+      "start_bar": 25,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "ENERGY_TENSION_RELEASE", "ENDING", "HARMONIC_FRAMEWORK"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "lead_synth",
+      "type": "pitched",
+      "role": "melodic_hook",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "pad_synth",
+      "type": "pitched",
+      "role": "harmonic_support",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "arpeggio_synth",
+      "type": "pitched",
+      "role": "rhythmic_displacement",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "bass",
+      "type": "pitched",
+      "role": "groove_alignment",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "kick_drum",
+      "type": "drums",
+      "role": "groove_pulse",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "snare_drum",
+      "type": "drums",
+      "role": "groove_accent",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "hi_hat",
+      "type": "drums",
+      "role": "pulse",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "shaker",
+      "type": "percussion",
+      "role": "texture",
+      "section_assignments": ["vamp_section_1", "vamp_section_2"]
+    }
+  ],
+  "material_events": {
+    "pitched_events": [
+      {
+        "layer_id": "lead_synth",
+        "events": [
+          {
+            "start": 1,
+            "duration": 0.5,
+            "pitch": 72,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 1.5,
+            "duration": 0.5,
+            "pitch": 74,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 2,
+            "duration": 0.5,
+            "pitch": 72,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 2.5,
+            "duration": 0.5,
+            "pitch": 77,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 9,
+            "duration": 0.5,
+            "pitch": 72,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 9.5,
+            "duration": 0.5,
+            "pitch": 74,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 10,
+            "duration": 0.5,
+            "pitch": 72,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 10.5,
+            "duration": 0.5,
+            "pitch": 79,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 17,
+            "duration": 0.5,
+            "pitch": 72,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 17.5,
+            "duration": 0.5,
+            "pitch": 74,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 18,
+            "duration": 0.5,
+            "pitch": 72,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 18.5,
+            "duration": 0.5,
+            "pitch": 81,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 25,
+            "duration": 1,
+            "pitch": 72,
+            "section_assignments": ["release"]
+          },
+          {
+            "start": 26,
+            "duration": 1,
+            "pitch": 74,
+            "section_assignments": ["release"]
+          }
+        ]
+      },
+      {
+        "layer_id": "pad_synth",
+        "events": [
+          {
+            "start": 1,
+            "duration": 4,
+            "pitch": [60, 67, 72],
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 9,
+            "duration": 4,
+            "pitch": [60, 67, 72],
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 17,
+            "duration": 4,
+            "pitch": [60, 67, 72],
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 25,
+            "duration": 4,
+            "pitch": [60, 67, 74],
+            "section_assignments": ["release"]
+          }
+        ]
+      },
+      {
+        "layer_id": "arpeggio_synth",
+        "events": [
+          {
+            "start": 1,
+            "duration": 0.25,
+            "pitch": [72, 74, 77],
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 1.25,
+            "duration": 0.25,
+            "pitch": [72, 74, 77],
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 9,
+            "duration": 0.25,
+            "pitch": [72, 74, 79],
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 9.25,
+            "duration": 0.25,
+            "pitch": [72, 74, 79],
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 17,
+            "duration": 0.25,
+            "pitch": [72, 74, 81],
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 17.25,
+            "duration": 0.25,
+            "pitch": [72, 74, 81],
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 25,
+            "duration": 0.25,
+            "pitch": [72, 74, 77],
+            "section_assignments": ["release"]
+          },
+          {
+            "start": 25.25,
+            "duration": 0.25,
+            "pitch": [72, 74, 77],
+            "section_assignments": ["release"]
+          }
+        ]
+      },
+      {
+        "layer_id": "bass",
+        "events": [
+          {
+            "start": 1,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 1.5,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 2,
+            "duration": 0.5,
+            "pitch": 62,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 2.5,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["intro_loop"]
+          },
+          {
+            "start": 9,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 9.5,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 10,
+            "duration": 0.5,
+            "pitch": 63,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 10.5,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["vamp_section_1"]
+          },
+          {
+            "start": 17,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 17.5,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 18,
+            "duration": 0.5,
+            "pitch": 64,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 18.5,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["vamp_section_2"]
+          },
+          {
+            "start": 25,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["release"]
+          },
+          {
+            "start": 25.5,
+            "duration": 0.5,
+            "pitch": 60,
+            "section_assignments": ["release"]
+          }
+        ]
+      }
+    ],
+    "rhythm_events": {
+      "kick_drum": [
+        {
+          "start": 1,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 1.5,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 2,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 2.5,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 10,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 10.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 18,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 18.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 25,
+          "duration": 0.25,
+          "section_assignments": ["release"]
+        },
+        {
+          "start": 25.5,
+          "duration": 0.25,
+          "section_assignments": ["release"]
+        }
+      ],
+      "snare_drum": [
+        {
+          "start": 1.5,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 2.5,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 10.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 18.5,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 25.5,
+          "duration": 0.25,
+          "section_assignments": ["release"]
+        }
+      ],
+      "hi_hat": [
+        {
+          "start": 1,
+          "duration": 0.125,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 1.125,
+          "duration": 0.125,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 1.25,
+          "duration": 0.125,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 1.375,
+          "duration": 0.125,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.125,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.25,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.375,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.125,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.25,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.375,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 25,
+          "duration": 0.125,
+          "section_assignments": ["release"]
+        },
+        {
+          "start": 25.125,
+          "duration": 0.125,
+          "section_assignments": ["release"]
+        }
+      ],
+      "shaker": [
+        {
+          "start": 9,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.25,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.5,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.75,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.25,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.5,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.75,
+          "duration": 0.125,
+          "section_assignments": ["vamp_section_2"]
+        }
+      ]
+    }
+  ],
+  "realization_notes": {
+    "harmonic_resolution": {
+      "intro_loop": "C Dorian (C-Eb-F-G-Ab-Bb-C)",
+      "vamp_sections": "C Dorian with subtle harmonic rhythm adjustments",
+      "release": "C Major (C-E-G) for resolution"
+    },
+    "rhythmic_displacement": {
+      "lead_synth": "16th-note offset in vamp sections",
+      "bass": "8th-note anticipation in vamp sections"
+    },
+    "texture_accumulation": {
+      "vamp_section_1": "Add shaker percussion",
+      "vamp_section_2": "Increase pad volume"
+    }
+  }
+}
+```

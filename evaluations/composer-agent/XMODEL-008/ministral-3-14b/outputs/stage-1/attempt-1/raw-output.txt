@@ -1,0 +1,339 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density/timbre changes (GP-01, GP-04)",
+          "strategies": ["persistent loop with cross-domain variation", "layered contrast without melodic variation"]
+        },
+        {
+          "description": "Progression-driven form with harmonic directionality and minimal loop persistence (GP-02)",
+          "strategies": ["harmonic progression as primary driver", "sectional contrast via register/density"]
+        },
+        {
+          "description": "Hybrid loop/progression with focal material shifting between domains (CK-FORM-01)",
+          "strategies": ["melodic persistence + harmonic progression", "textural differentiation"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic tension through persistent forward motion while allowing controlled release via cross-domain contrast",
+      "tradeoff": {
+        "persistence_vs_variation": "Prioritize melodic/harmonic persistence to maintain identity, but allocate variation to texture/density for development"
+      },
+      "trace_reference": "CK-FORM-01, GP-01, GP-04",
+      "selected_option": {
+        "description": "Hybrid loop/progression with melodic persistence and harmonic progression as secondary driver",
+        "structure": ["Intro (0:00-0:12)", "Section A (0:12-0:48)", "Section B (0:48-1:24)", "Release (1:24-1:48)", "Outro (1:48-2:00)"],
+        "section_roles": ["Intro: Establish focal motif", "A: Persistent groove with subtle harmonic motion", "B: Contrast via texture/density", "Release: Harmonic resolution + focal return", "Outro: Gradual fade"]
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "Intro: Establish focal motif and groove; Sections A/B: Contrast via texture/density; Release: Harmonic resolution",
+          "basis": "GP-04 (differentiation via coordinated variables)"
+        },
+        {
+          "description": "Intro: Harmonic setup; Sections A/B: Melodic persistence with harmonic progression; Release: Textural climax",
+          "basis": "CK-FORM-01 (function as filtering criterion)"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain hypnotic character through groove persistence while using texture/density for controlled development",
+      "tradeoff": {
+        "harmonic_vs_textural_contrast": "Use harmonic progression sparingly to avoid disrupting groove; rely on texture/density for section differentiation"
+      },
+      "trace_reference": "GP-04, CK-FORM-01",
+      "selected_option": {
+        "roles": {
+          "Intro": {"function": "Establish focal motif and groove", "harmonic_role": "Tonic pedal", "textural_role": "Sparse"},
+          "Section A": {"function": "Persistent groove with subtle harmonic motion", "harmonic_role": "Loop with minor mode shift", "textural_role": "Mid-density"},
+          "Section B": {"function": "Contrast via texture/density", "harmonic_role": "Persistent loop", "textural_role": "High-density"},
+          "Release": {"function": "Harmonic resolution + focal return", "harmonic_role": "Progression to tonic", "textural_role": "Layered"},
+          "Outro": {"function": "Gradual fade", "harmonic_role": "Tonic pedal", "textural_role": "Sparse"}
+        }
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Minor mode with tonic pedal (GP-02) and subtle harmonic motion via secondary dominants",
+          "strategies": ["Tonic persistence", "Secondary dominants for tension"]
+        },
+        {
+          "description": "Modal interchange (minor/major) with harmonic progression as secondary driver",
+          "strategies": ["Persistent tonic", "Modal shifts for contrast"]
+        },
+        {
+          "description": "Diatonic progression with chromatic inflections for tension (CK-HAR-02)",
+          "strategies": ["Progression-driven", "Chromatic tension points"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support hypnotic character through modal ambiguity and controlled harmonic tension",
+      "tradeoff": {
+        "persistence_vs_motion": "Prioritize tonic persistence to maintain identity, but introduce subtle harmonic motion for development"
+      },
+      "trace_reference": "GP-02, CK-HAR-02",
+      "selected_option": {
+        "mode": "Aeolian (minor) with modal interchange",
+        "tonic": "Decided by composer (not prescribed)",
+        "framework": {
+          "Intro": "Tonic pedal (Aeolian)",
+          "Section A": "Loop with secondary dominant (V7) on beat 3",
+          "Section B": "Modal shift to Ionian (major) for contrast",
+          "Release": "Progression to tonic (Aeolian) with chromatic resolution",
+          "Outro": "Tonic pedal (Aeolian)"
+        },
+        "harmonic_rhythm": "Subtle (1-2 chords per bar)"
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Melodic motif with persistent pitch contour and rhythmic displacement (GP-05)",
+          "strategies": ["Intervalic invariance", "Rhythmic anticipation"]
+        },
+        {
+          "description": "Harmonic ostinato with melodic counterpoint (GP-01)",
+          "strategies": ["Persistent harmonic cell", "Melodic variation"]
+        },
+        {
+          "description": "Textural focal point (e.g., synth pad) with rhythmic groove (N3-P)",
+          "strategies": ["Non-pitched focal element", "Rhythmic persistence"]
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create hypnotic pull through rhythmic persistence and melodic invariance",
+      "tradeoff": {
+        "melodic_vs_rhythmic_focus": "Prioritize melodic contour for identity, but use rhythmic displacement for tension"
+      },
+      "trace_reference": "GP-01, GP-05",
+      "selected_option": {
+        "identity_type": "Melodic motif with rhythmic displacement",
+        "invariants": ["Pitch contour (ascending minor 3rd + leap)", "Rhythmic anticipation (16th-note offset)"],
+        "persistence": "Persistent across all sections with textural variation",
+        "development_strategy": "Fragment motif in Section B, return intact in Release"
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Persistent contour with rhythmic variation (CK-MEL-01)",
+          "strategies": ["Intervalic preservation", "Rhythmic displacement"]
+        },
+        {
+          "description": "Fragmented motif with harmonic recontextualization (CK-DEV-01)",
+          "strategies": ["Pitch-class scattering", "Harmonic realignment"]
+        },
+        {
+          "description": "Static motif with textural recontextualization (GP-01)",
+          "strategies": ["Pitch persistence", "Textural layering"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic pull through melodic invariance while allowing controlled development",
+      "tradeoff": {
+        "stability_vs_development": "Preserve contour for identity, but fragment rhythmically for tension"
+      },
+      "trace_reference": "CK-MEL-01, CK-DEV-01",
+      "selected_option": {
+        "behavior": {
+          "Intro": "Full motif with rhythmic anticipation",
+          "Section A": "Persistent contour with subtle rhythmic variation",
+          "Section B": "Fragmented motif (pitch-class scattering) with harmonic realignment",
+          "Release": "Full motif return with rhythmic realignment",
+          "Outro": "Static motif with textural fade"
+        },
+        "development_operation": "Fragmentation + harmonic recontextualization"
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Ostinato with rhythmic displacement (GP-05)",
+          "strategies": ["Persistent root motion", "Rhythmic syncopation"]
+        },
+        {
+          "description": "Harmonic progression with rhythmic groove (N3-P)",
+          "strategies": ["Chordal alignment", "Percussive emphasis"]
+        },
+        {
+          "description": "Textural support with minimal rhythmic activity (GP-02)",
+          "strategies": ["Sparse harmonic reinforcement", "Layered texture"]
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support groove through rhythmic persistence while maintaining harmonic clarity",
+      "tradeoff": {
+        "harmonic_vs_rhythmic_role": "Prioritize rhythmic groove for hypnotic effect, but align with harmonic framework"
+      },
+      "trace_reference": "GP-05, N3-P",
+      "selected_option": {
+        "role": "Ostinato with rhythmic displacement",
+        "alignment": {
+          "Intro": "Tonic pedal with syncopated 16th notes",
+          "Section A": "Root motion aligned with harmonic progression",
+          "Section B": "Persistent tonic with rhythmic variation",
+          "Release": "Chordal alignment with harmonic resolution",
+          "Outro": "Tonic pedal with sparse activity"
+        },
+        "groove_interaction": "Syncopated 16th-note pattern to complement rhythmic anticipation in melody"
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "Persistent 4/4 with rhythmic displacement (GP-05)",
+          "strategies": ["16th-note syncopation", "Anticipation in melody/bass"]
+        },
+        {
+          "description": "Triplet-based groove with metric modulation (CK-RHY-01)",
+          "strategies": ["Subdivisional displacement", "Tempo shift"]
+        },
+        {
+          "description": "Polyrhythmic layering (e.g., 3/4 over 4/4) (GP-04)",
+          "strategies": ["Cross-rhythmic tension", "Layered complexity"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create hypnotic pull through rhythmic persistence and controlled displacement",
+      "tradeoff": {
+        "stability_vs_complexity": "Prioritize 4/4 stability for accessibility, but introduce rhythmic displacement for tension"
+      },
+      "trace_reference": "GP-05, CK-RHY-01",
+      "selected_option": {
+        "meter": "4/4 with rhythmic displacement",
+        "subdivision": "16th-note syncopation",
+        "displacement": {
+          "melody": "16th-note anticipation",
+          "bass": "Syncopated root motion",
+          "percussion": "Accent on off-beats (if present)"
+        },
+        "development": "Subtle metric modulation in Release (tempo shift to 3/4 for 2 bars)"
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Multi-layered percussion with kick/snare/hi-hat and textural differentiation",
+          "candidate_strategies": ["Section-specific percussion layers", "Rhythmic displacement coordination"]
+        },
+        {
+          "description": "MINIMAL: Sparse percussion with focal rhythmic displacement (e.g., kick + hi-hat)",
+          "candidate_strategies": ["Rhythmic persistence with textural variation", "Accent on off-beats"]
+        },
+        {
+          "description": "DELEGATED: Percussive functions handled by bass/melody (e.g., syncopated bass as rhythmic driver)",
+          "candidate_strategies": ["Bass as primary groove element", "Melodic anticipation for rhythmic tension"]
+        },
+        {
+          "description": "INTENTIONALLY_ABSENT: No independent percussion track",
+          "candidate_strategies": ["Textural groove via bass/melody", "Rhythmic displacement in harmonic rhythm"]
+        }
+      ],
+      "selected_outcome": "MINIMAL",
+      "candidate_strategies": [
+        "Sparse percussion with kick (on beat) and hi-hat (16th-note syncopation)",
+        "Rhythmic displacement coordinated with bass/melody",
+        "Section-specific textural variation (e.g., added shaker in Section B)"
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support hypnotic groove through rhythmic persistence while maintaining textural clarity",
+      "tradeoff": {
+        "complexity_vs_focus": "Prioritize minimal percussion to avoid overwhelming groove, but use displacement for tension"
+      },
+      "trace_reference": "N3-P, GP-05",
+      "bass_groove_interaction": "Syncopated 16th-note bass pattern to complement hi-hat displacement",
+      "focal_hierarchy_interaction": "Percussion accents support melodic focal points (e.g., hi-hat on melodic anticipation)",
+      "section_behavior": {
+        "Intro": "Kick + sparse hi-hat",
+        "Section A": "Kick + syncopated hi-hat",
+        "Section B": "Kick + hi-hat + shaker (textural contrast)",
+        "Release": "Kick + hi-hat with metric modulation",
+        "Outro": "Kick + sparse hi-hat"
+      },
+      "development_behavior": {
+        "Intro to Section A": "Add hi-hat syncopation",
+        "Section A to B": "Add shaker for textural contrast",
+        "Section B to Release": "Metric modulation (tempo shift)",
+        "Release to Outro": "Remove shaker, return to sparse percussion"
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "description": "Layered synth pads with rhythmic displacement (GP-04)",
+          "strategies": ["Persistent harmonic texture", "Rhythmic variation"]
+        },
+        {
+          "description": "Sparse instrumentation with focal textural contrast (GP-06)",
+          "strategies": ["Section-specific density", "Timbral differentiation"]
+        },
+        {
+          "description": "Polymetric texturing (e.g., 3/4 melody over 4/4 groove) (CK-RHY-02)",
+          "strategies": ["Cross-rhythmic tension", "Layered complexity"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support hypnotic character through textural persistence and controlled contrast",
+      "tradeoff": {
+        "stability_vs_contrast": "Prioritize harmonic texture persistence, but introduce density/timbre variation for development"
+      },
+      "trace_reference": "GP-04, GP-06",
+      "selected_option": {
+        "layers": {
+          "Intro": ["Synth pad (tonic)", "Sparse hi-hat"],
+          "Section A": ["Synth pad (tonic)", "Hi-hat syncopation", "Bass ostinato"],
+          "Section B": ["Synth pad (tonic + major mode)", "Hi-hat + shaker", "Bass ostinato"],
+          "Release": ["Layered pads (tonic + resolution)", "Hi-hat with metric modulation", "Bass chordal alignment"],
+          "Outro": ["Synth pad (tonic)", "Sparse hi-hat"]
+        },
+        "contrast_strategy": "Density variation (sparse → mid → high → layered) with timbral persistence"
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "description": "Fragmentation + harmonic recontextualization (CK-DEV-01)",
+          "strategies": ["Pitch-class scattering", "Harmonic realignment"]
+        },
+        {
+          "description": "Textural layering with rhythmic persistence (GP-01)",
+          "strategies": ["Additive texture", "Rhythmic invariance"]
+        },
+        {
+          "description": "Modal interchange with melodic invariance (GP-02)",
+          "strategies": ["Harmonic contrast", "Pitch contour preservation"]
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain hypnotic pull through melodic invariance while allowing controlled harmonic/textural development",
+      "tradeoff": {
+        "identity_vs_development": "Preserve melodic contour for identity, but fragment rhythmically/harmonically for tension"
+      },
+      "trace_reference": "CK-DEV-01, GP-01",
+      "selected_option": {
+        "strategy": "Fragmentation + harmonic recontextualization + textural layering",
+        "operations": {
+          "Intro to Section A": "Add hi-hat syncopation",
+          "Section A to B": "Fragment melodic motif + modal shift (minor → major)",
+          "Section B to Release": "Return full motif + harmonic resolution",
+          "Release to Outro": "Textural fade"
+        },
+        "invariants": ["Melodic contour", "Rhythmic displacement pattern"],
+        "variants": ["Pitch-class scattering in Section B", "Modal interchange", "Density variation"]
+      }
+    },
+    {
+      "dec

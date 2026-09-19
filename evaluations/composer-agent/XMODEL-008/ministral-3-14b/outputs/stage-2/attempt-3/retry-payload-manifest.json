@@ -1,0 +1,10 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-008\\ministral-3-14b\\outputs\\stage-2\\attempt-3\\retry-input.txt",
+  "payload_sha256": "7feb15aeef459ca092556f6685840a553fe6f596c5aa5eb921380ff617f14b36",
+  "original_payload_sha256": "153432dcc2d371d609c9457f0dc0693ae6b6dbce9aa302c671c3c7b9b3f138cd",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "markdown wrapper is not valid structured output",
+    "Return exactly one raw JSON object. No Markdown, no code fences, no prose before or after JSON."
+  ]
+}

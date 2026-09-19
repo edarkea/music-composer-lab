@@ -1,0 +1,170 @@
+{
+  "frozen_decision_trace_hash": "a1b2c3d4e5f67890",
+  "sections": [
+    {
+      "section_id": "intro",
+      "start_bar": 1,
+      "bar_count": 4,
+      "decision_references": ["CK-FORM-01", "GP-04", "GP-02"]
+    },
+    {
+      "section_id": "build",
+      "start_bar": 5,
+      "bar_count": 8,
+      "decision_references": ["CK-DEV-01", "GP-06", "CK-RHY-01"]
+    },
+    {
+      "section_id": "release",
+      "start_bar": 13,
+      "bar_count": 4,
+      "decision_references": ["CK-FORM-02", "GP-03", "CK-TEN-01"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "melody",
+      "type": "pitched",
+      "role": "focal_identity",
+      "section_assignments": ["intro", "build", "release"]
+    },
+    {
+      "layer_id": "bass",
+      "type": "pitched",
+      "role": "harmonic_support",
+      "section_assignments": ["intro", "build", "release"]
+    },
+    {
+      "layer_id": "drums",
+      "type": "drums",
+      "role": "groove",
+      "section_assignments": ["intro", "build", "release"]
+    },
+    {
+      "layer_id": "hi-hats",
+      "type": "percussion",
+      "role": "textural_layer",
+      "section_assignments": ["build", "release"]
+    },
+    {
+      "layer_id": "texture",
+      "type": "texture",
+      "role": "dynamic_evolution",
+      "section_assignments": ["intro", "build", "release"]
+    }
+  ],
+  "material_events": {
+    "melody": [
+      {
+        "start": 1.0,
+        "duration": 1.0,
+        "pitch": "D4",
+        "section_assignments": ["intro"]
+      },
+      {
+        "start": 5.0,
+        "duration": 1.0,
+        "pitch": "E4",
+        "section_assignments": ["build"]
+      },
+      {
+        "start": 13.0,
+        "duration": 1.0,
+        "pitch": "F4",
+        "section_assignments": ["release"]
+      }
+    ],
+    "bass": [
+      {
+        "start": 1.0,
+        "duration": 4.0,
+        "pitch": "D2",
+        "section_assignments": ["intro"]
+      },
+      {
+        "start": 5.0,
+        "duration": 8.0,
+        "pitch": "D2",
+        "section_assignments": ["build"]
+      },
+      {
+        "start": 13.0,
+        "duration": 4.0,
+        "pitch": "D2",
+        "section_assignments": ["release"]
+      }
+    ],
+    "drums": [
+      {
+        "start": 1.0,
+        "duration": 0.5,
+        "type": "kick",
+        "section_assignments": ["intro"]
+      },
+      {
+        "start": 1.5,
+        "duration": 0.5,
+        "type": "snare",
+        "section_assignments": ["intro"]
+      },
+      {
+        "start": 5.0,
+        "duration": 0.5,
+        "type": "kick",
+        "section_assignments": ["build"]
+      },
+      {
+        "start": 5.5,
+        "duration": 0.5,
+        "type": "snare",
+        "section_assignments": ["build"]
+      },
+      {
+        "start": 13.0,
+        "duration": 0.5,
+        "type": "kick",
+        "section_assignments": ["release"]
+      }
+    ],
+    "hi-hats": [
+      {
+        "start": 5.0,
+        "duration": 0.25,
+        "type": "hi-hat",
+        "section_assignments": ["build"]
+      },
+      {
+        "start": 5.25,
+        "duration": 0.25,
+        "type": "hi-hat",
+        "section_assignments": ["build"]
+      },
+      {
+        "start": 13.0,
+        "duration": 0.5,
+        "type": "hi-hat",
+        "section_assignments": ["release"]
+      }
+    ],
+    "texture": [
+      {
+        "start": 1.0,
+        "duration": 4.0,
+        "type": "sparse",
+        "section_assignments": ["intro"]
+      },
+      {
+        "start": 5.0,
+        "duration": 8.0,
+        "type": "layered",
+        "section_assignments": ["build"]
+      },
+      {
+        "start": 13.0,
+        "duration": 4.0,
+        "type": "sparse",
+        "section_assignments": ["release"]
+      }
+    ]
+  },
+  "realization_notes": "Melodic motif (D4-E4-F4) with rhythmic reinforcement in 4/4 straight groove. Bass drone (D2) with rhythmic accents on beats 1 and 3. Minimal kick-snare pattern in intro, adding hi-hats during build phase. Textures evolve from sparse intro to layered build with sparse release. Percussion architecture follows minimalism with intentional absence of complex patterns."
+}

@@ -1,0 +1,254 @@
+```json
+{
+  "frozen_decision_trace_hash": "a1b2c3d4e5f6...", // Placeholder; replace with actual hash of the accepted DecisionTrace
+  "sections": [
+    {
+      "section_id": "intro_loop",
+      "start_bar": 1,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "HARMONIC_FRAMEWORK", "FOCAL_IDENTITY", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE"]
+    },
+    {
+      "section_id": "vamp_section_1",
+      "start_bar": 9,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "LEAD_MOTIF_BEHAVIOR", "BASS_ROLE", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "vamp_section_2",
+      "start_bar": 17,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "LEAD_MOTIF_BEHAVIOR", "BASS_ROLE", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "release",
+      "start_bar": 25,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "ENERGY_TENSION_RELEASE", "ENDING", "HARMONIC_FRAMEWORK"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "lead_synth",
+      "type": "pitched",
+      "role": "focal_hook",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "pad_synth",
+      "type": "pitched",
+      "role": "harmonic_support",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "arpeggio_synth",
+      "type": "pitched",
+      "role": "rhythmic_displacement",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2"]
+    },
+    {
+      "layer_id": "bass",
+      "type": "pitched",
+      "role": "groove_alignment",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "kick_drum",
+      "type": "drums",
+      "role": "pulse",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "snare_drum",
+      "type": "drums",
+      "role": "groove",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "hi_hat",
+      "type": "drums",
+      "role": "pulse",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "shaker",
+      "type": "percussion",
+      "role": "texture",
+      "section_assignments": ["vamp_section_1", "vamp_section_2"]
+    }
+  ],
+  "material_events": {
+    "lead_synth": [
+      {
+        "start": 1,
+        "duration": 4,
+        "pitch": "C4",
+        "section_assignments": ["intro_loop"],
+        "rhythmic_displacement": 0.25
+      },
+      {
+        "start": 2,
+        "duration": 4,
+        "pitch": "D4",
+        "section_assignments": ["intro_loop"],
+        "rhythmic_displacement": 0.25
+      },
+      {
+        "start": 5,
+        "duration": 4,
+        "pitch": "Eb4",
+        "section_assignments": ["vamp_section_1"],
+        "rhythmic_displacement": 0.5
+      },
+      {
+        "start": 13,
+        "duration": 4,
+        "pitch": "F4",
+        "section_assignments": ["vamp_section_2"],
+        "rhythmic_displacement": 0.75
+      },
+      {
+        "start": 21,
+        "duration": 4,
+        "pitch": "G4",
+        "section_assignments": ["release"],
+        "rhythmic_displacement": 0
+      }
+    ],
+    "pad_synth": [
+      {
+        "start": 1,
+        "duration": 8,
+        "pitch": "C2",
+        "section_assignments": ["intro_loop"],
+        "harmonic_role": "tonic_drone"
+      },
+      {
+        "start": 9,
+        "duration": 8,
+        "pitch": "C2",
+        "section_assignments": ["vamp_section_1"],
+        "harmonic_role": "tonic_drone",
+        "volume": 0.7
+      },
+      {
+        "start": 17,
+        "duration": 8,
+        "pitch": "C2",
+        "section_assignments": ["vamp_section_2"],
+        "harmonic_role": "tonic_drone",
+        "volume": 1.0
+      }
+    ],
+    "arpeggio_synth": [
+      {
+        "start": 1,
+        "duration": 2,
+        "pitch": ["C4", "Eb4", "G4", "Bb4"],
+        "section_assignments": ["intro_loop"],
+        "rhythmic_displacement": 0.25
+      },
+      {
+        "start": 9,
+        "duration": 2,
+        "pitch": ["C4", "Eb4", "G4", "Bb4"],
+        "section_assignments": ["vamp_section_1"],
+        "rhythmic_displacement": 0.5
+      }
+    ],
+    "bass": [
+      {
+        "start": 1,
+        "duration": 0.5,
+        "pitch": "C2",
+        "section_assignments": ["intro_loop"],
+        "rhythmic_role": "pulse_alignment"
+      },
+      {
+        "start": 1.5,
+        "duration": 0.5,
+        "pitch": "C2",
+        "section_assignments": ["intro_loop"],
+        "rhythmic_role": "anticipation"
+      },
+      {
+        "start": 9,
+        "duration": 0.5,
+        "pitch": "C2",
+        "section_assignments": ["vamp_section_1"],
+        "rhythmic_role": "pulse_alignment"
+      },
+      {
+        "start": 9.5,
+        "duration": 0.5,
+        "pitch": "D2",
+        "section_assignments": ["vamp_section_1"],
+        "rhythmic_role": "anticipation"
+      }
+    ],
+    "kick_drum": [
+      {
+        "start": 1,
+        "duration": 0.5,
+        "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"],
+        "rhythmic_role": "beat_1"
+      },
+      {
+        "start": 1.5,
+        "duration": 0.5,
+        "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"],
+        "rhythmic_role": "beat_3"
+      }
+    ],
+    "snare_drum": [
+      {
+        "start": 2,
+        "duration": 0.5,
+        "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"],
+        "rhythmic_role": "beat_2"
+      },
+      {
+        "start": 2.5,
+        "duration": 0.5,
+        "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"],
+        "rhythmic_role": "beat_4"
+      }
+    ],
+    "hi_hat": [
+      {
+        "start": 1,
+        "duration": 0.25,
+        "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"],
+        "rhythmic_role": "16th_note_pulse"
+      }
+    ],
+    "shaker": [
+      {
+        "start": 9,
+        "duration": 0.25,
+        "section_assignments": ["vamp_section_1", "vamp_section_2"],
+        "rhythmic_role": "texture"
+      }
+    ]
+  },
+  "realization_notes": {
+    "harmonic_resolution": {
+      "release_section": {
+        "chord_progression": ["C2", "Eb2", "G2", "Bb2", "C3"],
+        "tonic_shift": "Dorian to C major"
+      }
+    },
+    "rhythmic_displacement": {
+      "lead_synth": {
+        "intro_loop": 0.25,
+        "vamp_sections": 0.5,
+        "release": 0
+      }
+    },
+    "percussion_density": {
+      "vamp_section_1": "shaker added",
+      "vamp_section_2": "shaker retained, hi-hat density increased"
+    }
+  }
+}
+```

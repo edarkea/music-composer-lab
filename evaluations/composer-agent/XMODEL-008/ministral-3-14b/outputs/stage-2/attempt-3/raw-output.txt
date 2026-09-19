@@ -1,0 +1,352 @@
+```json
+{
+  "frozen_decision_trace_hash": "a1b2c3d4e5f6...", // Placeholder; replace with actual hash of the accepted DecisionTrace
+  "sections": [
+    {
+      "section_id": "intro_loop",
+      "start_bar": 1,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "HARMONIC_FRAMEWORK", "FOCAL_IDENTITY", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE"]
+    },
+    {
+      "section_id": "vamp_section_1",
+      "start_bar": 9,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "LEAD_MOTIF_BEHAVIOR", "BASS_ROLE", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "vamp_section_2",
+      "start_bar": 17,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "LEAD_MOTIF_BEHAVIOR", "BASS_ROLE", "GROOVE", "N3-P_PERCUSSION_ARCHITECTURE", "TEXTURE", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "release",
+      "start_bar": 25,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "ENERGY_TENSION_RELEASE", "ENDING", "HARMONIC_FRAMEWORK"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "lead_synth",
+      "type": "pitched",
+      "role": "melodic_hook",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "pad_synth",
+      "type": "pitched",
+      "role": "harmonic_support",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "arpeggio_synth",
+      "type": "pitched",
+      "role": "rhythmic_displacement",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "bass",
+      "type": "pitched",
+      "role": "groove_alignment",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "kick_drum",
+      "type": "drums",
+      "role": "groove_pulse",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "snare_drum",
+      "type": "drums",
+      "role": "groove_accent",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "hi_hat",
+      "type": "drums",
+      "role": "pulse",
+      "section_assignments": ["intro_loop", "vamp_section_1", "vamp_section_2", "release"]
+    },
+    {
+      "layer_id": "shaker",
+      "type": "percussion",
+      "role": "texture",
+      "section_assignments": ["vamp_section_1", "vamp_section_2"]
+    }
+  ],
+  "material_events": {
+    "lead_synth": {
+      "events": [
+        {
+          "start": 1,
+          "duration": 4,
+          "pitch": "C4",
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 2,
+          "duration": 4,
+          "pitch": "D4",
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 5,
+          "duration": 4,
+          "pitch": "Eb4",
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 10,
+          "duration": 4,
+          "pitch": "F4",
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 25,
+          "duration": 8,
+          "pitch": "C4",
+          "section_assignments": ["release"]
+        }
+      ]
+    },
+    "pad_synth": {
+      "events": [
+        {
+          "start": 1,
+          "duration": 8,
+          "pitch": ["C2", "G2", "A2"],
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9,
+          "duration": 8,
+          "pitch": ["C2", "G2", "A2"],
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17,
+          "duration": 8,
+          "pitch": ["C2", "G2", "A2", "Bb2"],
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 25,
+          "duration": 8,
+          "pitch": ["C2", "E2", "G2"],
+          "section_assignments": ["release"]
+        }
+      ]
+    },
+    "arpeggio_synth": {
+      "events": [
+        {
+          "start": 1,
+          "duration": 4,
+          "pitch": ["C4", "Eb4", "G4"],
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 3,
+          "duration": 4,
+          "pitch": ["D4", "F4", "A4"],
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9,
+          "duration": 4,
+          "pitch": ["Eb4", "G4", "Bb4"],
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17,
+          "duration": 4,
+          "pitch": ["F4", "A4", "C5"],
+          "section_assignments": ["vamp_section_2"]
+        }
+      ]
+    },
+    "bass": {
+      "events": [
+        {
+          "start": 1,
+          "duration": 2,
+          "pitch": "C2",
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 2,
+          "duration": 2,
+          "pitch": "C2",
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 3,
+          "duration": 2,
+          "pitch": "D2",
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 4,
+          "duration": 2,
+          "pitch": "D2",
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9,
+          "duration": 1,
+          "pitch": "C2",
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.5,
+          "duration": 1,
+          "pitch": "D2",
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17,
+          "duration": 1,
+          "pitch": "Eb2",
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 25,
+          "duration": 4,
+          "pitch": "C2",
+          "section_assignments": ["release"]
+        }
+      ]
+    },
+    "kick_drum": {
+      "events": [
+        {
+          "start": 1,
+          "duration": 0.5,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 1.5,
+          "duration": 0.5,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 2,
+          "duration": 0.5,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 2.5,
+          "duration": 0.5,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9,
+          "duration": 0.5,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 25,
+          "duration": 0.5,
+          "section_assignments": ["release"]
+        }
+      ]
+    },
+    "snare_drum": {
+      "events": [
+        {
+          "start": 2,
+          "duration": 0.5,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 4,
+          "duration": 0.5,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 10,
+          "duration": 0.5,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 18,
+          "duration": 0.5,
+          "section_assignments": ["vamp_section_2"]
+        }
+      ]
+    },
+    "hi_hat": {
+      "events": [
+        {
+          "start": 1,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 1.25,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 1.5,
+          "duration": 0.25,
+          "section_assignments": ["intro_loop"]
+        },
+        {
+          "start": 9,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 25,
+          "duration": 0.25,
+          "section_assignments": ["release"]
+        }
+      ]
+    },
+    "shaker": {
+      "events": [
+        {
+          "start": 9,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 9.25,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_1"]
+        },
+        {
+          "start": 17,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        },
+        {
+          "start": 17.25,
+          "duration": 0.25,
+          "section_assignments": ["vamp_section_2"]
+        }
+      ]
+    }
+  ],
+  "realization_notes": {
+    "harmonic_resolution": {
+      "intro_loop": "C Dorian (C D Eb F G A Bb)",
+      "vamp_section_1": "C Dorian with added Bb in vamp section 2",
+      "release": "C Major (C E G) for resolution"
+    },
+    "rhythmic_displacement": {
+      "lead_synth": "16th-note offset in vamp sections",
+      "arpeggio_synth": "Syncopated 8th-note patterns"
+    },
+    "percussion_architecture": {
+      "intro_loop": "Full percussion (kick, snare, hi-hat)",
+      "vamp_section_1": "Add shaker for texture",
+      "release": "Drop to kick and hi-hat only"
+    }
+  }
+}
+```

@@ -1,0 +1,338 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "id": "loop_vamp",
+          "description": "Persistent loop with vamp sections for development, aligning with 'persistent forward motion' and 'gradual accumulation'.",
+          "basis": "GP-01, GP-02, GP-04"
+        },
+        {
+          "id": "verse_chorus",
+          "description": "Verse-chorus structure with clear contrast, but risks losing hypnotic continuity.",
+          "basis": "CK-FORM-01"
+        },
+        {
+          "id": "free_form",
+          "description": "Non-linear, experimental form with unpredictable sections, but may lack coherence.",
+          "basis": "ARTISTIC_PRIORITY"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic continuity while allowing controlled development.",
+      "tradeoff": "Loop structure prioritizes persistence over abrupt contrast.",
+      "trace_reference": "GP-01, GP-02, GP-04",
+      "selected_option": {
+        "id": "loop_vamp",
+        "description": "Loop-based form with vamp sections for gradual accumulation and one clear release."
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "id": "intro_loop",
+          "description": "Intro loop establishing focal identity, followed by vamp sections for development.",
+          "basis": "GP-01, GP-04"
+        },
+        {
+          "id": "verse_chorus_loop",
+          "description": "Verse as loop, chorus as vamp, but may disrupt hypnotic flow.",
+          "basis": "CK-FORM-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic continuity with clear focal identity in the intro loop.",
+      "tradeoff": "Vamp sections allow development without abrupt section changes.",
+      "trace_reference": "GP-01, GP-04",
+      "selected_option": {
+        "id": "intro_loop",
+        "description": "Intro loop (establish), vamp sections (develop), release (ending)."
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "id": "modal_loop",
+          "description": "Persistent modal loop (e.g., Dorian or Phrygian) with harmonic rhythm aligned to vamp sections.",
+          "basis": "GP-02, CK-HAR-02"
+        },
+        {
+          "id": "progressive_loop",
+          "description": "Loop with subtle harmonic progression (e.g., I-IV-V-I), but risks breaking hypnotic tension.",
+          "basis": "CK-HAR-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic tension with a static modal loop.",
+      "tradeoff": "Harmonic rhythm will be slow to accommodate gradual accumulation.",
+      "trace_reference": "GP-02, CK-HAR-02",
+      "selected_option": {
+        "id": "modal_loop",
+        "description": "Dorian mode loop (tonic: C) with harmonic rhythm tied to vamp sections."
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "id": "melodic_hook",
+          "description": "Persistent melodic hook in the upper register (e.g., synth lead) with rhythmic displacement.",
+          "basis": "GP-01, GP-05"
+        },
+        {
+          "id": "harmonic_pedal",
+          "description": "Harmonic pedal (e.g., sustained drone) as focal identity, but may lack hypnotic motion.",
+          "basis": "CK-HAR-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create hypnotic motion with a melodic hook.",
+      "tradeoff": "Rhythmic displacement will require careful alignment with groove.",
+      "trace_reference": "GP-01, GP-05",
+      "selected_option": {
+        "id": "melodic_hook",
+        "description": "Synth lead hook (C Dorian scale) with rhythmic anticipation (16th-note offset)."
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "id": "persistent_variation",
+          "description": "Persistent motif with subtle rhythmic variation (e.g., syncopation) in vamp sections.",
+          "basis": "GP-01, CK-DEV-01"
+        },
+        {
+          "id": "fragmented_development",
+          "description": "Fragmented motif in vamp sections, but risks losing hypnotic continuity.",
+          "basis": "CK-DEV-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic continuity with rhythmic variation.",
+      "tradeoff": "Variation will be subtle to preserve identity.",
+      "trace_reference": "GP-01, CK-DEV-01",
+      "selected_option": {
+        "id": "persistent_variation",
+        "description": "Motif preserved with 16th-note rhythmic displacement in vamp sections."
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "id": "groove_alignment",
+          "description": "Bass aligns with kick drum (16th-note pulse) but anticipates on off-beats for tension.",
+          "basis": "GP-05, N3-P"
+        },
+        {
+          "id": "harmonic_pedal",
+          "description": "Bass sustains tonic (C) with minimal movement, but may lack groove.",
+          "basis": "CK-HAR-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support groove while creating tension with anticipation.",
+      "tradeoff": "Anticipation requires careful alignment with percussion.",
+      "trace_reference": "GP-05, N3-P",
+      "selected_option": {
+        "id": "groove_alignment",
+        "description": "Bass follows kick pulse with 8th-note anticipation on vamp sections."
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "id": "16th_note_pulse",
+          "description": "16th-note pulse with hi-hat on every 16th, kick on 1 and 3, snare on 2 and 4.",
+          "basis": "GP-05, CK-RHY-01"
+        },
+        {
+          "id": "syncopated_groove",
+          "description": "Syncopated groove with displaced snare, but may disrupt hypnotic flow.",
+          "basis": "CK-RHY-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Establish hypnotic pulse with clear rhythmic displacement.",
+      "tradeoff": "Syncopation will be limited to vamp sections.",
+      "trace_reference": "GP-05, CK-RHY-01",
+      "selected_option": {
+        "id": "16th_note_pulse",
+        "description": "16th-note pulse with hi-hat on every 16th, kick on 1 and 3, snare on 2 and 4."
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "id": "FULL",
+          "description": "Full percussion architecture with kick, snare, hi-hat, and auxiliary percussion (e.g., shaker).",
+          "candidate_strategies": [
+            {
+              "strategy": "Layered percussion: kick/snare for groove, hi-hat for pulse, shaker for texture.",
+              "basis": "GP-05, N3-P"
+            }
+          ]
+        },
+        {
+          "id": "MINIMAL",
+          "description": "Minimal percussion (kick and hi-hat only), but risks losing hypnotic tension.",
+          "candidate_strategies": [
+            {
+              "strategy": "Kick on 1 and 3, hi-hat on every 16th.",
+              "basis": "N3-P"
+            }
+          ]
+        },
+        {
+          "id": "DELEGATED",
+          "description": "Delegate percussion to bass and synth textures, but may lack rhythmic clarity.",
+          "candidate_strategies": [
+            {
+              "strategy": "Bass carries rhythmic pulse; synth textures provide rhythmic displacement.",
+              "basis": "N3-P"
+            }
+          ]
+        }
+      ],
+      "selected_outcome": "FULL",
+      "candidate_strategies": [
+        {
+          "strategy": "Layered percussion: kick/snare for groove, hi-hat for pulse, shaker for texture.",
+          "basis": "GP-05, N3-P"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support hypnotic groove with layered percussion.",
+      "tradeoff": "Auxiliary percussion (shaker) adds texture but may overcomplicate.",
+      "trace_reference": "GP-05, N3-P",
+      "bass_groove_interaction": "Bass anticipates kick on off-beats in vamp sections.",
+      "focal_hierarchy_interaction": "Kick/snare prioritized; hi-hat and shaker support texture.",
+      "section_behavior": {
+        "intro_loop": "Full percussion with emphasis on kick/snare.",
+        "vamp_sections": "Hi-hat and shaker added for texture; kick/snare retain groove."
+      },
+      "development_behavior": "Percussion density increases in vamp sections (shaker added)."
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "id": "layered_synths",
+          "description": "Layered synths (lead, pad, arpeggio) with rhythmic displacement.",
+          "basis": "GP-01, GP-06"
+        },
+        {
+          "id": "minimal_textures",
+          "description": "Minimal textures (lead only), but may lack hypnotic depth.",
+          "basis": "ARTISTIC_PRIORITY"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create hypnotic depth with layered textures.",
+      "tradeoff": "Rhythmic displacement requires careful coordination.",
+      "trace_reference": "GP-01, GP-06",
+      "selected_option": {
+        "id": "layered_synths",
+        "description": "Lead (hook), pad (harmonic support), arpeggio (rhythmic displacement)."
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "id": "gradual_accumulation",
+          "description": "Gradual accumulation of textures (e.g., add shaker, pad volume) in vamp sections.",
+          "basis": "GP-04, CK-DEV-01"
+        },
+        {
+          "id": "abrupt_contrast",
+          "description": "Abrupt contrast in vamp sections, but risks disrupting hypnotic flow.",
+          "basis": "CK-FORM-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain hypnotic continuity with gradual accumulation.",
+      "tradeoff": "Accumulation will be subtle to preserve identity.",
+      "trace_reference": "GP-04, CK-DEV-01",
+      "selected_option": {
+        "id": "gradual_accumulation",
+        "description": "Add shaker in vamp section 1, pad volume in vamp section 2."
+      }
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": [
+        {
+          "id": "controlled_release",
+          "description": "Controlled release via harmonic resolution (e.g., Dorian to C major) and percussion drop.",
+          "basis": "GP-03, CK-FORM-02"
+        },
+        {
+          "id": "abrupt_release",
+          "description": "Abrupt release with full stop, but may lack hypnotic resolution.",
+          "basis": "ARTISTIC_PRIORITY"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create hypnotic resolution with controlled release.",
+      "tradeoff": "Harmonic resolution requires careful alignment with percussion.",
+      "trace_reference": "GP-03, CK-FORM-02",
+      "selected_option": {
+        "id": "controlled_release",
+        "description": "Harmonic resolution to C major chord; percussion drops to kick/hi-hat only."
+      }
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": [
+        {
+          "id": "harmonic_resolution",
+          "description": "Ending with harmonic resolution (Dorian to C major) and gradual fade-out.",
+          "basis": "GP-03, CK-FORM-02"
+        },
+        {
+          "id": "abrupt_stop",
+          "description": "Abrupt stop with full percussion cut, but may lack hypnotic closure.",
+          "basis": "ARTISTIC_PRIORITY"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create hypnotic closure with harmonic resolution.",
+      "tradeoff": "Fade-out requires careful timing.",
+      "trace_reference": "GP-03, CK-FORM-02",
+      "selected_option": {
+        "id": "harmonic_resolution",
+        "description": "Fade-out on C major chord with percussion gradually dropping out."
+      }
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": [
+        {
+          "id": "none",
+          "description": "No conflicts identified; all decisions align with brief and genre pack.",
+          "basis": "CK-SONG-01"
+        },
+        {
+          "id": "resolution_needed",
+          "description": "Conflicts require Owner intervention (e.g., harmonic tension vs. groove clarity).",
+          "basis": "ARTISTIC_PRIORITY"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Ensure all decisions align with brief and genre pack.",
+      "tradeoff": "No conflicts identified; proceed to SongPlan handoff.",
+      "trace_reference": "CK-SONG-01",
+      "selected_option": {
+        "id": "none",
+        "description": "No cross-domain conflicts; all decisions resolved."
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-008\\qwen3-14b\\outputs\\stage-3\\attempt-2\\retry-input.txt",
+  "payload_sha256": "6643cad2ccd9e801da531cb2dbca696c8490384a7fe466f1f74e7a9f0b86d399",
+  "original_payload_sha256": "bc2800c774caea486ac043378035acdcc65c9e3fa39bc819d28c5998b005f8d5",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "missing required field: $.arrangement.sections[0].section_id",
+    "missing required field: $.arrangement.sections[1].section_id",
+    "missing required field: $.arrangement.sections[2].section_id",
+    "missing required field: $.tracks[2].kit_id",
+    "missing required field: $.tracks[2].map_id"
+  ]
+}

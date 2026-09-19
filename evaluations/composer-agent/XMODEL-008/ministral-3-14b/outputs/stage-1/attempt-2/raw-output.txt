@@ -1,0 +1,438 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "id": "loop_vamp",
+          "description": "Persistent loop with vamp sections for development, aligning with 'persistent forward motion' and 'gradual accumulation'.",
+          "basis": "GP-01, GP-02, GP-04"
+        },
+        {
+          "id": "verse_chorus",
+          "description": "Verse-chorus structure with clear contrast, but risks losing hypnotic continuity.",
+          "basis": "GP-06"
+        },
+        {
+          "id": "free_form",
+          "description": "Non-linear, free-form sections with controlled contrast, prioritizing identity preservation.",
+          "basis": "CK-FORM-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic continuity while allowing controlled contrast.",
+      "tradeoff": {
+        "persistency": "High",
+        "contrast": "Controlled"
+      },
+      "trace_reference": "GP-01, GP-02, GP-04, CK-FORM-01",
+      "selected_option": {
+        "id": "loop_vamp",
+        "description": "Loop-based vamp structure with gradual accumulation and one clear release."
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "id": "intro_loop",
+          "description": "Intro as a loop establishing focal identity, followed by vamp sections for development.",
+          "basis": "GP-01, GP-03"
+        },
+        {
+          "id": "verse_chorus_loop",
+          "description": "Verse as loop, chorus as vamp with release, but risks losing hypnotic continuity.",
+          "basis": "GP-06"
+        },
+        {
+          "id": "free_form_roles",
+          "description": "Dynamic roles with no fixed loop, prioritizing identity preservation across sections.",
+          "basis": "CK-FORM-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Establish hypnotic continuity through loop-based vamp sections.",
+      "tradeoff": {
+        "identity_preservation": "High",
+        "formal_contrast": "Controlled"
+      },
+      "trace_reference": "GP-01, GP-03, CK-FORM-01",
+      "selected_option": {
+        "id": "intro_loop",
+        "description": "Intro loop (establish identity) → Vamp sections (development) → Release (one clear release)."
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "id": "modal_loop",
+          "description": "Persistent modal loop (e.g., Dorian/Phrygian) with harmonic rhythm aligned to vamp sections.",
+          "basis": "GP-02, CK-HAR-02"
+        },
+        {
+          "id": "progression_driven",
+          "description": "Chord progression with directed motion, but risks losing hypnotic continuity.",
+          "basis": "CK-HAR-01"
+        },
+        {
+          "id": "free_atonality",
+          "description": "Atonal or free harmonic framework, prioritizing identity preservation.",
+          "basis": "CK-HAR-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve hypnotic continuity through a persistent modal loop.",
+      "tradeoff": {
+        "harmonic_stability": "High",
+        "development_flexibility": "Controlled"
+      },
+      "trace_reference": "GP-02, CK-HAR-02",
+      "selected_option": {
+        "id": "modal_loop",
+        "description": "Persistent modal loop (e.g., Dorian mode) with harmonic rhythm tied to vamp sections."
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "id": "melodic_hook",
+          "description": "Melodic hook as focal identity, preserved across sections with subtle variation.",
+          "basis": "GP-01, CK-MEL-01"
+        },
+        {
+          "id": "harmonic_pedal",
+          "description": "Harmonic pedal (e.g., drone) as focal identity, with melodic/rhythmic variation.",
+          "basis": "GP-02"
+        },
+        {
+          "id": "textural_focus",
+          "description": "Textural focus (e.g., synth pads) as identity, with minimal melodic/harmonic change.",
+          "basis": "GP-04"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Establish a hypnotic, tense identity through a melodic hook.",
+      "tradeoff": {
+        "melodic_coherence": "High",
+        "textural_variation": "Controlled"
+      },
+      "trace_reference": "GP-01, CK-MEL-01",
+      "selected_option": {
+        "id": "melodic_hook",
+        "description": "Melodic hook as focal identity, preserved with subtle variation across sections."
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "id": "persistent_contour",
+          "description": "Preserve melodic contour of the hook with rhythmic variation.",
+          "basis": "CK-MEL-01, CK-DEV-01"
+        },
+        {
+          "id": "fragmented_motif",
+          "description": "Fragment the hook into motifs, recombining for development.",
+          "basis": "CK-DEV-01"
+        },
+        {
+          "id": "static_motif",
+          "description": "Static motif with no variation, prioritizing hypnotic tension.",
+          "basis": "CK-MEL-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve melodic contour while allowing rhythmic variation for gradual accumulation.",
+      "tradeoff": {
+        "contour_preservation": "High",
+        "development_flexibility": "Controlled"
+      },
+      "trace_reference": "CK-MEL-01, CK-DEV-01",
+      "selected_option": {
+        "id": "persistent_contour",
+        "description": "Preserve melodic contour of the hook with rhythmic variation for development."
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "id": "groove_alignment",
+          "description": "Bass aligns with groove, reinforcing harmonic framework and focal identity.",
+          "basis": "N3-P, GP-02"
+        },
+        {
+          "id": "counterpoint",
+          "description": "Bass as counterpoint to melody, adding harmonic complexity.",
+          "basis": "CK-HAR-01"
+        },
+        {
+          "id": "minimal",
+          "description": "Minimal bass role, prioritizing hypnotic tension.",
+          "basis": "N3-P"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Align bass with groove to reinforce hypnotic continuity.",
+      "tradeoff": {
+        "groove_coherence": "High",
+        "harmonic_complexity": "Controlled"
+      },
+      "trace_reference": "N3-P, GP-02",
+      "selected_option": {
+        "id": "groove_alignment",
+        "description": "Bass aligns with groove, reinforcing harmonic framework and focal identity."
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "id": "steady_4_4",
+          "description": "Steady 4/4 groove with subtle rhythmic variation for accumulation.",
+          "basis": "GP-05, CK-RHY-01"
+        },
+        {
+          "id": "syncopated",
+          "description": "Syncopated groove with anticipatory rhythms, but risks losing hypnotic continuity.",
+          "basis": "GP-05"
+        },
+        {
+          "id": "free_rhythm",
+          "description": "Free rhythmic framework, prioritizing hypnotic tension.",
+          "basis": "CK-RHY-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Establish a steady 4/4 groove with subtle rhythmic variation for gradual accumulation.",
+      "tradeoff": {
+        "rhythmic_stability": "High",
+        "development_flexibility": "Controlled"
+      },
+      "trace_reference": "GP-05, CK-RHY-01",
+      "selected_option": {
+        "id": "steady_4_4",
+        "description": "Steady 4/4 groove with subtle rhythmic variation for accumulation."
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "id": "FULL",
+          "description": "Full percussion architecture with explicit roles for kick, snare, hi-hats, and auxiliary percussion.",
+          "candidate_strategies": [
+            {
+              "strategy": "kick_snare_hihat",
+              "description": "Standard kick-snare-hi-hat pattern with subtle variations for accumulation."
+            },
+            {
+              "strategy": "auxiliary_percussion",
+              "description": "Add auxiliary percussion (e.g., shakers, claps) for textural contrast."
+            }
+          ]
+        },
+        {
+          "id": "MINIMAL",
+          "description": "Minimal percussion with kick and hi-hats only, prioritizing hypnotic tension.",
+          "candidate_strategies": [
+            {
+              "strategy": "kick_hihat",
+              "description": "Kick on beat 1 and hi-hats on 8th notes, no snare."
+            }
+          ]
+        },
+        {
+          "id": "DELEGATED",
+          "description": "Delegate percussion functions to other layers (e.g., bass, synths).",
+          "candidate_strategies": [
+            {
+              "strategy": "bass_drums",
+              "description": "Use bass as rhythmic driver, no independent percussion."
+            }
+          ]
+        },
+        {
+          "id": "INTENTIONALLY_ABSENT",
+          "description": "No percussion, relying solely on groove from bass and synths.",
+          "candidate_strategies": []
+        }
+      ],
+      "selected_outcome": "FULL",
+      "candidate_strategies": [
+        {
+          "strategy": "kick_snare_hihat",
+          "description": "Standard kick-snare-hi-hat pattern with subtle variations for accumulation."
+        },
+        {
+          "strategy": "auxiliary_percussion",
+          "description": "Add auxiliary percussion (e.g., shakers, claps) for textural contrast."
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Establish a hypnotic, tense groove with controlled contrast through full percussion architecture.",
+      "tradeoff": {
+        "groove_coherence": "High",
+        "textural_variation": "Controlled"
+      },
+      "trace_reference": "N3-P, GP-05",
+      "bass_groove_interaction": "Kick aligns with bass to reinforce groove, with hi-hats providing rhythmic texture.",
+      "focal_hierarchy_interaction": "Percussion supports melodic hook as focal identity, with auxiliary percussion adding contrast.",
+      "section_behavior": {
+        "intro_loop": "Full percussion with steady groove.",
+        "vamp_sections": "Subtle rhythmic variations for accumulation.",
+        "release": "Percussive climax with auxiliary percussion."
+      },
+      "development_behavior": {
+        "identity_preservation": "Percussion maintains groove alignment while allowing textural variation.",
+        "contrast": "Auxiliary percussion introduces controlled contrast."
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "id": "layered_synths",
+          "description": "Layered synth pads with subtle movement for hypnotic continuity.",
+          "basis": "GP-04"
+        },
+        {
+          "id": "sparse_textures",
+          "description": "Sparse textures with high contrast, prioritizing identity preservation.",
+          "basis": "GP-06"
+        },
+        {
+          "id": "organic_instruments",
+          "description": "Organic instruments (e.g., strings, piano) for contrast, but risks losing hypnotic continuity.",
+          "basis": "GP-04"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use layered synth pads for hypnotic continuity with subtle movement.",
+      "tradeoff": {
+        "textural_coherence": "High",
+        "development_flexibility": "Controlled"
+      },
+      "trace_reference": "GP-04",
+      "selected_option": {
+        "id": "layered_synths",
+        "description": "Layered synth pads with subtle movement for hypnotic continuity."
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "id": "gradual_accumulation",
+          "description": "Gradual accumulation of layers/textures for tension, with one clear release.",
+          "basis": "GP-04, CK-DEV-01"
+        },
+        {
+          "id": "sectional_contrast",
+          "description": "Sectional contrast with abrupt changes, but risks losing hypnotic continuity.",
+          "basis": "GP-06"
+        },
+        {
+          "id": "static_development",
+          "description": "Static development with minimal change, prioritizing hypnotic tension.",
+          "basis": "CK-DEV-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use gradual accumulation of layers/textures for tension, with one clear release.",
+      "tradeoff": {
+        "tension_building": "High",
+        "release_clarity": "High"
+      },
+      "trace_reference": "GP-04, CK-DEV-01",
+      "selected_option": {
+        "id": "gradual_accumulation",
+        "description": "Gradual accumulation of layers/textures for tension, with one clear release."
+      }
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": [
+        {
+          "id": "hypnotic_tension",
+          "description": "Persistent hypnotic tension with gradual release at the end.",
+          "basis": "GP-03, CK-FORM-02"
+        },
+        {
+          "id": "dynamic_contrast",
+          "description": "Dynamic contrast between tense and relaxed sections, but risks losing hypnotic continuity.",
+          "basis": "GP-06"
+        },
+        {
+          "id": "static_energy",
+          "description": "Static energy with no release, prioritizing hypnotic tension.",
+          "basis": "CK-FORM-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain persistent hypnotic tension with gradual release at the end.",
+      "tradeoff": {
+        "tension_persistence": "High",
+        "release_clarity": "High"
+      },
+      "trace_reference": "GP-03, CK-FORM-02",
+      "selected_option": {
+        "id": "hypnotic_tension",
+        "description": "Persistent hypnotic tension with gradual release at the end."
+      }
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": [
+        {
+          "id": "clear_release",
+          "description": "One clear release with full percussion and harmonic resolution.",
+          "basis": "GP-03, CK-FORM-02"
+        },
+        {
+          "id": "abrupt_cutoff",
+          "description": "Abrupt cutoff with no resolution, prioritizing hypnotic tension.",
+          "basis": "GP-03"
+        },
+        {
+          "id": "gradual_fade",
+          "description": "Gradual fade with minimal percussion, but risks losing hypnotic continuity.",
+          "basis": "CK-FORM-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Use one clear release with full percussion and harmonic resolution.",
+      "tradeoff": {
+        "release_clarity": "High",
+        "tension_persistence": "Controlled"
+      },
+      "trace_reference": "GP-03, CK-FORM-02",
+      "selected_option": {
+        "id": "clear_release",
+        "description": "One clear release with full percussion and harmonic resolution."
+      }
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": [
+        {
+          "id": "harmony_melody",
+          "description": "Ensure harmonic framework supports melodic contour of the hook.",
+          "basis": "CK-HAR-01"
+        },
+        {
+          "id": "rhythm_groove",
+          "description": "Align rhythmic placement with groove to avoid conflict.",
+          "basis": "CK-RHY-01"
+        },
+        {
+          "id": "texture_density",
+          "description": "Balance textural density to avoid overwhelming focal identity.",
+          "basis": "GP-04"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Resolve conflicts by ensuring harmony supports melody, rhythm aligns with groove, and texture density is balanced.",
+      "tradeoff
