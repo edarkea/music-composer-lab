@@ -1,0 +1,381 @@
+{
+  "test_id": "XMODEL-009",
+  "interface_version": "composer-interface-v1.1",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "chronology_note": "Timestamp values are UTC for captures; failed request uses Ollama local time converted to approximate UTC ordering.",
+  "requests": [
+    {
+      "request_id": "derived:qwen3:14b:stage-1:attempt-1",
+      "request_id_source": "stage/attempt derived because capture predates request_id field",
+      "model_requested": "qwen3:14b",
+      "model_reported": "qwen3:14b",
+      "stage": "stage-1",
+      "attempt": 1,
+      "request_kind": "ordinary",
+      "captured_at_utc": "2026-09-19T19:01:56.440330+00:00",
+      "payload_path": "qwen3-14b\\revision-001\\stage-1-payload.txt",
+      "payload_sha256": "0ed8244b617281f39e553f40a9212bf74b555d21c6876abc7a5a9c26dcd88be5",
+      "request_sha256": "0d8aa5694631da5c079907e4d5258807a0123ff5fdfbdab18c7fe0dca122e9b4",
+      "response_path": "qwen3-14b\\outputs\\stage-1\\attempt-1\\raw-api-response.json",
+      "response_sha256": "845dc3cf3e64868d4ad5dc3d55dc2ca5265cedb1d5fc2f1c410131afa91bb9a7",
+      "raw_output_path": "qwen3-14b\\outputs\\stage-1\\attempt-1\\raw-output.txt",
+      "raw_output_sha256": "01df5240214fb36d9293dba71d6871d137abb9828b5105529412f5dd5bc1fc9a",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 4096
+      },
+      "done_reason": "stop",
+      "eval_count": 2864,
+      "transport_status": "COMPLETE_RESPONSE inferred from valid full API capture",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": true,
+        "category": "contract_validation",
+        "errors": [],
+        "engine_validation": null
+      },
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": "derived:qwen3:14b:stage-2:attempt-1",
+      "request_id_source": "stage/attempt derived because capture predates request_id field",
+      "model_requested": "qwen3:14b",
+      "model_reported": "qwen3:14b",
+      "stage": "stage-2",
+      "attempt": 1,
+      "request_kind": "ordinary",
+      "captured_at_utc": "2026-09-19T19:41:54.509333+00:00",
+      "payload_path": "qwen3-14b\\stage-2-payload.txt",
+      "payload_sha256": "de4be3a1390aed95f2b25641327b85399865413c63a913afb691afa7807b31e7",
+      "request_sha256": "a5a44ccb9fe67a05780c6b31e391083dfc3327b667cb6a7dd9fb7309b5f09edb",
+      "response_path": "qwen3-14b\\outputs\\stage-2\\attempt-1\\raw-api-response.json",
+      "response_sha256": "33329c59c334360878f85013527dc4bb903c7cb1a2e584aa2186459e6a30077f",
+      "raw_output_path": "qwen3-14b\\outputs\\stage-2\\attempt-1\\raw-output.txt",
+      "raw_output_sha256": "bbc7f9268f70c4073b5234b67444045ee3f26afd7bf5d5097f0ca630a1f8503e",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "done_reason": "stop",
+      "eval_count": 1437,
+      "transport_status": "COMPLETE_RESPONSE inferred from valid full API capture",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": true,
+        "category": "contract_validation",
+        "errors": [],
+        "engine_validation": null
+      },
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": "derived:qwen3:14b:stage-3:attempt-1",
+      "request_id_source": "stage/attempt derived because capture predates request_id field",
+      "model_requested": "qwen3:14b",
+      "model_reported": "qwen3:14b",
+      "stage": "stage-3",
+      "attempt": 1,
+      "request_kind": "ordinary",
+      "captured_at_utc": "2026-09-19T20:27:31.337303+00:00",
+      "payload_path": "qwen3-14b\\stage-3-payload.txt",
+      "payload_sha256": "8fa80a4972a40777900fe2075e1006716e41019dcf15f53cd9f992c2bfc14537",
+      "request_sha256": "87690c9f77bab533c89702d5b9d18391989d5316ba7358ca3ebc47aa01b0e836",
+      "response_path": "qwen3-14b\\outputs\\stage-3\\attempt-1\\raw-api-response.json",
+      "response_sha256": "aa4b11775bbe087d017b271ee68762d7e9a9ef4adc45a513473bdf8bd4afbe49",
+      "raw_output_path": "qwen3-14b\\outputs\\stage-3\\attempt-1\\raw-output.txt",
+      "raw_output_sha256": "d1856ae5c8235b745d450aa1128864ae700305ad271bab9397108d8d3ca4449d",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "done_reason": "stop",
+      "eval_count": 2491,
+      "transport_status": "COMPLETE_RESPONSE inferred from valid full API capture",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": false,
+        "category": "musical_semantic_validation_failure",
+        "errors": [
+          "engine validation FAIL: musical_semantic_validation_failure: pitch.outside_scale: tracks[0].motifs[0].events[1].pitches[0]: pitch must be in the song scale unless chromatic; pitch.outside_scale: tracks[1].motifs[0].events[0].pitches[0]: pitch must be in the song scale unless chromatic"
+        ],
+        "engine_validation": {
+          "status": "FAIL",
+          "category": "musical_semantic_validation_failure",
+          "message": "pitch.outside_scale: tracks[0].motifs[0].events[1].pitches[0]: pitch must be in the song scale unless chromatic; pitch.outside_scale: tracks[1].motifs[0].events[0].pitches[0]: pitch must be in the song scale unless chromatic",
+          "engine_invoked": true
+        }
+      },
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": null,
+      "request_id_source": "not recorded by runner; incident identified by stage/attempt and Ollama task 4729",
+      "model_requested": "qwen3:14b",
+      "model_reported": null,
+      "stage": "stage-3",
+      "attempt": 2,
+      "request_kind": "ordinary retry request; timed out before complete response",
+      "captured_at_utc": null,
+      "request_start_local_approx": "2026-09-19T15:29:02-05:00",
+      "request_end_local": "2026-09-19T16:29:02-05:00",
+      "elapsed_seconds_observed": 3600,
+      "payload_path": "qwen3-14b/outputs/stage-3/attempt-2/retry-input.txt",
+      "payload_sha256": "f06cda45cc4945a6170baf179b6f421402256019a915878b8817942399e0664a",
+      "request_sha256": null,
+      "response_path": null,
+      "response_sha256": null,
+      "raw_output_path": null,
+      "raw_output_sha256": null,
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "done_reason": null,
+      "transport_status": "CLIENT_TIMEOUT; Ollama logged HTTP 500 and cancelled task 4729",
+      "capture_status": "NOT_CAPTURED",
+      "gate": {
+        "status": "NOT_RUN",
+        "reason": "no complete response"
+      },
+      "ollama_log": "C:/Users/Steeven/AppData/Local/Ollama/server-1.log: POST /api/chat 500 after 1h0m0s; task 4729 cancelled; n_tokens=16953 truncated=0",
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": "XMODEL-009-QWEN-STAGE3-RECOVERY-001",
+      "request_id_source": "manifest",
+      "model_requested": "qwen3:14b",
+      "model_reported": "qwen3:14b",
+      "stage": "stage-3",
+      "attempt": 2,
+      "request_kind": "technical_recovery_request",
+      "captured_at_utc": "2026-09-19T22:55:01.583522+00:00",
+      "payload_path": "qwen3-14b\\outputs\\stage-3\\attempt-2\\retry-input.txt",
+      "payload_sha256": "f06cda45cc4945a6170baf179b6f421402256019a915878b8817942399e0664a",
+      "request_sha256": "b3441fddeefae2ac9c56ef24bbaf13ef10a4563843d43cf6b555753f171b0581",
+      "response_path": "qwen3-14b\\outputs\\stage-3\\recovery-001\\capture\\raw-api-response.json",
+      "response_sha256": "3939c63e7cf01cb590261d62ffcb0a8b217a0f7825207ea25cf97e6f4927fa4c",
+      "raw_output_path": "qwen3-14b\\outputs\\stage-3\\recovery-001\\capture\\raw-output.txt",
+      "raw_output_sha256": "f6700f9e27f384f9e602ed777a4be0373062fa46dc99daaab42ccb29fcd05a4b",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "done_reason": "stop",
+      "eval_count": 2800,
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": false,
+        "category": "invalid_songplan_structure",
+        "errors": [
+          "engine validation FAIL: invalid_songplan_structure: duration must be a valid fraction"
+        ],
+        "engine_validation": {
+          "status": "FAIL",
+          "category": "invalid_songplan_structure",
+          "message": "duration must be a valid fraction",
+          "engine_invoked": true
+        }
+      },
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": "XMODEL-009-QWEN-STAGE3-ATTEMPT-003",
+      "request_id_source": "manifest",
+      "model_requested": "qwen3:14b",
+      "model_reported": "qwen3:14b",
+      "stage": "stage-3",
+      "attempt": 3,
+      "request_kind": "ordinary",
+      "captured_at_utc": "2026-09-20T00:04:29.307161+00:00",
+      "payload_path": "qwen3-14b\\outputs\\stage-3\\attempt-3\\retry-input.txt",
+      "payload_sha256": "23a66ee48eab2e7b548d209da69073111ad16548fdd1c94ae4aca557ba51ddee",
+      "request_sha256": "36ba564da87728b2e58e206c2d0a6157483e93be649cda988995cf443c9cb63b",
+      "response_path": "qwen3-14b\\outputs\\stage-3\\attempt-3\\raw-api-response.json",
+      "response_sha256": "e5cae254cd4e4835160cd722f9df432430ace29e2bc5a8565ed84080b342a702",
+      "raw_output_path": "qwen3-14b\\outputs\\stage-3\\attempt-3\\raw-output.txt",
+      "raw_output_sha256": "11060832e23851563f22aa1f4061db386ce620f5f32f81e17272282af84cd730",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "done_reason": "stop",
+      "eval_count": 2565,
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": false,
+        "category": "musical_semantic_validation_failure",
+        "errors": [
+          "engine validation FAIL: musical_semantic_validation_failure: pitch.outside_scale: tracks[0].motifs[0].events[1].pitches[0]: pitch must be in the song scale unless chromatic; pitch.outside_scale: tracks[1].motifs[0].events[0].pitches[0]: pitch must be in the song scale unless chromatic; pitch.outside_scale: tracks[1].motifs[0].events[2].pitches[0]: pitch must be in the song scale unless chromatic"
+        ],
+        "engine_validation": {
+          "status": "FAIL",
+          "category": "musical_semantic_validation_failure",
+          "message": "pitch.outside_scale: tracks[0].motifs[0].events[1].pitches[0]: pitch must be in the song scale unless chromatic; pitch.outside_scale: tracks[1].motifs[0].events[0].pitches[0]: pitch must be in the song scale unless chromatic; pitch.outside_scale: tracks[1].motifs[0].events[2].pitches[0]: pitch must be in the song scale unless chromatic",
+          "engine_invoked": true
+        }
+      },
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": "stage-1-attempt-1",
+      "request_id_source": "manifest",
+      "model_requested": "ministral-3:14b",
+      "model_reported": "ministral-3:14b",
+      "stage": "stage-1",
+      "attempt": 1,
+      "request_kind": "ordinary",
+      "captured_at_utc": "2026-09-20T01:29:14.598616+00:00",
+      "payload_path": "ministral-3-14b\\revision-001\\stage-1-payload.txt",
+      "payload_sha256": "0ed8244b617281f39e553f40a9212bf74b555d21c6876abc7a5a9c26dcd88be5",
+      "request_sha256": "33fc3e8a163c996932332a9ee01419d50354c26c4df2d8053f1294e26b598579",
+      "response_path": "ministral-3-14b\\outputs\\stage-1\\attempt-1\\raw-api-response.json",
+      "response_sha256": "f935485a2c0bd865a0dd6b3fe12ea6f23cae93a766baece83591bf713b529ede",
+      "raw_output_path": "ministral-3-14b\\outputs\\stage-1\\attempt-1\\raw-output.txt",
+      "raw_output_sha256": "770f65e7d8b29a31aaf97dbe0951bd8f91a3deaa008545e1776120fe7641aa18",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 4096
+      },
+      "done_reason": "length",
+      "eval_count": 4096,
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": false,
+        "category": "serialization_failure",
+        "errors": [
+          "output does not parse as complete JSON: Unterminated string starting at: line 350 column 26 (char 16584)",
+          "Return exactly one raw JSON object. No Markdown, no code fences, no prose before or after JSON."
+        ],
+        "engine_validation": null
+      },
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": "XMODEL-009-MINISTRAL-STAGE1-ATTEMPT-002",
+      "request_id_source": "manifest",
+      "model_requested": "ministral-3:14b",
+      "model_reported": "ministral-3:14b",
+      "stage": "stage-1",
+      "attempt": 2,
+      "request_kind": "ordinary",
+      "captured_at_utc": "2026-09-20T02:38:28.294892+00:00",
+      "payload_path": "ministral-3-14b\\outputs\\stage-1\\attempt-2\\retry-input.txt",
+      "payload_sha256": "bdd8e18a0c07c6c3fc9d62304e5c92d2acebb80430db339ace250937440ae907",
+      "request_sha256": "4760527c26887ae7a4c1141f20f05b2e2b6f47083d112714792a5dc199f85316",
+      "response_path": "ministral-3-14b\\outputs\\stage-1\\attempt-2\\capture\\raw-api-response.json",
+      "response_sha256": "352f3ee0d46f26dd0b847768a0782fd774e0571e0ec41bba446e300b49450037",
+      "raw_output_path": "ministral-3-14b\\outputs\\stage-1\\attempt-2\\capture\\raw-output.txt",
+      "raw_output_sha256": "a4e8f070804f170397ee8b4226756eaf6feaa3d5b961b19e8c908e69a49b07a4",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 4096
+      },
+      "done_reason": "length",
+      "eval_count": 4096,
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": false,
+        "category": "serialization_failure",
+        "errors": [
+          "output does not parse as complete JSON: Unterminated string starting at: line 483 column 22 (char 16150)",
+          "Return exactly one raw JSON object. No Markdown, no code fences, no prose before or after JSON."
+        ],
+        "engine_validation": null
+      },
+      "adapter_semantic_repair": false
+    },
+    {
+      "request_id": "XMODEL-009-MINISTRAL-STAGE1-ATTEMPT-003",
+      "request_id_source": "manifest",
+      "model_requested": "ministral-3:14b",
+      "model_reported": "ministral-3:14b",
+      "stage": "stage-1",
+      "attempt": 3,
+      "request_kind": "ordinary",
+      "captured_at_utc": "2026-09-20T05:00:58.855905+00:00",
+      "payload_path": "ministral-3-14b\\outputs\\stage-1\\attempt-3\\retry-input.txt",
+      "payload_sha256": "6188af36d8c2d0e9928156b5bc44d01c2f5e59bf066f95f48f257500a691df8a",
+      "request_sha256": "9d735cbf130285ac25c0568bcdd1222e9829f7e6054b4d0c9b85c0ef6e44c8e8",
+      "response_path": "ministral-3-14b\\outputs\\stage-1\\attempt-3\\capture\\raw-api-response.json",
+      "response_sha256": "92926f4e637a47c0a1fb95f94b439bb30b987b2e6dab93fda180c02fd1a859c9",
+      "raw_output_path": "ministral-3-14b\\outputs\\stage-1\\attempt-3\\capture\\raw-output.txt",
+      "raw_output_sha256": "e4ed262acd82b31306ddd487ddce62eda7a3a0668a9a9bed1fa3ddd71386e6b5",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 4096
+      },
+      "done_reason": "length",
+      "eval_count": 4096,
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "gate": {
+        "pass": false,
+        "category": "serialization_failure",
+        "errors": [
+          "output does not parse as complete JSON: Unterminated string starting at: line 364 column 24 (char 16405)",
+          "Return exactly one raw JSON object. No Markdown, no code fences, no prose before or after JSON."
+        ],
+        "engine_validation": null
+      },
+      "adapter_semantic_repair": false
+    }
+  ],
+  "reconciliation": {
+    "ollama_requests_total": 9,
+    "complete_captures": 8,
+    "transport_failures_without_complete_response": 1,
+    "qwen_requests": 6,
+    "ministral_requests": 3,
+    "preflight_failure_not_a_model_request": true,
+    "stage3_attempt2_recovery_is_additional_request": true
+  }
+}
