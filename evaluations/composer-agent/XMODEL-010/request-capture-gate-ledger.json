@@ -1,0 +1,549 @@
+{
+  "audit_generated_at_utc": "2026-09-20T23:07:09.376743+00:00",
+  "experiment_id": "XMODEL-010",
+  "project": "music-composer-lab",
+  "model": "qwen3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "condition": "NO-EXAMPLE",
+  "brief": {
+    "path": "evaluations/composer-agent/XMODEL-010/brief.yaml",
+    "sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b"
+  },
+  "frozen_settings": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict_by_stage": {
+      "stage-1": 4096,
+      "stage-2": 8192,
+      "stage-3": 8192
+    },
+    "http_timeout_seconds": 7200,
+    "max_evaluable_attempts_per_stage": 3
+  },
+  "engine": {
+    "package_version": "4.0.0",
+    "git_commit": "71bbc73337da0d755618bd796e19ce2e82cc3df",
+    "wheel_sha256": "110E987A1E102C1CF3D29FEC1CCC68583459030F40748E10D66CE1F8E4819FE1",
+    "validated_interpreter": ".venv/Scripts/python.exe"
+  },
+  "host_capabilities": {
+    "drums_drum_external_map_id": "song001_r1_steven_slate_map",
+    "approved_percussion_map_ids": [],
+    "stage3_host_config_visible_to_model": true,
+    "attempt2_model_output_used_drum_map_id_on_percussion_track": true
+  },
+  "totals": {
+    "model_requests_sent": 5,
+    "complete_captures": 5,
+    "expected_model_requests": 5,
+    "stage1_gate": "PASS",
+    "stage2_gate": "PASS",
+    "stage3_gate_failures": 3,
+    "stage3_attempts_used": 3,
+    "stage3_attempt4_exists": false,
+    "midi_generated": false,
+    "engine_approved_final_songplan_v2": false,
+    "independent_compositional_audit": "NOT PERFORMED",
+    "audible_evaluation": "NOT PERFORMED",
+    "ministral_executed": false,
+    "semantic_repairs": 0,
+    "adapter_musical_decisions": 0
+  },
+  "requests": [
+    {
+      "experiment_id": "XMODEL-010",
+      "model": "qwen3:14b",
+      "interface_version": "composer-interface-v1.1",
+      "stage": "stage-1",
+      "attempt": 1,
+      "request_id": "XMODEL-010-QWEN-STAGE1-A1",
+      "request_kind": "evaluable_attempt",
+      "payload_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/stage-1-payload.txt",
+      "payload_sha256": "5fdae8712a5e74e91ad78b078b97b06c5dfcfaab230d77c1fd6458301e54a8ce",
+      "prior_path": null,
+      "prior_sha256": null,
+      "schema_path": "evaluations/composer-agent/XMODEL-010/stage-1-output-schema-v1.1-n3-canonical.json",
+      "schema_sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5",
+      "transport_timeout_seconds": 7200.0,
+      "request_state_history": [
+        {
+          "state": "PREPARED",
+          "at_utc": "2026-09-20T19:45:39.410903+00:00"
+        },
+        {
+          "state": "SENT",
+          "at_utc": "2026-09-20T19:45:39.414903+00:00"
+        },
+        {
+          "state": "CAPTURED",
+          "at_utc": "2026-09-20T19:58:06.091233+00:00"
+        }
+      ],
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "api_done": true,
+      "done_reason": "stop",
+      "eval_count": 2496,
+      "prompt_eval_count": 16659,
+      "elapsed_seconds": 746.6560000000027,
+      "raw_api_response_sha256": "4cd05e7dbde793eff37749a5c781d189ad2d86bf80ba1e0adc86c0e97fc5408e",
+      "raw_output_sha256": "c7886b2a093a871cd85b34a26768c3459375c0c15440f4c1f66ebd67aa9ae8d4",
+      "gate_status": "PASS",
+      "gate_category": "contract_validation",
+      "gate_errors": [],
+      "engine_invoked": false,
+      "engine_validation_status": null,
+      "semantic_repair_performed": false,
+      "adapter_musical_decisions": 0,
+      "notes": {
+        "stage-1": "Stage 1 schema contract gate PASS."
+      },
+      "captured_at_utc": "2026-09-20T19:58:06.088234+00:00",
+      "model_identifier_requested": "qwen3:14b",
+      "model_identifier_reported": "qwen3:14b",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 4096
+      },
+      "request_sha256": "a9f94a474abd44b069502aee42b377ee9b03567d9126d6d2a7197037a7397179",
+      "resolved_record_ids": [
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/brief.yaml",
+        "D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/decision-schema.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/guardrails.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/completion-checklist.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/genres/indie-dance.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml",
+        "D:/projects/music-composer-lab/integrations/composer-agent/stage-1-decision-trace-schema.yaml",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-1-prompt-v1.2.txt",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-1-output-schema-v1.1-n3-canonical.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/model-visible-host-capabilities.md"
+      ],
+      "capture_directory": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-1/attempt-1"
+    },
+    {
+      "experiment_id": "XMODEL-010",
+      "model": "qwen3:14b",
+      "interface_version": "composer-interface-v1.1",
+      "stage": "stage-2",
+      "attempt": 1,
+      "request_id": "XMODEL-010-QWEN-STAGE2-A1",
+      "request_kind": "evaluable_attempt",
+      "payload_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/stage-2-payload.txt",
+      "payload_sha256": "a25d82686d9388d70405b7fc04c8fe71de748067b651bd1118795c42d4136c72",
+      "prior_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-1/accepted-output.json",
+      "prior_sha256": "c7886b2a093a871cd85b34a26768c3459375c0c15440f4c1f66ebd67aa9ae8d4",
+      "schema_path": "evaluations/composer-agent/XMODEL-010/stage-2-json-object-format-v1.0.json",
+      "schema_sha256": "e37720ab68fd755e3c7cda1b97ccec120e4c7ea8598727ab77a9ceb618feb4d7",
+      "transport_timeout_seconds": 7200.0,
+      "request_state_history": [
+        {
+          "state": "PREPARED",
+          "at_utc": "2026-09-20T20:05:18.352837+00:00"
+        },
+        {
+          "state": "SENT",
+          "at_utc": "2026-09-20T20:05:18.356347+00:00"
+        },
+        {
+          "state": "CAPTURED",
+          "at_utc": "2026-09-20T20:13:19.164825+00:00"
+        }
+      ],
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "api_done": true,
+      "done_reason": "stop",
+      "eval_count": 1365,
+      "prompt_eval_count": 17050,
+      "elapsed_seconds": 480.7969999999914,
+      "raw_api_response_sha256": "7d03509bc43ea53c4b9168205735f65e2c23c7621bd71482915be659871aa0f7",
+      "raw_output_sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823",
+      "gate_status": "PASS",
+      "gate_category": "contract_validation",
+      "gate_errors": [],
+      "engine_invoked": false,
+      "engine_validation_status": null,
+      "semantic_repair_performed": false,
+      "adapter_musical_decisions": 0,
+      "notes": {
+        "stage-2": "Stage 2 generic object contract gate PASS."
+      },
+      "captured_at_utc": "2026-09-20T20:13:19.162323+00:00",
+      "model_identifier_requested": "qwen3:14b",
+      "model_identifier_reported": "qwen3:14b",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "request_sha256": "e2fbe87afabbaee323f70df10b91a99557a0da9b035f77ed572992a550975688",
+      "resolved_record_ids": [
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/brief.yaml",
+        "D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/decision-schema.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/guardrails.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/completion-checklist.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/genres/indie-dance.yaml",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml",
+        "D:/projects/music-composer-lab/integrations/composer-agent/stage-2-musical-material-schema.yaml",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-2-prompt-v1.2.txt",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-2-contract-validation-map-v1.1.md",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-2-json-object-format-v1.0.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-1/accepted-output.json"
+      ],
+      "capture_directory": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-2/attempt-1"
+    },
+    {
+      "experiment_id": "XMODEL-010",
+      "model": "qwen3:14b",
+      "interface_version": "composer-interface-v1.1",
+      "stage": "stage-3",
+      "attempt": 1,
+      "request_id": "XMODEL-010-QWEN-STAGE3-A1",
+      "request_kind": "evaluable_attempt",
+      "payload_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/stage-3-prepared/stage-3-payload.txt",
+      "payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+      "prior_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json",
+      "prior_sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823",
+      "schema_path": "evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+      "schema_sha256": "6a4def87fedbf44240f9201306fe14456f72ef361b0441172918f47f26a6b095",
+      "transport_timeout_seconds": 7200.0,
+      "request_state_history": [
+        {
+          "state": "PREPARED",
+          "at_utc": "2026-09-20T20:16:01.133438+00:00"
+        },
+        {
+          "state": "SENT",
+          "at_utc": "2026-09-20T20:16:01.137946+00:00"
+        },
+        {
+          "state": "CAPTURED",
+          "at_utc": "2026-09-20T21:29:11.780393+00:00"
+        }
+      ],
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "api_done": true,
+      "done_reason": "stop",
+      "eval_count": 2975,
+      "prompt_eval_count": 19577,
+      "elapsed_seconds": 4390.608999999997,
+      "raw_api_response_sha256": "0a0a0a3450469216844994a9f184ad25b9c911f5053a16127a6e40127f6e4582",
+      "raw_output_sha256": "e372d5c1164fde619b082f9605cdea4b96c38c5fe37423306e20b2ab1573ec47",
+      "gate_status": "FAIL",
+      "gate_category": "musical_semantic_validation_failure",
+      "gate_errors": [
+        "engine validation FAIL: musical_semantic_validation_failure: pitch.outside_scale: tracks[0].motifs[1].events[0].pitches[0]: pitch must be in the song scale unless chromatic"
+      ],
+      "engine_invoked": true,
+      "engine_validation_status": "FAIL",
+      "semantic_repair_performed": false,
+      "adapter_musical_decisions": 0,
+      "notes": {
+        "stage-3-attempt-1": "Engine parsed/validated the SongPlan; musical-semantic validation rejected an out-of-scale pitch."
+      },
+      "captured_at_utc": "2026-09-20T21:29:11.776391+00:00",
+      "model_identifier_requested": "qwen3:14b",
+      "model_identifier_reported": "qwen3:14b",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "request_sha256": "cb2154e0f7e2b02966e913bd4da4ecb154d95cd10d9cb7d2af1b91dd2988121e",
+      "resolved_record_ids": [
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/brief.yaml",
+        "D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/songplan-v2-contract.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/integration-contract.md",
+        "D:/projects/music-composer-lab/integrations/composer-agent/stage-3-songplan-serialization-schema.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/host-config.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/host-maps/song001_r1_steven_slate_map.yaml",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-prompt-v1.2.txt",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/engine-songplan-v2.schema-music-engine-4.0.0.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json"
+      ],
+      "capture_directory": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-3/attempt-1"
+    },
+    {
+      "experiment_id": "XMODEL-010",
+      "model": "qwen3:14b",
+      "interface_version": "composer-interface-v1.1",
+      "stage": "stage-3",
+      "attempt": 2,
+      "request_id": "XMODEL-010-QWEN-STAGE3-A2",
+      "request_kind": "evaluable_attempt",
+      "payload_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-3/attempt-2/retry-input.txt",
+      "payload_sha256": "ce407823c5942ab789d46dfaae151c78b1abfee33918ba469b145a81485402e7",
+      "prior_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json",
+      "prior_sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823",
+      "schema_path": "evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+      "schema_sha256": "6a4def87fedbf44240f9201306fe14456f72ef361b0441172918f47f26a6b095",
+      "transport_timeout_seconds": 7200.0,
+      "request_state_history": [
+        {
+          "state": "PREPARED",
+          "at_utc": "2026-09-20T21:32:00.250140+00:00"
+        },
+        {
+          "state": "SENT",
+          "at_utc": "2026-09-20T21:32:00.254140+00:00"
+        },
+        {
+          "state": "CAPTURED",
+          "at_utc": "2026-09-20T21:51:46.428611+00:00"
+        }
+      ],
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "api_done": true,
+      "done_reason": "stop",
+      "eval_count": 1808,
+      "prompt_eval_count": 19637,
+      "elapsed_seconds": 1186.1570000000065,
+      "raw_api_response_sha256": "37b79e232c61403545951754677d7bf4423709a909ac9094efe16210ab442dfa",
+      "raw_output_sha256": "716f8a9333b42162f36cc3cf660b4217558cc31bbf37342f099d5e9a468772d8",
+      "gate_status": "FAIL",
+      "gate_category": "host_configuration_failure",
+      "gate_errors": [
+        "engine validation HOST_CONFIGURATION_INVALID: host_configuration_failure: percussion track 'percussion' map_id 'song001_r1_steven_slate_map' has no approved map directory"
+      ],
+      "engine_invoked": true,
+      "engine_validation_status": "HOST_CONFIGURATION_INVALID",
+      "semantic_repair_performed": false,
+      "adapter_musical_decisions": 0,
+      "notes": {
+        "stage-3-attempt-2": "SongPlan structure and musical validation passed far enough to reach host resolution; percussion map ID is not an approved PercussionMap."
+      },
+      "captured_at_utc": "2026-09-20T21:51:46.425478+00:00",
+      "model_identifier_requested": "qwen3:14b",
+      "model_identifier_reported": "qwen3:14b",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "request_sha256": "fd8cd404a7c4c71e81d5d80e66e5ce4da5689f4b09fbcf6de384af1d589b75e3",
+      "resolved_record_ids": [
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/brief.yaml",
+        "D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/songplan-v2-contract.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/integration-contract.md",
+        "D:/projects/music-composer-lab/integrations/composer-agent/stage-3-songplan-serialization-schema.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/host-config.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/host-maps/song001_r1_steven_slate_map.yaml",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-prompt-v1.2.txt",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/engine-songplan-v2.schema-music-engine-4.0.0.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json"
+      ],
+      "capture_directory": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-3/attempt-2/capture"
+    },
+    {
+      "experiment_id": "XMODEL-010",
+      "model": "qwen3:14b",
+      "interface_version": "composer-interface-v1.1",
+      "stage": "stage-3",
+      "attempt": 3,
+      "request_id": "XMODEL-010-QWEN-STAGE3-A3",
+      "request_kind": "evaluable_attempt",
+      "payload_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-3/attempt-3/retry-input.txt",
+      "payload_sha256": "7de060e36de1e23b9f9966057aca0625647dc826dca7ffc76c4dae6b74250698",
+      "prior_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json",
+      "prior_sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823",
+      "schema_path": "evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+      "schema_sha256": "6a4def87fedbf44240f9201306fe14456f72ef361b0441172918f47f26a6b095",
+      "transport_timeout_seconds": 7200.0,
+      "request_state_history": [
+        {
+          "state": "PREPARED",
+          "at_utc": "2026-09-20T22:04:43.314332+00:00"
+        },
+        {
+          "state": "SENT",
+          "at_utc": "2026-09-20T22:04:43.318598+00:00"
+        },
+        {
+          "state": "CAPTURED",
+          "at_utc": "2026-09-20T22:49:50.760481+00:00"
+        }
+      ],
+      "transport_status": "COMPLETE_RESPONSE",
+      "capture_status": "CAPTURED",
+      "api_done": true,
+      "done_reason": "stop",
+      "eval_count": 1228,
+      "prompt_eval_count": 19630,
+      "elapsed_seconds": 2707.4219999999914,
+      "raw_api_response_sha256": "a895432ba3e4f8922d0c52486fe4fd1f5064d266a6011286dbdd27b6bc897edc",
+      "raw_output_sha256": "457f6d2f53d316c714a57e87c88d2dd0c23d337d3581841274f0990b645078e2",
+      "gate_status": "FAIL",
+      "gate_category": "musical_semantic_validation_failure",
+      "gate_errors": [
+        "engine validation FAIL: musical_semantic_validation_failure: pitch.outside_scale: tracks[0].motifs[0].events[1].pitches[0]: pitch must be in the song scale unless chromatic"
+      ],
+      "engine_invoked": true,
+      "engine_validation_status": "FAIL",
+      "semantic_repair_performed": false,
+      "adapter_musical_decisions": 0,
+      "notes": {
+        "stage-3-attempt-3": "Engine parsed the SongPlan; musical-semantic validation rejected an out-of-scale pitch."
+      },
+      "captured_at_utc": "2026-09-20T22:49:50.756479+00:00",
+      "model_identifier_requested": "qwen3:14b",
+      "model_identifier_reported": "qwen3:14b",
+      "generation_parameters": {
+        "temperature": 0,
+        "seed": 41,
+        "top_p": 1,
+        "top_k": 40,
+        "repeat_penalty": 1,
+        "num_ctx": 32768,
+        "num_predict": 8192
+      },
+      "request_sha256": "75432c6ef0bc18e6851fcb89abd7b5b5275d0362c1a1619f9d93f2f505c1a4f8",
+      "resolved_record_ids": [
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/brief.yaml",
+        "D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md",
+        "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/songplan-v2-contract.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/integration-contract.md",
+        "D:/projects/music-composer-lab/integrations/composer-agent/stage-3-songplan-serialization-schema.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/host-config.yaml",
+        "D:/projects/music-composer-lab/integrations/music-engine/host-maps/song001_r1_steven_slate_map.yaml",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-prompt-v1.2.txt",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/engine-songplan-v2.schema-music-engine-4.0.0.json",
+        "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json"
+      ],
+      "capture_directory": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-3/attempt-3/capture"
+    }
+  ],
+  "accepted_output_copy_checks": [
+    {
+      "name": "convenience Stage 1 copy",
+      "path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/accepted/stage-1.json",
+      "sha256": "c7886b2a093a871cd85b34a26768c3459375c0c15440f4c1f66ebd67aa9ae8d4",
+      "capture_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-1/attempt-1/raw-output.txt",
+      "capture_sha256": "c7886b2a093a871cd85b34a26768c3459375c0c15440f4c1f66ebd67aa9ae8d4",
+      "byte_identical": true
+    },
+    {
+      "name": "protocol Stage 1 copy",
+      "path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-1/accepted-output.json",
+      "sha256": "c7886b2a093a871cd85b34a26768c3459375c0c15440f4c1f66ebd67aa9ae8d4",
+      "capture_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-1/attempt-1/raw-output.txt",
+      "capture_sha256": "c7886b2a093a871cd85b34a26768c3459375c0c15440f4c1f66ebd67aa9ae8d4",
+      "byte_identical": true
+    },
+    {
+      "name": "protocol Stage 2 copy",
+      "path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json",
+      "sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823",
+      "capture_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-2/attempt-1/raw-output.txt",
+      "capture_sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823",
+      "byte_identical": true
+    }
+  ],
+  "payload_reconciliation": {
+    "stage2_payload_path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/stage-2-payload.txt",
+    "stage2_payload_sha256": "a25d82686d9388d70405b7fc04c8fe71de748067b651bd1118795c42d4136c72",
+    "stage2_request_used_exact_payload": true,
+    "stage2_sidecar_manifest_collision": "assembler wrote payload, then exclusive shared payload-manifest creation failed; no model request was associated with assembly failure",
+    "stage3_initial_payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+    "stage3_isolated_payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+    "stage3_payloads_byte_identical": true,
+    "stage3_isolated_preflight": "PASS",
+    "stage3_isolated_resolved_record_count": 11,
+    "stage3_request_used_isolated_payload": true,
+    "stage3_sidecar_manifest_collision": "assembler wrote original payload, then exclusive shared payload-manifest creation failed; isolated reassembly preserved byte identity"
+  },
+  "retry_provenance": [
+    {
+      "attempt": 2,
+      "path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-3/attempt-2/retry-input.txt",
+      "sha256": "ce407823c5942ab789d46dfaae151c78b1abfee33918ba469b145a81485402e7",
+      "original_payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+      "previous_raw_output_embedded": false,
+      "diagnostics": [
+        "engine validation FAIL: musical_semantic_validation_failure: pitch.outside_scale: tracks[0].motifs[1].events[0].pitches[0]: pitch must be in the song scale unless chromatic"
+      ],
+      "preflight": "PASS"
+    },
+    {
+      "attempt": 3,
+      "path": "evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/captures/stage-3/attempt-3/retry-input.txt",
+      "sha256": "7de060e36de1e23b9f9966057aca0625647dc826dca7ffc76c4dae6b74250698",
+      "original_payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+      "previous_raw_output_embedded": false,
+      "diagnostics": [
+        "engine validation HOST_CONFIGURATION_INVALID: host_configuration_failure: percussion track 'percussion' map_id 'song001_r1_steven_slate_map' has no approved map directory"
+      ],
+      "preflight": "PASS"
+    }
+  ],
+  "duplicate_attempt2_launch": {
+    "result": "REJECTED_BEFORE_NEW_REQUEST",
+    "registry_has_one_attempt2_identity": true,
+    "attempt2_sent_events": 1,
+    "additional_capture": false
+  },
+  "technical_incidents": [
+    {
+      "id": "TI-01",
+      "incident": "Stage 2 shared payload-manifest collision",
+      "classification": "preparation/artifact layout; not model failure"
+    },
+    {
+      "id": "TI-02",
+      "incident": "Initial Stage 3 shared payload-manifest collision; isolated byte-identical reassembly",
+      "classification": "preparation/artifact layout; not model failure"
+    },
+    {
+      "id": "TI-03",
+      "incident": "First Stage 3 gate invocation used system Python and could not import music_engine; rerun in .venv",
+      "classification": "execution environment; not model request or evaluable gate"
+    },
+    {
+      "id": "TI-04",
+      "incident": "Duplicate Stage 3 Attempt 2 launch rejected by request identity registry",
+      "classification": "duplicate protection worked; no additional request"
+    }
+  ],
+  "offline_closure_checks": {
+    "gate_replays": "5/5 completed using .venv; result counts 2 PASS, 3 FAIL",
+    "xmodel010_tests": "34/34 PASS",
+    "existing_staged_harness_tests": "54/54 PASS",
+    "accepted_copy_hashes": "PASS",
+    "payload_hash_reconciliation": "PASS",
+    "request_registry_reconciliation": "PASS",
+    "no_midi_artifacts": "PASS",
+    "no_attempt4_artifacts": "PASS"
+  },
+  "gate_result_provenance": "Gate results are deterministic closure-time replays against immutable captured raw outputs; original standalone gate-result files were not present."
+}
