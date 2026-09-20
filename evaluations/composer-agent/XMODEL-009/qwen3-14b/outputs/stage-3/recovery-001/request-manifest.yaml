@@ -1,0 +1,28 @@
+﻿# XMODEL-009 Stage 3 recovery-001
+status: PREPARED_NOT_EXECUTED
+request_identity: XMODEL-009-QWEN-STAGE3-RECOVERY-001
+model: qwen3:14b
+stage: stage-3
+source_retry_input: evaluations/composer-agent/XMODEL-009/qwen3-14b/outputs/stage-3/attempt-2/retry-input.txt
+source_retry_input_sha256: f06cda45cc4945a6170baf179b6f421402256019a915878b8817942399e0664a
+request_sha256: b3441fddeefae2ac9c56ef24bbaf13ef10a4563843d43cf6b555753f171b0581
+interface_version: composer-interface-v1.1
+timeout_seconds: 7200
+transport_mode: nonstreaming
+streaming: false
+generation_parameters:
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  num_predict: 8192
+schema: evaluations/composer-agent/XMODEL-009/stage-3-songplan-format-schema-v1.1.json
+brief: evaluations/composer-agent/XMODEL-009/brief.yaml
+prior_stage2: evaluations/composer-agent/XMODEL-009/qwen3-14b/outputs/stage-2/accepted-output.json
+host_config: evaluations/composer-agent/XMODEL-009/host-config.yaml
+original_attempt2_transport_record: evaluations/composer-agent/XMODEL-009/qwen3-14b/outputs/stage-3/attempt-2/transport-failure-record.yaml
+outcome: PENDING
+models_executed_during_preparation: NO
+midi_generated: NO

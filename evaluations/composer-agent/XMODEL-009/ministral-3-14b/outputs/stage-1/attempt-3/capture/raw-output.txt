@@ -1,0 +1,364 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density/timbre",
+          "basis": "GP-01, GP-02, GP-04"
+        },
+        {
+          "description": "A-B-A structure with clear contrast in focal identity and development",
+          "basis": "CK-FORM-01, CK-DEV-01"
+        },
+        {
+          "description": "Through-composed with gradual accumulation and one clear release",
+          "basis": "Artistic intent: 'persistent forward motion', 'one clear release'"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Preserve hypnotic tension through gradual accumulation and a single, controlled release. Avoid abrupt section contrasts.",
+      "tradeoff": "Loop-based persistence vs. developmental clarity. Chose loop-based to align with 'persistent forward motion' while embedding developmental cues in texture and density.",
+      "trace_reference": "CK-FORM-01, GP-04, artistic_intent",
+      "selected_option": {
+        "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density/timbre, embedded developmental cues, and one clear release."
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "Intro (establish groove/focal identity), Verse (developmental variation), Chorus (release/clear focal identity), Bridge (contrast through texture/density)",
+          "basis": "GP-04, CK-FORM-01"
+        },
+        {
+          "description": "A (tension accumulation), B (release), A' (reiteration with subtle variation)",
+          "basis": "Artistic intent: 'one clear release'"
+        },
+        {
+          "description": "Vamp (persistent groove), Section 1 (development), Section 2 (release)",
+          "basis": "GP-01, GP-02"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain hypnotic tension through gradual accumulation and a single, controlled release. Avoid traditional verse-chorus roles.",
+      "tradeoff": "Structural clarity vs. hypnotic ambiguity. Chose vamp + two sections to emphasize persistence and a singular release.",
+      "trace_reference": "GP-04, artistic_intent",
+      "selected_option": {
+        "description": "Vamp (persistent groove/focal identity), Section 1 (gradual accumulation via texture/density), Section 2 (clear release)."
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Persistent vamp chord (e.g., minor 7th or dominant 7th) with harmonic rhythm aligned to groove",
+          "basis": "GP-02, CK-HAR-02"
+        },
+        {
+          "description": "Modal framework (e.g., Dorian or Phrygian) with subtle harmonic shifts",
+          "basis": "Artistic intent: 'restrained', 'hypnotic'"
+        },
+        {
+          "description": "Tonal center with directed progression (e.g., ii-V-I) for developmental clarity",
+          "basis": "CK-HAR-02, CK-DEV-01"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a restrained, hypnotic atmosphere with persistent harmonic tension. Avoid traditional progressions.",
+      "tradeoff": "Harmonic ambiguity vs. developmental clarity. Chose a persistent vamp chord with modal inflections to align with 'restrained' intent.",
+      "trace_reference": "GP-02, artistic_intent",
+      "selected_option": {
+        "description": "Persistent vamp chord (e.g., Cm7) with modal inflections (Dorian/Phrygian) and harmonic rhythm aligned to groove. No directed progression."
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Sustained melodic line (e.g., synth lead or processed voice) with rhythmic displacement",
+          "basis": "GP-01, CK-MEL-01"
+        },
+        {
+          "description": "Pulsing bass groove with harmonic emphasis",
+          "basis": "GP-02, CK-HAR-01"
+        },
+        {
+          "description": "Percussive texture (e.g., hi-hats or shakers) as rhythmic focal point",
+          "basis": "N3-P_PERCUSSION_ARCHITECTURE (FULL), GP-05"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize a hypnotic, restrained melodic identity that persists across sections. Avoid rhythmic displacement.",
+      "tradeoff": "Melodic clarity vs. harmonic/percussive focus. Chose a sustained melodic line to align with 'hypnotic' intent.",
+      "trace_reference": "GP-01, artistic_intent",
+      "selected_option": {
+        "description": "Sustained melodic line (e.g., synth lead or processed voice) with rhythmic alignment to groove. No displacement."
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Persistent motif with subtle pitch/bass variation",
+          "basis": "GP-01, CK-MEL-01"
+        },
+        {
+          "description": "Fragmented motif with developmental recombination",
+          "basis": "CK-DEV-01, CK-MEL-02"
+        },
+        {
+          "description": "Static motif with textural/dense variation",
+          "basis": "Artistic intent: 'restrained', 'hypnotic'"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain a hypnotic, restrained atmosphere through a static motif with textural variation.",
+      "tradeoff": "Developmental clarity vs. hypnotic persistence. Chose a static motif to align with 'restrained' intent.",
+      "trace_reference": "artistic_intent, GP-01",
+      "selected_option": {
+        "description": "Static melodic motif with textural/density variation across sections. No pitch/bass variation."
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Pulsing groove with harmonic alignment (e.g., root/5th)",
+          "basis": "GP-02, CK-HAR-01"
+        },
+        {
+          "description": "Subtle harmonic motion (e.g., chromatic or modal inflections)",
+          "basis": "Artistic intent: 'restrained'"
+        },
+        {
+          "description": "Rhythmic displacement (e.g., anticipatory or delayed onsets)",
+          "basis": "GP-05, CK-RHY-01"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support the hypnotic, restrained atmosphere with a subtle, harmonic bass role.",
+      "tradeoff": "Groove clarity vs. harmonic subtlety. Chose harmonic alignment with modal inflections to align with 'restrained' intent.",
+      "trace_reference": "GP-02, artistic_intent",
+      "selected_option": {
+        "description": "Pulsing bass groove with harmonic alignment (root/5th) and modal inflections (Dorian/Phrygian). No rhythmic displacement."
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "Steady 4/4 pulse with subtle rhythmic displacement",
+          "basis": "GP-05, CK-RHY-01"
+        },
+        {
+          "description": "Syncopated groove with harmonic emphasis",
+          "basis": "Artistic intent: 'persistent forward motion'"
+        },
+        {
+          "description": "Minimalist pulse (e.g., kick/snare only) with textural focus",
+          "basis": "N3-P_PERCUSSION_ARCHITECTURE (MINIMAL)"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a hypnotic, restrained groove that supports persistent forward motion without rhythmic displacement.",
+      "tradeoff": "Groove complexity vs. hypnotic subtlety. Chose a steady 4/4 pulse with harmonic alignment.",
+      "trace_reference": "artistic_intent, GP-05",
+      "selected_option": {
+        "description": "Steady 4/4 pulse with harmonic alignment (kick on beat 1, snare on 2/4). No rhythmic displacement."
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Explicit drum tracks with layered percussion (kick, snare, hi-hats, shakers) for textural differentiation",
+          "candidate_strategies": [
+            {
+              "description": "Layered hi-hats for density variation across sections",
+              "basis": "GP-04, CK-RHY-02"
+            },
+            {
+              "description": "Shakers/percussion for textural contrast in release section",
+              "basis": "GP-06, CK-TEXTURE"
+            }
+          ]
+        },
+        {
+          "description": "MINIMAL: Kick/snare only with harmonic alignment",
+          "candidate_strategies": [
+            {
+              "description": "Kick on beat 1, snare on 2/4 with no displacement",
+              "basis": "GP-05, CK-RHY-01"
+            }
+          ]
+        },
+        {
+          "description": "DELEGATED: Percussive roles handled by bass/melody (e.g., rhythmic bass notes, melodic syncopation)",
+          "candidate_strategies": [
+            {
+              "description": "Bass carries rhythmic pulse; melody handles syncopation",
+              "basis": "N3-P, CK-CROSS-01"
+            }
+          ]
+        },
+        {
+          "description": "INTENTIONALLY_ABSENT: No explicit percussion track; rhythmic roles distributed across bass/melody",
+          "candidate_strategies": [
+            {
+              "description": "Bass provides harmonic/rhythmic foundation; melody handles rhythmic displacement",
+              "basis": "Artistic intent: 'restrained'"
+            }
+          ]
+        }
+      ],
+      "selected_outcome": "FULL",
+      "candidate_strategies": [
+        {
+          "description": "Layered hi-hats for density variation across sections",
+          "basis": "GP-04, CK-RHY-02"
+        },
+        {
+          "description": "Shakers/percussion for textural contrast in release section",
+          "basis": "GP-06, CK-TEXTURE"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Use percussion to support hypnotic tension and textural differentiation while maintaining a restrained atmosphere.",
+      "tradeoff": "Percussive complexity vs. hypnotic subtlety. Chose FULL to enable textural variation without rhythmic displacement.",
+      "trace_reference": "GP-04, GP-06, artistic_intent",
+      "bass_groove_interaction": "Bass aligns harmonically with kick/snare; hi-hats/shakers provide textural contrast without rhythmic displacement.",
+      "focal_hierarchy_interaction": "Melodic line remains focal; percussion supports texture/density variation.",
+      "section_behavior": {
+        "vamp": {
+          "description": "Steady 4/4 pulse with layered hi-hats (closed/open) for hypnotic persistence."
+        },
+        "section_1": {
+          "description": "Increased hi-hat density; shakers introduced for gradual accumulation."
+        },
+        "section_2": {
+          "description": "Full percussion texture (hi-hats, shakers, ride) for clear release."
+        }
+      },
+      "development_behavior": {
+        "description": "Percussion texture evolves through density/timbre; no rhythmic displacement. Supports hypnotic persistence."
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "description": "Layered synths (lead, pad, effects) with percussive elements",
+          "basis": "GP-04, CK-TEXTURE"
+        },
+        {
+          "description": "Minimalist texture (melody + bass) with percussive emphasis",
+          "basis": "Artistic intent: 'restrained'"
+        },
+        {
+          "description": "Dynamic texture (e.g., granular synthesis, field recordings) for developmental contrast",
+          "basis": "CK-DEV-01"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain a restrained, hypnotic texture with layered synths and percussive elements.",
+      "tradeoff": "Textural complexity vs. hypnotic subtlety. Chose layered synths to support focal identity.",
+      "trace_reference": "GP-04, artistic_intent",
+      "selected_option": {
+        "description": "Layered synths (lead, pad, reverb effects) with percussive elements (hi-hats, shakers). No dynamic textures."
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "description": "Gradual accumulation via texture/density (e.g., hi-hat density, shaker introduction)",
+          "basis": "GP-04, CK-DEV-01"
+        },
+        {
+          "description": "Melodic variation with harmonic persistence",
+          "basis": "GP-01, CK-MEL-02"
+        },
+        {
+          "description": "Static material with textural contrast",
+          "basis": "Artistic intent: 'restrained'"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Develop tension through gradual textural/density accumulation while preserving hypnotic persistence.",
+      "tradeoff": "Developmental clarity vs. hypnotic subtlety. Chose gradual accumulation via texture/density.",
+      "trace_reference": "GP-04, artistic_intent",
+      "selected_option": {
+        "description": "Gradual accumulation via texture/density (hi-hat density, shaker introduction). No melodic variation."
+      }
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": [
+        {
+          "description": "Persistent tension with one clear release (Section 2)",
+          "basis": "Artistic intent: 'one clear release'"
+        },
+        {
+          "description": "Gradual release through harmonic progression",
+          "basis": "CK-HAR-02, CK-FORM-02"
+        },
+        {
+          "description": "Textural release (e.g., dynamic textures, percussive expansion)",
+          "basis": "GP-06, CK-TEXTURE"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a hypnotic, restrained atmosphere with persistent tension and one clear release.",
+      "tradeoff": "Release clarity vs. hypnotic persistence. Chose a single, clear release in Section 2.",
+      "trace_reference": "artistic_intent, GP-06",
+      "selected_option": {
+        "description": "Persistent tension in Vamp/Section 1; one clear release in Section 2 via textural expansion (full percussion, layered synths)."
+      }
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": [
+        {
+          "description": "Sudden stop with sustained focal identity",
+          "basis": "GP-03, CK-FORM-02"
+        },
+        {
+          "description": "Gradual fade with textural dissolution",
+          "basis": "Artistic intent: 'restrained'"
+        },
+        {
+          "description": "Iterative return to vamp with subtle variation",
+          "basis": "GP-03, CK-MEL-02"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "End with a restrained, hypnotic resolution that aligns with the piece's tension/release structure.",
+      "tradeoff": "Ending clarity vs. hypnotic subtlety. Chose a sudden stop with sustained focal identity.",
+      "trace_reference": "GP-03, artistic_intent",
+      "selected_option": {
+        "description": "Sudden stop with sustained melodic line and full percussion texture. No fade or iterative return."
+      }
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": [
+        {
+          "description": "No conflicts: Percussion supports texture/density; melody remains focal.",
+          "basis": "N3-P_PERCUSSION_ARCHITECTURE (FULL), GP-04"
+        },
+        {
+          "description": "Conflict: Rhythmic displacement in melody vs. steady groove",
+          "basis": "GP-05, CK-RHY-01"
+        },
+        {
+          "description": "Conflict: Harmonic progression vs. persistent vamp chord",
+          "basis": "CK-HAR-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Avoid cross-domain conflicts to maintain hypnotic persistence and developmental clarity.",
+      "tradeoff": "None. All decisions align with artistic intent and genre constraints.",
+      "trace_reference": "N3-P, GP-04",
+      "selected_option": {
+        "description": "No cross-domain conflicts. Percussion, melody, and harmony align with hypnotic, restrained intent

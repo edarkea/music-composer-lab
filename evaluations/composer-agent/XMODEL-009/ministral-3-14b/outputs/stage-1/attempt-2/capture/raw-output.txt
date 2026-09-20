@@ -1,0 +1,483 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density",
+          "basis": "GP-01, GP-04"
+        },
+        {
+          "description": "A-B-A' structure with clear contrast in focal identity and development",
+          "basis": "CK-FORM-01, GP-04"
+        },
+        {
+          "description": "Vamp-based form with gradual accumulation and one clear release",
+          "basis": "GP-02, GP-03"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve identity across development while allowing controlled section contrast",
+      "tradeoff": {
+        "persistent_material": "Melodic and harmonic continuity",
+        "section_contrast": "Texture/density variation"
+      },
+      "trace_reference": "CK-FORM-01, GP-01, GP-04",
+      "selected_option": {
+        "description": "Vamp-based form with gradual accumulation and one clear release",
+        "sections": ["Intro (Vamp)", "Accumulation (A)", "Release (A')"],
+        "basis": "GP-02, GP-03"
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "Intro: Establish focal identity, minimal harmonic motion",
+          "basis": "CK-FORM-01"
+        },
+        {
+          "description": "Accumulation: Gradual addition of layers (texture/density), persistent melody",
+          "basis": "GP-01, GP-04"
+        },
+        {
+          "description": "Release: Full texture, clear focal identity resolution",
+          "basis": "GP-03"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain coherent repetition with audible development",
+      "tradeoff": {
+        "identity_preservation": "Persistent melodic/harmonic material",
+        "development": "Layered texture/density accumulation"
+      },
+      "trace_reference": "CK-FORM-01, GP-01, GP-04",
+      "selected_option": {
+        "Intro": {
+          "role": "Establish",
+          "harmonic_motion": "Minimal",
+          "focal_identity": "Melodic motif"
+        },
+        "Accumulation": {
+          "role": "Prepare",
+          "texture_density": "Gradual increase",
+          "melodic_persistence": "Full"
+        },
+        "Release": {
+          "role": "Arrive",
+          "texture_density": "Full",
+          "focal_resolution": "Clear"
+        }
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Persistent vamp loop (e.g., I-IV-V) with harmonic rhythm aligned to groove",
+          "basis": "GP-02, CK-HAR-02"
+        },
+        {
+          "description": "Modular harmonic cells (e.g., I-V-vi-IV) with section-specific variations",
+          "basis": "CK-HAR-02"
+        },
+        {
+          "description": "Modal framework (e.g., Dorian/Phrygian) with persistent tonality",
+          "basis": "CK-HAR-01"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support gradual accumulation while preserving tonal identity",
+      "tradeoff": {
+        "harmonic_stability": "Persistent vamp loop",
+        "development_flexibility": "Modular cells"
+      },
+      "trace_reference": "GP-02, CK-HAR-02",
+      "selected_option": {
+        "framework": "Persistent vamp loop (I-IV-V) with harmonic rhythm aligned to groove",
+        "tonic": "Decided in SongPlan handoff",
+        "mode": "Minor (Dorian/Phrygian options preserved for development)",
+        "harmonic_rhythm": "Quarter-note changes in Accumulation, half-note in Release"
+      },
+      "surviving_options": [
+        {
+          "description": "Modular harmonic cells for development",
+          "basis": "CK-HAR-02"
+        }
+      ]
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Melodic motif with persistent contour and interval relationships",
+          "basis": "CK-MEL-01, GP-01"
+        },
+        {
+          "description": "Harmonic vamp loop as focal identity",
+          "basis": "GP-02"
+        },
+        {
+          "description": "Rhythmic groove as primary identity",
+          "basis": "N3-P, CK-RHY-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Clear focal identity for coherent repetition",
+      "tradeoff": {
+        "melodic_focus": "Persistent contour",
+        "harmonic_flexibility": "Vamp loop"
+      },
+      "trace_reference": "CK-MEL-01, GP-01",
+      "selected_option": {
+        "identity_type": "Melodic motif",
+        "characteristics": {
+          "contour": "Persistent",
+          "interval_relationships": "Preserved across sections",
+          "register": "Mid-range for clarity"
+        },
+        "development_strategy": "Contour preserved, rhythmic displacement in Accumulation"
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Exact repetition with rhythmic displacement",
+          "basis": "CK-MEL-02, GP-05"
+        },
+        {
+          "description": "Contour preservation with interval variation",
+          "basis": "CK-DEV-01"
+        },
+        {
+          "description": "Fragmentation and recombination",
+          "basis": "CK-DEV-01"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Hypnotic persistence with gradual development",
+      "tradeoff": {
+        "recognizability": "Exact repetition",
+        "development": "Rhythmic displacement"
+      },
+      "trace_reference": "CK-MEL-02, GP-05",
+      "selected_option": {
+        "behavior": "Exact repetition with rhythmic displacement (16th-note anticipation in Accumulation)",
+        "invariant": "Melodic contour and interval relationships",
+        "variation": "Rhythmic onset shifts"
+      },
+      "surviving_options": [
+        {
+          "description": "Contour preservation with interval variation",
+          "basis": "CK-DEV-01"
+        }
+      ]
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Chordal support with rhythmic alignment to groove",
+          "basis": "N3-P, CK-RHY-01"
+        },
+        {
+          "description": "Pedal tone with harmonic motion",
+          "basis": "GP-02"
+        },
+        {
+          "description": "Rhythmic ostinato with melodic contour",
+          "basis": "CK-MEL-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support groove and harmonic framework",
+      "tradeoff": {
+        "groove_alignment": "Rhythmic precision",
+        "harmonic_clarity": "Chordal support"
+      },
+      "trace_reference": "N3-P, CK-RHY-01",
+      "selected_option": {
+        "role": "Chordal support with rhythmic alignment",
+        "alignment": "16th-note grid in Accumulation, half-note in Release",
+        "interaction_with_groove": "Kick alignment for forward motion"
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "Persistent 4/4 groove with gradual tempo modulation",
+          "basis": "GP-01, CK-RHY-01"
+        },
+        {
+          "description": "Syncopated rhythm with anticipatory hi-hats",
+          "basis": "GP-05"
+        },
+        {
+          "description": "Polyrhythmic layering (e.g., 3:2)",
+          "basis": "CK-RHY-02"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Persistent forward motion with gradual accumulation",
+      "tradeoff": {
+        "stability": "Persistent 4/4",
+        "development": "Tempo modulation"
+      },
+      "trace_reference": "GP-01, CK-RHY-01",
+      "selected_option": {
+        "groove_type": "Persistent 4/4 with gradual tempo modulation (+2 BPM in Accumulation)",
+        "tempo": "Decided in SongPlan handoff (range: 110-120 BPM)",
+        "rhythmic_features": {
+          "kick": "On-beat",
+          "snare": "Backbeat with gradual displacement",
+          "hi-hats": "16th-note grid, anticipatory in Accumulation"
+        }
+      },
+      "surviving_options": [
+        {
+          "description": "Syncopated rhythm for development",
+          "basis": "GP-05"
+        }
+      ]
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Explicit drum tracks with section-specific roles",
+          "candidate_strategies": [
+            {
+              "description": "Layered drums with texture differentiation",
+              "basis": "GP-04"
+            },
+            {
+              "description": "Groove-based with harmonic alignment",
+              "basis": "N3-P"
+            }
+          ]
+        },
+        {
+          "description": "MINIMAL: Kick and snare only with rhythmic displacement",
+          "candidate_strategies": [
+            {
+              "description": "Sparse percussion for hypnotic effect",
+              "basis": "GP-03"
+            }
+          ]
+        },
+        {
+          "description": "DELEGATED: Percussive functions handled by bass/melody",
+          "candidate_strategies": [
+            {
+              "description": "Rhythmic bass as primary driver",
+              "basis": "N3-P"
+            }
+          ]
+        }
+      ],
+      "selected_outcome": "FULL",
+      "candidate_strategies": [
+        {
+          "description": "Layered drums with texture differentiation",
+          "basis": "GP-04"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support forward motion and section contrast",
+      "tradeoff": {
+        "complexity": "Layered drums",
+        "clarity": "Section-specific roles"
+      },
+      "trace_reference": "N3-P, GP-04",
+      "bass_groove_interaction": "Kick aligned to bass root notes; snare displacement coordinated with harmonic rhythm",
+      "focal_hierarchy_interaction": "Drums support melodic focal identity through rhythmic clarity",
+      "section_behavior": {
+        "Intro": {
+          "role": "Establish groove",
+          "elements": ["kick", "snare", "closed_hat"]
+        },
+        "Accumulation": {
+          "role": "Layered texture",
+          "elements": ["kick", "snare", "open_hat", "ride"]
+        },
+        "Release": {
+          "role": "Full texture",
+          "elements": ["kick", "snare", "open_hat", "ride", "cowbell"]
+        }
+      },
+      "development_behavior": {
+        "groove_evolution": "Gradual addition of percussive layers",
+        "rhythmic_displacement": "Snare and hi-hat anticipation in Accumulation"
+      }
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "description": "Layered instrumentation with persistent melody",
+          "basis": "GP-01, GP-04"
+        },
+        {
+          "description": "Sparse texture with focal melody and harmonic support",
+          "basis": "GP-03"
+        },
+        {
+          "description": "Dynamic texture with section-specific density",
+          "basis": "CK-RHY-02"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Controlled section contrast while preserving identity",
+      "tradeoff": {
+        "identity_preservation": "Persistent melody",
+        "contrast": "Layered instrumentation"
+      },
+      "trace_reference": "GP-01, GP-04",
+      "selected_option": {
+        "texture_type": "Layered instrumentation with persistent melody",
+        "layers": [
+          {
+            "role": "Focal",
+            "instrument": "Synth lead (melodic motif)",
+            "persistence": "Full"
+          },
+          {
+            "role": "Harmonic",
+            "instrument": "Pads/synth bass",
+            "persistence": "Full"
+          },
+          {
+            "role": "Percussive",
+            "instrument": "Drums",
+            "persistence": "Full"
+          },
+          {
+            "role": "Developmental",
+            "instrument": "Rhodes/electric piano (Accumulation)",
+            "persistence": "Section-specific"
+          }
+        ],
+        "density_variation": {
+          "Intro": "Sparse",
+          "Accumulation": "Moderate",
+          "Release": "Full"
+        }
+      }
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": [
+        {
+          "description": "Gradual layering of texture/density with persistent melody",
+          "basis": "GP-01, GP-04"
+        },
+        {
+          "description": "Harmonic modulation with melodic contour preservation",
+          "basis": "CK-HAR-02, CK-DEV-01"
+        },
+        {
+          "description": "Rhythmic displacement with melodic fragmentation",
+          "basis": "CK-RHY-02, CK-DEV-01"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "One clear release after gradual accumulation",
+      "tradeoff": {
+        "development_gradient": "Layered texture",
+        "release_clarity": "Full texture"
+      },
+      "trace_reference": "GP-01, GP-04",
+      "selected_option": {
+        "strategy": "Gradual layering of texture/density with persistent melody",
+        "development_elements": [
+          {
+            "section": "Accumulation",
+            "elements": ["Rhodes/electric piano", "hi-hat displacement", "tempo modulation"]
+          },
+          {
+            "section": "Release",
+            "elements": ["Full drum texture", "cowbell", "tempo return"]
+          }
+        ],
+        "release_trigger": "Full texture and harmonic resolution"
+      },
+      "surviving_options": [
+        {
+          "description": "Harmonic modulation for development",
+          "basis": "CK-HAR-02"
+        }
+      ]
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": [
+        {
+          "description": "Gradual energy accumulation through texture/density",
+          "basis": "GP-04"
+        },
+        {
+          "description": "Harmonic tension via modal interchange",
+          "basis": "CK-HAR-01"
+        },
+        {
+          "description": "Rhythmic tension via displacement and syncopation",
+          "basis": "GP-05"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Hypnotic persistence with one clear release",
+      "tradeoff": {
+        "tension_buildup": "Texture/density",
+        "release_clarity": "Full texture"
+      },
+      "trace_reference": "GP-04",
+      "selected_option": {
+        "energy_arc": {
+          "Intro": "Low",
+          "Accumulation": "Moderate (gradual increase)",
+          "Release": "High (full texture)"
+        },
+        "tension_buildup": "Texture/density layering and rhythmic displacement",
+        "release_trigger": "Full texture and harmonic resolution"
+      }
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": [
+        {
+          "description": "Full texture release with harmonic resolution",
+          "basis": "GP-03"
+        },
+        {
+          "description": "Rhythmic stop with melodic fade",
+          "basis": "GP-03"
+        },
+        {
+          "description": "Modal shift with abrupt texture change",
+          "basis": "CK-HAR-01"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Clear focal identity resolution",
+      "tradeoff": {
+        "clarity": "Harmonic resolution",
+        "impact": "Full texture"
+      },
+      "trace_reference": "GP-03",
+      "selected_option": {
+        "ending_type": "Full texture release with harmonic resolution",
+        "elements": [
+          {
+            "section": "Release",
+            "harmonic_resolution": "I-IV-V-I",
+            "texture": "Full",
+            "rhythmic_closure": "Tempo return and rhythmic stop"
+          }
+        ],
+        "focal_resolution": "Melodic motif return with harmonic clarity"
+      }
+    },
+    {
+      "decision_id": "

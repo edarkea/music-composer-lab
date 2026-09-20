@@ -1,0 +1,9 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-009\\qwen3-14b\\outputs\\stage-3\\attempt-3\\retry-input.txt",
+  "payload_sha256": "23a66ee48eab2e7b548d209da69073111ad16548fdd1c94ae4aca557ba51ddee",
+  "original_payload_sha256": "8fa80a4972a40777900fe2075e1006716e41019dcf15f53cd9f992c2bfc14537",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "engine validation FAIL: invalid_songplan_structure: duration must be a valid fraction"
+  ]
+}

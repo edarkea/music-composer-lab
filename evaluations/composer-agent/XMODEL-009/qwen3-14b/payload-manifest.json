@@ -1,9 +1,9 @@
 {
-  "payload_path": "evaluations\\composer-agent\\XMODEL-009\\qwen3-14b\\stage-1-payload.txt",
-  "payload_sha256": "a2f6fa4451d6597a806fb7bf49ee073d1b6ad4b0295e062df610d916a21c472a",
+  "payload_path": "evaluations\\composer-agent\\XMODEL-009\\qwen3-14b\\stage-3-payload.txt",
+  "payload_sha256": "8fa80a4972a40777900fe2075e1006716e41019dcf15f53cd9f992c2bfc14537",
   "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
   "interface_version": "composer-interface-v1.1",
-  "stage": 1,
+  "stage": 3,
   "resolved_records": [
     {
       "path": "evaluations\\composer-agent\\XMODEL-009\\brief.yaml",
@@ -14,41 +14,41 @@
       "sha256": "032dc7738db9f8723f02c4e734b10a07b0ff49f2d68dda963f7410b01b174373"
     },
     {
-      "path": "datasets\\composer-interface-v1.1\\decision-schema.yaml",
-      "sha256": "f71c622e6f275369ccb024818051f6955ae37de8bc34c8558ab38c7bf1ef4168"
+      "path": "datasets\\composer-interface-v1.1\\songplan-v2-contract.yaml",
+      "sha256": "7c27eeb0cbb64d475148a140a16daf12b628ed079683a8fa3b5a7d5b225389f9"
     },
     {
-      "path": "datasets\\composer-interface-v1.1\\guardrails.yaml",
-      "sha256": "abcf1432758aad5c67a4b13cb259414013c7f2261bb58160b8ed2d5a702ca0b2"
+      "path": "integrations\\music-engine\\integration-contract.md",
+      "sha256": "339e75cdc1e60450d1cdb93f99755f6a15de3fa92246713eb6042867a31a037a"
     },
     {
-      "path": "datasets\\composer-interface-v1.1\\completion-checklist.yaml",
-      "sha256": "5b454c9fb8d3acb303e930196ce0b684b3a7d01c3293a6237312625a287114f2"
+      "path": "integrations\\composer-agent\\stage-3-songplan-serialization-schema.yaml",
+      "sha256": "5027e4c0546ead2c68425c8356bc34b9e69343e9d1a240eac8aa7fe0e269e00e"
     },
     {
-      "path": "datasets\\composer-interface-v1.1\\knowledge\\approved-composition-knowledge.yaml",
-      "sha256": "f4f9373b35fe5e87bfd28b51b5cf0ddd7a673e414c97f9a700c3a003eb29f76a"
+      "path": "integrations\\music-engine\\host-config.yaml",
+      "sha256": "030ce1ccc36a7a900052a675a6dc9524b09e56a6765271a070c8d214a797d147"
     },
     {
-      "path": "datasets\\composer-interface-v1.1\\genres\\indie-dance.yaml",
-      "sha256": "5fb9ab64d7703ee5129bc8cd62b9e4d0d411928f9c5f4344d1606ff9dd3181fd"
+      "path": "integrations\\music-engine\\host-maps\\song001_r1_steven_slate_map.yaml",
+      "sha256": "3c8f366f7ea0ee870dfd8ccaac563ebd8545d1f17ab87d49658aa058faf8a1ab"
     },
     {
-      "path": "datasets\\composer-interface-v1.1\\knowledge\\n3-p-percussion-architecture.yaml",
-      "sha256": "97f0763fc13f2ef5edd316636028c50a6bfa840b3a09764cdd33e3755fd1333a"
+      "path": "evaluations\\composer-agent\\XMODEL-009\\stage-3-prompt-reconciled-v1.1.txt",
+      "sha256": "ad18ec97d122fad290d9bb46a51676e222cae7fedcd6d5762a7c6c7d280f8cdf"
     },
     {
-      "path": "integrations\\composer-agent\\stage-1-decision-trace-schema.yaml",
-      "sha256": "25fc8a5f721b3826560ee4e65246228540a6344fef874031a45c3e946435eca0"
+      "path": "evaluations\\composer-agent\\XMODEL-009\\stage-3-songplan-format-schema-v1.1.json",
+      "sha256": "de456b4810c75d78979fc8da54a721d778547f3ef1baa76b84e5003bbf1f5126"
     },
     {
-      "path": "evaluations\\composer-agent\\XMODEL-009\\frozen-prompt-stage-1-n3-canonical.txt",
-      "sha256": "73d796fa33f47b1cea520acb7449e12e18daeb7f6fe29321aa35230349fee0af"
+      "path": "evaluations\\composer-agent\\XMODEL-009\\qwen3-14b\\outputs\\stage-2\\accepted-output.json",
+      "sha256": "bbc7f9268f70c4073b5234b67444045ee3f26afd7bf5d5097f0ca630a1f8503e"
     }
   ],
   "preflight": {
     "pass": true,
-    "stage": 1,
+    "stage": 3,
     "errors": [],
     "resolved_record_count": 10
   }

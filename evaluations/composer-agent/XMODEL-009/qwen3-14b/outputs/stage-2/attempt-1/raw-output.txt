@@ -1,0 +1,106 @@
+{
+  "frozen_decision_trace_hash": "a1b2c3d4e5f67890",
+  "sections": [
+    {
+      "section_id": "INTRO",
+      "start_bar": 1,
+      "bar_count": 8,
+      "decision_references": ["FORM", "HARMONIC_FRAMEWORK", "GROOVE"]
+    },
+    {
+      "section_id": "VERSE",
+      "start_bar": 9,
+      "bar_count": 16,
+      "decision_references": ["SECTION_ROLES", "FOCAL_IDENTITY", "TEXTURE"]
+    },
+    {
+      "section_id": "PRE-CHORUS",
+      "start_bar": 25,
+      "bar_count": 8,
+      "decision_references": ["SECTION_ROLES", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "CHORUS",
+      "start_bar": 33,
+      "bar_count": 16,
+      "decision_references": ["SECTION_ROLES", "ENERGY_TENSION_RELEASE"]
+    },
+    {
+      "section_id": "BRIDGE",
+      "start_bar": 49,
+      "bar_count": 12,
+      "decision_references": ["SECTION_ROLES", "HARMONIC_FRAMEWORK"]
+    },
+    {
+      "section_id": "OUTRO",
+      "start_bar": 61,
+      "bar_count": 16,
+      "decision_references": ["SECTION_ROLES", "ENDING"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "SYNTH_LEAD",
+      "type": "pitched",
+      "role": "FOCAL_IDENTITY",
+      "section_assignments": ["INTRO", "VERSE", "PRE-CHORUS", "CHORUS", "BRIDGE", "OUTRO"]
+    },
+    {
+      "layer_id": "VOCAL_HARMONIES",
+      "type": "pitched",
+      "role": "TEXTURE",
+      "section_assignments": ["VERSE", "CHORUS", "BRIDGE"]
+    },
+    {
+      "layer_id": "BASS_PULSE",
+      "type": "pitched",
+      "role": "BASS_ROLE",
+      "section_assignments": ["INTRO", "VERSE", "PRE-CHORUS", "CHORUS", "BRIDGE", "OUTRO"]
+    },
+    {
+      "layer_id": "DRUM_PROGRAMMING",
+      "type": "drums",
+      "role": "N3-P_PERCUSSION_ARCHITECTURE",
+      "section_assignments": ["INTRO", "VERSE", "PRE-CHORUS", "CHORUS", "BRIDGE", "OUTRO"]
+    },
+    {
+      "layer_id": "SAMPLED_PERCUSSION",
+      "type": "percussion",
+      "role": "N3-P_PERCUSSION_ARCHITECTURE",
+      "section_assignments": ["VERSE", "CHORUS", "BRIDGE"]
+    }
+  ],
+  "material_events": {
+    "SYNTH_LEAD": {
+      "start": 0,
+      "duration": 16,
+      "pitch": "C4",
+      "section_assignments": ["INTRO", "VERSE", "PRE-CHORUS", "CHORUS", "BRIDGE", "OUTRO"]
+    },
+    "VOCAL_HARMONIES": {
+      "start": 4,
+      "duration": 12,
+      "pitch": "E4",
+      "section_assignments": ["VERSE", "CHORUS", "BRIDGE"]
+    },
+    "BASS_PULSE": {
+      "start": 0,
+      "duration": 16,
+      "pitch": "C2",
+      "section_assignments": ["INTRO", "VERSE", "PRE-CHORUS", "CHORUS", "BRIDGE", "OUTRO"]
+    },
+    "DRUM_PROGRAMMING": {
+      "start": 0,
+      "duration": 16,
+      "rhythm": "KICK ON 1 AND 3, SNARE ON 2 AND 4",
+      "section_assignments": ["INTRO", "VERSE", "PRE-CHORUS", "CHORUS", "BRIDGE", "OUTRO"]
+    },
+    "SAMPLED_PERCUSSION": {
+      "start": 4,
+      "duration": 12,
+      "rhythm": "HI-HATS ON 8TH NOTES, SHAKER ON OFFBEATS",
+      "section_assignments": ["VERSE", "CHORUS", "BRIDGE"]
+    }
+  },
+  "realization_notes": "Harmonic stability maintained through minor key vamp with chromatic passing tones. Textural accumulation achieved through gradual addition of vocal harmonies and sampled percussion. Percussion architecture includes syncopated drive with 4/4 foundation. Focal identity preserved through synth lead with controlled layering."
+}

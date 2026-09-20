@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from staged_harness import ROOT, INTERFACE, REQUIRED, assemble, build_retry_payload, can_advance, gate, preflight, validate_with_engine, parse_output
-from staged_runner import build_request
+from staged_runner import build_request, transport_request
 
 BRIEF = ROOT / "evaluations/composer-agent/XMODEL-005/brief.yaml"
 PROMPT = ROOT / "evaluations/composer-agent/XMODEL-005/frozen-prompt-stage-1.txt"
@@ -28,6 +28,46 @@ def valid_songplan():
     return {"schema_version":"2.0","name":"fixture","tempo":120,"time_signature":"4/4","tonic":"C","mode":"ionian","style":"indie-dance","arrangement":{"sections":[{"id":"A","start_bar":1,"bar_count":4,"energy":0.5}],"harmony_assignments":[{"harmony":"C","section_id":"A"}]},"tracks":[{"id":"lead","type":"pitched","role":"lead","motifs":[],"section_assignments":[]},{"id":"drums","type":"drums","role":"groove","motifs":[],"section_assignments":[]}]}
 
 class HarnessTests(unittest.TestCase):
+    class _Response:
+        status = 200
+        def __init__(self, body=b'{"message":{"content":"{}"}}', error=None):
+            self.body, self.error = body, error
+        def read(self):
+            if self.error: raise self.error
+            return self.body
+
+    def test_transport_complete_response(self):
+        r = transport_request(b"{}", "http://fixture", 1,
+                              opener=lambda req, timeout: self._Response())
+        self.assertEqual(r["transport_status"], "COMPLETE_RESPONSE")
+        self.assertEqual(r["response_bytes"], b'{"message":{"content":"{}"}}')
+        self.assertIsNotNone(r["elapsed_seconds"])
+
+    def test_transport_timeout_is_explicit(self):
+        r = transport_request(b"{}", "http://fixture", 1,
+                              opener=lambda req, timeout: (_ for _ in ()).throw(TimeoutError("timed out")))
+        self.assertEqual(r["transport_status"], "TIMEOUT")
+
+    def test_transport_http_error_is_explicit(self):
+        from urllib.error import HTTPError
+        def fail(req, timeout): raise HTTPError("http://fixture", 500, "bad", {}, None)
+        r = transport_request(b"{}", "http://fixture", 1, opener=fail)
+        self.assertEqual(r["transport_status"], "HTTP_ERROR")
+        self.assertEqual(r["http_status"], 500)
+
+    def test_transport_incomplete_response_is_explicit(self):
+        r = transport_request(b"{}", "http://fixture", 1,
+                              opener=lambda req, timeout: self._Response(error=ConnectionError("closed")))
+        self.assertEqual(r["transport_status"], "INTERRUPTED_OR_INCOMPLETE")
+
+    def test_transport_preserves_partial_bytes(self):
+        class PartialError(Exception):
+            partial = b'{"partial":true}'
+        r = transport_request(b"{}", "http://fixture", 1,
+                              opener=lambda req, timeout: self._Response(error=PartialError("closed")))
+        self.assertEqual(r["transport_status"], "INTERRUPTED_OR_INCOMPLETE")
+        self.assertEqual(r["response_bytes"], b'{"partial":true}')
+
     def test_a_missing_brief_preflight_fail(self):
         r = preflight("payload", 1, ROOT/"missing-brief.yaml", PROMPT); self.assertFalse(r["pass"])
     def test_b_missing_record_preflight_fail(self):

@@ -1,0 +1,50 @@
+﻿record_type: transport_failure
+project: music-composer-lab
+test_id: XMODEL-009
+model: qwen3:14b
+stage: stage-3
+attempt: 2
+classification: TECHNICAL_TRANSPORT_FAILURE
+model_attempt_status: REACHED_OLLAMA_NO_COMPLETED_CAPTURE
+request_reached_ollama: true
+request_start_local_approx: '2026-09-19T15:29:02-05:00'
+request_end_local: '2026-09-19T16:29:02-05:00'
+elapsed_seconds_observed: 3600
+client:
+  runner: integrations/composer-agent/staged_runner.py
+  transport: urllib.request.urlopen
+  timeout_seconds: 3600
+  stream: false
+  behavior: timeout applies to connect/read socket operations; response body was read as one blocking operation
+server_evidence:
+  log: C:/Users/Steeven/AppData/Local/Ollama/server.log
+  http_status: 500
+  gin_duration: 1h0m0s
+  request: POST /api/chat
+  task_id: 4729
+  cancellation: 'srv stop: cancel task, id_task = 4729'
+  final_slot_state: 'stop processing: n_tokens = 16953, truncated = 0'
+  completed_response: false
+  generation_completion_reported: false
+  interpretation: 'The server was still processing when the one-hour request ended; model-loaded state is not completion evidence.'
+client_evidence:
+  traceback: 'Python TimeoutError while waiting for the HTTP response, as reported for this execution'
+  raw_output_captured: false
+  raw_api_response_captured: false
+  capture_manifest_written: false
+  retry_input_preserved: true
+  retry_payload_manifest_preserved: true
+provenance:
+  retry_input_sha256: f06cda45cc4945a6170baf179b6f421402256019a915878b8817942399e0664a
+  original_stage3_payload_sha256: 8fa80a4972a40777900fe2075e1006716e41019dcf15f53cd9f992c2bfc14537
+  generation_parameters:
+    temperature: 0
+    seed: 41
+    top_p: 1
+    top_k: 40
+    repeat_penalty: 1
+    num_ctx: 32768
+    num_predict: 8192
+  structured_output_schema: evaluations/composer-agent/XMODEL-009/stage-3-songplan-format-schema-v1.1.json
+  musical_gate_diagnostic_preserved_separately: true
+historical_capture_modified: false

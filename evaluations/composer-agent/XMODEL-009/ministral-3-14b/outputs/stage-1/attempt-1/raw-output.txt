@@ -1,0 +1,350 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": [
+        {
+          "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density/timbre changes (GP-01, GP-04)",
+          "strategy": "Persistent loop with cross-domain variation",
+          "sections": ["Intro", "Verse", "Chorus", "Bridge", "Outro"],
+          "cross_domain_dependencies": ["melody", "harmony", "texture", "density"]
+        },
+        {
+          "description": "Through-composed form with gradual harmonic progression and subtle rhythmic shifts (GP-02, GP-05)",
+          "strategy": "Harmonic progression with rhythmic variation",
+          "sections": ["A", "B", "A'", "C", "A''"],
+          "cross_domain_dependencies": ["harmony", "rhythm", "groove"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve melodic/harmonic identity while allowing controlled development through cross-domain contrast (tension/restraint/hypnotic character).",
+      "tradeoff": {
+        "persistent_material": "Maintains hypnotic quality and focal identity",
+        "sectional_contrast": "Enables gradual accumulation and release"
+      },
+      "trace_reference": "CK-FORM-01, GP-01, GP-04",
+      "selected_option": {
+        "description": "Loop-based form with persistent melodic/harmonic material and section differentiation through texture/density/timbre changes",
+        "sections": ["Intro (4 bars)", "Verse (8 bars)", "Chorus (8 bars)", "Bridge (4 bars)", "Outro (4 bars)"],
+        "cross_domain_dependencies": ["melody: persistent", "harmony: loop", "texture: variable", "density: dynamic"]
+      }
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": [
+        {
+          "description": "Intro: Establish groove and focal identity; Verse: Develop motif with harmonic persistence; Chorus: Release through texture/density; Bridge: Contrast via timbre/registration; Outro: Fade with persistent material",
+          "roles": {
+            "Intro": "establish",
+            "Verse": "develop",
+            "Chorus": "release",
+            "Bridge": "contrast",
+            "Outro": "fade"
+          }
+        },
+        {
+          "description": "Intro: Open with minimal density; Verse: Prepare through harmonic tension; Chorus: Arrive via melodic climax; Bridge: Return with reduced texture; Outro: Close with persistent groove",
+          "roles": {
+            "Intro": "open",
+            "Verse": "prepare",
+            "Chorus": "arrive",
+            "Bridge": "return",
+            "Outro": "close"
+          }
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Align section roles with gradual accumulation and one clear release, prioritizing hypnotic tension and controlled contrast.",
+      "tradeoff": {
+        "harmonic_persistence": "Supports hypnotic character but limits melodic variation",
+        "textural_contrast": "Enables release but risks disrupting groove"
+      },
+      "trace_reference": "CK-FORM-02, GP-03",
+      "selected_option": {
+        "roles": {
+          "Intro": "establish",
+          "Verse": "develop",
+          "Chorus": "release",
+          "Bridge": "contrast",
+          "Outro": "fade"
+        },
+        "justification": "Intro establishes groove and identity; Verse develops motif while preserving harmonic loop; Chorus releases through textural expansion; Bridge contrasts via timbre; Outro fades with persistent material."
+      }
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": [
+        {
+          "description": "Minor pentatonic loop with modal interchange (D Dorian → D Phrygian) for tension/restraint",
+          "tonic": "D",
+          "mode": "Dorian/Phrygian interchange",
+          "progression": ["Dm", "Em", "F", "Gm", "Am", "Bdim"],
+          "harmonic_rhythm": "1 chord per bar"
+        },
+        {
+          "description": "Whole-tone scale loop (C# whole-tone) for ambiguous, hypnotic quality",
+          "tonic": "C#",
+          "mode": "Whole-tone",
+          "progression": ["C#m7", "D#m7", "E7", "F#m7", "G#7", "A#m7"],
+          "harmonic_rhythm": "1 chord per 2 bars"
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create a restrained, hypnotic harmonic foundation that supports persistent melodic material while allowing subtle development.",
+      "tradeoff": {
+        "modal_interchange": "Enhances tension but may feel abrupt",
+        "whole-tone": "Ambiguous but lacks directional pull"
+      },
+      "trace_reference": "CK-HAR-02, GP-02",
+      "selected_option": {
+        "tonic": "D",
+        "mode": "Dorian (with Phrygian interchange in Verse)",
+        "progression": ["Dm", "Em", "F", "Gm", "Am", "Bdim"],
+        "harmonic_rhythm": "1 chord per bar",
+        "development_strategy": "Phrygian interchange in Verse for tension; return to Dorian in Chorus for release"
+      }
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": [
+        {
+          "description": "Persistent melodic motif in high register (violin/synth lead) with harmonic loop",
+          "instrument": "violin/synth lead",
+          "register": "high",
+          "role": "melodic carrier",
+          "cross_domain_dependencies": ["harmony: loop", "texture: sparse"]
+        },
+        {
+          "description": "Bass-driven groove with melodic counterpoint in mid-register (piano/electric piano)",
+          "instrument": "bass/piano",
+          "register": "mid",
+          "role": "groove carrier",
+          "cross_domain_dependencies": ["rhythm: syncopated", "texture: layered"]
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize a tense, hypnotic focal identity that aligns with the restrained character and supports gradual development.",
+      "tradeoff": {
+        "high_register_melody": "Clear identity but risks detachment from groove",
+        "bass_driven_groove": "Strong rhythmic cohesion but may lack melodic tension"
+      },
+      "trace_reference": "GP-01, GP-06",
+      "selected_option": {
+        "instrument": "violin/synth lead",
+        "register": "high",
+        "role": "melodic carrier with harmonic loop",
+        "justification": "High-register melody aligns with hypnotic, restrained character and maintains clear focal identity across development."
+      }
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": [
+        {
+          "description": "Persistent 4-bar motif with interval preservation (minor 3rd/6th) and registral shift in Chorus",
+          "invariants": ["intervals: minor 3rd/6th", "contour: descending"],
+          "operations": ["registral shift in Chorus", "rhythmic displacement in Bridge"],
+          "cross_domain_dependencies": ["harmony: loop", "texture: sparse"]
+        },
+        {
+          "description": "Fragmented motif with pitch-class retention and rhythmic variation",
+          "invariants": ["pitch-class set", "rhythmic cell"],
+          "operations": ["fragmentation in Verse", "reassembly in Chorus"],
+          "cross_domain_dependencies": ["harmony: modal interchange", "texture: dynamic"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Preserve melodic identity through controlled transformation while supporting gradual accumulation.",
+      "tradeoff": {
+        "interval_preservation": "Maintains hypnotic quality but limits harmonic flexibility",
+        "fragmentation": "Enables development but risks losing focal identity"
+      },
+      "trace_reference": "CK-MEL-01, CK-DEV-01",
+      "selected_option": {
+        "invariants": ["intervals: minor 3rd/6th", "contour: descending"],
+        "operations": ["registral shift in Chorus (+1 octave)", "rhythmic displacement in Bridge (16th-note delay)"],
+        "justification": "Preserves hypnotic character through interval/contour invariants while allowing controlled development via registral/rhythmic shifts."
+      }
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": [
+        {
+          "description": "Syncopated walking bass with harmonic reinforcement (root/5th)",
+          "role": "groove support",
+          "alignment": "syncopated with kick",
+          "harmonic_function": "root/5th reinforcement",
+          "cross_domain_dependencies": ["groove: syncopated", "percussion: minimal"]
+        },
+        {
+          "description": "Pulsing octave bass with harmonic ambiguity (whole-tone implications)",
+          "role": "textural foundation",
+          "alignment": "aligned with kick",
+          "harmonic_function": "ambiguous (whole-tone implications)",
+          "cross_domain_dependencies": ["harmony: whole-tone", "percussion: absent"]
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Support the hypnotic groove while maintaining harmonic clarity and interaction with percussion.",
+      "tradeoff": {
+        "syncopated_bass": "Enhances groove but may compete with melody",
+        "pulsing_octave": "Simplifies texture but lacks harmonic definition"
+      },
+      "trace_reference": "GP-02, N3-P",
+      "selected_option": {
+        "role": "groove support with harmonic reinforcement",
+        "alignment": "syncopated with kick (16th-note offset)",
+        "harmonic_function": "root/5th reinforcement with occasional 7th",
+        "justification": "Syncopated bass aligns with groove while reinforcing harmonic loop, balancing tension and cohesion."
+      }
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": [
+        {
+          "description": "4/4 swing groove with kick on beat 1 and snare on 2/4 (standard indie-dance)",
+          "meter": "4/4",
+          "swing": "moderate (60% triplet feel)",
+          "kick_snare_pattern": "1 & 2 & 4 &",
+          "cross_domain_dependencies": ["bass: syncopated", "percussion: FULL"]
+        },
+        {
+          "description": "Triplet-based groove with kick on 1/3 and snare on 2 (hypnotic, restrained)",
+          "meter": "4/4 (triplet subdivision)",
+          "swing": "minimal (40% triplet feel)",
+          "kick_snare_pattern": "1 3 & 2 &",
+          "cross_domain_dependencies": ["bass: aligned", "percussion: MINIMAL"]
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Create a hypnotic, restrained groove that supports persistent melodic material and gradual development.",
+      "tradeoff": {
+        "standard_swing": "Accessible but less hypnotic",
+        "triplet_groove": "Hypnotic but may feel rigid"
+      },
+      "trace_reference": "GP-05, CK-RHY-01",
+      "selected_option": {
+        "meter": "4/4",
+        "swing": "moderate (60% triplet feel)",
+        "kick_snare_pattern": "1 & 2 & 4 &",
+        "justification": "Balances hypnotic quality with rhythmic flexibility, supporting both groove and melodic development."
+      }
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": [
+        {
+          "description": "FULL: Kick, snare, closed hat (minimal), with hi-hat on 8th/16th notes",
+          "strategies": ["kick: syncopated", "snare: backbeat", "hat: sparse"],
+          "bass_groove_interaction": "Kick aligns with bass root; snare complements syncopation",
+          "focal_hierarchy_interaction": "Percussion supports groove; melody remains focal",
+          "section_behavior": {
+            "Intro": "minimal hat, accented kick",
+            "Verse": "full pattern",
+            "Chorus": "hat density increases",
+            "Bridge": "hat removed, kick/snare only",
+            "Outro": "gradual reduction"
+          },
+          "development_behavior": "Hat density mirrors textural development"
+        },
+        {
+          "description": "MINIMAL: Kick and snare only (no hat)",
+          "strategies": ["kick: aligned", "snare: backbeat"],
+          "bass_groove_interaction": "Kick aligns with bass root; snare reinforces harmonic rhythm",
+          "focal_hierarchy_interaction": "Percussion reinforces groove; melody remains dominant",
+          "section_behavior": {
+            "Intro": "kick only",
+            "Verse": "kick/snare",
+            "Chorus": "snare emphasis",
+            "Bridge": "kick/snare with rhythmic displacement",
+            "Outro": "kick only"
+          },
+          "development_behavior": "Rhythmic displacement in Bridge"
+        },
+        {
+          "description": "DELEGATED: Percussion functions delegated to bass and melody (no independent track)",
+          "strategies": ["bass: rhythmic emphasis", "melody: syncopation"],
+          "bass_groove_interaction": "Bass carries groove; melody provides rhythmic interest",
+          "focal_hierarchy_interaction": "Melody dominates; bass supports groove",
+          "section_behavior": {
+            "Intro": "melodic syncopation",
+            "Verse": "bass emphasis",
+            "Chorus": "melodic displacement",
+            "Bridge": "combined emphasis",
+            "Outro": "melodic fade"
+          },
+          "development_behavior": "Rhythmic roles shift by section"
+        }
+      ],
+      "selected_outcome": "MINIMAL",
+      "candidate_strategies": [
+        {
+          "description": "FULL: Kick, snare, closed hat (minimal), hi-hat",
+          "rationale": "Supports groove but risks overpowering melody"
+        },
+        {
+          "description": "MINIMAL: Kick and snare only",
+          "rationale": "Preserves focal identity of melody while maintaining groove"
+        },
+        {
+          "description": "DELEGATED: No independent percussion",
+          "rationale": "Maximizes melodic focus but may weaken groove"
+        }
+      ],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Prioritize melodic focal identity and hypnotic restraint by minimizing percussive density while maintaining groove.",
+      "tradeoff": {
+        "groove_strength": "MINIMAL risks weaker groove",
+        "melodic_focus": "MINIMAL preserves hypnotic quality"
+      },
+      "trace_reference": "N3-P, GP-05",
+      "bass_groove_interaction": "Kick aligns with bass root; snare reinforces harmonic rhythm and syncopation.",
+      "focal_hierarchy_interaction": "Percussion supports groove without competing with melody; melody remains the primary focal point.",
+      "section_behavior": {
+        "Intro": "kick only (aligned with bass)",
+        "Verse": "kick/snare (snare on 2/4)",
+        "Chorus": "snare emphasis (hat absent)",
+        "Bridge": "kick/snare with rhythmic displacement (snare on 3)",
+        "Outro": "kick only (gradual reduction)"
+      },
+      "development_behavior": "Rhythmic displacement in Bridge aligns with textural contrast; snare emphasis in Chorus supports release."
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": [
+        {
+          "description": "Sparse texture with layered synth pads and sparse percussion",
+          "layers": ["lead: violin/synth", "pad: sparse", "percussion: MINIMAL"],
+          "cross_domain_dependencies": ["harmony: loop", "groove: syncopated"]
+        },
+        {
+          "description": "Dynamic texture with evolving density (Verse: sparse; Chorus: layered)",
+          "layers": ["lead: persistent", "pad: variable", "percussion: section-dependent"],
+          "cross_domain_dependencies": ["harmony: modal interchange", "groove: triplet-based"]
+        }
+      ],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support hypnotic character through controlled textural contrast while preserving focal identity.",
+      "tradeoff": {
+        "sparse_texture": "Maintains restraint but limits harmonic richness",
+        "dynamic_texture": "Enables development but risks disrupting groove"
+      },
+      "trace_reference": "GP-04, GP-06",
+      "selected_option": {
+        "layers": [
+          {
+            "instrument": "violin/synth lead",
+            "role": "persistent focal identity",
+            "density": "sparse"
+          },
+          {
+            "instrument": "synth pad",
+            "role": "harmonic reinforcement",
+            "density": "variable (sparse in Verse, layered in Chorus)"
+          },
+          {
+            "instrument": "percussion",
+            "role": "groove support",
+            "density": "MINIMAL"
+          }
+        ],
+        "justification": "Layered texture supports harmonic loop while allowing controlled development; sparse percussion preserves

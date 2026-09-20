@@ -1,0 +1,332 @@
+{
+  "schema_version": "2.0",
+  "name": "indie_dance_composition",
+  "tempo": 128,
+  "time_signature": "4/4",
+  "tonic": "C",
+  "mode": "aeolian",
+  "style": "indie-dance",
+  "arrangement": {
+    "sections": [
+      {
+        "id": "INTRO",
+        "start_bar": 1,
+        "bar_count": 8,
+        "energy": 0.4
+      },
+      {
+        "id": "VERSE",
+        "start_bar": 9,
+        "bar_count": 16,
+        "energy": 0.6
+      },
+      {
+        "id": "PRE-CHORUS",
+        "start_bar": 25,
+        "bar_count": 8,
+        "energy": 0.7
+      },
+      {
+        "id": "CHORUS",
+        "start_bar": 33,
+        "bar_count": 16,
+        "energy": 0.9
+      },
+      {
+        "id": "BRIDGE",
+        "start_bar": 49,
+        "bar_count": 12,
+        "energy": 0.8
+      },
+      {
+        "id": "OUTRO",
+        "start_bar": 61,
+        "bar_count": 16,
+        "energy": 0.5
+      }
+    ],
+    "harmony_assignments": []
+  },
+  "tracks": [
+    {
+      "id": "synth_lead",
+      "type": "pitched",
+      "role": "FOCAL_IDENTITY",
+      "motifs": [
+        {
+          "id": "main_phrase",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/4",
+              "pitches": ["C4"],
+              "velocity": 96
+            },
+            {
+              "bar": 1,
+              "beat": "3/2",
+              "duration": "1/4",
+              "pitches": ["E4"],
+              "velocity": 92,
+              "chromatic": true
+            },
+            {
+              "bar": 1,
+              "beat": "2",
+              "duration": "1/2",
+              "pitches": ["G4"],
+              "velocity": 100
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "INTRO",
+          "motif_id": "main_phrase"
+        },
+        {
+          "section_id": "VERSE",
+          "motif_id": "main_phrase"
+        },
+        {
+          "section_id": "PRE-CHORUS",
+          "motif_id": "main_phrase"
+        },
+        {
+          "section_id": "CHORUS",
+          "motif_id": "main_phrase"
+        },
+        {
+          "section_id": "BRIDGE",
+          "motif_id": "main_phrase"
+        },
+        {
+          "section_id": "OUTRO",
+          "motif_id": "main_phrase"
+        }
+      ]
+    },
+    {
+      "id": "vocal_harmonies",
+      "type": "pitched",
+      "role": "TEXTURE",
+      "motifs": [
+        {
+          "id": "harmony_phrase",
+          "events": [
+            {
+              "bar": 9,
+              "beat": "1",
+              "duration": "1/4",
+              "pitches": ["E4"],
+              "velocity": 88
+            },
+            {
+              "bar": 9,
+              "beat": "3/2",
+              "duration": "1/4",
+              "pitches": ["G4"],
+              "velocity": 85,
+              "chromatic": true
+            },
+            {
+              "bar": 9,
+              "beat": "2",
+              "duration": "1/2",
+              "pitches": ["Bb4"],
+              "velocity": 90,
+              "chromatic": true
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "VERSE",
+          "motif_id": "harmony_phrase"
+        },
+        {
+          "section_id": "CHORUS",
+          "motif_id": "harmony_phrase"
+        },
+        {
+          "section_id": "BRIDGE",
+          "motif_id": "harmony_phrase"
+        }
+      ]
+    },
+    {
+      "id": "bass_pulse",
+      "type": "pitched",
+      "role": "BASS_ROLE",
+      "motifs": [
+        {
+          "id": "bass_line",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/4",
+              "pitches": ["C2"],
+              "velocity": 80
+            },
+            {
+              "bar": 1,
+              "beat": "3/2",
+              "duration": "1/4",
+              "pitches": ["Eb2"],
+              "velocity": 78,
+              "chromatic": true
+            },
+            {
+              "bar": 1,
+              "beat": "2",
+              "duration": "1/2",
+              "pitches": ["G2"],
+              "velocity": 82
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "INTRO",
+          "motif_id": "bass_line"
+        },
+        {
+          "section_id": "VERSE",
+          "motif_id": "bass_line"
+        },
+        {
+          "section_id": "PRE-CHORUS",
+          "motif_id": "bass_line"
+        },
+        {
+          "section_id": "CHORUS",
+          "motif_id": "bass_line"
+        },
+        {
+          "section_id": "BRIDGE",
+          "motif_id": "bass_line"
+        },
+        {
+          "section_id": "OUTRO",
+          "motif_id": "bass_line"
+        }
+      ]
+    },
+    {
+      "id": "drum_programming",
+      "type": "drums",
+      "role": "N3-P_PERCUSSION_ARCHITECTURE",
+      "motifs": [
+        {
+          "id": "drum_pattern",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/4",
+              "drum_voice": "kick"
+            },
+            {
+              "bar": 1,
+              "beat": "2",
+              "duration": "1/4",
+              "drum_voice": "snare"
+            },
+            {
+              "bar": 1,
+              "beat": "3",
+              "duration": "1拍",
+              "drum_voice": "kick"
+            },
+            {
+              "bar": 1,
+              "beat": "4",
+              "duration": "1/4",
+              "drum_voice": "snare"
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "INTRO",
+          "motif_id": "drum_pattern"
+        },
+        {
+          "section_id": "VERSE",
+          "motif_id": "drum_pattern"
+        },
+        {
+          "section_id": "PRE-CHORUS",
+          "motif_id": "drum_pattern"
+        },
+        {
+          "section_id": "CHORUS",
+          "motif_id": "drum_pattern"
+        },
+        {
+          "section_id": "BRIDGE",
+          "motif_id": "drum_pattern"
+        },
+        {
+          "section_id": "OUTRO",
+          "motif_id": "drum_pattern"
+        }
+      ]
+    },
+    {
+      "id": "sampled_percussion",
+      "type": "percussion",
+      "role": "N3-P_PERCUSSION_ARCHITECTURE",
+      "kit_id": "song001_r1_steven_slate_map",
+      "map_id": "song001_r1_steven_slate_map",
+      "motifs": [
+        {
+          "id": "percussion_pattern",
+          "events": [
+            {
+              "bar": 9,
+              "beat": "1",
+              "duration": "1/8",
+              "instrument": "hi-hat",
+              "sounding_articulation": "open"
+            },
+            {
+              "bar": 9,
+              "beat": "3/2",
+              "duration": "1/8",
+              "instrument": "shaker",
+              "sounding_articulation": "normal"
+            },
+            {
+              "bar": 9,
+              "beat": "2",
+              "duration": "1/4",
+              "instrument": "hi-hat",
+              "sounding_articulation": "closed"
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "VERSE",
+          "motif_id": "percussion_pattern"
+        },
+        {
+          "section_id": "CHORUS",
+          "motif_id": "percussion_pattern"
+        },
+        {
+          "section_id": "BRIDGE",
+          "motif_id": "percussion_pattern"
+        }
+      ]
+    }
+  ]
+}

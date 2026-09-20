@@ -1,0 +1,30 @@
+﻿revision: 001
+status: PREPARED_NOT_EXECUTED
+reason: corrected runner-equivalent preflight after original technical preflight failure
+original_payload_sha256: a2f6fa4451d6597a806fb7bf49ee073d1b6ad4b0295e062df610d916a21c472a
+corrected_payload_sha256: 0ed8244b617281f39e553f40a9212bf74b555d21c6876abc7a5a9c26dcd88be5
+brief_sha256: 464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b
+interface_version: composer-interface-v1.1
+original_failure:
+  classification: TECHNICAL_PREFLIGHT_FAILURE
+  runner_reached_ollama: false
+  error: required record missing from payload: evaluations/composer-agent/XMODEL-009/stage-1-output-schema-v1.1-n3-canonical.json
+  missing_runner_required_record:
+    - evaluations/composer-agent/XMODEL-009/stage-1-output-schema-v1.1-n3-canonical.json
+  preparation_omission:
+    - evaluations/composer-agent/XMODEL-009/model-visible-host-capabilities.md
+corrected_required_records:
+  - evaluations/composer-agent/XMODEL-009/stage-1-output-schema-v1.1-n3-canonical.json
+  - evaluations/composer-agent/XMODEL-009/model-visible-host-capabilities.md
+models:
+  qwen3-14b:
+    payload: evaluations/composer-agent/XMODEL-009/qwen3-14b/revision-001/stage-1-payload.txt
+    preflight: PASS
+    resolved_record_count: 10
+  ministral-3-14b:
+    payload: evaluations/composer-agent/XMODEL-009/ministral-3-14b/revision-001/stage-1-payload.txt
+    preflight: PASS
+    resolved_record_count: 10
+model_inference: NO
+midi_generated: NO
+new_xmodel_created: NO

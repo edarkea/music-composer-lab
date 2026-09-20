@@ -1,0 +1,33 @@
+{
+  "capture_status": "CAPTURED",
+  "captured_at_utc": "2026-09-20T00:04:29.307161+00:00",
+  "model_identifier_requested": "qwen3:14b",
+  "model_identifier_reported": "qwen3:14b",
+  "interface_version": "composer-interface-v1.1",
+  "stage": "stage-3",
+  "attempt": 3,
+  "request_id": "XMODEL-009-QWEN-STAGE3-ATTEMPT-003",
+  "input_sha256": "23a66ee48eab2e7b548d209da69073111ad16548fdd1c94ae4aca557ba51ddee",
+  "payload_sha256": "23a66ee48eab2e7b548d209da69073111ad16548fdd1c94ae4aca557ba51ddee",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 8192
+  },
+  "request_sha256": "36ba564da87728b2e58e206c2d0a6157483e93be649cda988995cf443c9cb63b",
+  "structured_output_schema": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-009\\stage-3-songplan-format-schema-v1.1.json",
+  "raw_api_response_sha256": "e5cae254cd4e4835160cd722f9df432430ace29e2bc5a8565ed84080b342a702",
+  "raw_output_sha256": "11060832e23851563f22aa1f4061db386ce620f5f32f81e17272282af84cd730",
+  "semantic_repair_performed": false,
+  "done_reason": "stop",
+  "eval_count": 2565,
+  "prompt_eval_count": 14707,
+  "transport_status": "COMPLETE_RESPONSE",
+  "elapsed_seconds": 3814.594000000001,
+  "http_timeout_seconds": 7200.0
+}
