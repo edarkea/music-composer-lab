@@ -1,0 +1,63 @@
+{
+  "payload_path": "evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\stage-1-payload.txt",
+  "payload_sha256": "3d13b24407fdba0d30147f9d714e2071ac0dd2e9f52a910ab5a4f6c28f2d0140",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "interface_version": "composer-interface-v1.1",
+  "stage": 1,
+  "resolved_records": [
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\brief.yaml",
+      "sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b"
+    },
+    {
+      "path": "integrations\\composer-agent\\system-contract-v1.1.md",
+      "sha256": "032dc7738db9f8723f02c4e734b10a07b0ff49f2d68dda963f7410b01b174373"
+    },
+    {
+      "path": "datasets\\composer-interface-v1.1\\decision-schema.yaml",
+      "sha256": "f71c622e6f275369ccb024818051f6955ae37de8bc34c8558ab38c7bf1ef4168"
+    },
+    {
+      "path": "datasets\\composer-interface-v1.1\\guardrails.yaml",
+      "sha256": "abcf1432758aad5c67a4b13cb259414013c7f2261bb58160b8ed2d5a702ca0b2"
+    },
+    {
+      "path": "datasets\\composer-interface-v1.1\\completion-checklist.yaml",
+      "sha256": "5b454c9fb8d3acb303e930196ce0b684b3a7d01c3293a6237312625a287114f2"
+    },
+    {
+      "path": "datasets\\composer-interface-v1.1\\knowledge\\approved-composition-knowledge.yaml",
+      "sha256": "f4f9373b35fe5e87bfd28b51b5cf0ddd7a673e414c97f9a700c3a003eb29f76a"
+    },
+    {
+      "path": "datasets\\composer-interface-v1.1\\genres\\indie-dance.yaml",
+      "sha256": "5fb9ab64d7703ee5129bc8cd62b9e4d0d411928f9c5f4344d1606ff9dd3181fd"
+    },
+    {
+      "path": "datasets\\composer-interface-v1.1\\knowledge\\n3-p-percussion-architecture.yaml",
+      "sha256": "97f0763fc13f2ef5edd316636028c50a6bfa840b3a09764cdd33e3755fd1333a"
+    },
+    {
+      "path": "integrations\\composer-agent\\stage-1-decision-trace-schema.yaml",
+      "sha256": "25fc8a5f721b3826560ee4e65246228540a6344fef874031a45c3e946435eca0"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\frozen-prompt-stage-1-n3-canonical.txt",
+      "sha256": "73d796fa33f47b1cea520acb7449e12e18daeb7f6fe29321aa35230349fee0af"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\stage-1-output-schema-v1.1-n3-canonical.json",
+      "sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\model-visible-host-capabilities.md",
+      "sha256": "e45e7884de20b87a8e665ac562f1e5ab68e1a5e1d3b184479a91d8e52b990de1"
+    }
+  ],
+  "preflight": {
+    "pass": true,
+    "stage": 1,
+    "errors": [],
+    "resolved_record_count": 12
+  }
+}

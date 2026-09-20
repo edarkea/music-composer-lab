@@ -1,0 +1,33 @@
+schema_id: staged-composer-stage-3-songplan-serialization-v1
+version: 1.0.0
+purpose: Serialización del material congelado al contrato SongPlanV2 autoritativo.
+required_inputs:
+  - frozen_decision_trace_hash
+  - frozen_material_hash
+  - songplan_v2_contract
+allowed_operation: serialize_only
+prohibited_operations:
+  - choose_new_harmony
+  - change_form
+  - change_n3_p
+  - rewrite_motif_for_artistic_reasons
+validation:
+  - exact_songplan_v2_root
+  - engine_songplan_v2_codec_and_validator
+  - raw_json_duplicate_key_rejection
+  - time_signature_string
+  - effect_bar_beat_duration_only
+  - section_ranges
+  - track_references
+  - motif_assignments
+  - event_structure
+  - pitch_formats
+  - drum_voice_validity
+  - scale_and_chromatic_note_validation
+  - host_map_resolution_without_identifier_substitution
+  - harmonic_label_explicit_voicing_integrity
+  - handoff_consistency
+retry:
+  max_attempts: 3
+  diagnostics_only: true
+  semantic_repair: false

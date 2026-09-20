@@ -1,0 +1,126 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["loop-based verse-chorus", "progressive build-up", "static vamp structure"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Enable persistent forward motion with clear release",
+      "tradeoff": "Static vamp risks monotony; progressive structure increases complexity",
+      "trace_reference": "GP-04: Diferenciación formal loop-based",
+      "selected_option": "Progressive verse-chorus with build-up section"
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["Verse", "Pre-Chorus", "Chorus", "Bridge", "Outro"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Create gradual accumulation through section progression",
+      "tradeoff": "Bridge may disrupt forward motion if not carefully designed",
+      "trace_reference": "GP-01: Persistencia melódica con cambio cross-domain",
+      "selected_option": "Verse → Pre-Chorus → Chorus → Build-Up → Release"
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["E minor with modal interchange", "D Dorian progression", "Static power chord vamp"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Maintain hypnotic quality through modal ambiguity",
+      "tradeoff": "Modal interchange increases harmonic complexity",
+      "trace_reference": "CK-HAR-02: Semilla armónica condicionada por el objetivo",
+      "selected_option": "E minor with B Phrygian modal interchange"
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["Synth lead", "Piano motif", "Bassline focus"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Establish clear melodic identity through synth lead",
+      "tradeoff": "Bassline focus might compete with forward motion",
+      "trace_reference": "CK-MEL-01: Semilla melódica condicionada por el objetivo",
+      "selected_option": "Synth lead with rhythmic articulation"
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["Repetitive phrase with variation", "Call-response structure", "Fragmented motifs"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Enable gradual development through phrase repetition",
+      "tradeoff": "Fragmented motifs may reduce memorability",
+      "trace_reference": "CK-MEL-02: Presentación y recurrencia como operaciones disponibles",
+      "selected_option": "Repetitive phrase with end variation"
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["Driving kick-snare pattern", "Walking bassline", "Percussive bass"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Support forward motion through rhythmic consistency",
+      "tradeoff": "Walking bass may reduce percussive impact",
+      "trace_reference": "GP-02: Marco armónico cíclico/estático",
+      "selected_option": "Driving kick-snare with sub-bass pulses"
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["120 BPM driving groove", "110 BPM restrained pulse", "130 BPM energetic feel"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Balance tension and release through moderate tempo",
+      "tradeoff": "Faster tempo increases energy but risks losing restraint",
+      "trace_reference": "CK-RHY-01: Metro como filtro de colocación",
+      "selected_option": "120 BPM with syncopated hi-hats"
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL layered percussion", "Minimalist approach", "Delegated to synth elements"],
+      "selected_outcome": "FULL",
+      "candidate_strategies": ["Layered electronic percussion", "Hybrid acoustic/electronic kit"],
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Enhance hypnotic quality through dense textures",
+      "tradeoff": "Full percussion increases production complexity",
+      "trace_reference": "N3-P: Decisión explícita de arquitectura de percusión",
+      "bass_groove_interaction": "Kick-snare alignment with sub-bass pulses",
+      "focal_hierarchy_interaction": "Percussion supports synth lead without competing",
+      "section_behavior": "Gradual layering during build-up sections",
+      "development_behavior": "Textural evolution through added percussion elements"
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["Dense layered sound", "Sparse atmospheric pads", "Hybrid approach"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Maintain restrained quality with strategic density",
+      "tradeoff": "Sparse texture may reduce impact during release",
+      "trace_reference": "GP-06: Contraste seccional como conjunto de variables",
+      "selected_option": "Hybrid approach with atmospheric pads and layered synths"
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["Phrase repetition with variation", "Modular motif assembly", "Textural evolution"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Enable gradual accumulation through textural development",
+      "tradeoff": "Modular approach may reduce coherence",
+      "trace_reference": "CK-DEV-01: Relación transformable explícita",
+      "selected_option": "Phrase repetition with added percussion layers"
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["Gradual build-up with sudden release", "Sustained tension", "Cyclical tension"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Achieve clear release through dynamic contrast",
+      "tradeoff": "Sustained tension risks listener fatigue",
+      "trace_reference": "CK-FORM-02: Llegada, apertura, cierre y frontera son estados separados",
+      "selected_option": "Gradual build-up with sudden release in chorus"
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["Fade-out release", "Climactic resolution", "Looped vamp"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Resolve tension through atmospheric fade-out",
+      "tradeoff": "Climactic ending may disrupt hypnotic quality",
+      "trace_reference": "GP-03: Vocabulario de retorno, parada y frontera en loop",
+      "selected_option": "Atmospheric fade-out with lingering pads"
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["Harmony-melody alignment", "Rhythm-texture balance", "Percussion-bass coordination"],
+      "selection_basis": "EXPORTED_KNOWLEDGE_FILTER",
+      "active_intention": "Ensure all elements support forward motion and release",
+      "tradeoff": "Complex harmony may compete with rhythmic elements",
+      "trace_reference": "CK-CROSS-01: Ranking de reconocimiento bajo una tarea declarada",
+      "selected_option": "Prioritize rhythmic elements during build-up phases"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "payload_path": "evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\stage-3-prepared\\stage-3-payload.txt",
+  "payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "interface_version": "composer-interface-v1.1",
+  "stage": 3,
+  "resolved_records": [
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\brief.yaml",
+      "sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b"
+    },
+    {
+      "path": "integrations\\composer-agent\\system-contract-v1.1.md",
+      "sha256": "032dc7738db9f8723f02c4e734b10a07b0ff49f2d68dda963f7410b01b174373"
+    },
+    {
+      "path": "datasets\\composer-interface-v1.1\\songplan-v2-contract.yaml",
+      "sha256": "7c27eeb0cbb64d475148a140a16daf12b628ed079683a8fa3b5a7d5b225389f9"
+    },
+    {
+      "path": "integrations\\music-engine\\integration-contract.md",
+      "sha256": "339e75cdc1e60450d1cdb93f99755f6a15de3fa92246713eb6042867a31a037a"
+    },
+    {
+      "path": "integrations\\composer-agent\\stage-3-songplan-serialization-schema.yaml",
+      "sha256": "5027e4c0546ead2c68425c8356bc34b9e69343e9d1a240eac8aa7fe0e269e00e"
+    },
+    {
+      "path": "integrations\\music-engine\\host-config.yaml",
+      "sha256": "030ce1ccc36a7a900052a675a6dc9524b09e56a6765271a070c8d214a797d147"
+    },
+    {
+      "path": "integrations\\music-engine\\host-maps\\song001_r1_steven_slate_map.yaml",
+      "sha256": "3c8f366f7ea0ee870dfd8ccaac563ebd8545d1f17ab87d49658aa058faf8a1ab"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\stage-3-prompt-v1.2.txt",
+      "sha256": "1674e9267c2567da1f80d43d2b89945fe930696ca2e0e71410eff401fae44e76"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\stage-3-songplan-format-schema-v1.2.json",
+      "sha256": "6a4def87fedbf44240f9201306fe14456f72ef361b0441172918f47f26a6b095"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\engine-songplan-v2.schema-music-engine-4.0.0.json",
+      "sha256": "c5cdc8230c82063aa7e6b4baeeeb59bc5115ccb7b787167fb4676390a9b9cc3b"
+    },
+    {
+      "path": "evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\outputs\\stage-2\\accepted-output.json",
+      "sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823"
+    }
+  ],
+  "preflight": {
+    "pass": true,
+    "stage": 3,
+    "errors": [],
+    "resolved_record_count": 11
+  }
+}

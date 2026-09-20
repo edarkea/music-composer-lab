@@ -1,0 +1,125 @@
+{
+  "frozen_decision_trace_hash": "a1b2c3d4e5f67890",
+  "sections": [
+    {
+      "section_id": "verse",
+      "start_bar": 1,
+      "bar_count": 8,
+      "decision_references": ["FORM", "SECTION_ROLES", "HARMONIC_FRAMEWORK", "FOCAL_IDENTITY", "GROOVE"]
+    },
+    {
+      "section_id": "pre-chorus",
+      "start_bar": 9,
+      "bar_count": 4,
+      "decision_references": ["SECTION_ROLES", "DEVELOPMENT", "TEXTURE"]
+    },
+    {
+      "section_id": "chorus",
+      "start_bar": 13,
+      "bar_count": 8,
+      "decision_references": ["SECTION_ROLES", "ENERGY_TENSION_RELEASE", "N3-P_PERCUSSION_ARCHITECTURE"]
+    },
+    {
+      "section_id": "build-up",
+      "start_bar": 21,
+      "bar_count": 8,
+      "decision_references": ["SECTION_ROLES", "DEVELOPMENT", "TEXTURE"]
+    },
+    {
+      "section_id": "release",
+      "start_bar": 29,
+      "bar_count": 4,
+      "decision_references": ["SECTION_ROLES", "ENDING", "ENERGY_TENSION_RELEASE"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "synth_lead",
+      "type": "pitched",
+      "role": "focal_identity",
+      "section_assignments": ["verse", "pre-chorus", "chorus", "build-up", "release"]
+    },
+    {
+      "layer_id": "drums",
+      "type": "drums",
+      "role": "groove",
+      "section_assignments": ["verse", "pre-chorus", "chorus", "build-up", "release"]
+    },
+    {
+      "layer_id": "percussion",
+      "type": "percussion",
+      "role": "texture",
+      "section_assignments": ["verse", "pre-chorus", "chorus", "build-up", "release"]
+    },
+    {
+      "layer_id": "atmospheric_pads",
+      "type": "texture",
+      "role": "textural_support",
+      "section_assignments": ["verse", "pre-chorus", "chorus", "build-up", "release"]
+    }
+  ],
+  "material_events": {
+    "synth_lead": [
+      {
+        "start": 1.0,
+        "duration": 4.0,
+        "pitch": "E5",
+        "section_assignments": ["verse"]
+      },
+      {
+        "start": 9.0,
+        "duration": 2.0,
+        "pitch": "G#5",
+        "section_assignments": ["pre-chorus"]
+      },
+      {
+        "start": 13.0,
+        "duration": 4.0,
+        "pitch": "B5",
+        "section_assignments": ["chorus"]
+      }
+    ],
+    "drums": [
+      {
+        "start": 1.0,
+        "duration": 0.5,
+        "section_assignments": ["verse"]
+      },
+      {
+        "start": 1.5,
+        "duration": 0.5,
+        "section_assignments": ["verse"]
+      },
+      {
+        "start": 9.0,
+        "duration": 0.5,
+        "section_assignments": ["pre-chorus"]
+      }
+    ],
+    "percussion": [
+      {
+        "start": 1.0,
+        "duration": 0.25,
+        "section_assignments": ["verse"]
+      },
+      {
+        "start": 3.0,
+        "duration": 0.25,
+        "section_assignments": ["verse"]
+      }
+    ],
+    "atmospheric_pads": [
+      {
+        "start": 1.0,
+        "duration": 8.0,
+        "section_assignments": ["verse"]
+      },
+      {
+        "start": 9.0,
+        "duration": 4.0,
+        "section_assignments": ["pre-chorus"]
+      }
+    ]
+  },
+  "realization_notes": "Harmonic framework: E minor with B Phrygian modal interchange. Groove: 120 BPM with syncopated hi-hats. Texture: Hybrid approach with atmospheric pads and layered synths. Percussion architecture: Full layered with gradual build-up during development sections. Ending: Atmospheric fade-out with lingering pads."
+}

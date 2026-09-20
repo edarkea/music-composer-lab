@@ -1,0 +1,9 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\captures\\stage-3\\attempt-3\\retry-input.txt",
+  "payload_sha256": "7de060e36de1e23b9f9966057aca0625647dc826dca7ffc76c4dae6b74250698",
+  "original_payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "engine validation HOST_CONFIGURATION_INVALID: host_configuration_failure: percussion track 'percussion' map_id 'song001_r1_steven_slate_map' has no approved map directory"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\captures\\stage-3\\attempt-2\\retry-input.txt",
+  "payload_sha256": "ce407823c5942ab789d46dfaae151c78b1abfee33918ba469b145a81485402e7",
+  "original_payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+  "previous_raw_output_embedded": false,
+  "diagnostics": [
+    "engine validation FAIL: musical_semantic_validation_failure: pitch.outside_scale: tracks[0].motifs[1].events[0].pitches[0]: pitch must be in the song scale unless chromatic"
+  ]
+}

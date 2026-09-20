@@ -1,0 +1,38 @@
+version: 1.0.0
+endpoint: http://127.0.0.1:11434/api/chat
+stream: false
+http_timeout_seconds: 7200
+timeout_semantics: urllib socket timeout; not a wall-clock experiment deadline
+reason: XMODEL-009 Qwen Stage 3 recovery completed in 3908.344 seconds, exceeding the former 3600-second timeout; this transport-only increase leaves generation settings unchanged.
+pre_request:
+  - complete deterministic preflight
+  - exclusive request_id reservation
+  - exclusive output_dir reservation
+  - persist PREPARED request manifest with payload/brief/schema/prior hashes and generation settings
+before_transport_call:
+  - append SENT state
+  - model_request_count_increment: 1
+  - reserve experiment/model/stage/attempt identity against reuse
+terminal_states:
+  - CAPTURED
+  - TIMEOUT
+  - CONNECTION_FAILURE
+  - HTTP_ERROR
+  - INTERRUPTED_OR_INCOMPLETE
+  - INVALID_API_RESPONSE
+transport_failure:
+  is_gate_failure: false
+  has_evaluable_output: false
+  attempt_identity_reusable_after_SENT: false
+recovery:
+  request_kind: transport_recovery
+  unique_request_id: required
+  next_unused_stage_attempt_number: required
+  counted_as_additional_model_request: true
+incomplete_response:
+  raw_model_output_written: false
+  gate_pass_possible: false
+capture_safety:
+  overwrite_existing_request_id: false
+  overwrite_existing_output_dir: false
+  capture_only_when_api_done_is_true: true

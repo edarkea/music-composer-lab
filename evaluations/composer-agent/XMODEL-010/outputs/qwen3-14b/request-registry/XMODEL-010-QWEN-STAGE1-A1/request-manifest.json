@@ -1,0 +1,63 @@
+{
+  "state": "PREPARED",
+  "prepared_at_utc": "2026-09-20T19:45:39.397588+00:00",
+  "experiment_id": "XMODEL-010",
+  "request_id": "XMODEL-010-QWEN-STAGE1-A1",
+  "request_kind": "evaluable_attempt",
+  "model": "qwen3:14b",
+  "stage": "stage-1",
+  "stage_number": 1,
+  "attempt": 1,
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\stage-1-payload.txt",
+  "payload_sha256": "5fdae8712a5e74e91ad78b078b97b06c5dfcfaab230d77c1fd6458301e54a8ce",
+  "brief_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\brief.yaml",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "schema_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\stage-1-output-schema-v1.1-n3-canonical.json",
+  "schema_sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5",
+  "prior_path": null,
+  "prior_sha256": null,
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 4096
+  },
+  "timeout_seconds": 7200.0,
+  "output_dir": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\captures\\stage-1\\attempt-1",
+  "ollama_url": "http://127.0.0.1:11434/api/chat",
+  "request_sha256": "a9f94a474abd44b069502aee42b377ee9b03567d9126d6d2a7197037a7397179",
+  "interface_version": "composer-interface-v1.1",
+  "resolved_record_ids": [
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/brief.yaml",
+    "D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md",
+    "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/decision-schema.yaml",
+    "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/guardrails.yaml",
+    "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/completion-checklist.yaml",
+    "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml",
+    "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/genres/indie-dance.yaml",
+    "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml",
+    "D:/projects/music-composer-lab/integrations/composer-agent/stage-1-decision-trace-schema.yaml",
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-1-prompt-v1.2.txt",
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-1-output-schema-v1.1-n3-canonical.json",
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/model-visible-host-capabilities.md"
+  ],
+  "required_records": [
+    {
+      "path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\stage-1-output-schema-v1.1-n3-canonical.json",
+      "sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5"
+    },
+    {
+      "path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\model-visible-host-capabilities.md",
+      "sha256": "e45e7884de20b87a8e665ac562f1e5ab68e1a5e1d3b184479a91d8e52b990de1"
+    }
+  ],
+  "preflight": {
+    "pass": true,
+    "stage": 1,
+    "errors": [],
+    "resolved_record_count": 10
+  }
+}

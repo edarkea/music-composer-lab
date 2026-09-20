@@ -1,0 +1,19 @@
+version: 1.0.0
+retry_policy:
+  max_evaluable_attempts_per_stage: 3
+  retry_source: original_frozen_stage_payload
+  append_only: latest_gate_diagnostics
+  recursive_retry_chaining: prohibited
+  prior_raw_output_replay: false
+  musical_solutions_or_repairs: prohibited
+  later_stage_after_failed_gate: prohibited
+  transport_failures:
+    count_as_model_attempt: false
+    retry_requires_new_request_id: true
+    recovery_is_distinct_request: true
+  identity_safety:
+    stage_attempt_identity_reserved_at: SENT
+    reuse_after_sent: prohibited
+    transport_recovery: next_unused_attempt_number_and_unique_request_id
+    request_kind: transport_recovery
+    counted_as_model_request: true

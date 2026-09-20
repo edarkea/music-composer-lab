@@ -1,0 +1,62 @@
+{
+  "state": "PREPARED",
+  "prepared_at_utc": "2026-09-20T20:16:01.120288+00:00",
+  "experiment_id": "XMODEL-010",
+  "request_id": "XMODEL-010-QWEN-STAGE3-A1",
+  "request_kind": "evaluable_attempt",
+  "model": "qwen3:14b",
+  "stage": "stage-3",
+  "stage_number": 3,
+  "attempt": 1,
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\stage-3-prepared\\stage-3-payload.txt",
+  "payload_sha256": "758927d3ed54e11dfbf22d0f7e7c7e870c9274d2af52bfbddb789e6f92787d39",
+  "brief_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\brief.yaml",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "schema_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\stage-3-songplan-format-schema-v1.2.json",
+  "schema_sha256": "6a4def87fedbf44240f9201306fe14456f72ef361b0441172918f47f26a6b095",
+  "prior_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\outputs\\stage-2\\accepted-output.json",
+  "prior_sha256": "a6ba9ec8d729452307aab512ac185c81ee59348a59b6f621a00c7668fc52d823",
+  "generation_parameters": {
+    "temperature": 0,
+    "seed": 41,
+    "top_p": 1,
+    "top_k": 40,
+    "repeat_penalty": 1,
+    "num_ctx": 32768,
+    "num_predict": 8192
+  },
+  "timeout_seconds": 7200.0,
+  "output_dir": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\captures\\stage-3\\attempt-1",
+  "ollama_url": "http://127.0.0.1:11434/api/chat",
+  "request_sha256": "cb2154e0f7e2b02966e913bd4da4ecb154d95cd10d9cb7d2af1b91dd2988121e",
+  "interface_version": "composer-interface-v1.1",
+  "resolved_record_ids": [
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/brief.yaml",
+    "D:/projects/music-composer-lab/integrations/composer-agent/system-contract-v1.1.md",
+    "D:/projects/music-composer-lab/datasets/composer-interface-v1.1/songplan-v2-contract.yaml",
+    "D:/projects/music-composer-lab/integrations/music-engine/integration-contract.md",
+    "D:/projects/music-composer-lab/integrations/composer-agent/stage-3-songplan-serialization-schema.yaml",
+    "D:/projects/music-composer-lab/integrations/music-engine/host-config.yaml",
+    "D:/projects/music-composer-lab/integrations/music-engine/host-maps/song001_r1_steven_slate_map.yaml",
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-prompt-v1.2.txt",
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/engine-songplan-v2.schema-music-engine-4.0.0.json",
+    "D:/projects/music-composer-lab/evaluations/composer-agent/XMODEL-010/outputs/qwen3-14b/outputs/stage-2/accepted-output.json"
+  ],
+  "required_records": [
+    {
+      "path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\stage-3-songplan-format-schema-v1.2.json",
+      "sha256": "6a4def87fedbf44240f9201306fe14456f72ef361b0441172918f47f26a6b095"
+    },
+    {
+      "path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\engine-songplan-v2.schema-music-engine-4.0.0.json",
+      "sha256": "c5cdc8230c82063aa7e6b4baeeeb59bc5115ccb7b787167fb4676390a9b9cc3b"
+    }
+  ],
+  "preflight": {
+    "pass": true,
+    "stage": 3,
+    "errors": [],
+    "resolved_record_count": 8
+  }
+}

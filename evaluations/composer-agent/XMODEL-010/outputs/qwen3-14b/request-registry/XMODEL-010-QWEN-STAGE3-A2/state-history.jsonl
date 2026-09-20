@@ -1,0 +1,3 @@
+{"state":"PREPARED","at_utc":"2026-09-20T21:32:00.250140+00:00","request_sha256":"fd8cd404a7c4c71e81d5d80e66e5ce4da5689f4b09fbcf6de384af1d589b75e3"}
+{"state":"SENT","at_utc":"2026-09-20T21:32:00.254140+00:00","sent_at_utc":"2026-09-20T21:32:00.254140+00:00","request_kind":"evaluable_attempt","model_request_count_increment":1}
+{"state":"CAPTURED","at_utc":"2026-09-20T21:51:46.428611+00:00","capture_manifest":"D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-010\\outputs\\qwen3-14b\\captures\\stage-3\\attempt-2\\capture\\capture-manifest.json","raw_output_sha256":"716f8a9333b42162f36cc3cf660b4217558cc31bbf37342f099d5e9a468772d8"}

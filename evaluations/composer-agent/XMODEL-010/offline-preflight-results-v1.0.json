@@ -1,0 +1,47 @@
+{
+  "qwen3:14b": {
+    "pass": true,
+    "stage": 1,
+    "errors": [],
+    "resolved_record_count": 10
+  },
+  "ministral-3:14b": {
+    "pass": true,
+    "stage": 1,
+    "errors": [],
+    "resolved_record_count": 10
+  },
+  "prepared_payload": {
+    "path": "outputs/qwen3-14b/stage-1-payload.txt",
+    "sha256": "5fdae8712a5e74e91ad78b078b97b06c5dfcfaab230d77c1fd6458301e54a8ce",
+    "bytes": 65010,
+    "characters": 64377
+  },
+  "symmetric_payload_identical": true,
+  "stage2_and_stage3_synthetic_payload_assembly": "PASS (offline regression test; structural priors only)",
+  "test_results": {
+    "xmodel010_offline": "34/34 PASS",
+    "existing_harness_regression": "54/54 PASS"
+  },
+  "ollama_contacted": false,
+  "composer_models_executed": false,
+  "midi_generated": false,
+  "xmodel009_modified": false,
+  "runner_provenance_tests": "10/10 PASS",
+  "transport_timeout_seconds": 7200,
+  "transport_timeout_reason": "XMODEL-009 Qwen Stage 3 recovery completed in 3908.344 seconds; transport timeout only",
+  "runner_timeout_option_supported": true,
+  "ollama_contacted_during_this_preflight": false,
+  "runner_execution_preflight_recheck": {
+    "qwen3:14b": {
+      "pass": true,
+      "resolved_record_count": 10
+    },
+    "ministral-3:14b": {
+      "pass": true,
+      "resolved_record_count": 10
+    },
+    "method": "staged_runner preflight function with exact prepared payload, brief, Stage 1 instruction, required schema and host capability record"
+  },
+  "transport_timeout_forwarding_test": "PASS (7200 seconds received by injected offline opener; no network)"
+}

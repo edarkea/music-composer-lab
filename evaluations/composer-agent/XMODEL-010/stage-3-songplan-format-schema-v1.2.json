@@ -1,0 +1,958 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://music-composer-lab.local/evaluations/composer-agent/XMODEL-010/stage-3-songplan-format-schema-v1.2.json",
+  "title": "music-engine SongPlan 2.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "tempo",
+    "time_signature",
+    "tonic",
+    "mode",
+    "style",
+    "arrangement",
+    "tracks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "name": {
+      "$ref": "#/$defs/id"
+    },
+    "tempo": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "time_signature": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tonic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "arrangement": {
+      "$ref": "#/$defs/arrangement"
+    },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/pitchedTrack"
+          },
+          {
+            "$ref": "#/$defs/drumTrack"
+          },
+          {
+            "$ref": "#/$defs/percussionTrack"
+          },
+          {
+            "$ref": "#/$defs/effectTrack"
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+    },
+    "arrangement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sections",
+        "harmony_assignments"
+      ],
+      "properties": {
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "start_bar",
+              "bar_count",
+              "energy"
+            ],
+            "properties": {
+              "id": {
+                "$ref": "#/$defs/id"
+              },
+              "start_bar": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "bar_count": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "energy": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        },
+        "harmony_assignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "harmony"
+            ],
+            "properties": {
+              "harmony": {
+                "type": "string",
+                "minLength": 1
+              },
+              "section_id": {
+                "$ref": "#/$defs/id"
+              },
+              "start_bar": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "bar_count": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "assignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section_id"
+      ],
+      "properties": {
+        "section_id": {
+          "$ref": "#/$defs/id"
+        },
+        "motif_id": {
+          "$ref": "#/$defs/id"
+        },
+        "variation": {
+          "type": "object"
+        }
+      }
+    },
+    "pitchedEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bar",
+        "beat",
+        "duration",
+        "pitches"
+      ],
+      "properties": {
+        "bar": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "beat": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena Fraction-compatible; el motor exige beat >= 1."
+        },
+        "duration": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena aceptada l?xicamente por Fraction de music-engine; el validador real comprueba positividad y denominador no nulo."
+        },
+        "pitches": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "velocity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 127
+        },
+        "chromatic": {
+          "type": "boolean"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "articulation": {
+          "type": "object"
+        },
+        "instrument_articulation": {
+          "type": "string"
+        }
+      }
+    },
+    "drumEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bar",
+        "beat",
+        "duration",
+        "drum_voice"
+      ],
+      "properties": {
+        "bar": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "beat": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena Fraction-compatible; el motor exige beat >= 1."
+        },
+        "duration": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena aceptada l?xicamente por Fraction de music-engine; el validador real comprueba positividad y denominador no nulo."
+        },
+        "drum_voice": {
+          "$ref": "#/$defs/id"
+        },
+        "velocity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 127
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "articulation": {
+          "type": "object"
+        }
+      }
+    },
+    "percussionEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bar",
+        "beat",
+        "duration",
+        "instrument",
+        "sounding_articulation"
+      ],
+      "properties": {
+        "bar": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "beat": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena Fraction-compatible; el motor exige beat >= 1."
+        },
+        "duration": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena aceptada l?xicamente por Fraction de music-engine; el validador real comprueba positividad y denominador no nulo."
+        },
+        "instrument": {
+          "$ref": "#/$defs/id"
+        },
+        "sounding_articulation": {
+          "$ref": "#/$defs/id"
+        },
+        "velocity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 127
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    "effectEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bar",
+        "beat",
+        "duration"
+      ],
+      "properties": {
+        "bar": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "beat": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena Fraction-compatible; el motor exige beat >= 1."
+        },
+        "duration": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\s*[+-]?(([0-9](_?[0-9])*)/([0-9](_?[0-9])*)|(([0-9](_?[0-9])*(\\.[0-9](_?[0-9])*)?|[0-9](_?[0-9])*\\.|\\.[0-9](_?[0-9])*)([eE][+-]?[0-9](_?[0-9])*)?))\\s*$",
+          "description": "Cadena aceptada l?xicamente por Fraction de music-engine; el validador real comprueba positividad y denominador no nulo."
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    "pitchedMotif": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "events"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pitchedEvent"
+          }
+        }
+      }
+    },
+    "drumMotif": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "events"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/drumEvent"
+          }
+        }
+      }
+    },
+    "percussionMotif": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "events"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/percussionEvent"
+          }
+        }
+      }
+    },
+    "effectMotif": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "events"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/effectEvent"
+          }
+        }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "transpose",
+            "octave_shift",
+            "rhythmic_displacement",
+            "truncate",
+            "retrograde",
+            "augment",
+            "diminish",
+            "invert"
+          ]
+        },
+        "semitones": {
+          "type": "integer"
+        },
+        "octaves": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "before": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "factor": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "axis": {
+          "type": "string"
+        }
+      }
+    },
+    "motifDevelopment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_motif_id",
+        "stages"
+      ],
+      "properties": {
+        "source_motif_id": {
+          "$ref": "#/$defs/id"
+        },
+        "stages": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "output_motif_id",
+              "operations"
+            ],
+            "properties": {
+              "output_motif_id": {
+                "$ref": "#/$defs/id"
+              },
+              "operations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/operation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "motifDevelopments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/motifDevelopment"
+      }
+    },
+    "soundIntent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family"
+      ],
+      "properties": {
+        "family": {
+          "type": "string"
+        },
+        "source_character": {
+          "type": "string"
+        },
+        "brightness": {
+          "type": "string"
+        },
+        "texture": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "string"
+        },
+        "transient": {
+          "type": "string"
+        },
+        "drive": {
+          "type": "string"
+        },
+        "envelope": {
+          "$ref": "#/$defs/soundEnvelope"
+        },
+        "width": {
+          "type": "string"
+        },
+        "movement": {
+          "type": "string"
+        }
+      }
+    },
+    "soundEnvelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "attack": {
+          "type": "string"
+        },
+        "sustain": {
+          "type": "string"
+        },
+        "release": {
+          "type": "string"
+        }
+      }
+    },
+    "soundIntentpitched": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/soundIntent"
+        },
+        {
+          "properties": {
+            "family": {
+              "enum": [
+                "sub_bass",
+                "synth_bass",
+                "analog_bass",
+                "fm_bass",
+                "reese_bass",
+                "pluck_bass",
+                "electric_bass",
+                "acoustic_bass",
+                "piano",
+                "electric_piano",
+                "organ",
+                "clavinet",
+                "synth_keys",
+                "analog_pad",
+                "digital_pad",
+                "ambient_pad",
+                "string_ensemble",
+                "synth_strings",
+                "solo_strings",
+                "brass",
+                "synth_brass",
+                "woodwind",
+                "flute_like",
+                "orchestral_ensemble",
+                "pluck",
+                "bell",
+                "mallet",
+                "marimba_like",
+                "vibraphone_like",
+                "kalimba_like",
+                "synth_lead",
+                "mono_synth",
+                "poly_synth",
+                "supersaw",
+                "acoustic_guitar",
+                "clean_electric_guitar",
+                "crunch_guitar",
+                "distorted_guitar",
+                "muted_guitar",
+                "vocal_like",
+                "choir_like",
+                "vocal_chop_like",
+                "drone",
+                "tonal_texture",
+                "atmospheric_texture"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "soundIntentdrum": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/soundIntent"
+        },
+        {
+          "properties": {
+            "family": {
+              "enum": [
+                "acoustic_drum_kit",
+                "electronic_drum_kit",
+                "hybrid_drum_kit",
+                "vintage_drum_kit",
+                "processed_drum_kit"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "soundIntentpercussion": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/soundIntent"
+        },
+        {
+          "properties": {
+            "family": {
+              "enum": [
+                "acoustic",
+                "electronic",
+                "hybrid",
+                "processed",
+                "synthetic"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "performanceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "profile_id"
+      ],
+      "properties": {
+        "family": {
+          "const": "percussion"
+        },
+        "profile_id": {
+          "$ref": "#/$defs/id"
+        },
+        "style_profile_id": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    "soundIntenteffect": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/soundIntent"
+        },
+        {
+          "properties": {
+            "family": {
+              "enum": [
+                "riser",
+                "downlifter",
+                "impact",
+                "reverse",
+                "noise_sweep",
+                "tonal_sweep",
+                "sub_drop",
+                "boom",
+                "whoosh",
+                "transition_texture",
+                "ambient_fx"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "pitchRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "low",
+        "high"
+      ],
+      "properties": {
+        "low": {
+          "type": "string"
+        },
+        "high": {
+          "type": "string"
+        }
+      }
+    },
+    "occurrenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "occurrence_id",
+        "event_id",
+        "pitch_index"
+      ],
+      "properties": {
+        "occurrence_id": {
+          "$ref": "#/$defs/id"
+        },
+        "event_id": {
+          "$ref": "#/$defs/id"
+        },
+        "pitch_index": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "phraseConnection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "source",
+        "target",
+        "overlap"
+      ],
+      "properties": {
+        "kind": {
+          "const": "legato"
+        },
+        "source": {
+          "$ref": "#/$defs/occurrenceReference"
+        },
+        "target": {
+          "$ref": "#/$defs/occurrenceReference"
+        },
+        "overlap": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        }
+      }
+    },
+    "pitchedTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "role",
+        "motifs",
+        "section_assignments"
+      ],
+      "properties": {
+        "sound_intent": {
+          "$ref": "#/$defs/soundIntentpitched"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "const": "pitched"
+        },
+        "role": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "$ref": "#/$defs/id"
+        },
+        "pitch_range": {
+          "$ref": "#/$defs/pitchRange"
+        },
+        "motif_developments": {
+          "$ref": "#/$defs/motifDevelopments"
+        },
+        "motifs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pitchedMotif"
+          }
+        },
+        "section_assignments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/assignment"
+          }
+        },
+        "phrase_connections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/phraseConnection"
+          }
+        }
+      }
+    },
+    "drumTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "role",
+        "motifs",
+        "section_assignments"
+      ],
+      "properties": {
+        "sound_intent": {
+          "$ref": "#/$defs/soundIntentdrum"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "const": "drums"
+        },
+        "role": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "$ref": "#/$defs/id"
+        },
+        "drum_kit_profile_id": {
+          "$ref": "#/$defs/id"
+        },
+        "motif_developments": {
+          "$ref": "#/$defs/motifDevelopments"
+        },
+        "motifs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/drumMotif"
+          }
+        },
+        "section_assignments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/assignment"
+          }
+        }
+      }
+    },
+    "percussionTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "role",
+        "kit_id",
+        "map_id",
+        "motifs",
+        "section_assignments"
+      ],
+      "properties": {
+        "sound_intent": {
+          "$ref": "#/$defs/soundIntentpercussion"
+        },
+        "performance": {
+          "$ref": "#/$defs/performanceBinding"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "const": "percussion"
+        },
+        "role": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "$ref": "#/$defs/id"
+        },
+        "kit_id": {
+          "$ref": "#/$defs/id"
+        },
+        "map_id": {
+          "$ref": "#/$defs/id"
+        },
+        "performance_profile_id": {
+          "$ref": "#/$defs/id"
+        },
+        "performance_style_profile_id": {
+          "$ref": "#/$defs/id"
+        },
+        "motif_developments": {
+          "$ref": "#/$defs/motifDevelopments"
+        },
+        "motifs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/percussionMotif"
+          }
+        },
+        "section_assignments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/assignment"
+          }
+        }
+      }
+    },
+    "effectTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "role",
+        "motifs",
+        "section_assignments"
+      ],
+      "properties": {
+        "sound_intent": {
+          "$ref": "#/$defs/soundIntenteffect"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "const": "effect"
+        },
+        "role": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "$ref": "#/$defs/id"
+        },
+        "motifs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/effectMotif"
+          }
+        },
+        "motif_developments": {
+          "$ref": "#/$defs/motifDevelopments"
+        },
+        "section_assignments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/assignment"
+          }
+        }
+      }
+    }
+  }
+}

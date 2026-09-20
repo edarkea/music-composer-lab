@@ -1,0 +1,33 @@
+experiment_id: XMODEL-010
+mode: offline_only
+ollama_contacted: false
+composer_models_executed: false
+midi_generated: false
+xmodel009_modified: false
+tests:
+  xmodel010_synthetic_regressions:
+    passed: 34
+    failed: 0
+  existing_staged_harness_regressions:
+    passed: 54
+    failed: 0
+coverage:
+  duplicate_json_key_paths: PASS
+  effect_position_rejection: PASS
+  time_signature_object_rejection: PASS
+  valid_songplan_v2_real_engine: PASS
+  chromatic_scale_behavior: PASS
+  host_configuration_failure_classification: PASS
+  engine_unavailable_blocks: PASS
+  real_engine_invocation: PASS
+  adapter_musical_decisions: 0
+  stage_progression_blocking: PASS
+  fraction_valid_invalid_edge_matrix: PASS
+  retry_from_frozen_original_only: PASS
+  request_id_and_output_collision_safety: PASS
+  prepared_sent_captured_order_with_fake_transport: PASS
+  stage_2_stage_3_model_visible_assembly_with_synthetic_priors: PASS
+  runner_provenance_subset:
+    xmodel010_request_identity_retry_and_incomplete_response_tests: 5/5
+    inherited_transport_state_tests: 5/5
+    total: 10/10 PASS

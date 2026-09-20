@@ -1,0 +1,181 @@
+{
+  "schema_version": "2.0",
+  "name": "Indie-Dance-Hypnotic",
+  "tempo": 120,
+  "time_signature": "4/4",
+  "tonic": "E",
+  "mode": "phrygian",
+  "style": "indie-dance",
+  "arrangement": {
+    "sections": [
+      {
+        "id": "verse",
+        "start_bar": 1,
+        "bar_count": 8,
+        "energy": 0.3
+      },
+      {
+        "id": "pre-chorus",
+        "start_bar": 9,
+        "bar_count": 4,
+        "energy": 0.5
+      },
+      {
+        "id": "chorus",
+        "start_bar": 13,
+        "bar_count": 8,
+        "energy": 0.7
+      },
+      {
+        "id": "build-up",
+        "start_bar": 21,
+        "bar_count": 8,
+        "energy": 0.8
+      },
+      {
+        "id": "release",
+        "start_bar": 29,
+        "bar_count": 4,
+        "energy": 1.0
+      }
+    ],
+    "harmony_assignments": []
+  },
+  "tracks": [
+    {
+      "id": "synth_lead",
+      "type": "pitched",
+      "role": "focal_identity",
+      "motifs": [
+        {
+          "id": "verse_phrase",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "4",
+              "pitches": ["E5"]
+            }
+          ]
+        },
+        {
+          "id": "pre-chorus_phrase",
+          "events": [
+            {
+              "bar": 9,
+              "beat": "1",
+              "duration": "2",
+              "pitches": ["G#5"]
+            }
+          ]
+        },
+        {
+          "id": "chorus_phrase",
+          "events": [
+            {
+              "bar": 13,
+              "beat": "1",
+              "duration": "4",
+              "pitches": ["B5"]
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "verse",
+          "motif_id": "verse_phrase"
+        },
+        {
+          "section_id": "pre-chorus",
+          "motif_id": "pre-chorus_phrase"
+        },
+        {
+          "section_id": "chorus",
+          "motif_id": "chorus_phrase"
+        }
+      ]
+    },
+    {
+      "id": "drums",
+      "type": "drums",
+      "role": "groove",
+      "motifs": [
+        {
+          "id": "verse_kick",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/2",
+              "drum_voice": "kick"
+            },
+            {
+              "bar": 1,
+              "beat": "2",
+              "duration": "1/2",
+              "drum_voice": "snare"
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "verse",
+          "motif_id": "verse_kick"
+        }
+      ]
+    },
+    {
+      "id": "percussion",
+      "type": "percussion",
+      "role": "texture",
+      "kit_id": "default",
+      "map_id": "song001_r1_steven_slate_map",
+      "motifs": [
+        {
+          "id": "verse_shakers",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "1/4",
+              "instrument": "shaker",
+              "sounding_articulation": "shake"
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "verse",
+          "motif_id": "verse_shakers"
+        }
+      ]
+    },
+    {
+      "id": "atmospheric_pads",
+      "type": "pitched",
+      "role": "textural_support",
+      "motifs": [
+        {
+          "id": "verse_pad",
+          "events": [
+            {
+              "bar": 1,
+              "beat": "1",
+              "duration": "8",
+              "pitches": ["C3", "E3", "G3"]
+            }
+          ]
+        }
+      ],
+      "section_assignments": [
+        {
+          "section_id": "verse",
+          "motif_id": "verse_pad"
+        }
+      ]
+    }
+  ]
+}

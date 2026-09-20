@@ -1,0 +1,340 @@
+{
+  "manifest_version": "1.0",
+  "experiment_id": "XMODEL-010",
+  "interface_version": "composer-interface-v1.1",
+  "condition": "NO-EXAMPLE",
+  "package_artifacts": [
+    {
+      "file": "brief.yaml",
+      "sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+      "bytes": 1271
+    },
+    {
+      "file": "engine-songplan-v2.schema-music-engine-4.0.0.json",
+      "sha256": "c5cdc8230c82063aa7e6b4baeeeb59bc5115ccb7b787167fb4676390a9b9cc3b",
+      "bytes": 11321
+    },
+    {
+      "file": "execution-commands-v1.0.md",
+      "sha256": "a46689ed54573dd400693d87507da3a8b6e23388284c120ed4d21ad6f8804b1f",
+      "bytes": 4603
+    },
+    {
+      "file": "host-config.yaml",
+      "sha256": "030ce1ccc36a7a900052a675a6dc9524b09e56a6765271a070c8d214a797d147",
+      "bytes": 235
+    },
+    {
+      "file": "human-audit-boundary-v1.0.md",
+      "sha256": "9c7c7e09a7be9a26c12cc1628629d1d2944425b8f70836ea7be50addfd9cba5b",
+      "bytes": 1191
+    },
+    {
+      "file": "model-visible-host-capabilities.md",
+      "sha256": "e45e7884de20b87a8e665ac562f1e5ab68e1a5e1d3b184479a91d8e52b990de1",
+      "bytes": 1036
+    },
+    {
+      "file": "music-engine-runtime-lock.yaml",
+      "sha256": "b3dfe485daaae9d827dde6782bbf70a508da2f2e5a4020da6840a451d9e7a2cc",
+      "bytes": 309
+    },
+    {
+      "file": "offline-preflight-results-v1.0.json",
+      "sha256": "dd2f7ebf9e11b1ca7b2ca421bc703636cf312dd87a62dab520077c44bdf16fbb",
+      "bytes": 1625
+    },
+    {
+      "file": "offline-test-report-v1.0.yaml",
+      "sha256": "0fc6e76b4e9cc18245edf4da5f13d0083d22b4da1182a9fd094dc8f01423ff47",
+      "bytes": 1076
+    },
+    {
+      "file": "outputs/ministral-3-14b-parked/payload-manifest.json",
+      "sha256": "f7f7fe46ea822902fe7b27e41d115abfb5f57491b0cee2dcb255d2b900557579",
+      "bytes": 2734
+    },
+    {
+      "file": "outputs/ministral-3-14b-parked/stage-1-payload.txt",
+      "sha256": "5fdae8712a5e74e91ad78b078b97b06c5dfcfaab230d77c1fd6458301e54a8ce",
+      "bytes": 65010
+    },
+    {
+      "file": "outputs/qwen3-14b/payload-manifest.json",
+      "sha256": "d69a9c40c1482e155268cd75634bbe98db780ffd8ba1e5a3529cc201d5534b31",
+      "bytes": 2679
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-000/preliminary-payload-manifest.json",
+      "sha256": "8eb41c8cfe5a72862036b23d7bb2a37fc295e03a06dad0f9c710ea776434b8f4",
+      "bytes": 2699
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-000/preliminary-stage-1-payload.txt",
+      "sha256": "3d13b24407fdba0d30147f9d714e2071ac0dd2e9f52a910ab5a4f6c28f2d0140",
+      "bytes": 65040
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-000/revision-status.yaml",
+      "sha256": "869e3e599e7063112a1c5f143aa9f65b6f4ecfe9c81e9ad802cc1cfc3a6ba7c8",
+      "bytes": 78
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-001/payload-manifest.json",
+      "sha256": "c6d4270e6f9b4bd55fac6d728bec9466a2c3e05488762943998509290d26ab11",
+      "bytes": 2640
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-001/revision-status.yaml",
+      "sha256": "8abb0d7762d666de5943d4919566f4475c4df309179b2eb77be63ebcb1953e23",
+      "bytes": 152
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-001/stage-1-payload-v1.2.txt",
+      "sha256": "000cd50539d12cb38aef0c8afb78368e49372fc246a8018b565472ddecdfa0cf",
+      "bytes": 65012
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-002/payload-manifest.json",
+      "sha256": "e5afda302ad4ff98d107fbe18955f0850274f997451a6962cd6522e1f1303eb2",
+      "bytes": 2640
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-002/revision-status.yaml",
+      "sha256": "f49e9edc51e119f312f07e5cd25376e6e8a3d54afe1524ae569c96ff05967160",
+      "bytes": 66
+    },
+    {
+      "file": "outputs/qwen3-14b/revision-002/stage-1-payload-v1.2.txt",
+      "sha256": "5fdae8712a5e74e91ad78b078b97b06c5dfcfaab230d77c1fd6458301e54a8ce",
+      "bytes": 65010
+    },
+    {
+      "file": "outputs/qwen3-14b/stage-1-payload.txt",
+      "sha256": "5fdae8712a5e74e91ad78b078b97b06c5dfcfaab230d77c1fd6458301e54a8ce",
+      "bytes": 65010
+    },
+    {
+      "file": "README.md",
+      "sha256": "1a6b927947de12621c25ede8146c4c5f57d4cf85c609a0cc0d46e5399e94b8c0",
+      "bytes": 7071
+    },
+    {
+      "file": "run-manifest.yaml",
+      "sha256": "69d6243930d3b6d24fc1e481e592aab87f77721106bea408ee69d897823e877b",
+      "bytes": 3142
+    },
+    {
+      "file": "song001_r1_steven_slate_map.yaml",
+      "sha256": "3c8f366f7ea0ee870dfd8ccaac563ebd8545d1f17ab87d49658aa058faf8a1ab",
+      "bytes": 245
+    },
+    {
+      "file": "songplan-v2-contract.yaml",
+      "sha256": "7c27eeb0cbb64d475148a140a16daf12b628ed079683a8fa3b5a7d5b225389f9",
+      "bytes": 3582
+    },
+    {
+      "file": "stage-1-output-schema-v1.1-n3-canonical.json",
+      "sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5",
+      "bytes": 5016
+    },
+    {
+      "file": "stage-1-prompt-v1.2.txt",
+      "sha256": "73d796fa33f47b1cea520acb7449e12e18daeb7f6fe29321aa35230349fee0af",
+      "bytes": 1194
+    },
+    {
+      "file": "stage-2-contract-validation-map-v1.1.md",
+      "sha256": "577688aaebf35e498c64eee9097fbcd8173e5dee47f88a92cb1089fd699569c2",
+      "bytes": 1389
+    },
+    {
+      "file": "stage-2-json-object-format-v1.0.json",
+      "sha256": "e37720ab68fd755e3c7cda1b97ccec120e4c7ea8598727ab77a9ceb618feb4d7",
+      "bytes": 26
+    },
+    {
+      "file": "stage-2-musical-material-schema.yaml",
+      "sha256": "8d7bd738b889696d1be058d72f4f20912f40cb8b2c67d389a99795be74596748",
+      "bytes": 836
+    },
+    {
+      "file": "stage-2-prompt-v1.2.txt",
+      "sha256": "a99be2672ba7da31881024f252ed7c9c60bc7e3a9ca3e14788d1f7a9139c8191",
+      "bytes": 991
+    },
+    {
+      "file": "stage-2-retry-policy-v1.0.yaml",
+      "sha256": "fd465ae51f87866374ee56d5ed43fce5afefc0c40582feaa874a481575b8ff65",
+      "bytes": 688
+    },
+    {
+      "file": "stage-3-prompt-v1.2.txt",
+      "sha256": "1674e9267c2567da1f80d43d2b89945fe930696ca2e0e71410eff401fae44e76",
+      "bytes": 3324
+    },
+    {
+      "file": "stage-3-songplan-format-schema-v1.2.json",
+      "sha256": "6a4def87fedbf44240f9201306fe14456f72ef361b0441172918f47f26a6b095",
+      "bytes": 23532
+    },
+    {
+      "file": "stage-3-songplan-serialization-schema.yaml",
+      "sha256": "5027e4c0546ead2c68425c8356bc34b9e69343e9d1a240eac8aa7fe0e269e00e",
+      "bytes": 953
+    },
+    {
+      "file": "stage1-output-budget-audit-v1.0.md",
+      "sha256": "788476e4bd046d340c0ec52d8c580729f39632672a656cf78f4dfeef2894e231",
+      "bytes": 2193
+    },
+    {
+      "file": "stage1-record-size-audit-v1.0.md",
+      "sha256": "e867057f030d459848ab59878b1cc24e92952303db394a163df624d3a18c0d98",
+      "bytes": 1584
+    },
+    {
+      "file": "stage3-contract-reconciliation-v1.0.md",
+      "sha256": "64adc98abc65b1cdd5256ad2a10bdbcff33628b0cd4403ea5a81e006c22cb9da",
+      "bytes": 4254
+    },
+    {
+      "file": "staged_harness-source-v1.0.py",
+      "sha256": "cca72fa4e4d0c2a9261d18abc872dde5104385c91e66348c7c12c02ef0214424",
+      "bytes": 28626
+    },
+    {
+      "file": "staged_runner-source-v1.0.py",
+      "sha256": "feda25dafdb1aa232e1821baf25f77f0fa97294135d2b0a9052b6ba68d6b400d",
+      "bytes": 15631
+    },
+    {
+      "file": "test_xmodel010_offline.py",
+      "sha256": "46ecfcc2152ad8a864560841dbec06cedc899fc9a82c78aba3ccf41628ffc0d7",
+      "bytes": 15941
+    },
+    {
+      "file": "transport-policy-v1.0.yaml",
+      "sha256": "d29a50268bc4d9f7f64d328ddddcbd76afc496e3e684941688f755e4fd518a75",
+      "bytes": 1405
+    }
+  ],
+  "project_and_engine_sources": [
+    {
+      "file": "integrations/composer-agent/system-contract-v1.1.md",
+      "sha256": "032dc7738db9f8723f02c4e734b10a07b0ff49f2d68dda963f7410b01b174373",
+      "bytes": 2775
+    },
+    {
+      "file": "integrations/composer-agent/stage-1-decision-trace-schema.yaml",
+      "sha256": "25fc8a5f721b3826560ee4e65246228540a6344fef874031a45c3e946435eca0",
+      "bytes": 1400
+    },
+    {
+      "file": "integrations/composer-agent/stage-2-musical-material-schema.yaml",
+      "sha256": "8d7bd738b889696d1be058d72f4f20912f40cb8b2c67d389a99795be74596748",
+      "bytes": 836
+    },
+    {
+      "file": "integrations/composer-agent/stage-3-songplan-serialization-schema.yaml",
+      "sha256": "5027e4c0546ead2c68425c8356bc34b9e69343e9d1a240eac8aa7fe0e269e00e",
+      "bytes": 953
+    },
+    {
+      "file": "integrations/music-engine/integration-contract.md",
+      "sha256": "339e75cdc1e60450d1cdb93f99755f6a15de3fa92246713eb6042867a31a037a",
+      "bytes": 22272
+    },
+    {
+      "file": "integrations/composer-agent/staged_harness.py",
+      "sha256": "cca72fa4e4d0c2a9261d18abc872dde5104385c91e66348c7c12c02ef0214424",
+      "bytes": 28626
+    },
+    {
+      "file": "integrations/composer-agent/staged_runner.py",
+      "sha256": "feda25dafdb1aa232e1821baf25f77f0fa97294135d2b0a9052b6ba68d6b400d",
+      "bytes": 15631
+    },
+    {
+      "file": "datasets/composer-interface-v1.1/decision-schema.yaml",
+      "sha256": "f71c622e6f275369ccb024818051f6955ae37de8bc34c8558ab38c7bf1ef4168",
+      "bytes": 2131
+    },
+    {
+      "file": "datasets/composer-interface-v1.1/guardrails.yaml",
+      "sha256": "abcf1432758aad5c67a4b13cb259414013c7f2261bb58160b8ed2d5a702ca0b2",
+      "bytes": 5529
+    },
+    {
+      "file": "datasets/composer-interface-v1.1/completion-checklist.yaml",
+      "sha256": "5b454c9fb8d3acb303e930196ce0b684b3a7d01c3293a6237312625a287114f2",
+      "bytes": 1146
+    },
+    {
+      "file": "datasets/composer-interface-v1.1/knowledge/approved-composition-knowledge.yaml",
+      "sha256": "f4f9373b35fe5e87bfd28b51b5cf0ddd7a673e414c97f9a700c3a003eb29f76a",
+      "bytes": 27007
+    },
+    {
+      "file": "datasets/composer-interface-v1.1/genres/indie-dance.yaml",
+      "sha256": "5fb9ab64d7703ee5129bc8cd62b9e4d0d411928f9c5f4344d1606ff9dd3181fd",
+      "bytes": 10312
+    },
+    {
+      "file": "datasets/composer-interface-v1.1/knowledge/n3-p-percussion-architecture.yaml",
+      "sha256": "97f0763fc13f2ef5edd316636028c50a6bfa840b3a09764cdd33e3755fd1333a",
+      "bytes": 3650
+    },
+    {
+      "file": "integrations/music-engine/host-config.yaml",
+      "sha256": "030ce1ccc36a7a900052a675a6dc9524b09e56a6765271a070c8d214a797d147",
+      "bytes": 235
+    },
+    {
+      "file": "integrations/music-engine/host-maps/song001_r1_steven_slate_map.yaml",
+      "sha256": "3c8f366f7ea0ee870dfd8ccaac563ebd8545d1f17ab87d49658aa058faf8a1ab",
+      "bytes": 245
+    },
+    {
+      "file": "integrations/music-engine/runtime-lock.yaml",
+      "sha256": "b3dfe485daaae9d827dde6782bbf70a508da2f2e5a4020da6840a451d9e7a2cc",
+      "bytes": 309
+    },
+    {
+      "file": ".venv/Lib/site-packages/music_engine/domain/duration.py",
+      "sha256": "5f56d1d3902b7ed375467f1aec4c2ea28f0093138f75e785623981058f8b927e",
+      "bytes": 575
+    },
+    {
+      "file": ".venv/Lib/site-packages/music_engine/domain/position.py",
+      "sha256": "6f8de2ac97d66ee1c4247dec50b1ad1c3403deaa8fe90fb3c2cb400806a83ed3",
+      "bytes": 1377
+    },
+    {
+      "file": ".venv/Lib/site-packages/music_engine/domain/time_signature.py",
+      "sha256": "097236de6c5fd9ad10bbcd97a4918f42c4391ed38613e8559e704787aed68e64",
+      "bytes": 1246
+    },
+    {
+      "file": ".venv/Lib/site-packages/music_engine/songplan/v2/codec.py",
+      "sha256": "80c450b950b017e9e9cb05b618b98407ce37760bf82e53dcc2df6cfe9d88d93c",
+      "bytes": 17501
+    },
+    {
+      "file": ".venv/Lib/site-packages/music_engine/songplan/v2/validation.py",
+      "sha256": "2aa73289bf3aab951d80b11ff906320d6ef8c7fb2165716b54369c58c977c4e2",
+      "bytes": 8422
+    },
+    {
+      "file": ".venv/Lib/site-packages/music_engine/songplan/v2/models.py",
+      "sha256": "55495f38ede98b3fec18e0a09994de4b5edcb6da4ecfc5c1f65c69dff57e404b",
+      "bytes": 14441
+    },
+    {
+      "file": ".venv/Lib/site-packages/music_engine/songplan/schemas/songplan-v2.schema.json",
+      "sha256": "c5cdc8230c82063aa7e6b4baeeeb59bc5115ccb7b787167fb4676390a9b9cc3b",
+      "bytes": 11321
+    }
+  ]
+}

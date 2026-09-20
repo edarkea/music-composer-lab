@@ -1,0 +1,77 @@
+experiment_id: XMODEL-010
+status: PREPARED_NOT_EXECUTED
+execution_authorized: false
+executed: false
+models_invoked: false
+midi_generated: false
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+primary_model: qwen3:14b
+secondary_model: ministral-3:14b
+secondary_model_status: PARKED_NOT_AUTHORIZED_FOR_THIS_EXPERIMENT
+brief: brief.yaml
+brief_sha256: 464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b
+primary_purpose: end-to-end Stage 1-to-SongPlanV2 transfer through real music-engine boundary
+success_requires:
+  - Stage 1, Stage 2 and Stage 3 deterministic gates PASS
+  - no semantic repair and zero adapter musical decisions
+  - music-engine 4.0.0 SongPlanV2 codec and semantic validator PASS
+  - required host mapping resolves without ID substitution
+  - no MIDI materialization during this experiment
+engine:
+  package_version: 4.0.0
+  git_commit: 71bbc73337da0d755618bdc796e19ce2e82cc3df
+  wheel_sha256: 110E987A1E102C1CF3D29FEC1CCC68583459030F40748E10D66CE1F8E4819FE1
+generation_parameters:
+  temperature: 0
+  seed: 41
+  top_p: 1
+  top_k: 40
+  repeat_penalty: 1
+  num_ctx: 32768
+  stage_1_num_predict: 4096
+  stage_2_num_predict: 8192
+  stage_3_num_predict: 8192
+  http_timeout_seconds: 7200
+stages:
+  stage_1:
+    max_evaluable_attempts: 3
+    prompt: stage-1-prompt-v1.2.txt
+    format_schema: stage-1-output-schema-v1.1-n3-canonical.json
+    model_visible_required_records:
+      - stage-1-output-schema-v1.1-n3-canonical.json
+      - model-visible-host-capabilities.md
+    preflight: PASS_QWEN_AND_MINISTRAL_SYMMETRIC_PAYLOAD
+    prepared_payload_sha256: 5fdae8712a5e74e91ad78b078b97b06c5dfcfaab230d77c1fd6458301e54a8ce
+    prepared_payload_bytes: 65010
+  stage_2:
+    max_evaluable_attempts: 3
+    prompt: stage-2-prompt-v1.2.txt
+    format_schema: stage-2-json-object-format-v1.0.json
+    semantics: generic JSON object only; no musical properties constrained by formatter
+  stage_3:
+    max_evaluable_attempts: 3
+    prompt: stage-3-prompt-v1.2.txt
+    format_schema: stage-3-songplan-format-schema-v1.2.json
+    required_engine_schema_record: engine-songplan-v2.schema-music-engine-4.0.0.json
+    acceptance: deterministic_format_gate_then_real_engine_validation_then_host_resolution
+    midi_materialization: false
+retry_policy: stage-2-retry-policy-v1.0.yaml
+transport_policy: transport-policy-v1.0.yaml
+host:
+  drum_external_map_id: song001_r1_steven_slate_map
+  approved_percussion_map_ids: []
+  percussion_unresolved_behavior: block_with_host_configuration_failure
+harness:
+  runner: integrations/composer-agent/staged_runner.py
+  context_assembler_and_gate: integrations/composer-agent/staged_harness.py
+  runner_provenance: PREPARED_SENT_TERMINAL_STATE_HISTORY_EXCLUSIVE_IDS_AND_OUTPUT_PATHS
+  offline_tests: 34
+  runner_and_provenance_tests: 10/10
+  existing_harness_regression_tests: 54
+  semantic_changes: 0
+  adapter_musical_decisions: 0
+comparison:
+  XMODEL-009: new prospective test; not a continuation of valid numerical performance evidence
+  Ministral: parked; no execution in XMODEL-010
+  human_listening: outside technical-transfer success gate; no claims about artistic quality
