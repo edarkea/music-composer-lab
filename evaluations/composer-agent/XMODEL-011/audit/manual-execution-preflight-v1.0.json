@@ -1,7 +1,21 @@
 {
   "experiment_id": "XMODEL-011",
   "revision": "manual-owner-execution-v1.0",
-  "result": "PREPARED_MANUAL_STAGE1_OWNER_ONLY_ISOLATION_UNGUARANTEED",
+  "result": "PRE_INFERENCE_CLI_PARSE_FAILURE_RECOVERY_PREPARED",
+  "execution_authorized": true,
+  "execution_mode": "exploratory",
+  "cli_launch_requests_made": 1,
+  "evaluable_composer_attempts_consumed": 0,
+  "last_cli_launch_failure": "CLI_ARGUMENT_PARSE_FAILURE; PRE_INFERENCE_TECHNICAL_FAILURE",
+  "model_inference_evidence_for_failed_launch": "NONE",
+  "subsequent_manual_launches": {
+    "count": 1,
+    "latest_classification": "PRE_INFERENCE_TECHNICAL_FAILURE; CLI_TRUSTED_DIRECTORY_CHECK_FAILURE",
+    "latest_inference_event_evidence": false,
+    "total_cli_launch_requests_now": 2,
+    "evaluable_stage_1_attempts_consumed": 0,
+    "next_prepared_recovery": "XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-002"
+  },
   "model_invoked": false,
   "midi_generated": false,
   "frozen_inputs": {
@@ -31,6 +45,10 @@
   },
   "isolation": {
     "status": "NOT GUARANTEED",
+    "filesystem_isolation_verified": false,
+    "historical_outputs_in_prompt": 0,
+    "historical_filesystem_access_possible": true,
+    "owner_accepted_filesystem_limitation": true,
     "limits": [
       "Manual Codex CLI executes as the Owner and that process identity can access repository files.",
       "A temporary cwd, read-only CLI sandbox, and prompt instruction do not prove full-process file isolation.",
@@ -43,7 +61,7 @@
     ],
     "windows_sandbox_required": false
   },
-  "owner_decision_pending": "Select the methodological access condition before running Stage 1.",
+  "owner_decision": "Exploratory manual execution authorized; Owner accepts possible historical filesystem exposure.",
   "files_changed_sha256": {
     "manual_capture.py": "a812c6639c41f04257449d6dae11e79230283eb03155e46f391f844de6ace39d",
     "gate_capture.py": "75598a4dff63b13650fd579ab6c4e4e4af6ca157a63615cf8c403ec0a0fa9eb3",

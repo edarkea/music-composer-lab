@@ -1,0 +1,192 @@
+{
+  "validation_kind": "EXPLORATORY_RETROSPECTIVE_STAGE2_TO_SONGPLAN_COMPARISON",
+  "stage2_source_path": "evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\exploratory\\stage-2-rerun-20260920-224431-0f399f26\\final-output.txt",
+  "stage2_source_sha256": "9e0cdd1af9581a45bf63f304ab9e64a5cfeb73513f51c6de10b3c3f68b250bfb",
+  "songplan_source_path": "evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\exploratory\\stage-3-addendum-2ac48366a96744fc8424ec6260e532f6\\final-output.txt",
+  "songplan_source_sha256": "84ED1F81BA76217526EFF5212CEA3CE93294D6ABC21EB559AAF01301C4827388",
+  "expansion_rule": "Stage 2 quarter-note starts become absolute quarter notes by 4*(application_start_bar-1)+event.start; SongPlan beats are one-based within each motif bar, with absolute start 4*(section.start_bar-1)+4*(event.bar-1)+(event.beat-1). Pitch arrays expand to one comparison atom per pitch. No transformations were applied to either source.",
+  "section_boundaries_identical": true,
+  "stage2_sections": [
+    {
+      "section_id": "A",
+      "start_bar": 1,
+      "bar_count": 8
+    },
+    {
+      "section_id": "B",
+      "start_bar": 9,
+      "bar_count": 16
+    },
+    {
+      "section_id": "C",
+      "start_bar": 25,
+      "bar_count": 8
+    },
+    {
+      "section_id": "D",
+      "start_bar": 33,
+      "bar_count": 8
+    },
+    {
+      "section_id": "E",
+      "start_bar": 41,
+      "bar_count": 8
+    }
+  ],
+  "songplan_sections": [
+    {
+      "section_id": "A",
+      "start_bar": 1,
+      "bar_count": 8
+    },
+    {
+      "section_id": "B",
+      "start_bar": 9,
+      "bar_count": 16
+    },
+    {
+      "section_id": "C",
+      "start_bar": 25,
+      "bar_count": 8
+    },
+    {
+      "section_id": "D",
+      "start_bar": 33,
+      "bar_count": 8
+    },
+    {
+      "section_id": "E",
+      "start_bar": 41,
+      "bar_count": 8
+    }
+  ],
+  "layer_sets_identical": true,
+  "stage2_layers": [
+    "bass",
+    "drums",
+    "harmony",
+    "lead"
+  ],
+  "songplan_track_ids": [
+    "bass",
+    "drums",
+    "harmony",
+    "lead"
+  ],
+  "pattern_repetition_checks": [
+    {
+      "pattern_id": "lead_motif",
+      "layer_id": "lead",
+      "length_bars": 2,
+      "application_instances": 24,
+      "expanded_pitch_or_voice_events": 96
+    },
+    {
+      "pattern_id": "bass_D2",
+      "layer_id": "bass",
+      "length_bars": 1,
+      "application_instances": 24,
+      "expanded_pitch_or_voice_events": 96
+    },
+    {
+      "pattern_id": "bass_Bb1",
+      "layer_id": "bass",
+      "length_bars": 1,
+      "application_instances": 23,
+      "expanded_pitch_or_voice_events": 92
+    },
+    {
+      "pattern_id": "bass_terminal",
+      "layer_id": "bass",
+      "length_bars": 1,
+      "application_instances": 1,
+      "expanded_pitch_or_voice_events": 1
+    },
+    {
+      "pattern_id": "harmony_B_Dm7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "application_instances": 4,
+      "expanded_pitch_or_voice_events": 16
+    },
+    {
+      "pattern_id": "harmony_B_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "application_instances": 4,
+      "expanded_pitch_or_voice_events": 16
+    },
+    {
+      "pattern_id": "harmony_C_Dm7",
+      "layer_id": "harmony",
+      "length_bars": 1,
+      "application_instances": 4,
+      "expanded_pitch_or_voice_events": 32
+    },
+    {
+      "pattern_id": "harmony_C_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 1,
+      "application_instances": 4,
+      "expanded_pitch_or_voice_events": 32
+    },
+    {
+      "pattern_id": "harmony_D_Dm7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "application_instances": 2,
+      "expanded_pitch_or_voice_events": 8
+    },
+    {
+      "pattern_id": "harmony_D_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "application_instances": 2,
+      "expanded_pitch_or_voice_events": 8
+    },
+    {
+      "pattern_id": "harmony_terminal_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 1,
+      "application_instances": 1,
+      "expanded_pitch_or_voice_events": 4
+    },
+    {
+      "pattern_id": "kick_regular",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "application_instances": 47,
+      "expanded_pitch_or_voice_events": 188
+    },
+    {
+      "pattern_id": "rimshot_accents",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "application_instances": 24,
+      "expanded_pitch_or_voice_events": 48
+    },
+    {
+      "pattern_id": "closed_hat_subdivision",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "application_instances": 16,
+      "expanded_pitch_or_voice_events": 32
+    },
+    {
+      "pattern_id": "kick_terminal",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "application_instances": 1,
+      "expanded_pitch_or_voice_events": 1
+    }
+  ],
+  "declared_repetition_mismatches": [],
+  "expanded_pitch_or_voice_event_atoms_stage2": 670,
+  "expanded_pitch_or_voice_event_atoms_songplan": 670,
+  "event_atom_multiset_identical": true,
+  "counts_by_section_and_layer_identical": true,
+  "discrepancies": {
+    "missing_from_songplan": [],
+    "extra_in_songplan": []
+  }
+}

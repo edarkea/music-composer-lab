@@ -1,0 +1,919 @@
+XMODEL-011 - CONTINUACION EXPLORATORIA DE STAGE 3.
+
+La ejecucion anterior de Stage 3 devolvio un diagnostico por falta de
+energia numerica de las secciones, style y frozen_material_hash.
+
+Ahora se suministra un addendum producido posteriormente por Codex
+como compositor. Utiliza sus cinco valores de energia y su style
+exclusivamente para completar esos campos requeridos. Su
+frozen_material_hash identifica tecnicamente la salida congelada
+de Stage 2; no es una nueva decision musical.
+
+SHA256 del addendum: 91408d1e55fa522b771350d6fc601acdcd7a53511fc937eb9fc9098d7bcbee2d
+SHA256 de Stage 1: cd1d5eda8a79563e4f4c1f8e05efd76898fe8fe02f3db6cc1c9ed4b6de87c98e
+SHA256 de Stage 2: 9e0cdd1af9581a45bf63f304ab9e64a5cfeb73513f51c6de10b3c3f68b250bfb
+
+El texto de la solicitud anterior se incluye a continuacion para
+conservar sus contratos y las salidas musicales originales.
+El addendum solo resuelve los tres datos indicados: no autoriza
+cambiar otros campos, eventos, notas, duraciones ni decisiones.
+
+Serializa el material ya decidido en un unico SongPlanV2, con los
+campos y valores admitidos por el esquema suministrado.
+Si persiste otra incompatibilidad que requiera cambiar el material,
+devuelve un objeto JSON de diagnostico en lugar de repararla.
+
+No consultes archivos ni uses herramientas. No generes MIDI.
+Devuelve solo JSON crudo; no declares que ha pasado la validacion.
+
+===== SOLICITUD ORIGINAL DE STAGE 3 =====
+
+PRUEBA EXPLORATORIA XMODEL-011 — STAGE 3.
+
+Las salidas Stage 1 y Stage 2 son exploratorias. Para esta prueba,
+trátalas como congeladas. Serializa el material de Stage 2 en un único
+SongPlanV2 conforme al esquema y contrato suministrados.
+
+Expande exclusivamente los eventos y repeticiones documentados.
+No cambies decisiones, notas, duraciones ni arquitectura N3-P.
+Usa drums con drum_voice y el mapa host aprobado; no crees percussion.
+Si existe una incompatibilidad irresoluble sin alterar el material,
+devuelve un objeto JSON de diagnóstico en lugar de repararlo.
+
+No consultes archivos, no uses herramientas y no generes MIDI.
+Devuelve solo un objeto JSON crudo, sin Markdown.
+
+===== STAGE 3 PROMPT =====
+
+STAGE 3 — SONGPLAN SERIALIZATION
+
+Use the frozen DecisionTrace, frozen Stage-2 musical material and the exact authoritative SongPlanV2 contract supplied by the runner. Serialize the already-decided material into one SongPlanV2 object.
+
+Do not reconsider harmony, form, motifs or N3-P. Do not add or remove musical content for artistic reasons. Use only contract-supported fields, values and operations. Return only the SongPlanV2 object. Deterministic validation will decide whether it is valid; do not claim that it is valid in prose.
+
+SERIALIZATION REQUIREMENT (technical clarification only):
+- Return exactly ONE SongPlanV2 JSON object.
+- Return raw JSON only.
+- Do NOT use Markdown or code fences.
+- Do NOT include prose before or after the JSON.
+- Do NOT explain the answer.
+- Do NOT ask follow-up questions.
+- All fields required by SongPlanV2 must be present.
+- Do not invent an alternate SongPlan representation.
+
+CONTRACT PATH CLARIFICATION (technical only):
+- In `arrangement.sections`, the required identifier field is `id`.
+- `section_id` is used only by harmony assignments and track section assignments.
+- `drums` tracks use `drum_voice` events and do not require `kit_id` or `map_id` in the SongPlan track. Host validation supplies the approved DrumExternalMap.
+- `percussion` tracks require `kit_id` and `map_id` at the direct track-object path; their events use `instrument` and `sounding_articulation`.
+- `time_signature` is a non-empty string such as `"4/4"`; object forms are invalid.
+- `effect` events use only `bar`, `beat`, `duration`, and optional `id`; `position` is unsupported.
+- Pitched events must use pitches in the declared scale unless `chromatic: true` is explicitly present.
+- Unknown fields and duplicate JSON object keys are invalid.
+This clarification does not add musical content or change SongPlanV2 semantics.
+
+
+DURATION REPRESENTATION (technical clarification; SongPlanV2 semantics unchanged):
+- Every event `duration` and `beat` is a JSON string parsed by music-engine 4.0.0 as Python Fraction-compatible text. Accepted lexical forms include integer, fraction `numerator/denominator`, decimal, and scientific notation; underscores within digits and outer whitespace follow the engine parser. Do not include whitespace around the fraction slash.
+- Duration must be mathematically greater than zero; denominator must be nonzero. Beat position must be at least 1. The real engine validator is authoritative.
+- Do not duplicate any JSON object key.
+
+PITCH / HOST BOUNDARY (technical clarification):
+- Keep the frozen pitches, tonic, mode, and chromatic intent unchanged. Every pitched note outside the declared scale must carry the already-authorized explicit `chromatic: true`; do not add that flag or alter pitches as a serialization repair. If the frozen material cannot be represented consistently, report the unresolved contract diagnostic.
+- For `drums`, use `drum_voice`; host resolution uses the supplied approved DrumExternalMap identifier `song001_r1_steven_slate_map`.
+- For `percussion`, preserve the model-selected `kit_id` and `map_id` exactly. No PercussionMap identifiers are approved for XMODEL-011. If percussion output requires a map, do not substitute the drums map or invent identifiers; deterministic host validation must block pending Owner-approved configuration.
+
+
+===== SONGPLANV2 ENGINE SCHEMA =====
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://music-engine.dev/schemas/songplan-v2.schema.json",
+  "title": "music-engine SongPlan 2.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "name", "tempo", "time_signature", "tonic", "mode", "style", "arrangement", "tracks"],
+  "properties": {
+    "schema_version": {"const": "2.0"}, "name": {"$ref": "#/$defs/id"}, "tempo": {"type": "number", "exclusiveMinimum": 0}, "time_signature": {"type": "string", "minLength": 1}, "tonic": {"type": "string", "minLength": 1}, "mode": {"type": "string", "minLength": 1}, "style": {"type": "string", "minLength": 1}, "arrangement": {"$ref": "#/$defs/arrangement"}, "tracks": {"type": "array", "items": {"oneOf": [{"$ref": "#/$defs/pitchedTrack"}, {"$ref": "#/$defs/drumTrack"}, {"$ref": "#/$defs/percussionTrack"}, {"$ref": "#/$defs/effectTrack"}]}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"},
+    "arrangement": {"type": "object", "additionalProperties": false, "required": ["sections", "harmony_assignments"], "properties": {"sections": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "start_bar", "bar_count", "energy"], "properties": {"id": {"$ref": "#/$defs/id"}, "start_bar": {"type": "integer", "minimum": 1}, "bar_count": {"type": "integer", "minimum": 1}, "energy": {"type": "number", "minimum": 0, "maximum": 1}}}}, "harmony_assignments": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["harmony"], "properties": {"harmony": {"type": "string", "minLength": 1}, "section_id": {"$ref": "#/$defs/id"}, "start_bar": {"type": "integer", "minimum": 1}, "bar_count": {"type": "integer", "minimum": 1}}}}}},
+    "assignment": {"type": "object", "additionalProperties": false, "required": ["section_id"], "properties": {"section_id": {"$ref": "#/$defs/id"}, "motif_id": {"$ref": "#/$defs/id"}, "variation": {"type": "object"}}},
+    "pitchedEvent": {"type": "object", "additionalProperties": false, "required": ["bar", "beat", "duration", "pitches"], "properties": {"bar": {"type": "integer", "minimum": 1}, "beat": {"type": "string", "minLength": 1}, "duration": {"type": "string", "minLength": 1}, "pitches": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "velocity": {"type": "integer", "minimum": 1, "maximum": 127}, "chromatic": {"type": "boolean"}, "id": {"$ref": "#/$defs/id"}, "articulation": {"type": "object"}, "instrument_articulation": {"type": "string"}}},
+    "drumEvent": {"type": "object", "additionalProperties": false, "required": ["bar", "beat", "duration", "drum_voice"], "properties": {"bar": {"type": "integer", "minimum": 1}, "beat": {"type": "string", "minLength": 1}, "duration": {"type": "string", "minLength": 1}, "drum_voice": {"$ref": "#/$defs/id"}, "velocity": {"type": "integer", "minimum": 1, "maximum": 127}, "id": {"$ref": "#/$defs/id"}, "articulation": {"type": "object"}}},
+    "percussionEvent": {"type": "object", "additionalProperties": false, "required": ["bar", "beat", "duration", "instrument", "sounding_articulation"], "properties": {"bar": {"type": "integer", "minimum": 1}, "beat": {"type": "string", "minLength": 1}, "duration": {"type": "string", "minLength": 1}, "instrument": {"$ref": "#/$defs/id"}, "sounding_articulation": {"$ref": "#/$defs/id"}, "velocity": {"type": "integer", "minimum": 1, "maximum": 127}, "id": {"$ref": "#/$defs/id"}}},
+    "effectEvent": {"type": "object", "additionalProperties": false, "required": ["bar", "beat", "duration"], "properties": {"bar": {"type": "integer", "minimum": 1}, "beat": {"type": "string", "minLength": 1}, "duration": {"type": "string", "minLength": 1}, "id": {"$ref": "#/$defs/id"}}},
+    "pitchedMotif": {"type": "object", "additionalProperties": false, "required": ["id", "events"], "properties": {"id": {"$ref": "#/$defs/id"}, "events": {"type": "array", "items": {"$ref": "#/$defs/pitchedEvent"}}}},
+    "drumMotif": {"type": "object", "additionalProperties": false, "required": ["id", "events"], "properties": {"id": {"$ref": "#/$defs/id"}, "events": {"type": "array", "items": {"$ref": "#/$defs/drumEvent"}}}},
+    "percussionMotif": {"type": "object", "additionalProperties": false, "required": ["id", "events"], "properties": {"id": {"$ref": "#/$defs/id"}, "events": {"type": "array", "items": {"$ref": "#/$defs/percussionEvent"}}}},
+    "effectMotif": {"type": "object", "additionalProperties": false, "required": ["id", "events"], "properties": {"id": {"$ref": "#/$defs/id"}, "events": {"type": "array", "items": {"$ref": "#/$defs/effectEvent"}}}},
+    "operation": {"type": "object", "additionalProperties": false, "required": ["kind"], "properties": {"kind": {"enum": ["transpose", "octave_shift", "rhythmic_displacement", "truncate", "retrograde", "augment", "diminish", "invert"]}, "semitones": {"type": "integer"}, "octaves": {"type": "integer"}, "offset": {"type": ["string", "integer"]}, "before": {"type": ["string", "integer"]}, "factor": {"type": ["string", "integer"]}, "axis": {"type": "string"}}, "additionalProperties": false},
+    "motifDevelopment": {"type": "object", "additionalProperties": false, "required": ["source_motif_id", "stages"], "properties": {"source_motif_id": {"$ref": "#/$defs/id"}, "stages": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["output_motif_id", "operations"], "properties": {"output_motif_id": {"$ref": "#/$defs/id"}, "operations": {"type": "array", "items": {"$ref": "#/$defs/operation"}}}}}}},
+    "motifDevelopments": {"type": "array", "items": {"$ref": "#/$defs/motifDevelopment"}},
+    "soundIntent": {"type":"object","additionalProperties":false,"required":["family"],"properties":{"family":{"type":"string"},"source_character":{"type":"string"},"brightness":{"type":"string"},"texture":{"type":"string"},"weight":{"type":"string"},"transient":{"type":"string"},"drive":{"type":"string"},"envelope":{"$ref":"#/$defs/soundEnvelope"},"width":{"type":"string"},"movement":{"type":"string"}}},
+    "soundEnvelope": {"type":"object","additionalProperties":false,"properties":{"attack":{"type":"string"},"sustain":{"type":"string"},"release":{"type":"string"}}},
+    "soundIntentpitched": {"allOf": [{"$ref": "#/$defs/soundIntent"}, {"properties": {"family": {"enum": ["sub_bass","synth_bass","analog_bass","fm_bass","reese_bass","pluck_bass","electric_bass","acoustic_bass","piano","electric_piano","organ","clavinet","synth_keys","analog_pad","digital_pad","ambient_pad","string_ensemble","synth_strings","solo_strings","brass","synth_brass","woodwind","flute_like","orchestral_ensemble","pluck","bell","mallet","marimba_like","vibraphone_like","kalimba_like","synth_lead","mono_synth","poly_synth","supersaw","acoustic_guitar","clean_electric_guitar","crunch_guitar","distorted_guitar","muted_guitar","vocal_like","choir_like","vocal_chop_like","drone","tonal_texture","atmospheric_texture"]}}}]},
+    "soundIntentdrum": {"allOf": [{"$ref": "#/$defs/soundIntent"}, {"properties": {"family": {"enum": ["acoustic_drum_kit","electronic_drum_kit","hybrid_drum_kit","vintage_drum_kit","processed_drum_kit"]}}}]},
+    "soundIntentpercussion": {"allOf": [{"$ref": "#/$defs/soundIntent"}, {"properties": {"family": {"enum": ["acoustic","electronic","hybrid","processed","synthetic"]}}}]},
+    "performanceBinding": {"type": "object", "additionalProperties": false, "required": ["family", "profile_id"], "properties": {"family": {"const": "percussion"}, "profile_id": {"$ref": "#/$defs/id"}, "style_profile_id": {"$ref": "#/$defs/id"}}},
+    "soundIntenteffect": {"allOf": [{"$ref": "#/$defs/soundIntent"}, {"properties": {"family": {"enum": ["riser","downlifter","impact","reverse","noise_sweep","tonal_sweep","sub_drop","boom","whoosh","transition_texture","ambient_fx"]}}}]},
+    "pitchRange": {"type": "object", "additionalProperties": false, "required": ["low", "high"], "properties": {"low": {"type": "string"}, "high": {"type": "string"}}},
+    "occurrenceReference": {"type": "object", "additionalProperties": false, "required": ["occurrence_id", "event_id", "pitch_index"], "properties": {"occurrence_id": {"$ref": "#/$defs/id"}, "event_id": {"$ref": "#/$defs/id"}, "pitch_index": {"type": "integer", "minimum": 0}}},
+    "phraseConnection": {"type": "object", "additionalProperties": false, "required": ["kind", "source", "target", "overlap"], "properties": {"kind": {"const": "legato"}, "source": {"$ref": "#/$defs/occurrenceReference"}, "target": {"$ref": "#/$defs/occurrenceReference"}, "overlap": {"type": ["string", "integer"]}}},
+    "pitchedTrack": {"type": "object", "additionalProperties": false, "required": ["id", "type", "role", "motifs", "section_assignments"], "properties": {"sound_intent": {"$ref": "#/$defs/soundIntentpitched"}, "id": {"$ref": "#/$defs/id"}, "type": {"const": "pitched"}, "role": {"$ref": "#/$defs/id"}, "name": {"$ref": "#/$defs/id"}, "pitch_range": {"$ref": "#/$defs/pitchRange"}, "motif_developments": {"$ref": "#/$defs/motifDevelopments"}, "motifs": {"type": "array", "items": {"$ref": "#/$defs/pitchedMotif"}}, "section_assignments": {"type": "array", "items": {"$ref": "#/$defs/assignment"}}, "phrase_connections": {"type": "array", "items": {"$ref": "#/$defs/phraseConnection"}}}},
+    "drumTrack": {"type": "object", "additionalProperties": false, "required": ["id", "type", "role", "motifs", "section_assignments"], "properties": {"sound_intent": {"$ref": "#/$defs/soundIntentdrum"}, "id": {"$ref": "#/$defs/id"}, "type": {"const": "drums"}, "role": {"$ref": "#/$defs/id"}, "name": {"$ref": "#/$defs/id"}, "drum_kit_profile_id": {"$ref": "#/$defs/id"}, "motif_developments": {"$ref": "#/$defs/motifDevelopments"}, "motifs": {"type": "array", "items": {"$ref": "#/$defs/drumMotif"}}, "section_assignments": {"type": "array", "items": {"$ref": "#/$defs/assignment"}}}},
+    "percussionTrack": {"type": "object", "additionalProperties": false, "required": ["id", "type", "role", "kit_id", "map_id", "motifs", "section_assignments"], "properties": {"sound_intent": {"$ref": "#/$defs/soundIntentpercussion"}, "performance": {"$ref": "#/$defs/performanceBinding"}, "id": {"$ref": "#/$defs/id"}, "type": {"const": "percussion"}, "role": {"$ref": "#/$defs/id"}, "name": {"$ref": "#/$defs/id"}, "kit_id": {"$ref": "#/$defs/id"}, "map_id": {"$ref": "#/$defs/id"}, "performance_profile_id": {"$ref": "#/$defs/id"}, "performance_style_profile_id": {"$ref": "#/$defs/id"}, "motif_developments": {"$ref": "#/$defs/motifDevelopments"}, "motifs": {"type": "array", "items": {"$ref": "#/$defs/percussionMotif"}}, "section_assignments": {"type": "array", "items": {"$ref": "#/$defs/assignment"}}}},
+    "effectTrack": {"type": "object", "additionalProperties": false, "required": ["id", "type", "role", "motifs", "section_assignments"], "properties": {"sound_intent": {"$ref": "#/$defs/soundIntenteffect"}, "id": {"$ref": "#/$defs/id"}, "type": {"const": "effect"}, "role": {"$ref": "#/$defs/id"}, "name": {"$ref": "#/$defs/id"}, "motifs": {"type": "array", "items": {"$ref": "#/$defs/effectMotif"}}, "motif_developments": {"$ref": "#/$defs/motifDevelopments"}, "section_assignments": {"type": "array", "items": {"$ref": "#/$defs/assignment"}}}}
+  }
+}
+
+
+===== SERIALIZATION CONTRACT =====
+
+schema_id: staged-composer-stage-3-songplan-serialization-v1
+version: 1.0.0
+purpose: Serialización del material congelado al contrato SongPlanV2 autoritativo.
+required_inputs:
+  - frozen_decision_trace_hash
+  - frozen_material_hash
+  - songplan_v2_contract
+allowed_operation: serialize_only
+prohibited_operations:
+  - choose_new_harmony
+  - change_form
+  - change_n3_p
+  - rewrite_motif_for_artistic_reasons
+validation:
+  - exact_songplan_v2_root
+  - engine_songplan_v2_codec_and_validator
+  - raw_json_duplicate_key_rejection
+  - time_signature_string
+  - effect_bar_beat_duration_only
+  - section_ranges
+  - track_references
+  - motif_assignments
+  - event_structure
+  - pitch_formats
+  - drum_voice_validity
+  - scale_and_chromatic_note_validation
+  - host_map_resolution_without_identifier_substitution
+  - harmonic_label_explicit_voicing_integrity
+  - handoff_consistency
+retry:
+  max_attempts: 3
+  diagnostics_only: true
+  semantic_repair: false
+
+
+===== HOST CAPABILITIES =====
+
+# Capacidades host visibles — XMODEL-011
+
+Estos datos describen capacidad técnica disponible; no determinan una decisión musical.
+
+## `drums` y `DrumExternalMap`
+
+Los tracks `drums` expresan eventos mediante `drum_voice`. Para validación host está aprobado el mapa `song001_r1_steven_slate_map`, registrado en `host/song001_r1_steven_slate_map.yaml`. Identificadores de voz disponibles: `kick`, `snare`, `rimshot`, `closed_hat`, `open_hat`, `pedal_hat`, `low_tom`, `mid_tom`, `high_tom`, `crash`, `ride`, `ride_bell`, `cowbell`. El SongPlan no lleva `kit_id` ni `map_id` en este caso.
+
+## `percussion` y `PercussionMap`
+
+Los tracks `percussion` requieren sus propios `kit_id` y `map_id`, con eventos expresados por `instrument` y `sounding_articulation`. No hay ningún PercussionMap aprobado disponible para XMODEL-011. No inventes ni sustituyas identificadores; si la decisión compositiva requiere esa dependencia, el gate host la bloqueará. El mapa de drums no es un PercussionMap.
+
+
+===== HOST CONFIG =====
+
+schema_version: "1.0"
+purpose: approved host mappings for XMODEL-011 SongPlanV2 validation
+drums:
+  map_dir: evaluations/composer-agent/XMODEL-011/model-visible/host
+  map_id: song001_r1_steven_slate_map
+percussion:
+  map_dir: null
+  approved_map_ids: []
+
+
+===== APPROVED DRUM MAP =====
+
+schema_version: "1.0"
+id: song001_r1_steven_slate_map
+mappings:
+  kick: 36
+  snare: 38
+  rimshot: 40
+  closed_hat: 44
+  open_hat: 46
+  pedal_hat: 42
+  low_tom: 41
+  mid_tom: 45
+  high_tom: 48
+  crash: 55
+  ride: 51
+  ride_bell: 53
+  cowbell: 50
+
+
+===== FROZEN EXPLORATORY STAGE 1 =====
+
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["48 compases con acumulación continua y una liberación", "64 compases con contraste central y una liberación"],
+      "surviving_options": ["48 compases con acumulación continua y una liberación", "64 compases con contraste central y una liberación"],
+      "selected_option": {
+        "total_bars": 48,
+        "sections": [
+          {"id": "A", "bars": "1-8", "length": 8},
+          {"id": "B", "bars": "9-24", "length": 16},
+          {"id": "C", "bars": "25-32", "length": 8},
+          {"id": "D", "bars": "33-40", "length": 8},
+          {"id": "E", "bars": "41-48", "length": 8}
+        ],
+        "release_location": "Inicio del compás 33; única liberación formal prevista."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Componer una trayectoria instrumental compacta de persistencia, acumulación gradual y una liberación.",
+      "tradeoff": "Elijo menor extensión para limitar el número de etapas; renuncio a un contraste central autónomo. Los roles planificados no garantizan su percepción.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: artistic_intent, requirements, composer_freedom; CK-FORM-01; GP-04; GR-001, GR-009."
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["Establecer, acumular, preparar, liberar, terminar", "Establecer, contrastar, retornar, liberar, terminar"],
+      "surviving_options": ["Establecer, acumular, preparar, liberar, terminar", "Establecer, contrastar, retornar, liberar, terminar"],
+      "selected_option": {
+        "A": "Establecer motivo, ciclo armónico, bajo y pulso desde el compás 1.",
+        "B": "Continuar y acumular mediante entradas en los compases 9 y 17.",
+        "C": "Preparar la única liberación manteniendo el motivo y añadiendo articulación armónica.",
+        "D": "Liberación intencional mediante retirada coordinada de capas y prolongación del acompañamiento.",
+        "E": "Terminación por reducción adicional y evento final, sin nueva acumulación.",
+        "boundary_policy": "Las fronteras son cambios de arreglo; los reinicios del ciclo se denominan retornos, no cadencias."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Asignar una función concreta a cada tramo conservando el mismo material central.",
+      "tradeoff": "La diferenciación depende principalmente del arreglo; acepto que las fronteras percibidas pueden diferir de estas divisiones.",
+      "superiority_claim": false,
+      "trace_reference": "FORM; CK-FORM-01, CK-FORM-02; GP-03, GP-04; GR-001."
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["Ciclo de cuatro compases en re eólico", "Pedal de re con voces superiores variables"],
+      "surviving_options": ["Ciclo de cuatro compases en re eólico", "Pedal de re con voces superiores variables"],
+      "selected_option": {
+        "tonic": "D",
+        "mode": "Aeolian",
+        "pitch_collection": ["D", "E", "F", "G", "A", "Bb", "C"],
+        "cycle": [
+          {
+            "cycle_bars": [1, 2],
+            "label": "Dm7",
+            "accompaniment_pitches": ["D3", "F3", "A3", "C4"],
+            "bass_pitch": "D2"
+          },
+          {
+            "cycle_bars": [3, 4],
+            "label": "Bbmaj7",
+            "accompaniment_pitches": ["D3", "F3", "A3", "Bb3"],
+            "bass_pitch": "Bb1"
+          }
+        ],
+        "harmonic_rhythm": "Una armonía cada dos compases; ciclo repetido desde el compás 1 hasta el 48.",
+        "label_scope": "Las etiquetas describen el acompañamiento y el bajo. El motivo utiliza exclusivamente D, F y A, presentes en ambas armonías.",
+        "consistency": "CONSISTENT: Dm7 contiene D-F-A-C; Bbmaj7 contiene Bb-D-F-A. El bajo aporta la fundamental y puede doblar una nota del acompañamiento."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Mantener un marco cíclico fijo mientras el desarrollo ocurre en articulación y textura.",
+      "tradeoff": "Renuncio a modulación y progresión dirigida; no atribuyo tensión, coherencia ni cierre a estas etiquetas.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: composer_freedom; CK-HAR-01, CK-HAR-02, CK-HAR-03; GP-02; GR-011."
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["Motivo monofónico principal sobre bajo recurrente", "Bajo como foco con melodía secundaria"],
+      "surviving_options": ["Motivo monofónico principal sobre bajo recurrente", "Bajo como foco con melodía secundaria"],
+      "selected_option": {
+        "primary_focus": "Motivo monofónico D4-F4-A4-F4 con timbre sintético corto.",
+        "secondary_role": "Bajo recurrente en D2 y Bb1 según el ciclo.",
+        "support_roles": "Acompañamiento armónico y drums subordinados por registro, actividad y velocidades planificadas.",
+        "identity_invariants": "Pitches, registro y onsets del motivo permanecen hasta su última presentación completa.",
+        "hierarchy_policy": "No introducir contramelodía ni doblaje del motivo; acompañamiento por debajo de D4."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Dar una identidad focal explícita a la composición instrumental.",
+      "tradeoff": "Renuncio a alternar protagonistas. La jerarquía es una intención de arreglo; no equivale a prominencia comprobada, reconocimiento ni memorabilidad.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: instrumental, clear focal identity, preserve identity across development; CK-MEL-01; GP-01; GR-002, GR-007."
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["Motivo intacto con desarrollo en otras capas", "Arranque fijo y final variable cada ocho compases"],
+      "surviving_options": ["Motivo intacto con desarrollo en otras capas", "Arranque fijo y final variable cada ocho compases"],
+      "selected_option": {
+        "time_convention": "Onsets en negras desde cero dentro de cada compás de 4/4; duraciones en negras.",
+        "motif_length_bars": 2,
+        "events": [
+          {"local_bar": 1, "onset": 0, "pitch": "D4", "duration": 0.5, "velocity": 90},
+          {"local_bar": 1, "onset": 1.5, "pitch": "F4", "duration": 0.5, "velocity": 84},
+          {"local_bar": 1, "onset": 3, "pitch": "A4", "duration": 0.5, "velocity": 88},
+          {"local_bar": 2, "onset": 1, "pitch": "F4", "duration": 0.5, "velocity": 82}
+        ],
+        "recurrence": "Repetir desde cada compás impar entre 1 y 47, sin transposición ni modificación de onsets.",
+        "development_operation": "Preservar el motivo completo y transformar acompañamiento, articulación y distribución de capas.",
+        "representation_status": "Estos eventos son material compositivo de planificación, no una declaración de sintaxis SongPlanV2."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Mantener disponible una relación exacta de pitch y ritmo durante todo el desarrollo.",
+      "tradeoff": "Renuncio a variación melódica interna. No aplico CK-CROSS-01: esta ejecución no define una tarea experimental de reconocimiento con alcance coincidente.",
+      "superiority_claim": false,
+      "trace_reference": "FOCAL_IDENTITY, HARMONIC_FRAMEWORK; CK-MEL-01, CK-MEL-02, CK-DEV-01; GP-01; GR-001, GR-009."
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["Ostinato de fundamentales con articulación breve", "Fundamentales sostenidas durante dos compases"],
+      "surviving_options": ["Ostinato de fundamentales con articulación breve", "Fundamentales sostenidas durante dos compases"],
+      "selected_option": {
+        "register": ["D2", "Bb1"],
+        "pitch_rule": "D2 en posiciones 1-2 del ciclo y Bb1 en posiciones 3-4.",
+        "regular_pattern": [
+          {"onset": 0, "duration": 0.5, "velocity": 76},
+          {"onset": 1.5, "duration": 0.5, "velocity": 72},
+          {"onset": 2.5, "duration": 0.5, "velocity": 74},
+          {"onset": 3.5, "duration": 0.5, "velocity": 72}
+        ],
+        "section_application": "Patrón regular en los compases 1-47; compás 48: Bb1 en onset 0, duración 2, velocidad 68.",
+        "role": "Reiterar fundamentales y mantener una figura rítmica independiente del acompañamiento."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Mantener movimiento recurrente bajo el motivo y durante la liberación.",
+      "tradeoff": "Acepto alineación con el motivo en algunos ataques y con el kick en onset 0; no presupongo separación perceptiva ni superioridad de esa relación.",
+      "superiority_claim": false,
+      "trace_reference": "HARMONIC_FRAMEWORK, LEAD_MOTIF_BEHAVIOR; CK-RHY-01, CK-HAR-01; N3-P: bajo/kick."
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["118 BPM, 4/4 y corcheas rectas", "122 BPM, 4/4 y corcheas rectas"],
+      "surviving_options": ["118 BPM, 4/4 y corcheas rectas", "122 BPM, 4/4 y corcheas rectas"],
+      "selected_option": {
+        "tempo_bpm": 118,
+        "meter": "4/4",
+        "subdivision": "Corcheas rectas",
+        "timing": "Onsets cuantizados, sin swing ni desplazamiento microtemporal planificado.",
+        "coordination": "Kick en negras, bajo con ataques en 0, 1.5, 2.5 y 3.5; motivo de dos compases según su decisión.",
+        "continuity": "Bajo y kick persisten a través de las fronteras 9, 25, 33 y 41; excepción terminal en el compás 48."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Organizar una referencia temporal persistente con relaciones de ataque explícitas.",
+      "tradeoff": "Renuncio a cambios de tempo y swing. El metro y la cuantización no demuestran groove percibido ni claridad del pulso; no transfiero expectativas de enculturación no suministradas.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: persistent forward motion; CK-RHY-01, CK-RHY-02; GR-001, GR-008."
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"],
+      "candidate_strategies": [
+        {"outcome": "FULL", "strategy": "Distribuir pulso, acento y subdivisión entre kick, rimshot y closed_hat, con entradas por sección."},
+        {"outcome": "MINIMAL", "strategy": "Usar únicamente kick y confiar al bajo la actividad entre pulsos."},
+        {"outcome": "DELEGATED", "strategy": "Delegar pulso al bajo y articulación al acompañamiento; sin drums independiente."},
+        {"outcome": "INTENTIONALLY_ABSENT", "strategy": "Omitir una capa percusiva deliberada y aceptar la articulación temporal de las partes tonales."}
+      ],
+      "surviving_options": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"],
+      "selected_outcome": "FULL",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Distribuir tres funciones percusivas explícitas y desarrollar su presencia por secciones sin imponer subdivisión continua.",
+      "tradeoff": "Elijo tres estratos y acepto mayor actividad de acompañamiento. La suficiencia percusiva y la jerarquía requieren escucha; ninguna arquitectura tiene superioridad demostrada.",
+      "bass_groove_interaction": "Kick en onsets 0, 1, 2 y 3, duración planificada 0.25 negras y velocidad 78. Coincide con el bajo en onset 0; los ataques de bajo en 1.5, 2.5 y 3.5 terminan en el pulso siguiente. El solapamiento acústico depende de los sonidos y queda pendiente de escucha. No se prescribe sidechain.",
+      "focal_hierarchy_interaction": "Rimshot con velocidad 56 y closed_hat con velocidad 44; sin fills, crash ni solo. El motivo mantiene sus eventos y velocidades. Estos valores expresan subordinación intencional, no una comparación garantizada de sonoridad entre timbres.",
+      "section_behavior": {
+        "A_1_8": "Kick en cada negra.",
+        "B_9_16": "Kick y rimshot en onsets 1 y 3 de cada compás.",
+        "B_17_24": "Añadir closed_hat en onsets 0.5 y 2.5 de cada compás.",
+        "C_25_32": "Mantener las tres voces sin redoble ni aceleración.",
+        "D_33_40": "Retirar rimshot y closed_hat; conservar kick.",
+        "E_41_47": "Conservar únicamente kick.",
+        "E_48": "Un kick final en onset 0, velocidad 68.",
+        "event_durations": "Rimshot y closed_hat: 0.25 negras por evento.",
+        "songplan_realization": "Planificar un track drums con eventos drum_voice kick, rimshot y closed_hat. Usar el mapa aprobado song001_r1_steven_slate_map mediante configuración host; no insertar kit_id ni map_id en SongPlan. No crear track percussion. La sintaxis completa de eventos queda pendiente del contrato SongPlanV2 no suministrado."
+      },
+      "development_behavior": "Permanece el patrón de kick hasta el compás 47; se incorporan acento y subdivisión en 9 y 17 y se retiran conjuntamente en 33. La preparación 25-32 se desarrolla en el acompañamiento armónico. No hay nueva acumulación percusiva después de 33.",
+      "superiority_claim": false,
+      "trace_reference": "N3-P; completion-checklist.yaml: n3_p_required_fields; GROOVE, BASS_ROLE, FOCAL_IDENTITY; host/capabilities.md; host/host-config.yaml; GR-010, GR-012."
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["Motivo y bajo constantes con acompañamiento discontinuo", "Capa armónica sostenida desde el inicio con cambios de registro"],
+      "surviving_options": ["Motivo y bajo constantes con acompañamiento discontinuo", "Capa armónica sostenida desde el inicio con cambios de registro"],
+      "selected_option": {
+        "instrumental_layers": "Lead sintético monofónico, bajo sintético, acompañamiento armónico sintético y drums.",
+        "A_1_8": "Motivo, bajo y kick. Las etiquetas armónicas describen aquí realizaciones reducidas: no suenan C ni Bb en voces superiores; Bb aparece en el bajo cuando corresponde.",
+        "B_9_24": "Añadir los voicings completos de HARMONIC_FRAMEWORK al inicio de cada tramo armónico de dos compases, duración 1 negra, velocidad 52.",
+        "C_25_32": "Rearticular el voicing vigente en onsets 0 y 2 de cada compás, duración 0.5 negras, velocidad 56.",
+        "D_33_40": "Voicing completo al inicio de cada tramo de dos compases, duración 8 negras, velocidad 48; sin superposición entre tramos.",
+        "E_41_47": "Retirar el acompañamiento armónico; conservar motivo, bajo y kick.",
+        "E_48": "Voicing Bbmaj7 en onset 0, duración 2 negras, velocidad 48.",
+        "register_policy": "Acompañamiento entre D3 y C4; motivo entre D4 y A4; bajo entre Bb1 y D2."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Desarrollar la canción mediante entradas, articulación y retirada de capas conservando motivo y ciclo.",
+      "tradeoff": "Renuncio a contramelodías y cambios de registro del foco. Instrumentación y velocidades son decisiones creativas, no prescripciones ni conocimiento de producción del pack.",
+      "superiority_claim": false,
+      "trace_reference": "HARMONIC_FRAMEWORK, FOCAL_IDENTITY, N3-P_PERCUSSION_ARCHITECTURE; CK-HAR-01, CK-HAR-03; GP-01, GP-02, GP-04; GR-011."
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["Preservar motivo y ciclo; desarrollar arreglo", "Variar el final del motivo y mantener arreglo estable"],
+      "surviving_options": ["Preservar motivo y ciclo; desarrollar arreglo", "Variar el final del motivo y mantener arreglo estable"],
+      "selected_option": {
+        "preserved": ["Motivo de dos compases", "Ciclo armónico de cuatro compases", "Tempo y metro", "Patrón de bajo hasta el compás 47"],
+        "operations": [
+          {"bar": 9, "change": "Entrada del acompañamiento armónico y rimshot."},
+          {"bar": 17, "change": "Entrada de closed_hat."},
+          {"bar": 25, "change": "Rearticulación del acompañamiento dos veces por compás."},
+          {"bar": 33, "change": "Retirada de rimshot y closed_hat; acompañamiento sostenido."},
+          {"bar": 41, "change": "Retirada del acompañamiento armónico."},
+          {"bar": 48, "change": "Evento terminal según ENDING."}
+        ],
+        "audible_development_target": "Las diferencias se materializan en eventos y duraciones; su claridad perceptiva queda pendiente de escucha."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Realizar acumulación gradual y desarrollo transversal sin sustituir la identidad melódica.",
+      "tradeoff": "La novedad se concentra en el arreglo; preservar relaciones estructurales no demuestra parentesco percibido ni interés.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: coherent repetition with audible development, preserve identity across development; CK-DEV-01; GP-01, GP-04; GR-001, GR-004."
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["Liberación por sustracción y prolongación", "Liberación por expansión de registro y capas"],
+      "surviving_options": ["Liberación por sustracción y prolongación", "Liberación por expansión de registro y capas"],
+      "selected_option": {
+        "intended_character": "Tenso, contenido e hipnótico; descriptores de intención, no resultados comprobados.",
+        "trajectory": "Establecimiento en A, acumulación en B, preparación en C, única liberación en D y terminación en E.",
+        "dimensions": {
+          "layer_presence": "Adiciones en 9 y 17; retirada de dos voces de drums en 33.",
+          "harmonic_articulation": "Ataques breves espaciados en B, rearticulación en C y duraciones sostenidas en D.",
+          "event_velocity": "Acompañamiento a 56 en C y 48 en D; motivo constante.",
+          "continuity": "Motivo, bajo, kick, tempo y ciclo atraviesan el compás 33."
+        },
+        "release": "En 33 coordinar retirada de rimshot y closed_hat con acompañamiento sostenido y menor velocidad de sus eventos.",
+        "post_release": "No reconstruir la acumulación; el compás 41 inicia la terminación y el 48 concluye.",
+        "perceptual_status": "Hipótesis artística pendiente de escucha: estas operaciones no establecen una ley de tensión, energía o liberación."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Situar una sola liberación clara como objetivo, manteniendo movimiento y contención.",
+      "tradeoff": "Renuncio a una expansión culminante. La sustracción y las duraciones largas no garantizan liberación; la evaluación perceptiva puede exigir revisar su realización.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: artistic_intent; CK-RHY-02, CK-FORM-02; GP-06; GR-001, GR-003, GR-007."
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["Última iteración completa con evento terminal breve", "Desvanecimiento sobre ciclos adicionales"],
+      "surviving_options": ["Última iteración completa con evento terminal breve", "Desvanecimiento sobre ciclos adicionales"],
+      "selected_option": {
+        "final_cycle": "Compases 45-48, sin alterar el orden Dm7-Dm7-Bbmaj7-Bbmaj7.",
+        "final_motif": "Presentación completa iniciada en 47; último F4 en compás 48, onset 1, duración 0.5 negras.",
+        "final_support": "Compás 48: Bb1 y voicing Bbmaj7 en onset 0 durante 2 negras; un kick en onset 0 durante 0.25 negras.",
+        "stop": "Ningún evento activo después de onset 2 del compás 48; dos negras finales de silencio escrito.",
+        "arrival_state": "No se plantea una nueva llegada culminante.",
+        "closure_state": "Terminación global pretendida, sin afirmar cierre armónico cadencial.",
+        "boundary_state": "STOP y FINAL EVENT explícitos."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Terminar después de la liberación mediante una última presentación íntegra y una parada delimitada.",
+      "tradeoff": "Renuncio al desvanecimiento y al retorno final a Dm7. La parada no demuestra cierre percibido; las colas acústicas deberán revisarse en realización.",
+      "superiority_claim": false,
+      "trace_reference": "FORM, LEAD_MOTIF_BEHAVIOR, HARMONIC_FRAMEWORK; CK-FORM-02; GP-03; GR-001, GR-007."
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["Conservar motivo y resolver conflictos mediante el acompañamiento", "Permitir revisar el motivo cuando aparezca competencia de capas"],
+      "surviving_options": ["Conservar motivo y resolver conflictos mediante el acompañamiento", "Permitir revisar el motivo cuando aparezca competencia de capas"],
+      "selected_option": {
+        "resolution_policy": "Preservar inicialmente motivo, ciclo y único punto de liberación; revisar la mínima decisión afectada ante un conflicto comprobado.",
+        "resolved_checks": [
+          "D, F y A del motivo pertenecen a ambas armonías elegidas.",
+          "Las etiquetas armónicas describen voicings completos cuando aparecen; A y los compases 41-47 son realizaciones reducidas explícitamente declaradas.",
+          "Las secciones tienen longitudes múltiplos de cuatro y mantienen alineados ciclo y motivo.",
+          "El bajo comparte onset 0 con el kick por elección; sus otras duraciones concluyen en el siguiente pulso.",
+          "La actividad armónica añadida permanece debajo del registro del motivo y no introduce otra melodía.",
+          "La liberación en 33 conserva bajo, kick y motivo; la terminación no contiene otra acumulación."
+        ],
+        "host_resolution": "Las tres voces seleccionadas existen en el mapa drums aprobado. No se requiere PercussionMap ni se inventan identificadores.",
+        "revision_triggers": "Si la escucha no sostiene el foco o la única liberación pretendida, revisar primero actividad, duración y presencia del acompañamiento y drums; no inferir el resultado desde densidad o registro.",
+        "input_uncertainty": "La solicitud identifica XMODEL-011 y brief.yaml contiene test_id XMODEL-001. Se conserva esta discrepancia como procedencia; no se deducen preferencias ni restricciones musicales de esos identificadores.",
+        "stage_boundary": "Stage 1 resuelve planificación. No se declara READY_FOR_VALIDATION ni se entrega candidato SongPlanV2: no se suministraron songplan-v2-contract.yaml ni el contrato de integración. La serialización posterior requiere esos contratos; las estructuras internas de esta traza no los sustituyen.",
+        "capability_boundary": "Sin RANK-2, sin uso de RANK-1 y sin preferencias atribuidas al Owner; las elecciones entre supervivientes son prioridades artísticas."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Coordinar decisiones y dependencias técnicas dentro del alcance suministrado, preservando incertidumbres reales.",
+      "tradeoff": "Priorizar la identidad fija limita revisiones melódicas iniciales. La planificación estructural no sustituye validación del runtime ni evaluación auditiva.",
+      "superiority_claim": false,
+      "trace_reference": "CK-SONG-01, CK-HAR-01; N3-P; host/capabilities.md; stage-1/prompt.txt; stage-1/output-schema.json; GR-001 a GR-012 según condición."
+    }
+  ]
+}
+
+===== FROZEN EXPLORATORY STAGE 2 =====
+
+{
+  "frozen_decision_trace_hash": "cd1d5eda8a79563e4f4c1f8e05efd76898fe8fe02f3db6cc1c9ed4b6de87c98e",
+  "sections": [
+    {
+      "section_id": "A",
+      "start_bar": 1,
+      "bar_count": 8,
+      "role": "Establecer motivo, ciclo armónico reducido, bajo y pulso.",
+      "decision_references": ["FORM", "SECTION_ROLES", "HARMONIC_FRAMEWORK", "TEXTURE"]
+    },
+    {
+      "section_id": "B",
+      "start_bar": 9,
+      "bar_count": 16,
+      "role": "Acumular mediante entrada de acompañamiento y rimshot en 9 y closed_hat en 17.",
+      "decision_references": ["FORM", "SECTION_ROLES", "TEXTURE", "DEVELOPMENT", "N3-P_PERCUSSION_ARCHITECTURE"]
+    },
+    {
+      "section_id": "C",
+      "start_bar": 25,
+      "bar_count": 8,
+      "role": "Preparar mediante rearticulación armónica, conservando motivo y tres voces de drums.",
+      "decision_references": ["FORM", "SECTION_ROLES", "TEXTURE", "DEVELOPMENT"]
+    },
+    {
+      "section_id": "D",
+      "start_bar": 33,
+      "bar_count": 8,
+      "role": "Única liberación prevista: retirar rimshot y closed_hat y prolongar el acompañamiento desde el inicio de 33.",
+      "decision_references": ["FORM", "SECTION_ROLES", "ENERGY_TENSION_RELEASE", "TEXTURE", "N3-P_PERCUSSION_ARCHITECTURE"]
+    },
+    {
+      "section_id": "E",
+      "start_bar": 41,
+      "bar_count": 8,
+      "role": "Terminación por reducción adicional, última presentación completa del motivo y evento terminal.",
+      "decision_references": ["FORM", "SECTION_ROLES", "DEVELOPMENT", "ENDING"]
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "lead",
+      "type": "pitched",
+      "role": "Foco principal: sintetizador corto monofónico, motivo D4-F4-A4-F4.",
+      "section_assignments": [
+        {"section_id": "A", "bars": [1, 2, 3, 4, 5, 6, 7, 8]},
+        {"section_id": "B", "bars": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]},
+        {"section_id": "C", "bars": [25, 26, 27, 28, 29, 30, 31, 32]},
+        {"section_id": "D", "bars": [33, 34, 35, 36, 37, 38, 39, 40]},
+        {"section_id": "E", "bars": [41, 42, 43, 44, 45, 46, 47, 48]}
+      ]
+    },
+    {
+      "layer_id": "bass",
+      "type": "pitched",
+      "role": "Bajo sintético recurrente de fundamentales D2 y Bb1.",
+      "section_assignments": [
+        {"section_id": "A", "bars": [1, 2, 3, 4, 5, 6, 7, 8]},
+        {"section_id": "B", "bars": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]},
+        {"section_id": "C", "bars": [25, 26, 27, 28, 29, 30, 31, 32]},
+        {"section_id": "D", "bars": [33, 34, 35, 36, 37, 38, 39, 40]},
+        {"section_id": "E", "bars": [41, 42, 43, 44, 45, 46, 47, 48]}
+      ]
+    },
+    {
+      "layer_id": "harmony",
+      "type": "pitched",
+      "role": "Acompañamiento armónico sintético subordinado, entre D3 y C4.",
+      "section_assignments": [
+        {"section_id": "A", "bars": [], "silent_bars": [1, 2, 3, 4, 5, 6, 7, 8]},
+        {"section_id": "B", "bars": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]},
+        {"section_id": "C", "bars": [25, 26, 27, 28, 29, 30, 31, 32]},
+        {"section_id": "D", "bars": [33, 34, 35, 36, 37, 38, 39, 40]},
+        {"section_id": "E", "bars": [48], "silent_bars": [41, 42, 43, 44, 45, 46, 47]}
+      ]
+    },
+    {
+      "layer_id": "drums",
+      "type": "drums",
+      "role": "Arquitectura N3-P FULL: kick para pulso, rimshot para acento y closed_hat para subdivisión.",
+      "section_assignments": [
+        {"section_id": "A", "bars": [1, 2, 3, 4, 5, 6, 7, 8], "voices": ["kick"]},
+        {"section_id": "B", "bars": [9, 10, 11, 12, 13, 14, 15, 16], "voices": ["kick", "rimshot"]},
+        {"section_id": "B", "bars": [17, 18, 19, 20, 21, 22, 23, 24], "voices": ["kick", "rimshot", "closed_hat"]},
+        {"section_id": "C", "bars": [25, 26, 27, 28, 29, 30, 31, 32], "voices": ["kick", "rimshot", "closed_hat"]},
+        {"section_id": "D", "bars": [33, 34, 35, 36, 37, 38, 39, 40], "voices": ["kick"]},
+        {"section_id": "E", "bars": [41, 42, 43, 44, 45, 46, 47, 48], "voices": ["kick"]}
+      ]
+    }
+  ],
+  "material_events": [
+    {
+      "pattern_id": "lead_motif",
+      "layer_id": "lead",
+      "length_bars": 2,
+      "section_assignments": [
+        {"section_id": "A", "application_start_bars": [1, 3, 5, 7], "repetitions": 4},
+        {"section_id": "B", "application_start_bars": [9, 11, 13, 15, 17, 19, 21, 23], "repetitions": 8},
+        {"section_id": "C", "application_start_bars": [25, 27, 29, 31], "repetitions": 4},
+        {"section_id": "D", "application_start_bars": [33, 35, 37, 39], "repetitions": 4},
+        {"section_id": "E", "application_start_bars": [41, 43, 45, 47], "repetitions": 4}
+      ],
+      "events": [
+        {"start": 0, "duration": 0.5, "pitch": "D4", "velocity": 90},
+        {"start": 1.5, "duration": 0.5, "pitch": "F4", "velocity": 84},
+        {"start": 3, "duration": 0.5, "pitch": "A4", "velocity": 88},
+        {"start": 5, "duration": 0.5, "pitch": "F4", "velocity": 82}
+      ]
+    },
+    {
+      "pattern_id": "bass_D2",
+      "layer_id": "bass",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "A", "application_start_bars": [1, 2, 5, 6], "repetitions": 4},
+        {"section_id": "B", "application_start_bars": [9, 10, 13, 14, 17, 18, 21, 22], "repetitions": 8},
+        {"section_id": "C", "application_start_bars": [25, 26, 29, 30], "repetitions": 4},
+        {"section_id": "D", "application_start_bars": [33, 34, 37, 38], "repetitions": 4},
+        {"section_id": "E", "application_start_bars": [41, 42, 45, 46], "repetitions": 4}
+      ],
+      "events": [
+        {"start": 0, "duration": 0.5, "pitch": "D2", "velocity": 76},
+        {"start": 1.5, "duration": 0.5, "pitch": "D2", "velocity": 72},
+        {"start": 2.5, "duration": 0.5, "pitch": "D2", "velocity": 74},
+        {"start": 3.5, "duration": 0.5, "pitch": "D2", "velocity": 72}
+      ]
+    },
+    {
+      "pattern_id": "bass_Bb1",
+      "layer_id": "bass",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "A", "application_start_bars": [3, 4, 7, 8], "repetitions": 4},
+        {"section_id": "B", "application_start_bars": [11, 12, 15, 16, 19, 20, 23, 24], "repetitions": 8},
+        {"section_id": "C", "application_start_bars": [27, 28, 31, 32], "repetitions": 4},
+        {"section_id": "D", "application_start_bars": [35, 36, 39, 40], "repetitions": 4},
+        {"section_id": "E", "application_start_bars": [43, 44, 47], "repetitions": 3}
+      ],
+      "events": [
+        {"start": 0, "duration": 0.5, "pitch": "Bb1", "velocity": 76},
+        {"start": 1.5, "duration": 0.5, "pitch": "Bb1", "velocity": 72},
+        {"start": 2.5, "duration": 0.5, "pitch": "Bb1", "velocity": 74},
+        {"start": 3.5, "duration": 0.5, "pitch": "Bb1", "velocity": 72}
+      ]
+    },
+    {
+      "pattern_id": "bass_terminal",
+      "layer_id": "bass",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "E", "application_start_bars": [48], "repetitions": 1}
+      ],
+      "events": [
+        {"start": 0, "duration": 2, "pitch": "Bb1", "velocity": 68}
+      ]
+    },
+    {
+      "pattern_id": "harmony_B_Dm7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "section_assignments": [
+        {"section_id": "B", "application_start_bars": [9, 13, 17, 21], "repetitions": 4}
+      ],
+      "events": [
+        {"start": 0, "duration": 1, "pitch": "D3", "velocity": 52},
+        {"start": 0, "duration": 1, "pitch": "F3", "velocity": 52},
+        {"start": 0, "duration": 1, "pitch": "A3", "velocity": 52},
+        {"start": 0, "duration": 1, "pitch": "C4", "velocity": 52}
+      ]
+    },
+    {
+      "pattern_id": "harmony_B_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "section_assignments": [
+        {"section_id": "B", "application_start_bars": [11, 15, 19, 23], "repetitions": 4}
+      ],
+      "events": [
+        {"start": 0, "duration": 1, "pitch": "D3", "velocity": 52},
+        {"start": 0, "duration": 1, "pitch": "F3", "velocity": 52},
+        {"start": 0, "duration": 1, "pitch": "A3", "velocity": 52},
+        {"start": 0, "duration": 1, "pitch": "Bb3", "velocity": 52}
+      ]
+    },
+    {
+      "pattern_id": "harmony_C_Dm7",
+      "layer_id": "harmony",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "C", "application_start_bars": [25, 26, 29, 30], "repetitions": 4}
+      ],
+      "events": [
+        {"start": 0, "duration": 0.5, "pitch": "D3", "velocity": 56},
+        {"start": 0, "duration": 0.5, "pitch": "F3", "velocity": 56},
+        {"start": 0, "duration": 0.5, "pitch": "A3", "velocity": 56},
+        {"start": 0, "duration": 0.5, "pitch": "C4", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "D3", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "F3", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "A3", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "C4", "velocity": 56}
+      ]
+    },
+    {
+      "pattern_id": "harmony_C_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "C", "application_start_bars": [27, 28, 31, 32], "repetitions": 4}
+      ],
+      "events": [
+        {"start": 0, "duration": 0.5, "pitch": "D3", "velocity": 56},
+        {"start": 0, "duration": 0.5, "pitch": "F3", "velocity": 56},
+        {"start": 0, "duration": 0.5, "pitch": "A3", "velocity": 56},
+        {"start": 0, "duration": 0.5, "pitch": "Bb3", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "D3", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "F3", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "A3", "velocity": 56},
+        {"start": 2, "duration": 0.5, "pitch": "Bb3", "velocity": 56}
+      ]
+    },
+    {
+      "pattern_id": "harmony_D_Dm7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "section_assignments": [
+        {"section_id": "D", "application_start_bars": [33, 37], "repetitions": 2}
+      ],
+      "events": [
+        {"start": 0, "duration": 8, "pitch": "D3", "velocity": 48},
+        {"start": 0, "duration": 8, "pitch": "F3", "velocity": 48},
+        {"start": 0, "duration": 8, "pitch": "A3", "velocity": 48},
+        {"start": 0, "duration": 8, "pitch": "C4", "velocity": 48}
+      ]
+    },
+    {
+      "pattern_id": "harmony_D_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 2,
+      "section_assignments": [
+        {"section_id": "D", "application_start_bars": [35, 39], "repetitions": 2}
+      ],
+      "events": [
+        {"start": 0, "duration": 8, "pitch": "D3", "velocity": 48},
+        {"start": 0, "duration": 8, "pitch": "F3", "velocity": 48},
+        {"start": 0, "duration": 8, "pitch": "A3", "velocity": 48},
+        {"start": 0, "duration": 8, "pitch": "Bb3", "velocity": 48}
+      ]
+    },
+    {
+      "pattern_id": "harmony_terminal_Bbmaj7",
+      "layer_id": "harmony",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "E", "application_start_bars": [48], "repetitions": 1}
+      ],
+      "events": [
+        {"start": 0, "duration": 2, "pitch": "D3", "velocity": 48},
+        {"start": 0, "duration": 2, "pitch": "F3", "velocity": 48},
+        {"start": 0, "duration": 2, "pitch": "A3", "velocity": 48},
+        {"start": 0, "duration": 2, "pitch": "Bb3", "velocity": 48}
+      ]
+    },
+    {
+      "pattern_id": "kick_regular",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "A", "application_start_bars": [1, 2, 3, 4, 5, 6, 7, 8], "repetitions": 8},
+        {"section_id": "B", "application_start_bars": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "repetitions": 16},
+        {"section_id": "C", "application_start_bars": [25, 26, 27, 28, 29, 30, 31, 32], "repetitions": 8},
+        {"section_id": "D", "application_start_bars": [33, 34, 35, 36, 37, 38, 39, 40], "repetitions": 8},
+        {"section_id": "E", "application_start_bars": [41, 42, 43, 44, 45, 46, 47], "repetitions": 7}
+      ],
+      "events": [
+        {"start": 0, "duration": 0.25, "drum_voice": "kick", "velocity": 78},
+        {"start": 1, "duration": 0.25, "drum_voice": "kick", "velocity": 78},
+        {"start": 2, "duration": 0.25, "drum_voice": "kick", "velocity": 78},
+        {"start": 3, "duration": 0.25, "drum_voice": "kick", "velocity": 78}
+      ]
+    },
+    {
+      "pattern_id": "rimshot_accents",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "B", "application_start_bars": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "repetitions": 16},
+        {"section_id": "C", "application_start_bars": [25, 26, 27, 28, 29, 30, 31, 32], "repetitions": 8}
+      ],
+      "events": [
+        {"start": 1, "duration": 0.25, "drum_voice": "rimshot", "velocity": 56},
+        {"start": 3, "duration": 0.25, "drum_voice": "rimshot", "velocity": 56}
+      ]
+    },
+    {
+      "pattern_id": "closed_hat_subdivision",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "B", "application_start_bars": [17, 18, 19, 20, 21, 22, 23, 24], "repetitions": 8},
+        {"section_id": "C", "application_start_bars": [25, 26, 27, 28, 29, 30, 31, 32], "repetitions": 8}
+      ],
+      "events": [
+        {"start": 0.5, "duration": 0.25, "drum_voice": "closed_hat", "velocity": 44},
+        {"start": 2.5, "duration": 0.25, "drum_voice": "closed_hat", "velocity": 44}
+      ]
+    },
+    {
+      "pattern_id": "kick_terminal",
+      "layer_id": "drums",
+      "length_bars": 1,
+      "section_assignments": [
+        {"section_id": "E", "application_start_bars": [48], "repetitions": 1}
+      ],
+      "events": [
+        {"start": 0, "duration": 0.25, "drum_voice": "kick", "velocity": 68}
+      ]
+    }
+  ],
+  "realization_notes": {
+    "time_convention": {
+      "tempo_bpm": 118,
+      "meter": "4/4",
+      "quarter_notes_per_bar": 4,
+      "bar_numbering": "Compases absolutos numerados desde 1.",
+      "start": "Cada start expresa negras desde cero respecto al inicio de la instancia del patrón.",
+      "duration": "Duraciones expresadas en negras.",
+      "expansion": "Por cada compás b listado en application_start_bars se ejecutan una vez todos los events del patrón. El inicio absoluto en negras desde el comienzo de la obra es 4*(b-1)+start. repetitions es el número total de instancias enumeradas en esa asignación, incluida la primera; no añade ejecuciones.",
+      "event_assignment": "Cada evento hereda layer_id del patrón y section_id de la asignación que genera su instancia.",
+      "pattern_length": "length_bars define la extensión temporal del patrón, incluidos sus silencios. No produce repeticiones automáticas.",
+      "simultaneity": "Eventos con igual inicio absoluto se ejecutan simultáneamente; las notas de los voicings no se arpegian.",
+      "intervals": "Cada evento ocupa el intervalo desde su inicio incluido hasta inicio+duration excluido.",
+      "timing": "Corcheas rectas; ataques cuantizados sin swing ni desplazamiento microtemporal.",
+      "silence": "Todo intervalo sin eventos enumerados es silencio escrito de la capa correspondiente. No hay notas, fills, efectos ni patrones adicionales implícitos."
+    },
+    "pitch_convention": {
+      "notation": "Alturas con nombre de nota y octava científica; C4 es do central y Bb indica si bemol.",
+      "tonic": "D",
+      "mode": "Aeolian",
+      "pitch_collection": ["D", "E", "F", "G", "A", "Bb", "C"]
+    },
+    "harmonic_cycle": {
+      "length_bars": 4,
+      "application_start_bars": [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45],
+      "repetitions": 12,
+      "positions": [
+        {"cycle_bars": [1, 2], "label": "Dm7", "accompaniment_pitches": ["D3", "F3", "A3", "C4"], "bass_pitch": "D2"},
+        {"cycle_bars": [3, 4], "label": "Bbmaj7", "accompaniment_pitches": ["D3", "F3", "A3", "Bb3"], "bass_pitch": "Bb1"}
+      ],
+      "scope": "Este ciclo describe la armonía vigente; los ataques efectivos están enumerados exclusivamente en material_events.",
+      "reduced_realizations": "En A y en 41-47 no hay acompañamiento armónico: el motivo utiliza D, F y A y el bajo aporta D o Bb según el ciclo.",
+      "boundaries": "Las fronteras son cambios de arreglo. Los reinicios del ciclo son retornos, sin declaración de cadencia."
+    },
+    "n3_p_realization": {
+      "selected_outcome": "FULL",
+      "layer_id": "drums",
+      "approved_drum_voices": ["kick", "rimshot", "closed_hat"],
+      "host_configuration": "Usar el mapa aprobado song001_r1_steven_slate_map mediante configuración host.",
+      "architecture": "Una capa drums con tres voces; no se crea track percussion ni PercussionMap.",
+      "interaction": "Kick en negras hasta 47. Bajo y kick coinciden en onset 0; los ataques restantes del bajo terminan en el pulso siguiente. Rimshot entra en 9 y closed_hat en 17; ambos se retiran en 33.",
+      "constraints": "Sin fills, crash, solo ni sidechain prescrito. No se insertan kit_id ni map_id."
+    },
+    "development_realization": [
+      {"bar": 9, "onset": 0, "change": "Entrada del acompañamiento breve; comienza la aplicación del patrón de rimshot, cuyo primer ataque ocurre en onset 1."},
+      {"bar": 17, "onset": 0, "change": "Comienza la aplicación de closed_hat, cuyo primer ataque ocurre en onset 0.5."},
+      {"bar": 25, "onset": 0, "change": "Acompañamiento rearticulado en onsets 0 y 2 de cada compás, duración 0.5 y velocidad 56."},
+      {"bar": 33, "onset": 0, "change": "Única liberación formal prevista: retirada conjunta de rimshot y closed_hat; voicing de duración 8 y velocidad 48. Motivo, bajo, kick y ciclo continúan."},
+      {"bar": 41, "onset": 0, "change": "Retirada del acompañamiento armónico durante 41-47; continúa la terminación sin nueva acumulación."},
+      {"bar": 48, "onset": 0, "change": "Evento terminal de Bb1, voicing Bbmaj7 y un kick; la última presentación del motivo conserva F4 en onset 1."}
+    ],
+    "ending": {
+      "final_cycle_bars": [45, 46, 47, 48],
+      "final_cycle_harmony": ["Dm7", "Dm7", "Bbmaj7", "Bbmaj7"],
+      "final_motif_start_bar": 47,
+      "last_lead_event": {"bar": 48, "onset": 1, "duration": 0.5, "pitch": "F4", "velocity": 82},
+      "stop": {"bar": 48, "onset": 2, "absolute_quarter_note": 190},
+      "written_silence": {"bar": 48, "onset": 2, "duration": 2},
+      "total_bars": 48,
+      "total_quarter_notes": 192,
+      "activity_limit": "Ningún evento escrito permanece activo después de onset 2 del compás 48.",
+      "acoustic_tails": "Las colas acústicas quedan pendientes de revisión en la realización sonora."
+    },
+    "focal_identity": "Motivo completo sin transposición, cambios de registro, onsets, duraciones ni velocidades en sus 24 presentaciones. Sin contramelodía ni doblaje; acompañamiento por debajo de D4.",
+    "status": "Material compositivo Stage 2 que conserva la traza exploratoria congelada. No declara PASS formal, calidad percibida, ranking artístico ni validación auditiva.",
+    "provenance": "Se conserva la discrepancia entre la solicitud XMODEL-011 y test_id XMODEL-001 del brief sin deducir restricciones musicales.",
+    "stage_boundary": "Este objeto no serializa SongPlanV2 ni genera MIDI."
+  }
+}
+
+===== ADDENDUM CONGELADO DE STAGE 2 =====
+
+{
+  "frozen_decision_trace_hash": "cd1d5eda8a79563e4f4c1f8e05efd76898fe8fe02f3db6cc1c9ed4b6de87c98e",
+  "frozen_material_hash": "9e0cdd1af9581a45bf63f304ab9e64a5cfeb73513f51c6de10b3c3f68b250bfb",
+  "section_energy": [
+    {"section_id": "A", "energy": 0.4},
+    {"section_id": "B", "energy": 0.6},
+    {"section_id": "C", "energy": 0.75},
+    {"section_id": "D", "energy": 0.45},
+    {"section_id": "E", "energy": 0.3}
+  ],
+  "style": "indie-dance",
+  "rationale": "Elijo estas energías como decisiones compositivas: establecimiento en A, acumulación en B, máximo preparatorio en C, descenso en D asociado a la única liberación prevista en el compás 33 y reducción terminal en E sin nueva acumulación ni otra liberación formal. Son metadatos de intención, no mediciones ni predicciones de energía percibida. style toma literalmente genre.pack del brief como cadena no vacía, conforme al contrato SongPlanV2. Las decisiones y el material congelados permanecen intactos."
+}

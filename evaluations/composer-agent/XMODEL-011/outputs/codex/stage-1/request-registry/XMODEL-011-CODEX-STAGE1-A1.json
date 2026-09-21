@@ -1,0 +1,13 @@
+{
+  "experiment_id": "XMODEL-011",
+  "stage": 1,
+  "attempt": 1,
+  "request_id": "XMODEL-011-CODEX-STAGE1-A1",
+  "status": "SENT_MANUAL",
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\stage-1\\payload\\revision-2\\attempt-1-payload.txt",
+  "payload_sha256": "58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d",
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "capture_dir": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\stage-1\\attempts\\attempt-1\\capture",
+  "reserved_at_utc": "2026-09-21T01:53:36.038966+00:00",
+  "sent_marked_at_utc": "2026-09-21T01:53:36.097126+00:00"
+}

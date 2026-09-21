@@ -1,0 +1,52 @@
+{
+  "experiment_id": "XMODEL-011",
+  "stage": 1,
+  "evaluable_attempt": 1,
+  "request_id": "XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-002",
+  "request_kind": "technical_launch_recovery",
+  "status": "CLI_FAILED_OR_INCOMPLETE",
+  "counts_as_evaluable_attempt": false,
+  "cli_launch_requests_before_this_recovery": 2,
+  "cli_launch_requests_if_owner_sends_this_recovery": 3,
+  "evaluable_attempts_consumed": 0,
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\stage-1\\payload\\revision-2\\attempt-1-payload.txt",
+  "payload_sha256": "58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d",
+  "historical_failures": {
+    "request_1": {
+      "request_id": "XMODEL-011-CODEX-STAGE1-A1",
+      "classification": "CLI_ARGUMENT_PARSE_FAILURE; PRE_INFERENCE_TECHNICAL_FAILURE",
+      "model_inference_evidence": "NONE",
+      "sha256": {
+        "registry": "261efd0b945e1266d57373b896243de08a97e0029d58386ec41cbe6bc77f9658",
+        "events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "c206a405769cb087010d604fab55fd38b0612d2dfc6435797cfba6df5240b7e7"
+      }
+    },
+    "request_2": {
+      "request_id": "XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-001",
+      "classification": "PRE_INFERENCE_TECHNICAL_FAILURE; CLI_TRUSTED_DIRECTORY_CHECK_FAILURE",
+      "cli_exit_status": 1,
+      "inference_event_evidence": false,
+      "terminal_success_event_observed": false,
+      "events_bytes": 0,
+      "stderr": "Not inside a trusted directory and --skip-git-repo-check was not specified.",
+      "final_output_exists": false,
+      "sha256": {
+        "record": "b1cc9e4b63b6d404b8e8d9240326837aabd5b94c046a18549d9c99cac25e2936",
+        "events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "dd701e712037bba81445e9a92376e3d3af69acac5f0187ec904e9ed3c401324d",
+        "manifest": "b37b20b6c3348a8d12f2f4546a6e0e5c8778307809c8ee1855a498aacd5bad00"
+      }
+    },
+    "evaluable_attempts_consumed": 0
+  },
+  "cli_version": "codex-cli 0.154.0-alpha.6.2",
+  "model_requested": null,
+  "approved_cli_option_order": "codex --ask-for-approval never exec ... --skip-git-repo-check ...",
+  "sandbox": "read-only",
+  "created_at_utc": "2026-09-21T02:22:31.868322+00:00",
+  "sent_marked_at_utc": "2026-09-21T02:29:08.789472+00:00",
+  "classification": "INCOMPLETE_TECHNICAL_FAILURE; inference activity recorded from events",
+  "cli_exit_status": 1,
+  "capture_manifest": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\stage-1\\technical-recoveries\\launch-recovery-002\\capture\\capture-manifest.json"
+}

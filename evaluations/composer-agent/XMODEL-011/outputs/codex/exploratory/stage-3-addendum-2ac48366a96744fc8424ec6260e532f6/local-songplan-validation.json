@@ -1,0 +1,38 @@
+{
+  "classification": "EXPLORATORY_ONLY_NOT_OFFICIAL_XMODEL_011_PROTOCOL_PASS",
+  "source_path": "evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\exploratory\\stage-3-addendum-2ac48366a96744fc8424ec6260e532f6\\final-output.txt",
+  "expected_sha256": "84ED1F81BA76217526EFF5212CEA3CE93294D6ABC21EB559AAF01301C4827388",
+  "verified_sha256": "84ED1F81BA76217526EFF5212CEA3CE93294D6ABC21EB559AAF01301C4827388",
+  "hash_match": true,
+  "original_modified": false,
+  "semantic_repair_performed": false,
+  "midi_generated": false,
+  "songplan_serialization": "PASS; complete JSON parsed without duplicate keys",
+  "music_engine": {
+    "package": "music-engine",
+    "version": "4.0.0",
+    "api": "music_engine.songplan.v2.codec.song_plan_v2_from_dict + music_engine.songplan.v2.validation.validate_song_plan_v2",
+    "status": "PASS",
+    "diagnostics": []
+  },
+  "host": {
+    "status": "PASS",
+    "category": "host_configuration",
+    "diagnostics": [],
+    "configuration_path": "integrations\\music-engine\\host-config.yaml",
+    "drum_map_id": "song001_r1_steven_slate_map",
+    "drum_map_approved": true,
+    "percussion_map_ids_approved": [],
+    "plan_track_types": [
+      "drums",
+      "pitched"
+    ]
+  },
+  "combined_existing_engine_host_validator": {
+    "status": "PASS",
+    "category": "engine_songplan_validation",
+    "message": "SongPlanV2 and host configuration valid; no MIDI materialized",
+    "engine_invoked": true
+  },
+  "stage2_correspondence_report": "stage2-songplan-correspondence.json"
+}

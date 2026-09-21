@@ -1,0 +1,296 @@
+{
+  "decision_trace": [
+    {
+      "decision_id": "FORM",
+      "options_considered": ["48 compases con acumulación continua y una liberación", "64 compases con contraste central y una liberación"],
+      "surviving_options": ["48 compases con acumulación continua y una liberación", "64 compases con contraste central y una liberación"],
+      "selected_option": {
+        "total_bars": 48,
+        "sections": [
+          {"id": "A", "bars": "1-8", "length": 8},
+          {"id": "B", "bars": "9-24", "length": 16},
+          {"id": "C", "bars": "25-32", "length": 8},
+          {"id": "D", "bars": "33-40", "length": 8},
+          {"id": "E", "bars": "41-48", "length": 8}
+        ],
+        "release_location": "Inicio del compás 33; única liberación formal prevista."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Componer una trayectoria instrumental compacta de persistencia, acumulación gradual y una liberación.",
+      "tradeoff": "Elijo menor extensión para limitar el número de etapas; renuncio a un contraste central autónomo. Los roles planificados no garantizan su percepción.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: artistic_intent, requirements, composer_freedom; CK-FORM-01; GP-04; GR-001, GR-009."
+    },
+    {
+      "decision_id": "SECTION_ROLES",
+      "options_considered": ["Establecer, acumular, preparar, liberar, terminar", "Establecer, contrastar, retornar, liberar, terminar"],
+      "surviving_options": ["Establecer, acumular, preparar, liberar, terminar", "Establecer, contrastar, retornar, liberar, terminar"],
+      "selected_option": {
+        "A": "Establecer motivo, ciclo armónico, bajo y pulso desde el compás 1.",
+        "B": "Continuar y acumular mediante entradas en los compases 9 y 17.",
+        "C": "Preparar la única liberación manteniendo el motivo y añadiendo articulación armónica.",
+        "D": "Liberación intencional mediante retirada coordinada de capas y prolongación del acompañamiento.",
+        "E": "Terminación por reducción adicional y evento final, sin nueva acumulación.",
+        "boundary_policy": "Las fronteras son cambios de arreglo; los reinicios del ciclo se denominan retornos, no cadencias."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Asignar una función concreta a cada tramo conservando el mismo material central.",
+      "tradeoff": "La diferenciación depende principalmente del arreglo; acepto que las fronteras percibidas pueden diferir de estas divisiones.",
+      "superiority_claim": false,
+      "trace_reference": "FORM; CK-FORM-01, CK-FORM-02; GP-03, GP-04; GR-001."
+    },
+    {
+      "decision_id": "HARMONIC_FRAMEWORK",
+      "options_considered": ["Ciclo de cuatro compases en re eólico", "Pedal de re con voces superiores variables"],
+      "surviving_options": ["Ciclo de cuatro compases en re eólico", "Pedal de re con voces superiores variables"],
+      "selected_option": {
+        "tonic": "D",
+        "mode": "Aeolian",
+        "pitch_collection": ["D", "E", "F", "G", "A", "Bb", "C"],
+        "cycle": [
+          {
+            "cycle_bars": [1, 2],
+            "label": "Dm7",
+            "accompaniment_pitches": ["D3", "F3", "A3", "C4"],
+            "bass_pitch": "D2"
+          },
+          {
+            "cycle_bars": [3, 4],
+            "label": "Bbmaj7",
+            "accompaniment_pitches": ["D3", "F3", "A3", "Bb3"],
+            "bass_pitch": "Bb1"
+          }
+        ],
+        "harmonic_rhythm": "Una armonía cada dos compases; ciclo repetido desde el compás 1 hasta el 48.",
+        "label_scope": "Las etiquetas describen el acompañamiento y el bajo. El motivo utiliza exclusivamente D, F y A, presentes en ambas armonías.",
+        "consistency": "CONSISTENT: Dm7 contiene D-F-A-C; Bbmaj7 contiene Bb-D-F-A. El bajo aporta la fundamental y puede doblar una nota del acompañamiento."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Mantener un marco cíclico fijo mientras el desarrollo ocurre en articulación y textura.",
+      "tradeoff": "Renuncio a modulación y progresión dirigida; no atribuyo tensión, coherencia ni cierre a estas etiquetas.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: composer_freedom; CK-HAR-01, CK-HAR-02, CK-HAR-03; GP-02; GR-011."
+    },
+    {
+      "decision_id": "FOCAL_IDENTITY",
+      "options_considered": ["Motivo monofónico principal sobre bajo recurrente", "Bajo como foco con melodía secundaria"],
+      "surviving_options": ["Motivo monofónico principal sobre bajo recurrente", "Bajo como foco con melodía secundaria"],
+      "selected_option": {
+        "primary_focus": "Motivo monofónico D4-F4-A4-F4 con timbre sintético corto.",
+        "secondary_role": "Bajo recurrente en D2 y Bb1 según el ciclo.",
+        "support_roles": "Acompañamiento armónico y drums subordinados por registro, actividad y velocidades planificadas.",
+        "identity_invariants": "Pitches, registro y onsets del motivo permanecen hasta su última presentación completa.",
+        "hierarchy_policy": "No introducir contramelodía ni doblaje del motivo; acompañamiento por debajo de D4."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Dar una identidad focal explícita a la composición instrumental.",
+      "tradeoff": "Renuncio a alternar protagonistas. La jerarquía es una intención de arreglo; no equivale a prominencia comprobada, reconocimiento ni memorabilidad.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: instrumental, clear focal identity, preserve identity across development; CK-MEL-01; GP-01; GR-002, GR-007."
+    },
+    {
+      "decision_id": "LEAD_MOTIF_BEHAVIOR",
+      "options_considered": ["Motivo intacto con desarrollo en otras capas", "Arranque fijo y final variable cada ocho compases"],
+      "surviving_options": ["Motivo intacto con desarrollo en otras capas", "Arranque fijo y final variable cada ocho compases"],
+      "selected_option": {
+        "time_convention": "Onsets en negras desde cero dentro de cada compás de 4/4; duraciones en negras.",
+        "motif_length_bars": 2,
+        "events": [
+          {"local_bar": 1, "onset": 0, "pitch": "D4", "duration": 0.5, "velocity": 90},
+          {"local_bar": 1, "onset": 1.5, "pitch": "F4", "duration": 0.5, "velocity": 84},
+          {"local_bar": 1, "onset": 3, "pitch": "A4", "duration": 0.5, "velocity": 88},
+          {"local_bar": 2, "onset": 1, "pitch": "F4", "duration": 0.5, "velocity": 82}
+        ],
+        "recurrence": "Repetir desde cada compás impar entre 1 y 47, sin transposición ni modificación de onsets.",
+        "development_operation": "Preservar el motivo completo y transformar acompañamiento, articulación y distribución de capas.",
+        "representation_status": "Estos eventos son material compositivo de planificación, no una declaración de sintaxis SongPlanV2."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Mantener disponible una relación exacta de pitch y ritmo durante todo el desarrollo.",
+      "tradeoff": "Renuncio a variación melódica interna. No aplico CK-CROSS-01: esta ejecución no define una tarea experimental de reconocimiento con alcance coincidente.",
+      "superiority_claim": false,
+      "trace_reference": "FOCAL_IDENTITY, HARMONIC_FRAMEWORK; CK-MEL-01, CK-MEL-02, CK-DEV-01; GP-01; GR-001, GR-009."
+    },
+    {
+      "decision_id": "BASS_ROLE",
+      "options_considered": ["Ostinato de fundamentales con articulación breve", "Fundamentales sostenidas durante dos compases"],
+      "surviving_options": ["Ostinato de fundamentales con articulación breve", "Fundamentales sostenidas durante dos compases"],
+      "selected_option": {
+        "register": ["D2", "Bb1"],
+        "pitch_rule": "D2 en posiciones 1-2 del ciclo y Bb1 en posiciones 3-4.",
+        "regular_pattern": [
+          {"onset": 0, "duration": 0.5, "velocity": 76},
+          {"onset": 1.5, "duration": 0.5, "velocity": 72},
+          {"onset": 2.5, "duration": 0.5, "velocity": 74},
+          {"onset": 3.5, "duration": 0.5, "velocity": 72}
+        ],
+        "section_application": "Patrón regular en los compases 1-47; compás 48: Bb1 en onset 0, duración 2, velocidad 68.",
+        "role": "Reiterar fundamentales y mantener una figura rítmica independiente del acompañamiento."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Mantener movimiento recurrente bajo el motivo y durante la liberación.",
+      "tradeoff": "Acepto alineación con el motivo en algunos ataques y con el kick en onset 0; no presupongo separación perceptiva ni superioridad de esa relación.",
+      "superiority_claim": false,
+      "trace_reference": "HARMONIC_FRAMEWORK, LEAD_MOTIF_BEHAVIOR; CK-RHY-01, CK-HAR-01; N3-P: bajo/kick."
+    },
+    {
+      "decision_id": "GROOVE",
+      "options_considered": ["118 BPM, 4/4 y corcheas rectas", "122 BPM, 4/4 y corcheas rectas"],
+      "surviving_options": ["118 BPM, 4/4 y corcheas rectas", "122 BPM, 4/4 y corcheas rectas"],
+      "selected_option": {
+        "tempo_bpm": 118,
+        "meter": "4/4",
+        "subdivision": "Corcheas rectas",
+        "timing": "Onsets cuantizados, sin swing ni desplazamiento microtemporal planificado.",
+        "coordination": "Kick en negras, bajo con ataques en 0, 1.5, 2.5 y 3.5; motivo de dos compases según su decisión.",
+        "continuity": "Bajo y kick persisten a través de las fronteras 9, 25, 33 y 41; excepción terminal en el compás 48."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Organizar una referencia temporal persistente con relaciones de ataque explícitas.",
+      "tradeoff": "Renuncio a cambios de tempo y swing. El metro y la cuantización no demuestran groove percibido ni claridad del pulso; no transfiero expectativas de enculturación no suministradas.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: persistent forward motion; CK-RHY-01, CK-RHY-02; GR-001, GR-008."
+    },
+    {
+      "decision_id": "N3-P_PERCUSSION_ARCHITECTURE",
+      "options_considered": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"],
+      "candidate_strategies": [
+        {"outcome": "FULL", "strategy": "Distribuir pulso, acento y subdivisión entre kick, rimshot y closed_hat, con entradas por sección."},
+        {"outcome": "MINIMAL", "strategy": "Usar únicamente kick y confiar al bajo la actividad entre pulsos."},
+        {"outcome": "DELEGATED", "strategy": "Delegar pulso al bajo y articulación al acompañamiento; sin drums independiente."},
+        {"outcome": "INTENTIONALLY_ABSENT", "strategy": "Omitir una capa percusiva deliberada y aceptar la articulación temporal de las partes tonales."}
+      ],
+      "surviving_options": ["FULL", "MINIMAL", "DELEGATED", "INTENTIONALLY_ABSENT"],
+      "selected_outcome": "FULL",
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Distribuir tres funciones percusivas explícitas y desarrollar su presencia por secciones sin imponer subdivisión continua.",
+      "tradeoff": "Elijo tres estratos y acepto mayor actividad de acompañamiento. La suficiencia percusiva y la jerarquía requieren escucha; ninguna arquitectura tiene superioridad demostrada.",
+      "bass_groove_interaction": "Kick en onsets 0, 1, 2 y 3, duración planificada 0.25 negras y velocidad 78. Coincide con el bajo en onset 0; los ataques de bajo en 1.5, 2.5 y 3.5 terminan en el pulso siguiente. El solapamiento acústico depende de los sonidos y queda pendiente de escucha. No se prescribe sidechain.",
+      "focal_hierarchy_interaction": "Rimshot con velocidad 56 y closed_hat con velocidad 44; sin fills, crash ni solo. El motivo mantiene sus eventos y velocidades. Estos valores expresan subordinación intencional, no una comparación garantizada de sonoridad entre timbres.",
+      "section_behavior": {
+        "A_1_8": "Kick en cada negra.",
+        "B_9_16": "Kick y rimshot en onsets 1 y 3 de cada compás.",
+        "B_17_24": "Añadir closed_hat en onsets 0.5 y 2.5 de cada compás.",
+        "C_25_32": "Mantener las tres voces sin redoble ni aceleración.",
+        "D_33_40": "Retirar rimshot y closed_hat; conservar kick.",
+        "E_41_47": "Conservar únicamente kick.",
+        "E_48": "Un kick final en onset 0, velocidad 68.",
+        "event_durations": "Rimshot y closed_hat: 0.25 negras por evento.",
+        "songplan_realization": "Planificar un track drums con eventos drum_voice kick, rimshot y closed_hat. Usar el mapa aprobado song001_r1_steven_slate_map mediante configuración host; no insertar kit_id ni map_id en SongPlan. No crear track percussion. La sintaxis completa de eventos queda pendiente del contrato SongPlanV2 no suministrado."
+      },
+      "development_behavior": "Permanece el patrón de kick hasta el compás 47; se incorporan acento y subdivisión en 9 y 17 y se retiran conjuntamente en 33. La preparación 25-32 se desarrolla en el acompañamiento armónico. No hay nueva acumulación percusiva después de 33.",
+      "superiority_claim": false,
+      "trace_reference": "N3-P; completion-checklist.yaml: n3_p_required_fields; GROOVE, BASS_ROLE, FOCAL_IDENTITY; host/capabilities.md; host/host-config.yaml; GR-010, GR-012."
+    },
+    {
+      "decision_id": "TEXTURE",
+      "options_considered": ["Motivo y bajo constantes con acompañamiento discontinuo", "Capa armónica sostenida desde el inicio con cambios de registro"],
+      "surviving_options": ["Motivo y bajo constantes con acompañamiento discontinuo", "Capa armónica sostenida desde el inicio con cambios de registro"],
+      "selected_option": {
+        "instrumental_layers": "Lead sintético monofónico, bajo sintético, acompañamiento armónico sintético y drums.",
+        "A_1_8": "Motivo, bajo y kick. Las etiquetas armónicas describen aquí realizaciones reducidas: no suenan C ni Bb en voces superiores; Bb aparece en el bajo cuando corresponde.",
+        "B_9_24": "Añadir los voicings completos de HARMONIC_FRAMEWORK al inicio de cada tramo armónico de dos compases, duración 1 negra, velocidad 52.",
+        "C_25_32": "Rearticular el voicing vigente en onsets 0 y 2 de cada compás, duración 0.5 negras, velocidad 56.",
+        "D_33_40": "Voicing completo al inicio de cada tramo de dos compases, duración 8 negras, velocidad 48; sin superposición entre tramos.",
+        "E_41_47": "Retirar el acompañamiento armónico; conservar motivo, bajo y kick.",
+        "E_48": "Voicing Bbmaj7 en onset 0, duración 2 negras, velocidad 48.",
+        "register_policy": "Acompañamiento entre D3 y C4; motivo entre D4 y A4; bajo entre Bb1 y D2."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Desarrollar la canción mediante entradas, articulación y retirada de capas conservando motivo y ciclo.",
+      "tradeoff": "Renuncio a contramelodías y cambios de registro del foco. Instrumentación y velocidades son decisiones creativas, no prescripciones ni conocimiento de producción del pack.",
+      "superiority_claim": false,
+      "trace_reference": "HARMONIC_FRAMEWORK, FOCAL_IDENTITY, N3-P_PERCUSSION_ARCHITECTURE; CK-HAR-01, CK-HAR-03; GP-01, GP-02, GP-04; GR-011."
+    },
+    {
+      "decision_id": "DEVELOPMENT",
+      "options_considered": ["Preservar motivo y ciclo; desarrollar arreglo", "Variar el final del motivo y mantener arreglo estable"],
+      "surviving_options": ["Preservar motivo y ciclo; desarrollar arreglo", "Variar el final del motivo y mantener arreglo estable"],
+      "selected_option": {
+        "preserved": ["Motivo de dos compases", "Ciclo armónico de cuatro compases", "Tempo y metro", "Patrón de bajo hasta el compás 47"],
+        "operations": [
+          {"bar": 9, "change": "Entrada del acompañamiento armónico y rimshot."},
+          {"bar": 17, "change": "Entrada de closed_hat."},
+          {"bar": 25, "change": "Rearticulación del acompañamiento dos veces por compás."},
+          {"bar": 33, "change": "Retirada de rimshot y closed_hat; acompañamiento sostenido."},
+          {"bar": 41, "change": "Retirada del acompañamiento armónico."},
+          {"bar": 48, "change": "Evento terminal según ENDING."}
+        ],
+        "audible_development_target": "Las diferencias se materializan en eventos y duraciones; su claridad perceptiva queda pendiente de escucha."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Realizar acumulación gradual y desarrollo transversal sin sustituir la identidad melódica.",
+      "tradeoff": "La novedad se concentra en el arreglo; preservar relaciones estructurales no demuestra parentesco percibido ni interés.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: coherent repetition with audible development, preserve identity across development; CK-DEV-01; GP-01, GP-04; GR-001, GR-004."
+    },
+    {
+      "decision_id": "ENERGY_TENSION_RELEASE",
+      "options_considered": ["Liberación por sustracción y prolongación", "Liberación por expansión de registro y capas"],
+      "surviving_options": ["Liberación por sustracción y prolongación", "Liberación por expansión de registro y capas"],
+      "selected_option": {
+        "intended_character": "Tenso, contenido e hipnótico; descriptores de intención, no resultados comprobados.",
+        "trajectory": "Establecimiento en A, acumulación en B, preparación en C, única liberación en D y terminación en E.",
+        "dimensions": {
+          "layer_presence": "Adiciones en 9 y 17; retirada de dos voces de drums en 33.",
+          "harmonic_articulation": "Ataques breves espaciados en B, rearticulación en C y duraciones sostenidas en D.",
+          "event_velocity": "Acompañamiento a 56 en C y 48 en D; motivo constante.",
+          "continuity": "Motivo, bajo, kick, tempo y ciclo atraviesan el compás 33."
+        },
+        "release": "En 33 coordinar retirada de rimshot y closed_hat con acompañamiento sostenido y menor velocidad de sus eventos.",
+        "post_release": "No reconstruir la acumulación; el compás 41 inicia la terminación y el 48 concluye.",
+        "perceptual_status": "Hipótesis artística pendiente de escucha: estas operaciones no establecen una ley de tensión, energía o liberación."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Situar una sola liberación clara como objetivo, manteniendo movimiento y contención.",
+      "tradeoff": "Renuncio a una expansión culminante. La sustracción y las duraciones largas no garantizan liberación; la evaluación perceptiva puede exigir revisar su realización.",
+      "superiority_claim": false,
+      "trace_reference": "brief.yaml: artistic_intent; CK-RHY-02, CK-FORM-02; GP-06; GR-001, GR-003, GR-007."
+    },
+    {
+      "decision_id": "ENDING",
+      "options_considered": ["Última iteración completa con evento terminal breve", "Desvanecimiento sobre ciclos adicionales"],
+      "surviving_options": ["Última iteración completa con evento terminal breve", "Desvanecimiento sobre ciclos adicionales"],
+      "selected_option": {
+        "final_cycle": "Compases 45-48, sin alterar el orden Dm7-Dm7-Bbmaj7-Bbmaj7.",
+        "final_motif": "Presentación completa iniciada en 47; último F4 en compás 48, onset 1, duración 0.5 negras.",
+        "final_support": "Compás 48: Bb1 y voicing Bbmaj7 en onset 0 durante 2 negras; un kick en onset 0 durante 0.25 negras.",
+        "stop": "Ningún evento activo después de onset 2 del compás 48; dos negras finales de silencio escrito.",
+        "arrival_state": "No se plantea una nueva llegada culminante.",
+        "closure_state": "Terminación global pretendida, sin afirmar cierre armónico cadencial.",
+        "boundary_state": "STOP y FINAL EVENT explícitos."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Terminar después de la liberación mediante una última presentación íntegra y una parada delimitada.",
+      "tradeoff": "Renuncio al desvanecimiento y al retorno final a Dm7. La parada no demuestra cierre percibido; las colas acústicas deberán revisarse en realización.",
+      "superiority_claim": false,
+      "trace_reference": "FORM, LEAD_MOTIF_BEHAVIOR, HARMONIC_FRAMEWORK; CK-FORM-02; GP-03; GR-001, GR-007."
+    },
+    {
+      "decision_id": "CROSS_DOMAIN_CONFLICTS",
+      "options_considered": ["Conservar motivo y resolver conflictos mediante el acompañamiento", "Permitir revisar el motivo cuando aparezca competencia de capas"],
+      "surviving_options": ["Conservar motivo y resolver conflictos mediante el acompañamiento", "Permitir revisar el motivo cuando aparezca competencia de capas"],
+      "selected_option": {
+        "resolution_policy": "Preservar inicialmente motivo, ciclo y único punto de liberación; revisar la mínima decisión afectada ante un conflicto comprobado.",
+        "resolved_checks": [
+          "D, F y A del motivo pertenecen a ambas armonías elegidas.",
+          "Las etiquetas armónicas describen voicings completos cuando aparecen; A y los compases 41-47 son realizaciones reducidas explícitamente declaradas.",
+          "Las secciones tienen longitudes múltiplos de cuatro y mantienen alineados ciclo y motivo.",
+          "El bajo comparte onset 0 con el kick por elección; sus otras duraciones concluyen en el siguiente pulso.",
+          "La actividad armónica añadida permanece debajo del registro del motivo y no introduce otra melodía.",
+          "La liberación en 33 conserva bajo, kick y motivo; la terminación no contiene otra acumulación."
+        ],
+        "host_resolution": "Las tres voces seleccionadas existen en el mapa drums aprobado. No se requiere PercussionMap ni se inventan identificadores.",
+        "revision_triggers": "Si la escucha no sostiene el foco o la única liberación pretendida, revisar primero actividad, duración y presencia del acompañamiento y drums; no inferir el resultado desde densidad o registro.",
+        "input_uncertainty": "La solicitud identifica XMODEL-011 y brief.yaml contiene test_id XMODEL-001. Se conserva esta discrepancia como procedencia; no se deducen preferencias ni restricciones musicales de esos identificadores.",
+        "stage_boundary": "Stage 1 resuelve planificación. No se declara READY_FOR_VALIDATION ni se entrega candidato SongPlanV2: no se suministraron songplan-v2-contract.yaml ni el contrato de integración. La serialización posterior requiere esos contratos; las estructuras internas de esta traza no los sustituyen.",
+        "capability_boundary": "Sin RANK-2, sin uso de RANK-1 y sin preferencias atribuidas al Owner; las elecciones entre supervivientes son prioridades artísticas."
+      },
+      "selection_basis": "ARTISTIC_PRIORITY",
+      "active_intention": "Coordinar decisiones y dependencias técnicas dentro del alcance suministrado, preservando incertidumbres reales.",
+      "tradeoff": "Priorizar la identidad fija limita revisiones melódicas iniciales. La planificación estructural no sustituye validación del runtime ni evaluación auditiva.",
+      "superiority_claim": false,
+      "trace_reference": "CK-SONG-01, CK-HAR-01; N3-P; host/capabilities.md; stage-1/prompt.txt; stage-1/output-schema.json; GR-001 a GR-012 según condición."
+    }
+  ]
+}

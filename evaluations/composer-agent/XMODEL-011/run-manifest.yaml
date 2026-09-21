@@ -1,9 +1,15 @@
 experiment_id: XMODEL-011
-status: PREPARED_MANUAL_OWNER_RUN_ISOLATION_UNGUARANTEED
-preflight_status: MANUAL_CAPTURE_AND_GATE_READY_ISOLATION_UNGUARANTEED
-execution_authorized: false
+status: BLOCKED_STAGE1_SCHEMA_COMPATIBILITY
+preflight_status: RECOVERY_003_NOT_READY_SCHEMA_COMPATIBILITY_REQUIRES_CONTRACT_DECISION
+execution_authorized: true
+execution_mode: exploratory
+filesystem_isolation_verified: false
+historical_outputs_in_prompt: 0
+historical_filesystem_access_possible: true
+owner_accepted_filesystem_limitation: true
 executed: false
-composer_cli_invoked: false
+composer_cli_invoked: true
+composer_inference_evidence: NO_COMPOSER_RESPONSE_EVIDENCED_FOR_THREE_LAUNCH_REQUESTS; RECOVERY_002_REJECTED_SCHEMA_HTTP_400
 composer_output_generated: false
 midi_generated: false
 interface_version: composer-interface-v1.1
@@ -34,10 +40,18 @@ composer_cli:
   user_config: ignored for execution; host Codex CLI uses Owner authentication, sandboxed tools cannot read CODEX_HOME
   project_rules: ignored for execution
   approval: never; no bypass flags
-  owner_methodological_choice: pending; isolated evaluation or exploratory run with possible historical exposure
+  owner_methodological_choice: exploratory manual execution authorized; possible historical filesystem exposure accepted by Owner
 stages:
   stage_1:
     max_evaluable_attempts: 3
+    evaluable_attempts_consumed: 0
+    cli_launch_requests_made: 3
+    latest_technical_recovery_request: XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-002
+    technical_recovery_status: CLI_FAILED_OR_INCOMPLETE; SERVICE_REJECTED_SCHEMA_HTTP_400; NON_EVALUABLE
+    prior_technical_recovery_001_status: PRE_INFERENCE_TECHNICAL_FAILURE; CLI_TRUSTED_DIRECTORY_CHECK_FAILURE
+    technical_recovery_command: prepared-commands-recovery-002.ps1.txt
+    technical_recovery_directory: outputs/codex/stage-1/technical-recoveries/launch-recovery-002
+    technical_recovery_audit: audit/launch-recovery-002-preflight.json
     prompt: model-visible/stage-1/prompt.txt
     output_schema: model-visible/stage-1/output-schema.json
     payload: outputs/codex/stage-1/payload/revision-2/attempt-1-payload.txt
@@ -76,6 +90,7 @@ decisions:
   historical_outputs_included: 0
 offline_tests:
   xmodel011_manual_capture_and_package: 23/23 PASS
+  launch_recovery_002: 9/9 PASS
   xmodel010_synthetic_real_engine_contract: 34/34
   staged_harness_regressions: 54/54
 engine:
@@ -83,9 +98,35 @@ engine:
   import: PASS
   MIDI_materialization: NOT_RUN
 manual_execution:
-  prepared_command_file: prepared-commands.ps1.txt
+  prepared_command_file: prepared-commands-recovery-002.ps1.txt
+  prior_command_files_preserved:
+    - prepared-commands.ps1.txt
+    - prepared-commands-recovery-001.ps1.txt
   maintenance_agent_may_invoke_codex_cli: false
-  codex_cli_invoked: false
+  codex_cli_invoked: true
   stage_1_started: false
-  stage_1_execution_authorized: false
+  total_cli_launch_requests: 3
+  total_evaluable_composer_attempts: 0
+  last_launch_classification: TECHNICAL_SCHEMA_VALIDATION_FAILURE; HTTP_400_INVALID_JSON_SCHEMA; NO_COMPOSER_RESPONSE_EVIDENCED
+  recovery_request_id: XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-002
+  recovery_request_status: CLI_FAILED_OR_INCOMPLETE
+  recovery_001_request_status: CLI_FAILED_OR_INCOMPLETE
+  recovery_001_inference_event_evidence: false
+  recovery_002_turn_started: true
+  recovery_002_schema_validation_reached: true
+  recovery_002_service_rejected_schema_http_400: true
+  recovery_002_turn_completed: false
+  recovery_002_final_output_exists: false
+  recovery_002_composer_response_evidenced: false
+  evaluable_attempts_consumed: 0
+  recovery_003_status: NOT_PREPARED; ORIGINAL_OUTPUT_SCHEMA_COMPATIBILITY_UNRESOLVED
+  schema_failure_audit_correction: audit/launch-recovery-002-schema-failure-correction.md
+  stage_1_execution_authorized: true
+  execution_mode: exploratory
+  filesystem_isolation_verified: false
+  historical_outputs_in_prompt: 0
+  historical_filesystem_access_possible: true
+  owner_accepted_filesystem_limitation: true
   offline_preflight_report: audit/manual-execution-preflight-v1.0.json
+  launch_recovery_001_report: audit/launch-recovery-001-preflight.json
+  launch_recovery_002_report: audit/launch-recovery-002-preflight.json

@@ -1,0 +1,56 @@
+# XMODEL-011 — Technical recovery of the pre-inference Stage 1 CLI launch
+# Owner-only PowerShell instructions. This file has not been executed.
+# Must be run from the repository root. Does not launch Stage 1 Attempt 2.
+
+$ErrorActionPreference = 'Stop'
+$root = (Get-Location).Path
+$x = Join-Path $root 'evaluations/composer-agent/XMODEL-011'
+$helper = Join-Path $x 'manual_launch_recovery.py'
+$payload = Join-Path $x 'outputs/codex/stage-1/payload/revision-2/attempt-1-payload.txt'
+$schema = Join-Path $x 'model-visible/stage-1/output-schema.json'
+$recovery = Join-Path $x 'outputs/codex/stage-1/technical-recoveries/launch-recovery-001'
+$capture = Join-Path $recovery 'capture'
+$record = Join-Path $recovery 'request-record.json'
+$final = Join-Path $capture 'final-output.txt'
+$events = Join-Path $capture 'cli-events.jsonl'
+$stderr = Join-Path $capture 'cli-stderr.txt'
+$captureManifest = Join-Path $capture 'capture-manifest.json'
+$requestId = 'XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-001'
+$expectedPayloadSha256 = '58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d'
+$codex = 'C:\Users\Steeven\.vscode\extensions\openai.chatgpt-26.908.40401-win32-x64\bin\windows-x86_64\codex.exe'
+$work = Join-Path $env:TEMP 'XMODEL-011-CODEX-STAGE1-LAUNCH-RECOVERY-001'
+
+# Verify all immutable inputs and fail if any recovery path has already been used.
+if ((Get-FileHash -LiteralPath $payload -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedPayloadSha256) { throw 'Frozen payload hash mismatch.' }
+if (-not (Test-Path -LiteralPath $record -PathType Leaf)) { throw 'Recovery request was not prepared.' }
+$request = Get-Content -LiteralPath $record -Raw | ConvertFrom-Json
+if ($request.request_id -ne $requestId -or $request.status -ne 'PREPARED_NOT_SENT') { throw 'Recovery identity is not fresh; do not reuse it.' }
+if (Test-Path -LiteralPath $capture) { throw 'Recovery capture path exists; do not overwrite.' }
+if (Test-Path -LiteralPath $work) { throw 'Recovery working directory exists; do not reuse.' }
+if (-not (Test-Path -LiteralPath $codex -PathType Leaf)) { throw 'Prepared Codex executable is missing.' }
+$cliVersion = (& $codex --version | Out-String).Trim()
+if ($LASTEXITCODE -ne 0 -or $cliVersion -ne 'codex-cli 0.154.0-alpha.6.2') { throw "Unexpected Codex CLI version: $cliVersion" }
+if ((Get-FileHash -LiteralPath $payload -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedPayloadSha256) { throw 'Payload changed during preflight.' }
+
+# Create a fresh cwd, then mark SENT immediately before the one manual CLI call.
+New-Item -ItemType Directory -Path $work | Out-Null
+& .venv/Scripts/python.exe $helper mark-sent
+if ($LASTEXITCODE -ne 0) { throw 'Could not mark recovery SENT_MANUAL; do not invoke.' }
+
+# Correct global option order: --ask-for-approval precedes `exec`.
+# No --model flag is supplied. CMD redirections preserve payload bytes and separate logs.
+$cliArgs = '--ask-for-approval never exec --ephemeral --ignore-user-config --ignore-rules --sandbox read-only --cd "{0}" --json --output-schema "{1}" --output-last-message "{2}" - < "{3}" 1> "{4}" 2> "{5}"' -f $work,$schema,$final,$payload,$events,$stderr
+$cmdLine = '""{0}" {1}"' -f $codex,$cliArgs
+& $env:ComSpec /d /s /c $cmdLine
+$cliExit = $LASTEXITCODE
+
+# Record even a failed request. A parse failure or incomplete response is never gateable.
+& .venv/Scripts/python.exe $helper record --exit-code $cliExit
+if ($LASTEXITCODE -ne 0) { throw 'Recovery result was not recorded; do not run the gate.' }
+& .venv/Scripts/python.exe $helper verify --manifest $captureManifest
+if ($LASTEXITCODE -ne 0) { throw 'Recovery is incomplete; gate not run.' }
+
+# Only a verified complete response may reach the external Stage 1 gate.
+& .venv/Scripts/python.exe (Join-Path $x 'gate_capture.py') `
+  --stage 1 --output $final --capture-manifest $captureManifest `
+  --result (Join-Path $recovery 'gate-result.json')

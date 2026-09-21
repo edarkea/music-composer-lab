@@ -1,0 +1,13 @@
+{
+  "frozen_decision_trace_hash": "cd1d5eda8a79563e4f4c1f8e05efd76898fe8fe02f3db6cc1c9ed4b6de87c98e",
+  "frozen_material_hash": "9e0cdd1af9581a45bf63f304ab9e64a5cfeb73513f51c6de10b3c3f68b250bfb",
+  "section_energy": [
+    {"section_id": "A", "energy": 0.4},
+    {"section_id": "B", "energy": 0.6},
+    {"section_id": "C", "energy": 0.75},
+    {"section_id": "D", "energy": 0.45},
+    {"section_id": "E", "energy": 0.3}
+  ],
+  "style": "indie-dance",
+  "rationale": "Elijo estas energías como decisiones compositivas: establecimiento en A, acumulación en B, máximo preparatorio en C, descenso en D asociado a la única liberación prevista en el compás 33 y reducción terminal en E sin nueva acumulación ni otra liberación formal. Son metadatos de intención, no mediciones ni predicciones de energía percibida. style toma literalmente genre.pack del brief como cadena no vacía, conforme al contrato SongPlanV2. Las decisiones y el material congelados permanecen intactos."
+}

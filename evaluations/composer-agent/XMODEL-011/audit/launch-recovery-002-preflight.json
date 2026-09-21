@@ -1,0 +1,47 @@
+{
+  "experiment_id": "XMODEL-011",
+  "recovery_id": "XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-002",
+  "request_kind": "technical_launch_recovery",
+  "status": "READY_NOT_SENT",
+  "stage": 1,
+  "evaluable_attempt": 1,
+  "cli_launch_requests_preserved": 2,
+  "cli_launch_requests_if_new_recovery_is_sent": 3,
+  "evaluable_stage_1_attempts_consumed": 0,
+  "historical_failures": [
+    {
+      "request_id": "XMODEL-011-CODEX-STAGE1-A1",
+      "classification": ["CLI_ARGUMENT_PARSE_FAILURE", "PRE_INFERENCE_TECHNICAL_FAILURE"],
+      "inference_evidence": "NONE",
+      "registry_sha256": "261efd0b945e1266d57373b896243de08a97e0029d58386ec41cbe6bc77f9658",
+      "events_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c206a405769cb087010d604fab55fd38b0612d2dfc6435797cfba6df5240b7e7"
+    },
+    {
+      "request_id": "XMODEL-011-CODEX-STAGE1-A1-LAUNCH-RECOVERY-001",
+      "classification": ["PRE_INFERENCE_TECHNICAL_FAILURE", "CLI_TRUSTED_DIRECTORY_CHECK_FAILURE"],
+      "cli_exit_status": 1,
+      "inference_event_evidence": false,
+      "terminal_success_event_observed": false,
+      "events_bytes": 0,
+      "stderr": "Not inside a trusted directory and --skip-git-repo-check was not specified.",
+      "final_output_exists": false,
+      "request_record_sha256": "b1cc9e4b63b6d404b8e8d9240326837aabd5b94c046a18549d9c99cac25e2936",
+      "events_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "dd701e712037bba81445e9a92376e3d3af69acac5f0187ec904e9ed3c401324d",
+      "capture_manifest_sha256": "b37b20b6c3348a8d12f2f4546a6e0e5c8778307809c8ee1855a498aacd5bad00"
+    }
+  ],
+  "frozen_payload_sha256": "58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d",
+  "corrected_cli_order": "codex --ask-for-approval never exec ...",
+  "skip_git_repo_check": true,
+  "sandbox": "read-only",
+  "model_flag": "not set",
+  "recovery_directory": "outputs/codex/stage-1/technical-recoveries/launch-recovery-002",
+  "capture_directory": "outputs/codex/stage-1/technical-recoveries/launch-recovery-002/capture",
+  "working_directory": "%TEMP%/XMODEL-011-CODEX-STAGE1-LAUNCH-RECOVERY-002",
+  "offline_tests": {"passed": 9, "total": 9},
+  "maintenance_inference": false,
+  "midi_generated": false,
+  "adapter_musical_decisions": 0
+}

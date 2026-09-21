@@ -1,0 +1,28 @@
+{
+  "status": "unresolved_contract_diagnostic",
+  "operation": "serialize_only",
+  "diagnostics": [
+    {
+      "code": "MISSING_FROZEN_SECTION_ENERGY",
+      "paths": [
+        "arrangement.sections[0].energy",
+        "arrangement.sections[1].energy",
+        "arrangement.sections[2].energy",
+        "arrangement.sections[3].energy",
+        "arrangement.sections[4].energy"
+      ],
+      "detail": "SongPlanV2 exige una energía numérica entre 0 y 1 para cada sección. El material congelado solo documenta una trayectoria cualitativa y no suministra valores ni una conversión determinista autorizada. Asignarlos introduciría decisiones nuevas."
+    },
+    {
+      "code": "MISSING_FROZEN_STYLE",
+      "path": "style",
+      "detail": "SongPlanV2 exige style. El material congelado no proporciona un valor explícito ni una regla de serialización para obtenerlo de la instrumentación o de las intenciones artísticas."
+    },
+    {
+      "code": "MISSING_REQUIRED_INPUT",
+      "path": "frozen_material_hash",
+      "detail": "El contrato de serialización requiere frozen_material_hash, pero no se suministra. El frozen_decision_trace_hash presente no lo sustituye."
+    }
+  ],
+  "semantic_repair_applied": false
+}
