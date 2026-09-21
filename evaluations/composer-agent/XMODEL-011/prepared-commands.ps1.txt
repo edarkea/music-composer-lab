@@ -1,0 +1,63 @@
+# XMODEL-011 — Owner-run manual Stage 1 only
+# These commands are documentation for the Project Owner. Maintenance Codex must
+# never execute this file or invoke codex exec. Nothing here has been run.
+
+$ErrorActionPreference = 'Stop'
+$root = (Get-Location).Path
+$x = Join-Path $root 'evaluations/composer-agent/XMODEL-011'
+$payload = Join-Path $x 'outputs/codex/stage-1/payload/revision-2/attempt-1-payload.txt'
+$schema = Join-Path $x 'model-visible/stage-1/output-schema.json'
+$capture = Join-Path $x 'outputs/codex/stage-1/attempts/attempt-1/capture'
+$registryDir = Join-Path $x 'outputs/codex/stage-1/request-registry'
+$requestId = 'XMODEL-011-CODEX-STAGE1-A1'
+$registry = Join-Path $registryDir ($requestId + '.json')
+$final = Join-Path $capture 'final-output.txt'
+$events = Join-Path $capture 'cli-events.jsonl'
+$stderr = Join-Path $capture 'cli-stderr.txt'
+$captureManifest = Join-Path $capture 'capture-manifest.json'
+$expectedPayloadSha256 = '58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d'
+$attemptRoot = Join-Path $x 'outputs/codex/stage-1/attempts/attempt-1'
+$codex = 'C:\Users\Steeven\.vscode\extensions\openai.chatgpt-26.908.40401-win32-x64\bin\windows-x86_64\codex.exe'
+$work = Join-Path $env:TEMP 'XMODEL-011-CODEX-STAGE1-ATTEMPT1-MANUAL'
+
+# 1) Inspect and reserve. This creates an exclusive request identity and output
+# directory. Any existing path stops the procedure; do not delete/reuse it.
+if ((Get-FileHash -LiteralPath $payload -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedPayloadSha256) { throw 'Frozen payload hash mismatch; do not execute.' }
+if (Test-Path -LiteralPath $registry) { throw 'Attempt identity already reserved; do not reuse it.' }
+if (Test-Path -LiteralPath $attemptRoot) { throw 'Attempt output path already exists; inspect it and do not overwrite.' }
+if (-not (Test-Path -LiteralPath $codex -PathType Leaf)) { throw 'Prepared Codex executable path is missing.' }
+if (Test-Path -LiteralPath $work) { throw 'Unique working directory already exists; inspect it and do not reuse.' }
+$cliVersion = (& $codex --version | Out-String).Trim()
+if ($LASTEXITCODE -ne 0 -or $cliVersion -ne 'codex-cli 0.154.0-alpha.6.2') { throw "Unexpected Codex CLI version: $cliVersion" }
+& .venv/Scripts/python.exe (Join-Path $x 'manual_capture.py') reserve `
+  --stage 1 --attempt 1 --request-id $requestId `
+  --capture-dir $capture --registry-dir $registryDir
+if ($LASTEXITCODE -ne 0) { throw 'Reservation failed; no model call is authorized.' }
+
+# 2) Owner manually invokes codex exec. cmd.exe provides byte-preserving file
+# stdin and separate stdout/stderr redirection; --output-last-message is separate.
+# No --model is supplied: the installed Codex default is used and is not assumed
+# comparable to Ollama. The served identity is recorded only if JSONL says server_model.
+New-Item -ItemType Directory -Path $work | Out-Null
+& .venv/Scripts/python.exe (Join-Path $x 'manual_capture.py') mark-sent --registry $registry
+if ($LASTEXITCODE -ne 0) { throw 'Could not mark request SENT_MANUAL; do not invoke Codex.' }
+$cliArgs = 'exec --ephemeral --ignore-user-config --ignore-rules --sandbox read-only --ask-for-approval never --cd "{0}" --json --output-schema "{1}" --output-last-message "{2}" - < "{3}" 1> "{4}" 2> "{5}"' -f $work,$schema,$final,$payload,$events,$stderr
+$cmdLine = '""{0}" {1}"' -f $codex,$cliArgs
+& $env:ComSpec /d /s /c $cmdLine
+$cliExit = $LASTEXITCODE
+
+# 3) Record the attempt exactly once. Even failures are permanent records and
+# consume this attempt identity; an incomplete response cannot pass the gate.
+& .venv/Scripts/python.exe (Join-Path $x 'manual_capture.py') record `
+  --registry $registry --exit-code $cliExit --cli-version $cliVersion
+if ($LASTEXITCODE -ne 0) { throw 'Capture could not be recorded; do not run a gate.' }
+
+# 4) Verify completeness, then run Stage 1 gate only if verification passes.
+& .venv/Scripts/python.exe (Join-Path $x 'manual_capture.py') verify --capture-manifest $captureManifest
+if ($LASTEXITCODE -ne 0) { throw 'Incomplete or inconsistent capture; gate not run.' }
+& .venv/Scripts/python.exe (Join-Path $x 'gate_capture.py') `
+  --stage 1 --output $final `
+  --capture-manifest $captureManifest `
+  --result (Join-Path $x 'outputs/codex/stage-1/attempts/attempt-1/gate-result.json')
+
+# Do not prepare or execute Stage 2 here. It may be prepared only after a Stage 1 PASS.

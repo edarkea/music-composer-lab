@@ -1,0 +1,18 @@
+STAGE 1 — DECISION PLANNING
+
+Use the supplied artistic brief and only the supplied composer-interface-v1.1 records. Return exactly one JSON object conforming to the supplied Stage 1 schema.
+
+For decision_id = N3-P_PERCUSSION_ARCHITECTURE, use one decision object with these direct sibling properties at the same structural level as decision_id:
+
+selected_outcome
+candidate_strategies
+bass_groove_interaction
+focal_hierarchy_interaction
+section_behavior
+development_behavior
+
+These six fields MUST NOT be placed inside selected_option or any nested sub-object. Do not duplicate them in another path. N3-P selected_outcome must be exactly FULL, MINIMAL, DELEGATED, or INTENTIONALLY_ABSENT.
+
+Serialization requirements: return exactly one JSON object; no Markdown; no ``` fences; no prose before or after JSON; do not emit multiple JSON objects; use exact field names from the supplied schema.
+
+Resolve FORM, SECTION_ROLES, HARMONIC_FRAMEWORK, FOCAL_IDENTITY, LEAD_MOTIF_BEHAVIOR, BASS_ROLE, GROOVE, N3-P_PERCUSSION_ARCHITECTURE, TEXTURE, DEVELOPMENT, ENERGY_TENSION_RELEASE, ENDING and CROSS_DOMAIN_CONFLICTS. This is a representation clarification only and supplies no musical recommendation.

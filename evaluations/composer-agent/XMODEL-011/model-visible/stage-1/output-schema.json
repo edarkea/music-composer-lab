@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "composer-agent-stage-1-output-v1.1-n3-canonical",
+  "title": "Stage 1 DecisionTrace with canonical N3-P object",
+  "description": "Enforcement estructural; N3-P es un objeto explícito y no contiene selected_option.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_trace"
+  ],
+  "properties": {
+    "decision_trace": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": {
+        "$ref": "#/$defs/decision"
+      }
+    }
+  },
+  "$defs": {
+    "common": {
+      "type": "object",
+      "required": [
+        "decision_id",
+        "options_considered",
+        "selection_basis",
+        "active_intention",
+        "tradeoff",
+        "trace_reference"
+      ],
+      "properties": {
+        "decision_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options_considered": {
+          "type": "array",
+          "minItems": 1
+        },
+        "selection_basis": {
+          "enum": [
+            "EXPORTED_KNOWLEDGE_FILTER",
+            "ARTISTIC_PRIORITY",
+            "RANK-1_AUTHORIZED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "active_intention": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tradeoff": {},
+        "trace_reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selected_option": {},
+        "surviving_options": {
+          "type": "array"
+        },
+        "superiority_claim": {
+          "const": false
+        }
+      }
+    },
+    "generic_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_id",
+        "options_considered",
+        "selection_basis",
+        "active_intention",
+        "tradeoff",
+        "trace_reference",
+        "selected_option"
+      ],
+      "properties": {
+        "decision_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options_considered": {
+          "type": "array",
+          "minItems": 1
+        },
+        "selection_basis": {
+          "enum": [
+            "EXPORTED_KNOWLEDGE_FILTER",
+            "ARTISTIC_PRIORITY",
+            "RANK-1_AUTHORIZED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "active_intention": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tradeoff": {},
+        "trace_reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selected_option": {},
+        "surviving_options": {
+          "type": "array"
+        },
+        "superiority_claim": {
+          "const": false
+        }
+      },
+      "not": {
+        "properties": {
+          "decision_id": {
+            "const": "N3-P_PERCUSSION_ARCHITECTURE"
+          }
+        }
+      }
+    },
+    "n3_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_id",
+        "options_considered",
+        "selected_outcome",
+        "candidate_strategies",
+        "selection_basis",
+        "active_intention",
+        "tradeoff",
+        "trace_reference",
+        "bass_groove_interaction",
+        "focal_hierarchy_interaction",
+        "section_behavior",
+        "development_behavior"
+      ],
+      "properties": {
+        "decision_id": {
+          "const": "N3-P_PERCUSSION_ARCHITECTURE"
+        },
+        "options_considered": {
+          "type": "array",
+          "minItems": 1
+        },
+        "selected_outcome": {
+          "enum": [
+            "FULL",
+            "MINIMAL",
+            "DELEGATED",
+            "INTENTIONALLY_ABSENT"
+          ]
+        },
+        "candidate_strategies": {
+          "type": "array",
+          "minItems": 1
+        },
+        "selection_basis": {
+          "enum": [
+            "EXPORTED_KNOWLEDGE_FILTER",
+            "ARTISTIC_PRIORITY",
+            "RANK-1_AUTHORIZED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "active_intention": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tradeoff": {},
+        "trace_reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bass_groove_interaction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "focal_hierarchy_interaction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "section_behavior": {},
+        "development_behavior": {},
+        "surviving_options": {
+          "type": "array"
+        },
+        "superiority_claim": {
+          "const": false
+        }
+      }
+    },
+    "decision": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/n3_decision"
+        },
+        {
+          "$ref": "#/$defs/generic_decision"
+        }
+      ]
+    }
+  }
+}

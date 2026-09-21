@@ -1,0 +1,63 @@
+{
+  "experiment_id": "XMODEL-011",
+  "revision": "filesystem-isolation-v1.1",
+  "verified_at_utc": "2026-09-21T01:01:30Z",
+  "result": "BLOCKED_FULL_PROCESS_ISOLATION_NOT_AVAILABLE",
+  "identity": {
+    "effective": "steve\\codexsandboxoffline",
+    "group": "STEVE\\CodexSandboxUsers",
+    "group_sid": "S-1-5-21-1936534704-3471166959-1477837065-1002"
+  },
+  "enforcement": {
+    "type": "NTFS explicit deny ReadAndExecute with OI/CI inheritance",
+    "roots": [
+      "D:\\projects\\music-composer-lab",
+      "C:\\Users\\Steeven\\.codex"
+    ],
+    "owner_access_preserved": true,
+    "rollback": "apply-filesystem-boundary.ps1 -Mode Remove",
+    "rollback_test": "PASS on a synthetic temporary directory; deny blocked read and remove restored read"
+  },
+  "effective_access_probe": {
+    "repository": "DENIED",
+    "xmodel_010_sentinel": "DENIED",
+    "codex_home": "INCONSISTENT_FAIL_CLOSED; one integrated probe observed READABLE despite the explicit deny ACE",
+    "external_workspace": "READABLE",
+    "stage_schema": "READABLE",
+    "schema_sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5",
+    "read_only_profile_probe": "PASS",
+    "profile": "codex sandbox --permission-profile :read-only",
+    "sandbox_scope": "Repo and XMODEL-010 denied to restricted tool child; CODEX_HOME probe not stable"
+  },
+  "runner_preflight": {
+    "integrated": true,
+    "runs_before_request_reservation": true,
+    "fail_closed": true,
+    "model_invoked": false,
+    "cwd_outside_repository": true,
+    "scope": "Restricted Windows tool child only; does not constrain the Owner-identity codex exec parent",
+    "full_process_isolation": "FAIL; Owner-identity parent can enumerate XMODEL-010",
+    "model_request_sent": false,
+    "attempt_reserved": false,
+    "host_parent_probe": "FAIL; Owner process can enumerate XMODEL-010"
+  },
+  "offline_tests": {
+    "xmodel011_package": "19/19 PASS",
+    "synthetic_real_engine_contract": "PASS",
+    "staged_harness_regressions": "PASS"
+  },
+  "provenance": {
+    "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+    "inventory_sha256": "a10b5855a37e3c491a78468a08d4e35da84a562e37452cfc752981c646d60522",
+    "stage_1_payload_sha256": "58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d",
+    "historical_sentinel_sha256": "69d6243930d3b6d24fc1e481e592aab87f77721106bea408ee69d897823e877b",
+    "runner_sha256": "5c30b41ede653ddc7e09c8b5c03f8069e97de56a2cf9215b8b2eac31412f3e0f",
+    "acl_script_sha256": "24764405a36ea14c011b220b47adc9f305237dee6c7b4dc878e069b61f376cc3"
+  },
+  "execution_authorized": false,
+  "composer_inference_executed": false,
+  "composer_output_generated": false,
+  "midi_generated": false,
+  "historical_files_modified": false,
+  "limitation": "The actual codex exec parent runs as Owner and can enumerate XMODEL-010. One integrated tool-sandbox probe also observed CODEX_HOME readable despite a deny ACE. Do not execute Stage 1; a dedicated process account or isolated VM must be provisioned and verified with elevated OS configuration."
+}

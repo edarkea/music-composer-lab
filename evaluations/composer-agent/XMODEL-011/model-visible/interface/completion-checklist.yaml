@@ -1,0 +1,38 @@
+checklist_id: composition-completion-v1.1
+language: es
+required_decisions:
+  - FORM
+  - SECTION_ROLES
+  - HARMONIC_FRAMEWORK
+  - FOCAL_IDENTITY
+  - LEAD_MOTIF_BEHAVIOR
+  - BASS_ROLE
+  - GROOVE
+  - N3-P_PERCUSSION_ARCHITECTURE
+  - TEXTURE
+  - DEVELOPMENT
+  - ENERGY_TENSION_RELEASE
+  - ENDING
+  - CROSS_DOMAIN_CONFLICTS
+  - SONGPLAN_HANDOFF
+entry_contract:
+  fields: [decision, status, decision_id, selected_option_or_block_reason, trace_reference]
+  status_values: [RESOLVED, BLOCKED, NOT_APPLICABLE]
+  not_applicable_requires_reason: true
+ready_gate:
+  every_required_decision_must_be_resolved_or_validly_not_applicable: true
+  blocked_or_missing_required_decision_forbids_ready: true
+  songplan_candidate_must_be_present: true
+  warnings_block_only_affected_path_unless_contract_marks_song_level: true
+n3_p_required_fields:
+  - decision_id
+  - candidate_strategies
+  - selected_outcome
+  - selection_basis
+  - bass_groove_interaction
+  - focal_hierarchy_interaction
+  - section_behavior
+  - development_behavior
+  - songplan_realization
+n3_p_outcomes: [FULL, MINIMAL, DELEGATED, INTENTIONALLY_ABSENT]
+n3_p_implicit_satisfaction_forbidden: true

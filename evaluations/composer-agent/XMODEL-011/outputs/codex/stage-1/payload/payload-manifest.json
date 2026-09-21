@@ -1,0 +1,82 @@
+{
+  "experiment_id": "XMODEL-011",
+  "stage": 1,
+  "attempt": 1,
+  "payload_path": "D:\\projects\\music-composer-lab\\evaluations\\composer-agent\\XMODEL-011\\outputs\\codex\\stage-1\\payload\\attempt-1-payload.txt",
+  "payload_sha256": "550c5eb9ea38385d54c799e4b10d14f8bedbc3674d048e807d521a5057855d4c",
+  "payload_bytes": 62849,
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "interface_version": "composer-interface-v1.1",
+  "model_visible_inventory_sha256": "bcc50efd9d8fa9331d4567543408d0d77e83ce6b8d9ca20240d246b03356a7d0",
+  "resolved_records": [
+    {
+      "path": "model-visible/brief.yaml",
+      "sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b"
+    },
+    {
+      "path": "model-visible/system-contract-v1.1.md",
+      "sha256": "032dc7738db9f8723f02c4e734b10a07b0ff49f2d68dda963f7410b01b174373"
+    },
+    {
+      "path": "model-visible/interface/decision-schema.yaml",
+      "sha256": "f71c622e6f275369ccb024818051f6955ae37de8bc34c8558ab38c7bf1ef4168"
+    },
+    {
+      "path": "model-visible/interface/guardrails.yaml",
+      "sha256": "abcf1432758aad5c67a4b13cb259414013c7f2261bb58160b8ed2d5a702ca0b2"
+    },
+    {
+      "path": "model-visible/interface/completion-checklist.yaml",
+      "sha256": "5b454c9fb8d3acb303e930196ce0b684b3a7d01c3293a6237312625a287114f2"
+    },
+    {
+      "path": "model-visible/interface/approved-composition-knowledge.yaml",
+      "sha256": "f4f9373b35fe5e87bfd28b51b5cf0ddd7a673e414c97f9a700c3a003eb29f76a"
+    },
+    {
+      "path": "model-visible/interface/indie-dance.yaml",
+      "sha256": "5fb9ab64d7703ee5129bc8cd62b9e4d0d411928f9c5f4344d1606ff9dd3181fd"
+    },
+    {
+      "path": "model-visible/interface/n3-p-percussion-architecture.yaml",
+      "sha256": "97f0763fc13f2ef5edd316636028c50a6bfa840b3a09764cdd33e3755fd1333a"
+    },
+    {
+      "path": "model-visible/stage-1/prompt.txt",
+      "sha256": "73d796fa33f47b1cea520acb7449e12e18daeb7f6fe29321aa35230349fee0af"
+    },
+    {
+      "path": "model-visible/stage-1/output-schema.json",
+      "sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5"
+    },
+    {
+      "path": "model-visible/host/capabilities.md",
+      "sha256": "bdfc8df27b745a882e23850047ae0d0bf9120f7f79e89c2fa386ec2d1e25a6dd"
+    },
+    {
+      "path": "model-visible/host/host-config.yaml",
+      "sha256": "a3c93eb6e9a082bc5ee27ddb2cfbcb61d4338e8230cad09bc4f75cc3a1758650"
+    },
+    {
+      "path": "model-visible/host/song001_r1_steven_slate_map.yaml",
+      "sha256": "3c8f366f7ea0ee870dfd8ccaac563ebd8545d1f17ab87d49658aa058faf8a1ab"
+    }
+  ],
+  "prior_stage_1_sha256": null,
+  "prior_stage_2_sha256": null,
+  "preflight": {
+    "pass": false,
+    "errors": [
+      "superseded draft; use revision-2 payload only"
+    ],
+    "exact_brief_present": true,
+    "stage_instruction_present": true,
+    "required_records_resolved": true,
+    "forbidden_historical_examples_absent": true,
+    "prior_stage_1_present_when_required": true,
+    "prior_stage_2_present_when_required": true
+  },
+  "status": "SUPERSEDED_DRAFT_NOT_EXECUTED",
+  "superseded_by": "outputs/codex/stage-1/payload/revision-2/attempt-1-payload.txt",
+  "supersession_reason": "Initial host-capabilities copy contained encoding replacement characters; this draft was never transmitted."
+}

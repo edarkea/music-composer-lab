@@ -1,0 +1,35 @@
+{
+  "experiment_id": "XMODEL-011",
+  "preflight_status": "BLOCKED_FILESYSTEM_READ_ISOLATION",
+  "composer_cli_inference_executed": false,
+  "composer_output_generated": false,
+  "midi_generated": false,
+  "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+  "model_visible_file_count": 22,
+  "model_visible_inventory_sha256": "a10b5855a37e3c491a78468a08d4e35da84a562e37452cfc752981c646d60522",
+  "stage_1_payload_sha256": "58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d",
+  "stage_1_payload_preflight": "PASS",
+  "historical_outputs_in_prompt_or_model_visible_inventory": 0,
+  "filesystem_boundary_probe": {
+    "command": "codex sandbox --permission-profile :read-only --cd $env:TEMP powershell.exe -NoProfile -Command Test-Path <XMODEL-010 brief>",
+    "observed": "outside_repo_file=True",
+    "result": "FAIL_READ_ISOLATION"
+  },
+  "codex_cli_wrapper_mock_tests": {"passed": 14, "total": 14},
+  "stage_3_synthetic_real_engine_contract_tests": {"passed": 34, "total": 34},
+  "staged_harness_regression_tests": {"passed": 54, "total": 54},
+  "included_schema_parse_tests": "PASS",
+  "music_engine": {
+    "version": "4.0.0",
+    "import": "PASS",
+    "synthetic_plan_with_approved_steven_slate_drums_map": "PASS",
+    "synthetic_percussion_without_approved_PercussionMap": "BLOCKED_AS_REQUIRED",
+    "midi_materialization": "NOT RUN"
+  },
+  "stage_manifests": "isolated; Stage 2 and 3 payloads are assembled only after accepted prior outputs exist",
+  "retry_policy": "three evaluable attempts maximum per stage; original payload plus literal previous gate diagnostic",
+  "adapter_musical_decisions": 0,
+  "XMODEL_009_modified": false,
+  "XMODEL_010_modified": false,
+  "remaining_blocker": "The locally available read-only sandbox allowed reading an XMODEL-010 file outside the temporary cwd. A verified OS-enforced deny-read boundary is required before composer invocation."
+}

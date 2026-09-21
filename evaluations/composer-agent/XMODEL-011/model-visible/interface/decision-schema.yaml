@@ -1,0 +1,49 @@
+schema_id: composer-interface-decision-record-v1.1
+language: es
+purpose: Contrato de trazabilidad; no añade conocimiento musical.
+creative_generation_boundary:
+  may_create: [notes, rhythms, chords, voicings, bass_lines, motifs, forms, section_lengths, textures, percussion_patterns, silences, development_variants]
+  may_not_invent: [composition_rules, evidence, causal_claims, perceptual_laws, genre_prescriptions, ranking_capability, owner_preferences]
+  principle: Crear material musical no equivale a inventar conocimiento.
+decision_trace_required:
+  - decision_id
+  - domain
+  - artistic_goal
+  - question
+  - scope
+  - candidate_options
+  - hard_constraints
+  - soft_criteria
+  - structural_basis
+  - perceptual_basis
+  - composition_basis
+  - selected_option
+  - selection_basis
+  - active_intention
+  - tradeoff
+  - dependencies
+  - songplan_handoff
+  - uncertainty
+  - provenance
+selection_basis_values: [BRIEF_CONSTRAINT, EXPORTED_KNOWLEDGE_FILTER, RANK_1_AUTHORIZED, ARTISTIC_PRIORITY, OWNER_EXPLICIT_DECISION]
+artistic_priority:
+  required_if: Multiple candidates survive FILTER and no authorized ranking applies.
+  fields: [decision_id, surviving_options, selected_option, active_intention, tradeoff]
+  may_continue: true
+  claim_of_superiority: forbidden
+  owner_handoff_required_if: Decision is explicitly reserved for Owner in this run input.
+ranking:
+  rank_2: unavailable
+  rank_1_requires: [exported_knowledge_id, exact_task, target_construct, criterion, scope, evidence_basis, non_claim]
+  rank_1_scope_may_be_created_by_model: false
+  invalid_inference_sources: [genre_familiarity, model_memory, examples, intuition]
+owner_attribution:
+  allowed_only_when_exact_decision_is_present_in_current_run_input: true
+  past_song_decisions_transfer_implicitly: false
+musical_claims:
+  unsupported_perceptual_or_causal_claims: forbidden
+  allowed_choice_statement: "Elijo esta opción por ARTISTIC_PRIORITY para el brief; no afirmo superioridad comparativa."
+songplan_handoff:
+  exact_contract: songplan-v2-contract.yaml
+  explicit_pitch_events_authoritative: true
+  rationale_and_uncertainty_location: decision_trace

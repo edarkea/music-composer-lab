@@ -1,0 +1,8 @@
+schema_version: "1.0"
+purpose: approved host mappings for XMODEL-011 SongPlanV2 validation
+drums:
+  map_dir: evaluations/composer-agent/XMODEL-011/model-visible/host
+  map_id: song001_r1_steven_slate_map
+percussion:
+  map_dir: null
+  approved_map_ids: []

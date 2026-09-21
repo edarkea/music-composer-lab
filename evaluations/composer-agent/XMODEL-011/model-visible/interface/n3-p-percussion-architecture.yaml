@@ -1,0 +1,65 @@
+record_id: N3-P
+record_kind: decision_reference_not_composer_knowledge_entry
+name: Decisión explícita de arquitectura de percusión
+decision_level: dependent_subdecision_of_N3_groove_harmony
+question: ¿Qué lleva la función percusiva/rítmica de esta canción?
+scope: Resolver para cada composición antes del handoff SongPlan; ninguna salida es requisito de género.
+goals: La función que la percusión debe cumplir o dejar de cumplir en el brief actual.
+options:
+  - id: FULL
+    meaning: Varias funciones/estratos explícitos con alcance y uso por sección decididos.
+  - id: MINIMAL
+    meaning: Arquitectura deliberadamente limitada con función y suficiencia prevista declaradas.
+  - id: DELEGATED
+    meaning: Identificar qué otras capas llevan cada función pertinente y declarar que no habrá drums independiente.
+  - id: INTENTIONALLY_ABSENT
+    meaning: Ausencia escogida explícitamente con intención/contexto y consecuencias aceptadas.
+hard_constraints:
+  - La decisión N3-P debe quedar explícita; un groove resuelto no la sustituye.
+  - No hay default silencioso de ausencia.
+soft_criteria:
+  - groove
+  - relación con bajo
+  - jerarquía focal
+  - diferenciación por sección
+  - trayectoria de energía
+  - desarrollo
+  - interacción de textura
+structural_basis: Declarar arquitectura elegida, capas/eventos, sección y relaciones cross-domain.
+perceptual_basis:
+  status: owner_listening_required_for_perceptual_claims
+  claim: La claridad del pulso y suficiencia percusiva no se infieren de la etiqueta de arquitectura sola.
+composition_basis: Filtrar opciones por restricciones y dependencias; entregar supervivientes a prioridad artística si no hay criterio comparativo.
+capability: {enumerate: true, filter: yes_with_scope, rank: false}
+actionability: ACTIONABLE_WITH_SCOPE
+ranking_status:
+  rank_1: no
+  rank_2: no
+  actual_song_case_rank_1_uses: 0
+  actual_song_case_rank_2_uses: 0
+artistic_priority_conditions: Si más de una arquitectura pasa los filtros y no hay ranking autorizado, el compositor puede seleccionar por ARTISTIC_PRIORITY, declarar intención/tradeoff y continuar; pedir al Owner solo si la entrada actual le reserva la decisión.
+guardrails: [GR-001, GR-008, GR-009, GR-010]
+cross_domain_dependencies:
+  - Groove/metro y percusión: co-development contextual.
+  - Bajo/kick: revisar alineación, anticipación, solapamiento y duración; no imponer unísono ni prohibirlo.
+  - Jerarquía focal: filtrar actividad/acento respecto del foco declarado.
+  - Forma/secciones: definir entradas, salidas y cambios.
+  - Desarrollo: registrar qué identidad permanece, qué cambia, dónde y por qué.
+  - Densidad/textura: revisar conflictos; la energía de SongPlan no crea dinámica.
+songplan_handoff:
+  schema: SongPlanV2
+  full_or_minimal: Materializar únicamente tracks/eventos y mapeos explícitos admitidos por el contrato.
+  delegated: Eventos explícitos en las otras capas; sin track drums inventado.
+  intentionally_absent: Puede no haber track percusivo; decisión y razón permanecen en la traza.
+  rationale: DecisionTrace externa.
+intentionally_absent_status: not_exercised; no es fallo y no debe forzarse para completar cobertura.
+non_claims:
+  - No compara superioridad entre arquitecturas.
+  - FULL no exige cada articulación ni subdivisión continua.
+  - Silencio rítmico no es automáticamente defecto.
+  - No existe una regla de género que obligue a usar drums.
+provenance:
+  canonical_source: research/integrations/composer-mvp-v1.1-percussion-architecture.md
+  canonical_id: N3-P
+  supporting_sources:
+    - research/integrations/composer-mvp-v1.1-four-song-comparative-audit.md

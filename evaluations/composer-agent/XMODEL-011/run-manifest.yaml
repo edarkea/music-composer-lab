@@ -1,0 +1,91 @@
+experiment_id: XMODEL-011
+status: PREPARED_MANUAL_OWNER_RUN_ISOLATION_UNGUARANTEED
+preflight_status: MANUAL_CAPTURE_AND_GATE_READY_ISOLATION_UNGUARANTEED
+execution_authorized: false
+executed: false
+composer_cli_invoked: false
+composer_output_generated: false
+midi_generated: false
+interface_version: composer-interface-v1.1
+condition: NO-EXAMPLE
+brief: model-visible/brief.yaml
+brief_sha256: 464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b
+model_visible_inventory: model-visible-inventory.json
+model_visible_inventory_sha256: a10b5855a37e3c491a78468a08d4e35da84a562e37452cfc752981c646d60522
+model_visible_file_count: 22
+historical_composition_outputs_in_model_visible_package: 0
+composer_cli:
+  executable: C:\Users\Steeven\.vscode\extensions\openai.chatgpt-26.908.40401-win32-x64\bin\windows-x86_64\codex.exe
+  version: codex-cli 0.154.0-alpha.6.2
+  model: UNSELECTED; only provider-reported server_model would count as served identity
+  execution: Owner manually runs codex exec --ephemeral; no maintenance agent invocation; stdin payload; JSONL stdout; --output-last-message final response
+  structured_output: --output-schema with per-stage schema
+  session_continuation: disabled via --ephemeral
+  sandbox: --sandbox read-only; generated commands run as CodexSandboxUsers restricted identity
+  filesystem_isolation: NOT_GUARANTEED_FOR_MANUAL_OWNER_PROCESS
+  restricted_group: STEVE\CodexSandboxUsers
+  denied_roots:
+    - D:\projects\music-composer-lab
+    - C:\Users\Steeven\.codex
+  read_boundary_probe: PASS; repository, XMODEL-010 sentinel, and CODEX_HOME denied; external stage workspace/schema readable
+  runtime_preflight: manual_capture.py reserves the attempt, validates the frozen payload hash, and requires complete capture evidence before gate
+  verification_limit: Owner CLI process identity can access repository files; cwd and read-only tool sandbox do not prove full-process isolation
+  served_model_identity: not established by local help; never infer from a generic model alias
+  user_config: ignored for execution; host Codex CLI uses Owner authentication, sandboxed tools cannot read CODEX_HOME
+  project_rules: ignored for execution
+  approval: never; no bypass flags
+  owner_methodological_choice: pending; isolated evaluation or exploratory run with possible historical exposure
+stages:
+  stage_1:
+    max_evaluable_attempts: 3
+    prompt: model-visible/stage-1/prompt.txt
+    output_schema: model-visible/stage-1/output-schema.json
+    payload: outputs/codex/stage-1/payload/revision-2/attempt-1-payload.txt
+    payload_sha256: 58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d
+    external_gate: integrations/composer-agent/staged_harness.py gate stage 1
+    offline_payload_preflight: PASS
+    execution: MANUAL_BY_OWNER_ONLY
+    request_id_attempt_1: XMODEL-011-CODEX-STAGE1-A1
+    capture: separate final-output.txt, cli-events.jsonl, cli-stderr.txt, capture-manifest.json
+    capture_verification: manual_capture.py verify; gate_capture.py refuses missing/incomplete manifest
+  stage_2:
+    max_evaluable_attempts: 3
+    assembly: prepare_payload.py assemble --stage 2; requires accepted Stage 1 and proof manifest
+    external_gate: integrations/composer-agent/staged_harness.py gate stage 2
+  stage_3:
+    max_evaluable_attempts: 3
+    assembly: prepare_payload.py assemble --stage 3; requires accepted Stage 1 and Stage 2 plus proof manifests
+    external_gate: real music-engine 4.0.0 via staged_harness.py; host-config model-visible/host/host-config.yaml
+    midi_materialization: false
+retry_policy:
+  max_evaluable_attempts_per_stage: 3
+  basis: original_stage_payload_plus_one_literal_previous_gate_diagnostic
+  previous_model_output_embedded: false
+  musical_solution_inserted: false
+host:
+  drums_map_id: song001_r1_steven_slate_map
+  drums_map_approved: true
+  percussion_map_ids_approved: []
+  percussion_behavior: block_if_required_map_unresolved
+generation_parameters:
+  codex_sampling_parameters: not exposed or set by this package; CLI/model defaults apply and are not assumed comparable to Ollama
+  timeout_seconds: 21600
+decisions:
+  semantic_changes: 0
+  adapter_musical_decisions: 0
+  historical_outputs_included: 0
+offline_tests:
+  xmodel011_manual_capture_and_package: 23/23 PASS
+  xmodel010_synthetic_real_engine_contract: 34/34
+  staged_harness_regressions: 54/54
+engine:
+  package_version: 4.0.0
+  import: PASS
+  MIDI_materialization: NOT_RUN
+manual_execution:
+  prepared_command_file: prepared-commands.ps1.txt
+  maintenance_agent_may_invoke_codex_cli: false
+  codex_cli_invoked: false
+  stage_1_started: false
+  stage_1_execution_authorized: false
+  offline_preflight_report: audit/manual-execution-preflight-v1.0.json

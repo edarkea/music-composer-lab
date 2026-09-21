@@ -1,0 +1,55 @@
+{
+  "experiment_id": "XMODEL-011",
+  "revision": "manual-owner-execution-v1.0",
+  "result": "PREPARED_MANUAL_STAGE1_OWNER_ONLY_ISOLATION_UNGUARANTEED",
+  "model_invoked": false,
+  "midi_generated": false,
+  "frozen_inputs": {
+    "brief_sha256": "464ae4378bcb7236f0fb36da52eb65dcb03735197284e3a6899b8686d51ede0b",
+    "payload_path": "outputs/codex/stage-1/payload/revision-2/attempt-1-payload.txt",
+    "payload_sha256": "58646fd9fbef25c17b6b5cc7f846490989316f25d5084469d2b8b4cb074a423d",
+    "model_visible_inventory_sha256": "a10b5855a37e3c491a78468a08d4e35da84a562e37452cfc752981c646d60522",
+    "stage_1_schema_sha256": "fd097161e6b35c6c3aae4c2cbbfe7146a550e56cfe33be36575358b6aa8e76f5"
+  },
+  "manual_attempt": {
+    "request_id": "XMODEL-011-CODEX-STAGE1-A1",
+    "attempt": 1,
+    "capture_outputs": ["final-output.txt", "cli-events.jsonl", "cli-stderr.txt", "capture-manifest.json"],
+    "exclusive_reservation": true,
+    "retry_limit_per_stage": 3,
+    "incomplete_capture_can_reach_gate": false,
+    "external_gate": "gate_capture.py -> integrations/composer-agent/staged_harness.py stage 1"
+  },
+  "offline_validation": {
+    "xmodel011_tests": {"passed": 23, "total": 23},
+    "run_manifest_yaml": "PASS",
+    "frozen_payload_hash_rechecked": "PASS",
+    "mock_complete_capture": "PASS",
+    "mock_incomplete_capture_blocked": "PASS",
+    "mock_gate_requires_capture_manifest": "PASS",
+    "codex_cli_inference": "NOT RUN"
+  },
+  "isolation": {
+    "status": "NOT GUARANTEED",
+    "limits": [
+      "Manual Codex CLI executes as the Owner and that process identity can access repository files.",
+      "A temporary cwd, read-only CLI sandbox, and prompt instruction do not prove full-process file isolation.",
+      "The model-visible package and prompt exclude historical composition examples; filesystem visibility remains a separate unresolved methodological condition."
+    ],
+    "owner_options": [
+      "Choose an exploratory run and explicitly record possible historical exposure.",
+      "Use a dedicated Windows account and verify effective access for the actual Codex execution path.",
+      "Use a VM with no shared drives or folders and verify the staged package there."
+    ],
+    "windows_sandbox_required": false
+  },
+  "owner_decision_pending": "Select the methodological access condition before running Stage 1.",
+  "files_changed_sha256": {
+    "manual_capture.py": "a812c6639c41f04257449d6dae11e79230283eb03155e46f391f844de6ace39d",
+    "gate_capture.py": "75598a4dff63b13650fd579ab6c4e4e4af6ca157a63615cf8c403ec0a0fa9eb3",
+    "test_xmodel011_offline.py": "9eb164ecfbf0b540d5de29b9db620459c1033dc76b72ed4ee51a98addb2b76ea",
+    "prepared-commands.ps1.txt": "b3fb773394e4bc5f1f09cecf7a57c570cead5223c73cbfab6c4c193a9f3f8af7",
+    "README.md": "605cb79881b2e01278dfab9f444115a7e1f40820fc17165cbc74d5fac5aec2f8",
+    "run-manifest.yaml": "91c4d8a85fd241981421ca1b6e6458626f19e17d57acd5809dc659b63d222546"
+  }
+}
